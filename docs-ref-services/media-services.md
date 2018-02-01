@@ -1,25 +1,22 @@
 ---
 title: Modules Azure Media Services pour Node.js
 description: "Références pour les modules Azure Media Services pour Node.js"
-keywords: Azure, SDK, API, Media Services, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
-ms.openlocfilehash: 9b304ceb0c2d0580534ae1bee5a44d01fd4d8b33
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 77a6716d4ef0d566690325a86e85d66c5ac234d6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>Modules Azure Media Services pour Node.js
-
-## <a name="overview"></a>Vue d'ensemble
 
 Azure Media Services est une plateforme extensible basée sur le cloud qui permet aux développeurs de créer des applications évolutives de gestion et de diffusion de médias. Media Services est basé sur les API REST qui permettent de télécharger, stocker, encoder et empaqueter en toute sécurité du contenu vidéo ou audio destiné à être diffusé à la demande ou en direct sur différents clients (par exemple, téléviseurs, PC et appareils mobiles).
 
@@ -38,7 +35,7 @@ Installer le module npm Azure Media Services
 npm install azure-arm-mediaservices
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple répertorie tous les media services pour un groupe de ressources donné.
 

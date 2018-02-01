@@ -1,20 +1,19 @@
 ---
 title: "S’authentifier avec les modules de gestion Azure pour Node.js"
 description: "S’authentifier avec un principal de service dans les modules de gestion Azure pour Node.js"
-keywords: "Azure, nœud, SDK, API, authentification, Active Directory, principal de service"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 3ad1f17435844852838d01115ad8326f141aa73c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c93e5205c43c78d1c9e94d59a362cda336cd8310
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>S’authentifier avec les modules Azure pour Node.js 
 

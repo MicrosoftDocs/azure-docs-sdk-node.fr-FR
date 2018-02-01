@@ -1,21 +1,20 @@
 ---
 title: "Modules Réseau virtuel Azure pour Node.js"
 description: "Références pour les modules Réseau virtuel Azure pour Node.js"
-keywords: "Azure, SDK, API, réseau virtuel, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
-ms.openlocfilehash: a17615a832c6dddeb7fef0a8a327dbf86ae281a7
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: f073c700c8df7f7aa05c93d725051d3a9976bebc
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a>Modules Réseau virtuel Azure pour Node.js
 
@@ -35,7 +34,7 @@ Installer le module npm de réseau virtuel Azure
 npm install azure-arm-network
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple obtient et imprime la liste des réseaux virtuels
 

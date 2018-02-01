@@ -1,25 +1,22 @@
 ---
 title: Modules Azure IoT Hub pour Node.js
 description: "Références pour les modules Azure IoT Hub pour Node.js"
-keywords: Azure, SDK, API, IoT Hub, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 44d01ceb833d2acbef6f9f22b32d4ad66b1fd5ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Modules Azure IoT Hub pour Node.js
-
-## <a name="overview"></a>Vue d'ensemble
 
 Azure IoT Hub est un service entièrement géré qui permet des communications bidirectionnelles fiables et sécurisées entre des millions d’appareils IoT et un serveur principal de solution. Azure IoT Hub :
 - Fournit plusieurs options de communication appareil vers cloud et cloud vers appareil, y compris la messagerie unidirectionnelle, le transfert de fichiers et les méthodes de demande-réponse.
@@ -41,7 +38,7 @@ Installer le module npm Azure IoT Hub
 npm install azure-arm-iothub
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple crée et nomme un IoT hub.
 

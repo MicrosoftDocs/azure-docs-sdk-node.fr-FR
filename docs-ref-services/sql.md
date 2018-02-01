@@ -1,25 +1,22 @@
 ---
 title: Modules Azure SQL pour Node.js
 description: "Références pour les modules Azure SQL pour Node.js"
-keywords: "Azure, nœud, SDK, API, Node.js, Javascript, SQL"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: sql-database
-ms.openlocfilehash: 65ee90b4e6ca248b9d19a3685163211ca547cad4
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 8ebcfbcbf39def1774a702c9f18a4e3f5ab86931
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-sql-modules-for-nodejs"></a>Modules Azure SQL pour Node.js
-
-## <a name="overview"></a>Vue d'ensemble
 
 Utilisez des données stockées dans une [base de données SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) à partir de Node.js.
 La bibliothèque de gestion fournit une interface pour rendre les bases de données SQL Microsoft Azure plus faciles à gérer.
@@ -34,7 +31,7 @@ Installer le module npm client de SQL Server
 npm install tedious
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple se connecte à une base de données SQL Server et effectue une requête simple.
 
@@ -81,7 +78,7 @@ Installer le module npm de gestion de serveur SQL Azure
 npm install azure-arm-sql
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 S’authentifier, créer un client et répertorier tous les serveurs.
 

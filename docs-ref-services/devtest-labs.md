@@ -1,25 +1,22 @@
 ---
 title: Modules Azure DevTest Labs pour Node.js
 description: "Références pour les modules Azure DevTest Labs pour Node.js"
-keywords: Azure, SDK, API, DevTest Labs, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 933ce8971e02c2898d296112282169b8c7dca1c7
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7754280741c09d47e138518d33628c667944c651
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>Modules Azure DevTest Labs pour Node.js
-
-## <a name="overview"></a>Vue d'ensemble
 
 Azure DevTest Labs est un service permettant aux développeurs et aux testeurs de créer rapidement des environnements dans Azure tout en réduisant le temps perdu et les coûts. Vous pouvez tester la dernière version de votre application en approvisionnant rapidement des environnements Windows et Linux à l’aide d’artefacts et de modèles réutilisables. DevTest Labs facilite l’intégration de votre pipeline de déploiement pour approvisionner des environnements à la demande. Faites évoluer votre test de charge de travail en approvisionnant plusieurs agents de test et créez des environnements pré-approvisionnés pour des formations et des démonstrations.
 
@@ -33,7 +30,7 @@ Installer le module npm Azure DevTest Labs
 npm install azure-arm-devtestlabs
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple obtient et imprime les détails d’un laboratoire.
 

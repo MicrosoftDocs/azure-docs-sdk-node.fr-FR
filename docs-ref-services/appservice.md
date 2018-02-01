@@ -1,21 +1,20 @@
 ---
 title: Modules Azure App Service pour Node.js
 description: "Références pour les modules Azure App Service pour Node.js"
-keywords: "Azure, nœud, SDK, API, applications web, mobile, Node.js, Javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: appservice
-ms.openlocfilehash: c695ae6d523ea731b18382ba0906f78b40ce301f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: b722344f056a52785aef6d853a797231dcafc699
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-app-service-modules-for-nodejs"></a>Modules Azure App Service pour Node.js
 
@@ -35,7 +34,7 @@ Installer le module Azure App Service pour Node.js
 npm install azure-arm-website
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 Cet exemple crée un site web sur Azure à l’aide de Node.js.
 
