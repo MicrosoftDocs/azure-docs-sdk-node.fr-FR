@@ -1,26 +1,25 @@
 ---
 title: Prise en main des modules Azure pour Node.js
-description: Prise en main des fonctions de base des modules Azure pour Node.js avec votre propre abonnement Azure.
-keywords: "Azure, nœud, SDK, API, prise en main, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Prise en main de la gestion des ressources et de l’authentification avec des modules Azure pour Node.js"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Prise en main des modules Azure pour Node.js
 
 Ce guide vous familiarise avec l’installation des modules Azure pour Node.js, l’authentification auprès d’Azure avec un principal de service, et l’exécution d’un exemple de code qui crée des ressources dans votre abonnement Azure et se connecte à des services cloud Azure.
 
-## <a name="prerequisites"></a>Composants requis
+## <a name="prerequisites"></a>configuration requise
 
 - Un compte Azure. Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/)
 - [Node.JS](https://nodejs.org)
@@ -258,13 +257,13 @@ Supprimez le groupe de ressources pour supprimer les ressources créées dans ce
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a>Étapes suivantes
+## <a name="next-steps"></a>étapes suivantes
 
 Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.
 
-## <a name="reference"></a>Référence 
+## <a name="reference"></a>Informations de référence 
 
-Il existe une [référence](/nodejs/api/overview/azure/?view=azure-node-2.0.0) pour tous les packages.
+Il existe une [référence](/javascript/api/overview/azure/) pour tous les packages.
 
 ## <a name="get-help-and-give-feedback"></a>Obtenir de l’aide et donner son avis
 

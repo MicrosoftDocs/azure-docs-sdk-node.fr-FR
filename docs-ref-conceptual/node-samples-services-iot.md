@@ -1,18 +1,18 @@
 ---
-title: "Exemple de code pour l’utilisation de la messagerie et de l’IoT Azure avec Node.js"
+title: "Exemples de code de la messagerie et de l’IoT Azure avec Node.js"
 description: "Exemple de code illustrant l’utilisation de la messagerie et de l’IoT Azure avec Node.js"
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 5d7fc46edde0df844f8e4933bef672e619bd06fc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 45aad90670a8ac8c0f32f9deab2eb32043c52d96
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="sample-code-for-using-azure-messaging-and-iot-with-nodejs"></a>Exemple de code pour l’utilisation de la messagerie et de l’IoT Azure avec Node.js
 

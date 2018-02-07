@@ -1,21 +1,20 @@
 ---
-title: Modules Machines virtuelles Azure pour Node.js
-description: "Références pour les modules Machines virtuelles Azure pour Node.js"
-keywords: "Azure, nœud, SDK, API, machine virtuelle, mv, Node.js, Javascript"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+title: Modules Machines virtuelles Azure pour Node.js - Azure
+description: "Guide de référence pour les modules Machines virtuelles Azure pour Node.js"
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 816714f5c286ee82f61502978c5d811e9f283432
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 608a915499d7c32c2c8b04464f716fa4fd17243d
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>Modules Machines virtuelles Azure pour Node.js
 
@@ -33,7 +32,7 @@ Installer le module npm Azure Compute
 npm install azure-arm-compute
 ```   
 
-### <a name="example"></a>Exemple
+### <a name="example"></a>exemples
 
 L’exemple suivant illustre comment se connecter à Azure, créer un client de gestion et dresser la liste de toutes les images de machine virtuelle pour un emplacement, un éditeur, une offre et une référence SKU spécifiés.
 
@@ -49,9 +48,9 @@ msRestAzure.interactiveLogin().then(credentials => {
   client.virtualMachineImages
     .list(
         'westus',                   // location
-        'MicrosoftWindowsServer',   // publisher name
-        'WindowsServer',            // offer
-        '2012-R2-Datacenter'        // sku
+        'Canonical',   // publisher name
+        'UbuntuServer',            // offer
+        '16.04-LTS'        // sku
     )
     .then(result => console.log(result));
 });

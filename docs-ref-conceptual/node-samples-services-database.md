@@ -1,22 +1,22 @@
 ---
-title: "Exemple de code permettant d’utiliser les bases de données Azure avec Node.js"
+title: "Exemples de code de bases de données Azure avec Node.js"
 description: "Exemple de code illustrant l’utilisation des bases de données Azure avec Node.js."
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 8292a8fd0353ae84ac2b1622e5c622e60be04c9b
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: f721bb1c4d8a84009b850c52cb26eeb0a16abca9
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-databases-with-nodejs"></a>Exemple de code permettant d’utiliser les bases de données Azure avec Node.js
+# <a name="azure-databases-with-nodejs-code-samples"></a>Exemples de code de bases de données Azure avec Node.js
 
-L’exemple de code suivant illustre l’utilisation des bases de données Azure avec Node.js.
+Les exemples de code suivants illustrent l’utilisation des bases de données Azure avec Node.js.
 
 Si vous avez besoin de code pour d’autres tâches, vous pouvez parcourir la liste complète des [exemples Azure Node.js](https://azure.microsoft.com/resources/samples/?term=nodejs).
 
@@ -25,7 +25,7 @@ Si vous avez besoin de code pour d’autres tâches, vous pouvez parcourir la li
 | **Cosmos DB** ||
 | [Utiliser Azure Cosmos DB et l’API Graph](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/) | Vous montre comment utiliser Azure Cosmos DB avec l’API Graph pour stocker et accéder aux données à partir d’une application Node.js. |
 | [Utiliser Azure Cosmos DB et l’API DocumentDB](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/) | Vous montre comment utiliser Azure Cosmos DB avec l’API DocumentDB pour stocker et accéder aux données à partir d’une application Node.js. |
-| **DocumentDB** ||
+| **Base de données de documents** ||
 | [Développement d’applications web avec Node.js et Express à l’aide de DocumentDB](https://azure.microsoft.com/resources/samples/documentdb-node-todo-app/) | Vous montre comment utiliser le service Azure DocumentDB pour stocker des données et y accéder à partir d’une application Node.js Express sur Azure. |
 | [Développement d’une application console Node.js à l’aide de DocumentDB](https://azure.microsoft.com/resources/samples/documentdb-node-getting-started/) | Cet exemple vous montre comment prendre en main rapidement le service DocumentDB de Microsoft Azure et Node.js. |
 | **MongoDB** ||
