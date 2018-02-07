@@ -1,36 +1,35 @@
 ---
 title: Prise en main des modules Azure pour Node.js
-description: Prise en main des fonctions de base des modules Azure pour Node.js avec votre propre abonnement Azure.
-keywords: "Azure, nœud, SDK, API, prise en main, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Prise en main de la gestion des ressources et de l’authentification avec des modules Azure pour Node.js"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="840cc-104">Prise en main des modules Azure pour Node.js</span><span class="sxs-lookup"><span data-stu-id="840cc-104">Get started with the Azure modules for Node.js</span></span>
+# <a name="get-started-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="58b43-103">Prise en main des modules Azure pour Node.js</span><span class="sxs-lookup"><span data-stu-id="58b43-103">Get started with the Azure modules for Node.js</span></span>
 
-<span data-ttu-id="840cc-105">Ce guide vous familiarise avec l’installation des modules Azure pour Node.js, l’authentification auprès d’Azure avec un principal de service, et l’exécution d’un exemple de code qui crée des ressources dans votre abonnement Azure et se connecte à des services cloud Azure.</span><span class="sxs-lookup"><span data-stu-id="840cc-105">This guide walks you through installing Azure Node.js modules, authenticating to Azure with a service principal, and running sample code that creates resources in your Azure subscription and connects to Azure cloud services.</span></span>
+<span data-ttu-id="58b43-104">Ce guide vous familiarise avec l’installation des modules Azure pour Node.js, l’authentification auprès d’Azure avec un principal de service, et l’exécution d’un exemple de code qui crée des ressources dans votre abonnement Azure et se connecte à des services cloud Azure.</span><span class="sxs-lookup"><span data-stu-id="58b43-104">This guide walks you through installing Azure Node.js modules, authenticating to Azure with a service principal, and running sample code that creates resources in your Azure subscription and connects to Azure cloud services.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="840cc-106">Composants requis</span><span class="sxs-lookup"><span data-stu-id="840cc-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="58b43-105">configuration requise</span><span class="sxs-lookup"><span data-stu-id="58b43-105">Prerequisites</span></span>
 
-- <span data-ttu-id="840cc-107">Un compte Azure.</span><span class="sxs-lookup"><span data-stu-id="840cc-107">An Azure account.</span></span> <span data-ttu-id="840cc-108">Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="840cc-108">If you don't have one , [get a free trial](https://azure.microsoft.com/free/)</span></span>
-- [<span data-ttu-id="840cc-109">Node.JS</span><span class="sxs-lookup"><span data-stu-id="840cc-109">Node.js</span></span>](https://nodejs.org)
-- <span data-ttu-id="840cc-110">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) ou [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class="sxs-lookup"><span data-stu-id="840cc-110">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- <span data-ttu-id="58b43-106">Un compte Azure.</span><span class="sxs-lookup"><span data-stu-id="58b43-106">An Azure account.</span></span> <span data-ttu-id="58b43-107">Si vous n’en avez pas, inscrivez-vous pour un [essai gratuit](https://azure.microsoft.com/free/)</span><span class="sxs-lookup"><span data-stu-id="58b43-107">If you don't have one , [get a free trial](https://azure.microsoft.com/free/)</span></span>
+- [<span data-ttu-id="58b43-108">Node.JS</span><span class="sxs-lookup"><span data-stu-id="58b43-108">Node.js</span></span>](https://nodejs.org)
+- <span data-ttu-id="58b43-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) ou [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class="sxs-lookup"><span data-stu-id="58b43-109">[Azure Cloud Shell](https://docs.microsoft.coms/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
 
 [!INCLUDE [azure-cloud-shell](../docs-ref-conceptual/includes/cloud-shell-try-it.md)]
 
-## <a name="prepare-your-environment"></a><span data-ttu-id="840cc-111">Préparation de votre environnement</span><span class="sxs-lookup"><span data-stu-id="840cc-111">Prepare your environment</span></span>
+## <a name="prepare-your-environment"></a><span data-ttu-id="58b43-110">Préparation de votre environnement</span><span class="sxs-lookup"><span data-stu-id="58b43-110">Prepare your environment</span></span>
 
-<span data-ttu-id="840cc-112">Créez un nouveau projet dans un répertoire vide et installez les modules npm suivants :</span><span class="sxs-lookup"><span data-stu-id="840cc-112">Create a new project in an empty directory and install the following npm modules:</span></span>
+<span data-ttu-id="58b43-111">Créez un nouveau projet dans un répertoire vide et installez les modules npm suivants :</span><span class="sxs-lookup"><span data-stu-id="58b43-111">Create a new project in an empty directory and install the following npm modules:</span></span>
 
 ```bash
 cd azure-node-quickstart
@@ -38,11 +37,11 @@ npm init -y
 npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure-storage azure-arm-storage
 ```
 
-## <a name="set-up-authentication"></a><span data-ttu-id="840cc-113">Configurer l’authentification</span><span class="sxs-lookup"><span data-stu-id="840cc-113">Set up authentication</span></span>
+## <a name="set-up-authentication"></a><span data-ttu-id="58b43-112">Configurer l’authentification</span><span class="sxs-lookup"><span data-stu-id="58b43-112">Set up authentication</span></span>
 
-<span data-ttu-id="840cc-114">Vos applications Node.js doivent lire et créer des autorisations dans votre abonnement Azure pour exécuter l’exemple de code de ce guide.</span><span class="sxs-lookup"><span data-stu-id="840cc-114">Your Node.js applications need read and create permissions in your Azure subscription to run the sample code in this guide.</span></span> <span data-ttu-id="840cc-115">Créez un principal de service et configurez votre application pour qu’elle s’exécute avec ses informations d’identification.</span><span class="sxs-lookup"><span data-stu-id="840cc-115">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="840cc-116">Les principaux de service constituent un compte non interactif associé à votre identité, auquel vous accordez seulement les privilèges que votre application doit exécuter.</span><span class="sxs-lookup"><span data-stu-id="840cc-116">Service principals are a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
+<span data-ttu-id="58b43-113">Vos applications Node.js doivent lire et créer des autorisations dans votre abonnement Azure pour exécuter l’exemple de code de ce guide.</span><span class="sxs-lookup"><span data-stu-id="58b43-113">Your Node.js applications need read and create permissions in your Azure subscription to run the sample code in this guide.</span></span> <span data-ttu-id="58b43-114">Créez un principal de service et configurez votre application pour qu’elle s’exécute avec ses informations d’identification.</span><span class="sxs-lookup"><span data-stu-id="58b43-114">Create a service principal and configure your application to run with its credentials.</span></span> <span data-ttu-id="58b43-115">Les principaux de service constituent un compte non interactif associé à votre identité, auquel vous accordez seulement les privilèges que votre application doit exécuter.</span><span class="sxs-lookup"><span data-stu-id="58b43-115">Service principals are a non-interactive account associated with your identity to which you grant only the privileges your app needs to run.</span></span>
 
-<span data-ttu-id="840cc-117">[Créez un principal de service à l’aide d’Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) et capturez la sortie.</span><span class="sxs-lookup"><span data-stu-id="840cc-117">[Create a service principal using the Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="840cc-118">Vous devez fournir un [mot de passe sécurisé](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) dans l’argument du mot de passe à la place de `MY_SECURE_PASSWORD`.</span><span class="sxs-lookup"><span data-stu-id="840cc-118">You'll need to provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span>
+<span data-ttu-id="58b43-116">[Créez un principal de service à l’aide d’Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) et capturez la sortie.</span><span class="sxs-lookup"><span data-stu-id="58b43-116">[Create a service principal using the Azure CLI 2.0](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli) and capture the output.</span></span> <span data-ttu-id="58b43-117">Vous devez fournir un [mot de passe sécurisé](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) dans l’argument du mot de passe à la place de `MY_SECURE_PASSWORD`.</span><span class="sxs-lookup"><span data-stu-id="58b43-117">You'll need to provide a [secure password](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-policy) in the password argument instead of `MY_SECURE_PASSWORD`.</span></span>
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
@@ -58,7 +57,7 @@ az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
 }
 ```
 
-<span data-ttu-id="840cc-119">Exportez les valeurs pour *ID d’app*, le *mot de passe* et le *client* en tant que variables d’environnement :</span><span class="sxs-lookup"><span data-stu-id="840cc-119">Export the values for *appId*, *password* and *tenant* as environment variables:</span></span>
+<span data-ttu-id="58b43-118">Exportez les valeurs pour *ID d’app*, le *mot de passe* et le *client* en tant que variables d’environnement :</span><span class="sxs-lookup"><span data-stu-id="58b43-118">Export the values for *appId*, *password* and *tenant* as environment variables:</span></span>
 
 ```bash
 export AZURE_ID a487e0c1-82af-47d9-9a0b-af184eb87646d
@@ -66,7 +65,7 @@ export AZURE_PASS password
 export AZURE_TENANT XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-<span data-ttu-id="840cc-120">Obtenir l’ID pour votre abonnement en entrant [az account show](https://docs.microsoft.com/cli/azure/account#show)</span><span class="sxs-lookup"><span data-stu-id="840cc-120">Get the ID for your subscription with [az account show](https://docs.microsoft.com/cli/azure/account#show)</span></span>
+<span data-ttu-id="58b43-119">Obtenir l’ID pour votre abonnement en entrant [az account show](https://docs.microsoft.com/cli/azure/account#show)</span><span class="sxs-lookup"><span data-stu-id="58b43-119">Get the ID for your subscription with [az account show](https://docs.microsoft.com/cli/azure/account#show)</span></span>
 
 ```azurecli-interactive
 az account show
@@ -80,15 +79,15 @@ az account show
 }
 ```
 
-<span data-ttu-id="840cc-121">Exporter l’ID d’abonnement sous la forme d’une variable d’environnement</span><span class="sxs-lookup"><span data-stu-id="840cc-121">Export the subscription ID as an environment variable</span></span>
+<span data-ttu-id="58b43-120">Exporter l’ID d’abonnement sous la forme d’une variable d’environnement</span><span class="sxs-lookup"><span data-stu-id="58b43-120">Export the subscription ID as an environment variable</span></span>
 
 ```bash
 export AZURE_SUB 306943934-0323-4ae4d-a42b-f6613d1664ac
 ```
 
-## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="840cc-122">Créer une machine virtuelle Linux</span><span class="sxs-lookup"><span data-stu-id="840cc-122">Create a Linux virtual machine</span></span>
+## <a name="create-a-linux-virtual-machine"></a><span data-ttu-id="58b43-121">Créer une machine virtuelle Linux</span><span class="sxs-lookup"><span data-stu-id="58b43-121">Create a Linux virtual machine</span></span>
 
-<span data-ttu-id="840cc-123">Créez un nouveau fichier *createVM.js* dans le répertoire actuel avec le code suivant.</span><span class="sxs-lookup"><span data-stu-id="840cc-123">Create a new file *createVM.js* in the current directory with the following code.</span></span> <span data-ttu-id="840cc-124">Mettez à jour la valeur de `adminPass` avec un bon mot de passe.</span><span class="sxs-lookup"><span data-stu-id="840cc-124">Update the value of `adminPass` with a good password.</span></span>
+<span data-ttu-id="58b43-122">Créez un nouveau fichier *createVM.js* dans le répertoire actuel avec le code suivant.</span><span class="sxs-lookup"><span data-stu-id="58b43-122">Create a new file *createVM.js* in the current directory with the following code.</span></span> <span data-ttu-id="58b43-123">Mettez à jour la valeur de `adminPass` avec un bon mot de passe.</span><span class="sxs-lookup"><span data-stu-id="58b43-123">Update the value of `adminPass` with a good password.</span></span>
 
 ```javascript
 'use strict';
@@ -179,13 +178,13 @@ MsRest.loginWithServicePrincipalSecret(
     });
 ```
 
-<span data-ttu-id="840cc-125">Exécutez le code depuis la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="840cc-125">Run the code from the command line:</span></span>
+<span data-ttu-id="58b43-124">Exécutez le code depuis la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="58b43-124">Run the code from the command line:</span></span>
 
 ```bash
 node createVM.js
 ```
 
-<span data-ttu-id="840cc-126">Lorsque le code se termine, obtenez l’adresse IP de votre nouvelle machine virtuelle et connectez-vous avec SSH en utilisant la valeur de `adminPass` à partir de votre code.</span><span class="sxs-lookup"><span data-stu-id="840cc-126">Once the code completes, get the IP of your new virtual machine and log in with SSH using the value for `adminPass` from your code.</span></span>
+<span data-ttu-id="58b43-125">Lorsque le code se termine, obtenez l’adresse IP de votre nouvelle machine virtuelle et connectez-vous avec SSH en utilisant la valeur de `adminPass` à partir de votre code.</span><span class="sxs-lookup"><span data-stu-id="58b43-125">Once the code completes, get the IP of your new virtual machine and log in with SSH using the value for `adminPass` from your code.</span></span>
 
 ```azurecli-interactive
 az vm list-ip-addresses --name newLinuxVM
@@ -195,9 +194,9 @@ az vm list-ip-addresses --name newLinuxVM
 ssh testadmin@*vm_ip_address*
 ```
 
-## <a name="write-a-blob-to-azure-storage"></a><span data-ttu-id="840cc-127">Écrire un objet blob dans le stockage Azure</span><span class="sxs-lookup"><span data-stu-id="840cc-127">Write a blob to Azure Storage</span></span>
+## <a name="write-a-blob-to-azure-storage"></a><span data-ttu-id="58b43-126">Écrire un objet blob dans le stockage Azure</span><span class="sxs-lookup"><span data-stu-id="58b43-126">Write a blob to Azure Storage</span></span>
 
-<span data-ttu-id="840cc-128">Créez un nouveau fichier *uploadFile.js* dans le répertoire actuel avec le code suivant.</span><span class="sxs-lookup"><span data-stu-id="840cc-128">Create a new file *uploadFile.js* in the current directory with the following code.</span></span>
+<span data-ttu-id="58b43-127">Créez un nouveau fichier *uploadFile.js* dans le répertoire actuel avec le code suivant.</span><span class="sxs-lookup"><span data-stu-id="58b43-127">Create a new file *uploadFile.js* in the current directory with the following code.</span></span>
 
 ```javascript
 'use strict'
@@ -244,29 +243,29 @@ MsRest.loginWithServicePrincipalSecret(process.env.AZURE_ID, process.env.AZURE_P
 });
 ```
 
-<span data-ttu-id="840cc-129">Exécutez la commande, puis copiez et collez l’URL à partir de la sortie dans votre navigateur web pour afficher le fichier dans le stockage Azure :</span><span class="sxs-lookup"><span data-stu-id="840cc-129">Run the command and then copy and paste the URL from the output into your web browser to view the file in Azure Storage:</span></span>
+<span data-ttu-id="58b43-128">Exécutez la commande, puis copiez et collez l’URL à partir de la sortie dans votre navigateur web pour afficher le fichier dans le stockage Azure :</span><span class="sxs-lookup"><span data-stu-id="58b43-128">Run the command and then copy and paste the URL from the output into your web browser to view the file in Azure Storage:</span></span>
 
 ```bash
 node uploadFile.js
 ```
 
-## <a name="clean-up-resources"></a><span data-ttu-id="840cc-130">Supprimer des ressources</span><span class="sxs-lookup"><span data-stu-id="840cc-130">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="58b43-129">Supprimer des ressources</span><span class="sxs-lookup"><span data-stu-id="58b43-129">Clean up resources</span></span>
 
-<span data-ttu-id="840cc-131">Supprimez le groupe de ressources pour supprimer les ressources créées dans ce guide.</span><span class="sxs-lookup"><span data-stu-id="840cc-131">Delete the resource group to remove the resources created in this guide.</span></span>
+<span data-ttu-id="58b43-130">Supprimez le groupe de ressources pour supprimer les ressources créées dans ce guide.</span><span class="sxs-lookup"><span data-stu-id="58b43-130">Delete the resource group to remove the resources created in this guide.</span></span>
 
 ```azurecli-interactive
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="840cc-132">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="840cc-132">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="58b43-131">étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="58b43-131">Next steps</span></span>
 
-<span data-ttu-id="840cc-133">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="840cc-133">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="58b43-132">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="58b43-132">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
 
-## <a name="reference"></a><span data-ttu-id="840cc-134">Référence</span><span class="sxs-lookup"><span data-stu-id="840cc-134">Reference</span></span> 
+## <a name="reference"></a><span data-ttu-id="58b43-133">Informations de référence</span><span class="sxs-lookup"><span data-stu-id="58b43-133">Reference</span></span> 
 
-<span data-ttu-id="840cc-135">Il existe une [référence](/nodejs/api/overview/azure/?view=azure-node-2.0.0) pour tous les packages.</span><span class="sxs-lookup"><span data-stu-id="840cc-135">A [reference](/nodejs/api/overview/azure/?view=azure-node-2.0.0) is available for all packages.</span></span>
+<span data-ttu-id="58b43-134">Il existe une [référence](/javascript/api/overview/azure/) pour tous les packages.</span><span class="sxs-lookup"><span data-stu-id="58b43-134">A [reference](/javascript/api/overview/azure/) is available for all packages.</span></span>
 
-## <a name="get-help-and-give-feedback"></a><span data-ttu-id="840cc-136">Obtenir de l’aide et donner son avis</span><span class="sxs-lookup"><span data-stu-id="840cc-136">Get help and give feedback</span></span>
+## <a name="get-help-and-give-feedback"></a><span data-ttu-id="58b43-135">Obtenir de l’aide et donner son avis</span><span class="sxs-lookup"><span data-stu-id="58b43-135">Get help and give feedback</span></span>
 
-<span data-ttu-id="840cc-137">Posez des questions à la communauté sur [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span><span class="sxs-lookup"><span data-stu-id="840cc-137">Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span></span> <span data-ttu-id="840cc-138">Signalez des bogues et des problèmes concernant les modules Azure pour Node.js sur le [projet GitHub](https://github.com/Azure/azure-sdk-for-node).</span><span class="sxs-lookup"><span data-stu-id="840cc-138">Report bugs and open issues against the Azure modules for Node.js on the [project GitHub](https://github.com/Azure/azure-sdk-for-node).</span></span>
+<span data-ttu-id="58b43-136">Posez des questions à la communauté sur [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span><span class="sxs-lookup"><span data-stu-id="58b43-136">Post questions to the community on [Stack Overflow](https://stackoverflow.com/questions/tagged/azure+node.js).</span></span> <span data-ttu-id="58b43-137">Signalez des bogues et des problèmes concernant les modules Azure pour Node.js sur le [projet GitHub](https://github.com/Azure/azure-sdk-for-node).</span><span class="sxs-lookup"><span data-stu-id="58b43-137">Report bugs and open issues against the Azure modules for Node.js on the [project GitHub](https://github.com/Azure/azure-sdk-for-node).</span></span>
 
