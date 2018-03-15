@@ -10,15 +10,18 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: 59ef5321db6e5e7f3ad0e3b63aaa6a107207d3c2
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
+ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>Modules Azure Active Directory pour Node.js
 
 ## <a name="overview"></a>Vue d'ensemble
+
+> [!IMPORTANT]
+> Nous vous recommandons fortement d’utiliser [Microsoft Graph](https://graph.microsoft.io/) au lieu de l’API Azure AD Graph pour accéder aux ressources Azure Active Directory. Nos efforts de développement sont maintenant axés sur Microsoft Graph et aucune autre amélioration n’est prévue pour l’API Azure AD Graph. Il existe un nombre très limité de scénarios pour lesquels l’API Azure AD Graph peut être appropriée. Pour plus d’informations, consultez le billet de blog [Microsoft Graph ou Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) dans le centre de développement Office.
 
 La [bibliothèque d’authentification Azure Active Directory (ADAL) pour Node.js](https://www.npmjs.com/package/adal-node) permet aux applications Node.js de s’authentifier auprès d’AAD afin d’accéder des ressources web protégées par AAD.
 
@@ -32,7 +35,7 @@ Utilisez npm pour installer les modules client ou de gestion de stockage Azure.
 npm install adal-node
 ```   
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple à partir de [l’exemple d’informations d’identification du client](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustre l’authentification de serveur à serveur via les informations d’identification du client.
 
