@@ -1,40 +1,40 @@
 ---
 title: Modules Azure Cosmos DB pour Node.js
-description: "Références pour les modules Azure Cosmos DB pour Node.js"
+description: Références pour les modules Azure Cosmos DB pour Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
-ms.date: 07/18/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
-ms.openlocfilehash: 575c276ec755dabe8e7b9ed76ba98ef8073c4f1b
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 02d4729d72cba8628ac98de0bf41c30f54c75e85
+ms.sourcegitcommit: 178734fbd3784ade4d8bdb5141be6d7ca7e017f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>Modules Azure Cosmos DB pour Node.js
 
 Azure Cosmos DB est un service de base de données multimodèle mondialement distribué de Microsoft. Azure Cosmos DB vous permet de faire évoluer en toute flexibilité et de façon indépendante le débit et le stockage sur n’importe quel nombre de régions géographiques Azure. Il offre des garanties en termes de débit, de latence, de disponibilité et de cohérence avec des contrats SLA complets, ce qu’aucun autre service de base de données ne peut offrir.
 
-Azure Cosmos DB contient un moteur de base de données non basé sur un schéma, régi par les ressources et optimisé pour les écritures. Celui-ci prend en charge plusieurs modèles de données : clé-valeur, documents, graphiques et colonnes. Il prend également en charge de nombreuses API permettant d’accéder aux données, notamment MongoDB, DocumentDB SQL, Gremlin (préversion) et Tables Azure (préversion), d’une manière extensible.
+Azure Cosmos DB contient un moteur de base de données non basé sur un schéma, régi par les ressources et optimisé pour les écritures. Celui-ci prend en charge plusieurs modèles de données : clé-valeur, documents, graphiques et colonnes. Il prend également en charge de nombreuses API permettant d’accéder aux données, notamment MongoDB, SQL, Gremlin/Graph, Tables Azure et Cassandra (préversion) d’une manière extensible.
 
 ## <a name="management-package"></a>Gestion des packages
 
 ### <a name="install-the-npm-module"></a>Installer le module npm 
 
-Installer le module npm Azure Cosmos DB
+Installer le module npm Azure Cosmos DB.
 
 ```bash
 npm install azure-arm-documentdb
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
-Cet exemple répertorie tous les comptes Cosmos DB.
+Cet exemple répertorie tous les comptes Azure Cosmos DB.
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -52,7 +52,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 
 ## <a name="samples"></a>Exemples
 
-* [Développement d’une application Node.js en utilisant Azure Cosmos DB - Document DB](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/)
+* [Développement d’une application Node.js en utilisant Azure Cosmos DB](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/)
 * [Développement d’une application Node.js en utilisant Azure Cosmos DB - Gremlin](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/)
 
 Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.
