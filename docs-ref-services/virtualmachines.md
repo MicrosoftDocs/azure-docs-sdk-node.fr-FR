@@ -1,6 +1,6 @@
 ---
 title: Modules Machines virtuelles Azure pour Node.js - Azure
-description: "Guide de référence pour les modules Machines virtuelles Azure pour Node.js"
+description: Guide de référence pour les modules Machines virtuelles Azure pour Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -10,11 +10,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 608a915499d7c32c2c8b04464f716fa4fd17243d
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5ba40cb4c068b1af62aa8c654cbf2c3f66f83ff1
+ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>Modules Machines virtuelles Azure pour Node.js
 
@@ -32,7 +32,7 @@ Installer le module npm Azure Compute
 npm install azure-arm-compute
 ```   
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 L’exemple suivant illustre comment se connecter à Azure, créer un client de gestion et dresser la liste de toutes les images de machine virtuelle pour un emplacement, un éditeur, une offre et une référence SKU spécifiés.
 
@@ -58,6 +58,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 
 ## <a name="samples"></a>Exemples
 
-[!INCLUDE [node-storage-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
+[!INCLUDE [node-virtualmachines-samples](../docs-ref-conceptual/includes/virtualmachines-samples.md)]
 
 Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.
