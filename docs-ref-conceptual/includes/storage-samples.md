@@ -1,5 +1,5 @@
 
-* [Bien démarrer avec le service Blob Azure dans Node.js](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
-* [Bien démarrer avec le service de fichiers Azure dans Node.js](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
-* [Bien démarrer avec le service de file d’attente Azure dans Node.js](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
-* [Bien démarrer avec le service de table Azure dans Node.js](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
+* [<span data-ttu-id="ddb0b-101">Bien démarrer avec le service Blob Azure dans Node.js</span><span class="sxs-lookup"><span data-stu-id="ddb0b-101">Getting Started with Azure Blob Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
+* [<span data-ttu-id="ddb0b-102">Bien démarrer avec le service de fichiers Azure dans Node.js</span><span class="sxs-lookup"><span data-stu-id="ddb0b-102">Getting Started with Azure File Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
+* [<span data-ttu-id="ddb0b-103">Bien démarrer avec le service de file d’attente Azure dans Node.js</span><span class="sxs-lookup"><span data-stu-id="ddb0b-103">Getting Started with Azure Queue Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
+* [<span data-ttu-id="ddb0b-104">Bien démarrer avec le service de table Azure dans Node.js</span><span class="sxs-lookup"><span data-stu-id="ddb0b-104">Getting Started with Azure Table Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
