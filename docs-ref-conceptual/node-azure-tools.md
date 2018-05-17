@@ -1,20 +1,20 @@
 ---
-title: "Outils pour les développeurs Node.js sur Azure | Microsoft Docs"
-description: "Installer les outils individuels pour le développement de Node.js sur Azure"
+title: Outils pour les développeurs Node.js sur Azure | Microsoft Docs
+description: Installer les outils individuels pour le développement de Node.js sur Azure
 services: multiple
-author: craigshoemaker
+author: rloutlaw
 manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
-ms.author: cshoe
-ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.author: routlaw
+ms.openlocfilehash: 172cc3e1bff763cbf768dce5aa85065da0dd4927
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-tools-for-nodejs-developers"></a>Outils Azure pour les développeurs Node.js
 Les outils suivants sont recommandés pour le développement avec Azure sur Node.js.
@@ -38,7 +38,7 @@ Modifier et déboguer des applications Node.js sur n’importe quel système d�
 ### <a name="azure-extensions"></a>Extensions Azure
 Utiliser les extensions gratuites suivantes pour interagir avec les services Azure directement dans Visual Studio Code.
 
-| Outil | DESCRIPTION  |
+| Outil | Description  |
 |:---------:|---------|
 | [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Outils Azure Functions](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Créer, gérer, afficher, déboguer et déployer des fonctions|
 | [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Outils Azure App Service](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Parcourir les sites et le portail Azure, créer de nouveaux sites (Linux sur Node.js uniquement) et déployer sur des emplacements |

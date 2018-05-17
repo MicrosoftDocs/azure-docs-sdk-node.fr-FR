@@ -1,18 +1,18 @@
 ---
-title: "Didacticiels sur les bases de données Azure avec Node.js"
-description: "Didacticiels pour la connexion et l’utilisation des bases de données Azure avec Node.js."
-author: craigshoemaker
+title: Didacticiels sur les bases de données Azure avec Node.js
+description: Didacticiels pour la connexion et l’utilisation des bases de données Azure avec Node.js.
+author: rloutlaw
 manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: cshoe
-ms.openlocfilehash: f50a3021c3d5126e68daec6631ee14db13c7d20b
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.author: routlaw
+ms.openlocfilehash: 62879a90296a073db6475f4976ed6d3433b35ef4
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="tutorials-for-using-azure-databases-with-nodejs"></a>Didacticiels pour l’utilisation des bases de données Azure avec Node.js
 
