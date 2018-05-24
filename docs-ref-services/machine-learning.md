@@ -1,39 +1,39 @@
 ---
 title: Modules Azure Machine Learning Studio pour Node.js
-description: "Références pour les modules Azure Machine Learning Studio pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Machine Learning Studio pour Node.js
+author: hning86
+ms.author: haining
+manager: mwinkle
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 82f731971505250f1d637ae32b4c7a83ff24fccf
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 7dfa6d8fa633863fe834ce73462584e79c312c5d
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="f2766-103">Modules Azure Machine Learning Studio pour Node.js</span><span class="sxs-lookup"><span data-stu-id="f2766-103">Azure Machine Learning modules for Node.js</span></span>
+# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="3d58e-103">Modules Azure Machine Learning Studio pour Node.js</span><span class="sxs-lookup"><span data-stu-id="3d58e-103">Azure Machine Learning modules for Node.js</span></span>
 
-<span data-ttu-id="f2766-104">L’apprentissage automatique (Machine Learning) utilise des ordinateurs pour exécuter des modèles prédictifs qui apprennent à partir de données existantes afin de prévoir les tendances, résultats et comportements futurs.</span><span class="sxs-lookup"><span data-stu-id="f2766-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="f2766-105">Ces prévisions ou prédictions générées à partir de l’apprentissage automatique peuvent rendre les applications et les appareils plus intelligents.</span><span class="sxs-lookup"><span data-stu-id="f2766-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="f2766-106">Lorsque vous faites vos achats en ligne, l’apprentissage automatique permet de recommander d’autres produits que vous êtes susceptible d’aimer, en fonction de ce que vous avez acheté.</span><span class="sxs-lookup"><span data-stu-id="f2766-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="f2766-107">Lorsque vous utilisez votre carte de crédit, l’apprentissage automatique compare la transaction à une base de données de transactions et aide la banque à détecter des fraudes.</span><span class="sxs-lookup"><span data-stu-id="f2766-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="f2766-108">Lorsque votre robot aspirateur nettoie une pièce, l’apprentissage automatique l’aide à déterminer si le travail est terminé.</span><span class="sxs-lookup"><span data-stu-id="f2766-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
+<span data-ttu-id="3d58e-104">L’apprentissage automatique (Machine Learning) utilise des ordinateurs pour exécuter des modèles prédictifs qui apprennent à partir de données existantes afin de prévoir les tendances, résultats et comportements futurs.</span><span class="sxs-lookup"><span data-stu-id="3d58e-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="3d58e-105">Ces prévisions ou prédictions générées à partir de l’apprentissage automatique peuvent rendre les applications et les appareils plus intelligents.</span><span class="sxs-lookup"><span data-stu-id="3d58e-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="3d58e-106">Lorsque vous faites vos achats en ligne, l’apprentissage automatique permet de recommander d’autres produits que vous êtes susceptible d’aimer, en fonction de ce que vous avez acheté.</span><span class="sxs-lookup"><span data-stu-id="3d58e-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="3d58e-107">Lorsque vous utilisez votre carte de crédit, l’apprentissage automatique compare la transaction à une base de données de transactions et aide la banque à détecter des fraudes.</span><span class="sxs-lookup"><span data-stu-id="3d58e-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="3d58e-108">Lorsque votre robot aspirateur nettoie une pièce, l’apprentissage automatique l’aide à déterminer si le travail est terminé.</span><span class="sxs-lookup"><span data-stu-id="3d58e-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="f2766-109">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="f2766-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="3d58e-109">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="3d58e-109">Management Package</span></span>
 
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="f2766-110">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="f2766-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="3d58e-110">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="3d58e-110">Install the npm module</span></span>
 
-<span data-ttu-id="f2766-111">Installer le module npm Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="f2766-111">Install the Azure Machine Learning npm module</span></span>
+<span data-ttu-id="3d58e-111">Installer le module npm Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="3d58e-111">Install the Azure Machine Learning npm module</span></span>
 
 ```bash
 npm install azure-arm-machinelearning
 ```
 
-### <a name="example"></a><span data-ttu-id="f2766-112">exemples</span><span class="sxs-lookup"><span data-stu-id="f2766-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="3d58e-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="3d58e-112">Example</span></span>
 
-<span data-ttu-id="f2766-113">Cet exemple répertorie tous les plans d’engagement de Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="f2766-113">This example lists all machine learning committment plans.</span></span>
+<span data-ttu-id="3d58e-113">Cet exemple répertorie tous les plans d’engagement de Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="3d58e-113">This example lists all machine learning committment plans.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="f2766-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="f2766-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="3d58e-114">Exemples</span><span class="sxs-lookup"><span data-stu-id="3d58e-114">Samples</span></span>
 
-<span data-ttu-id="f2766-115">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="f2766-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="3d58e-115">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="3d58e-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

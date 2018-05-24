@@ -1,36 +1,36 @@
 ---
 title: Modules Azure Monitor pour Node.js
-description: "Références pour les modules Azure Monitor pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Monitor pour Node.js
+author: rbouche
+ms.author: robb
+manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
-ms.openlocfilehash: 37caeb2d7b6d757cbe8bb14b6d4909a7c67a37db
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 8a9411b7979f3130a1aa24fd2a0b294fc7f67718
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="c0580-103">Modules Azure Monitor pour Node.js</span><span class="sxs-lookup"><span data-stu-id="c0580-103">Azure Monitor modules for Node.js</span></span>
+# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="68493-103">Modules Azure Monitor pour Node.js</span><span class="sxs-lookup"><span data-stu-id="68493-103">Azure Monitor modules for Node.js</span></span>
 
-<span data-ttu-id="c0580-104">Les applications cloud sont complexes, et se composent de nombreux éléments mobiles.</span><span class="sxs-lookup"><span data-stu-id="c0580-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="c0580-105">L’analyse fournit des données visant à garantir que votre application reste opérationnelle et soit exécutée en toute intégrité.</span><span class="sxs-lookup"><span data-stu-id="c0580-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="c0580-106">Elle vous permet également de parer à des problèmes potentiels ou de résoudre des problèmes déjà survenus.</span><span class="sxs-lookup"><span data-stu-id="c0580-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="c0580-107">En outre, vous pouvez utiliser les données d’analyse pour obtenir des informations détaillées sur votre application.</span><span class="sxs-lookup"><span data-stu-id="c0580-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="c0580-108">Ces connaissances peuvent vous aider à améliorer les performances de l’application ou sa facilité de gestion, ou à automatiser des actions qui exigeraient normalement une intervention manuelle.</span><span class="sxs-lookup"><span data-stu-id="c0580-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+<span data-ttu-id="68493-104">Les applications cloud sont complexes, et se composent de nombreux éléments mobiles.</span><span class="sxs-lookup"><span data-stu-id="68493-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="68493-105">L’analyse fournit des données visant à garantir que votre application reste opérationnelle et soit exécutée en toute intégrité.</span><span class="sxs-lookup"><span data-stu-id="68493-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="68493-106">Elle vous permet également de parer à des problèmes potentiels ou de résoudre des problèmes déjà survenus.</span><span class="sxs-lookup"><span data-stu-id="68493-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="68493-107">En outre, vous pouvez utiliser les données d’analyse pour obtenir des informations détaillées sur votre application.</span><span class="sxs-lookup"><span data-stu-id="68493-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="68493-108">Ces connaissances peuvent vous aider à améliorer les performances de l’application ou sa facilité de gestion, ou à automatiser des actions qui exigeraient normalement une intervention manuelle.</span><span class="sxs-lookup"><span data-stu-id="68493-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="c0580-109">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="c0580-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="68493-109">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="68493-109">Management Package</span></span>
 
-### <a name="install-npm-module"></a><span data-ttu-id="c0580-110">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="c0580-110">Install npm module</span></span>
+### <a name="install-npm-module"></a><span data-ttu-id="68493-110">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="68493-110">Install npm module</span></span>
 
 ```bash
 npm install azure-arm-monitor
 ```
 
-### <a name="example"></a><span data-ttu-id="c0580-111">exemples</span><span class="sxs-lookup"><span data-stu-id="c0580-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="68493-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="68493-111">Example</span></span>
 
-<span data-ttu-id="c0580-112">Cet exemple de code imprime toutes les règles d’alerte associées à un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="c0580-112">This code example prints all the alerting rules associated with a resource group.</span></span>
+<span data-ttu-id="68493-112">Cet exemple de code imprime toutes les règles d’alerte associées à un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="68493-112">This code example prints all the alerting rules associated with a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure
 
 ```
 
-### <a name="samples"></a><span data-ttu-id="c0580-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="c0580-113">Samples</span></span>
+### <a name="samples"></a><span data-ttu-id="68493-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="68493-113">Samples</span></span>
 
-<span data-ttu-id="c0580-114">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="c0580-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="68493-114">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="68493-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
