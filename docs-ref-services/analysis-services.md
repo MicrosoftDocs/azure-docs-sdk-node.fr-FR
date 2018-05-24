@@ -1,20 +1,20 @@
 ---
 title: Modules Azure Analysis Services pour Node.js
-description: "Références pour les modules Azure Analysis Services pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Analysis Services pour Node.js
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Analysis Services
-ms.openlocfilehash: 7dd9ac4a2a4939b66f5a91d048e49fb59cd547c0
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 166d0450ac9b2d005f3ce4ecba5ce36e1786ae09
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-analysis-services-modules-for-nodejs"></a>Modules Azure Analysis Services pour Node.js
 
@@ -31,7 +31,7 @@ Installer le module npm Azure Analysis Services
 npm install azure-arm-analysisservices
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple répertorie tous les serveurs Analysis Services disponibles.
 

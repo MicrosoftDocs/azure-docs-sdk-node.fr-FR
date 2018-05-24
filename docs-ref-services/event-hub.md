@@ -1,20 +1,20 @@
 ---
 title: Modules Azure Event Hub pour Node.js
-description: "Références pour les modules Azure Event Hub pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Event Hub pour Node.js
+author: sethmanheim
+ms.author: sethm
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
-ms.openlocfilehash: 043c34e5b352a786ebead986d05b18c8216d0c93
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: ff167e911b68b82b880e792e7ff2649cbe5af342
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>Modules Azure Event Hub pour Node.js
 
@@ -30,7 +30,7 @@ Utiliser npm pour installer les modules Azure Event Hub pour Node.js
 npm install azure-arm-eventhub
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple récupère des informations sur un concentrateur d’événements existant.
 

@@ -1,20 +1,20 @@
 ---
 title: Modules Azure Relay pour Node.js
-description: "Références pour les modules Azure Relay pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Relay pour Node.js
+author: sethmanheim
+ms.author: sethm
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
-ms.openlocfilehash: 632e17f9169353ad9348b3b098b4a3e8d873238a
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 1f9b4263b8ffae78fcf9f35b8ef0160095059693
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-relay-modules-for-nodejs"></a>Modules Azure Relay pour Node.js
 
@@ -32,7 +32,7 @@ Installer le module npm Azure Relay
 npm install azure-arm-relay
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple répertorie les espaces de noms pour un client de relais.
 

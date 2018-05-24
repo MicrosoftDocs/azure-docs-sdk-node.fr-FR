@@ -1,20 +1,20 @@
 ---
 title: Modules Azure Power BI Embedded pour Node.js
-description: "Références pour les modules Azure Power BI Embedded pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Azure Power BI Embedded pour Node.js
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
-ms.openlocfilehash: 5dbe134acb38787916f48277b2114e199601e128
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 4d0a1ebf75591a9a3575172f325309ddbac7885c
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>Modules Azure Power BI Embedded pour Node.js
 
@@ -32,7 +32,7 @@ Installer le module npm Azure Power BI
 npm install azure-arm-powerbiembedded
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple crée une collection d’espaces de travail dans un groupe de ressources existant.
 

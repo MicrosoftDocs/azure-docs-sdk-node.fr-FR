@@ -1,20 +1,20 @@
 ---
 title: Modules Sauvegarde Azure pour Node.js
-description: "Références pour les modules Sauvegarde Azure pour Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+description: Références pour les modules Sauvegarde Azure pour Node.js
+author: markgalioto
+ms.author: markgal
+manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: 83ccd48d6f66c49ed6be837384a39cb32919b83c
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 6daeb443c2f1d8560a6a455cb6d174462b483f79
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>Modules Sauvegarde Azure pour Node.js
 
@@ -32,7 +32,7 @@ Utiliser npm pour installer les modules Sauvegarde Azure pour Node.js
 npm install azure-arm-recoveryservicesbackup
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple répertorie les tâches de récupération pour un coffre et un groupe de ressources donnés.
 
