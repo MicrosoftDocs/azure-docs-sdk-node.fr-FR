@@ -1,6 +1,6 @@
 ---
-title: "Développement Node.js avec Visual Studio Code et Azure"
-description: "Didacticiel complet décrivant la procédure à suivre pour créer, dockeriser et déployer une application Node.js dans Azure"
+title: Développement Node.js avec Visual Studio Code et Azure
+description: Didacticiel complet décrivant la procédure à suivre pour créer, dockeriser et déployer une application Node.js dans Azure
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908139"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a><span data-ttu-id="3d887-103">Développement Node.js avec Visual Studio Code et Azure</span><span class="sxs-lookup"><span data-stu-id="3d887-103">Node.js development with Visual Studio Code and Azure</span></span>
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 08/17/2017
 
 1. <span data-ttu-id="3d887-141">Entrez `.js` pour afficher tous les fichiers JSON/JavaScript du projet, ainsi que le répertoire parent de chaque fichier.</span><span class="sxs-lookup"><span data-stu-id="3d887-141">Enter `.js` to display all the JavaScript/JSON files in the project along with each file's parent directory</span></span> 
 
-    ![Affichage de tous les fichiers .js*](./media/node-howto-e2e/git-output.png)
+    ![Affichage de tous les fichiers .js\*](./media/node-howto-e2e/git-output.png)
 
 1. <span data-ttu-id="3d887-143">Sélectionnez `server.js`, à savoir le script de démarrage de l’application.</span><span class="sxs-lookup"><span data-stu-id="3d887-143">Select `server.js`, which is the startup script for the app.</span></span> 
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260792"
 ---
 # <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="73342-103">Modules Azure Scheduler pour Node.js</span><span class="sxs-lookup"><span data-stu-id="73342-103">Azure Scheduler modules for Node.js</span></span>
 

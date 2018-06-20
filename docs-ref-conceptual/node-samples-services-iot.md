@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220681"
 ---
 # <a name="sample-code-for-using-azure-messaging-and-iot-with-nodejs"></a><span data-ttu-id="27452-103">Exemple de code pour l’utilisation de la messagerie et de l’IoT Azure avec Node.js</span><span class="sxs-lookup"><span data-stu-id="27452-103">Sample code for using Azure messaging and IoT with Node.js</span></span>
 

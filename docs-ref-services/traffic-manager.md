@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262703"
 ---
 # <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="a2150-103">Modules Azure Traffic Manager pour Node.js</span><span class="sxs-lookup"><span data-stu-id="a2150-103">Azure Traffic Manager modules for Node.js</span></span>
 

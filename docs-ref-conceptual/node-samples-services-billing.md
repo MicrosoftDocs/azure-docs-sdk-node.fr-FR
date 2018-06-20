@@ -1,6 +1,6 @@
 ---
 title: Exemples de code Facturation Azure pour Node.js
-description: "Exemple de code illustrant l’ajout de la fonctionnalité Facturation Azure avec Node.js."
+description: Exemple de code illustrant l’ajout de la fonctionnalité Facturation Azure avec Node.js.
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781775"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a><span data-ttu-id="bdb04-103">Exemples de code Facturation Azure avec Node.js</span><span class="sxs-lookup"><span data-stu-id="bdb04-103">Azure Billing with Node.js code samples</span></span>
 
