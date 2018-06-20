@@ -1,6 +1,6 @@
 ---
-title: "Développement Node.js avec Visual Studio Code et Azure"
-description: "Didacticiel complet décrivant la procédure à suivre pour créer, dockeriser et déployer une application Node.js dans Azure"
+title: Développement Node.js avec Visual Studio Code et Azure
+description: Didacticiel complet décrivant la procédure à suivre pour créer, dockeriser et déployer une application Node.js dans Azure
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908139"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Développement Node.js avec Visual Studio Code et Azure
 

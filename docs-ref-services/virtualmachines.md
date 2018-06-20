@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259841"
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>Modules Machines virtuelles Azure pour Node.js
 

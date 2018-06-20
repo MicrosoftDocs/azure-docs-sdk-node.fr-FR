@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259888"
 ---
 # <a name="azure-machine-learning-modules-for-nodejs"></a>Modules Azure Machine Learning Studio pour Node.js
 

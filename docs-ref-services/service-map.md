@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265980"
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a>Modules Azure Service Map pour Node.js
 
