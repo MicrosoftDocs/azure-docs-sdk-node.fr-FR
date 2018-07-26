@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259968"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188995"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Modules Azure Cognitive Services pour Javascript
 
@@ -29,7 +29,7 @@ Retourne des informations sur le contenu visuel d’une image :
 - Appliquez des paramètres relatifs au contenu osé/pour adulte pour activer la restriction automatique du contenu réservé aux adultes.
 - Identifiez les types d’image et de jeu de couleurs dans les images.
 
-[Essayez Vision par ordinateur](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) gratuitement dans votre navigateur.
+[Essayez Vision par ordinateur](https://azure.microsoft.com/services/cognitive-services/computer-vision/) gratuitement dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 Détectez, identifiez, analysez, organisez et balisez des visages sur des photos. 
 
-[Essayez l’API Visage](https://azure.microsoft.com/en-us/services/cognitive-services/face/) dans votre navigateur.
+[Essayez l’API Visage](https://azure.microsoft.com/services/cognitive-services/face/) dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 Récupérez des documents web indexés par l’API Recherche Web Bing et affinez les résultats par type, date et bien plus encore. 
 
-[Essayez l’API Recherche Web](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) dans votre navigateur.
+[Essayez l’API Recherche Web](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/) dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 Recherchez des images et obtenez des miniatures, des URL d’images complètes, des métadonnées d’images et bien plus encore dans vos résultats.
 
-[Essayez l’API Recherche d’images Bing](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) dans votre navigateur.
+[Essayez l’API Recherche d’images Bing](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/) dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
@@ -162,7 +162,7 @@ L’API Analyse de texte est un service informatique qui fournit un traitement e
 - Extraction d’expressions clés
 - Détection de la langue
 
-[Essayez l’API Analyse de texte](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) dans votre navigateur.
+[Essayez l’API Analyse de texte](https://azure.microsoft.com/services/cognitive-services/text-analytics/) dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 Utilisez la vérification orthographique et de grammaire contextuelle avec l’API Vérification orthographique Bing.
 
-[Essayez l’API Vérification orthographique](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) dans votre navigateur.
+[Essayez l’API Vérification orthographique](https://azure.microsoft.com/services/cognitive-services/spell-check/) dans votre navigateur.
 
 Obtenez le module JavaScript avec [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) :
 
