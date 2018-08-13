@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055797"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    <span data-ttu-id="aa390-101">L’API de gestion de calcul inclut des opérations de gestion des équilibrages de charge pour votre abonnement.</span><span class="sxs-lookup"><span data-stu-id="aa390-101">The Compute Management API includes operations for managing the load balancers for your subscription.</span></span>
+
+    <span data-ttu-id="aa390-102">__Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="aa390-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="aa390-103">Consultez [équilibreurs de charge] {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}.</span><span class="sxs-lookup"><span data-stu-id="aa390-103">See [loadBalancers] {@link ComputeManagementClient~ComputeManagementClient#loadBalancers}.</span></span>
+
+    <span data-ttu-id="aa390-104">Initialise une nouvelle instance de la classe LoadBalancerOperations.</span><span class="sxs-lookup"><span data-stu-id="aa390-104">Initializes a new instance of the LoadBalancerOperations class.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="aa390-105">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-105">Reference to the service client.</span></span>
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="aa390-106">Ajouter un équilibreur de charge interne à un un déploiement existant.</span><span class="sxs-lookup"><span data-stu-id="aa390-106">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="aa390-107">Lorsqu’il est utilisé par un point de terminaison d’entrée, l’équilibreur de charge interne fournira une adresse IP virtuelle privée supplémentaire qui peut être utilisée pour les rôles dans ce déploiement d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-107">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-108">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-108">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-109">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-109">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="aa390-110">Paramètres fournis à l’opération créer un équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-110">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="aa390-111">Nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-111">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="aa390-112">La configuration de l’adresse IP virtuelle (VIP) cet équilibreur de charge fournit.</span><span class="sxs-lookup"><span data-stu-id="aa390-112">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="aa390-113">Le type de l’adresse IP virtuelle fournie par cet équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-113">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="aa390-114">Actuellement, seul 'Private' est pris en charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-114">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="aa390-115">Cela va créer des services sur une adresse IP virtuelle privée d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-115">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-116">Si le déploiement existe à l’intérieur d’un réseau virtuel, un sous-réseau de ce réseau virtuel doit être spécifié pour l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-116">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="aa390-117">L’adresse IP virtuelle gérée par l’équilibreur de charge sera ensuite une adresse IP en dehors de ce sous-réseau.</span><span class="sxs-lookup"><span data-stu-id="aa390-117">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="aa390-118">Si le déploiement existe en dehors d’un réseau virtuel, aucun sous-réseau ne peut être spécifié et l’adresse IP virtuelle privée sera une adresse IP du pool d’adresses privées général.</span><span class="sxs-lookup"><span data-stu-id="aa390-118">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="aa390-119">Si le déploiement existe à l’intérieur d’un réseau virtuel, vous pouvez spécifier une adresse spécifique à partir du sous-réseau d’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-119">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="aa390-120">L’adresse IP virtuelle pour l’équilibrage de charge sera ensuite cette adresse IP spécifique.</span><span class="sxs-lookup"><span data-stu-id="aa390-120">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="aa390-121">Si une adresse IP de réseau virtuel statique est fourni, l’élément de nom de sous-réseau de l’équilibreur de charge doit également être spécifiée.</span><span class="sxs-lookup"><span data-stu-id="aa390-121">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="aa390-122">Si le déploiement existe en dehors d’un réseau virtuel, aucune adresse IP de réseau virtuel statique ne peut être spécifié.</span><span class="sxs-lookup"><span data-stu-id="aa390-122">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-123">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-123">The response stream.</span></span>
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="aa390-124">Supprimer un équilibreur de charge interne du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-124">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-125">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-125">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-126">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-126">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-127">Le nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-127">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-128">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-128">The response stream.</span></span>
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="aa390-129">Met à jour un équilibreur de charge interne associé à un déploiement existant.</span><span class="sxs-lookup"><span data-stu-id="aa390-129">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-130">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-130">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-131">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-131">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-132">Le nom de l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-132">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="aa390-133">Paramètres fournis à l’opération d’équilibrage de charge de mise à jour.</span><span class="sxs-lookup"><span data-stu-id="aa390-133">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="aa390-134">Nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-134">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="aa390-135">La configuration de l’adresse IP virtuelle (VIP) cet équilibreur de charge fournit.</span><span class="sxs-lookup"><span data-stu-id="aa390-135">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="aa390-136">Le type de l’adresse IP virtuelle fournie par cet équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-136">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="aa390-137">Actuellement, seul 'Private' est pris en charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-137">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="aa390-138">Cela va créer des services sur une adresse IP virtuelle privée d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-138">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-139">Si le déploiement existe à l’intérieur d’un réseau virtuel, un sous-réseau de ce réseau virtuel doit être spécifié pour l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-139">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="aa390-140">L’adresse IP virtuelle gérée par l’équilibreur de charge sera ensuite une adresse IP en dehors de ce sous-réseau.</span><span class="sxs-lookup"><span data-stu-id="aa390-140">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="aa390-141">Si le déploiement existe en dehors d’un réseau virtuel, aucun sous-réseau ne peut être spécifié et l’adresse IP virtuelle privée sera une adresse IP du pool d’adresses privées général.</span><span class="sxs-lookup"><span data-stu-id="aa390-141">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="aa390-142">Si le déploiement existe à l’intérieur d’un réseau virtuel, vous pouvez spécifier une adresse spécifique à partir du sous-réseau d’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-142">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="aa390-143">L’adresse IP virtuelle pour l’équilibrage de charge sera ensuite cette adresse IP spécifique.</span><span class="sxs-lookup"><span data-stu-id="aa390-143">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="aa390-144">Si une adresse IP de réseau virtuel statique est fourni, l’élément de nom de sous-réseau de l’équilibreur de charge doit également être spécifiée.</span><span class="sxs-lookup"><span data-stu-id="aa390-144">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="aa390-145">Si le déploiement existe en dehors d’un réseau virtuel, aucune adresse IP de réseau virtuel statique ne peut être spécifié.</span><span class="sxs-lookup"><span data-stu-id="aa390-145">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-146">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-146">The response stream.</span></span>
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: <span data-ttu-id="aa390-147">Ajouter un équilibreur de charge interne à un un déploiement existant.</span><span class="sxs-lookup"><span data-stu-id="aa390-147">Add an internal load balancer to a an existing deployment.</span></span> <span data-ttu-id="aa390-148">Lorsqu’il est utilisé par un point de terminaison d’entrée, l’équilibreur de charge interne fournira une adresse IP virtuelle privée supplémentaire qui peut être utilisée pour les rôles dans ce déploiement d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-148">When used by an input endpoint, the internal load balancer will provide an additional private VIP that can be used for load balancing to the roles in this deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-149">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-149">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-150">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-150">The name of the deployment.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: <span data-ttu-id="aa390-151">Paramètres fournis à l’opération créer un équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-151">Parameters supplied to the Create Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="aa390-152">Nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-152">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="aa390-153">La configuration de l’adresse IP virtuelle (VIP) cet équilibreur de charge fournit.</span><span class="sxs-lookup"><span data-stu-id="aa390-153">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="aa390-154">Le type de l’adresse IP virtuelle fournie par cet équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-154">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="aa390-155">Actuellement, seul 'Private' est pris en charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-155">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="aa390-156">Cela va créer des services sur une adresse IP virtuelle privée d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-156">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-157">Si le déploiement existe à l’intérieur d’un réseau virtuel, un sous-réseau de ce réseau virtuel doit être spécifié pour l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-157">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="aa390-158">L’adresse IP virtuelle gérée par l’équilibreur de charge sera ensuite une adresse IP en dehors de ce sous-réseau.</span><span class="sxs-lookup"><span data-stu-id="aa390-158">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="aa390-159">Si le déploiement existe en dehors d’un réseau virtuel, aucun sous-réseau ne peut être spécifié et l’adresse IP virtuelle privée sera une adresse IP du pool d’adresses privées général.</span><span class="sxs-lookup"><span data-stu-id="aa390-159">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="aa390-160">Si le déploiement existe à l’intérieur d’un réseau virtuel, vous pouvez spécifier une adresse spécifique à partir du sous-réseau d’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-160">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="aa390-161">L’adresse IP virtuelle pour l’équilibrage de charge sera ensuite cette adresse IP spécifique.</span><span class="sxs-lookup"><span data-stu-id="aa390-161">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="aa390-162">Si une adresse IP de réseau virtuel statique est fourni, l’élément de nom de sous-réseau de l’équilibreur de charge doit également être spécifiée.</span><span class="sxs-lookup"><span data-stu-id="aa390-162">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="aa390-163">Si le déploiement existe en dehors d’un réseau virtuel, aucune adresse IP de réseau virtuel statique ne peut être spécifié.</span><span class="sxs-lookup"><span data-stu-id="aa390-163">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-164">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-164">The response stream.</span></span>
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: <span data-ttu-id="aa390-165">Supprimer un équilibreur de charge interne du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-165">Delete an internal load balancer from the deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-166">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-166">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-167">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-167">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-168">Le nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-168">The name of the load balancer.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-169">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-169">The response stream.</span></span>
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: <span data-ttu-id="aa390-170">Met à jour un équilibreur de charge interne associé à un déploiement existant.</span><span class="sxs-lookup"><span data-stu-id="aa390-170">Updates an internal load balancer associated with an existing deployment.</span></span>
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-171">Nom du service.</span><span class="sxs-lookup"><span data-stu-id="aa390-171">The name of the service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-172">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="aa390-172">The name of the deployment.</span></span>
+    - id: loadBalancerName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-173">Le nom de l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-173">The name of the loadBalancer.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: <span data-ttu-id="aa390-174">Paramètres fournis à l’opération d’équilibrage de charge de mise à jour.</span><span class="sxs-lookup"><span data-stu-id="aa390-174">Parameters supplied to the Update Load Balancer operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="aa390-175">Nom de l’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-175">Name of the load balancer.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: <span data-ttu-id="aa390-176">La configuration de l’adresse IP virtuelle (VIP) cet équilibreur de charge fournit.</span><span class="sxs-lookup"><span data-stu-id="aa390-176">The configuration for the virtual IP address (VIP) this load balancer provides.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: <span data-ttu-id="aa390-177">Le type de l’adresse IP virtuelle fournie par cet équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-177">The type of the VIP provided by this load balancer.</span></span> <span data-ttu-id="aa390-178">Actuellement, seul 'Private' est pris en charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-178">Currently, only 'Private' is supported.</span></span> <span data-ttu-id="aa390-179">Cela va créer des services sur une adresse IP virtuelle privée d’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-179">This will create load balancing services on a private VIP.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: <span data-ttu-id="aa390-180">Si le déploiement existe à l’intérieur d’un réseau virtuel, un sous-réseau de ce réseau virtuel doit être spécifié pour l’équilibrage de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-180">If the deployment exists inside a virtual network, a subnet of that virtual network must be specified for the load balancer.</span></span> <span data-ttu-id="aa390-181">L’adresse IP virtuelle gérée par l’équilibreur de charge sera ensuite une adresse IP en dehors de ce sous-réseau.</span><span class="sxs-lookup"><span data-stu-id="aa390-181">The VIP managed by the load balancer will then be an IP address out of this subnet.</span></span> <span data-ttu-id="aa390-182">Si le déploiement existe en dehors d’un réseau virtuel, aucun sous-réseau ne peut être spécifié et l’adresse IP virtuelle privée sera une adresse IP du pool d’adresses privées général.</span><span class="sxs-lookup"><span data-stu-id="aa390-182">If the deployment exists outside of a virtual network, no subnet can be specified and the private VIP will be an IP address from the general private address pool.</span></span>
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: <span data-ttu-id="aa390-183">Si le déploiement existe à l’intérieur d’un réseau virtuel, vous pouvez spécifier une adresse spécifique à partir du sous-réseau d’équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="aa390-183">If the deployment exists inside a virtual network, a specific address from the load balancer subnet can be specified.</span></span> <span data-ttu-id="aa390-184">L’adresse IP virtuelle pour l’équilibrage de charge sera ensuite cette adresse IP spécifique.</span><span class="sxs-lookup"><span data-stu-id="aa390-184">The VIP for the load balancer will then be this specific IP address.</span></span> <span data-ttu-id="aa390-185">Si une adresse IP de réseau virtuel statique est fourni, l’élément de nom de sous-réseau de l’équilibreur de charge doit également être spécifiée.</span><span class="sxs-lookup"><span data-stu-id="aa390-185">If a static virtual network IP address is provided, the SubnetName element of the load balancer must be specified as well.</span></span> <span data-ttu-id="aa390-186">Si le déploiement existe en dehors d’un réseau virtuel, aucune adresse IP de réseau virtuel statique ne peut être spécifié.</span><span class="sxs-lookup"><span data-stu-id="aa390-186">If the deployment exists outside of a virtual network, no static virtual network IP address can be specified.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="aa390-187">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="aa390-187">The response stream.</span></span>
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

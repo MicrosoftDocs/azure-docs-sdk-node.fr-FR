@@ -1,0 +1,667 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 07102ad61d689fe64b8deed07cbf15bcc4b6f4e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055845"
+items:
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations
+  summary: >-
+    <span data-ttu-id="731d8-101">L’API de gestion des services inclut les opérations de gestion des disques dans votre abonnement.</span><span class="sxs-lookup"><span data-stu-id="731d8-101">The Service Management API includes operations for managing the disks in your subscription.</span></span>  <span data-ttu-id="731d8-102">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157188.aspx pour plus d’informations) __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="731d8-102">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157188.aspx for more information) __NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="731d8-103">Consultez [virtualMachineDisks] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineDisks}.</span><span class="sxs-lookup"><span data-stu-id="731d8-103">See [virtualMachineDisks] {@link ComputeManagementClient~ComputeManagementClient#virtualMachineDisks}.</span></span>
+
+    <span data-ttu-id="731d8-104">Initialise une nouvelle instance de la classe VirtualMachineDiskOperations.</span><span class="sxs-lookup"><span data-stu-id="731d8-104">Initializes a new instance of the VirtualMachineDiskOperations class.</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations(client)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations.VirtualMachineDiskOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="731d8-105">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="731d8-105">Reference to the service client.</span></span>
+    content: new VirtualMachineDiskOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="731d8-106">L’opération créer un disque de données ajoute un disque de données à une machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-106">The Create Data Disk operation adds a data disk to a virtual machine.</span></span>
+
+    <span data-ttu-id="731d8-107">Il existe trois façons de créer le disque de données à l’aide de l’opération Ajouter un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-107">There are three ways to create the data disk using the Add Data Disk operation.</span></span> <span data-ttu-id="731d8-108">Option 1 : attacher un disque de données vide pour le rôle en spécifiant l’étiquette du disque et l’emplacement de l’image de disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-108">Option 1 - Attach an empty data disk to the role by specifying the disk label and location of the disk image.</span></span> <span data-ttu-id="731d8-109">N’incluez pas les éléments DiskName et SourceMediaLink dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="731d8-109">Do not include the DiskName and SourceMediaLink elements in the request body.</span></span> <span data-ttu-id="731d8-110">Incluez l’élément MediaLink et référencer un objet blob qui se trouve dans la même région géographique que le rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-110">Include the MediaLink element and reference a blob that is in the same geographical region as the role.</span></span> <span data-ttu-id="731d8-111">Vous pouvez également omettre l’élément MediaLink.</span><span class="sxs-lookup"><span data-stu-id="731d8-111">You can also omit the MediaLink element.</span></span> <span data-ttu-id="731d8-112">Dans ce cas, Azure crée le disque de données dans le compte de stockage configuré en tant que valeur par défaut pour le rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-112">In this usage, Azure will create the data disk in the storage account configured as default for the role.</span></span> <span data-ttu-id="731d8-113">Option 2 : attacher un disque de données existant qui se trouve dans le référentiel d’images.</span><span class="sxs-lookup"><span data-stu-id="731d8-113">Option 2 - Attach an existing data disk that is in the image repository.</span></span> <span data-ttu-id="731d8-114">N’incluez pas les éléments DiskName et SourceMediaLink dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="731d8-114">Do not include the DiskName and SourceMediaLink elements in the request body.</span></span> <span data-ttu-id="731d8-115">Spécifiez le disque de données à utiliser en incluant l’élément DiskName.</span><span class="sxs-lookup"><span data-stu-id="731d8-115">Specify the data disk to use by including the DiskName element.</span></span> <span data-ttu-id="731d8-116">Remarque : Si le corps de la réponse, les éléments MediaLink et LogicalDiskSizeInGB sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="731d8-116">Note: If included the in the response body, the MediaLink and LogicalDiskSizeInGB elements are ignored.</span></span> <span data-ttu-id="731d8-117">Option 3 : spécifier l’emplacement d’un objet blob dans votre compte de stockage qui contiennent une image de disque à utiliser.</span><span class="sxs-lookup"><span data-stu-id="731d8-117">Option 3 - Specify the location of a blob in your storage account that contain a disk image to use.</span></span> <span data-ttu-id="731d8-118">Incluez l’élément SourceMediaLink.</span><span class="sxs-lookup"><span data-stu-id="731d8-118">Include the SourceMediaLink element.</span></span> <span data-ttu-id="731d8-119">Remarque : Si l’isincluded élément MediaLink, il est ignoré.</span><span class="sxs-lookup"><span data-stu-id="731d8-119">Note: If the MediaLink element isincluded, it is ignored.</span></span>  <span data-ttu-id="731d8-120">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-120">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-121">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-121">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-122">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-122">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-123">Le nom du rôle pour ajouter le disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-123">The name of the role to add the data disk to.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: <span data-ttu-id="731d8-124">Paramètres fournis à l’opération créer un disque de données de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-124">Parameters supplied to the Create Virtual Machine Data Disk operation.</span></span>
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-125">Spécifie la plateforme de mise en cache de comportement de l’objet blob de disque de données pour l’efficacité en lecture/écriture.</span><span class="sxs-lookup"><span data-stu-id="731d8-125">Specifies the platform caching behavior of data disk blob for read/write efficiency.</span></span> <span data-ttu-id="731d8-126">La valeur par défaut est en lecture seule.</span><span class="sxs-lookup"><span data-stu-id="731d8-126">The default vault is ReadOnly.</span></span> <span data-ttu-id="731d8-127">Les valeurs possibles sont : None, ReadOnly ou ReadWrite.</span><span class="sxs-lookup"><span data-stu-id="731d8-127">Possible values are: None, ReadOnly, or ReadWrite.</span></span> <span data-ttu-id="731d8-128">Avertissement : Cette propriété affecte la cohérence du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-128">Warning: Setting this property impacts the consistency of the disk.</span></span>'
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-129">Spécifie la description du disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-129">Specifies the description of the data disk.</span></span> <span data-ttu-id="731d8-130">Lorsque vous attachez un disque, soit par référencement direct d’un média à l’aide de l’élément MediaLink ou en spécifiant la taille du disque cible, vous pouvez utiliser l’élément Étiquette disquette pour personnaliser la propriété nom du disque de données cible.</span><span class="sxs-lookup"><span data-stu-id="731d8-130">When you attach a disk, either by directly referencing a media using the MediaLink element or specifying the target disk size, you can use the DiskLabel element to customize the name property of the target data disk.</span></span>
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-131">Spécifie le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-131">Specifies the name of the disk.</span></span> <span data-ttu-id="731d8-132">Azure utilise le disque spécifié pour créer le disque de données pour l’ordinateur et remplit ce champ avec le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-132">Azure uses the specified disk to create the data disk for the machine and populates this field with the disk name.</span></span>
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: <span data-ttu-id="731d8-133">Spécifie le numéro d’unité logique (LUN) pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-133">Specifies the Logical Unit Number (LUN) for the disk.</span></span> <span data-ttu-id="731d8-134">Le numéro d’unité logique spécifie l’emplacement dans lequel le lecteur de données apparaît une fois monté pour une utilisation par la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-134">The LUN specifies the slot in which the data drive appears when mounted for usage by the virtual machine.</span></span> <span data-ttu-id="731d8-135">Les valeurs LUN valides vont de 0 à 15.</span><span class="sxs-lookup"><span data-stu-id="731d8-135">Valid LUN values are 0 through 15.</span></span>
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-136">Spécifie la taille, en Go, d’un disque vide à joindre au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-136">Specifies the size, in GB, of an empty disk to be attached to the role.</span></span> <span data-ttu-id="731d8-137">Le disque peut être créé dans le cadre du disque attacher ou créer un appel de rôle de machine virtuelle en spécifiant la valeur de cette propriété.</span><span class="sxs-lookup"><span data-stu-id="731d8-137">The disk can be created as part of disk attach or create VM role call by specifying the value for this property.</span></span> <span data-ttu-id="731d8-138">Azure crée le disque vide selon la préférence de taille et joint le disque nouvellement créé au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-138">Azure creates the empty disk based on size preference and attaches the newly created disk to the Role.</span></span>
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-139">Spécifie l’emplacement de l’objet blob dans le stockage Azure où se trouve le support pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-139">Specifies the location of the blob in Azure storage where the media for the disk is located.</span></span> <span data-ttu-id="731d8-140">L’emplacement de l’objet blob doit appartenir au compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-140">The blob location must belong to the storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-141">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-141">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: <span data-ttu-id="731d8-142">Spécifie l’emplacement d’un objet blob dans le compte de stockage qui est monté comme disque de données lors de la machine virtuelle est créée.</span><span class="sxs-lookup"><span data-stu-id="731d8-142">Specifies the location of a blob in account storage which is mounted as a data disk when the virtual machine is created.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-143">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-143">The response stream.</span></span>
+    content: function beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: <span data-ttu-id="731d8-144">L’opération de commencer la suppression des disque de données supprime le disque de données spécifié à partir d’une machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-144">The Begin Deleting Data Disk operation removes the specified data disk from a virtual machine.</span></span>  <span data-ttu-id="731d8-145">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-145">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-146">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-146">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-147">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-147">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-148">Le nom du rôle à supprimer le disque de données à partir de.</span><span class="sxs-lookup"><span data-stu-id="731d8-148">The name of the role to delete the data disk from.</span></span>
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: <span data-ttu-id="731d8-149">Le numéro d’unité logique du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-149">The logical unit number of the disk.</span></span>
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: <span data-ttu-id="731d8-150">Indique que l’objet blob source pour le disque doit également être supprimé à partir du stockage.</span><span class="sxs-lookup"><span data-stu-id="731d8-150">Specifies that the source blob for the disk should also be deleted from storage.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-151">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-151">The response stream.</span></span>
+    content: function beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginUpdatingDisk(name, parameters, callback)
+  summary: <span data-ttu-id="731d8-152">L’opération Ajouter un disque ajoute un disque au référentiel d’images utilisateur.</span><span class="sxs-lookup"><span data-stu-id="731d8-152">The Add Disk operation adds a disk to the user image repository.</span></span> <span data-ttu-id="731d8-153">Le disque peut être un disque de système d’exploitation ou un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-153">The disk can be an operating system disk or a data disk.</span></span>  <span data-ttu-id="731d8-154">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-154">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginUpdatingDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-155">Le nom du disque en cours de mise à jour.</span><span class="sxs-lookup"><span data-stu-id="731d8-155">The name of the disk being updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: <span data-ttu-id="731d8-156">Paramètres fournis à l’opération de mise à jour le disque de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-156">Parameters supplied to the Update Virtual Machine Disk operation.</span></span>
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: '<span data-ttu-id="731d8-157">Spécifie si le disque contient un système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-157">Specifies whether the disk contains an operating system.</span></span> <span data-ttu-id="731d8-158">Remarque : Seul un disque avec un système d’exploitation installé peut être monté en tant que lecteur de système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-158">Note: Only a disk with an operating system installed can be mounted as OS Drive.</span></span>'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-159">Le type de système d’exploitation du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-159">The operating system type of the disk.</span></span> <span data-ttu-id="731d8-160">Les valeurs possibles sont : Windows ou Linux.</span><span class="sxs-lookup"><span data-stu-id="731d8-160">Possible values are: Linux or Windows.</span></span>'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-161">Spécifie le nom convivial du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-161">Specifies the friendly name of the disk.</span></span>
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-162">Spécifie l’emplacement de l’objet blob dans le stockage Azure.</span><span class="sxs-lookup"><span data-stu-id="731d8-162">Specifies the location of the blob in Azure storage.</span></span> <span data-ttu-id="731d8-163">L’emplacement de l’objet blob doit appartenir à un compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-163">The blob location must belong to a storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-164">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-164">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-165">Spécifie un nom pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-165">Specifies a name for the disk.</span></span> <span data-ttu-id="731d8-166">Azure utilise le nom pour identifier le disque lors de la création de machines virtuelles à partir du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-166">Azure uses the name to identify the disk when creating virtual machines from the disk.</span></span>
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-167">Redimensionne l’objet blob sous-jacent à la taille indiquée en Go. Pour utiliser la propriété ResizedSizeInGB, l’en-tête de version doit être au moins 2014-10-01.</span><span class="sxs-lookup"><span data-stu-id="731d8-167">Resizes the underlying blob to the indicated size in GB.To use the ResizedSizeInGB property, the version header should be at least 2014-10-01.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-168">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-168">The response stream.</span></span>
+    content: function beginUpdatingDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    <span data-ttu-id="731d8-169">L’opération créer un disque de données ajoute un disque de données à une machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-169">The Create Data Disk operation adds a data disk to a virtual machine.</span></span>
+
+    <span data-ttu-id="731d8-170">Il existe trois façons de créer le disque de données à l’aide de l’opération Ajouter un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-170">There are three ways to create the data disk using the Add Data Disk operation.</span></span> <span data-ttu-id="731d8-171">Option 1 : attacher un disque de données vide pour le rôle en spécifiant l’étiquette du disque et l’emplacement de l’image de disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-171">Option 1 - Attach an empty data disk to the role by specifying the disk label and location of the disk image.</span></span> <span data-ttu-id="731d8-172">N’incluez pas les éléments DiskName et SourceMediaLink dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="731d8-172">Do not include the DiskName and SourceMediaLink elements in the request body.</span></span> <span data-ttu-id="731d8-173">Incluez l’élément MediaLink et référencer un objet blob qui se trouve dans la même région géographique que le rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-173">Include the MediaLink element and reference a blob that is in the same geographical region as the role.</span></span> <span data-ttu-id="731d8-174">Vous pouvez également omettre l’élément MediaLink.</span><span class="sxs-lookup"><span data-stu-id="731d8-174">You can also omit the MediaLink element.</span></span> <span data-ttu-id="731d8-175">Dans ce cas, Azure crée le disque de données dans le compte de stockage configuré en tant que valeur par défaut pour le rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-175">In this usage, Azure will create the data disk in the storage account configured as default for the role.</span></span> <span data-ttu-id="731d8-176">Option 2 : attacher un disque de données existant qui se trouve dans le référentiel d’images.</span><span class="sxs-lookup"><span data-stu-id="731d8-176">Option 2 - Attach an existing data disk that is in the image repository.</span></span> <span data-ttu-id="731d8-177">N’incluez pas les éléments DiskName et SourceMediaLink dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="731d8-177">Do not include the DiskName and SourceMediaLink elements in the request body.</span></span> <span data-ttu-id="731d8-178">Spécifiez le disque de données à utiliser en incluant l’élément DiskName.</span><span class="sxs-lookup"><span data-stu-id="731d8-178">Specify the data disk to use by including the DiskName element.</span></span> <span data-ttu-id="731d8-179">Remarque : Si le corps de la réponse, les éléments MediaLink et LogicalDiskSizeInGB sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="731d8-179">Note: If included the in the response body, the MediaLink and LogicalDiskSizeInGB elements are ignored.</span></span> <span data-ttu-id="731d8-180">Option 3 : spécifier l’emplacement d’un objet blob dans votre compte de stockage qui contiennent une image de disque à utiliser.</span><span class="sxs-lookup"><span data-stu-id="731d8-180">Option 3 - Specify the location of a blob in your storage account that contain a disk image to use.</span></span> <span data-ttu-id="731d8-181">Incluez l’élément SourceMediaLink.</span><span class="sxs-lookup"><span data-stu-id="731d8-181">Include the SourceMediaLink element.</span></span> <span data-ttu-id="731d8-182">Remarque : Si l’isincluded élément MediaLink, il est ignoré.</span><span class="sxs-lookup"><span data-stu-id="731d8-182">Note: If the MediaLink element isincluded, it is ignored.</span></span>  <span data-ttu-id="731d8-183">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-183">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-184">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-184">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-185">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-185">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-186">Le nom du rôle pour ajouter le disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-186">The name of the role to add the data disk to.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: <span data-ttu-id="731d8-187">Paramètres fournis à l’opération créer un disque de données de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-187">Parameters supplied to the Create Virtual Machine Data Disk operation.</span></span>
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-188">Spécifie la plateforme de mise en cache de comportement de l’objet blob de disque de données pour l’efficacité en lecture/écriture.</span><span class="sxs-lookup"><span data-stu-id="731d8-188">Specifies the platform caching behavior of data disk blob for read/write efficiency.</span></span> <span data-ttu-id="731d8-189">La valeur par défaut est en lecture seule.</span><span class="sxs-lookup"><span data-stu-id="731d8-189">The default vault is ReadOnly.</span></span> <span data-ttu-id="731d8-190">Les valeurs possibles sont : None, ReadOnly ou ReadWrite.</span><span class="sxs-lookup"><span data-stu-id="731d8-190">Possible values are: None, ReadOnly, or ReadWrite.</span></span> <span data-ttu-id="731d8-191">Avertissement : Cette propriété affecte la cohérence du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-191">Warning: Setting this property impacts the consistency of the disk.</span></span>'
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-192">Spécifie la description du disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-192">Specifies the description of the data disk.</span></span> <span data-ttu-id="731d8-193">Lorsque vous attachez un disque, soit par référencement direct d’un média à l’aide de l’élément MediaLink ou en spécifiant la taille du disque cible, vous pouvez utiliser l’élément Étiquette disquette pour personnaliser la propriété nom du disque de données cible.</span><span class="sxs-lookup"><span data-stu-id="731d8-193">When you attach a disk, either by directly referencing a media using the MediaLink element or specifying the target disk size, you can use the DiskLabel element to customize the name property of the target data disk.</span></span>
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-194">Spécifie le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-194">Specifies the name of the disk.</span></span> <span data-ttu-id="731d8-195">Azure utilise le disque spécifié pour créer le disque de données pour l’ordinateur et remplit ce champ avec le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-195">Azure uses the specified disk to create the data disk for the machine and populates this field with the disk name.</span></span>
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: <span data-ttu-id="731d8-196">Spécifie le numéro d’unité logique (LUN) pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-196">Specifies the Logical Unit Number (LUN) for the disk.</span></span> <span data-ttu-id="731d8-197">Le numéro d’unité logique spécifie l’emplacement dans lequel le lecteur de données apparaît une fois monté pour une utilisation par la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-197">The LUN specifies the slot in which the data drive appears when mounted for usage by the virtual machine.</span></span> <span data-ttu-id="731d8-198">Les valeurs LUN valides vont de 0 à 15.</span><span class="sxs-lookup"><span data-stu-id="731d8-198">Valid LUN values are 0 through 15.</span></span>
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-199">Spécifie la taille, en Go, d’un disque vide à joindre au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-199">Specifies the size, in GB, of an empty disk to be attached to the role.</span></span> <span data-ttu-id="731d8-200">Le disque peut être créé dans le cadre du disque attacher ou créer un appel de rôle de machine virtuelle en spécifiant la valeur de cette propriété.</span><span class="sxs-lookup"><span data-stu-id="731d8-200">The disk can be created as part of disk attach or create VM role call by specifying the value for this property.</span></span> <span data-ttu-id="731d8-201">Azure crée le disque vide selon la préférence de taille et joint le disque nouvellement créé au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-201">Azure creates the empty disk based on size preference and attaches the newly created disk to the Role.</span></span>
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-202">Spécifie l’emplacement de l’objet blob dans le stockage Azure où se trouve le support pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-202">Specifies the location of the blob in Azure storage where the media for the disk is located.</span></span> <span data-ttu-id="731d8-203">L’emplacement de l’objet blob doit appartenir au compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-203">The blob location must belong to the storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-204">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-204">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: <span data-ttu-id="731d8-205">Spécifie l’emplacement d’un objet blob dans le compte de stockage qui est monté comme disque de données lors de la machine virtuelle est créée.</span><span class="sxs-lookup"><span data-stu-id="731d8-205">Specifies the location of a blob in account storage which is mounted as a data disk when the virtual machine is created.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-206">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-206">The response stream.</span></span>
+    content: function createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDisk(parameters, callback)
+  summary: <span data-ttu-id="731d8-207">L’opération créer un disque ajoute un disque au référentiel d’images utilisateur.</span><span class="sxs-lookup"><span data-stu-id="731d8-207">The Create Disk operation adds a disk to the user image repository.</span></span> <span data-ttu-id="731d8-208">Le disque peut être un disque de système d’exploitation ou un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-208">The disk can be an operating system disk or a data disk.</span></span>  <span data-ttu-id="731d8-209">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-209">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDisk(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskCreateParameters
+      description: <span data-ttu-id="731d8-210">Paramètres fournis à l’opération créer un disque de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-210">Parameters supplied to the Create Virtual Machine Disk operation.</span></span>
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-211">Le type de système d’exploitation du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-211">The operating system type of the disk.</span></span> <span data-ttu-id="731d8-212">Les valeurs possibles sont : Windows ou Linux.</span><span class="sxs-lookup"><span data-stu-id="731d8-212">Possible values are: Linux or Windows.</span></span>'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-213">Spécifie le nom convivial du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-213">Specifies the friendly name of the disk.</span></span>
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-214">Spécifie l’emplacement de l’objet blob dans le stockage Azure.</span><span class="sxs-lookup"><span data-stu-id="731d8-214">Specifies the location of the blob in Azure storage.</span></span> <span data-ttu-id="731d8-215">L’emplacement de l’objet blob doit appartenir à un compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-215">The blob location must belong to a storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-216">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-216">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-217">Spécifie un nom pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-217">Specifies a name for the disk.</span></span> <span data-ttu-id="731d8-218">Azure utilise le nom pour identifier le disque lors de la création de machines virtuelles à partir du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-218">Azure uses the name to identify the disk when creating virtual machines from the disk.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-219">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-219">The response stream.</span></span>
+    content: function createDisk(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: <span data-ttu-id="731d8-220">L’opération Supprimer un disque de données supprime le disque de données spécifié à partir d’une machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-220">The Delete Data Disk operation removes the specified data disk from a virtual machine.</span></span>  <span data-ttu-id="731d8-221">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-221">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-222">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-222">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-223">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-223">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-224">Le nom du rôle à supprimer le disque de données à partir de.</span><span class="sxs-lookup"><span data-stu-id="731d8-224">The name of the role to delete the data disk from.</span></span>
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: <span data-ttu-id="731d8-225">Le numéro d’unité logique du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-225">The logical unit number of the disk.</span></span>
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: <span data-ttu-id="731d8-226">Indique que l’objet blob source pour le disque doit également être supprimé à partir du stockage.</span><span class="sxs-lookup"><span data-stu-id="731d8-226">Specifies that the source blob for the disk should also be deleted from storage.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-227">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-227">The response stream.</span></span>
+    content: function deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDisk(name, deleteFromStorage, callback)
+  summary: <span data-ttu-id="731d8-228">L’opération Supprimer un disque supprime le disque de système d’exploitation ou de données spécifié à partir de votre référentiel d’images.</span><span class="sxs-lookup"><span data-stu-id="731d8-228">The Delete Disk operation deletes the specified data or operating system disk from your image repository.</span></span>  <span data-ttu-id="731d8-229">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157200.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-229">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157200.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDisk(name, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-230">Le nom du disque à supprimer.</span><span class="sxs-lookup"><span data-stu-id="731d8-230">The name of the disk to delete.</span></span>
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: <span data-ttu-id="731d8-231">Indique que l’objet blob source pour le disque doit également être supprimé à partir du stockage.</span><span class="sxs-lookup"><span data-stu-id="731d8-231">Specifies that the source blob for the disk should also be deleted from storage.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-232">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-232">The response stream.</span></span>
+    content: function deleteDisk(name, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  summary: <span data-ttu-id="731d8-233">L’opération obtenir un disque de données récupère le disque de données spécifié à partir d’une machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-233">The Get Data Disk operation retrieves the specified data disk from a virtual machine.</span></span>  <span data-ttu-id="731d8-234">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157180.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-234">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157180.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-235">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-235">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-236">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-236">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-237">Le nom du rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-237">The name of the role.</span></span>
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: <span data-ttu-id="731d8-238">Le numéro d’unité logique du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-238">The logical unit number of the disk.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-239">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-239">The response stream.</span></span>
+    content: function getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDisk(name, callback)
+  summary: >-
+    <span data-ttu-id="731d8-240">L’opération obtenir le disque récupère un disque à partir du référentiel d’image utilisateur.</span><span class="sxs-lookup"><span data-stu-id="731d8-240">The Get Disk operation retrieves a disk from the user image repository.</span></span>
+
+    <span data-ttu-id="731d8-241">Le disque peut être un disque de système d’exploitation ou un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-241">The disk can be an operating system disk or a data disk.</span></span>  <span data-ttu-id="731d8-242">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-242">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDisk(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-243">Le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-243">The name of the disk.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-244">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-244">The response stream.</span></span>
+    content: function getDisk(name, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: listDisks(callback)
+  summary: <span data-ttu-id="731d8-245">L’opération de liste des disques récupère une liste des disques dans votre référentiel d’images.</span><span class="sxs-lookup"><span data-stu-id="731d8-245">The List Disks operation retrieves a list of the disks in your image repository.</span></span>  <span data-ttu-id="731d8-246">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157176.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-246">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157176.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.listDisks(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-247">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-247">The response stream.</span></span>
+    content: function listDisks(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  summary: <span data-ttu-id="731d8-248">L’opération de disque de données de mise à jour met à jour le disque de données spécifié attaché à la machine virtuelle spécifiée.</span><span class="sxs-lookup"><span data-stu-id="731d8-248">The Update Data Disk operation updates the specified data disk attached to the specified virtual machine.</span></span>  <span data-ttu-id="731d8-249">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-249">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-250">Le nom de votre service.</span><span class="sxs-lookup"><span data-stu-id="731d8-250">The name of your service.</span></span>
+    - id: deploymentName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-251">Le nom du déploiement.</span><span class="sxs-lookup"><span data-stu-id="731d8-251">The name of the deployment.</span></span>
+    - id: roleName
+      type:
+      - string
+      description: <span data-ttu-id="731d8-252">Le nom du rôle pour ajouter le disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-252">The name of the role to add the data disk to.</span></span>
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: <span data-ttu-id="731d8-253">Le numéro d’unité logique du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-253">The logical unit number of the disk.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskUpdateParameters
+      description: <span data-ttu-id="731d8-254">Paramètres fournis à l’opération de disque de données de Machine virtuelle mise à jour.</span><span class="sxs-lookup"><span data-stu-id="731d8-254">Parameters supplied to the Update Virtual Machine Data Disk operation.</span></span>
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-255">Spécifie la plateforme de mise en cache de comportement de l’objet blob de disque de données pour l’efficacité en lecture/écriture.</span><span class="sxs-lookup"><span data-stu-id="731d8-255">Specifies the platform caching behavior of data disk blob for read/write efficiency.</span></span> <span data-ttu-id="731d8-256">La valeur par défaut est en lecture seule.</span><span class="sxs-lookup"><span data-stu-id="731d8-256">The default vault is ReadOnly.</span></span> <span data-ttu-id="731d8-257">Les valeurs possibles sont : None, ReadOnly ou ReadWrite.</span><span class="sxs-lookup"><span data-stu-id="731d8-257">Possible values are: None, ReadOnly, or ReadWrite.</span></span> <span data-ttu-id="731d8-258">Avertissement : Cette propriété affecte la cohérence du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-258">Warning: Setting this property impacts the consistency of the disk.</span></span>'
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-259">Spécifie la description du disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-259">Specifies the description of the data disk.</span></span> <span data-ttu-id="731d8-260">Lorsque vous attachez un disque, soit par référencement direct d’un média à l’aide de l’élément MediaLink ou en spécifiant la taille du disque cible, vous pouvez utiliser l’élément Étiquette disquette pour personnaliser la propriété nom du disque de données cible.</span><span class="sxs-lookup"><span data-stu-id="731d8-260">When you attach a disk, either by directly referencing a media using the MediaLink element or specifying the target disk size, you can use the DiskLabel element to customize the name property of the target data disk.</span></span>
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-261">Spécifie le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-261">Specifies the name of the disk.</span></span> <span data-ttu-id="731d8-262">Azure utilise le disque spécifié pour créer le disque de données pour l’ordinateur et remplit ce champ avec le nom du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-262">Azure uses the specified disk to create the data disk for the machine and populates this field with the disk name.</span></span>
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: <span data-ttu-id="731d8-263">Spécifie le numéro d’unité logique (LUN) pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-263">Specifies the Logical Unit Number (LUN) for the disk.</span></span> <span data-ttu-id="731d8-264">Le numéro d’unité logique spécifie l’emplacement dans lequel le lecteur de données apparaît une fois monté pour une utilisation par la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-264">The LUN specifies the slot in which the data drive appears when mounted for usage by the virtual machine.</span></span> <span data-ttu-id="731d8-265">Les valeurs LUN valides vont de 0 à 15.</span><span class="sxs-lookup"><span data-stu-id="731d8-265">Valid LUN values are 0 through 15.</span></span>
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-266">Spécifie la taille, en Go, d’un disque vide à joindre au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-266">Specifies the size, in GB, of an empty disk to be attached to the role.</span></span> <span data-ttu-id="731d8-267">Le disque peut être créé dans le cadre du disque attacher ou créer un appel de rôle de machine virtuelle en spécifiant la valeur de cette propriété.</span><span class="sxs-lookup"><span data-stu-id="731d8-267">The disk can be created as part of disk attach or create VM role call by specifying the value for this property.</span></span> <span data-ttu-id="731d8-268">Azure crée le disque vide selon la préférence de taille et joint le disque nouvellement créé au rôle.</span><span class="sxs-lookup"><span data-stu-id="731d8-268">Azure creates the empty disk based on size preference and attaches the newly created disk to the Role.</span></span>
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-269">Spécifie l’emplacement de l’objet blob dans le magasin d’objets blob Azure où se trouve le support pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-269">Specifies the location of the blob in Azure blob store where the media for the disk is located.</span></span> <span data-ttu-id="731d8-270">L’emplacement de l’objet blob doit appartenir au compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-270">The blob location must belong to the storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-271">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-271">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-272">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-272">The response stream.</span></span>
+    content: function updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDisk(name, parameters, callback)
+  summary: <span data-ttu-id="731d8-273">L’opération Ajouter un disque ajoute un disque au référentiel d’images utilisateur.</span><span class="sxs-lookup"><span data-stu-id="731d8-273">The Add Disk operation adds a disk to the user image repository.</span></span> <span data-ttu-id="731d8-274">Le disque peut être un disque de système d’exploitation ou un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-274">The disk can be an operating system disk or a data disk.</span></span>  <span data-ttu-id="731d8-275">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-275">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-276">Le nom du disque en cours de mise à jour.</span><span class="sxs-lookup"><span data-stu-id="731d8-276">The name of the disk being updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: <span data-ttu-id="731d8-277">Paramètres fournis à l’opération de mise à jour le disque de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-277">Parameters supplied to the Update Virtual Machine Disk operation.</span></span>
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: '<span data-ttu-id="731d8-278">Spécifie si le disque contient un système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-278">Specifies whether the disk contains an operating system.</span></span> <span data-ttu-id="731d8-279">Remarque : Seul un disque avec un système d’exploitation installé peut être monté en tant que lecteur de système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-279">Note: Only a disk with an operating system installed can be mounted as OS Drive.</span></span>'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-280">Le type de système d’exploitation du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-280">The operating system type of the disk.</span></span> <span data-ttu-id="731d8-281">Les valeurs possibles sont : Windows ou Linux.</span><span class="sxs-lookup"><span data-stu-id="731d8-281">Possible values are: Linux or Windows.</span></span>'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-282">Spécifie le nom convivial du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-282">Specifies the friendly name of the disk.</span></span>
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-283">Spécifie l’emplacement de l’objet blob dans le stockage Azure.</span><span class="sxs-lookup"><span data-stu-id="731d8-283">Specifies the location of the blob in Azure storage.</span></span> <span data-ttu-id="731d8-284">L’emplacement de l’objet blob doit appartenir à un compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-284">The blob location must belong to a storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-285">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-285">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-286">Spécifie un nom pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-286">Specifies a name for the disk.</span></span> <span data-ttu-id="731d8-287">Azure utilise le nom pour identifier le disque lors de la création de machines virtuelles à partir du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-287">Azure uses the name to identify the disk when creating virtual machines from the disk.</span></span>
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-288">Redimensionne l’objet blob sous-jacent à la taille indiquée en Go. Pour utiliser la propriété ResizedSizeInGB, l’en-tête de version doit être au moins 2014-10-01.</span><span class="sxs-lookup"><span data-stu-id="731d8-288">Resizes the underlying blob to the indicated size in GB.To use the ResizedSizeInGB property, the version header should be at least 2014-10-01.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-289">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-289">The response stream.</span></span>
+    content: function updateDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDiskSize(name, parameters, callback)
+  summary: <span data-ttu-id="731d8-290">L’opération Ajouter un disque ajoute un disque au référentiel d’images utilisateur.</span><span class="sxs-lookup"><span data-stu-id="731d8-290">The Add Disk operation adds a disk to the user image repository.</span></span> <span data-ttu-id="731d8-291">Le disque peut être un disque de système d’exploitation ou un disque de données.</span><span class="sxs-lookup"><span data-stu-id="731d8-291">The disk can be an operating system disk or a data disk.</span></span>  <span data-ttu-id="731d8-292">(consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx pour plus d’informations)</span><span class="sxs-lookup"><span data-stu-id="731d8-292">(see http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx for more information)</span></span>
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDiskSize(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-293">Le nom du disque en cours de mise à jour.</span><span class="sxs-lookup"><span data-stu-id="731d8-293">The name of the disk being updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: <span data-ttu-id="731d8-294">Paramètres fournis à l’opération de mise à jour le disque de Machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="731d8-294">Parameters supplied to the Update Virtual Machine Disk operation.</span></span>
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: '<span data-ttu-id="731d8-295">Spécifie si le disque contient un système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-295">Specifies whether the disk contains an operating system.</span></span> <span data-ttu-id="731d8-296">Remarque : Seul un disque avec un système d’exploitation installé peut être monté en tant que lecteur de système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="731d8-296">Note: Only a disk with an operating system installed can be mounted as OS Drive.</span></span>'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-297">Le type de système d’exploitation du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-297">The operating system type of the disk.</span></span> <span data-ttu-id="731d8-298">Les valeurs possibles sont : Windows ou Linux.</span><span class="sxs-lookup"><span data-stu-id="731d8-298">Possible values are: Linux or Windows.</span></span>'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="731d8-299">Spécifie le nom convivial du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-299">Specifies the friendly name of the disk.</span></span>
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: '<span data-ttu-id="731d8-300">Spécifie l’emplacement de l’objet blob dans le stockage Azure.</span><span class="sxs-lookup"><span data-stu-id="731d8-300">Specifies the location of the blob in Azure storage.</span></span> <span data-ttu-id="731d8-301">L’emplacement de l’objet blob doit appartenir à un compte de stockage dans l’abonnement spécifié par la valeur d’ID d’abonnement dans l’appel d’opération.</span><span class="sxs-lookup"><span data-stu-id="731d8-301">The blob location must belong to a storage account in the subscription specified by the SubscriptionId value in the operation call.</span></span> <span data-ttu-id="731d8-302">Exemple : http://example.blob.core.windows.net/disks/mydisk.vhd.</span><span class="sxs-lookup"><span data-stu-id="731d8-302">Example: http://example.blob.core.windows.net/disks/mydisk.vhd.</span></span>'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="731d8-303">Spécifie un nom pour le disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-303">Specifies a name for the disk.</span></span> <span data-ttu-id="731d8-304">Azure utilise le nom pour identifier le disque lors de la création de machines virtuelles à partir du disque.</span><span class="sxs-lookup"><span data-stu-id="731d8-304">Azure uses the name to identify the disk when creating virtual machines from the disk.</span></span>
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="731d8-305">Redimensionne l’objet blob sous-jacent à la taille indiquée en Go. Pour utiliser la propriété ResizedSizeInGB, l’en-tête de version doit être au moins 2014-10-01.</span><span class="sxs-lookup"><span data-stu-id="731d8-305">Resizes the underlying blob to the indicated size in GB.To use the ResizedSizeInGB property, the version header should be at least 2014-10-01.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="731d8-306">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="731d8-306">The response stream.</span></span>
+    content: function updateDiskSize(name, parameters, callback)
+  langs:
+  - js

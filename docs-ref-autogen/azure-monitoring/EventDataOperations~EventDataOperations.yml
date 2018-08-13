@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 15806f9b6bce4e4a7f5767f4db990555ca44ceb3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056288"
+items:
+- uid: azure-monitoring.EventDataOperations~EventDataOperations
+  id: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations
+  summary: >-
+    <span data-ttu-id="eca0e-101">Opérations de données d’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-101">Operations for event data.</span></span>
+
+    <span data-ttu-id="eca0e-102">__Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [EventsClient] <xref:azure-monitoring.EventsClient~EventsClient>.</span><span class="sxs-lookup"><span data-stu-id="eca0e-102">__NOTE__: An instance of this class is automatically created for an instance of the [EventsClient] <xref:azure-monitoring.EventsClient~EventsClient>.</span></span>
+
+    <span data-ttu-id="eca0e-103">Consultez [eventData] <xref:azure-monitoring.EventsClient~EventsClient%23eventData>.</span><span class="sxs-lookup"><span data-stu-id="eca0e-103">See [eventData] <xref:azure-monitoring.EventsClient~EventsClient%23eventData>.</span></span>
+
+    <span data-ttu-id="eca0e-104">Initialise une nouvelle instance de la classe EventDataOperations.</span><span class="sxs-lookup"><span data-stu-id="eca0e-104">Initializes a new instance of the EventDataOperations class.</span></span>
+  fullName: azure-monitoring.EventDataOperations
+  type: Class
+  children:
+  - azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  langs:
+  - js
+- id: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  uid: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations(client)
+  fullName: azure-monitoring.EventDataOperations.EventDataOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedEventsClient
+      description: <span data-ttu-id="eca0e-105">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="eca0e-105">Reference to the service client.</span></span>
+    content: new EventDataOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEvents(parameters, callback)
+  summary: <span data-ttu-id="eca0e-106">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-106">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEvents(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsParameters
+      description: ''
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-107">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-107">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-108">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-108">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-109">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-109">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-110">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-110">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-111">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-111">The response stream.</span></span>
+    content: function listEvents(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForCorrelationId(parameters, callback)
+  summary: <span data-ttu-id="eca0e-112">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-112">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForCorrelationId(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForCorrelationIdParameters
+      description: ''
+    - id: parameters.correlationId
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-113">L’id de corrélation d’événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-113">The event correlation id.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-114">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-114">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-115">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-115">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-116">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-116">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-117">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-117">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-118">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-118">The response stream.</span></span>
+    content: function listEventsForCorrelationId(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForEventSource(parameters, callback)
+  summary: <span data-ttu-id="eca0e-119">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-119">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForEventSource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForEventSourceParameters
+      description: ''
+    - id: parameters.eventSource
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-120">La source d’événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-120">The event source.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-121">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-121">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-122">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-122">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-123">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-123">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-124">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-124">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-125">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-125">The response stream.</span></span>
+    content: function listEventsForEventSource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResource(parameters, callback)
+  summary: <span data-ttu-id="eca0e-126">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-126">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceParameters
+      description: ''
+    - id: parameters.resourceUri
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-127">L’id de la ressource.</span><span class="sxs-lookup"><span data-stu-id="eca0e-127">The id of the resource.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-128">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-128">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-129">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-129">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-130">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-130">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-131">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-131">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-132">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-132">The response stream.</span></span>
+    content: function listEventsForResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceGroup(parameters, callback)
+  summary: <span data-ttu-id="eca0e-133">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-133">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceGroup(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceGroupParameters
+      description: ''
+    - id: parameters.resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-134">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="eca0e-134">The resource group name.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-135">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-135">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-136">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-136">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-137">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-137">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-138">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-138">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-139">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-139">The response stream.</span></span>
+    content: function listEventsForResourceGroup(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceProvider(parameters, callback)
+  summary: <span data-ttu-id="eca0e-140">L’opération de valeurs d’événement de liste répertorie les événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-140">The List Event Values operation lists the events.</span></span>
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceProvider(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceProviderParameters
+      description: ''
+    - id: parameters.resourceProvider
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-141">Le fournisseur de ressources.</span><span class="sxs-lookup"><span data-stu-id="eca0e-141">The resource provider.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-142">L’heure de début des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-142">The start time of the events.</span></span>
+    - id: parameters.endTime
+      type:
+      - date
+      description: <span data-ttu-id="eca0e-143">Heure de fin des événements.</span><span class="sxs-lookup"><span data-stu-id="eca0e-143">The end time of the events.</span></span>
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: <span data-ttu-id="eca0e-144">Les canaux de l’événement.</span><span class="sxs-lookup"><span data-stu-id="eca0e-144">The event channels.</span></span>
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: <span data-ttu-id="eca0e-145">Le prochain jeton de liaison.</span><span class="sxs-lookup"><span data-stu-id="eca0e-145">The next link token.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: <span data-ttu-id="eca0e-146">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eca0e-146">The response stream.</span></span>
+    content: function listEventsForResourceProvider(parameters, callback)
+  langs:
+  - js

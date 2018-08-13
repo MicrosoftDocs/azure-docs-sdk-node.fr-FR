@@ -1,0 +1,286 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 10ec832091f323e528abe455cf35dd220c726912
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056103"
+items:
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations
+  summary: >-
+    <span data-ttu-id="eea8b-101">Représente toutes les opérations pour l’exploitation de bases de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-101">Represents all the operations for operating on Azure SQL Databases.</span></span>
+
+    <span data-ttu-id="eea8b-102">Contient des opérations : créer, récupérer, mettre à jour, supprimer les bases de données et inclut également la possibilité pour obtenir les journaux des événements pour une base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-102">Contains operations to: Create, Retrieve, Update, and Delete databases, and also includes the ability to get the event logs for a database.</span></span>
+
+    <span data-ttu-id="eea8b-103">__Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="eea8b-103">__NOTE__: An instance of this class is automatically created for an instance of the [SqlManagementClient] {@link SqlManagementClient~SqlManagementClient}.</span></span>
+
+    <span data-ttu-id="eea8b-104">Voir [bases de données] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>.</span><span class="sxs-lookup"><span data-stu-id="eea8b-104">See [databases] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23databases>.</span></span>
+
+    <span data-ttu-id="eea8b-105">Initialise une nouvelle instance de la classe DatabaseOperations.</span><span class="sxs-lookup"><span data-stu-id="eea8b-105">Initializes a new instance of the DatabaseOperations class.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperations~DatabaseOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations(client)
+  fullName: azure-asm-sql.DatabaseOperations.DatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: <span data-ttu-id="eea8b-106">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="eea8b-106">Reference to the service client.</span></span>
+    content: new DatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#create
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: create(serverName, parameters, callback)
+  summary: <span data-ttu-id="eea8b-107">Crée une base de données sur un serveur de base de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-107">Creates a database in an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.create(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-108">Le nom du serveur de base de données SQL Azure où la base de données doit être créé.</span><span class="sxs-lookup"><span data-stu-id="eea8b-108">The name of the Azure SQL Database Server where the database will be created.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCreateParameters
+      description: <span data-ttu-id="eea8b-109">Les paramètres pour l’opération de base de données de création.</span><span class="sxs-lookup"><span data-stu-id="eea8b-109">The parameters for the create database operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-110">Obtient ou définit le nom de la nouvelle base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-110">Gets or sets the name for the new database.</span></span>
+    - id: parameters.edition
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-111">Obtient ou définit l’édition pour la nouvelle base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-111">Gets or sets the edition for the new database.</span></span>  <span data-ttu-id="eea8b-112">L’énumération DatabaseEditions contient les valeurs valides pour cette propriété.</span><span class="sxs-lookup"><span data-stu-id="eea8b-112">The DatabaseEditions enumeration contains the valid values for this property.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="eea8b-113">Obtient ou définit la taille maximale de cette base de données exprimée en gigaoctets.</span><span class="sxs-lookup"><span data-stu-id="eea8b-113">Gets or sets the maximum size of this database expressed in gigabytes.</span></span>  <span data-ttu-id="eea8b-114">Si elle est utilisée conjointement avec MaximumDatabaseSizeInBytes, ils doivent concorder.</span><span class="sxs-lookup"><span data-stu-id="eea8b-114">If this is used in conjunction with MaximumDatabaseSizeInBytes they must agree.</span></span>
+      optional: true
+    - id: parameters.collationName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-115">Obtient ou définit le nom de classement pour la nouvelle base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-115">Gets or sets the collation name for the new database.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: <span data-ttu-id="eea8b-116">Obtient ou définit la taille maximale de cette base de données, exprimée en octets.</span><span class="sxs-lookup"><span data-stu-id="eea8b-116">Gets or sets the maximum size of this database expressed in bytes.</span></span>  <span data-ttu-id="eea8b-117">Si elle est utilisée conjointement avec MaximumDatabaseSizeInGB, ils doivent concorder.</span><span class="sxs-lookup"><span data-stu-id="eea8b-117">If this is used in conjunction with MaximumDatabaseSizeInGB they must agree.</span></span>
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-118">Obtient ou définit l’ID d’objectif de service à appliquer à la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-118">Gets or sets the service objective ID to be applied to the database.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-119">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-119">The response stream.</span></span>
+    content: function create(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: deleteMethod(serverName, databaseName, callback)
+  summary: <span data-ttu-id="eea8b-120">Supprime une base de données à partir d’un serveur de base de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-120">Drops a database from an Azure SQL Database Server.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.deleteMethod(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-121">Le nom du serveur de base de données SQL Azure qui héberge la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-121">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-122">Le nom de la base de données SQL Azure à supprimer.</span><span class="sxs-lookup"><span data-stu-id="eea8b-122">The name of the Azure SQL Database to be deleted.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-123">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-123">The response stream.</span></span>
+    content: function deleteMethod(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#get
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: <span data-ttu-id="eea8b-124">Retourne des informations sur une base de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-124">Returns information about an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-125">Le nom du serveur de base de données SQL Azure qui héberge la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-125">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-126">Le nom de la base de données SQL Azure à récupérer.</span><span class="sxs-lookup"><span data-stu-id="eea8b-126">The name of the Azure SQL Database to be retrieved.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-127">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-127">The response stream.</span></span>
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#getEventLogs
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: getEventLogs(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="eea8b-128">Retourne des informations sur les journaux d’événements d’une base de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-128">Returns information about an Azure SQL Database event logs.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.getEventLogs(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-129">Le nom du serveur de base de données SQL Azure qui héberge la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-129">The name of the Azure SQL Database Server on which the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-130">Le nom de la base de données SQL Azure à récupérer.</span><span class="sxs-lookup"><span data-stu-id="eea8b-130">The name of the Azure SQL Database to be retrieved.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseGetEventLogsParameters
+      description: <span data-ttu-id="eea8b-131">Les paramètres pour l’opération Get Database Event Logs.</span><span class="sxs-lookup"><span data-stu-id="eea8b-131">The parameters for the Get Database Event Logs operation.</span></span>
+    - id: parameters.startDate
+      type:
+      - date
+      description: <span data-ttu-id="eea8b-132">Obtient ou définit la date de début du journal des événements.</span><span class="sxs-lookup"><span data-stu-id="eea8b-132">Gets or sets the start date for the event log.</span></span>
+    - id: parameters.intervalSizeInMinutes
+      type:
+      - number
+      description: <span data-ttu-id="eea8b-133">Obtient ou définit la taille de l’intervalle en minutes.</span><span class="sxs-lookup"><span data-stu-id="eea8b-133">Gets or sets the interval size in minutes.</span></span>
+    - id: parameters.eventTypes
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-134">Obtient ou définit les types d’événements à récupérer.</span><span class="sxs-lookup"><span data-stu-id="eea8b-134">Gets or sets the event types to retrieve.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-135">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-135">The response stream.</span></span>
+    content: function getEventLogs(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#list
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: list(serverName, callback)
+  summary: <span data-ttu-id="eea8b-136">Retourne une collection de bases de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-136">Returns a collection of Azure SQL Databases.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-137">Le nom du serveur de base de données SQL Azure à partir duquel récupérer la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-137">The name of the Azure SQL Database Server from which to retrieve the database.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-138">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-138">The response stream.</span></span>
+    content: function list(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  id: azure-asm-sql.DatabaseOperations~DatabaseOperations#update
+  parent: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: update(serverName, databaseName, parameters, callback)
+  summary: <span data-ttu-id="eea8b-139">Met à jour les propriétés d’une base de données SQL Azure.</span><span class="sxs-lookup"><span data-stu-id="eea8b-139">Updates the properties of an Azure SQL Database.</span></span>
+  fullName: azure-asm-sql.DatabaseOperations~DatabaseOperations.update(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-140">Le nom du serveur de base de données SQL Azure hébergeant la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-140">The name of the Azure SQL Database Server where the database is hosted.</span></span>
+    - id: databaseName
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-141">Le nom de la base de données SQL Azure à mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="eea8b-141">The name of the Azure SQL Database to be updated.</span></span>
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseUpdateParameters
+      description: <span data-ttu-id="eea8b-142">Les paramètres pour l’opération de mise à jour la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-142">The parameters for the Update Database operation.</span></span>
+    - id: parameters.name
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-143">Obtient ou définit le nouveau nom de la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-143">Gets or sets the new name of the database.</span></span>
+      optional: true
+    - id: parameters.edition
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-144">Obtient ou définit la nouvelle édition de la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-144">Gets or sets the new edition for the database.</span></span>
+    - id: parameters.maximumDatabaseSizeInGB
+      type:
+      - number
+      description: <span data-ttu-id="eea8b-145">Obtient ou définit la taille maximale de cette base de données exprimée en gigaoctets.</span><span class="sxs-lookup"><span data-stu-id="eea8b-145">Gets or sets the maximum size of this database expressed in gigabytes.</span></span>  <span data-ttu-id="eea8b-146">Si elle est utilisée avec MaximumDatabaseSizeInBytes, ils doivent concorder.</span><span class="sxs-lookup"><span data-stu-id="eea8b-146">If this is used with MaximumDatabaseSizeInBytes they must agree.</span></span>
+      optional: true
+    - id: parameters.maximumDatabaseSizeInBytes
+      type:
+      - number
+      description: <span data-ttu-id="eea8b-147">Obtient ou définit la taille maximale de cette base de données, exprimée en octets.</span><span class="sxs-lookup"><span data-stu-id="eea8b-147">Gets or sets the maximum size of this database expressed in bytes.</span></span>  <span data-ttu-id="eea8b-148">Si elle est utilisée avec MaximumDatabaseSizeInGB, ils doivent concorder.</span><span class="sxs-lookup"><span data-stu-id="eea8b-148">If this is used with MaximumDatabaseSizeInGB they must agree.</span></span>
+      optional: true
+    - id: parameters.serviceObjectiveId
+      type:
+      - string
+      description: <span data-ttu-id="eea8b-149">Obtient ou définit l’identificateur unique pour l’objectif de service à appliquer à la base de données.</span><span class="sxs-lookup"><span data-stu-id="eea8b-149">Gets or sets the unique identifier for the service objective to apply to the database.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: <span data-ttu-id="eea8b-150">Le flux de réponse.</span><span class="sxs-lookup"><span data-stu-id="eea8b-150">The response stream.</span></span>
+    content: function update(serverName, databaseName, parameters, callback)
+  langs:
+  - js
