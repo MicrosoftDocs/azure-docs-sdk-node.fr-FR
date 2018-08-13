@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c42f476b7b2548bfccf1b3212b5a267458f632a2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061195"
+items:
+- uid: '@azure/cosmos.CosmosClient'
+  name: CosmosClient
+  fullName: CosmosClient
+  children:
+  - '@azure/cosmos.CosmosClient.constructor'
+  - '@azure/cosmos.CosmosClient.database'
+  - '@azure/cosmos.CosmosClient.databases'
+  - '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  - '@azure/cosmos.CosmosClient.offer'
+  - '@azure/cosmos.CosmosClient.offers'
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="e1c10-101">Fournit une représentation logique côté client du compte de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="e1c10-101">Provides a client-side logical representation of the Azure Cosmos DB database account.</span></span>
+
+    <span data-ttu-id="e1c10-102">Ce client est utilisé pour configurer et exécuter des requêtes dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="e1c10-102">This client is used to configure and execute requests in the Azure Cosmos DB database service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.constructor'
+  name: CosmosClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e1c10-103">Crée un nouveau <xref:CosmosClient> objet.</span><span class="sxs-lookup"><span data-stu-id="e1c10-103">Creates a new <xref:CosmosClient> object.</span></span> <span data-ttu-id="e1c10-104">Consultez <xref:CosmosClientOptions> pour plus d’informations sur les options que vous peuvent utiliser.</span><span class="sxs-lookup"><span data-stu-id="e1c10-104">See <xref:CosmosClientOptions> for more details on what options you can use.</span></span>
+  syntax:
+    content: 'new CosmosClient(options: CosmosClientOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.CosmosClientOptions'
+      description: >
+        <span data-ttu-id="e1c10-105">conteneur des options - nécessitent au moins point de terminaison et d’authentification à configurer</span><span class="sxs-lookup"><span data-stu-id="e1c10-105">bag of options - require at least endpoint and auth to be configured</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.database'
+  name: database
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="e1c10-106">Utilisé pour la lecture, la mise à jour, ou la suppression d’une base de données existante par id ou l’accès à des conteneurs appartenant à cette base de données.</span><span class="sxs-lookup"><span data-stu-id="e1c10-106">Used for reading, updating, or deleting a existing database by id or accessing containers belonging to that database.</span></span>
+
+    <span data-ttu-id="e1c10-107">Cela ne pas appeler un réseau.</span><span class="sxs-lookup"><span data-stu-id="e1c10-107">This does not make a network call.</span></span> <span data-ttu-id="e1c10-108">Utilisez `.read` pour obtenir des informations sur la base de données après avoir obtenu le <xref:Database> objet.</span><span class="sxs-lookup"><span data-stu-id="e1c10-108">Use `.read` to get info about the database after getting the <xref:Database> object.</span></span>
+  syntax:
+    content: 'function database(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: <span data-ttu-id="e1c10-109">Id de la base de données.</span><span class="sxs-lookup"><span data-stu-id="e1c10-109">The id of the database.</span></span>
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.databases'
+  name: databases
+  fullName: databases
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="e1c10-110">Utilisé pour la création de nouvelles bases de données ou l’interrogation ou la lecture de toutes les bases de données.</span><span class="sxs-lookup"><span data-stu-id="e1c10-110">Used for creating new databases, or querying/reading all databases.</span></span>
+
+    <span data-ttu-id="e1c10-111">Utilisez `.database(id)` pour lire, remplacer ou supprimer une base de données existante spécifique par id.</span><span class="sxs-lookup"><span data-stu-id="e1c10-111">Use `.database(id)` to read, replace, or delete a specific, existing database by id.</span></span>
+  syntax:
+    content: 'databases: Databases'
+    return:
+      type:
+      - '@azure/cosmos.Databases'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.getDatabaseAccount'
+  name: getDatabaseAccount
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e1c10-112">Obtenir des informations sur les cours <xref:DatabaseAccount> (y compris les régions sont prises en charge, etc.).</span><span class="sxs-lookup"><span data-stu-id="e1c10-112">Get information about the current <xref:DatabaseAccount> (including which regions are supported, etc.)</span></span>
+  syntax:
+    content: function getDatabaseAccount()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offer'
+  name: offer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e1c10-113">Utilisé pour la lecture ou la mise à jour d’une offre existante par id.</span><span class="sxs-lookup"><span data-stu-id="e1c10-113">Used for reading, or updating a existing offer by id.</span></span>
+  syntax:
+    content: 'function offer(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        <span data-ttu-id="e1c10-114">L’id de l’offre.</span><span class="sxs-lookup"><span data-stu-id="e1c10-114">The id of the offer.</span></span>
+    return:
+      type:
+      - '@azure/cosmos.Offer'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.CosmosClient.offers'
+  name: offers
+  fullName: offers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="e1c10-115">Utilisé pour l’interrogation & lecture de toutes les offres.</span><span class="sxs-lookup"><span data-stu-id="e1c10-115">Used for querying & reading all offers.</span></span>
+
+    <span data-ttu-id="e1c10-116">Utilisez `.offer(id)` pour lire ou remplacer des offres existantes.</span><span class="sxs-lookup"><span data-stu-id="e1c10-116">Use `.offer(id)` to read, or replace existing offers.</span></span>
+  syntax:
+    content: 'offers: Offers'
+    return:
+      type:
+      - '@azure/cosmos.Offers'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.CosmosClientOptions'
+  spec.typeScript:
+  - name: CosmosClientOptions
+    fullName: CosmosClientOptions
+    uid: '@azure/cosmos.CosmosClientOptions'
+- uid: '@azure/cosmos.Databases'
+  spec.typeScript:
+  - name: Databases
+    fullName: Databases
+    uid: '@azure/cosmos.Databases'
+- uid: '@azure/cosmos.Offers'
+  spec.typeScript:
+  - name: Offers
+    fullName: Offers
+    uid: '@azure/cosmos.Offers'
+- uid: '@azure/cosmos.Database'
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: Promise<@azure/cosmos.CosmosResponse<@azure/cosmos.DatabaseAccount, @azure/cosmos.CosmosClient>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CosmosResponse
+    fullName: CosmosResponse
+    uid: '@azure/cosmos.CosmosResponse'
+  - name: <
+    fullName: <
+  - name: DatabaseAccount
+    fullName: DatabaseAccount
+    uid: '@azure/cosmos.DatabaseAccount'
+  - name: ', '
+    fullName: ', '
+  - name: CosmosClient
+    fullName: CosmosClient
+    uid: '@azure/cosmos.CosmosClient'
+  - name: '>>'
+    fullName: '>>'
+- uid: '@azure/cosmos.Offer'
+  spec.typeScript:
+  - name: Offer
+    fullName: Offer
+    uid: '@azure/cosmos.Offer'
