@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b153f4bffb05f3df1f8560dcf62917df2f9fec9d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061386"
+items:
+- uid: azure-iothub.create
+  name: create
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Crée un jeton de signature d’accès partagé pour authentifier une connexion de service avec un Azure IoT hub.
+  syntax:
+    content: 'function create(host: string, policy: string, key: string, expiry: string | number)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Nom d’hôte de l’Azure IoT hub.
+    - id: policy
+      type:
+      - string
+      description: Nom de la stratégie à utiliser pour se connecter à Azure IoT hub (généralement `ServiceConnect`, `iothubowner` etc. Consultez [contrôler l’accès à votre Azure IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security).
+    - id: key
+      type:
+      - string
+      description: Clé symétrique à utiliser pour créer des jetons de signature d’accès partagé.
+    - id: expiry
+      type:
+      - string | number
+      description: >
+        Délai d’expiration pour le jeton qui sera créé.
+    return:
+      type:
+      - SharedAccessSignature
+  package: azure-iothub

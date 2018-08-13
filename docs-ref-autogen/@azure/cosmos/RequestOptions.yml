@@ -1,0 +1,314 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 14bc9587bd6fa91bbbc71437639eb29285ffd8eb
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40061081"
+items:
+- uid: '@azure/cosmos.RequestOptions'
+  name: RequestOptions
+  fullName: RequestOptions
+  children:
+  - '@azure/cosmos.RequestOptions.accessCondition'
+  - '@azure/cosmos.RequestOptions.consistencyLevel'
+  - '@azure/cosmos.RequestOptions.disableAutomaticIdGeneration'
+  - '@azure/cosmos.RequestOptions.disableRUPerMinuteUsage'
+  - '@azure/cosmos.RequestOptions.enableScriptLogging'
+  - '@azure/cosmos.RequestOptions.indexingDirective'
+  - '@azure/cosmos.RequestOptions.initialHeaders'
+  - '@azure/cosmos.RequestOptions.offerEnableRUPerMinuteThroughput'
+  - '@azure/cosmos.RequestOptions.offerThroughput'
+  - '@azure/cosmos.RequestOptions.offerType'
+  - '@azure/cosmos.RequestOptions.partitionKey'
+  - '@azure/cosmos.RequestOptions.populateQuotaInfo'
+  - '@azure/cosmos.RequestOptions.postTriggerInclude'
+  - '@azure/cosmos.RequestOptions.preTriggerInclude'
+  - '@azure/cosmos.RequestOptions.resourceTokenExpirySeconds'
+  - '@azure/cosmos.RequestOptions.sessionToken'
+  - '@azure/cosmos.RequestOptions.skipGetPartitionKeyDefinition'
+  - '@azure/cosmos.RequestOptions.urlConnection'
+  langs:
+  - typeScript
+  type: interface
+  summary: Options qui peuvent être spécifiées pour une demande émis vers les serveurs Azure Cosmos DB. =
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.accessCondition'
+  name: accessCondition
+  fullName: accessCondition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Conditions associées avec la demande.
+  optional: true
+  syntax:
+    content: 'accessCondition?: function'
+    return:
+      type:
+      - function
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.consistencyLevel'
+  name: consistencyLevel
+  fullName: consistencyLevel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Cohérence au niveau requise par le client.
+  optional: true
+  syntax:
+    content: 'consistencyLevel?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.disableAutomaticIdGeneration'
+  name: disableAutomaticIdGeneration
+  fullName: disableAutomaticIdGeneration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Désactiver la génération de code automatique (sera cause crée pour faire échouer si l’id n’est pas sur la définition)
+  optional: true
+  syntax:
+    content: 'disableAutomaticIdGeneration?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.disableRUPerMinuteUsage'
+  name: disableRUPerMinuteUsage
+  fullName: disableRUPerMinuteUsage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: DisableRUPerMinuteUsage est utilisé pour activer ou désactiver les unités de requête (RU) / capacité minute pour répondre à la demande si regular approvisionné RU/seconde est épuisée.
+  optional: true
+  syntax:
+    content: 'disableRUPerMinuteUsage?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.enableScriptLogging'
+  name: enableScriptLogging
+  fullName: enableScriptLogging
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Active ou désactive la journalisation dans les procédures stockées JavaScript.
+  optional: true
+  syntax:
+    content: 'enableScriptLogging?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.indexingDirective'
+  name: indexingDirective
+  fullName: indexingDirective
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Spécifie les directives d’indexation (index, de ne pas indexer... etc.).
+  optional: true
+  syntax:
+    content: 'indexingDirective?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.initialHeaders'
+  name: initialHeaders
+  fullName: initialHeaders
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: (Cas d’utilisation avancées) Initiale pour commencer les en-têtes lors de l’envoi de demandes à Cosmos
+  optional: true
+  syntax:
+    content: 'initialHeaders?: IHeaders'
+    return:
+      type:
+      - '@azure/cosmos.IHeaders'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.offerEnableRUPerMinuteThroughput'
+  name: offerEnableRUPerMinuteThroughput
+  fullName: offerEnableRUPerMinuteThroughput
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Représente des unités de requête (RU) / débit Minute est activée ou désactivée pour un conteneur.
+  optional: true
+  syntax:
+    content: 'offerEnableRUPerMinuteThroughput?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.offerThroughput'
+  name: offerThroughput
+  fullName: offerThroughput
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le débit de l’offre configuré pour un conteneur dans une mesure de demandes par unité.
+  optional: true
+  syntax:
+    content: 'offerThroughput?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.offerType'
+  name: offerType
+  fullName: offerType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Type d’offre lors de la création de conteneurs de documents.
+
+    Cette option est uniquement valide lors de la création d’un conteneur de document.
+  optional: true
+  syntax:
+    content: 'offerType?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.partitionKey'
+  name: partitionKey
+  fullName: partitionKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Spécifie une définition de clé de partition pour un chemin d’accès particulier dans le service de base de données Azure Cosmos DB.
+  optional: true
+  syntax:
+    content: 'partitionKey?: PartitionKey'
+    return:
+      type:
+      - PartitionKey
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.populateQuotaInfo'
+  name: populateQuotaInfo
+  fullName: populateQuotaInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Obtention du quota de conteneur de document active/désactive les statistiques liées pour les demandes de lecture du conteneur de documents.
+  optional: true
+  syntax:
+    content: 'populateQuotaInfo?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.postTriggerInclude'
+  name: postTriggerInclude
+  fullName: postTriggerInclude
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indique quel est le déclencheur de publication à appeler après l’opération.
+  optional: true
+  syntax:
+    content: 'postTriggerInclude?: string | string[]'
+    return:
+      type:
+      - string | string[]
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.preTriggerInclude'
+  name: preTriggerInclude
+  fullName: preTriggerInclude
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indique quel est le déclencheur antérieur à appeler avant l’opération.
+  optional: true
+  syntax:
+    content: 'preTriggerInclude?: string | string[]'
+    return:
+      type:
+      - string | string[]
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.resourceTokenExpirySeconds'
+  name: resourceTokenExpirySeconds
+  fullName: resourceTokenExpirySeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Délai d’expiration (en secondes) pour le jeton de ressource associé à autorisation (applicable uniquement pour les demandes sur les autorisations).
+  optional: true
+  syntax:
+    content: 'resourceTokenExpirySeconds?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.sessionToken'
+  name: sessionToken
+  fullName: sessionToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Jeton à utiliser avec la cohérence de Session.
+  optional: true
+  syntax:
+    content: 'sessionToken?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.skipGetPartitionKeyDefinition'
+  name: skipGetPartitionKeyDefinition
+  fullName: skipGetPartitionKeyDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: (Cas d’utilisation avancées) Ignorer l’obtention des informations sur la clé parititon à partir du conteneur.
+  optional: true
+  syntax:
+    content: 'skipGetPartitionKeyDefinition?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.RequestOptions.urlConnection'
+  name: urlConnection
+  fullName: urlConnection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: (Cas d’utilisation avancées) L’url pour se connecter à.
+  optional: true
+  syntax:
+    content: 'urlConnection?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.IHeaders'
+  spec.typeScript:
+  - name: IHeaders
+    fullName: IHeaders
+    uid: '@azure/cosmos.IHeaders'

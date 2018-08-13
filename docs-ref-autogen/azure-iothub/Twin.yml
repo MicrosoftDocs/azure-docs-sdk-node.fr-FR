@@ -1,0 +1,195 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 73f78523bc9d6043fd2f037ef98f58f71c167428
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40062857"
+items:
+- uid: azure-iothub.Twin
+  name: Twin
+  fullName: Twin
+  children:
+  - azure-iothub.Twin.deviceId
+  - azure-iothub.Twin.etag
+  - azure-iothub.Twin.get
+  - azure-iothub.Twin.moduleId
+  - azure-iothub.Twin.properties
+  - azure-iothub.Twin.tags
+  - azure-iothub.Twin.toJSON
+  - azure-iothub.Twin.constructor
+  - azure-iothub.Twin.update
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Un jumeau d’appareil est un document décrivant l’état d’un périphérique qui est stocké par un Azure IoT hub et est disponible même si l’appareil est hors connexion.
+
+    Il est généré environ 3 sections :
+      - Balises : paires clé/valeur accessible uniquement à partir du côté service
+      - Les propriétés souhaitées : mise à jour par un service et reçu par l’appareil
+      - Propriétés signalées : mise à jour par l’appareil et reçus par le service.
+    Notez que bien qu’il soit possible, les propriétés souhaitées et signalées n’ont pas faire correspondre et que la logique de synchronisation de ces deux collections, si nécessaire, incombe à l’utilisateur du Kit de développement.
+
+
+    Pour plus d’informations, consultez [jumeaux d’appareil de présentation](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-device-twins).
+
+
+    La méthode recommandée pour obtenir un <xref:azure-iothub.Twin> pour un appareil spécifique est d’utiliser le <xref:azure-iothub.Registry.getTwin> (méthode).
+  package: azure-iothub
+- uid: azure-iothub.Twin.deviceId
+  name: deviceId
+  fullName: deviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificateur unique de l’identité d’appareil associée à la représentation, telle qu’elle existe dans le Registre des identités.
+  syntax:
+    content: 'deviceId: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Balise utilisée dans l’accès concurrentiel optimiste pour éviter plusieurs éditions parallèle de la représentation d’appareil.
+  syntax:
+    content: 'etag: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Obtient la dernière version de cette représentation d’appareil à partir du service IoT Hub.
+  syntax:
+    content: 'function get(done: Callback<Twin>)'
+    parameters:
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        La fonction à appeler lorsque l’opération est terminée. `done` est appelée avec trois arguments : un objet d’erreur (peut être null), un [Twin](xref:azure-iothub.Twin) objet représentant l’identité d’appareil créée et un objet spécifique au transport réponse utile pour la journalisation ou de débogage.
+  package: azure-iothub
+- uid: azure-iothub.Twin.moduleId
+  name: moduleId
+  fullName: moduleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificateur de module pour le module associé à la représentation, telle qu’elle existe dans le Registre des identités.
+  optional: true
+  syntax:
+    content: 'moduleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Twin.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Les propriétés souhaitées et signalées dictionnaries (respectivement dans `properties.desired` et `properties.reported`).
+  syntax:
+    content: 'properties: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Collection de paires clé/valeur qui est uniquement disponible sur le côté service et peut être utilisée dans les requêtes pour rechercher des appareils spécifiques.
+  syntax:
+    content: 'tags: function'
+    return:
+      type:
+      - function
+  package: azure-iothub
+- uid: azure-iothub.Twin.toJSON
+  name: toJSON
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function toJSON()
+    parameters: []
+    return:
+      type:
+      - object
+  package: azure-iothub
+- uid: azure-iothub.Twin.constructor
+  name: Twin
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Instancie un nouveau <xref:azure-iothub.Twin>. La méthode recommandée pour obtenir un nouvel <xref:azure-iothub.Twin> objet consiste à utiliser le <xref:azure-iothub.Registry.getTwin> (méthode).
+  syntax:
+    content: 'new Twin(device: DeviceIdentity | string, registryClient: Registry)'
+    parameters:
+    - id: device
+      type:
+      - DeviceIdentity | string
+      description: Une chaîne d’identificateur de périphérique ou un objet décrivant l’appareil. Si un objet, elle doit contenir une propriété deviceId.
+    - id: registryClient
+      type:
+      - azure-iothub.Registry
+      description: >
+        Le client du Registre HTTP utilisé pour exécuter des appels d’API REST.
+  package: azure-iothub
+- uid: azure-iothub.Twin.update
+  name: update
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Mettre à jour le jumeau d’appareil avec le correctif fourni en tant qu’argument.
+  syntax:
+    content: 'function update(patch: any, done: Callback<Twin>)'
+    parameters:
+    - id: patch
+      type:
+      - any
+      description: Objet qui contient les nouvelles valeurs à appliquer à cette représentation d’appareil.
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin>
+      description: >
+        La fonction à appeler lorsque l’opération est terminée. `done` est appelée avec trois arguments : un objet d’erreur (peut être null), un [Twin](xref:azure-iothub.Twin) objet représentant l’identité d’appareil créée et un objet spécifique au transport réponse utile pour la journalisation ou de débogage.
+  package: azure-iothub
+references:
+- uid: azure-iothub.Registry
+  spec.typeScript:
+  - name: Registry
+    fullName: Registry
+    uid: azure-iothub.Registry
+- uid: Callback<azure-iothub.Twin>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '>'
+    fullName: '>'
