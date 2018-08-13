@@ -1,0 +1,196 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c2faaf9b3c602a1e72b11f85d32393406617129a
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40057224"
+items:
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: DeploymentOperations
+  summary: >-
+    Opérations de gestion des espaces de stockage.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [WebSiteExtensionsClient] {@link WebSiteExtensionsClient ~ WebSiteExtensionsClient}.
+
+    Voir la [] {@link WebSiteExtensionsClient ~ WebSiteExtensionsClient #deployments}.
+
+    Initialise une nouvelle instance de la classe DeploymentOperations.
+  fullName: azure-asm-website.DeploymentOperations
+  type: Class
+  children:
+  - azure-asm-website.DeploymentOperations~DeploymentOperations.#ctor
+  - azure-asm-website.DeploymentOperations~DeploymentOperations#get
+  - azure-asm-website.DeploymentOperations~DeploymentOperations#getLog
+  - azure-asm-website.DeploymentOperations~DeploymentOperations#list
+  - azure-asm-website.DeploymentOperations~DeploymentOperations#listLogs
+  - azure-asm-website.DeploymentOperations~DeploymentOperations#redeploy
+  langs:
+  - js
+- id: azure-asm-website.DeploymentOperations~DeploymentOperations.#ctor
+  uid: azure-asm-website.DeploymentOperations~DeploymentOperations.#ctor
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: DeploymentOperations(client)
+  fullName: azure-asm-website.DeploymentOperations.DeploymentOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteExtensionsClient
+      description: Référence au client du service.
+    content: new DeploymentOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations#get
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations#get
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: get(deploymentId, callback)
+  summary: Obtient un déploiement d’un site Web.
+  fullName: azure-asm-website.DeploymentOperations~DeploymentOperations.get(deploymentId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: deploymentId
+      type:
+      - string
+      description: L’identificateur de déploiement.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function get(deploymentId, callback)
+  langs:
+  - js
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations#getLog
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations#getLog
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: getLog(deploymentId, deploymentLogId, callback)
+  summary: Obtient un journal de déploiement pour un site Web.
+  fullName: azure-asm-website.DeploymentOperations~DeploymentOperations.getLog(deploymentId, deploymentLogId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: deploymentId
+      type:
+      - string
+      description: L’identificateur de déploiement.
+    - id: deploymentLogId
+      type:
+      - string
+      description: Identificateur du journal de déploiement.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function getLog(deploymentId, deploymentLogId, callback)
+  langs:
+  - js
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations#list
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations#list
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: list(parametersOrCallback, callback)
+  summary: Répertorier les déploiements pour un site Web.
+  fullName: azure-asm-website.DeploymentOperations~DeploymentOperations.list(parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parametersOrCallback
+      type:
+      - azure-asm-website.DeploymentListParameters
+      description: Paramètres supplémentaires.
+      optional: true
+    - id: parametersOrCallback.top
+      type:
+      - string
+      description: Les critères de requête top.
+      optional: true
+    - id: parametersOrCallback.orderBy
+      type:
+      - string
+      description: L’ordre en fonction des critères de requête.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function list(parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations#listLogs
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations#listLogs
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: listLogs(deploymentId, parametersOrCallback, callback)
+  summary: Répertorier les journaux pour un déploiement pour un site Web.
+  fullName: azure-asm-website.DeploymentOperations~DeploymentOperations.listLogs(deploymentId, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: deploymentId
+      type:
+      - string
+      description: L’identificateur de déploiement.
+    - id: parametersOrCallback
+      type:
+      - azure-asm-website.DeploymentListParameters
+      description: Paramètres supplémentaires.
+      optional: true
+    - id: parametersOrCallback.top
+      type:
+      - string
+      description: Les critères de requête top.
+      optional: true
+    - id: parametersOrCallback.orderBy
+      type:
+      - string
+      description: L’ordre en fonction des critères de requête.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function listLogs(deploymentId, parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-website.DeploymentOperations~DeploymentOperations#redeploy
+  id: azure-asm-website.DeploymentOperations~DeploymentOperations#redeploy
+  parent: azure-asm-website.DeploymentOperations~DeploymentOperations
+  name: redeploy(deploymentId, callback)
+  summary: Redéploie un déploiement de site Web spécifique.
+  fullName: azure-asm-website.DeploymentOperations~DeploymentOperations.redeploy(deploymentId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: deploymentId
+      type:
+      - string
+      description: L’identificateur de déploiement.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function redeploy(deploymentId, callback)
+  langs:
+  - js

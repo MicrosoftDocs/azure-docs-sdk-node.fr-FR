@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 79a140ca883e987ac9cca474869b8481003dc3c0
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40057111"
+items:
+- uid: azure-asm-website.CommandsOperations~CommandsOperations
+  id: azure-asm-website.CommandsOperations~CommandsOperations
+  name: CommandsOperations
+  summary: >-
+    Opérations de l’appel des commandes.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [WebSiteExtensionsClient] {@link WebSiteExtensionsClient ~ WebSiteExtensionsClient}.
+
+    Reportez-vous à la section [commands] {@link WebSiteExtensionsClient ~ WebSiteExtensionsClient #commands}.
+
+    Initialise une nouvelle instance de la classe CommandsOperations.
+  fullName: azure-asm-website.CommandsOperations
+  type: Class
+  children:
+  - azure-asm-website.CommandsOperations~CommandsOperations.#ctor
+  - azure-asm-website.CommandsOperations~CommandsOperations#invoke
+  langs:
+  - js
+- id: azure-asm-website.CommandsOperations~CommandsOperations.#ctor
+  uid: azure-asm-website.CommandsOperations~CommandsOperations.#ctor
+  parent: azure-asm-website.CommandsOperations~CommandsOperations
+  name: CommandsOperations(client)
+  fullName: azure-asm-website.CommandsOperations.CommandsOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteExtensionsClient
+      description: Référence au client du service.
+    content: new CommandsOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.CommandsOperations~CommandsOperations#invoke
+  id: azure-asm-website.CommandsOperations~CommandsOperations#invoke
+  parent: azure-asm-website.CommandsOperations~CommandsOperations
+  name: invoke(parameters, callback)
+  summary: Appeler une commande sur la machine virtuelle du site Web.
+  fullName: azure-asm-website.CommandsOperations~CommandsOperations.invoke(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-website.InvokeCommandParameters
+      description: Les paramètres de commande invoke.
+    - id: parameters.command
+      type:
+      - string
+      description: La commande à appeler.
+      optional: true
+    - id: parameters.directory
+      type:
+      - string
+      description: Le répertoire pour appeler la commande.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Le flux de réponse.
+    content: function invoke(parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 02f61767eab762b53800eaceddcb62cd1b0fdaee
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40057363"
+items:
+- uid: azure-iot-common.Properties
+  name: Properties
+  fullName: Properties
+  children:
+  - azure-iot-common.Properties.add
+  - azure-iot-common.Properties.count
+  - azure-iot-common.Properties.getItem
+  - azure-iot-common.Properties.getValue
+  - azure-iot-common.Properties.propertyList
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    Collection d’utilisateurs défini les propriétés d’un <xref:azure-iot-common.Message> objet sont va être envoyée en même temps que le corps du message et peut être utilisé pour [routage](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-process-d2c).
+
+    Les valeurs peuvent être uniquement des chaînes.
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.add
+  name: add
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ajoute la paire clé-valeur à la collection. Les chaînes `'Authorization'` et `'iothub-to'` sont considérés comme des noms de clés réservés et entraîne la fonction retourne `false` si ces noms de clé sont utilisées.
+  syntax:
+    content: 'function add(itemKey: string, itemValue: string)'
+    parameters:
+    - id: itemKey
+      type:
+      - string
+      description: ''
+    - id: itemValue
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.count
+  name: count
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retourne le nombre d’éléments dans la collection.
+  syntax:
+    content: function count()
+    parameters: []
+    return:
+      type:
+      - number
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.getItem
+  name: getItem
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retourne la paire clé-valeur correspondant à l’index donné.
+  syntax:
+    content: 'function getItem(index: number)'
+    parameters:
+    - id: index
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - function
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.getValue
+  name: getValue
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retourne la propriété value de l’élément comportant la clé donnée.
+  syntax:
+    content: 'function getValue(key: string)'
+    parameters:
+    - id: key
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Properties.propertyList
+  name: propertyList
+  fullName: propertyList
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Tableau contenant les propriétés stockées comme paires clé/valeur
+
+    ```json
+
+    [
+      { key: 'prop1', value: 'value1' },
+      { key: 'prop2', value: 'value2' }
+    ]
+
+    ```
+  syntax:
+    content: 'propertyList: any[]'
+    return:
+      type:
+      - any[]
+  package: azure-iot-common

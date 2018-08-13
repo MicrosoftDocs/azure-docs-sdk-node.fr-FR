@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c0c3e148e5c80149ba46fa9a776f2936c7cd7c37
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40057441"
+items:
+- uid: azure-iot-common.ConnectionString
+  name: ConnectionString
+  fullName: ConnectionString
+  children:
+  - azure-iot-common.ConnectionString.DeviceId
+  - azure-iot-common.ConnectionString.GatewayHostName
+  - azure-iot-common.ConnectionString.HostName
+  - azure-iot-common.ConnectionString.ModuleId
+  - azure-iot-common.ConnectionString.parse
+  - azure-iot-common.ConnectionString.SharedAccessKey
+  - azure-iot-common.ConnectionString.SharedAccessKeyName
+  - azure-iot-common.ConnectionString.x509
+  langs:
+  - typeScript
+  type: class
+  summary: Décrit les paramètres qui permettent à une application d’appareil ou cloud pour vous connecter à un Azure IoT hub.
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.DeviceId
+  name: DeviceId
+  fullName: DeviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificateur unique de l’appareil tel qu’il existe dans le Registre des identités. Cela est uniquement utilisé pour les chaînes de connexion de périphérique.
+  optional: true
+  syntax:
+    content: 'DeviceId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.GatewayHostName
+  name: GatewayHostName
+  fullName: GatewayHostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Adresse IP internet ou le nom de l’ordinateur hôte fonctionne comme une passerelle de périphérique ou un protocole.  Utilisé pour communiquer avec les appareils Edge d’Azure.
+  optional: true
+  syntax:
+    content: 'GatewayHostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.HostName
+  name: HostName
+  fullName: HostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom d’hôte de l’Azure IoT hub.
+  optional: true
+  syntax:
+    content: 'HostName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.ModuleId
+  name: ModuleId
+  fullName: ModuleId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Identificateur de module unique tel qu’il existe dans le Registre des identités. Cela est uniquement utilisé pour les chaînes de connexion de périphérique.
+  optional: true
+  syntax:
+    content: 'ModuleId?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.parse
+  name: parse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Analyse une chaîne et retourne le correspondantes <xref:azure-iot-common.ConnectionString> objet.
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: chaîne à partir de laquelle la chaîne de connexion est extraites
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        tableau de chaînes répertoriant les champs qui doivent être renvoyés.
+      optional: true
+    return:
+      type:
+      - azure-iot-common.ConnectionString
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKey
+  name: SharedAccessKey
+  fullName: SharedAccessKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Clé symétrique utilisée pour créer des jetons de signature qui sont ensuite utilisés pour authentifier la connexion d’accès partagé. Associé à un appareil spécifique ou une stratégie de service spécifique.
+  optional: true
+  syntax:
+    content: 'SharedAccessKey?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.SharedAccessKeyName
+  name: SharedAccessKeyName
+  fullName: SharedAccessKeyName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom de la stratégie d’accès utilisée pour se connecter à Azure IoT hub. utilisé uniquement dans le cas le service SDK, non utilisé avec le SDK d’appareil (qui utilise `DeviceId` à la place).
+  optional: true
+  syntax:
+    content: 'SharedAccessKeyName?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.ConnectionString.x509
+  name: x509
+  fullName: x509
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Cette propriété existe uniquement si un appareil utilise x509 des certificats pour l’authentification et si elle existe, est définie sur True.
+  optional: true
+  syntax:
+    content: 'x509?: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.ConnectionString
+  spec.typeScript:
+  - name: ConnectionString
+    fullName: ConnectionString
+    uid: azure-iot-common.ConnectionString

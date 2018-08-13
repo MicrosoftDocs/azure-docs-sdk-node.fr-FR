@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7ca290b6bcb69b415db6d922be98dc0184fc91ac
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40060728"
+items:
+- uid: azure-iot-device.X509AuthenticationProvider
+  name: X509AuthenticationProvider
+  fullName: X509AuthenticationProvider
+  children:
+  - azure-iot-device.X509AuthenticationProvider.fromX509Options
+  - azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+  - azure-iot-device.X509AuthenticationProvider.setX509Options
+  - azure-iot-device.X509AuthenticationProvider.type
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Fournit un `AuthenticationProvider` objet pouvant être créées simplement en envoyant un X509 de certificat et la clé, est ensuite utilisé par le client de périphérique et les transports pour s’authentifier auprès de l’instance de hub Azure IoT.
+
+    Contrairement à la `SharedAccessSignatureAuthenticationProvider` et `SharedAccessKeyAuthenticationProvider` objets, le `X509AuthenticationProvider` n’émet pas d’un `newTokenAvailable` événements comme il n’existe aucun jeton impliqués dans X509 l’authentification. Les transports obtiendra les informations d’identification à l’aide de la `getDeviceCredentials` (méthode).
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.fromX509Options
+  name: fromX509Options
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crée un `X509AuthenticationProvider` à partir d’un `X509` objet contenant un certificat et la clé.
+  syntax:
+    content: 'static function fromX509Options(deviceId: string, iotHubHostname: string, x509info: X509)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: L’identificateur de périphérique.
+    - id: iotHubHostname
+      type:
+      - string
+      description: Le nom d’hôte de l’instance de hub Azure IoT l’appareil doit se connecter.
+    - id: x509info
+      type:
+      - X509
+      description: >
+        Un `X509` objet contenant un certificat et la clé que l’appareil peut utiliser pour s’authentifier auprès de l’instance de hub Azure IoT.
+    return:
+      type:
+      - azure-iot-device.X509AuthenticationProvider
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.getDeviceCredentials
+  name: getDeviceCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Cette méthode est utilisée par les transports à Obtient l’appareil plus récente des informations d’identification sous la forme d’un `TransportConfig` objet.
+  syntax:
+    content: 'function getDeviceCredentials(callback: (err: Error, credentials?: TransportConfig) => void)'
+    parameters:
+    - id: callback
+      type:
+      - '(err: Error, credentials?: TransportConfig) => void'
+      description: >
+        fonction qui sera appelée avec une erreur ou un ensemble d’informations d’identification de périphérique qui peut être utilisé pour s’authentifier auprès du hub IoT.
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.setX509Options
+  name: setX509Options
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Met à jour le certificat et la clé utilisée par l’appareil pour vous connecter et s’authentifier avec une instance de hub Azure IoT.
+  syntax:
+    content: 'function setX509Options(x509: X509)'
+    parameters:
+    - id: x509
+      type:
+      - X509
+      description: >
+        Le `X509` objet contenant le certificat et la clé.
+  package: azure-iot-device
+- uid: azure-iot-device.X509AuthenticationProvider.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'type: AuthenticationType'
+    return:
+      type:
+      - AuthenticationType
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.X509AuthenticationProvider
+  spec.typeScript:
+  - name: X509AuthenticationProvider
+    fullName: X509AuthenticationProvider
+    uid: azure-iot-device.X509AuthenticationProvider
