@@ -1,0 +1,457 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 234c7d4787f94e746b51b21ae9c34f399226b55e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055821"
+items:
+- uid: azure-asm-sb.TopicOperations~TopicOperations
+  id: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations
+  summary: >-
+    L’API de gestion de Bus de Service inclut les opérations de gestion des rubriques Service Bus pour un espace de noms.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    Consultez [rubriques] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #topics}.
+
+    Initialise une nouvelle instance de la classe TopicOperations.
+  fullName: azure-asm-sb.TopicOperations
+  type: Class
+  children:
+  - azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  - azure-asm-sb.TopicOperations~TopicOperations#create
+  - azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  - azure-asm-sb.TopicOperations~TopicOperations#get
+  - azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  - azure-asm-sb.TopicOperations~TopicOperations#list
+  - azure-asm-sb.TopicOperations~TopicOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  uid: azure-asm-sb.TopicOperations~TopicOperations.#ctor
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: TopicOperations(client)
+  fullName: azure-asm-sb.TopicOperations.TopicOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Référence au client du service.
+    content: new TopicOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#create
+  id: azure-asm-sb.TopicOperations~TopicOperations#create
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: create(namespaceName, topic, callback)
+  summary: Crée une nouvelle rubrique. Une fois créé, ce manifeste de ressource de rubrique est immuable. Cette opération n’est pas idempotente. Répétition de l’appel de création, après qu’une rubrique avec le même nom a été créée avec succès, génère un message d’erreur de conflit 409.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/hh780728.aspx pour plus d’informations)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.create(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: La rubrique Service Bus.
+    - id: topic.name
+      type:
+      - string
+      description: Le nom de la rubrique.
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        Détermine la durée pendant laquelle un message se trouve dans les abonnements associés. Abonnements héritent la durée de vie de la rubrique, sauf si elles sont créées explicitement avec une durée de vie inférieure.
+
+        Selon si les lettres mortes est activé, un message dont durée de vie a expiré sera déplacé vers la DeadLtterQueue associée de l’abonnement ou va être définitivement supprimé. Les valeurs suivantes peuvent être définies au moment de la création de rubrique : * plage : 1 seconde - TimeSpan.MaxValue* par défaut : TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Spécifie la taille de rubrique maximale en mégaoctets. Toute tentative de placement d’un message qui provoque la rubrique de dépasser cette valeur échouera. Tous les messages qui sont stockés dans la rubrique ou l’un de ses abonnements comptabilisés dans cette valeur. Plusieurs copies d’un message qui résident dans un ou plusieurs abonnements comptent comme un message unique. Par exemple, si le message m existe qu’une seule fois dans s1 de l’abonnement et deux fois dans l’abonnement s2, m est comptabilisé comme un seul message. Vous pouvez uniquement définir ce paramètre au moment de la création de rubrique à l’aide des valeurs suivantes : * plage : 1-5*1 024 Mo* par défaut : 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Si activé, la rubrique détecte les messages en double dans l’intervalle de temps spécifié par la propriété DuplicateDetectionHistoryTimeWindow. Définissable uniquement à l’heure de création de rubrique par défaut : false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Spécifie l’intervalle de temps pendant lequel le Service Bus détecte message duplication.* plage : 1 seconde - 7 jours * la valeur par défaut : 10 minutes'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: Active ou désactive le côté service comportement de traitement par lot lorsque vous effectuez des opérations pour la file d’attente spécifique. Lorsque l’option est activée, le bus des services collecte/traite plusieurs opérations sur le serveur principal pour la connexion soit plus efficace. Si l’utilisateur veut plus faible latence des opérations qu’ils peuvent désactiver cette fonctionnalité.
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 'Reflète les octets réels dans le quota de rubrique occupent actuellement des messages dans la rubrique. (en lecture seule) * plage : 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: Obtient ou définit si les messages doivent être filtrés avant la publication.
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: Détermine si l’accès anonyme est autorisé.
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: Obtient les règles d’autorisation pour la description.
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: Obtient ou définit l’état actuel de la rubrique (activé ou désactivé). Lorsqu’une rubrique est désactivée, cette rubrique ne peut pas envoyer ou recevoir des messages.
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: L’heure de que création à la file d’attente.
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: Heure de que dernière mise à jour de la file d’attente.
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: Heure que du dernier accès à la file d’attente.
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: Obtient ou définit si les rubriques peuvent être classés.
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Statistiques de file d’attente actuelle.
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages actives.
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages non distribués.
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages planifiés.
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: Le nombre actuel de lettres mortes de transfert.
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages de transfert.
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: Le nombre actuel d’abonnements à la rubrique.
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: Implémenté.
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: L’état de disponibilité en cours de la rubrique.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function create(namespaceName, topic, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  id: azure-asm-sb.TopicOperations~TopicOperations#deleteMethod
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: deleteMethod(namespaceName, topicName, callback)
+  summary: Supprime une rubrique existante. Cette opération supprime également tous les États associés, y compris les abonnements associés.  (consultez http://msdn.microsoft.com/en-us/library/hh780721.aspx pour plus d’informations)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.deleteMethod(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: topicName
+      type:
+      - string
+      description: La rubrique.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function deleteMethod(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#get
+  id: azure-asm-sb.TopicOperations~TopicOperations#get
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: get(namespaceName, topicName, callback)
+  summary: La description de la rubrique est un document XML AtomPub qui définit les sémantiques souhaitées pour une rubrique. La description de la rubrique contient les propriétés suivantes. Pour plus d’informations, consultez la rubrique Propriétés TopicDescription.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/hh780749.aspx pour plus d’informations)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.get(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: topicName
+      type:
+      - string
+      description: La rubrique.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function get(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  id: azure-asm-sb.TopicOperations~TopicOperations#getConnectionDetails
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: getConnectionDetails(namespaceName, topicName, callback)
+  summary: Obtient l’ensemble de chaînes de connexion pour une rubrique.
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.getConnectionDetails(namespaceName, topicName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: topicName
+      type:
+      - string
+      description: La rubrique.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function getConnectionDetails(namespaceName, topicName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#list
+  id: azure-asm-sb.TopicOperations~TopicOperations#list
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: list(namespaceName, callback)
+  summary: Énumère les rubriques dans l’espace de noms de service. Un flux vide est renvoyé si aucune rubrique n’existe dans l’espace de noms de service.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/hh780744.aspx pour plus d’informations)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.TopicOperations~TopicOperations#update
+  id: azure-asm-sb.TopicOperations~TopicOperations#update
+  parent: azure-asm-sb.TopicOperations~TopicOperations
+  name: update(namespaceName, topic, callback)
+  summary: Met à jour une rubrique.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/jj839740.aspx pour plus d’informations)
+  fullName: azure-asm-sb.TopicOperations~TopicOperations.update(namespaceName, topic, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Le nom de l’espace de noms.
+    - id: topic
+      type:
+      - azure-asm-sb.ServiceBusTopic
+      description: La rubrique Service Bus.
+    - id: topic.name
+      type:
+      - string
+      description: Le nom de la rubrique.
+      optional: true
+    - id: topic.defaultMessageTimeToLive
+      type:
+      - string
+      description: >-
+        Détermine la durée pendant laquelle un message se trouve dans les abonnements associés. Abonnements héritent la durée de vie de la rubrique, sauf si elles sont créées explicitement avec une durée de vie inférieure.
+
+        Selon si les lettres mortes est activé, un message dont durée de vie a expiré sera déplacé vers la DeadLtterQueue associée de l’abonnement ou va être définitivement supprimé. Les valeurs suivantes peuvent être définies au moment de la création de rubrique : * plage : 1 seconde - TimeSpan.MaxValue* par défaut : TimeSpan.MaxValue
+      optional: true
+    - id: topic.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Spécifie la taille de rubrique maximale en mégaoctets. Toute tentative de placement d’un message qui provoque la rubrique de dépasser cette valeur échouera. Tous les messages qui sont stockés dans la rubrique ou l’un de ses abonnements comptabilisés dans cette valeur. Plusieurs copies d’un message qui résident dans un ou plusieurs abonnements comptent comme un message unique. Par exemple, si le message m existe qu’une seule fois dans s1 de l’abonnement et deux fois dans l’abonnement s2, m est comptabilisé comme un seul message. Vous pouvez uniquement définir ce paramètre au moment de la création de rubrique à l’aide des valeurs suivantes : * plage : 1-5*1 024 Mo* par défaut : 1 * 1024'
+      optional: true
+    - id: topic.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Si activé, la rubrique détecte les messages en double dans l’intervalle de temps spécifié par la propriété DuplicateDetectionHistoryTimeWindow. Définissable uniquement à l’heure de création de rubrique par défaut : false'
+      optional: true
+    - id: topic.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Spécifie l’intervalle de temps pendant lequel le Service Bus détecte message duplication.* plage : 1 seconde - 7 jours * la valeur par défaut : 10 minutes'
+      optional: true
+    - id: topic.enableBatchedOperations
+      type:
+      - boolean
+      description: Active ou désactive le côté service comportement de traitement par lot lorsque vous effectuez des opérations pour la file d’attente spécifique. Lorsque l’option est activée, le bus des services collecte/traite plusieurs opérations sur le serveur principal pour la connexion soit plus efficace. Si l’utilisateur veut plus faible latence des opérations qu’ils peuvent désactiver cette fonctionnalité.
+      optional: true
+    - id: topic.sizeInBytes
+      type:
+      - number
+      description: 'Reflète les octets réels dans le quota de rubrique occupent actuellement des messages dans la rubrique. (en lecture seule) * plage : 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: topic.filteringMessagesBeforePublishing
+      type:
+      - boolean
+      description: Obtient ou définit si les messages doivent être filtrés avant la publication.
+      optional: true
+    - id: topic.isAnonymousAccessible
+      type:
+      - boolean
+      description: Détermine si l’accès anonyme est autorisé.
+      optional: true
+    - id: topic.authorizationRules
+      type:
+      - array
+      description: Obtient les règles d’autorisation pour la description.
+      optional: true
+    - id: topic.status
+      type:
+      - string
+      description: Obtient ou définit l’état actuel de la rubrique (activé ou désactivé). Lorsqu’une rubrique est désactivée, cette rubrique ne peut pas envoyer ou recevoir des messages.
+      optional: true
+    - id: topic.createdAt
+      type:
+      - date
+      description: L’heure de que création à la file d’attente.
+      optional: true
+    - id: topic.updatedAt
+      type:
+      - date
+      description: Heure de que dernière mise à jour de la file d’attente.
+      optional: true
+    - id: topic.accessedAt
+      type:
+      - date
+      description: Heure que du dernier accès à la file d’attente.
+      optional: true
+    - id: topic.supportOrdering
+      type:
+      - boolean
+      description: Obtient ou définit si les rubriques peuvent être classés.
+      optional: true
+    - id: topic.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Statistiques de file d’attente actuelle.
+      optional: true
+    - id: topic.countDetails.activeMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages actives.
+      optional: true
+    - id: topic.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages non distribués.
+      optional: true
+    - id: topic.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages planifiés.
+      optional: true
+    - id: topic.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: Le nombre actuel de lettres mortes de transfert.
+      optional: true
+    - id: topic.countDetails.transferMessageCount
+      type:
+      - number
+      description: Le nombre actuel de messages de transfert.
+      optional: true
+    - id: topic.subscriptionCount
+      type:
+      - number
+      description: Le nombre actuel d’abonnements à la rubrique.
+      optional: true
+    - id: topic.autoDeleteOnIdle
+      type:
+      - string
+      description: Implémenté.
+      optional: true
+    - id: topic.entityAvailabilityStatus
+      type:
+      - string
+      description: L’état de disponibilité en cours de la rubrique.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Le flux de réponse.
+    content: function update(namespaceName, topic, callback)
+  langs:
+  - js

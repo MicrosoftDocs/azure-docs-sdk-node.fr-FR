@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ebb7d1516cf3cb499347a00a6c6df67fde478c3a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056259"
+items:
+- uid: azure-monitoring.IncidentOperations~IncidentOperations
+  id: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations
+  summary: >-
+    Opérations de gestion des incidents de l’alerte.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [AlertsClient] <xref:azure-monitoring.AlertsClient~AlertsClient>.
+
+    Consultez [incidents] <xref:azure-monitoring.AlertsClient~AlertsClient%23incidents>.
+
+    Initialise une nouvelle instance de la classe IncidentOperations.
+  fullName: azure-monitoring.IncidentOperations
+  type: Class
+  children:
+  - azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  - azure-monitoring.IncidentOperations~IncidentOperations#get
+  - azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  - azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  langs:
+  - js
+- id: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  uid: azure-monitoring.IncidentOperations~IncidentOperations.#ctor
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: IncidentOperations(client)
+  fullName: azure-monitoring.IncidentOperations.IncidentOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAlertsClient
+      description: Référence au client du service.
+    content: new IncidentOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#get
+  id: azure-monitoring.IncidentOperations~IncidentOperations#get
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: get(incidentId, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.get(incidentId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: incidentId
+      type:
+      - string
+      description: L’id de l’incident à récupérer.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function get(incidentId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listActiveForSubscription
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listActiveForSubscription(callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listActiveForSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function listActiveForSubscription(callback)
+  langs:
+  - js
+- uid: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  id: azure-monitoring.IncidentOperations~IncidentOperations#listForRule
+  parent: azure-monitoring.IncidentOperations~IncidentOperations
+  name: listForRule(ruleId, isActive, callback)
+  summary: ''
+  fullName: azure-monitoring.IncidentOperations~IncidentOperations.listForRule(ruleId, isActive, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ruleId
+      type:
+      - string
+      description: L’id de règle.
+    - id: isActive
+      type:
+      - boolean
+      description: Booléen permettant de récupérer les incidents uniquement actifs ou résolus.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function listForRule(ruleId, isActive, callback)
+  langs:
+  - js

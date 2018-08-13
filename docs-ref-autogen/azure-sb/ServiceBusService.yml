@@ -1,0 +1,1384 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 710b634fa6d51baa927cf736564cb3b38a6c36d9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056306"
+items:
+- uid: azure-sb.ServiceBusService
+  id: azure-sb.ServiceBusService
+  name: ServiceBusService
+  summary: >-
+    Le ServiceBusServices vous permet de travailler avec Microsoft Azure Service Bus.
+
+    Service Bus fournit des files d’attente pour envoyer et recevoir des messages, ainsi que les notifications push pour les appareils mobiles.
+
+
+    Files d’attente Service Bus fournissent les deux fonctionnalités de file d’attente de message standard ainsi que les fonctionnalités existantes de publication/abonnement.
+
+    Pour plus d’informations sur les files d’attente Service Bus, ainsi que des informations précises sur leur utilisation à partir d’applications Node.js de tâches, consultez [files d’attente de Bus de Service usage](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/) et [comment faire pour utiliser rubriques/abonnements Service Bus](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).
+
+
+    Service Bus fournit des notifications push via le Hub de Notification.
+
+    Si le ServiceBusService peut être utilisé pour gérer les Hubs de Notification, vous devez utiliser le <xref:azure-sb.NotificationHubService> pour envoyer des messages sur des appareils mobiles.
+  fullName: azure-sb.ServiceBusService
+  type: Class
+  children:
+  - azure-sb.ServiceBusService.#ctor
+  - azure-sb.ServiceBusService#receiveQueueMessage
+  - azure-sb.ServiceBusService#receiveSubscriptionMessage
+  - azure-sb.ServiceBusService#deleteMessage
+  - azure-sb.ServiceBusService#unlockMessage
+  - azure-sb.ServiceBusService#renewLockForMessage
+  - azure-sb.ServiceBusService#sendQueueMessage
+  - azure-sb.ServiceBusService#sendTopicMessage
+  - azure-sb.ServiceBusService#createQueue
+  - azure-sb.ServiceBusService#createQueueIfNotExists
+  - azure-sb.ServiceBusService#deleteQueue
+  - azure-sb.ServiceBusService#getQueue
+  - azure-sb.ServiceBusService#listQueues
+  - azure-sb.ServiceBusService#createTopic
+  - azure-sb.ServiceBusService#createTopicIfNotExists
+  - azure-sb.ServiceBusService#deleteTopic
+  - azure-sb.ServiceBusService#getTopic
+  - azure-sb.ServiceBusService#listTopics
+  - azure-sb.ServiceBusService#createSubscription
+  - azure-sb.ServiceBusService#deleteSubscription
+  - azure-sb.ServiceBusService#getSubscription
+  - azure-sb.ServiceBusService#listSubscriptions
+  - azure-sb.ServiceBusService#createRule
+  - azure-sb.ServiceBusService#deleteRule
+  - azure-sb.ServiceBusService#getRule
+  - azure-sb.ServiceBusService#listRules
+  - azure-sb.ServiceBusService#createNotificationHub
+  - azure-sb.ServiceBusService#getNotificationHub
+  - azure-sb.ServiceBusService#listNotificationHubs
+  - azure-sb.ServiceBusService#deleteNotificationHub
+  langs:
+  - js
+- id: azure-sb.ServiceBusService.#ctor
+  uid: azure-sb.ServiceBusService.#ctor
+  parent: azure-sb.ServiceBusService
+  name: ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  fullName: azure-sb.ServiceBusService.ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  summary: >-
+    Crée un nouvel objet ServiceBusService.
+
+
+    Le module azure lit les variables d’environnement AZURE_SERVICEBUS_NAMESPACE et AZURE_SERVICEBUS_ACCESS_KEY pour les informations requises pour se connecter à votre Microsoft Azure Service Bus.
+
+    Si ces variables d’environnement ne sont pas définies, vous devez spécifier les informations de compte lors de la création d’un objet ServiceBusService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrNamespaceOrConnectionString
+      type:
+      - string
+      description: L’espace de noms service bus ou la chaîne de connexion.
+      optional: true
+    - id: accessKey
+      type:
+      - string
+      description: Le mot de passe. Nécessaire uniquement si aucune chaîne de connexion ne passée.
+      optional: true
+    - id: issuer
+      type:
+      - string
+      description: L’émetteur.
+      optional: true
+    - id: acsNamespace
+      type:
+      - string
+      description: L’espace de noms acs. Généralement identique à l’espace de noms service bus avec «-sb » suffixe.
+      optional: true
+    - id: host
+      type:
+      - string
+      description: L’adresse d’hôte.
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: Le fournisseur d’authentification.
+      optional: true
+    content: new ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveQueueMessage
+  id: azure-sb.ServiceBusService#receiveQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveQueueMessage(queuePath, options, callback)
+  summary: Reçoit un message de file d’attente.
+  fullName: azure-sb.ServiceBusService.receiveQueueMessage(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à laquelle le message sera envoyé.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: Valeur booléenne indiquant si le message doit être lus ou reçu.
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: L’intervalle de délai d’attente, en secondes, à utiliser pour la demande.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `receivequeuemessageresult` contiendra les informations de résultat de message.
+                                                                                        `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveQueueMessage(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  id: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  summary: Reçoit un message d’abonnement.
+  fullName: azure-sb.ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique à recevoir.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement à partir du message est reçu.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: Valeur booléenne indiquant si le message doit être lus ou reçu.
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: L’intervalle de délai d’attente, en secondes, à utiliser pour la demande.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `receivetopicmessageresult` contiendra les informations de résultat de message.
+                                                                                        `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteMessage
+  id: azure-sb.ServiceBusService#deleteMessage
+  parent: azure-sb.ServiceBusService
+  name: deleteMessage(message, callback)
+  summary: Supprime un message.
+  fullName: azure-sb.ServiceBusService.deleteMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: L’objet de message ou une chaîne avec l’emplacement du message.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#unlockMessage
+  id: azure-sb.ServiceBusService#unlockMessage
+  parent: azure-sb.ServiceBusService
+  name: unlockMessage(message, callback)
+  summary: Déverrouille un message.
+  fullName: azure-sb.ServiceBusService.unlockMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: L’objet de message ou une chaîne avec l’emplacement du message.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function unlockMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#renewLockForMessage
+  id: azure-sb.ServiceBusService#renewLockForMessage
+  parent: azure-sb.ServiceBusService
+  name: renewLockForMessage(message, callback)
+  summary: Renouvellement du verrou de message.
+  fullName: azure-sb.ServiceBusService.renewLockForMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: L’objet de message ou une chaîne avec l’emplacement du message.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function renewLockForMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendQueueMessage
+  id: azure-sb.ServiceBusService#sendQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: sendQueueMessage(queuePath, message, callback)
+  summary: Envoie un message de file d’attente.
+  fullName: azure-sb.ServiceBusService.sendQueueMessage(queuePath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à laquelle le message sera envoyé.
+    - id: message
+      type:
+      - object
+      - string
+      description: Un objet de message qui représente le message à envoyer.
+    - id: message.body
+      type:
+      - string
+      description: Texte du message.
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: Les propriétés de message personnalisé.
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: Identificateur de corrélation du message.
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: L’identificateur de session.
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: L’identificateur du message.
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: Étiquette du message.
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: Réponse du message.
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: Le message de durée de vie.
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: De message à.
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: Le message planifié la file d’attente en heure UTC.
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: Réponse du message à l’identificateur de session.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendQueueMessage(queuePath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendTopicMessage
+  id: azure-sb.ServiceBusService#sendTopicMessage
+  parent: azure-sb.ServiceBusService
+  name: sendTopicMessage(topicPath, message, callback)
+  summary: Envoie un message de la rubrique.
+  fullName: azure-sb.ServiceBusService.sendTopicMessage(topicPath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique à laquelle le message sera envoyé.
+    - id: message
+      type:
+      - object
+      - string
+      description: Un objet de message qui représente le message à envoyer.
+    - id: message.body
+      type:
+      - string
+      description: Texte du message.
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: Les propriétés de message personnalisé.
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: Identificateur de corrélation du message.
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: L’identificateur de session.
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: L’identificateur du message.
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: Étiquette du message.
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: Réponse du message.
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: Le message de durée de vie.
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: De message à.
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: Le message planifié la file d’attente en heure UTC.
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: Réponse du message à l’identificateur de session.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `receivetopicmessageresult` contiendra les informations de résultat de message.
+                                                                                          `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTopicMessage(topicPath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueue
+  id: azure-sb.ServiceBusService#createQueue
+  parent: azure-sb.ServiceBusService
+  name: createQueue(queuePath, options, callback)
+  summary: Crée une file d’attente.
+  fullName: azure-sb.ServiceBusService.createQueue(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à créer.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: Spécifie la taille de file d’attente maximale en mégaoctets. Toute tentative de placement d’un message qui entraînera le dépassement de cette valeur de la file d’attente échoue.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Selon que les lettres mortes est activé, un message est automatiquement déplacé vers le DeadLetterQueue ou supprimé s’il a été stocké dans la file d’attente plus longtemps que le délai spécifié. Cette valeur est remplacée par une durée de vie spécifiée sur le message si et seulement si la durée de vie de message est inférieure à la durée de vie définie sur la file d’attente. Cette valeur est immuable après que la file d’attente a été créé.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: Détermine la quantité de temps en secondes dans lequel un message doit être verrouillé pour le traitement par un récepteur. Après cette période, le message est déverrouillé et disponible pour la consommation par le récepteur suivant. Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de file d’attente. Si la valeur est true, la file d’attente sera SessionReceiver prenant en charge de session et uniquement est pris en charge. Les files d’attente prenant en charge de session ne sont pas pris en charge via REST.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Ce champ contrôle comment le Bus de Service gère un message dont durée de vie a expiré. S’il est activé et un message expire, Service Bus déplace le message à partir de la file d’attente dans la file d’attente secondaire de la file d’attente lettre morte. Si désactivé, message sera définitivement supprimé de la file d’attente. Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: Spécifie l’intervalle de temps pendant lequel le Service Bus détecte la duplication de message.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Spécifie si la file d’attente doit être partitionnée.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `createqueueresult` contiendra les nouvelles informations de file d’attente.
+                                                                                          `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueue(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueueIfNotExists
+  id: azure-sb.ServiceBusService#createQueueIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createQueueIfNotExists(queuePath, options, callback)
+  summary: Crée une file d’attente si elle n’existe pas déjà.
+  fullName: azure-sb.ServiceBusService.createQueueIfNotExists(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à supprimer.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: Spécifie la taille de file d’attente maximale en mégaoctets. Toute tentative de placement d’un message qui entraînera le dépassement de cette valeur de la file d’attente échoue.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Selon que les lettres mortes est activé, un message est automatiquement déplacé vers le DeadLetterQueue ou supprimé s’il a été stocké dans la file d’attente plus longtemps que le délai spécifié. Cette valeur est remplacée par une durée de vie spécifiée sur le message si et seulement si la durée de vie de message est inférieure à la durée de vie définie sur la file d’attente. Cette valeur est immuable après que la file d’attente a été créé.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: Détermine la quantité de temps en secondes dans lequel un message doit être verrouillé pour le traitement par un récepteur. Après cette période, le message est déverrouillé et disponible pour la consommation par le récepteur suivant. Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de file d’attente. Si la valeur est true, la file d’attente sera SessionReceiver prenant en charge de session et uniquement est pris en charge. Les files d’attente prenant en charge de session ne sont pas pris en charge via REST.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Ce champ contrôle comment le Bus de Service gère un message dont durée de vie a expiré. S’il est activé et un message expire, Service Bus déplace le message à partir de la file d’attente dans la file d’attente secondaire de la file d’attente lettre morte. Si désactivé, message sera définitivement supprimé de la file d’attente. Peut être défini uniquement au moment de la création de file d’attente.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: Spécifie l’intervalle de temps pendant lequel le Service Bus détecte la duplication de message.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Spécifie si la file d’attente doit être partitionnée.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `queueCreated` contiendra les nouvelles informations de file d’attente.
+                                                                                          `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueueIfNotExists(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteQueue
+  id: azure-sb.ServiceBusService#deleteQueue
+  parent: azure-sb.ServiceBusService
+  name: deleteQueue(queuePath, callback)
+  summary: Supprime une file d’attente.
+  fullName: azure-sb.ServiceBusService.deleteQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à supprimer.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getQueue
+  id: azure-sb.ServiceBusService#getQueue
+  parent: azure-sb.ServiceBusService
+  name: getQueue(queuePath, callback)
+  summary: Récupère une file d’attente.
+  fullName: azure-sb.ServiceBusService.getQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la file d’attente à récupérer.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `queueresult` contiendra les informations de la file d’attente.
+                                                                                          `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listQueues
+  id: azure-sb.ServiceBusService#listQueues
+  parent: azure-sb.ServiceBusService
+  name: listQueues(options, callback)
+  summary: Retourne une liste de files d’attente.
+  fullName: azure-sb.ServiceBusService.listQueues(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: La clause top pour répertorier les files d’attente.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: La clause skip pour répertorier les files d’attente.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `listqueueresult` contiendra la liste des files d’attente.
+                                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listQueues(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopic
+  id: azure-sb.ServiceBusService#createTopic
+  parent: azure-sb.ServiceBusService
+  name: createTopic(topic, options, callback)
+  summary: Crée une rubrique.
+  fullName: azure-sb.ServiceBusService.createTopic(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: Un objet de rubrique qui représente la rubrique à créer.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: Spécifie la taille de rubrique maximale en mégaoctets. Toute tentative de placement d’un message qui provoque la rubrique de dépasser cette valeur échouera. Tous les messages qui sont stockés dans la rubrique ou l’un de ses abonnements comptabilisés dans cette valeur. Plusieurs copies d’un message qui résident dans un ou plusieurs abonnements comptent comme un message unique. Par exemple, si le message m existe qu’une seule fois dans s1 de l’abonnement et deux fois dans l’abonnement s2, m est comptabilisé comme un seul message.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Détermine la durée pendant laquelle un message se trouve dans les abonnements associés. Abonnements héritent la durée de vie de la rubrique, sauf si elles sont créées explicitement avec une durée de vie inférieure. Selon si les lettres mortes est activé, un message dont durée de vie a expiré sera déplacé vers la DeadLtterQueue associée de l’abonnement ou va être définitivement supprimé.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Si activé, la rubrique détecte les messages en double dans l’intervalle de temps spécifié par la propriété DuplicateDetectionHistoryTimeWindow. Peut être défini uniquement au moment de la création de rubrique.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: Spécifie l’intervalle de temps pendant laquelle le Bus de Service détecte la duplication des messages.
+      optional: true
+    - id: options.EnableBatchedOperations
+      type:
+      - azure-sb.bool
+      description: Spécifie si les opérations par lots doivent être autorisées.
+      optional: true
+    - id: options.SizeInBytes
+      type:
+      - azure-sb.int
+      description: Spécifie la taille de la rubrique en octets.
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: Spécifie si la rubrique prend en charge le classement des messages.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Spécifie si la rubrique doit être partitionnée.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `createtopicresult` contiendra les nouvelles informations de la rubrique.
+                                                                                                `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopic(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopicIfNotExists
+  id: azure-sb.ServiceBusService#createTopicIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createTopicIfNotExists(topic, options, callback)
+  summary: Crée une rubrique si elle n’existe pas.
+  fullName: azure-sb.ServiceBusService.createTopicIfNotExists(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: Un objet de rubrique qui représente la rubrique à créer.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: Spécifie la taille de rubrique maximale en mégaoctets. Toute tentative de placement d’un message qui provoque la rubrique de dépasser cette valeur échouera. Tous les messages qui sont stockés dans la rubrique ou l’un de ses abonnements comptabilisés dans cette valeur. Plusieurs copies d’un message qui résident dans un ou plusieurs abonnements comptent comme un message unique. Par exemple, si le message m existe qu’une seule fois dans s1 de l’abonnement et deux fois dans l’abonnement s2, m est comptabilisé comme un seul message.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Détermine la durée pendant laquelle un message se trouve dans les abonnements associés. Abonnements héritent la durée de vie de la rubrique, sauf si elles sont créées explicitement avec une durée de vie inférieure. Selon si les lettres mortes est activé, un message dont durée de vie a expiré sera déplacé vers la DeadLtterQueue associée de l’abonnement ou va être définitivement supprimé.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Si activé, la rubrique détecte les messages en double dans l’intervalle de temps spécifié par la propriété DuplicateDetectionHistoryTimeWindow. Peut être défini uniquement au moment de la création de rubrique.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: Spécifie l’intervalle de temps pendant laquelle le Bus de Service détecte la duplication des messages.
+      optional: true
+    - id: options.MaxSubscriptionsPerTopic
+      type:
+      - azure-sb.int
+      description: Spécifie le nombre maximal d’abonnements qui peuvent être associés à la rubrique.
+      optional: true
+    - id: options.MaxSqlFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: Spécifie le nombre maximal d’expressions de filtre SQL (au total) qui peuvent être ajoutées pour les abonnements associés à la rubrique.
+      optional: true
+    - id: options.MaxCorrelationFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: Spécifie le nombre maximal d’expressions de filtre corrélation (au total) qui peuvent être ajoutées pour les abonnements associés à la rubrique.
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de rubrique.
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création de rubrique.
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: Spécifie si la rubrique prend en charge le classement des messages.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Spécifie si la rubrique doit être partitionnée.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `topicCreated` contiendra les nouvelles informations de la rubrique.
+                                                                                                `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopicIfNotExists(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteTopic
+  id: azure-sb.ServiceBusService#deleteTopic
+  parent: azure-sb.ServiceBusService
+  name: deleteTopic(topicPath, callback)
+  summary: Supprime une rubrique.
+  fullName: azure-sb.ServiceBusService.deleteTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un <code>String</code> objet qui représente le nom de la file d’attente à supprimer.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getTopic
+  id: azure-sb.ServiceBusService#getTopic
+  parent: azure-sb.ServiceBusService
+  name: getTopic(topicPath, callback)
+  summary: Récupère une rubrique.
+  fullName: azure-sb.ServiceBusService.getTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un <code>String</code> objet qui représente le nom de la rubrique à récupérer.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `gettopicresult` contiendra les informations de la rubrique.
+                                                                         `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listTopics
+  id: azure-sb.ServiceBusService#listTopics
+  parent: azure-sb.ServiceBusService
+  name: listTopics(options, callback)
+  summary: Retourne une liste de rubriques.
+  fullName: azure-sb.ServiceBusService.listTopics(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à extraire.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à ignorer.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `listtopicsresult` contiendra la liste des rubriques.
+                                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listTopics(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createSubscription
+  id: azure-sb.ServiceBusService#createSubscription
+  parent: azure-sb.ServiceBusService
+  name: createSubscription(topicPath, subscriptionPath, options, callback)
+  summary: Crée un abonnement.
+  fullName: azure-sb.ServiceBusService.createSubscription(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: La durée de verrouillage par défaut est appliquée aux abonnements qui ne définissent pas de durée de verrouillage. Peut être défini uniquement au moment de la création d’abonnement.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Peut être défini uniquement au moment de la création d’abonnement. Si la valeur est true, l’abonnement sera SessionReceiver prenant en charge de session et uniquement est pris en charge. Abonnement prenant en charge de session ne sont pas pris en charge via REST.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Détermine la durée pendant laquelle un message se trouve dans l’abonnement. Selon si les lettres mortes est activé, un message dont durée de vie a expiré sera soit être déplacé vers la DeadLtterQueue associée de l’abonnement soit définitivement supprimé.
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Ce champ contrôle comment le Bus de Service gère un message dont durée de vie a expiré. S’il est activé et un message expire, Service Bus déplace le message de la file d’attente dans le sous-répertoire file d’attente de lettres mortes de l’abonnement. Si désactivé, message sera définitivement supprimé à partir de la file d’attente principale de l’abonnement. Peut être défini uniquement au moment de la création d’abonnement.
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: Détermine comment le Bus de Service gère un message qui lève une exception lors de l’évaluation de filtre d’un abonnement. Si la valeur est définie sur true, le message qui a provoqué l’exception sera déplacé vers la file d’attente de lettres mortes de l’abonnement. Sinon, il sera ignoré. Par défaut, ce paramètre est défini sur true, ce qui permet à l’utilisateur permet de rechercher la cause de l’exception. Il peut se produire à partir d’un message mal formé ou d’hypothèses erronées faites dans le filtre sur la forme du message. Peut être défini uniquement au moment de la création de rubrique.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `createsubscriptionresult` contiendra les informations d’abonnement.
+                                                                                          `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createSubscription(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteSubscription
+  id: azure-sb.ServiceBusService#deleteSubscription
+  parent: azure-sb.ServiceBusService
+  name: deleteSubscription(topicPath, subscriptionPath, callback)
+  summary: Supprime un abonnement.
+  fullName: azure-sb.ServiceBusService.deleteSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement à supprimer.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getSubscription
+  id: azure-sb.ServiceBusService#getSubscription
+  parent: azure-sb.ServiceBusService
+  name: getSubscription(topicPath, subscriptionPath, callback)
+  summary: Récupère un abonnement.
+  fullName: azure-sb.ServiceBusService.getSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement à récupérer.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `getsubscriptionresult` contiendra les informations d’abonnement.
+                                                                                        `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listSubscriptions
+  id: azure-sb.ServiceBusService#listSubscriptions
+  parent: azure-sb.ServiceBusService
+  name: listSubscriptions(topicPath, options, callback)
+  summary: Retourne une liste des abonnements.
+  fullName: azure-sb.ServiceBusService.listSubscriptions(topicPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique pour les abonnements à récupérer.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à extraire.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à ignorer.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `listsubscriptionresult` contiendra la liste des abonnements.
+                                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listSubscriptions(topicPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createRule
+  id: azure-sb.ServiceBusService#createRule
+  parent: azure-sb.ServiceBusService
+  name: createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  summary: Crée une règle.
+  fullName: azure-sb.ServiceBusService.createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement pour lequel la règle sera créée.
+    - id: rulePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la règle doit être créé.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.trueFilter
+      type:
+      - string
+      description: Définit l’expression qui évalue la règle comme un filtre true.
+      optional: true
+    - id: options.falseFilter
+      type:
+      - string
+      description: Définit l’expression qui évalue la règle comme un filtre false.
+      optional: true
+    - id: options.sqlExpressionFilter
+      type:
+      - string
+      description: Définit l’expression qui évalue la règle. La chaîne d’expression est interprétée comme une expression SQL92 qui doit correspondre à True ou False. Seul un entre une corrélation et d’une expression sql peut être défini.
+      optional: true
+    - id: options.correlationIdFilter
+      type:
+      - string
+      description: Définit l’expression qui évalue la règle. Seuls les messages dont CorrelationId correspond à l’identificateur de corrélation défini dans l’expression de filtre sont autorisées. Seul un entre une corrélation et d’une expression sql peut être défini.
+      optional: true
+    - id: options.sqlRuleAction
+      type:
+      - string
+      description: Définit l’expression qui évalue la règle. Si la règle est de type SQL, la chaîne d’expression est interprétée comme une expression SQL92 qui doit correspondre à True ou False. Si la règle est de type CorrelationFilterExpression uniquement les messages dont CorrelationId correspond à l’identificateur de corrélation défini dans l’expression de filtre sont autorisées.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `createruleresults` contiendra les nouvelles informations de règle.
+                                                                                    `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteRule
+  id: azure-sb.ServiceBusService#deleteRule
+  parent: azure-sb.ServiceBusService
+  name: deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: Supprime une règle.
+  fullName: azure-sb.ServiceBusService.deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement pour lequel la règle sera supprimée.
+    - id: rulePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la règle à supprimer.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getRule
+  id: azure-sb.ServiceBusService#getRule
+  parent: azure-sb.ServiceBusService
+  name: getRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: Récupère une règle.
+  fullName: azure-sb.ServiceBusService.getRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement pour lequel la règle sera extrait.
+    - id: rulePath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la règle à récupérer.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `getruleresult` contiendra les informations de la règle.
+                                                                                        `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listRules
+  id: azure-sb.ServiceBusService#listRules
+  parent: azure-sb.ServiceBusService
+  name: listRules(topicPath, subscriptionPath, options, callback)
+  summary: Retourne une liste de règles.
+  fullName: azure-sb.ServiceBusService.listRules(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de la rubrique de l’abonnement.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom de l’abonnement dont les règles sont récupérés.
+    - id: options
+      type:
+      - object
+      description: Les options de requête.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à extraire.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à ignorer.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `listrulesresult` contiendra la liste des règles.
+                                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRules(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createNotificationHub
+  id: azure-sb.ServiceBusService#createNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: createNotificationHub(hubPath, options, callback)
+  summary: Crée un hub de notification.
+  fullName: azure-sb.ServiceBusService.createNotificationHub(hubPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom du hub de notification.
+    - id: options
+      type:
+      - object
+      description: La demande options ou fonction de rappel.
+      optional: true
+    - id: options.wns
+      type:
+      - object
+      description: Un objet avec les paires clé / valeur pour les informations d’identification WNS.
+      optional: true
+    - id: options.apns
+      type:
+      - object
+      description: Un objet avec les paires clé / valeur pour les informations d’identification APNS.
+      optional: true
+    - id: options.gcm
+      type:
+      - object
+      description: Un objet avec les paires clé / valeur pour les informations d’identification GCM.
+      optional: true
+    - id: options.mpns
+      type:
+      - object
+      description: Un objet avec les paires clé / valeur pour les informations d’identification MPNS.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `result` contiendra les nouvelles informations de hub de notification.
+                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNotificationHub(hubPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getNotificationHub
+  id: azure-sb.ServiceBusService#getNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: getNotificationHub(hubPath, callback)
+  summary: Obtient un hub de notification.
+  fullName: azure-sb.ServiceBusService.getNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom du hub de notification.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `result` contiendra les informations de hub de notification.
+                                                                                    `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getNotificationHub(hubPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listNotificationHubs
+  id: azure-sb.ServiceBusService#listNotificationHubs
+  parent: azure-sb.ServiceBusService
+  name: listNotificationHubs(options, callback)
+  summary: Retourne une liste de notification hubs.
+  fullName: azure-sb.ServiceBusService.listNotificationHubs(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: La demande options ou fonction de rappel.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à extraire.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Le nombre de rubriques à ignorer.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` contiennent des informations si une erreur se produit ; sinon `result` contient la liste de notification hubs.
+                                                              `response` contient les informations relatives à cette opération.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listNotificationHubs(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteNotificationHub
+  id: azure-sb.ServiceBusService#deleteNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: deleteNotificationHub(hubPath, callback)
+  summary: Supprime un concentrateur de notification.
+  fullName: azure-sb.ServiceBusService.deleteNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Un objet de chaîne qui représente le nom du hub de notification.
+    - id: callback
+      type:
+      - function
+      description: '`error` contiennent des informations si une erreur se produit ; sinon `response` contient les informations relatives à cette opération.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteNotificationHub(hubPath, callback)
+  langs:
+  - js

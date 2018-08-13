@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8cceab086dcfa363f06b0fe320cc5b867deb91a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056271"
+items:
+- uid: azure-monitoring.SettingOperations~SettingOperations
+  id: azure-monitoring.SettingOperations~SettingOperations
+  name: SettingOperations
+  summary: >-
+    Opérations de gestion des paramètres de mise à l’échelle.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [AutoscaleClient] <xref:azure-monitoring.AutoscaleClient~AutoscaleClient>.
+
+    Consultez les [paramètres] <xref:azure-monitoring.AutoscaleClient~AutoscaleClient%23settings>.
+
+    Initialise une nouvelle instance de la classe SettingOperations.
+  fullName: azure-monitoring.SettingOperations
+  type: Class
+  children:
+  - azure-monitoring.SettingOperations~SettingOperations.#ctor
+  - azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  - azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  - azure-monitoring.SettingOperations~SettingOperations#get
+  langs:
+  - js
+- id: azure-monitoring.SettingOperations~SettingOperations.#ctor
+  uid: azure-monitoring.SettingOperations~SettingOperations.#ctor
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: SettingOperations(client)
+  fullName: azure-monitoring.SettingOperations.SettingOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedAutoscaleClient
+      description: Référence au client du service.
+    content: new SettingOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  id: azure-monitoring.SettingOperations~SettingOperations#createOrUpdate
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: createOrUpdate(resourceId, parameters, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.createOrUpdate(resourceId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: L’ID de ressource.
+    - id: parameters
+      type:
+      - azure-monitoring.AutoscaleSettingCreateOrUpdateParameters
+      description: Paramètres fournis à l’opération.
+    - id: parameters.setting
+      type:
+      - azure-monitoring.AutoscaleSetting
+      description: Le paramètre pour créer ou mettre à jour.
+      optional: true
+    - id: parameters.setting.profiles
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.setting.enabled
+      type:
+      - boolean
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function createOrUpdate(resourceId, parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  id: azure-monitoring.SettingOperations~SettingOperations#deleteMethod
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: deleteMethod(resourceId, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.deleteMethod(resourceId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: L’ID de ressource.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function deleteMethod(resourceId, callback)
+  langs:
+  - js
+- uid: azure-monitoring.SettingOperations~SettingOperations#get
+  id: azure-monitoring.SettingOperations~SettingOperations#get
+  parent: azure-monitoring.SettingOperations~SettingOperations
+  name: get(resourceId, callback)
+  summary: ''
+  fullName: azure-monitoring.SettingOperations~SettingOperations.get(resourceId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: L’ID de ressource.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Le flux de réponse.
+    content: function get(resourceId, callback)
+  langs:
+  - js

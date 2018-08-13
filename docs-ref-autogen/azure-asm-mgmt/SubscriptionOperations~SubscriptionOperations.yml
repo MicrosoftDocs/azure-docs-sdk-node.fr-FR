@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d96b859e5627e55f30f241dd072a615e2fd9552b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055766"
+items:
+- uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: SubscriptionOperations
+  summary: >-
+    Opérations pour répertorier les détails de l’abonnement.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/gg715315.aspx pour plus d’informations) __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [ManagementClient] {@link ManagementClient ~ ManagementClient}.
+
+    Consultez [abonnements] {@link ManagementClient ~ ManagementClient #subscriptions}.
+
+    Initialise une nouvelle instance de la classe SubscriptionOperations.
+  fullName: azure-asm-mgmt.SubscriptionOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.#ctor
+  - azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#get
+  - azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#listOperations
+  - azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#registerResource
+  - azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#unregisterResource
+  langs:
+  - js
+- id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.#ctor
+  uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.#ctor
+  parent: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: SubscriptionOperations(client)
+  fullName: azure-asm-mgmt.SubscriptionOperations.SubscriptionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: Référence au client du service.
+    content: new SubscriptionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#get
+  id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#get
+  parent: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: get(callback)
+  summary: L’opération obtenir l’abonnement retourne des informations de d’allocation de comptes et de ressources pour l’abonnement spécifié.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/hh403995.aspx pour plus d’informations)
+  fullName: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.get(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Le flux de réponse.
+    content: function get(callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#listOperations
+  id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#listOperations
+  parent: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: listOperations(parameters, callback)
+  summary: L’opération d’opérations d’abonnement de liste retourne une liste de créer, mettre à jour et supprimer des opérations qui ont été effectuées sur un abonnement pendant la période spécifiée.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/gg715318.aspx pour plus d’informations)
+  fullName: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.listOperations(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.SubscriptionListOperationsParameters
+      description: Paramètres fournis à l’opération de liste des opérations d’abonnement.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Début de l’intervalle de temps pour commencer à répertorier les opérations d’abonnement au format UTC. Ce paramètre et le paramètre EndTime indiquent l’intervalle de temps pour récupérer les opérations d’abonnement. Ce paramètre ne peut pas indiquer une date de début de plus de 90 jours dans le passé.
+    - id: parameters.endTime
+      type:
+      - date
+      description: La fin du délai d’exécution pour commencer à répertorier les opérations d’abonnement au format UTC. Ce paramètre et le paramètre StartTime indiquent l’intervalle de temps pour récupérer les opérations d’abonnement.
+    - id: parameters.objectIdFilter
+      type:
+      - string
+      description: Retourne les opérations d’abonnement uniquement pour l’objet spécifié, tapez et ID d’objet Ce paramètre doit être défini comme égal à la valeur d’URL pour effectuer une opération HTTP GET sur l’objet. Si aucun objet n’est spécifié, un filtre n’est pas appliqué.
+      optional: true
+    - id: parameters.operationStatus
+      type:
+      - azure-asm-mgmt.OperationStatus
+      description: Retourne les opérations d’abonnement uniquement pour l’état de résultat spécifié, Succeeded, Failed, soit en cours. Ce filtre peut être combiné avec le ObjectIdFilter pour sélectionner des opérations d’abonnement pour un objet avec un état de résultat spécifique. Si aucun état de résultat n’est spécifié, un filtre n’est pas appliqué.
+      optional: true
+    - id: parameters.continuationToken
+      type:
+      - string
+      description: Lorsqu’il y a trop d’opérations à afficher, par exemple lorsque le délai d’exécution demandé est très volumineuse, la réponse inclut une liste incomplète et un jeton qui peut être utilisé pour retourner le reste de la liste. Les demandes suivantes doivent inclure ce paramètre pour continuer à répertorier les opérations à partir de là où la dernière réponse s’est arrêté. Si aucun jeton n’est spécifié, aucun filtre n’est pas appliqué et la réponse commencera à l’heure de début spécifiée.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Le flux de réponse.
+    content: function listOperations(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#registerResource
+  id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#registerResource
+  parent: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: registerResource(resourceName, callback)
+  summary: Inscrire une ressource à votre abonnement.
+  fullName: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.registerResource(resourceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceName
+      type:
+      - string
+      description: Nom de la ressource à inscrire.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Le flux de réponse.
+    content: function registerResource(resourceName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#unregisterResource
+  id: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations#unregisterResource
+  parent: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations
+  name: unregisterResource(resourceName, callback)
+  summary: Annuler l’inscription d’une ressource avec votre abonnement.
+  fullName: azure-asm-mgmt.SubscriptionOperations~SubscriptionOperations.unregisterResource(resourceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceName
+      type:
+      - string
+      description: Nom de la ressource pour annuler l’inscription.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Le flux de réponse.
+    content: function unregisterResource(resourceName, callback)
+  langs:
+  - js

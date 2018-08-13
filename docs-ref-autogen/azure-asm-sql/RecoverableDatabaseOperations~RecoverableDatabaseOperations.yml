@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf6aedf3528cf423db94b2360bafd8ed15b181d3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40056061"
+items:
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations
+  summary: >-
+    Contient des opérations pour l’obtention des bases de données Azure SQL qui peuvent être récupérées.
+
+    __Remarque__: une instance de cette classe est automatiquement créée pour une instance de la [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Consultez [recoverableDatabases] {@link SqlManagementClient ~ SqlManagementClient #recoverableDatabases}.
+
+    Initialise une nouvelle instance de la classe RecoverableDatabaseOperations.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverableDatabaseOperations.RecoverableDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Référence au client du service.
+    content: new RecoverableDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: Retourne des informations sur une base de données SQL Azure récupérables.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Le nom du serveur de base de données SQL Azure sur lequel la base de données était hébergée.
+    - id: databaseName
+      type:
+      - string
+      description: Le nom de la base de données SQL Azure récupérables doivent être obtenues.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Le flux de réponse.
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: list(serverName, callback)
+  summary: Retourne une collection de bases de données qui peuvent être récupérées à partir d’un serveur spécifié.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Le nom du serveur de base de données SQL Azure sur lequel les bases de données étaient hébergés.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Le flux de réponse.
+    content: function list(serverName, callback)
+  langs:
+  - js

@@ -1,0 +1,148 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4be253aec431b8ac2fcbd32b5734be951e96255d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40055736"
+items:
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient
+  id: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient
+  summary: L’API de gestion de Service fournit un accès par programme à la plupart des fonctionnalités disponibles via le portail de gestion. L’API de gestion de Service est une API REST. Toutes les opérations d’API sont effectuées via le protocole SSL et sont authentifiées mutuellement à l’aide de certificats X.509 v3.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx pour plus d’informations) initialise une nouvelle instance de la classe ManagementClient.
+  fullName: azure-asm-mgmt.ManagementClient
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  - azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  - azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  - azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  - azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  - azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  - azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  uid: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-mgmt.ManagementClient.ManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Obtient les informations d’identification d’abonnement qui identifient l’abonnement Microsoft Azure. L’ID d’abonnement constitue une partie de l’URI pour chaque appel de service.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Obtient l’URI utilisé comme base pour toutes les demandes de service cloud.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new ManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: affinityGroups
+  summary: Fournit une instance de la [AffinityGroupOperations](-AffinityGroupOperations.html) objet.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.affinityGroups
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: affinityGroups
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: locations
+  summary: Fournit une instance de la [LocationOperations](-LocationOperations.html) objet.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.locations
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: locations
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: managementCertificates
+  summary: Fournit une instance de la [ManagementCertificateOperations](-ManagementCertificateOperations.html) objet.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.managementCertificates
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: managementCertificates
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: roleSizes
+  summary: Fournit une instance de la [RoleSizeOperations](-RoleSizeOperations.html) objet.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.roleSizes
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: roleSizes
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: subscriptions
+  summary: Fournit une instance de la [SubscriptionOperations](-SubscriptionOperations.html) objet.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.subscriptions
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: subscriptions
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: L’opération Get Operation Status retourne l’état de l’opération spécifiée. Après avoir appelé une opération asynchrone, vous pouvez appeler Get Operation Status pour déterminer si l’opération a réussi, en échec, ou êtes en cours d’exécution.  (consultez http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx pour plus d’informations)
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: L’ID de demande pour la demande que vous souhaitez effectuer le suivi. L’ID de demande est retourné dans l’en-tête de réponse de x-ms-request-id pour chaque demande.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Le flux de réponse.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js
