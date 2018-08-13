@@ -1,0 +1,218 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 34e17da26a435c0d731690855fc907e2bcb1d6f5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40058911"
+items:
+- uid: '@azure/cosmos.FeedOptions'
+  name: FeedOptions
+  fullName: FeedOptions
+  children:
+  - '@azure/cosmos.FeedOptions.accessCondition'
+  - '@azure/cosmos.FeedOptions.a_im'
+  - '@azure/cosmos.FeedOptions.continuation'
+  - '@azure/cosmos.FeedOptions.disableRUPerMinuteUsage'
+  - '@azure/cosmos.FeedOptions.enableCrossPartitionQuery'
+  - '@azure/cosmos.FeedOptions.enableScanInQuery'
+  - '@azure/cosmos.FeedOptions.initialHeaders'
+  - '@azure/cosmos.FeedOptions.maxDegreeOfParallelism'
+  - '@azure/cosmos.FeedOptions.maxItemCount'
+  - '@azure/cosmos.FeedOptions.partitionKey'
+  - '@azure/cosmos.FeedOptions.populateQueryMetrics'
+  - '@azure/cosmos.FeedOptions.sessionToken'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="40e78-101">Les options de flux et les méthodes de requête.</span><span class="sxs-lookup"><span data-stu-id="40e78-101">The feed options and query methods.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.accessCondition'
+  name: accessCondition
+  fullName: accessCondition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-102">Conditions associées avec la demande.</span><span class="sxs-lookup"><span data-stu-id="40e78-102">Conditions Associated with the request.</span></span>
+  optional: true
+  syntax:
+    content: 'accessCondition?: function'
+    return:
+      type:
+      - function
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.a_im'
+  name: a_im
+  fullName: a_im
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-103">Indique une modification de flux de demande.</span><span class="sxs-lookup"><span data-stu-id="40e78-103">Indicates a change feed request.</span></span> <span data-ttu-id="40e78-104">Doit être définie sur « Flux incrémentiel », ou omis dans le cas contraire.</span><span class="sxs-lookup"><span data-stu-id="40e78-104">Must be set to "Incremental feed", or omitted otherwise.</span></span>
+  optional: true
+  syntax:
+    content: 'a_im?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.continuation'
+  name: continuation
+  fullName: continuation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-105">Jeton opaque pour poursuivre l’énumération.</span><span class="sxs-lookup"><span data-stu-id="40e78-105">Opaque token for continuing the enumeration.</span></span>
+  optional: true
+  syntax:
+    content: 'continuation?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.disableRUPerMinuteUsage'
+  name: disableRUPerMinuteUsage
+  fullName: disableRUPerMinuteUsage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-106">DisableRUPerMinuteUsage est utilisé pour activer ou désactiver les unités de requête (RU) / capacité minute pour répondre à la demande si regular approvisionné RU/seconde est épuisée.</span><span class="sxs-lookup"><span data-stu-id="40e78-106">DisableRUPerMinuteUsage is used to enable/disable Request Units(RUs)/minute capacity to serve the request if regular provisioned RUs/second is exhausted.</span></span>
+  optional: true
+  syntax:
+    content: 'disableRUPerMinuteUsage?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.enableCrossPartitionQuery'
+  name: enableCrossPartitionQuery
+  fullName: enableCrossPartitionQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="40e78-107">Une valeur indiquant si les utilisateurs sont activés pour envoyer plusieurs demandes pour exécuter la requête dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="40e78-107">A value indicating whether users are enabled to send more than one request to execute the query in the Azure Cosmos DB database service.</span></span>
+
+    <span data-ttu-id="40e78-108">Plus d’une requête est nécessaire si la requête n’est pas étendue à la valeur de clé de partition unique.</span><span class="sxs-lookup"><span data-stu-id="40e78-108">More than one request is necessary if the query is not scoped to single partition key value.</span></span>
+  optional: true
+  syntax:
+    content: 'enableCrossPartitionQuery?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.enableScanInQuery'
+  name: enableScanInQuery
+  fullName: enableScanInQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-109">Autoriser l’analyse sur les requêtes qui n’a pas pu être traitée en tant que l’indexation a été désinscrit sur les chemins d’accès demandés.</span><span class="sxs-lookup"><span data-stu-id="40e78-109">Allow scan on the queries which couldn't be served as indexing was opted out on the requested paths.</span></span>
+  optional: true
+  syntax:
+    content: 'enableScanInQuery?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.initialHeaders'
+  name: initialHeaders
+  fullName: initialHeaders
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-110">(Cas d’utilisation avancées) Initiale pour commencer les en-têtes lors de l’envoi de demandes à Cosmos</span><span class="sxs-lookup"><span data-stu-id="40e78-110">(Advanced use case) Initial headers to start with when sending requests to Cosmos</span></span>
+  optional: true
+  syntax:
+    content: 'initialHeaders?: IHeaders'
+    return:
+      type:
+      - '@azure/cosmos.IHeaders'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.maxDegreeOfParallelism'
+  name: maxDegreeOfParallelism
+  fullName: maxDegreeOfParallelism
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-111">Le nombre maximal d’opérations simultanées qui s’exécutent côté client lors de l’exécution de requête parallèle dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="40e78-111">The maximum number of concurrent operations that run client side during parallel query execution in the Azure Cosmos DB database service.</span></span> <span data-ttu-id="40e78-112">Les valeurs négatives, vérifiez le système détermine automatiquement le nombre d’opérations simultanées à exécuter.</span><span class="sxs-lookup"><span data-stu-id="40e78-112">Negative values make the system automatically decides the number of concurrent operations to run.</span></span>
+  optional: true
+  syntax:
+    content: 'maxDegreeOfParallelism?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.maxItemCount'
+  name: maxItemCount
+  fullName: maxItemCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-113">Nombre maximal d’éléments à retourner dans l’opération d’énumération.</span><span class="sxs-lookup"><span data-stu-id="40e78-113">Max number of items to be returned in the enumeration operation.</span></span>
+  optional: true
+  syntax:
+    content: 'maxItemCount?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.partitionKey'
+  name: partitionKey
+  fullName: partitionKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-114">Spécifie une définition de clé de partition pour un chemin d’accès particulier dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="40e78-114">Specifies a partition key definition for a particular path in the Azure Cosmos DB database service.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionKey?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.populateQueryMetrics'
+  name: populateQueryMetrics
+  fullName: populateQueryMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-115">Activer les métriques de requête retournant dans les en-têtes de réponse</span><span class="sxs-lookup"><span data-stu-id="40e78-115">Enable returning query metrics in response headers</span></span>
+  optional: true
+  syntax:
+    content: 'populateQueryMetrics?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.FeedOptions.sessionToken'
+  name: sessionToken
+  fullName: sessionToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="40e78-116">Jeton à utiliser avec la cohérence de Session.</span><span class="sxs-lookup"><span data-stu-id="40e78-116">Token for use with Session consistency.</span></span>
+  optional: true
+  syntax:
+    content: 'sessionToken?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.IHeaders'
+  spec.typeScript:
+  - name: IHeaders
+    fullName: IHeaders
+    uid: '@azure/cosmos.IHeaders'

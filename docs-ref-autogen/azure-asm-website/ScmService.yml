@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8bff819eb4af3d06c65d4dd4ecc13349835e08f0
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40057116"
+items:
+- uid: azure-asm-website.ScmService
+  id: azure-asm-website.ScmService
+  name: ScmService
+  summary: <span data-ttu-id="96915-101">L’objet ScmService vous permet de vous permettent d’effectuer des opérations de gestion sur les référentiels de Sites Web Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="96915-101">The ScmService object allows you to perform management operations on Microsoft Azure Web Sites Repositories.</span></span>
+  fullName: azure-asm-website.ScmService
+  type: Class
+  children:
+  - azure-asm-website.ScmService.#ctor
+  - azure-asm-website.ScmService#getDumpToStream
+  - azure-asm-website.ScmService#getLogStream
+  langs:
+  - js
+- id: azure-asm-website.ScmService.#ctor
+  uid: azure-asm-website.ScmService.#ctor
+  parent: azure-asm-website.ScmService
+  name: ScmService(authentication, hostOptions)
+  fullName: azure-asm-website.ScmService.ScmService(authentication, hostOptions)
+  summary: <span data-ttu-id="96915-102">Crée un nouvel objet ScmService.</span><span class="sxs-lookup"><span data-stu-id="96915-102">Creates a new ScmService object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: authentication
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="96915-103">L’objet d’authentification pour le client.</span><span class="sxs-lookup"><span data-stu-id="96915-103">The authentication object for the client.</span></span>
+
+        <span data-ttu-id="96915-104">Vous devez utiliser une authentification/règle pass pour l’authentification de base.</span><span class="sxs-lookup"><span data-stu-id="96915-104">You must use a auth/pass for basic authentication.</span></span>
+    - id: authentication.user
+      type:
+      - string
+      description: <span data-ttu-id="96915-105">Le nom d’utilisateur de l’authentification de base.</span><span class="sxs-lookup"><span data-stu-id="96915-105">The basic authentication username.</span></span>
+      optional: true
+    - id: authentication.pass
+      type:
+      - string
+      description: <span data-ttu-id="96915-106">Le mot de passe de l’authentification de base.</span><span class="sxs-lookup"><span data-stu-id="96915-106">The basic authentication password.</span></span>
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: <span data-ttu-id="96915-107">Les options de l’hôte de substituer les valeurs par défaut.</span><span class="sxs-lookup"><span data-stu-id="96915-107">The host options to override defaults.</span></span>
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: <span data-ttu-id="96915-108">Le point de terminaison du référentiel SCM.</span><span class="sxs-lookup"><span data-stu-id="96915-108">The SCM repository endpoint.</span></span>
+      optional: true
+    content: new ScmService(authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getDumpToStream
+  id: azure-asm-website.ScmService#getDumpToStream
+  parent: azure-asm-website.ScmService
+  name: getDumpToStream(callback)
+  summary: <span data-ttu-id="96915-109">Obtenir un vidage du journal.</span><span class="sxs-lookup"><span data-stu-id="96915-109">Get log dump.</span></span>
+  fullName: azure-asm-website.ScmService.getDumpToStream(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="96915-110">`error` contiennent des informations si une erreur se produit ; sinon `results` contiendra la liste des espaces Web.</span><span class="sxs-lookup"><span data-stu-id="96915-110">`error` will contain information if an error occurs; otherwise `results` will contain the list of webspaces.</span></span>
+                                                              <span data-ttu-id="96915-111">`response` contient les informations relatives à cette opération.</span><span class="sxs-lookup"><span data-stu-id="96915-111">`response` will contain information related to this operation.</span></span>
+    content: function getDumpToStream(callback)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getLogStream
+  id: azure-asm-website.ScmService#getLogStream
+  parent: azure-asm-website.ScmService
+  name: getLogStream(path, options, callback)
+  summary: <span data-ttu-id="96915-112">Obtient le flux de journal.</span><span class="sxs-lookup"><span data-stu-id="96915-112">Get log stream.</span></span>
+  fullName: azure-asm-website.ScmService.getLogStream(path, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: path
+      type:
+      - object
+      description: <span data-ttu-id="96915-113">Le chemin d’accès de flux de données de journal.</span><span class="sxs-lookup"><span data-stu-id="96915-113">The log stream path.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="96915-114">Les options de requête.</span><span class="sxs-lookup"><span data-stu-id="96915-114">The request options.</span></span>
+      optional: true
+    - id: options.filter
+      type:
+      - azure-asm-website.int
+      description: <span data-ttu-id="96915-115">Le filtre de flux de données de journal.</span><span class="sxs-lookup"><span data-stu-id="96915-115">The log stream filter.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        <span data-ttu-id="96915-116">`error` contiennent des informations si une erreur se produit ; sinon `results` contiendra la liste des espaces Web.</span><span class="sxs-lookup"><span data-stu-id="96915-116">`error` will contain information if an error occurs; otherwise `results` will contain the list of webspaces.</span></span>
+                                                              <span data-ttu-id="96915-117">`response` contient les informations relatives à cette opération.</span><span class="sxs-lookup"><span data-stu-id="96915-117">`response` will contain information related to this operation.</span></span>
+    content: function getLogStream(path, options, callback)
+  langs:
+  - js

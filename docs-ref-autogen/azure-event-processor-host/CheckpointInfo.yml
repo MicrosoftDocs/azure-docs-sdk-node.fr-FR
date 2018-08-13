@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e02ced188b5a2bc012bcfa43cf0d518acae61ee5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40060556"
+items:
+- uid: azure-event-processor-host.CheckpointInfo
+  name: CheckpointInfo
+  fullName: CheckpointInfo
+  children:
+  - azure-event-processor-host.CheckpointInfo.deserialize
+  - azure-event-processor-host.CheckpointInfo.epoch
+  - azure-event-processor-host.CheckpointInfo.offset
+  - azure-event-processor-host.CheckpointInfo.owner
+  - azure-event-processor-host.CheckpointInfo.partitionId
+  - azure-event-processor-host.CheckpointInfo.sequenceNumber
+  - azure-event-processor-host.CheckpointInfo.serialize
+  - azure-event-processor-host.CheckpointInfo.token
+  langs:
+  - typeScript
+  type: module
+  summary: <span data-ttu-id="ec152-101">Décrit les informations checkoint.</span><span class="sxs-lookup"><span data-stu-id="ec152-101">Describes the checkoint information.</span></span>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.deserialize
+  name: deserialize
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ec152-102">Désérialise les données de point de contrôle reçues à partir de l’objet blob.</span><span class="sxs-lookup"><span data-stu-id="ec152-102">Deserializes the checkpoint data received from the blob.</span></span> <span data-ttu-id="ec152-103">Nous prenons en charge de la désérialisation du contenu de blob si une personne a exécuté un sdk .net EPH qui stocke les clés JSON dans la casse Pascal.</span><span class="sxs-lookup"><span data-stu-id="ec152-103">We take care of deserializing the blob content if someone ran a .net sdk EPH which stores the JSON keys in PascalCase.</span></span> <span data-ttu-id="ec152-104">Lorsque nous point de contrôle, nous allons suivre la convention de casse mixte standard les clés JSON.</span><span class="sxs-lookup"><span data-stu-id="ec152-104">When we checkpoint, we will follow the standard convention of camelCasing the JSON keys.</span></span>
+  syntax:
+    content: 'function deserialize(response: string)'
+    parameters:
+    - id: response
+      type:
+      - string
+      description: <span data-ttu-id="ec152-105">Le contenu reçu à partir de l’objet blob de stockage.</span><span class="sxs-lookup"><span data-stu-id="ec152-105">The content received from the storage blob.</span></span>
+    return:
+      type:
+      - azure-event-processor-host.CheckpointInfo | undefined
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.epoch
+  name: epoch
+  fullName: epoch
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'epoch: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.offset
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'offset?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.owner
+  name: owner
+  fullName: owner
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'owner: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'sequenceNumber: number'
+    return:
+      type:
+      - number
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.serialize
+  name: serialize
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ec152-106">Sérialise les informations de point de contrôle avant l’écriture sur l’objet blob.</span><span class="sxs-lookup"><span data-stu-id="ec152-106">Serializes the checkpoint info before writing it to the blob.</span></span>
+  syntax:
+    content: 'function serialize(data: CheckpointInfo)'
+    parameters:
+    - id: data
+      type:
+      - azure-event-processor-host.CheckpointInfo
+      description: <span data-ttu-id="ec152-107">Les données de point de contrôle qui devant être sérialisée.</span><span class="sxs-lookup"><span data-stu-id="ec152-107">The checkpoint data that needs to be serialized.</span></span>
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.CheckpointInfo.token
+  name: token
+  fullName: token
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'token: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.CheckpointInfo | undefined
+  spec.typeScript:
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: azure-event-processor-host.CheckpointInfo
+  - name: " | undefined"
+    fullName: " | undefined"
+- uid: azure-event-processor-host.CheckpointInfo
+  spec.typeScript:
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: azure-event-processor-host.CheckpointInfo

@@ -1,0 +1,546 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 99bcef358d0b21475c1afb77543d706788a60d92
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40057897"
+items:
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints
+  name: RecoveryPoints
+  fullName: RecoveryPoints
+  children:
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.get
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.get_2
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.get_1
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.getWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.list
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.list_1
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.list_2
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.listNext
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.listNext_1
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.listNext_2
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.listNextWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.RecoveryPoints.listWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="c43ea-101">Fournit les informations des données sauvegardées identifiées à l’aide de RecoveryPointID.</span><span class="sxs-lookup"><span data-stu-id="c43ea-101">Provides the information of the backed up data identified using RecoveryPointID.</span></span> <span data-ttu-id="c43ea-102">Il s’agit d’une opération asynchrone.</span><span class="sxs-lookup"><span data-stu-id="c43ea-102">This is an asynchronous operation.</span></span>
+
+    <span data-ttu-id="c43ea-103">Pour connaître l’état de l’opération, appelez l’API GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="c43ea-103">To know the status of the operation, call the GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-104">Le nom du coffre recovery services.</span><span class="sxs-lookup"><span data-stu-id="c43ea-104">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-105">Le nom du groupe de ressources où la récupération services coffre est présent.</span><span class="sxs-lookup"><span data-stu-id="c43ea-105">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-106">Nom de l’infrastructure associé à un élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-106">Fabric name associated with backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-107">Nom du conteneur associé à un élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-107">Container name associated with backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-108">Sauvegarder le nom de l’élément dont les données de sauvegarde doivent être extrait.</span><span class="sxs-lookup"><span data-stu-id="c43ea-108">Backed up item name whose backup data needs to be fetched.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-109">RecoveryPointID représente sauvegardé les données à extraire.</span><span class="sxs-lookup"><span data-stu-id="c43ea-109">RecoveryPointID represents the backed up data to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="c43ea-110">Fournit les informations des données sauvegardées identifiées à l’aide de RecoveryPointID.</span><span class="sxs-lookup"><span data-stu-id="c43ea-110">Provides the information of the backed up data identified using RecoveryPointID.</span></span> <span data-ttu-id="c43ea-111">Il s’agit d’une opération asynchrone.</span><span class="sxs-lookup"><span data-stu-id="c43ea-111">This is an asynchronous operation.</span></span>
+
+    <span data-ttu-id="c43ea-112">Pour connaître l’état de l’opération, appelez l’API GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="c43ea-112">To know the status of the operation, call the GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: function, callback: ServiceCallback<RecoveryPointResource>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="c43ea-113">Fournit les informations des données sauvegardées identifiées à l’aide de RecoveryPointID.</span><span class="sxs-lookup"><span data-stu-id="c43ea-113">Provides the information of the backed up data identified using RecoveryPointID.</span></span> <span data-ttu-id="c43ea-114">Il s’agit d’une opération asynchrone.</span><span class="sxs-lookup"><span data-stu-id="c43ea-114">This is an asynchronous operation.</span></span>
+
+    <span data-ttu-id="c43ea-115">Pour connaître l’état de l’opération, appelez l’API GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="c43ea-115">To know the status of the operation, call the GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<RecoveryPointResource>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="c43ea-116">Fournit les informations des données sauvegardées identifiées à l’aide de RecoveryPointID.</span><span class="sxs-lookup"><span data-stu-id="c43ea-116">Provides the information of the backed up data identified using RecoveryPointID.</span></span> <span data-ttu-id="c43ea-117">Il s’agit d’une opération asynchrone.</span><span class="sxs-lookup"><span data-stu-id="c43ea-117">This is an asynchronous operation.</span></span>
+
+    <span data-ttu-id="c43ea-118">Pour connaître l’état de l’opération, appelez l’API GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="c43ea-118">To know the status of the operation, call the GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-119">Le nom du coffre recovery services.</span><span class="sxs-lookup"><span data-stu-id="c43ea-119">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-120">Le nom du groupe de ressources où la récupération services coffre est présent.</span><span class="sxs-lookup"><span data-stu-id="c43ea-120">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-121">Nom de l’infrastructure associé à un élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-121">Fabric name associated with backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-122">Nom du conteneur associé à un élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-122">Container name associated with backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-123">Sauvegarder le nom de l’élément dont les données de sauvegarde doivent être extrait.</span><span class="sxs-lookup"><span data-stu-id="c43ea-123">Backed up item name whose backup data needs to be fetched.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-124">RecoveryPointID représente sauvegardé les données à extraire.</span><span class="sxs-lookup"><span data-stu-id="c43ea-124">RecoveryPointID represents the backed up data to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.RecoveryPointResource>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.list
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-125">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-125">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-126">Le nom du coffre recovery services.</span><span class="sxs-lookup"><span data-stu-id="c43ea-126">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-127">Le nom du groupe de ressources où la récupération services coffre est présent.</span><span class="sxs-lookup"><span data-stu-id="c43ea-127">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-128">Nom de l’infrastructure associée à l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-128">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-129">Nom du conteneur associé à l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-129">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-130">Sauvegardées élément dont les copies de sauvegarde doivent être extraits.</span><span class="sxs-lookup"><span data-stu-id="c43ea-130">Backed up item whose backup copies are to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.list_1
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-131">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-131">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.list_2
+  name: list
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-132">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-132">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function list(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: function, callback: ServiceCallback<RecoveryPointResourceList>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.listNext
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-133">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-133">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-134">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="c43ea-134">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.listNext_1
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-135">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-135">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RecoveryPointResourceList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.listNext_2
+  name: listNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-136">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-136">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<RecoveryPointResourceList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-137">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-137">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-138">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="c43ea-138">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.RecoveryPoints.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c43ea-139">Répertorie les copies de sauvegarde pour l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-139">Lists the backup copies for the backed up item.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-140">Le nom du coffre recovery services.</span><span class="sxs-lookup"><span data-stu-id="c43ea-140">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-141">Le nom du groupe de ressources où la récupération services coffre est présent.</span><span class="sxs-lookup"><span data-stu-id="c43ea-141">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-142">Nom de l’infrastructure associée à l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-142">Fabric name associated with the backed up item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-143">Nom du conteneur associé à l’élément sauvegardé.</span><span class="sxs-lookup"><span data-stu-id="c43ea-143">Container name associated with the backed up item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="c43ea-144">Sauvegardées élément dont les copies de sauvegarde doivent être extraits.</span><span class="sxs-lookup"><span data-stu-id="c43ea-144">Backed up item whose backup copies are to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: Promise<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RecoveryPointResource
+    fullName: RecoveryPointResource
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResource
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResource>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RecoveryPointResource
+    fullName: RecoveryPointResource
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResource
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.RecoveryPointResource>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RecoveryPointResource
+    fullName: RecoveryPointResource
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResource
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RecoveryPointResourceList
+    fullName: RecoveryPointResourceList
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResourceList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RecoveryPointResourceList
+    fullName: RecoveryPointResourceList
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResourceList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.RecoveryPointResourceList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RecoveryPointResourceList
+    fullName: RecoveryPointResourceList
+    uid: azure-arm-recoveryservicesbackup.RecoveryPointResourceList
+  - name: '>>'
+    fullName: '>>'
