@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4ac025f0d9bcf9ac402041803f2242eaf32f50f
+ms.sourcegitcommit: 6341d50df9591697ca6d5ae0e657a9840289d8c9
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "40483745"
+items:
+- uid: azure-event-hubs.BatchingReceiver
+  name: BatchingReceiver
+  fullName: BatchingReceiver
+  children:
+  - azure-event-hubs.BatchingReceiver.constructor
+  - azure-event-hubs.BatchingReceiver.create
+  - azure-event-hubs.BatchingReceiver.receive
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="e191e-101">Décrit le traitement par lot destinataire où l’utilisateur peut recevoir un nombre spécifié de messages pour une heure prédéfinie.</span><span class="sxs-lookup"><span data-stu-id="e191e-101">Describes the batching receiver where the user can receive a specified number of messages for a predefined time.</span></span>
+  extends:
+    name: azure-event-hubs.EventHubReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.constructor
+  name: BatchingReceiver
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e191e-102">Instancier un nouveau destinataire à partir du protocole AMQP `Receiver`.</span><span class="sxs-lookup"><span data-stu-id="e191e-102">Instantiate a new receiver from the AMQP `Receiver`.</span></span> <span data-ttu-id="e191e-103">Utilisé par `EventHubClient`.</span><span class="sxs-lookup"><span data-stu-id="e191e-103">Used by `EventHubClient`.</span></span>
+  syntax:
+    content: 'new BatchingReceiver(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: <span data-ttu-id="e191e-104">Le contexte de connexion.</span><span class="sxs-lookup"><span data-stu-id="e191e-104">The connection context.</span></span>
+    - id: partitionId
+      type:
+      - string | number
+      description: <span data-ttu-id="e191e-105">ID de partition de réception.</span><span class="sxs-lookup"><span data-stu-id="e191e-105">Partition ID from which to receive.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e191e-106">Crée un récepteur de traitement par lot.</span><span class="sxs-lookup"><span data-stu-id="e191e-106">Creates a batching receiver.</span></span>
+  syntax:
+    content: 'static function create(context: ConnectionContext, partitionId: string | number, options?: ReceiveOptions)'
+    parameters:
+    - id: context
+      type:
+      - azure-event-hubs.ConnectionContext
+      description: <span data-ttu-id="e191e-107">Le contexte de connexion.</span><span class="sxs-lookup"><span data-stu-id="e191e-107">The connection context.</span></span>
+    - id: partitionId
+      type:
+      - string | number
+      description: <span data-ttu-id="e191e-108">PartitionId pour recevoir des événements.</span><span class="sxs-lookup"><span data-stu-id="e191e-108">The partitionId to receive events from.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.BatchingReceiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.BatchingReceiver.receive
+  name: receive
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="e191e-109">Recevoir un lot d’objets EventData à partir d’une partition EventHub pour un nombre donné et un maximum de donnée temps d’attente en secondes, selon ce qui se produit en premier.</span><span class="sxs-lookup"><span data-stu-id="e191e-109">Receive a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="e191e-110">Cette méthode peut être utilisée directement après la création de l’objet de récepteur.</span><span class="sxs-lookup"><span data-stu-id="e191e-110">This method can be used directly after creating the receiver object.</span></span>
+  syntax:
+    content: 'function receive(maxMessageCount: number, maxWaitTimeInSeconds?: number)'
+    parameters:
+    - id: maxMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="e191e-111">Le nombre maximal de messages.</span><span class="sxs-lookup"><span data-stu-id="e191e-111">The maximum message count.</span></span> <span data-ttu-id="e191e-112">Doit être une valeur supérieure à 0.</span><span class="sxs-lookup"><span data-stu-id="e191e-112">Must be a value greater than 0.</span></span>
+    - id: maxWaitTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.EventData[]>
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.EventHubReceiver
+  spec.typeScript:
+  - name: EventHubReceiver
+    fullName: EventHubReceiver
+    uid: azure-event-hubs.EventHubReceiver
+- uid: azure-event-hubs.ConnectionContext
+  spec.typeScript:
+  - name: ConnectionContext
+    fullName: ConnectionContext
+    uid: azure-event-hubs.ConnectionContext
+- uid: azure-event-hubs.ReceiveOptions
+  spec.typeScript:
+  - name: ReceiveOptions
+    fullName: ReceiveOptions
+    uid: azure-event-hubs.ReceiveOptions
+- uid: Promise<azure-event-hubs.EventData[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]>'
+    fullName: '[]>'
+- uid: azure-event-hubs.BatchingReceiver
+  spec.typeScript:
+  - name: BatchingReceiver
+    fullName: BatchingReceiver
+    uid: azure-event-hubs.BatchingReceiver
