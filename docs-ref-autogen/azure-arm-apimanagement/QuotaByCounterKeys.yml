@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 37ddc1e2aec0bc5e91277b29c1213e334719b23c
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: a0409834548e19fb5a6271a45fa3e897c82aa46c
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40057998"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692191"
 items:
 - uid: azure-arm-apimanagement.QuotaByCounterKeys
   name: QuotaByCounterKeys
@@ -31,7 +31,7 @@ items:
   - typeScript
   summary: Répertorie un ensemble de périodes de compteur quota actuel associé à la clé de compteur configurée dans la stratégie sur l’instance de service spécifié. L’api ne prend pas en charge la pagination encore.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: function)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -50,7 +50,7 @@ items:
         Identificateur de clé de compteur quota. Voici le résultat de l’expression définie dans l’attribut dans la clé de la stratégie de quota-by-key. Par exemple, si vous spécifiez la clé de compteur = « boo » dans la stratégie, puis il est accessible par clé de compteur « boo ». Toutefois, si elle est définie comme counter-key="@("b"+"a") » il se situera accessible par clé de « ba »
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -95,7 +95,7 @@ items:
   - typeScript
   summary: Répertorie un ensemble de périodes de compteur quota actuel associé à la clé de compteur configurée dans la stratégie sur l’instance de service spécifié. L’api ne prend pas en charge la pagination encore.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: function, callback: ServiceCallback<QuotaCounterCollection>)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options: Object, callback: ServiceCallback<QuotaCounterCollection>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -111,7 +111,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -129,7 +129,7 @@ items:
   - typeScript
   summary: Répertorie un ensemble de périodes de compteur quota actuel associé à la clé de compteur configurée dans la stratégie sur l’instance de service spécifié. L’api ne prend pas en charge la pagination encore.
   syntax:
-    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: function)'
+    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -148,7 +148,7 @@ items:
         Identificateur de clé de compteur quota. Voici le résultat de l’expression définie dans l’attribut dans la clé de la stratégie de quota-by-key. Par exemple, si vous spécifiez la clé de compteur = « boo » dans la stratégie, puis il est accessible par clé de compteur « boo ». Toutefois, si elle est définie comme counter-key="@("b"+"a") » il se situera accessible par clé de « ba »
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -163,7 +163,7 @@ items:
   - typeScript
   summary: Met à jour toutes les valeurs de compteur de quota spécifiées avec la clé de compteur de quota existant à une valeur dans l’instance de service spécifié. Cela doit être utilisé pour la réinitialisation des valeurs de compteur de quota.
   syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: function)'
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -187,7 +187,7 @@ items:
         La valeur du compteur de quota à appliquer à toutes les périodes de compteur de quota.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -236,7 +236,7 @@ items:
   - typeScript
   summary: Met à jour toutes les valeurs de compteur de quota spécifiées avec la clé de compteur de quota existant à une valeur dans l’instance de service spécifié. Cela doit être utilisé pour la réinitialisation des valeurs de compteur de quota.
   syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -256,7 +256,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -274,7 +274,7 @@ items:
   - typeScript
   summary: Met à jour toutes les valeurs de compteur de quota spécifiées avec la clé de compteur de quota existant à une valeur dans l’instance de service spécifié. Cela doit être utilisé pour la réinitialisation des valeurs de compteur de quota.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, quotaCounterKey: string, parameters: QuotaCounterValueContractProperties, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -298,7 +298,7 @@ items:
         La valeur du compteur de quota à appliquer à toutes les périodes de compteur de quota.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
