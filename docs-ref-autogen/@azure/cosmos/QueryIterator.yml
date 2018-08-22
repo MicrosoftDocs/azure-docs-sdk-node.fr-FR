@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 47883452a0cbdb278f33d889b368dd1d9980f547
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 191cfc4fa4e9d81715994e7d0270373adb0a73b0
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40062623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41701697"
 items:
 - uid: '@azure/cosmos.QueryIterator'
   name: QueryIterator
@@ -13,6 +13,7 @@ items:
   - '@azure/cosmos.QueryIterator.current'
   - '@azure/cosmos.QueryIterator.executeNext'
   - '@azure/cosmos.QueryIterator.forEach'
+  - '@azure/cosmos.QueryIterator.getAsyncIterator'
   - '@azure/cosmos.QueryIterator.hasMoreResults'
   - '@azure/cosmos.QueryIterator.nextItem'
   - '@azure/cosmos.QueryIterator.reset'
@@ -20,7 +21,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="d6401-101">Représente un objet QueryIterator, une implmenetation de réponse de flux ou une requête qui permet de parcours et effectuant une itération sur la réponse dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="d6401-101">Represents a QueryIterator Object, an implmenetation of feed or query response that enables traversal and iterating over the response in the Azure Cosmos DB database service.</span></span>
+  summary: <span data-ttu-id="42a41-101">Représente un objet QueryIterator, une implmenetation de réponse de flux ou une requête qui permet de parcours et effectuant une itération sur la réponse dans le service de base de données Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="42a41-101">Represents a QueryIterator Object, an implmenetation of feed or query response that enables traversal and iterating over the response in the Azure Cosmos DB database service.</span></span>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.QueryIterator.current'
   name: current
@@ -28,7 +29,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-102">Récupérer l’élément actuel sur le QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="d6401-102">Retrieve the current element on the QueryIterator.</span></span>
+  summary: <span data-ttu-id="42a41-102">Récupérer l’élément actuel sur le QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="42a41-102">Retrieve the current element on the QueryIterator.</span></span>
   syntax:
     content: function current()
     parameters: []
@@ -42,7 +43,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-103">Extraire le lot suivant du flux de données et les transmettre sous forme de tableau à une fonction</span><span class="sxs-lookup"><span data-stu-id="d6401-103">Retrieve the next batch of the feed and pass them as an array to a function</span></span>
+  summary: <span data-ttu-id="42a41-103">Extraire le lot suivant du flux de données et les transmettre sous forme de tableau à une fonction</span><span class="sxs-lookup"><span data-stu-id="42a41-103">Retrieve the next batch of the feed and pass them as an array to a function</span></span>
   syntax:
     content: function executeNext()
     parameters: []
@@ -56,9 +57,50 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-104">Exécuter une fonction fournie une fois par élément de flux.</span><span class="sxs-lookup"><span data-stu-id="d6401-104">Execute a provided function once per feed element.</span></span>
+  summary: >-
+    <span data-ttu-id="42a41-104">Appelle un rappel spécifié pour chaque élément retourné par la requête.</span><span class="sxs-lookup"><span data-stu-id="42a41-104">Calls a specified callback for each item returned from the query.</span></span>
+
+    <span data-ttu-id="42a41-105">S’exécute en série ; chaque rappel bloque la suivante.</span><span class="sxs-lookup"><span data-stu-id="42a41-105">Runs serially; each callback blocks the next.</span></span>
   syntax:
-    content: function forEach()
+    content: 'function forEach(callback: (result: T, headers?: IHeaders, index?: number) => boolean | void)'
+    parameters:
+    - id: callback
+      type:
+      - '(result: T, headers?: IHeaders, index?: number) => boolean | void'
+      description: >
+        <span data-ttu-id="42a41-106">Rappel spécifié.</span><span class="sxs-lookup"><span data-stu-id="42a41-106">Specified callback.</span></span>
+
+        <span data-ttu-id="42a41-107">Premier paramètre est le résultat, deuxième param (facultatif) est l’état actuel de l’objet en-têtes, troisième param (facultatif) est l’index actuel.</span><span class="sxs-lookup"><span data-stu-id="42a41-107">First param is the result, second param (optional) is the current headers object state, third param (optional) is current index.</span></span>
+
+        <span data-ttu-id="42a41-108">Plus aucun rappel ne sera appelée si un d’eux génère false.</span><span class="sxs-lookup"><span data-stu-id="42a41-108">No more callbacks will be called if one of them results false.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.getAsyncIterator'
+  name: getAsyncIterator
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="42a41-109">Obtient un itérateur asynchrone qui produire des résultats jusqu'à la fin.</span><span class="sxs-lookup"><span data-stu-id="42a41-109">Gets an async iterator that will yield results until completion.</span></span>
+
+    <span data-ttu-id="42a41-110">Remarque : AsyncIterators sont une fonctionnalité très récente et vous devrez peut-être utiliser polyfils/etc. pour les utiliser dans votre code.</span><span class="sxs-lookup"><span data-stu-id="42a41-110">NOTE: AsyncIterators are a very new feature and you might need to use polyfils/etc. in order to use them in your code.</span></span>
+
+
+    <span data-ttu-id="42a41-111">Si vous utilisez TypeScript, vous pouvez utiliser le polyfill suivant aussi longtemps que vous ciblez ES6 ou version ultérieure et sont en cours d’exécution sur le nœud 6 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="42a41-111">If you're using TypeScript, you can use the following polyfill as long as you target ES6 or higher and are running on Node 6 or higher.</span></span>
+
+
+    ```typescript
+
+    if (!Symbol || !Symbol.asyncIterator) {
+      (Symbol as any).asyncIterator = Symbol.for("Symbol.asyncIterator");
+    }
+
+    ```
+  syntax:
+    content: function getAsyncIterator()
     parameters: []
     return:
       type:
@@ -92,7 +134,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-105">Exécuter une fonction fournie sur l’élément suivant dans le QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="d6401-105">Execute a provided function on the next element in the QueryIterator.</span></span>
+  summary: <span data-ttu-id="42a41-112">Exécuter une fonction fournie sur l’élément suivant dans le QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="42a41-112">Execute a provided function on the next element in the QueryIterator.</span></span>
   syntax:
     content: function nextItem()
     parameters: []
@@ -106,7 +148,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-106">Réinitialiser le QueryIterator au début et désactivez toutes les ressources qu’il contient</span><span class="sxs-lookup"><span data-stu-id="d6401-106">Reset the QueryIterator to the beginning and clear all the resources inside it</span></span>
+  summary: <span data-ttu-id="42a41-113">Réinitialiser le QueryIterator au début et désactivez toutes les ressources qu’il contient</span><span class="sxs-lookup"><span data-stu-id="42a41-113">Reset the QueryIterator to the beginning and clear all the resources inside it</span></span>
   syntax:
     content: function reset()
     parameters: []
@@ -117,7 +159,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="d6401-107">Récupérer tous les éléments du flux de données et les transmettre sous forme de tableau à une fonction</span><span class="sxs-lookup"><span data-stu-id="d6401-107">Retrieve all the elements of the feed and pass them as an array to a function</span></span>
+  summary: <span data-ttu-id="42a41-114">Récupérer tous les éléments du flux de données et les transmettre sous forme de tableau à une fonction</span><span class="sxs-lookup"><span data-stu-id="42a41-114">Retrieve all the elements of the feed and pass them as an array to a function</span></span>
   syntax:
     content: function toArray()
     parameters: []
