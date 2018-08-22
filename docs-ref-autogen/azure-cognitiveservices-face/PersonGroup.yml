@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: df0978f5755a00a7fae228f8baf46e67a73649a0
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 54207289a27f5cbe8c3ef496c1d11ec7bdce9f70
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40062443"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41694158"
 items:
 - uid: azure-cognitiveservices-face.PersonGroup
   name: PersonGroup
@@ -51,7 +51,7 @@ items:
   - typeScript
   summary: Créer un nouveau groupe de personnes avec personGroupId spécifié, le nom et userData fourni par l’utilisateur.
   syntax:
-    content: 'function create(personGroupId: string, options?: function)'
+    content: 'function create(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -60,7 +60,7 @@ items:
         PersonGroupId fourni par l’utilisateur sous forme de chaîne.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -97,7 +97,7 @@ items:
   - typeScript
   summary: Créer un nouveau groupe de personnes avec personGroupId spécifié, le nom et userData fourni par l’utilisateur.
   syntax:
-    content: 'function create(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function create(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -105,7 +105,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -123,7 +123,7 @@ items:
   - typeScript
   summary: Créer un nouveau groupe de personnes avec personGroupId spécifié, le nom et userData fourni par l’utilisateur.
   syntax:
-    content: 'function createWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -132,7 +132,7 @@ items:
         PersonGroupId fourni par l’utilisateur sous forme de chaîne.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -147,7 +147,7 @@ items:
   - typeScript
   summary: Supprimer un groupe existant de la personne. Conservées face images de toutes les personnes dans le groupe de personnes seront également supprimées.
   syntax:
-    content: 'function deleteMethod(personGroupId: string, options?: function)'
+    content: 'function deleteMethod(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -156,7 +156,7 @@ items:
         PersonGroupId de la personne du groupe à supprimer.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -171,7 +171,7 @@ items:
   - typeScript
   summary: Supprimer un groupe existant de la personne. Conservées face images de toutes les personnes dans le groupe de personnes seront également supprimées.
   syntax:
-    content: 'function deleteMethod(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -179,7 +179,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -219,7 +219,7 @@ items:
   - typeScript
   summary: Supprimer un groupe existant de la personne. Conservées face images de toutes les personnes dans le groupe de personnes seront également supprimées.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -228,7 +228,7 @@ items:
         PersonGroupId de la personne du groupe à supprimer.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -243,7 +243,7 @@ items:
   - typeScript
   summary: Récupérer les informations d’un groupe de personnes, y compris son nom et son userData.
   syntax:
-    content: 'function get(personGroupId: string, options?: function)'
+    content: 'function get(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -252,7 +252,7 @@ items:
         personGroupId de la personne du groupe cible.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -267,7 +267,7 @@ items:
   - typeScript
   summary: Récupérer les informations d’un groupe de personnes, y compris son nom et son userData.
   syntax:
-    content: 'function get(personGroupId: string, options: function, callback: ServiceCallback<PersonGroupResult>)'
+    content: 'function get(personGroupId: string, options: Object, callback: ServiceCallback<PersonGroupResult>)'
     parameters:
     - id: personGroupId
       type:
@@ -275,7 +275,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -315,7 +315,7 @@ items:
   - typeScript
   summary: Récupérer l’état de la formation d’un groupe de personnes (terminé ou en cours).
   syntax:
-    content: 'function getTrainingStatus(personGroupId: string, options?: function)'
+    content: 'function getTrainingStatus(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -324,7 +324,7 @@ items:
         personGroupId de personne du groupe cible.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -361,7 +361,7 @@ items:
   - typeScript
   summary: Récupérer l’état de la formation d’un groupe de personnes (terminé ou en cours).
   syntax:
-    content: 'function getTrainingStatus(personGroupId: string, options: function, callback: ServiceCallback<TrainingStatus1>)'
+    content: 'function getTrainingStatus(personGroupId: string, options: Object, callback: ServiceCallback<TrainingStatus1>)'
     parameters:
     - id: personGroupId
       type:
@@ -369,7 +369,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -387,7 +387,7 @@ items:
   - typeScript
   summary: Récupérer l’état de la formation d’un groupe de personnes (terminé ou en cours).
   syntax:
-    content: 'function getTrainingStatusWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function getTrainingStatusWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -396,7 +396,7 @@ items:
         personGroupId de personne du groupe cible.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -411,7 +411,7 @@ items:
   - typeScript
   summary: Récupérer les informations d’un groupe de personnes, y compris son nom et son userData.
   syntax:
-    content: 'function getWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -420,7 +420,7 @@ items:
         personGroupId de la personne du groupe cible.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -453,11 +453,11 @@ items:
   - typeScript
   summary: Liste des groupes de personnes et leurs informations.
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<PersonGroupResult[]>)'
+    content: 'function list(options: Object, callback: ServiceCallback<PersonGroupResult[]>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -475,11 +475,11 @@ items:
   - typeScript
   summary: Liste des groupes de personnes et leurs informations.
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -494,11 +494,11 @@ items:
   - typeScript
   summary: Liste des groupes de personnes et leurs informations.
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -513,7 +513,7 @@ items:
   - typeScript
   summary: Une tâche de formation de groupe personne en file d’attente, la tâche de formation ne peut pas être démarrée immédiatement.
   syntax:
-    content: 'function train(personGroupId: string, options?: function)'
+    content: 'function train(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -522,7 +522,7 @@ items:
         Groupe de personnes cible à être formé.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -559,7 +559,7 @@ items:
   - typeScript
   summary: Une tâche de formation de groupe personne en file d’attente, la tâche de formation ne peut pas être démarrée immédiatement.
   syntax:
-    content: 'function train(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function train(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -567,7 +567,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -585,7 +585,7 @@ items:
   - typeScript
   summary: Une tâche de formation de groupe personne en file d’attente, la tâche de formation ne peut pas être démarrée immédiatement.
   syntax:
-    content: 'function trainWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function trainWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -594,7 +594,7 @@ items:
         Groupe de personnes cible à être formé.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -609,7 +609,7 @@ items:
   - typeScript
   summary: Mettre à jour le nom d’affichage d’un groupe de personne existante et userData. Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.
   syntax:
-    content: 'function update(personGroupId: string, options?: function)'
+    content: 'function update(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -618,7 +618,7 @@ items:
         personGroupId de la personne du groupe à mettre à jour.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -655,7 +655,7 @@ items:
   - typeScript
   summary: Mettre à jour le nom d’affichage d’un groupe de personne existante et userData. Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.
   syntax:
-    content: 'function update(personGroupId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(personGroupId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: personGroupId
       type:
@@ -663,7 +663,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -681,7 +681,7 @@ items:
   - typeScript
   summary: Mettre à jour le nom d’affichage d’un groupe de personne existante et userData. Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.
   syntax:
-    content: 'function updateWithHttpOperationResponse(personGroupId: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(personGroupId: string, options?: Object)'
     parameters:
     - id: personGroupId
       type:
@@ -690,7 +690,7 @@ items:
         personGroupId de la personne du groupe à mettre à jour.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8aa4f878b3405000ff9a61b9fa360d4e9ec7cc65
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: b4a794104faf4acb54bb726d72e04a4c578215ec
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40061620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41682777"
 items:
 - uid: azure-event-hubs.Receiver
   name: Receiver
@@ -16,7 +16,11 @@ items:
   - azure-event-hubs.Receiver.connection
   - azure-event-hubs.Receiver.drain
   - azure-event-hubs.Receiver.error
+  - azure-event-hubs.Receiver.isClosed
+  - azure-event-hubs.Receiver.isItselfClosed
   - azure-event-hubs.Receiver.isOpen
+  - azure-event-hubs.Receiver.isSessionClosed
+  - azure-event-hubs.Receiver.isSessionItselfClosed
   - azure-event-hubs.Receiver.name
   - azure-event-hubs.Receiver.properties
   - azure-event-hubs.Receiver.constructor
@@ -120,15 +124,83 @@ items:
       type:
       - AmqpError | Error | undefined
   package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isClosed
+  name: isClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Détermine si le point de terminaison locaux et distant pour lien ou ses sous-jacent session ou sa connexion sous-jacente sont fermées.
+
+    Dans l’élément « receiver_close », « session_close » Gestionnaire d’événements, si cette méthode retourne `false` cela signifie que l’extrémité locale est toujours ouverte. Il peut être utile pour déterminer si la fermeture a été initialisée localement dans de telles circonstances.
+  syntax:
+    content: function isClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isItselfClosed
+  name: isItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Détermine si le point de terminaison locaux et distant pour que le lien lui-même sont fermées.
+
+    Dans le Gestionnaire d’événements « receiver_close », si cette méthode retourne `false` cela signifie que l’extrémité locale est toujours ouverte. Il peut être utile pour déterminer si la fermeture a été initialisée localement dans de telles circonstances.
+  syntax:
+    content: function isItselfClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
 - uid: azure-event-hubs.Receiver.isOpen
   name: isOpen
   children: []
   type: method
   langs:
   - typeScript
-  summary: Détermine si le lien de l’expéditeur est ouvert.
+  summary: Détermine si le lien du récepteur est ouvert.
   syntax:
     content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isSessionClosed
+  name: isSessionClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Détermine si le point de terminaison locaux et distant pour la session ou sa connexion sous-jacente sont fermées.
+
+    Dans le Gestionnaire d’événements « session_close », si cette méthode retourne `false` cela signifie que l’extrémité locale est toujours ouverte. Il peut être utile pour déterminer si la fermeture a été initialisée localement dans de telles circonstances.
+  syntax:
+    content: function isSessionClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Receiver.isSessionItselfClosed
+  name: isSessionItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Détermine si le point de terminaison locaux et distant pour la session elle-même sont fermées.
+
+    Dans le Gestionnaire d’événements « session_close », si cette méthode retourne `false` cela signifie que l’extrémité locale est toujours ouverte. Il peut être utile pour déterminer si la fermeture a été initialisée localement dans de telles circonstances.
+  syntax:
+    content: function isSessionItselfClosed()
     parameters: []
     return:
       type:
@@ -245,7 +317,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: ''
+  summary: Supprime le récepteur et sous-jacents session à partir de la carte interne.
   syntax:
     content: function remove()
     parameters: []
