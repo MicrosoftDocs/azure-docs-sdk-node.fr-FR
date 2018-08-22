@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3afc3ad1c9e1ff8958b703c429885746390c459c
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 3d5e3280cb25bc6be2ea5e00eb1c61b2e7924137
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40062881"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692234"
 items:
 - uid: azure-storage.azurestorage.common.util.accesscondition
   name: accesscondition
@@ -31,7 +31,7 @@ items:
   type: function
   langs:
   - typeScript
-  summary: <span data-ttu-id="fd53d-101">Construit une condition d’accès vide.</span><span class="sxs-lookup"><span data-stu-id="fd53d-101">Constructs an empty access condition.</span></span>
+  summary: <span data-ttu-id="f13f4-101">Construit une condition d’accès vide.</span><span class="sxs-lookup"><span data-stu-id="f13f4-101">Constructs an empty access condition.</span></span>
   syntax:
     content: function generateEmptyCondition()
     parameters: []
@@ -46,7 +46,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-102">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la ressource existe sur le paramètre de cette condition d’accès de service modifie la demande d’inclure l’en-tête conditionnel HTTP If-Match</span><span class="sxs-lookup"><span data-stu-id="fd53d-102">Constructs an access condition such that an operation will be performed only if the resource exists on the service Setting this access condition modifies the request to include the HTTP If-Match conditional header</span></span>
+    <span data-ttu-id="f13f4-102">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la ressource existe sur le paramètre de cette condition d’accès de service modifie la demande d’inclure l’en-tête conditionnel HTTP If-Match</span><span class="sxs-lookup"><span data-stu-id="f13f4-102">Constructs an access condition such that an operation will be performed only if the resource exists on the service Setting this access condition modifies the request to include the HTTP If-Match conditional header</span></span>
   syntax:
     content: function generateIfExistsCondition()
     parameters: []
@@ -61,14 +61,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-103">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la valeur de l’ETag de la ressource correspond à la valeur ETag spécifiée définissant cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel HTTP If-Match</span><span class="sxs-lookup"><span data-stu-id="fd53d-103">Constructs an access condition such that an operation will be performed only if the resource's ETag value matches the specified ETag value Setting this access condition modifies the request to include the HTTP If-Match conditional header</span></span>
+    <span data-ttu-id="f13f4-103">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la valeur de l’ETag de la ressource correspond à la valeur ETag spécifiée définissant cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel HTTP If-Match</span><span class="sxs-lookup"><span data-stu-id="f13f4-103">Constructs an access condition such that an operation will be performed only if the resource's ETag value matches the specified ETag value Setting this access condition modifies the request to include the HTTP If-Match conditional header</span></span>
   syntax:
     content: 'function generateIfMatchCondition(etag: string)'
     parameters:
     - id: etag
       type:
       - string
-      description: <span data-ttu-id="fd53d-104">La valeur ETag à comparer à l’ETag de la ressource</span><span class="sxs-lookup"><span data-stu-id="fd53d-104">The ETag value to check against the resource's ETag</span></span>
+      description: <span data-ttu-id="f13f4-104">La valeur ETag à comparer à l’ETag de la ressource</span><span class="sxs-lookup"><span data-stu-id="f13f4-104">The ETag value to check against the resource's ETag</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -80,14 +80,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-105">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si la ressource a été modifiée depuis l’heure spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête HTTP If-Modified-Since conditionnel</span><span class="sxs-lookup"><span data-stu-id="fd53d-105">Constructs an access condition such that an operation will be performed only if the resource has been modified since the specified time Setting this access condition modifies the request to include the HTTP If-Modified-Since conditional header</span></span>
+    <span data-ttu-id="f13f4-105">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si la ressource a été modifiée depuis l’heure spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête HTTP If-Modified-Since conditionnel</span><span class="sxs-lookup"><span data-stu-id="f13f4-105">Constructs an access condition such that an operation will be performed only if the resource has been modified since the specified time Setting this access condition modifies the request to include the HTTP If-Modified-Since conditional header</span></span>
   syntax:
     content: 'function generateIfModifiedSinceCondition(time: Date | string)'
     parameters:
     - id: time
       type:
       - Date | string
-      description: <span data-ttu-id="fd53d-106">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir été modifiée</span><span class="sxs-lookup"><span data-stu-id="fd53d-106">A date object specifying the time since which the resource must have been modified</span></span>
+      description: <span data-ttu-id="f13f4-106">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir été modifiée</span><span class="sxs-lookup"><span data-stu-id="f13f4-106">A date object specifying the time since which the resource must have been modified</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -99,14 +99,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-107">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la valeur de l’ETag de la ressource ne correspond pas à la valeur ETag spécifiée définissant cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel HTTP If-None-Match</span><span class="sxs-lookup"><span data-stu-id="fd53d-107">Constructs an access condition such that an operation will be performed only if the resource's ETag value does not match the specified ETag value Setting this access condition modifies the request to include the HTTP If-None-Match conditional header</span></span>
+    <span data-ttu-id="f13f4-107">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la valeur de l’ETag de la ressource ne correspond pas à la valeur ETag spécifiée définissant cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel HTTP If-None-Match</span><span class="sxs-lookup"><span data-stu-id="f13f4-107">Constructs an access condition such that an operation will be performed only if the resource's ETag value does not match the specified ETag value Setting this access condition modifies the request to include the HTTP If-None-Match conditional header</span></span>
   syntax:
     content: 'function generateIfNoneMatchCondition(etag: string)'
     parameters:
     - id: etag
       type:
       - string
-      description: <span data-ttu-id="fd53d-108">La valeur ETag à comparer à l’ETag de la ressource</span><span class="sxs-lookup"><span data-stu-id="fd53d-108">The ETag value to check against the resource's ETag</span></span>
+      description: <span data-ttu-id="f13f4-108">La valeur ETag à comparer à l’ETag de la ressource</span><span class="sxs-lookup"><span data-stu-id="f13f4-108">The ETag value to check against the resource's ETag</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -118,7 +118,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-109">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la ressource n’existe pas sur le paramètre de cette condition d’accès de service modifie la demande d’inclure l’en-tête conditionnel HTTP If-None-Match</span><span class="sxs-lookup"><span data-stu-id="fd53d-109">Constructs an access condition such that an operation will be performed only if the resource does not exist on the service Setting this access condition modifies the request to include the HTTP If-None-Match conditional header</span></span>
+    <span data-ttu-id="f13f4-109">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si la ressource n’existe pas sur le paramètre de cette condition d’accès de service modifie la demande d’inclure l’en-tête conditionnel HTTP If-None-Match</span><span class="sxs-lookup"><span data-stu-id="f13f4-109">Constructs an access condition such that an operation will be performed only if the resource does not exist on the service Setting this access condition modifies the request to include the HTTP If-None-Match conditional header</span></span>
   syntax:
     content: function generateIfNotExistsCondition()
     parameters: []
@@ -133,14 +133,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-110">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si la ressource n’a pas été modifiée depuis l’heure spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête HTTP If-Unmodified-Since conditionnel</span><span class="sxs-lookup"><span data-stu-id="fd53d-110">Constructs an access condition such that an operation will be performed only if the resource has not been modified since the specified time Setting this access condition modifies the request to include the HTTP If-Unmodified-Since conditional header</span></span>
+    <span data-ttu-id="f13f4-110">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si la ressource n’a pas été modifiée depuis l’heure spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête HTTP If-Unmodified-Since conditionnel</span><span class="sxs-lookup"><span data-stu-id="f13f4-110">Constructs an access condition such that an operation will be performed only if the resource has not been modified since the specified time Setting this access condition modifies the request to include the HTTP If-Unmodified-Since conditional header</span></span>
   syntax:
     content: 'function generateIfNotModifiedSinceCondition(time: Date | string)'
     parameters:
     - id: time
       type:
       - Date | string
-      description: <span data-ttu-id="fd53d-111">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="fd53d-111">A date object specifying the time since which the resource must have not been modified</span></span>
+      description: <span data-ttu-id="f13f4-111">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="f13f4-111">A date object specifying the time since which the resource must have not been modified</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -152,14 +152,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-112">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si le numéro de séquence de la ressource est égal à la valeur spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel x-ms-if-sequence-number-eq HTTP</span><span class="sxs-lookup"><span data-stu-id="fd53d-112">Constructs an access condition such that an operation will be performed only if the resource's sequence number is equal to the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-eq conditional header</span></span>
+    <span data-ttu-id="f13f4-112">Constructions une condition d’accès telles qu’une opération est exécutée uniquement si le numéro de séquence de la ressource est égal à la valeur spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel x-ms-if-sequence-number-eq HTTP</span><span class="sxs-lookup"><span data-stu-id="f13f4-112">Constructs an access condition such that an operation will be performed only if the resource's sequence number is equal to the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-eq conditional header</span></span>
   syntax:
     content: 'function generateSequenceNumberEqualCondition(sequenceNumber: Number | string)'
     parameters:
     - id: sequenceNumber
       type:
       - Number | string
-      description: <span data-ttu-id="fd53d-113">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="fd53d-113">A date object specifying the time since which the resource must have not been modified</span></span>
+      description: <span data-ttu-id="f13f4-113">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="f13f4-113">A date object specifying the time since which the resource must have not been modified</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -171,14 +171,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-114">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si le numéro de séquence est inférieure à la valeur spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel x-ms-if-sequence-number-lt HTTP</span><span class="sxs-lookup"><span data-stu-id="fd53d-114">Constructs an access condition such that an operation will be performed only if the resource's sequence number is less than the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-lt conditional header</span></span>
+    <span data-ttu-id="f13f4-114">Construit une condition d’accès de sorte qu’une opération sera exécutée uniquement si le numéro de séquence est inférieure à la valeur spécifiée, la définition de cette condition d’accès modifie la demande d’inclure l’en-tête conditionnel x-ms-if-sequence-number-lt HTTP</span><span class="sxs-lookup"><span data-stu-id="f13f4-114">Constructs an access condition such that an operation will be performed only if the resource's sequence number is less than the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-lt conditional header</span></span>
   syntax:
     content: 'function generateSequenceNumberLessThanCondition(sequenceNumber: Number | string)'
     parameters:
     - id: sequenceNumber
       type:
       - Number | string
-      description: <span data-ttu-id="fd53d-115">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="fd53d-115">A date object specifying the time since which the resource must have not been modified</span></span>
+      description: <span data-ttu-id="f13f4-115">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="f13f4-115">A date object specifying the time since which the resource must have not been modified</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -190,14 +190,14 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="fd53d-116">Une condition d’accès telles qu’une opération sera exécutée uniquement si le numéro de séquence est inférieure ou égale à la valeur de définition de cette condition d’accès de constructions modifie la requête pour inclure le x-ms-if-sequence-number-le HTTP en-tête conditionnel</span><span class="sxs-lookup"><span data-stu-id="fd53d-116">Constructs an access condition such that an operation will be performed only if the resource's sequence number is less than or equal to the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-le conditional header</span></span>
+    <span data-ttu-id="f13f4-116">Une condition d’accès telles qu’une opération sera exécutée uniquement si le numéro de séquence est inférieure ou égale à la valeur de définition de cette condition d’accès de constructions modifie la requête pour inclure le x-ms-if-sequence-number-le HTTP en-tête conditionnel</span><span class="sxs-lookup"><span data-stu-id="f13f4-116">Constructs an access condition such that an operation will be performed only if the resource's sequence number is less than or equal to the specified value Setting this access condition modifies the request to include the HTTP x-ms-if-sequence-number-le conditional header</span></span>
   syntax:
     content: 'function generateSequenceNumberLessThanOrEqualCondition(sequenceNumber: Number | string)'
     parameters:
     - id: sequenceNumber
       type:
       - Number | string
-      description: <span data-ttu-id="fd53d-117">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="fd53d-117">A date object specifying the time since which the resource must have not been modified</span></span>
+      description: <span data-ttu-id="f13f4-117">Un objet date en spécifiant l’heure depuis laquelle la ressource doit avoir pas été modifiée</span><span class="sxs-lookup"><span data-stu-id="f13f4-117">A date object specifying the time since which the resource must have not been modified</span></span>
     return:
       type:
       - azure-storage.azurestorage.AccessConditions
@@ -344,6 +344,13 @@ references:
   - name: ContainerResult
     fullName: ContainerResult
     uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.ContainerResult
+- uid: '[key: string]: azure-storage.azurestorage.common.AccessPolicy'
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: AccessPolicy
+    fullName: AccessPolicy
+    uid: azure-storage.azurestorage.common.AccessPolicy
 - uid: azure-storage.azurestorage.services.blob.blobservice.BlobService.BlobRequestOptions
   spec.typeScript:
   - name: BlobRequestOptions
@@ -1077,13 +1084,13 @@ references:
     uid: azure-storage.azurestorage.ErrorOrResult
   - name: <T>
     fullName: <T>
-- uid: azure-storage.azurestorage.ErrorOrResult<function>
+- uid: azure-storage.azurestorage.ErrorOrResult<Object>
   spec.typeScript:
   - name: ErrorOrResult
     fullName: ErrorOrResult
     uid: azure-storage.azurestorage.ErrorOrResult
-  - name: <function>
-    fullName: <function>
+  - name: <Object>
+    fullName: <Object>
 - uid: azure-storage.azurestorage.services.table.TableService
   spec.typeScript:
   - name: TableService
