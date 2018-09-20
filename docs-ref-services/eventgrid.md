@@ -6,39 +6,39 @@ ms.author: routlaw
 manager: angerobe
 ms.date: 05/03/2018
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
+ms.prod: ''
+ms.technology: ''
 ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
-ms.openlocfilehash: 165845f0c94b4e6fd0f385f2262903e44845d09a
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
+ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33849952"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46275720"
 ---
-# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="ea18c-103">Bibliothèques Azure Event Grid pour Node.js</span><span class="sxs-lookup"><span data-stu-id="ea18c-103">Azure Event Grid libraries for Node.js</span></span>
+# <a name="azure-event-grid-libraries-for-nodejs"></a><span data-ttu-id="8f096-103">Bibliothèques Azure Event Grid pour Node.js</span><span class="sxs-lookup"><span data-stu-id="8f096-103">Azure Event Grid libraries for Node.js</span></span>
 
-<span data-ttu-id="ea18c-104">Créez des applications pilotées par des événements, qui écoutent et réagissent aux événements venant des services Azure et de sources personnalisées à l’aide d’une gestion simple des événements basés sur HTTP avec Azure Event Grid.</span><span class="sxs-lookup"><span data-stu-id="ea18c-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
+<span data-ttu-id="8f096-104">Créez des applications pilotées par des événements, qui écoutent et réagissent aux événements venant des services Azure et de sources personnalisées à l’aide d’une gestion simple des événements basés sur HTTP avec Azure Event Grid.</span><span class="sxs-lookup"><span data-stu-id="8f096-104">Build event-driven applications that listen and react to events from Azure services and custom sources using simple HTTP-based event handling with Azure Event Grid.</span></span>
 
-<span data-ttu-id="ea18c-105">[En savoir plus](/azure/event-grid/overview) sur Azure Event Grid et la prise en main avec le [didacticiel des événements de stockage d’objets Blob Azure](/azure/storage/blobs/storage-blob-event-quickstart).</span><span class="sxs-lookup"><span data-stu-id="ea18c-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
+<span data-ttu-id="8f096-105">[En savoir plus](/azure/event-grid/overview) sur Azure Event Grid et la prise en main avec le [didacticiel des événements de stockage d’objets Blob Azure](/azure/storage/blobs/storage-blob-event-quickstart).</span><span class="sxs-lookup"><span data-stu-id="8f096-105">[Learn more](/azure/event-grid/overview) about Azure Event Grid and get started with the [Azure Blob storage event tutorial](/azure/storage/blobs/storage-blob-event-quickstart).</span></span> 
 
-## <a name="publish-sdk"></a><span data-ttu-id="ea18c-106">Kit de développement logiciel de publication</span><span class="sxs-lookup"><span data-stu-id="ea18c-106">Publish SDK</span></span>
+## <a name="publish-sdk"></a><span data-ttu-id="8f096-106">Kit de développement logiciel de publication</span><span class="sxs-lookup"><span data-stu-id="8f096-106">Publish SDK</span></span>
 
-<span data-ttu-id="ea18c-107">Créez des événements, authentifiez-vous et faites des publications dans des rubriques à l’aide du kit de développement logiciel de publication de Azure Event Grid.</span><span class="sxs-lookup"><span data-stu-id="ea18c-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
+<span data-ttu-id="8f096-107">Créez des événements, authentifiez-vous et faites des publications dans des rubriques à l’aide du kit de développement logiciel de publication de Azure Event Grid.</span><span class="sxs-lookup"><span data-stu-id="8f096-107">Create events, authenticate, and post to topics using the Azure Event Grid publish SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="ea18c-108">Installation</span><span class="sxs-lookup"><span data-stu-id="ea18c-108">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="8f096-108">Installation</span><span class="sxs-lookup"><span data-stu-id="8f096-108">Installation</span></span>
 
-<span data-ttu-id="ea18c-109">Ajoutez le module à votre projet avec npm :</span><span class="sxs-lookup"><span data-stu-id="ea18c-109">Add the module to your project with npm:</span></span>
+<span data-ttu-id="8f096-109">Ajoutez le module à votre projet avec npm :</span><span class="sxs-lookup"><span data-stu-id="8f096-109">Add the module to your project with npm:</span></span>
 
 ```bash
 npm install azure-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="ea18c-110">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="ea18c-110">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="8f096-110">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="8f096-110">Example code</span></span>
 
-<span data-ttu-id="ea18c-111">Le segment de code suivant publie un événement fictif dans une rubrique Event Grid.</span><span class="sxs-lookup"><span data-stu-id="ea18c-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="ea18c-112">Vous pouvez récupérer les clés d’accès de point de terminaison et de la rubrique à partir du portail Azure ou via Azure CLI :</span><span class="sxs-lookup"><span data-stu-id="ea18c-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
+<span data-ttu-id="8f096-111">Le segment de code suivant publie un événement fictif dans une rubrique Event Grid.</span><span class="sxs-lookup"><span data-stu-id="8f096-111">The following code segment publishes a mock event to a Event Grid topic.</span></span> <span data-ttu-id="8f096-112">Vous pouvez récupérer les clés d’accès de point de terminaison et de la rubrique à partir du portail Azure ou via Azure CLI :</span><span class="sxs-lookup"><span data-stu-id="8f096-112">You can retrieve the endpoint and topic access keys from the Azure Portal or through the Azure CLI:</span></span>
 
 ```azurecli-interactive
 endpoint=$(az eventgrid topic show --name <topic_name> -g gridResourceGroup --query "endpoint" --output tsv)
@@ -73,7 +73,7 @@ return EGClient.publishEvents(topicHostName, events).then((result) => {
 });
 ```
 
-<span data-ttu-id="ea18c-113">Cet exemple montre comment gérer un événement depuis le stockage Azure :</span><span class="sxs-lookup"><span data-stu-id="ea18c-113">This sample shows how to handle an event from Azure Storage:</span></span>
+<span data-ttu-id="8f096-113">Cet exemple montre comment gérer un événement depuis le stockage Azure :</span><span class="sxs-lookup"><span data-stu-id="8f096-113">This sample shows how to handle an event from Azure Storage:</span></span>
 
 ```javascript
 var http = require('http');
@@ -104,21 +104,21 @@ module.exports = function (context, req) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ea18c-114">Explorer les API clientes</span><span class="sxs-lookup"><span data-stu-id="ea18c-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
+> [<span data-ttu-id="8f096-114">Explorer les API clientes</span><span class="sxs-lookup"><span data-stu-id="8f096-114">Explore the client APIs</span></span>](/javascript/api/overview/azure/eventgrid/client)
 
-## <a name="management-sdk"></a><span data-ttu-id="ea18c-115">Kit de développement logiciel (SDK) de gestion</span><span class="sxs-lookup"><span data-stu-id="ea18c-115">Management SDK</span></span>
+## <a name="management-sdk"></a><span data-ttu-id="8f096-115">Kit de développement logiciel (SDK) de gestion</span><span class="sxs-lookup"><span data-stu-id="8f096-115">Management SDK</span></span>
 
-<span data-ttu-id="ea18c-116">Créez, mettez à jour et supprimez des instances, des rubriques et des abonnements Event Grid avec le kit de développement logiciel de gestion.</span><span class="sxs-lookup"><span data-stu-id="ea18c-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
+<span data-ttu-id="8f096-116">Créez, mettez à jour et supprimez des instances, des rubriques et des abonnements Event Grid avec le kit de développement logiciel de gestion.</span><span class="sxs-lookup"><span data-stu-id="8f096-116">Create, update, or delete Event Grid instances, topics, and subscriptions with the management SDK.</span></span>
 
-### <a name="installation"></a><span data-ttu-id="ea18c-117">Installation</span><span class="sxs-lookup"><span data-stu-id="ea18c-117">Installation</span></span>
+### <a name="installation"></a><span data-ttu-id="8f096-117">Installation</span><span class="sxs-lookup"><span data-stu-id="8f096-117">Installation</span></span>
 
 ```
 npm install azure-arm-eventgrid
 ```
 
-### <a name="example-code"></a><span data-ttu-id="ea18c-118">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="ea18c-118">Example code</span></span>
+### <a name="example-code"></a><span data-ttu-id="8f096-118">Exemple de code</span><span class="sxs-lookup"><span data-stu-id="8f096-118">Example code</span></span>
 
-<span data-ttu-id="ea18c-119">Le code suivant crée une rubrique Event Grid `topic1` et retourne les clés d’accès associées à la rubrique nouvellement créée.</span><span class="sxs-lookup"><span data-stu-id="ea18c-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
+<span data-ttu-id="8f096-119">Le code suivant crée une rubrique Event Grid `topic1` et retourne les clés d’accès associées à la rubrique nouvellement créée.</span><span class="sxs-lookup"><span data-stu-id="8f096-119">The following code creates an Event Grid topic `topic1` and returns the access keys associated with the newly created topic.</span></span>
 
 ```javascript
 var msRestAzure = require('ms-rest-azure');
@@ -138,8 +138,8 @@ msRestAzure.interactiveLogin(function(err, credentials) {
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ea18c-120">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="ea18c-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
+> [<span data-ttu-id="8f096-120">Explorer les API de gestion</span><span class="sxs-lookup"><span data-stu-id="8f096-120">Explore the management APIs</span></span>](/javascript/api/overview/azure/eventgrid/management)
 
-## <a name="learn-more"></a><span data-ttu-id="ea18c-121">En savoir plus</span><span class="sxs-lookup"><span data-stu-id="ea18c-121">Learn more</span></span>
+## <a name="learn-more"></a><span data-ttu-id="8f096-121">En savoir plus</span><span class="sxs-lookup"><span data-stu-id="8f096-121">Learn more</span></span>
 
-- [<span data-ttu-id="ea18c-122">Recevoir des événements avec le kit de développement logiciel Event Grid</span><span class="sxs-lookup"><span data-stu-id="ea18c-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
+- [<span data-ttu-id="8f096-122">Recevoir des événements avec le kit de développement logiciel Event Grid</span><span class="sxs-lookup"><span data-stu-id="8f096-122">Receive events using the Event Grid SDK</span></span>](/azure/event-grid/receive-events)
