@@ -6,20 +6,20 @@ ms.author: tomfitz
 manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
-ms.service: Billing
-ms.openlocfilehash: 111ca8d4ed40200a307b608915d71d2fa6944ed2
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.service: billing
+ms.product: ''
+ms.technology: ''
+ms.openlocfilehash: 20df85ae5e504e460a501737aa07b6692a0da3c7
+ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260342"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46213351"
 ---
 # <a name="azure-billing-modules-for-nodejs"></a>Modules Facturation Azure pour Node.js
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 Les API Facturation Azure offrent un accès à vos factures Azure et leurs détails.
 
 Pour utiliser cette API, l’administrateur du compte doit s’abonner depuis le portail Azure. Consultez [Gérer l’accès à la facturation Azure à l’aide de rôles](https://docs.microsoft.com/azure/billing/billing-manage-access).
