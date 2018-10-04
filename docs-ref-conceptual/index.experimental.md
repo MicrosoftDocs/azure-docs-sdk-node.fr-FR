@@ -4,12 +4,12 @@ hide_bc: true
 title: Centre de développement Node.js | Microsoft Docs
 description: Découvrez comment développer et déployer des applications Node.js dans le cloud avec Azure.
 ms.topic: hub-page
-ms.openlocfilehash: 589b5a19e8c659a58e42b765ba4ce48f6d82f1f8
-ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
+ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39188975"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48488541"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -20,8 +20,6 @@ ms.locfileid: "39188975"
             <li style="
                     flex-basis: 180px;
                     text-align: center;
-                    background-color: black;
-                    font: white;
                     display: block;
                     margin-left: auto;
                     margin-top: 15px;
@@ -33,7 +31,7 @@ ms.locfileid: "39188975"
                     <br>
                         <div class="cardText">
                         <h3 style="
-                            color: white;
+                            font-weight: bold;
                             font-size: large;
                         ">Get started free &gt;</h3>
                     </div>
@@ -143,7 +141,7 @@ ms.locfileid: "39188975"
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
-brew install azure-cli az login az group create --name MyResourceGroup --location &quot;West US&quot; </code></pre>
+brew install azure-cli az login az group create --name MyResourceGroup --location &quot;USA Ouest&quot;</code></pre>
             
                                 <h4>2. Create a storage container.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
@@ -214,7 +212,7 @@ az storage account create -n mystorageaccount12312 -g MyResourceGroup -l westus 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
-brew install azure-cli az login az group create --name MyResourceGroup --location &quot;West US&quot; </code></pre>
+brew install azure-cli az login az group create --name MyResourceGroup --location &quot;USA Ouest&quot;</code></pre>
             
                                 <h4>2. Create a cognitive services text analytics account and retrieve your account key.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
@@ -266,8 +264,6 @@ getTextAnalytics.write(body); getTextAnalytics.end();
             <li style="
                     flex-basis: 180px;
                     text-align: center;
-                    background-color: black;
-                    font: white;
                     display: block;
                     margin-left: auto;
                     margin-top: 15px;
@@ -279,7 +275,7 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     <br>
                         <div class="cardText">
                         <h3 style="
-                            color: white;
+                            font-weight: bold;
                             font-size: large;
                         ">Get started free &gt;</h3>
                     </div>
