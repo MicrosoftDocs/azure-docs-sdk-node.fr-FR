@@ -10,30 +10,30 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DNS
-ms.openlocfilehash: 610bc878acba978b7be25ea2caee4000cef3b452
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 93eec1890fc15d19c0545086a53b751d0886988a
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49803499"
 ---
-# <a name="azure-dns-modules-for-nodejs"></a><span data-ttu-id="835f0-103">Modules Azure DNS pour Node.js</span><span class="sxs-lookup"><span data-stu-id="835f0-103">Azure DNS modules for Node.js</span></span>
+# <a name="azure-dns-modules-for-nodejs"></a><span data-ttu-id="b727e-103">Modules Azure DNS pour Node.js</span><span class="sxs-lookup"><span data-stu-id="b727e-103">Azure DNS modules for Node.js</span></span>
 
-<span data-ttu-id="835f0-104">Azure DNS vous permet d’héberger vos domaines DNS dans Azure.</span><span class="sxs-lookup"><span data-stu-id="835f0-104">Use Azure DNS to host your Domain Name System (DNS) domains in Azure.</span></span> <span data-ttu-id="835f0-105">Gérez vos enregistrements DNS en utilisant les informations d’identification et le contrat de support et de facturation déjà disponibles avec les autres services Azure.</span><span class="sxs-lookup"><span data-stu-id="835f0-105">Manage your DNS records using the same credentials and billing and support contract as your other Azure services.</span></span> <span data-ttu-id="835f0-106">Intégrez en toute transparence les services Azure avec les mises à jour de DNS correspondantes et simplifiez ainsi l’ensemble du processus de déploiement.</span><span class="sxs-lookup"><span data-stu-id="835f0-106">Seamlessly integrate Azure-based services with corresponding DNS updates and streamline your end-to-end deployment process.</span></span>
+<span data-ttu-id="b727e-104">Azure DNS vous permet d’héberger vos domaines DNS dans Azure.</span><span class="sxs-lookup"><span data-stu-id="b727e-104">Use Azure DNS to host your Domain Name System (DNS) domains in Azure.</span></span> <span data-ttu-id="b727e-105">Gérez vos enregistrements DNS en utilisant les informations d’identification et le contrat de support et de facturation déjà disponibles avec les autres services Azure.</span><span class="sxs-lookup"><span data-stu-id="b727e-105">Manage your DNS records using the same credentials and billing and support contract as your other Azure services.</span></span> <span data-ttu-id="b727e-106">Intégrez en toute transparence les services Azure avec les mises à jour de DNS correspondantes et simplifiez ainsi l’ensemble du processus de déploiement.</span><span class="sxs-lookup"><span data-stu-id="b727e-106">Seamlessly integrate Azure-based services with corresponding DNS updates and streamline your end-to-end deployment process.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="835f0-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="835f0-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="b727e-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="b727e-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="835f0-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="835f0-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="b727e-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="b727e-108">Install the npm module</span></span>
 
-<span data-ttu-id="835f0-109">Installer le module npm Azure DNS</span><span class="sxs-lookup"><span data-stu-id="835f0-109">Install the Azure DNS npm module</span></span>
+<span data-ttu-id="b727e-109">Installer le module npm Azure DNS</span><span class="sxs-lookup"><span data-stu-id="b727e-109">Install the Azure DNS npm module</span></span>
 
 ```bash
 npm install azure-arm-dns
 ```
 
-### <a name="example"></a><span data-ttu-id="835f0-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="835f0-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="b727e-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="b727e-110">Example</span></span>
 
-<span data-ttu-id="835f0-111">Cet exemple répertorie les zones de gestion DNS.</span><span class="sxs-lookup"><span data-stu-id="835f0-111">This example lists the DNS Management zones.</span></span>
+<span data-ttu-id="b727e-111">Cet exemple répertorie les zones de gestion DNS.</span><span class="sxs-lookup"><span data-stu-id="b727e-111">This example lists the DNS Management zones.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="835f0-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="835f0-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="b727e-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="b727e-112">Samples</span></span>
 
-<span data-ttu-id="835f0-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="835f0-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="b727e-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="b727e-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
