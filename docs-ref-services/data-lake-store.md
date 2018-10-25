@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
-ms.openlocfilehash: a108cc6d184b72d2d4227f9e60da6b7a535f92ae
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: da7e71a9ee1f6936924b1ec966b441756e9b0dfe
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
-ms.locfileid: "28117124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49670834"
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a>Modules Azure Data Lake Store pour Node.js
 
@@ -31,7 +31,7 @@ Utiliser npm pour installer les modules Azure Data Lake Store pour Node.js
 npm install azure-arm-datalake-store
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple répertorie tous les comptes Data Lake Store d’un abonnement Azure donné
 

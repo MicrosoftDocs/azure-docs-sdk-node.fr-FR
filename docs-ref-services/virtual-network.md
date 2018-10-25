@@ -10,16 +10,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
-ms.openlocfilehash: 456839dbecb9ddd1ad0d4b3f8aa7570a04c100b1
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 11341fdff5df3b7521319d841707493db1d07732
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49670854"
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a>Modules Réseau virtuel Azure pour Node.js
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Le service Réseau virtuel Azure vous permet de connecter en toute sécurité des ressources Azure entre elles en utilisant des réseaux virtuels. Un réseau virtuel est une représentation de votre propre réseau dans le cloud. Il s’agit d’un isolement logique du cloud Azure dédié à votre abonnement. Vous pouvez également connecter des réseaux virtuels à votre réseau local.
 
@@ -56,7 +56,6 @@ msRestAzure
     console.log('List of virtual networks:');
     console.dir(networkList, { depth: null, colors: true });
   });
-
 ```
 
 ## <a name="samples"></a>Exemples

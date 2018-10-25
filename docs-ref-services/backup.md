@@ -10,16 +10,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: 6daeb443c2f1d8560a6a455cb6d174462b483f79
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34264642"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49728269"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>Modules Sauvegarde Azure pour Node.js
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Azure Backup est le service Azure qui vous permet de sauvegarder (ou de protéger) et de restaurer vos données dans le cloud Microsoft. Azure Backup remplace votre solution de sauvegarde locale ou hors site par une solution basée dans le cloud à la fois fiable, sécurisée et économique. Azure Backup propose plusieurs composants que vous pouvez télécharger et déployer sur l’ordinateur ou sur le serveur approprié, ou dans le cloud. Vous déployez un composant (ou un agent) en fonction de ce que vous souhaitez protéger. Vous pouvez utiliser tous les composants de Sauvegarde Azure (que vous protégiez des données en local ou dans le cloud) pour sauvegarder des données dans un coffre Recovery Services d’Azure. 
 

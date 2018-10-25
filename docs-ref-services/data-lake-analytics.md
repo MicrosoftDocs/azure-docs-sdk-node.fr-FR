@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Analytics
-ms.openlocfilehash: 28dae604ae9977eb33470757e207ac12a592c676
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 97a846d9970310931e05e681b23b5787c97260b6
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/26/2018
-ms.locfileid: "28116964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49797454"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a>Modules Azure Data Lake Analytics pour Node.js
 
@@ -31,7 +31,7 @@ Utiliser npm pour installer les modules Azure Data Lake Analytics pour Node.js
 npm install azure-arm-datalake-analytics
 ```
 
-### <a name="example"></a>exemples
+### <a name="example"></a>Exemples
 
 Cet exemple répertorie tous les comptes Analytics pour un abonnement donné.
 

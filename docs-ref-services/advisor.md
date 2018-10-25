@@ -10,16 +10,16 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Advisor
-ms.openlocfilehash: 07b6369ef69343cc47cd38484ebb87d050264775
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 54686220006d27341dbb50a249d0b2f44411b112
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49702865"
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a>Modules Azure Advisor pour Node.js
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Azure Advisor est un conseiller personnalisé basé dans le cloud qui décrit les meilleures pratiques à suivre pour optimiser vos déploiements Azure. Advisor analyse votre télémétrie de configuration et d’utilisation des ressources, puis recommande des solutions qui peuvent vous aider à améliorer la rentabilité, les performances, la haute disponibilité et la sécurité de vos ressources Azure.
 

@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Resources
-ms.openlocfilehash: 9c5eb1c2f8241d50bd459cda25216b4ed12535ce
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: ac82356f0f9f566e29cb2c89181a0cedf2f62f87
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261648"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49748254"
 ---
 # <a name="azure-resource-modules-for-nodejs"></a>Modules Azure Resource pour Node.js
 
@@ -33,8 +33,8 @@ Utiliser npm pour installer le module Azure Resource Manager pour Node.js
 npm install azure-arm-resource
 ```
 
-##<a name="example"></a>Exemples
+## <a name="example"></a>Exemples
 
-##<a name="samples"></a>Exemples
+## <a name="samples"></a>Exemples
 
 Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.
