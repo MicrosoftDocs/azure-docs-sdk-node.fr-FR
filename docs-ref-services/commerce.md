@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Commerce
 ms.openlocfilehash: 87a0e8d689d8d782a705a4525fdbe9b681403c07
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49757394"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50378527"
 ---
 # <a name="azure-commerce-modules-for-nodejs"></a>Modules Azure Commerce pour Node.js
 

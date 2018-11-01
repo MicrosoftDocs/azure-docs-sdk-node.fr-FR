@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Analytics
 ms.openlocfilehash: 97a846d9970310931e05e681b23b5787c97260b6
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49797454"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50284225"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a>Modules Azure Data Lake Analytics pour Node.js
 
