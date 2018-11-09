@@ -11,29 +11,29 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
 ms.openlocfilehash: f24fa268f9c471925a1bdf0cbae8044d97bc7679
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406395"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51071598"
 ---
-# <a name="azure-container-registry-modules-for-nodejs"></a><span data-ttu-id="c8a21-103">Modules Azure Container Registry pour Node.js</span><span class="sxs-lookup"><span data-stu-id="c8a21-103">Azure Container Registry modules for Node.js</span></span>
+# <a name="azure-container-registry-modules-for-nodejs"></a><span data-ttu-id="2c76e-103">Modules Azure Container Registry pour Node.js</span><span class="sxs-lookup"><span data-stu-id="2c76e-103">Azure Container Registry modules for Node.js</span></span>
 
-<span data-ttu-id="c8a21-104">Azure Container Registry est un service de registre Docker géré basé sur le Registre open source Docker 2.0.</span><span class="sxs-lookup"><span data-stu-id="c8a21-104">Azure Container Registry is a managed Docker registry service based on the open-source Docker Registry 2.0.</span></span> <span data-ttu-id="c8a21-105">Créez et gérez des registres de conteneur Azure pour stocker et gérer vos images de conteneur Docker privées.</span><span class="sxs-lookup"><span data-stu-id="c8a21-105">Create and maintain Azure container registries to store and manage your private Docker container images.</span></span> <span data-ttu-id="c8a21-106">Utilisez des registres de conteneur dans Azure avec vos pipelines de développement et de déploiement existants, et exploitez l’expertise de la communauté de Docker.</span><span class="sxs-lookup"><span data-stu-id="c8a21-106">Use container registries in Azure with your existing container development and deployment pipelines, and draw on the body of Docker community expertise.</span></span>
+<span data-ttu-id="2c76e-104">Azure Container Registry est un service de registre Docker géré basé sur le Registre open source Docker 2.0.</span><span class="sxs-lookup"><span data-stu-id="2c76e-104">Azure Container Registry is a managed Docker registry service based on the open-source Docker Registry 2.0.</span></span> <span data-ttu-id="2c76e-105">Créez et gérez des registres de conteneur Azure pour stocker et gérer vos images de conteneur Docker privées.</span><span class="sxs-lookup"><span data-stu-id="2c76e-105">Create and maintain Azure container registries to store and manage your private Docker container images.</span></span> <span data-ttu-id="2c76e-106">Utilisez des registres de conteneur dans Azure avec vos pipelines de développement et de déploiement existants, et exploitez l’expertise de la communauté de Docker.</span><span class="sxs-lookup"><span data-stu-id="2c76e-106">Use container registries in Azure with your existing container development and deployment pipelines, and draw on the body of Docker community expertise.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="c8a21-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="c8a21-107">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="2c76e-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="2c76e-107">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="c8a21-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="c8a21-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="2c76e-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="2c76e-108">Install the npm module</span></span>
 
-<span data-ttu-id="c8a21-109">Installer le module npm Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="c8a21-109">Install the Azure container registry npm module</span></span>
+<span data-ttu-id="2c76e-109">Installer le module npm Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="2c76e-109">Install the Azure container registry npm module</span></span>
 
 ```bash
 npm install azure-arm-containerregistry
 ```
 
-### <a name="example"></a><span data-ttu-id="c8a21-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="c8a21-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="2c76e-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="2c76e-110">Example</span></span>
 
-<span data-ttu-id="c8a21-111">Cet exemple obtient une liste des conteneurs disponibles.</span><span class="sxs-lookup"><span data-stu-id="c8a21-111">This example gets a list of the available containers.</span></span>
+<span data-ttu-id="2c76e-111">Cet exemple obtient une liste des conteneurs disponibles.</span><span class="sxs-lookup"><span data-stu-id="2c76e-111">This example gets a list of the available containers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="c8a21-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="c8a21-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="2c76e-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="2c76e-112">Samples</span></span>
 
-<span data-ttu-id="c8a21-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="c8a21-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="2c76e-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="2c76e-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
