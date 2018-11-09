@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
 ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50316986"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51191138"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Outils Azure pour les développeurs JavaScript
 Les outils suivants sont recommandés pour le développement d’applications JavaScript sur Azure.
