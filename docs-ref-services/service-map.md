@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
 ms.openlocfilehash: 494d948896d65dd67b06f455386f500346862beb
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51190918"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51396053"
 ---
-# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="76fb8-103">Modules Azure Service Map pour Node.js</span><span class="sxs-lookup"><span data-stu-id="76fb8-103">Azure Service Map modules for Node.js</span></span>
+# <a name="azure-service-map-modules-for-nodejs"></a><span data-ttu-id="e24e1-103">Modules Azure Service Map pour Node.js</span><span class="sxs-lookup"><span data-stu-id="e24e1-103">Azure Service Map modules for Node.js</span></span>
 
-<span data-ttu-id="76fb8-104">La solution Service Map détecte automatiquement les composants d’application sur les systèmes Windows et Linux, et mappe la communication entre les services.</span><span class="sxs-lookup"><span data-stu-id="76fb8-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="76fb8-105">Elle affiche les connexions entre serveurs, processus et ports au sein de toute architecture TCP connectée, sans nécessiter de configuration autre que l’installation d’un agent.</span><span class="sxs-lookup"><span data-stu-id="76fb8-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
+<span data-ttu-id="e24e1-104">La solution Service Map détecte automatiquement les composants d’application sur les systèmes Windows et Linux, et mappe la communication entre les services.</span><span class="sxs-lookup"><span data-stu-id="e24e1-104">Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services.</span></span> <span data-ttu-id="e24e1-105">Elle affiche les connexions entre serveurs, processus et ports au sein de toute architecture TCP connectée, sans nécessiter de configuration autre que l’installation d’un agent.</span><span class="sxs-lookup"><span data-stu-id="e24e1-105">Service Map shows connections between servers, processes, and ports across any TCP-connected architecture, with no configuration required other than the installation of an agent.</span></span>
 
-<span data-ttu-id="76fb8-106">En savoir plus sur [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span><span class="sxs-lookup"><span data-stu-id="76fb8-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
+<span data-ttu-id="e24e1-106">En savoir plus sur [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span><span class="sxs-lookup"><span data-stu-id="e24e1-106">Learn more about [Azure Service Map](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-service-map).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="76fb8-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="76fb8-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="e24e1-107">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="e24e1-107">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="76fb8-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="76fb8-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="e24e1-108">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="e24e1-108">Install the npm module</span></span>
 
-<span data-ttu-id="76fb8-109">Installer le module npm Azure Service Map</span><span class="sxs-lookup"><span data-stu-id="76fb8-109">Install the Azure Service Map npm module</span></span>
+<span data-ttu-id="e24e1-109">Installer le module npm Azure Service Map</span><span class="sxs-lookup"><span data-stu-id="e24e1-109">Install the Azure Service Map npm module</span></span>
 
 ```bash
 npm install azure-arm-servicemap
 ```
 
-### <a name="example"></a><span data-ttu-id="76fb8-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="76fb8-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="e24e1-110">Exemples</span><span class="sxs-lookup"><span data-stu-id="e24e1-110">Example</span></span>
 
-<span data-ttu-id="76fb8-111">Cet exemple répertorie tous les mappages de service pour le groupe de ressources et l’espace de travail spécifiés.</span><span class="sxs-lookup"><span data-stu-id="76fb8-111">This example lists all service maps for the specified resource group and workspace.</span></span>
+<span data-ttu-id="e24e1-111">Cet exemple répertorie tous les mappages de service pour le groupe de ressources et l’espace de travail spécifiés.</span><span class="sxs-lookup"><span data-stu-id="e24e1-111">This example lists all service maps for the specified resource group and workspace.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="76fb8-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="76fb8-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="e24e1-112">Exemples</span><span class="sxs-lookup"><span data-stu-id="e24e1-112">Samples</span></span>
 
-<span data-ttu-id="76fb8-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="76fb8-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="e24e1-113">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="e24e1-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

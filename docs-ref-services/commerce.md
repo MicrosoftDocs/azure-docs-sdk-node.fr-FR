@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Commerce
 ms.openlocfilehash: 87a0e8d689d8d782a705a4525fdbe9b681403c07
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51111218"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51459403"
 ---
-# <a name="azure-commerce-modules-for-nodejs"></a><span data-ttu-id="752a2-103">Modules Azure Commerce pour Node.js</span><span class="sxs-lookup"><span data-stu-id="752a2-103">Azure Commerce modules for Node.js</span></span>
+# <a name="azure-commerce-modules-for-nodejs"></a><span data-ttu-id="dd2e7-103">Modules Azure Commerce pour Node.js</span><span class="sxs-lookup"><span data-stu-id="dd2e7-103">Azure Commerce modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="752a2-104">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="752a2-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="dd2e7-104">Vue d’ensemble</span><span class="sxs-lookup"><span data-stu-id="dd2e7-104">Overview</span></span>
 
-<span data-ttu-id="752a2-105">Utilisez les API Azure Commerce pour extraire les données d’utilisation et de ressources dans vos outils d’analyse de données préférés.</span><span class="sxs-lookup"><span data-stu-id="752a2-105">Use Azure Commerce APIs to pull usage and resource data into your preferred data analysis tools.</span></span> <span data-ttu-id="752a2-106">Les API d’utilisation des ressources Azure et RateCard peuvent vous aider à prévoir vos coûts avec précision et à les gérer.</span><span class="sxs-lookup"><span data-stu-id="752a2-106">The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs.</span></span> <span data-ttu-id="752a2-107">Les API sont implémentées en tant que fournisseur de ressources et font partie intégrante de la famille d’API exposées par Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="752a2-107">The APIs are implemented as a Resource Provider and part of the family of APIs exposed by the Azure Resource Manager.</span></span>
+<span data-ttu-id="dd2e7-105">Utilisez les API Azure Commerce pour extraire les données d’utilisation et de ressources dans vos outils d’analyse de données préférés.</span><span class="sxs-lookup"><span data-stu-id="dd2e7-105">Use Azure Commerce APIs to pull usage and resource data into your preferred data analysis tools.</span></span> <span data-ttu-id="dd2e7-106">Les API d’utilisation des ressources Azure et RateCard peuvent vous aider à prévoir vos coûts avec précision et à les gérer.</span><span class="sxs-lookup"><span data-stu-id="dd2e7-106">The Azure Resource Usage and RateCard APIs can help you accurately predict and manage your costs.</span></span> <span data-ttu-id="dd2e7-107">Les API sont implémentées en tant que fournisseur de ressources et font partie intégrante de la famille d’API exposées par Azure Resource Manager.</span><span class="sxs-lookup"><span data-stu-id="dd2e7-107">The APIs are implemented as a Resource Provider and part of the family of APIs exposed by the Azure Resource Manager.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="752a2-108">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="752a2-108">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="dd2e7-108">Gestion des packages</span><span class="sxs-lookup"><span data-stu-id="dd2e7-108">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="752a2-109">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="752a2-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="dd2e7-109">Installer le module npm</span><span class="sxs-lookup"><span data-stu-id="dd2e7-109">Install the npm module</span></span>
 
-<span data-ttu-id="752a2-110">Installer le module npm Azure Commerce</span><span class="sxs-lookup"><span data-stu-id="752a2-110">Install the Azure Commerce npm module</span></span>
+<span data-ttu-id="dd2e7-110">Installer le module npm Azure Commerce</span><span class="sxs-lookup"><span data-stu-id="dd2e7-110">Install the Azure Commerce npm module</span></span>
 
 ```bash
 npm install azure-arm-commerce
 ```
 
-### <a name="example"></a><span data-ttu-id="752a2-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="752a2-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="dd2e7-111">Exemples</span><span class="sxs-lookup"><span data-stu-id="dd2e7-111">Example</span></span>
 
-<span data-ttu-id="752a2-112">Cet exemple récupère vos données de consommation Azure estimées pour le mois dernier.</span><span class="sxs-lookup"><span data-stu-id="752a2-112">This example retrieves your estimated Azure consumption data for the last month.</span></span>
+<span data-ttu-id="dd2e7-112">Cet exemple récupère vos données de consommation Azure estimées pour le mois dernier.</span><span class="sxs-lookup"><span data-stu-id="dd2e7-112">This example retrieves your estimated Azure consumption data for the last month.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -64,6 +64,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="752a2-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="752a2-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="dd2e7-113">Exemples</span><span class="sxs-lookup"><span data-stu-id="dd2e7-113">Samples</span></span>
 
-<span data-ttu-id="752a2-114">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="752a2-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="dd2e7-114">Découvrez d’autres [exemples de code Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs) à utiliser dans vos applications.</span><span class="sxs-lookup"><span data-stu-id="dd2e7-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
