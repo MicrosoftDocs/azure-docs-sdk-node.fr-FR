@@ -1,0 +1,236 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8b46ae10839a1c4a139f43171342de9de15802e4
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45856563"
+items:
+- uid: azure-event-hubs.RequestResponseLink
+  name: RequestResponseLink
+  fullName: RequestResponseLink
+  children:
+  - azure-event-hubs.RequestResponseLink.close
+  - azure-event-hubs.RequestResponseLink.connection
+  - azure-event-hubs.RequestResponseLink.create
+  - azure-event-hubs.RequestResponseLink.isOpen
+  - azure-event-hubs.RequestResponseLink.receiver
+  - azure-event-hubs.RequestResponseLink.constructor
+  - azure-event-hubs.RequestResponseLink.sender
+  - azure-event-hubs.RequestResponseLink.sendRequest
+  - azure-event-hubs.RequestResponseLink.session
+  langs:
+  - typeScript
+  type: class
+  summary: Décrit un lien request(sender)-response(receiver) amqp qui est créé sur une session amqp.
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ferme l’expéditeur, de lien du récepteur et de la session sous-jacente.
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.connection
+  name: connection
+  fullName: connection
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Fournit l’objet de connexion amqp sous-jacente.
+  syntax:
+    content: 'connection: Connection'
+    return:
+      type:
+      - azure-event-hubs.Connection
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Crée un lien de demande/réponse amqp.
+  syntax:
+    content: 'static function create(connection: Connection, senderOptions: SenderOptions, receiverOptions: ReceiverOptions)'
+    parameters:
+    - id: connection
+      type:
+      - azure-event-hubs.Connection
+      description: La connexion amqp.
+    - id: senderOptions
+      type:
+      - azure-event-hubs.SenderOptions
+      description: Options qui doivent être fournies pour créer le lien de l’expéditeur.
+    - id: receiverOptions
+      type:
+      - azure-event-hubs.ReceiverOptions
+      description: Options qui doivent être fournies pour créer le lien du récepteur.
+    return:
+      type:
+      - Promise<azure-event-hubs.RequestResponseLink>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.isOpen
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Indique si les liens de la session et l’expéditeur et le récepteur sont tous ouverts ou fermés.
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.receiver
+  name: receiver
+  fullName: receiver
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'receiver: Receiver'
+    return:
+      type:
+      - azure-event-hubs.Receiver
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.constructor
+  name: RequestResponseLink
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new RequestResponseLink(session: Session, sender: Sender, receiver: Receiver)'
+    parameters:
+    - id: session
+      type:
+      - azure-event-hubs.Session
+      description: La session amqp.
+    - id: sender
+      type:
+      - azure-event-hubs.Sender
+      description: Le lien de l’expéditeur amqp.
+    - id: receiver
+      type:
+      - azure-event-hubs.Receiver
+      description: >
+        Le lien du récepteur amqp.
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.sender
+  name: sender
+  fullName: sender
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'sender: Sender'
+    return:
+      type:
+      - azure-event-hubs.Sender
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.sendRequest
+  name: sendRequest
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Envoie le message de demande donné et retourne la réponse reçue. Si l’opération n’est pas terminée dans le délai d’expiration fourni en secondes `default: 10`, puis la demande sera retentée linéaire du nombre de fois fourni `default: 3` avec le délai fourni en secondes `default: 15` entre chaque tentative.'
+  syntax:
+    content: 'function sendRequest<T>(request: Message, options?: SendRequestOptions)'
+    parameters:
+    - id: request
+      type:
+      - Message
+      description: Le message AMQP.
+    - id: options
+      type:
+      - azure-event-hubs.SendRequestOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: azure-event-hubs
+- uid: azure-event-hubs.RequestResponseLink.session
+  name: session
+  fullName: session
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'session: Session'
+    return:
+      type:
+      - azure-event-hubs.Session
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.Session
+  name: Session
+  spec.typeScript:
+  - name: Session
+    fullName: Session
+    uid: azure-event-hubs.Session
+- uid: azure-event-hubs.Sender
+  name: Sender
+  spec.typeScript:
+  - name: Sender
+    fullName: Sender
+    uid: azure-event-hubs.Sender
+- uid: azure-event-hubs.Receiver
+  name: Receiver
+  spec.typeScript:
+  - name: Receiver
+    fullName: Receiver
+    uid: azure-event-hubs.Receiver
+- uid: azure-event-hubs.Connection
+  name: Connection
+  spec.typeScript:
+  - name: Connection
+    fullName: Connection
+    uid: azure-event-hubs.Connection
+- uid: azure-event-hubs.SendRequestOptions
+  name: SendRequestOptions
+  spec.typeScript:
+  - name: SendRequestOptions
+    fullName: SendRequestOptions
+    uid: azure-event-hubs.SendRequestOptions
+- uid: azure-event-hubs.SenderOptions
+  name: SenderOptions
+  spec.typeScript:
+  - name: SenderOptions
+    fullName: SenderOptions
+    uid: azure-event-hubs.SenderOptions
+- uid: azure-event-hubs.ReceiverOptions
+  name: ReceiverOptions
+  spec.typeScript:
+  - name: ReceiverOptions
+    fullName: ReceiverOptions
+    uid: azure-event-hubs.ReceiverOptions
+- uid: Promise<azure-event-hubs.RequestResponseLink>
+  name: RequestResponseLink>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RequestResponseLink
+    fullName: RequestResponseLink
+    uid: azure-event-hubs.RequestResponseLink
+  - name: '>'
+    fullName: '>'
