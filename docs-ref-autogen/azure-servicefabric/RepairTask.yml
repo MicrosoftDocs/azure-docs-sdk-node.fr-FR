@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5777e998a9726c2c811e04d5dc0efbc786c7eacd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141244"
+items:
+- uid: azure-servicefabric.RepairTask
+  name: RepairTask
+  fullName: RepairTask
+  children:
+  - azure-servicefabric.RepairTask.action
+  - azure-servicefabric.RepairTask.description
+  - azure-servicefabric.RepairTask.executor
+  - azure-servicefabric.RepairTask.executorData
+  - azure-servicefabric.RepairTask.flags
+  - azure-servicefabric.RepairTask.history
+  - azure-servicefabric.RepairTask.impact
+  - azure-servicefabric.RepairTask.performPreparingHealthCheck
+  - azure-servicefabric.RepairTask.performRestoringHealthCheck
+  - azure-servicefabric.RepairTask.preparingHealthCheckState
+  - azure-servicefabric.RepairTask.restoringHealthCheckState
+  - azure-servicefabric.RepairTask.resultCode
+  - azure-servicefabric.RepairTask.resultDetails
+  - azure-servicefabric.RepairTask.resultStatus
+  - azure-servicefabric.RepairTask.state
+  - azure-servicefabric.RepairTask.target
+  - azure-servicefabric.RepairTask.taskId
+  - azure-servicefabric.RepairTask.version
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    Représente une tâche de réparation, qui inclut des informations sur le type de réparation a été demandé, la progression et déterminer son résultat final.
+
+    Ce type prend en charge la plateforme Service Fabric ; elle n’est pas destinée à être utilisée directement à partir de votre code.
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.action
+  name: action
+  fullName: action
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’action de réparation demandée. Doit être spécifié lorsque la tâche de réparation est créée, et a la valeur une fois immuable.
+  syntax:
+    content: 'action: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Une description de l’objectif de la tâche de réparation ou d’autres détails d’information.
+
+    Peut être définie lorsque la tâche de réparation est créée et est immuable une fois définie.
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executor
+  name: executor
+  fullName: executor
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom de l’exécuteur de réparations. Doit être spécifié dans demandé et états ultérieurs et est immuable une fois défini.
+  optional: true
+  syntax:
+    content: 'executor?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executorData
+  name: executorData
+  fullName: executorData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Chaîne de données qui l’exécuteur de réparations peut utiliser pour stocker son état interne.
+  optional: true
+  syntax:
+    content: 'executorData?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Une opération de bits OR des valeurs suivantes, ce qui donne des détails supplémentaires sur l’état de la tâche de réparation.
+
+    - 1 - l’annulation de la réparation a été demandée.
+
+    - 2 - Abandon de la réparation a été demandée.
+
+    - 4 - approbation de la réparation a été forcé par le biais de demande du client
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Objet qui contient les horodatages des transitions d’état de la tâche de réparation.
+
+    Ces horodatages sont mises à jour par le système et ne peut pas être modifiées directement.
+  optional: true
+  syntax:
+    content: 'history?: RepairTaskHistory'
+    return:
+      type:
+      - azure-servicefabric.RepairTaskHistory
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.impact
+  name: impact
+  fullName: impact
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L’objet d’impact détermine les actions que le système prend pour vous préparer à l’impact de la réparation, avant d’approuver l’exécution de la réparation.
+
+    Impact doit être spécifié par l’exécuteur de réparations lors de la transition à l’état de préparation, et a la valeur une fois immuable.
+  optional: true
+  syntax:
+    content: 'impact?: RepairImpactDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairImpactDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performPreparingHealthCheck
+  name: performPreparingHealthCheck
+  fullName: performPreparingHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Une valeur pour déterminer si les contrôles d’intégrité seront exécutées lors de la tâche de réparation passe à l’état de préparation.
+  optional: true
+  syntax:
+    content: 'performPreparingHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performRestoringHealthCheck
+  name: performRestoringHealthCheck
+  fullName: performRestoringHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Une valeur pour déterminer si les contrôles d’intégrité seront exécutées lors de la tâche de réparation passe à l’état de restauration.
+  optional: true
+  syntax:
+    content: 'performRestoringHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.preparingHealthCheckState
+  name: preparingHealthCheckState
+  fullName: preparingHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L’état de flux de travail de la vérification d’intégrité lorsque la tâche de réparation est dans l’état de préparation.
+
+    Les valeurs possibles incluent : 'NotStarted', 'En cours », « Réussi », « ignorée », « TimedOut »
+  optional: true
+  syntax:
+    content: 'preparingHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.restoringHealthCheckState
+  name: restoringHealthCheckState
+  fullName: restoringHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L’état de flux de travail de la vérification d’intégrité lorsque la tâche de réparation est en état de restauration.
+
+    Les valeurs possibles incluent : 'NotStarted', 'En cours », « Réussi », « ignorée », « TimedOut »
+  optional: true
+  syntax:
+    content: 'restoringHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultCode
+  name: resultCode
+  fullName: resultCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Une valeur numérique en fournissant des détails supplémentaires sur le résultat de l’exécution de tâches de réparation.
+
+    Peut être spécifié dans la restauration et les États ultérieurs et est immuable une fois défini.
+  optional: true
+  syntax:
+    content: 'resultCode?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultDetails
+  name: resultDetails
+  fullName: resultDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Chaîne fournissant des détails supplémentaires sur le résultat de l’exécution de tâches de réparation.
+
+    Peut être spécifié dans la restauration et les États ultérieurs et est immuable une fois défini.
+  optional: true
+  syntax:
+    content: 'resultDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultStatus
+  name: resultStatus
+  fullName: resultStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Une valeur qui décrit le résultat global de l’exécution de tâches de réparation. Doit être spécifié dans la restauration et les États ultérieurs et est immuable une fois défini. Les valeurs possibles incluent : « Invalid », « réussi », « Annulé », « Interrompue », « Échec », « En attente »'
+  optional: true
+  syntax:
+    content: 'resultStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'L’état de flux de travail de la tâche de réparation. Les états initiaux valides sont créé, demandé et préparation. Les valeurs possibles incluent : « Invalid », « Créé », « demandées », « Préparation », « approuvé », « Exécuter », « Restauration », « Terminée »'
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.target
+  name: target
+  fullName: target
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L’objet cible détermine les actions que le système prend pour vous préparer à l’impact de la réparation, avant d’approuver l’exécution de la réparation.
+
+    Peut être définie lorsque la tâche de réparation est créée et est immuable une fois définie.
+  optional: true
+  syntax:
+    content: 'target?: RepairTargetDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairTargetDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.taskId
+  name: taskId
+  fullName: taskId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID de la tâche de réparation.
+  syntax:
+    content: 'taskId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    La version de la tâche de réparation.
+
+    Lorsque vous créez une nouvelle tâche de réparation, la version doit être définie à zéro.  Lors de la mise à jour une tâche de réparation, la version est utilisée pour les contrôles d’accès concurrentiel optimiste.  Si la version est définie sur zéro, la mise à jour ne vérifie pas les conflits d’écriture.  Si la version est définie sur une valeur différente de zéro, la mise à jour réussit uniquement si la version actuelle réelle de la tâche de réparation correspond à cette valeur.
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RepairTaskHistory
+  name: RepairTaskHistory
+  spec.typeScript:
+  - name: RepairTaskHistory
+    fullName: RepairTaskHistory
+    uid: azure-servicefabric.RepairTaskHistory
+- uid: azure-servicefabric.RepairImpactDescriptionBase
+  name: RepairImpactDescriptionBase
+  spec.typeScript:
+  - name: RepairImpactDescriptionBase
+    fullName: RepairImpactDescriptionBase
+    uid: azure-servicefabric.RepairImpactDescriptionBase
+- uid: azure-servicefabric.RepairTargetDescriptionBase
+  name: RepairTargetDescriptionBase
+  spec.typeScript:
+  - name: RepairTargetDescriptionBase
+    fullName: RepairTargetDescriptionBase
+    uid: azure-servicefabric.RepairTargetDescriptionBase
