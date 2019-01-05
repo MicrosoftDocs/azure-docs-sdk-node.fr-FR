@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5a73d246ef394f9fe7aa94c3a4091f784ab24828
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52093344"
+items:
+- uid: azure-servicefabric.SuccessfulPropertyBatchInfo
+  name: SuccessfulPropertyBatchInfo
+  fullName: SuccessfulPropertyBatchInfo
+  children:
+  - azure-servicefabric.SuccessfulPropertyBatchInfo.properties
+  langs:
+  - typeScript
+  type: interface
+  summary: Dérivé de PropertyBatchInfo. Représente le lot de la propriété qui suit. Contient les résultats de toutes les opérations « Get » dans le lot.
+  extends:
+    name: azure-servicefabric.PropertyBatchInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.SuccessfulPropertyBatchInfo.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un mappage qui contient les propriétés qui ont été demandées par les opérations de traitement par lots de propriété « Get ». La clé représente l’index de l’opération « Get » dans la demande d’origine, sous forme de chaîne. La valeur est la propriété. Si une propriété est introuvable, il ne sera pas dans le mappage.
+  optional: true
+  syntax:
+    content: 'properties?: [key: string]: PropertyInfo'
+    return:
+      type:
+      - '[key: string]: azure-servicefabric.PropertyInfo'
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.PropertyBatchInfo
+  name: PropertyBatchInfo
+  spec.typeScript:
+  - name: PropertyBatchInfo
+    fullName: PropertyBatchInfo
+    uid: azure-servicefabric.PropertyBatchInfo
+- uid: '[key: string]: azure-servicefabric.PropertyInfo'
+  name: PropertyInfo
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: PropertyInfo
+    fullName: PropertyInfo
+    uid: azure-servicefabric.PropertyInfo

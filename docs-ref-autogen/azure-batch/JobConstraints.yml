@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 87bc4cfb3b8e0175a58f47841351bf089100a9d2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674423"
+items:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  fullName: JobConstraints
+  children:
+  - azure-batch.JobConstraints.maxTaskRetryCount
+  - azure-batch.JobConstraints.maxWallClockTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives. Le service Batch va tenter de chaque tâche qu’une seule fois et peut réessayer jusqu'à cette limite. Par exemple, si le nombre maximal de nouvelles tentatives est 3, le service Batch peut tenter d’exécuter la tâche jusqu’à 4 fois (tentative initiale + 3 tentatives supplémentaires). Si le nombre maximal de tentatives est 0, le service Batch ne réessaye pas d’exécuter des tâches. Si le nombre maximal de nouvelles tentatives est -1, le service Batch réessaie d’exécuter les tâches sans limite. La valeur par défaut est 0 (aucune nouvelle tentative).
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobConstraints.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si la tâche ne se termine pas dans le délai imparti, le service Batch met fin à elle et toutes les tâches qui sont en cours d’exécution. Dans ce cas, la raison d’arrêt sera MaxWallClockTimeExpiry. Si cette propriété n’est pas spécifiée, il n’existe aucune limite de temps sur la durée pendant laquelle il peut s’exécuter.
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch

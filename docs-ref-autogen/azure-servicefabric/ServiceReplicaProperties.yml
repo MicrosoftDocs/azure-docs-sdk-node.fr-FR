@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 862d7c7a1a967ad5eff0a9668ea845ee846dc920
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53663679"
+items:
+- uid: azure-servicefabric.ServiceReplicaProperties
+  name: ServiceReplicaProperties
+  fullName: ServiceReplicaProperties
+  children:
+  - azure-servicefabric.ServiceReplicaProperties.codePackages
+  - azure-servicefabric.ServiceReplicaProperties.diagnostics
+  - azure-servicefabric.ServiceReplicaProperties.networkRefs
+  - azure-servicefabric.ServiceReplicaProperties.osType
+  langs:
+  - typeScript
+  type: interface
+  summary: Décrit les propriétés d’un réplica de service.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.codePackages
+  name: codePackages
+  fullName: codePackages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Décrit l’ensemble des packages de code qui constitue le service. Un package de code décrit le conteneur et les propriétés de son exécution. Tous les packages de code sont démarrés ensemble sur le même hôte et partagent le même contexte (réseau, processus, etc.).
+  syntax:
+    content: 'codePackages: ContainerCodePackageProperties[]'
+    return:
+      type:
+      - azure-servicefabric.ContainerCodePackageProperties[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.diagnostics
+  name: diagnostics
+  fullName: diagnostics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Référence à des récepteurs dans DiagnosticsDescription.
+  optional: true
+  syntax:
+    content: 'diagnostics?: DiagnosticsRef'
+    return:
+      type:
+      - azure-servicefabric.DiagnosticsRef
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.networkRefs
+  name: networkRefs
+  fullName: networkRefs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Les noms des réseaux privés ce service doit faire partie de.
+  optional: true
+  syntax:
+    content: 'networkRefs?: NetworkRef[]'
+    return:
+      type:
+      - azure-servicefabric.NetworkRef[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceReplicaProperties.osType
+  name: osType
+  fullName: osType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Le système d’exploitation requis par le code de service. Les valeurs possibles incluent : « Linux », « Windows »'
+  syntax:
+    content: 'osType: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ContainerCodePackageProperties[]
+  name: ContainerCodePackageProperties[]
+  spec.typeScript:
+  - name: ContainerCodePackageProperties
+    fullName: ContainerCodePackageProperties
+    uid: azure-servicefabric.ContainerCodePackageProperties
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.DiagnosticsRef
+  name: DiagnosticsRef
+  spec.typeScript:
+  - name: DiagnosticsRef
+    fullName: DiagnosticsRef
+    uid: azure-servicefabric.DiagnosticsRef
+- uid: azure-servicefabric.NetworkRef[]
+  name: NetworkRef[]
+  spec.typeScript:
+  - name: NetworkRef
+    fullName: NetworkRef
+    uid: azure-servicefabric.NetworkRef
+  - name: '[]'
+    fullName: '[]'
