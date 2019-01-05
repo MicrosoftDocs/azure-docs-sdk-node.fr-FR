@@ -1,0 +1,502 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2452e180c53b440a1d326d85a185da30da71c435
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52155699"
+items:
+- uid: azure-asm-subscription.Subscriptions
+  id: azure-asm-subscription.Subscriptions
+  name: Subscriptions
+  summary: <span data-ttu-id="6ffc2-101">Classe représentant un abonnement.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-101">Class representing a Subscriptions.</span></span>
+  fullName: azure-asm-subscription.Subscriptions
+  type: Class
+  children:
+  - azure-asm-subscription.Subscriptions.#ctor
+  - azure-asm-subscription.Subscriptions#listLocationsWithHttpOperationResponse
+  - azure-asm-subscription.Subscriptions#listLocations
+  - azure-asm-subscription.Subscriptions#getWithHttpOperationResponse
+  - azure-asm-subscription.Subscriptions#get
+  - azure-asm-subscription.Subscriptions#listWithHttpOperationResponse
+  - azure-asm-subscription.Subscriptions#list
+  - azure-asm-subscription.Subscriptions#listNextWithHttpOperationResponse
+  - azure-asm-subscription.Subscriptions#listNext
+  langs:
+  - js
+- id: azure-asm-subscription.Subscriptions.#ctor
+  uid: azure-asm-subscription.Subscriptions.#ctor
+  parent: azure-asm-subscription.Subscriptions
+  name: Subscriptions(client)
+  fullName: azure-asm-subscription.Subscriptions.Subscriptions(client)
+  summary: <span data-ttu-id="6ffc2-102">Créer un abonnement.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-102">Create a Subscriptions.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSubscriptionClient
+      description: <span data-ttu-id="6ffc2-103">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-103">Reference to the service client.</span></span>
+    content: new Subscriptions(client)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#listLocationsWithHttpOperationResponse
+  id: azure-asm-subscription.Subscriptions#listLocationsWithHttpOperationResponse
+  parent: azure-asm-subscription.Subscriptions
+  name: listLocationsWithHttpOperationResponse(subscriptionId, options)
+  summary: >-
+    <span data-ttu-id="6ffc2-104">Obtient tous les emplacements de zones géographiques disponibles.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-104">Gets all available geo-locations.</span></span>
+
+
+    <span data-ttu-id="6ffc2-105">Cette opération fournit tous les emplacements qui sont disponibles pour les fournisseurs de ressources ; Toutefois, chaque fournisseur de ressources peut prendre en charge un sous-ensemble de cette liste.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-105">This operation provides all the locations that are available for resource providers; however, each resource provider may support a subset of this list.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.listLocationsWithHttpOperationResponse(subscriptionId, options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<LocationListResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<LocationListResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: subscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-106">ID de l’abonnement cible.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-106">The ID of the target subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-107">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-107">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-108">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-108">Headers that will be added to the request</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="6ffc2-109">Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-109">A promise is returned</span></span>
+    content: function listLocationsWithHttpOperationResponse(subscriptionId, options)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#listLocations
+  id: azure-asm-subscription.Subscriptions#listLocations
+  parent: azure-asm-subscription.Subscriptions
+  name: listLocations(subscriptionId, options, optionalCallback)
+  summary: >-
+    <span data-ttu-id="6ffc2-110">Obtient tous les emplacements de zones géographiques disponibles.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-110">Gets all available geo-locations.</span></span>
+
+
+    <span data-ttu-id="6ffc2-111">Cette opération fournit tous les emplacements qui sont disponibles pour les fournisseurs de ressources ; Toutefois, chaque fournisseur de ressources peut prendre en charge un sous-ensemble de cette liste.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-111">This operation provides all the locations that are available for resource providers; however, each resource provider may support a subset of this list.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.listLocations(subscriptionId, options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{LocationListResult} - The deserialized result object.'
+    value: '{LocationListResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link LocationListResult} for more information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link LocationListResult} for more information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: subscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-112">ID de l’abonnement cible.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-112">The ID of the target subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-113">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-113">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-114">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-114">Headers that will be added to the request</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="6ffc2-115">Rappel facultatif.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-115">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="6ffc2-116">Si un rappel a été passé comme dernier paramètre il retourne ensuite que le rappel autre retourne une promesse.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-116">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+
+        <span data-ttu-id="6ffc2-117">{Promesse} Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-117">{Promise} A promise is returned</span></span>
+    content: function listLocations(subscriptionId, options, optionalCallback)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#getWithHttpOperationResponse
+  id: azure-asm-subscription.Subscriptions#getWithHttpOperationResponse
+  parent: azure-asm-subscription.Subscriptions
+  name: getWithHttpOperationResponse(subscriptionId, options)
+  summary: <span data-ttu-id="6ffc2-118">Obtient les détails relatifs à un abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-118">Gets details about a specified subscription.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.getWithHttpOperationResponse(subscriptionId, options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<Subscription>} - The deserialized result object.'
+    value: '{HttpOperationResponse<Subscription>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: subscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-119">ID de l’abonnement cible.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-119">The ID of the target subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-120">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-120">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-121">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-121">Headers that will be added to the request</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="6ffc2-122">Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-122">A promise is returned</span></span>
+    content: function getWithHttpOperationResponse(subscriptionId, options)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#get
+  id: azure-asm-subscription.Subscriptions#get
+  parent: azure-asm-subscription.Subscriptions
+  name: get(subscriptionId, options, optionalCallback)
+  summary: <span data-ttu-id="6ffc2-123">Obtient les détails relatifs à un abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-123">Gets details about a specified subscription.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.get(subscriptionId, options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{Subscription} - The deserialized result object.'
+    value: '{Subscription} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link Subscription} for more information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link Subscription} for more information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: subscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-124">ID de l’abonnement cible.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-124">The ID of the target subscription.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-125">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-125">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-126">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-126">Headers that will be added to the request</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="6ffc2-127">Rappel facultatif.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-127">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="6ffc2-128">Si un rappel a été passé comme dernier paramètre il retourne ensuite que le rappel autre retourne une promesse.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-128">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+
+        <span data-ttu-id="6ffc2-129">{Promesse} Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-129">{Promise} A promise is returned</span></span>
+    content: function get(subscriptionId, options, optionalCallback)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#listWithHttpOperationResponse
+  id: azure-asm-subscription.Subscriptions#listWithHttpOperationResponse
+  parent: azure-asm-subscription.Subscriptions
+  name: listWithHttpOperationResponse(options)
+  summary: <span data-ttu-id="6ffc2-130">Obtient tous les abonnements pour un client.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-130">Gets all subscriptions for a tenant.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.listWithHttpOperationResponse(options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<SubscriptionListResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<SubscriptionListResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-131">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-131">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-132">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-132">Headers that will be added to the request</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="6ffc2-133">Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-133">A promise is returned</span></span>
+    content: function listWithHttpOperationResponse(options)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#list
+  id: azure-asm-subscription.Subscriptions#list
+  parent: azure-asm-subscription.Subscriptions
+  name: list(options, optionalCallback)
+  summary: <span data-ttu-id="6ffc2-134">Obtient tous les abonnements pour un client.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-134">Gets all subscriptions for a tenant.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.list(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{SubscriptionListResult} - The deserialized result object.'
+    value: '{SubscriptionListResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-135">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-135">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-136">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-136">Headers that will be added to the request</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="6ffc2-137">Rappel facultatif.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-137">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="6ffc2-138">Si un rappel a été passé comme dernier paramètre il retourne ensuite que le rappel autre retourne une promesse.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-138">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+
+        <span data-ttu-id="6ffc2-139">{Promesse} Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-139">{Promise} A promise is returned</span></span>
+    content: function list(options, optionalCallback)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#listNextWithHttpOperationResponse
+  id: azure-asm-subscription.Subscriptions#listNextWithHttpOperationResponse
+  parent: azure-asm-subscription.Subscriptions
+  name: listNextWithHttpOperationResponse(nextPageLink, options)
+  summary: <span data-ttu-id="6ffc2-140">Obtient tous les abonnements pour un client.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-140">Gets all subscriptions for a tenant.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.listNextWithHttpOperationResponse(nextPageLink, options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<SubscriptionListResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<SubscriptionListResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-141">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-141">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-142">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-142">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-143">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-143">Headers that will be added to the request</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="6ffc2-144">Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-144">A promise is returned</span></span>
+    content: function listNextWithHttpOperationResponse(nextPageLink, options)
+  langs:
+  - js
+- uid: azure-asm-subscription.Subscriptions#listNext
+  id: azure-asm-subscription.Subscriptions#listNext
+  parent: azure-asm-subscription.Subscriptions
+  name: listNext(nextPageLink, options, optionalCallback)
+  summary: <span data-ttu-id="6ffc2-145">Obtient tous les abonnements pour un client.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-145">Gets all subscriptions for a tenant.</span></span>
+  fullName: azure-asm-subscription.Subscriptions.listNext(nextPageLink, options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{SubscriptionListResult} - The deserialized result object.'
+    value: '{SubscriptionListResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionListResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: <span data-ttu-id="6ffc2-146">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-146">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-147">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-147">Optional Parameters.</span></span>
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: <span data-ttu-id="6ffc2-148">En-têtes qui seront ajoutés à la demande</span><span class="sxs-lookup"><span data-stu-id="6ffc2-148">Headers that will be added to the request</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="6ffc2-149">Rappel facultatif.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-149">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="6ffc2-150">Si un rappel a été passé comme dernier paramètre il retourne ensuite que le rappel autre retourne une promesse.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-150">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+
+        <span data-ttu-id="6ffc2-151">{Promesse} Une promesse est retournée.</span><span class="sxs-lookup"><span data-stu-id="6ffc2-151">{Promise} A promise is returned</span></span>
+    content: function listNext(nextPageLink, options, optionalCallback)
+  langs:
+  - js

@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b9ab8362ba4c557e4f136e919989ab86770e3bff
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661193"
+items:
+- uid: azure-batch.AutoPoolSpecification
+  name: AutoPoolSpecification
+  fullName: AutoPoolSpecification
+  children:
+  - azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+  - azure-batch.AutoPoolSpecification.keepAlive
+  - azure-batch.AutoPoolSpecification.pool
+  - azure-batch.AutoPoolSpecification.poolLifetimeOption
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+  name: autoPoolIdPrefix
+  fullName: autoPoolIdPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79bea-101">Le service Batch assigne chaque pool automatique un identificateur unique lors de la création.</span><span class="sxs-lookup"><span data-stu-id="79bea-101">The Batch service assigns each auto pool a unique identifier on creation.</span></span> <span data-ttu-id="79bea-102">Pour faire la distinction entre les pools créés à des fins différentes, vous pouvez spécifier cet élément pour ajouter un préfixe à l’ID qui est assigné.</span><span class="sxs-lookup"><span data-stu-id="79bea-102">To distinguish between pools created for different purposes, you can specify this element to add a prefix to the ID that is assigned.</span></span> <span data-ttu-id="79bea-103">Le préfixe peut comporter jusqu'à 20 caractères.</span><span class="sxs-lookup"><span data-stu-id="79bea-103">The prefix can be up to 20 characters long.</span></span>
+  optional: true
+  syntax:
+    content: 'autoPoolIdPrefix?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.AutoPoolSpecification.keepAlive
+  name: keepAlive
+  fullName: keepAlive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="79bea-104">Si la valeur est false, le service Batch supprime le pool une fois que l’expiration de sa durée de vie (tel que déterminé par la valeur de poolLifetimeOption) ; Autrement dit, lorsque le travail ou un travail de planification est terminée.</span><span class="sxs-lookup"><span data-stu-id="79bea-104">If false, the Batch service deletes the pool once its lifetime (as determined by the poolLifetimeOption setting) expires; that is, when the job or job schedule completes.</span></span> <span data-ttu-id="79bea-105">Si la valeur est true, le service Batch ne supprime pas automatiquement le pool.</span><span class="sxs-lookup"><span data-stu-id="79bea-105">If true, the Batch service does not delete the pool automatically.</span></span> <span data-ttu-id="79bea-106">C’est à l’utilisateur à supprimer les pools automatiquement créés avec cette option.</span><span class="sxs-lookup"><span data-stu-id="79bea-106">It is up to the user to delete auto pools created with this option.</span></span>
+  optional: true
+  syntax:
+    content: 'keepAlive?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.AutoPoolSpecification.pool
+  name: pool
+  fullName: pool
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'pool?: PoolSpecification'
+    return:
+      type:
+      - azure-batch.PoolSpecification
+  package: azure-batch
+- uid: azure-batch.AutoPoolSpecification.poolLifetimeOption
+  name: poolLifetimeOption
+  fullName: poolLifetimeOption
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"79bea-107\">Les valeurs possibles sont : « jobSchedule », « travail »</span><span class=\"sxs-lookup\"><span data-stu-id=\"79bea-107\">Possible values include: 'jobSchedule', 'job'</span></span>"
+  syntax:
+    content: 'poolLifetimeOption: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.PoolSpecification
+  name: PoolSpecification
+  spec.typeScript:
+  - name: PoolSpecification
+    fullName: PoolSpecification
+    uid: azure-batch.PoolSpecification
