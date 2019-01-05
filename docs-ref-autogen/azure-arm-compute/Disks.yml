@@ -1,0 +1,1958 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4c56db4d8d55793b5fdeec1aa055c26423b78250
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52048705"
+items:
+- uid: azure-arm-compute.Disks
+  name: Disks
+  fullName: Disks
+  children:
+  - azure-arm-compute.Disks.beginCreateOrUpdate
+  - azure-arm-compute.Disks.beginCreateOrUpdate_2
+  - azure-arm-compute.Disks.beginCreateOrUpdate_1
+  - azure-arm-compute.Disks.beginCreateOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginDeleteMethod
+  - azure-arm-compute.Disks.beginDeleteMethod_2
+  - azure-arm-compute.Disks.beginDeleteMethod_1
+  - azure-arm-compute.Disks.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginGrantAccess
+  - azure-arm-compute.Disks.beginGrantAccess_2
+  - azure-arm-compute.Disks.beginGrantAccess_1
+  - azure-arm-compute.Disks.beginGrantAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginRevokeAccess
+  - azure-arm-compute.Disks.beginRevokeAccess_2
+  - azure-arm-compute.Disks.beginRevokeAccess_1
+  - azure-arm-compute.Disks.beginRevokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.beginUpdate
+  - azure-arm-compute.Disks.beginUpdate_2
+  - azure-arm-compute.Disks.beginUpdate_1
+  - azure-arm-compute.Disks.beginUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.createOrUpdate
+  - azure-arm-compute.Disks.createOrUpdate_2
+  - azure-arm-compute.Disks.createOrUpdate_1
+  - azure-arm-compute.Disks.createOrUpdateWithHttpOperationResponse
+  - azure-arm-compute.Disks.deleteMethod
+  - azure-arm-compute.Disks.deleteMethod_2
+  - azure-arm-compute.Disks.deleteMethod_1
+  - azure-arm-compute.Disks.deleteMethodWithHttpOperationResponse
+  - azure-arm-compute.Disks.get
+  - azure-arm-compute.Disks.get_2
+  - azure-arm-compute.Disks.get_1
+  - azure-arm-compute.Disks.getWithHttpOperationResponse
+  - azure-arm-compute.Disks.grantAccess
+  - azure-arm-compute.Disks.grantAccess_2
+  - azure-arm-compute.Disks.grantAccess_1
+  - azure-arm-compute.Disks.grantAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.list
+  - azure-arm-compute.Disks.list_2
+  - azure-arm-compute.Disks.list_1
+  - azure-arm-compute.Disks.listByResourceGroup
+  - azure-arm-compute.Disks.listByResourceGroup_2
+  - azure-arm-compute.Disks.listByResourceGroup_1
+  - azure-arm-compute.Disks.listByResourceGroupNext
+  - azure-arm-compute.Disks.listByResourceGroupNext_2
+  - azure-arm-compute.Disks.listByResourceGroupNext_1
+  - azure-arm-compute.Disks.listByResourceGroupNextWithHttpOperationResponse
+  - azure-arm-compute.Disks.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-compute.Disks.listNext
+  - azure-arm-compute.Disks.listNext_2
+  - azure-arm-compute.Disks.listNext_1
+  - azure-arm-compute.Disks.listNextWithHttpOperationResponse
+  - azure-arm-compute.Disks.listWithHttpOperationResponse
+  - azure-arm-compute.Disks.revokeAccess
+  - azure-arm-compute.Disks.revokeAccess_2
+  - azure-arm-compute.Disks.revokeAccess_1
+  - azure-arm-compute.Disks.revokeAccessWithHttpOperationResponse
+  - azure-arm-compute.Disks.update
+  - azure-arm-compute.Disks.update_2
+  - azure-arm-compute.Disks.update_1
+  - azure-arm-compute.Disks.updateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-101">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-101">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-102">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-102">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-103">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-103">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-104">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-104">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-105">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-105">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-106">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-106">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="945e6-107">Objet de disque fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="945e6-107">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate_2
+  name: beginCreateOrUpdate(string, string, Disk, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-108">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-108">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate(string, string, Disk, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-109">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-109">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-110">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-110">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-111">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-111">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-112">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-112">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-113">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-113">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-114">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-114">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-115">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-115">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="945e6-116">Objet de disque fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="945e6-116">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-117">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-117">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-118">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-118">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-119">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-119">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-120">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-120">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-121">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-121">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-122">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-122">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod_2
+  name: beginDeleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-123">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-123">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-124">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-124">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-125">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-125">Deletes a disk.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-126">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-126">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-127">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-127">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-128">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-128">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-129">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-129">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-130">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-130">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess
+  name: beginGrantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-131">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-131">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-132">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-132">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-133">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-133">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-134">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-134">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-135">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-135">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-136">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-136">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="945e6-137">Objet de données d’accès fourni dans le corps de l’opération get d’accès disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-137">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess_2
+  name: beginGrantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-138">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-138">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccess_1
+  name: beginGrantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-139">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-139">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginGrantAccessWithHttpOperationResponse
+  name: beginGrantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-140">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-140">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function beginGrantAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-141">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-141">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-142">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-142">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-143">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-143">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-144">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-144">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-145">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-145">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="945e6-146">Objet de données d’accès fourni dans le corps de l’opération get d’accès disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-146">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess
+  name: beginRevokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-147">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-147">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-148">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-148">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-149">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-149">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-150">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-150">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-151">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-151">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-152">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-152">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess_2
+  name: beginRevokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-153">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-153">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccess_1
+  name: beginRevokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-154">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-154">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccess(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginRevokeAccessWithHttpOperationResponse
+  name: beginRevokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-155">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-155">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function beginRevokeAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-156">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-156">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-157">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-157">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-158">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-158">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-159">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-159">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-160">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-160">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate
+  name: beginUpdate(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-161">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-161">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-162">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-162">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-163">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-163">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-164">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-164">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-165">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-165">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-166">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-166">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="945e6-167">Objet de disque fourni dans le corps de l’opération de disque Patch.</span><span class="sxs-lookup"><span data-stu-id="945e6-167">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate_2
+  name: beginUpdate(string, string, DiskUpdate, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-168">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-168">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdate_1
+  name: beginUpdate(string, string, DiskUpdate, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-169">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-169">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdate(resourceGroupName: string, diskName: string, disk: DiskUpdate, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-170">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-170">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-171">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-171">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-172">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-172">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-173">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-173">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-174">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-174">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-175">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-175">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="945e6-176">Objet de disque fourni dans le corps de l’opération de disque Patch.</span><span class="sxs-lookup"><span data-stu-id="945e6-176">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate
+  name: createOrUpdate(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-177">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-177">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-178">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-178">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-179">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-179">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-180">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-180">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-181">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-181">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-182">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-182">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="945e6-183">Objet de disque fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="945e6-183">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate_2
+  name: createOrUpdate(string, string, Disk, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-184">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-184">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdate_1
+  name: createOrUpdate(string, string, Disk, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-185">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-185">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, diskName: string, disk: Disk, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, Disk, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-186">Crée ou met à jour un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-186">Creates or updates a disk.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: Disk, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-187">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-187">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-188">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-188">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-189">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-189">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-190">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-190">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-191">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-191">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.Disk
+      description: >
+        <span data-ttu-id="945e6-192">Objet de disque fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="945e6-192">Disk object supplied in the body of the Put disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod
+  name: deleteMethod(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-193">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-193">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-194">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-194">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-195">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-195">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-196">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-196">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-197">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-197">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-198">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-198">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod_2
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-199">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-199">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-200">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-200">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-201">Supprime un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-201">Deletes a disk.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-202">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-202">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-203">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-203">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-204">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-204">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-205">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-205">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-206">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-206">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get
+  name: get(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-207">Obtient des informations sur un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-207">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-208">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-208">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-209">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-209">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-210">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-210">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-211">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-212">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-212">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get_2
+  name: get(string, string, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-213">Obtient des informations sur un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-213">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.get_1
+  name: get(string, string, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-214">Obtient des informations sur un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-214">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, diskName: string, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-215">Obtient des informations sur un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-215">Gets information about a disk.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-216">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-216">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-217">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-217">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-218">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-218">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-219">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-219">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-220">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-220">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess
+  name: grantAccess(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-221">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-221">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-222">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-222">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-223">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-223">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-224">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-224">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-225">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-225">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-226">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-226">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="945e6-227">Objet de données d’accès fourni dans le corps de l’opération get d’accès disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-227">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess_2
+  name: grantAccess(string, string, GrantAccessData, Object, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-228">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-228">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options: Object, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccess_1
+  name: grantAccess(string, string, GrantAccessData, ServiceCallback<AccessUri>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-229">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-229">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccess(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, callback: ServiceCallback<AccessUri>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.AccessUri>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.AccessUri>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.grantAccessWithHttpOperationResponse
+  name: grantAccessWithHttpOperationResponse(string, string, GrantAccessData, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-230">Octroie l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-230">Grants access to a disk.</span></span>
+  syntax:
+    content: 'function grantAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, grantAccessData: GrantAccessData, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-231">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-231">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-232">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-232">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-233">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-233">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-234">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-234">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-235">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-235">The maximum name length is 80 characters.</span></span>
+    - id: grantAccessData
+      type:
+      - azure-arm-compute.GrantAccessData
+      description: >
+        <span data-ttu-id="945e6-236">Objet de données d’accès fourni dans le corps de l’opération get d’accès disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-236">Access data object supplied in the body of the get disk access operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list
+  name: list(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-237">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-237">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list_2
+  name: list(Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-238">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-238">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.list_1
+  name: list(ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-239">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-239">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function list(callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup
+  name: listByResourceGroup(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-240">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-240">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-241">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-241">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup_2
+  name: listByResourceGroup(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-242">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-242">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-243">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-243">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-244">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-244">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-245">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="945e6-245">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext_2
+  name: listByResourceGroupNext(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-246">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-246">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNext_1
+  name: listByResourceGroupNext(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-247">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-247">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-248">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-248">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-249">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="945e6-249">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-250">Répertorie tous les disques sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-250">Lists all the disks under a resource group.</span></span>
+  syntax:
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-251">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-251">The name of the resource group.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-252">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-252">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-253">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="945e6-253">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext_2
+  name: listNext(string, Object, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-254">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-254">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNext_1
+  name: listNext(string, ServiceCallback<DiskList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-255">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-255">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DiskList>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.DiskList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.DiskList>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-256">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-256">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-257">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="945e6-257">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-258">Répertorie tous les disques sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="945e6-258">Lists all the disks under a subscription.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess
+  name: revokeAccess(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-259">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-259">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-260">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-260">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-261">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-261">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-262">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-262">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-263">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-263">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-264">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-264">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess_2
+  name: revokeAccess(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-265">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-265">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccess_1
+  name: revokeAccess(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-266">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-266">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccess(resourceGroupName: string, diskName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.revokeAccessWithHttpOperationResponse
+  name: revokeAccessWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-267">Révoque l’accès à un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-267">Revokes access to a disk.</span></span>
+  syntax:
+    content: 'function revokeAccessWithHttpOperationResponse(resourceGroupName: string, diskName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-268">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-268">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-269">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-269">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-270">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-270">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-271">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-271">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-272">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-272">The maximum name length is 80 characters.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update
+  name: update(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-273">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-273">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-274">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-274">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-275">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-275">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-276">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-276">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-277">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-277">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-278">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-278">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="945e6-279">Objet de disque fourni dans le corps de l’opération de disque Patch.</span><span class="sxs-lookup"><span data-stu-id="945e6-279">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update_2
+  name: update(string, string, DiskUpdate, Object, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-280">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-280">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, options: Object, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.update_1
+  name: update(string, string, DiskUpdate, ServiceCallback<Disk>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-281">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-281">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function update(resourceGroupName: string, diskName: string, disk: DiskUpdate, callback: ServiceCallback<Disk>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: diskName
+      type:
+      - string
+      description: ''
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.Disk>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.Disk>
+  package: azure-arm-compute
+- uid: azure-arm-compute.Disks.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, DiskUpdate, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="945e6-282">Mises à jour (correctifs) un disque.</span><span class="sxs-lookup"><span data-stu-id="945e6-282">Updates (patches) a disk.</span></span>
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, diskName: string, disk: DiskUpdate, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-283">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="945e6-283">The name of the resource group.</span></span>
+    - id: diskName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="945e6-284">Le nom du disque géré qui est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="945e6-284">The name of the managed disk that is being created.</span></span>
+
+        <span data-ttu-id="945e6-285">Le nom ne peut pas être modifié une fois que le disque est créé.</span><span class="sxs-lookup"><span data-stu-id="945e6-285">The name can't be changed after the disk is created.</span></span> <span data-ttu-id="945e6-286">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="945e6-286">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="945e6-287">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="945e6-287">The maximum name length is 80 characters.</span></span>
+    - id: disk
+      type:
+      - azure-arm-compute.DiskUpdate
+      description: >
+        <span data-ttu-id="945e6-288">Objet de disque fourni dans le corps de l’opération de disque Patch.</span><span class="sxs-lookup"><span data-stu-id="945e6-288">Disk object supplied in the body of the Patch disk operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  package: azure-arm-compute
+references:
+- uid: azure-arm-compute.Disk
+  name: Disk
+  spec.typeScript:
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+- uid: Promise<azure-arm-compute.Disk>
+  name: Disk>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.Disk>
+  name: Disk>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.Disk>>
+  name: Disk>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Disk
+    fullName: Disk
+    uid: azure-arm-compute.Disk
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.GrantAccessData
+  name: GrantAccessData
+  spec.typeScript:
+  - name: GrantAccessData
+    fullName: GrantAccessData
+    uid: azure-arm-compute.GrantAccessData
+- uid: Promise<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.AccessUri>
+  name: AccessUri>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.AccessUri>>
+  name: AccessUri>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: AccessUri
+    fullName: AccessUri
+    uid: azure-arm-compute.AccessUri
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-compute.DiskUpdate
+  name: DiskUpdate
+  spec.typeScript:
+  - name: DiskUpdate
+    fullName: DiskUpdate
+    uid: azure-arm-compute.DiskUpdate
+- uid: Promise<azure-arm-compute.DiskList>
+  name: DiskList>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-compute.DiskList>
+  name: DiskList>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-compute.DiskList>>
+  name: DiskList>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: DiskList
+    fullName: DiskList
+    uid: azure-arm-compute.DiskList
+  - name: '>>'
+    fullName: '>>'

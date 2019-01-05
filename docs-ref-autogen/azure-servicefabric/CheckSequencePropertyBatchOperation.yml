@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d2b4e748847bdcb3770c8d26bab077e8dd9ac806
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083864"
+items:
+- uid: azure-servicefabric.CheckSequencePropertyBatchOperation
+  name: CheckSequencePropertyBatchOperation
+  fullName: CheckSequencePropertyBatchOperation
+  children:
+  - azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="2941b-101">Compare le numéro de séquence d’une propriété avec l’argument numéro de séquence.</span><span class="sxs-lookup"><span data-stu-id="2941b-101">Compares the Sequence Number of a property with the SequenceNumber argument.</span></span>
+
+    <span data-ttu-id="2941b-102">Numéro de séquence d’une propriété peut être considéré comme la version de la propriété en question.</span><span class="sxs-lookup"><span data-stu-id="2941b-102">A property's sequence number can be thought of as that property's version.</span></span>
+
+    <span data-ttu-id="2941b-103">Chaque fois que cette propriété est modifiée, son numéro de séquence est augmentée.</span><span class="sxs-lookup"><span data-stu-id="2941b-103">Every time the property is modified, its sequence number is increased.</span></span>
+
+    <span data-ttu-id="2941b-104">Vous trouverez le numéro de séquence dans les métadonnées d’une propriété.</span><span class="sxs-lookup"><span data-stu-id="2941b-104">The sequence number can be found in a property's metadata.</span></span>
+
+    <span data-ttu-id="2941b-105">La comparaison échoue si les numéros de séquence ne sont pas égaux.</span><span class="sxs-lookup"><span data-stu-id="2941b-105">The comparison fails if the sequence numbers are not equal.</span></span>
+
+    <span data-ttu-id="2941b-106">CheckSequencePropertyBatchOperation est généralement utilisée comme une condition préalable pour les opérations d’écriture dans le lot.</span><span class="sxs-lookup"><span data-stu-id="2941b-106">CheckSequencePropertyBatchOperation is generally used as a precondition for the write operations in the batch.</span></span>
+
+    <span data-ttu-id="2941b-107">Notez que si un PropertyBatchOperation dans un PropertyBatch échoue, l’ensemble du lot échoue et ne peut pas être validé de manière transactionnelle.</span><span class="sxs-lookup"><span data-stu-id="2941b-107">Note that if one PropertyBatchOperation in a PropertyBatch fails, the entire batch fails and cannot be committed in a transactional manner.</span></span>
+  extends:
+    name: azure-servicefabric.PropertyBatchOperation
+  package: azure-servicefabric
+- uid: azure-servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2941b-108">Le numéro de séquence attendu.</span><span class="sxs-lookup"><span data-stu-id="2941b-108">The expected sequence number.</span></span>
+  syntax:
+    content: 'sequenceNumber: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.PropertyBatchOperation
+  name: PropertyBatchOperation
+  spec.typeScript:
+  - name: PropertyBatchOperation
+    fullName: PropertyBatchOperation
+    uid: azure-servicefabric.PropertyBatchOperation
