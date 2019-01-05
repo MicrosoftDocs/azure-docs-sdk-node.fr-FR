@@ -1,0 +1,318 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 03759da9e8d767d0d8971b01fde29555842a4fad
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52107604"
+items:
+- uid: azure-servicefabric.NodeInfo
+  name: NodeInfo
+  fullName: NodeInfo
+  children:
+  - azure-servicefabric.NodeInfo.codeVersion
+  - azure-servicefabric.NodeInfo.configVersion
+  - azure-servicefabric.NodeInfo.faultDomain
+  - azure-servicefabric.NodeInfo.healthState
+  - azure-servicefabric.NodeInfo.id
+  - azure-servicefabric.NodeInfo.instanceId
+  - azure-servicefabric.NodeInfo.ipAddressOrFQDN
+  - azure-servicefabric.NodeInfo.isSeedNode
+  - azure-servicefabric.NodeInfo.isStopped
+  - azure-servicefabric.NodeInfo.name
+  - azure-servicefabric.NodeInfo.nodeDeactivationInfo
+  - azure-servicefabric.NodeInfo.nodeDownAt
+  - azure-servicefabric.NodeInfo.nodeDownTimeInSeconds
+  - azure-servicefabric.NodeInfo.nodeStatus
+  - azure-servicefabric.NodeInfo.nodeUpAt
+  - azure-servicefabric.NodeInfo.nodeUpTimeInSeconds
+  - azure-servicefabric.NodeInfo.type
+  - azure-servicefabric.NodeInfo.upgradeDomain
+  langs:
+  - typeScript
+  type: interface
+  summary: Informations sur un nœud de cluster Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.codeVersion
+  name: codeVersion
+  fullName: codeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La version des fichiers binaires de Service Fabric que le nœud est en cours d’exécution.
+  optional: true
+  syntax:
+    content: 'codeVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.configVersion
+  name: configVersion
+  fullName: configVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La version du manifeste de cluster Service Fabric que le nœud est à l’aide de.
+  optional: true
+  syntax:
+    content: 'configVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.faultDomain
+  name: faultDomain
+  fullName: faultDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le domaine d’erreur du nœud.
+  optional: true
+  syntax:
+    content: 'faultDomain?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent : « Invalid », « Ok », « Avertissement », « Error », « Inconnu »'
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID interne utilisé par Service Fabric pour identifier de façon unique un nœud. Id de nœud est généré de façon déterministe à partir du nom de nœud.
+  optional: true
+  syntax:
+    content: 'id?: NodeId'
+    return:
+      type:
+      - azure-servicefabric.NodeId
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID représentant l’instance de nœud. Bien que l’ID du nœud est généré de façon déterministe à partir du nom de nœud et reste le même après un redémarrage, l’ID d’instance modifie chaque redémarrage du nœud.
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.ipAddressOrFQDN
+  name: ipAddressOrFQDN
+  fullName: ipAddressOrFQDN
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’adresse IP ou le nom de domaine complet du nœud.
+  optional: true
+  syntax:
+    content: 'ipAddressOrFQDN?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.isSeedNode
+  name: isSeedNode
+  fullName: isSeedNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indique si le nœud est un nœud de valeur initiale ou non. Retourne la valeur true si le nœud est un nœud de valeur initiale, sinon, false. Un quorum de nœuds initiaux sont nécessaires au bon fonctionnement de cluster Service Fabric.
+  optional: true
+  syntax:
+    content: 'isSeedNode?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.isStopped
+  name: isStopped
+  fullName: isStopped
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indique si le nœud est arrêté en appelant les API d’arrêt de nœud ou non. Retourne la valeur true si le nœud est arrêté, sinon, false.
+  optional: true
+  syntax:
+    content: 'isStopped?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom d’un nœud Service Fabric.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDeactivationInfo
+  name: nodeDeactivationInfo
+  fullName: nodeDeactivationInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Informations sur la désactivation de nœud. Ces informations sont valides pour un nœud qui est en cours de désactivation ou a déjà été désactivé.
+  optional: true
+  syntax:
+    content: 'nodeDeactivationInfo?: NodeDeactivationInfo'
+    return:
+      type:
+      - azure-servicefabric.NodeDeactivationInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDownAt
+  name: nodeDownAt
+  fullName: nodeDownAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Heure UTC à laquelle le nœud s’est arrêté. Si le nœud n’a jamais été bas cette valeur sera zéro heure.
+  optional: true
+  syntax:
+    content: 'nodeDownAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDownTimeInSeconds
+  name: nodeDownTimeInSeconds
+  fullName: nodeDownTimeInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Durée en secondes depuis le nœud est en bas de NodeStatus. La valeur zéro indique le nœud n’est pas NodeStatus bas.
+  optional: true
+  syntax:
+    content: 'nodeDownTimeInSeconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeStatus
+  name: nodeStatus
+  fullName: nodeStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "L’état du nœud. Les valeurs possibles incluent : « Invalid », 'Up », 'vers le bas », « Activation », « Désactivation », « Disabled », « Inconnu », « Supprimé »"
+  optional: true
+  syntax:
+    content: 'nodeStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeUpAt
+  name: nodeUpAt
+  fullName: nodeUpAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Heure UTC à laquelle le nœud a proposé. Si le nœud n’a jamais été de cette valeur sera zéro heure.
+  optional: true
+  syntax:
+    content: 'nodeUpAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeUpTimeInSeconds
+  name: nodeUpTimeInSeconds
+  fullName: nodeUpTimeInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Durée en secondes depuis le nœud est en haut de NodeStatus. La valeur zéro indique que le nœud n’est pas opérationnel.
+  optional: true
+  syntax:
+    content: 'nodeUpTimeInSeconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le type du nœud.
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.upgradeDomain
+  name: upgradeDomain
+  fullName: upgradeDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le domaine de mise à niveau du nœud.
+  optional: true
+  syntax:
+    content: 'upgradeDomain?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.NodeId
+  name: NodeId
+  spec.typeScript:
+  - name: NodeId
+    fullName: NodeId
+    uid: azure-servicefabric.NodeId
+- uid: azure-servicefabric.NodeDeactivationInfo
+  name: NodeDeactivationInfo
+  spec.typeScript:
+  - name: NodeDeactivationInfo
+    fullName: NodeDeactivationInfo
+    uid: azure-servicefabric.NodeDeactivationInfo

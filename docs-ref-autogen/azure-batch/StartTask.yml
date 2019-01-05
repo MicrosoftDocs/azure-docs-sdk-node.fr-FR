@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5eef9fa810043da9b82dc0057081e58c5bc6e086
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676423"
+items:
+- uid: azure-batch.StartTask
+  name: StartTask
+  fullName: StartTask
+  children:
+  - azure-batch.StartTask.commandLine
+  - azure-batch.StartTask.containerSettings
+  - azure-batch.StartTask.environmentSettings
+  - azure-batch.StartTask.maxTaskRetryCount
+  - azure-batch.StartTask.resourceFiles
+  - azure-batch.StartTask.userIdentity
+  - azure-batch.StartTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Lot réessaiera tâches quand une opération de récupération est déclenchée sur un nœud de calcul.
+
+    Exemples d’opérations de récupération incluent (mais ne sont pas limitées à) quand un nœud de calcul défectueux est redémarré ou un nœud de calcul a disparu en raison d’une défaillance de l’hôte. Effectue une nouvelle tentative en raison d’une récupération opérations sont indépendantes d’et ne sont pas comptées dans le maxTaskRetryCount. Même si le maxTaskRetryCount est 0, une nouvelle tentative interne en raison d’une opération de récupération peut-être se produire. Pour cette raison, toutes les tâches doivent être idempotentes. Cela signifie que les tâches doivent tolérer est interrompu et redémarré sans provoquer de toute altération ou des données en double. Les meilleures pratiques pour les tâches de longue est d’utiliser une forme de points de contrôle.
+  package: azure-batch
+- uid: azure-batch.StartTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La ligne de commande ne s’exécute pas sous un interpréteur de commandes et par conséquent ne peut pas bénéficier des fonctionnalités de shell comme expansion de variables d’environnement. Si vous souhaitez tirer parti de ces fonctionnalités, vous devez appeler l’interpréteur de commandes dans la ligne de commande, par exemple à l’aide de « cmd /c MyCommand » dans Windows ou « / bin/sh - c MyCommand » dans Linux. Si la ligne de commande fait référence à des chemins d’accès de fichier, il doit utiliser un chemin d’accès relatif (relatif au répertoire de travail tâche), ou la variable d’environnement fourni par lots (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.StartTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lorsque cela est spécifié, tous les répertoires de manière récursive sous le AZ_BATCH_NODE_ROOT_DIR (la racine des répertoires Azure Batch sur le nœud) sont mappées dans le conteneur, toutes les variables d’environnement de tâche sont mappés dans le conteneur, et la ligne de commande de tâche est exécutée dans le conteneur.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.StartTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.StartTask.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le service Batch retente une tâche si le code de sortie de celle-ci diffère de zéro. Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives. Le service Batch tente la tâche une fois et peut réessayer jusqu’à cette limite. Par exemple, si le nombre maximal de tentatives est 3, Batch tente la tâche jusqu'à 4 fois (tentative initiale et 3 tentatives). Si le nombre maximal de tentatives est 0, le service Batch ne retente pas la tâche. Si le nombre maximal de tentatives est -1, les tentatives de service Batch la tâche sans limite.
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.StartTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Les fichiers répertoriés sous cet élément se trouvent dans le répertoire de travail de la tâche.
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.StartTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si omis, la tâche s’exécute comme un utilisateur non administratif unique à la tâche.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+- uid: azure-batch.StartTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si la valeur true et que la tâche de démarrage échoue sur un nœud de calcul, le service Batch retente la tâche de démarrage jusqu'à son nombre maximal de tentatives (maxTaskRetryCount). Si la tâche a toujours pas terminée après toutes les nouvelles tentatives, les marques de service Batch le nœud de calcul inutilisable et ne sera pas planifier des tâches à ce dernier. Cette condition peut être détectée par le biais du nœud État et Échec infos détails. Si la valeur est false, le service Batch n’attend pas la tâche de démarrage se termine. Dans ce cas, les autres tâches peuvent commencer à s’exécuter sur le nœud de calcul tandis que la tâche de démarrage est en cours d’exécution ; et même si la tâche de démarrage échoue, les nouvelles tâches continueront d’être planifiés sur le nœud. La valeur par défaut est false.
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
