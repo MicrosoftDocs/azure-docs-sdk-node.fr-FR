@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f64615e9acfa2799053c7041ea53a982e650e539
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674033"
+items:
+- uid: azure-arm-mediaservices.Overlay
+  name: Overlay
+  fullName: Overlay
+  children:
+  - azure-arm-mediaservices.Overlay.audioGainLevel
+  - azure-arm-mediaservices.Overlay.end
+  - azure-arm-mediaservices.Overlay.fadeInDuration
+  - azure-arm-mediaservices.Overlay.fadeOutDuration
+  - azure-arm-mediaservices.Overlay.inputLabel
+  - azure-arm-mediaservices.Overlay.odatatype
+  - azure-arm-mediaservices.Overlay.start
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="85993-101">Type de base pour toutes les superpositions - image, audio ou vidéo.</span><span class="sxs-lookup"><span data-stu-id="85993-101">Base type for all overlays - image, audio or video.</span></span>
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.audioGainLevel
+  name: audioGainLevel
+  fullName: audioGainLevel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-102">Le niveau du gain audio dans le segment de recouvrement.</span><span class="sxs-lookup"><span data-stu-id="85993-102">The gain level of audio in the overlay.</span></span> <span data-ttu-id="85993-103">La valeur doit être dans la plage [0, 1.0].</span><span class="sxs-lookup"><span data-stu-id="85993-103">The value should be in the range [0, 1.0].</span></span> <span data-ttu-id="85993-104">La valeur par défaut est 1.0.</span><span class="sxs-lookup"><span data-stu-id="85993-104">The default is 1.0.</span></span>
+  optional: true
+  syntax:
+    content: 'audioGainLevel?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.end
+  name: end
+  fullName: end
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-105">Position dans la vidéo d’entrée à laquelle se termine la superposition.</span><span class="sxs-lookup"><span data-stu-id="85993-105">The position in the input video at which the overlay ends.</span></span> <span data-ttu-id="85993-106">La valeur doit être au format de durée ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="85993-106">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="85993-107">Par exemple, PT30S à la fin de la superposition à 30 secondes dans la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="85993-107">For example, PT30S to end the overlay at 30 seconds in to the input video.</span></span> <span data-ttu-id="85993-108">Si non spécifié la superposition s’appliqueront jusqu'à la fin de la vidéo d’entrée si inputLoop a la valeur true.</span><span class="sxs-lookup"><span data-stu-id="85993-108">If not specified the overlay will be applied until the end of the input video if inputLoop is true.</span></span> <span data-ttu-id="85993-109">Sinon, si inputLoop a la valeur false, puis superposition dure aussi longtemps que la durée du support de superposition.</span><span class="sxs-lookup"><span data-stu-id="85993-109">Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.</span></span>
+  optional: true
+  syntax:
+    content: 'end?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.fadeInDuration
+  name: fadeInDuration
+  fullName: fadeInDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-110">La durée pendant laquelle la superposition fondu sur la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="85993-110">The duration over which the overlay fades in onto the input video.</span></span> <span data-ttu-id="85993-111">La valeur doit être au format de durée ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="85993-111">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="85993-112">Si non spécifié le comportement par défaut consiste à n’avoir aucune en fondu dans (identique à PT0S).</span><span class="sxs-lookup"><span data-stu-id="85993-112">If not specified the default behavior is to have no fade in (same as PT0S).</span></span>
+  optional: true
+  syntax:
+    content: 'fadeInDuration?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.fadeOutDuration
+  name: fadeOutDuration
+  fullName: fadeOutDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-113">La durée pendant laquelle la superposition fondu hors de la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="85993-113">The duration over which the overlay fades out of the input video.</span></span> <span data-ttu-id="85993-114">La valeur doit être au format de durée ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="85993-114">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="85993-115">Si non spécifié le comportement par défaut consiste à n’avoir aucune fondu (identique à PT0S).</span><span class="sxs-lookup"><span data-stu-id="85993-115">If not specified the default behavior is to have no fade out (same as PT0S).</span></span>
+  optional: true
+  syntax:
+    content: 'fadeOutDuration?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.inputLabel
+  name: inputLabel
+  fullName: inputLabel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-116">L’étiquette de l’entrée de travail qui doit être utilisé comme un segment de recouvrement.</span><span class="sxs-lookup"><span data-stu-id="85993-116">The label of the job input which is to be used as an overlay.</span></span> <span data-ttu-id="85993-117">L’entrée doit spécifier un seul fichier.</span><span class="sxs-lookup"><span data-stu-id="85993-117">The Input must specify exactly one file.</span></span> <span data-ttu-id="85993-118">Vous pouvez spécifier un fichier image au format JPG ou PNG, ou un fichier audio (par exemple, un fichier WAV, MP3, WMA ou M4A) ou un fichier vidéo.</span><span class="sxs-lookup"><span data-stu-id="85993-118">You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file.</span></span> <span data-ttu-id="85993-119">Consultez https://aka.ms/mesformats pour la liste complète des formats de fichiers vidéo et d’audio pris en charge.</span><span class="sxs-lookup"><span data-stu-id="85993-119">See https://aka.ms/mesformats for the complete list of supported audio and video file formats.</span></span>
+  optional: true
+  syntax:
+    content: 'inputLabel?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.odatatype
+  name: odatatype
+  fullName: odatatype
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-120">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="85993-120">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'odatatype: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.Overlay.start
+  name: start
+  fullName: start
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="85993-121">Position de départ, avec une référence à l’entrée vidéo, au niveau duquel commence la superposition.</span><span class="sxs-lookup"><span data-stu-id="85993-121">The start position, with reference to the input video, at which the overlay starts.</span></span> <span data-ttu-id="85993-122">La valeur doit être au format ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="85993-122">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="85993-123">Par exemple, PT05S pour démarrer la superposition à 5 secondes dans la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="85993-123">For example, PT05S to start the overlay at 5 seconds in to the input video.</span></span> <span data-ttu-id="85993-124">Si non spécifié la superposition démarre à partir du début de la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="85993-124">If not specified the overlay starts from the beginning of the input video.</span></span>
+  optional: true
+  syntax:
+    content: 'start?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
