@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8c41bfe89c1c4cc827663b8c0d1876afe8470e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099704"
+items:
+- uid: azure-servicefabric.ClusterHealthChunk
+  name: ClusterHealthChunk
+  fullName: ClusterHealthChunk
+  children:
+  - azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  - azure-servicefabric.ClusterHealthChunk.healthState
+  - azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Représente le segment d’intégrité du cluster.
+
+    Contient l’état d’intégrité de cluster agrégée et les entités de cluster qui respectent le filtre d’entrée.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  name: applicationHealthStateChunks
+  fullName: applicationHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Segments de la liste de l’état d’intégrité de l’application dans le cluster qui respectent les filtres dans la description de requête de segment d’intégrité cluster.
+  optional: true
+  syntax:
+    content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthStateChunkList
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    HealthState représentant l’état d’intégrité agrégé du cluster calculé par le Gestionnaire de contrôle d’intégrité.
+
+    L’évaluation d’intégrité de l’entité reflète tous les événements signalés sur l’entité et ses enfants (le cas échéant).
+
+    L’agrégation est effectuée en appliquant la stratégie d’intégrité de cluster souhaité et les stratégies de contrôle d’intégrité d’application. Les valeurs possibles incluent : « Invalid », « Ok », « Avertissement », « Error », « Inconnu »
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  name: nodeHealthStateChunks
+  fullName: nodeHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Segments de la liste de l’état d’intégrité de nœud dans le cluster qui respectent les filtres dans la description de requête de segment d’intégrité cluster.
+  optional: true
+  syntax:
+    content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.NodeHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthStateChunkList
+  name: ApplicationHealthStateChunkList
+  spec.typeScript:
+  - name: ApplicationHealthStateChunkList
+    fullName: ApplicationHealthStateChunkList
+    uid: azure-servicefabric.ApplicationHealthStateChunkList
+- uid: azure-servicefabric.NodeHealthStateChunkList
+  name: NodeHealthStateChunkList
+  spec.typeScript:
+  - name: NodeHealthStateChunkList
+    fullName: NodeHealthStateChunkList
+    uid: azure-servicefabric.NodeHealthStateChunkList

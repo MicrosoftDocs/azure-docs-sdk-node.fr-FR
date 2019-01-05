@@ -1,0 +1,187 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f3c90a5931db6e39fdba9fca01c556fe18b01a0a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063848"
+items:
+- uid: azure-servicefabric.DeployedCodePackageInfo
+  name: DeployedCodePackageInfo
+  fullName: DeployedCodePackageInfo
+  children:
+  - azure-servicefabric.DeployedCodePackageInfo.hostIsolationMode
+  - azure-servicefabric.DeployedCodePackageInfo.hostType
+  - azure-servicefabric.DeployedCodePackageInfo.mainEntryPoint
+  - azure-servicefabric.DeployedCodePackageInfo.name
+  - azure-servicefabric.DeployedCodePackageInfo.runFrequencyInterval
+  - azure-servicefabric.DeployedCodePackageInfo.serviceManifestName
+  - azure-servicefabric.DeployedCodePackageInfo.servicePackageActivationId
+  - azure-servicefabric.DeployedCodePackageInfo.setupEntryPoint
+  - azure-servicefabric.DeployedCodePackageInfo.status
+  - azure-servicefabric.DeployedCodePackageInfo.version
+  langs:
+  - typeScript
+  type: interface
+  summary: Informations sur le package de code déployé sur un nœud Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.hostIsolationMode
+  name: hostIsolationMode
+  fullName: hostIsolationMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Spécifie le mode d’isolation de point d’entrée principal d’un package de code lorsqu’il est de type d’hôte est ContainerHost. Cela est spécifié dans le cadre de stratégies d’hôte de conteneur dans le manifeste d’application lors de l’importation du manifeste de service. Les valeurs possibles incluent : « None », « Process », « HyperV »'
+  optional: true
+  syntax:
+    content: 'hostIsolationMode?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.hostType
+  name: hostType
+  fullName: hostType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Spécifie le type d’hôte pour le point d’entrée principal d’un package de code tel que spécifié dans le manifeste de service. Les valeurs possibles incluent : « Invalid », « ExeHost », 'ContainerHost'"
+  optional: true
+  syntax:
+    content: 'hostType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.mainEntryPoint
+  name: mainEntryPoint
+  fullName: mainEntryPoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Informations sur le programme d’installation ou d’entrée principal point d’un package de code déployé sur un nœud Service Fabric.
+  optional: true
+  syntax:
+    content: 'mainEntryPoint?: CodePackageEntryPoint'
+    return:
+      type:
+      - azure-servicefabric.CodePackageEntryPoint
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom du package de code.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.runFrequencyInterval
+  name: runFrequencyInterval
+  fullName: runFrequencyInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’intervalle auquel du code package est exécuté. Il est utilisé pour le package de code périodiques.
+  optional: true
+  syntax:
+    content: 'runFrequencyInterval?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom du manifeste de service spécifié de ce package de code.
+  optional: true
+  syntax:
+    content: 'serviceManifestName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ActivationId d’un package de service déployé. Si ServicePackageActivationMode spécifiée au moment de la création du service est « SharedProcess » (ou s’il n’est pas spécifié, auquel cas elle par défaut est « SharedProcess »), la valeur de ServicePackageActivationId est toujours une chaîne vide.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.setupEntryPoint
+  name: setupEntryPoint
+  fullName: setupEntryPoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Informations sur le programme d’installation ou d’entrée principal point d’un package de code déployé sur un nœud Service Fabric.
+  optional: true
+  syntax:
+    content: 'setupEntryPoint?: CodePackageEntryPoint'
+    return:
+      type:
+      - azure-servicefabric.CodePackageEntryPoint
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Spécifie l’état d’un package de service ou d’application déployée sur un nœud Service Fabric.
+
+    Les valeurs possibles incluent : « Invalid », « Téléchargement », « Activation », « Active », « La mise à niveau », « Désactivation »
+  optional: true
+  syntax:
+    content: 'status?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedCodePackageInfo.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La version du package de code spécifié dans le manifeste de service.
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.CodePackageEntryPoint
+  name: CodePackageEntryPoint
+  spec.typeScript:
+  - name: CodePackageEntryPoint
+    fullName: CodePackageEntryPoint
+    uid: azure-servicefabric.CodePackageEntryPoint
