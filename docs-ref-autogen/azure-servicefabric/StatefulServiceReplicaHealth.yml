@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b2e541878dcca34a9351358f2b12a9ec7bf6cea7
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52093303"
+items:
+- uid: azure-servicefabric.StatefulServiceReplicaHealth
+  name: StatefulServiceReplicaHealth
+  fullName: StatefulServiceReplicaHealth
+  children:
+  - azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Représente l’intégrité du réplica de service avec état.
+
+    Contient l’état d’intégrité de réplica agrégée, les événements d’intégrité et les évaluations non intègres.
+  extends:
+    name: azure-servicefabric.ReplicaHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID d’un réplica de service avec état. ReplicaId est utilisé par Service Fabric pour identifier de manière unique un réplica d’une partition. Il est unique au sein d’une partition et ne change pas pour la durée de vie du réplica. Si un réplica est supprimé et un autre réplica est créé sur le même nœud pour la même partition, il obtiendra une valeur différente pour le code. Parfois, l’id d’une instance de service sans état est également référencé en tant qu’un id de réplica.
+  optional: true
+  syntax:
+    content: 'replicaId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealth
+  name: ReplicaHealth
+  spec.typeScript:
+  - name: ReplicaHealth
+    fullName: ReplicaHealth
+    uid: azure-servicefabric.ReplicaHealth

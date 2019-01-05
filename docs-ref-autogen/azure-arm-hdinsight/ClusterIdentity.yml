@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5a419247f25db5933098d29fbaceda1fb944775a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53679033"
+items:
+- uid: azure-arm-hdinsight.ClusterIdentity
+  name: ClusterIdentity
+  fullName: ClusterIdentity
+  children:
+  - azure-arm-hdinsight.ClusterIdentity.principalId
+  - azure-arm-hdinsight.ClusterIdentity.tenantId
+  - azure-arm-hdinsight.ClusterIdentity.type
+  - azure-arm-hdinsight.ClusterIdentity.userAssignedIdentities
+  langs:
+  - typeScript
+  type: interface
+  summary: Identité pour le cluster.
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.principalId
+  name: principalId
+  fullName: principalId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’id du principal de l’identité du cluster. Cette propriété est fournie uniquement pour un système d’identité affecté.
+  optional: true
+  syntax:
+    content: 'principalId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.tenantId
+  name: tenantId
+  fullName: tenantId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’id de client associé au cluster. Cette propriété est fournie uniquement pour un système d’identité affecté.
+  optional: true
+  syntax:
+    content: 'tenantId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Le type d’identité utilisé pour le cluster. Le type « SystemAssigned UserAssigned » inclut une identité créée implicitement et un ensemble d’identités utilisateur affecté. Les valeurs possibles incluent : « SystemAssigned », « UserAssigned », « SystemAssigned, UserAssigned », « None »'
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.ClusterIdentity.userAssignedIdentities
+  name: userAssignedIdentities
+  fullName: userAssignedIdentities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "La liste des identités d’utilisateur associé au cluster. Les références principales du dictionnaire d’identité utilisateur sera l’ID de ressource ARM sous la forme : ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+  optional: true
+  syntax:
+    content: 'userAssignedIdentities?: [key: string]: ClusterIdentityUserAssignedIdentitiesValue'
+    return:
+      type:
+      - '[key: string]: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue'
+  package: azure-arm-hdinsight
+references:
+- uid: '[key: string]: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue'
+  name: ClusterIdentityUserAssignedIdentitiesValue
+  spec.typeScript:
+  - name: '[key: string]: '
+    fullName: '[key: string]: '
+  - name: ClusterIdentityUserAssignedIdentitiesValue
+    fullName: ClusterIdentityUserAssignedIdentitiesValue
+    uid: azure-arm-hdinsight.ClusterIdentityUserAssignedIdentitiesValue
