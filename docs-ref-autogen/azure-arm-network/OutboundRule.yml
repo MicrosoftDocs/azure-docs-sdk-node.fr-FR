@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 82bd947e981e9caef2cbfcefb73f1a5dddda631b
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53664183"
+items:
+- uid: azure-arm-network.OutboundRule
+  name: OutboundRule
+  fullName: OutboundRule
+  children:
+  - azure-arm-network.OutboundRule.allocatedOutboundPorts
+  - azure-arm-network.OutboundRule.backendAddressPool
+  - azure-arm-network.OutboundRule.enableTcpReset
+  - azure-arm-network.OutboundRule.etag
+  - azure-arm-network.OutboundRule.frontendIPConfigurations
+  - azure-arm-network.OutboundRule.idleTimeoutInMinutes
+  - azure-arm-network.OutboundRule.name
+  - azure-arm-network.OutboundRule.protocol
+  - azure-arm-network.OutboundRule.provisioningState
+  langs:
+  - typeScript
+  type: interface
+  summary: Pool sortant de l’équilibreur de charge.
+  extends:
+    name: azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.allocatedOutboundPorts
+  name: allocatedOutboundPorts
+  fullName: allocatedOutboundPorts
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nombre de ports de sortie à utiliser pour NAT.
+  optional: true
+  syntax:
+    content: 'allocatedOutboundPorts?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.backendAddressPool
+  name: backendAddressPool
+  fullName: backendAddressPool
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Une référence à un pool d’adresses IP dynamiques. Le trafic sortant est au hasard à charge équilibrée entre les adresses IP dans le serveur principal d’adresses IP.
+  syntax:
+    content: 'backendAddressPool: SubResource'
+    return:
+      type:
+      - azure-arm-network.SubResource
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.enableTcpReset
+  name: enableTcpReset
+  fullName: enableTcpReset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Réception bidirectionnel TCP réinitialisée sur le délai d’inactivité TCP flux ou l’arrêt de connexion inattendu.
+
+    Cet élément est utilisé uniquement lorsque le protocole est TCP.
+  optional: true
+  syntax:
+    content: 'enableTcpReset?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.frontendIPConfigurations
+  name: frontendIPConfigurations
+  fullName: frontendIPConfigurations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Adresses IP de Frontend de l’équilibreur de charge.
+  syntax:
+    content: 'frontendIPConfigurations: SubResource[]'
+    return:
+      type:
+      - azure-arm-network.SubResource[]
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.idleTimeoutInMinutes
+  name: idleTimeoutInMinutes
+  fullName: idleTimeoutInMinutes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le délai d’expiration de la connexion inactive TCP
+  optional: true
+  syntax:
+    content: 'idleTimeoutInMinutes?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom de la ressource qui est unique au sein d’un groupe de ressources. Ce nom peut être utilisé pour accéder à la ressource.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Protocole : TCP, UDP ou tout. Les valeurs possibles incluent : « Tcp », « Udp », « All »'
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.OutboundRule.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Obtient l’état d’approvisionnement de la ressource d’adresse IP publique. Les valeurs possibles sont les suivantes : « La mise à jour », « Suppression » et « Failed ».'
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+references:
+- uid: azure-arm-network.SubResource
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: azure-arm-network.SubResource
+- uid: azure-arm-network.SubResource[]
+  name: SubResource[]
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: azure-arm-network.SubResource
+  - name: '[]'
+    fullName: '[]'
