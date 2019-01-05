@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 75c8a0c2fd2d2e5de0ab87ce6db8876b89dbd0c0
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53683348"
+items:
+- uid: azure-arm-mediaservices.H264Layer
+  name: H264Layer
+  fullName: H264Layer
+  children:
+  - azure-arm-mediaservices.H264Layer.bufferWindow
+  - azure-arm-mediaservices.H264Layer.entropyMode
+  - azure-arm-mediaservices.H264Layer.level
+  - azure-arm-mediaservices.H264Layer.profile
+  - azure-arm-mediaservices.H264Layer.referenceFrames
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="754a9-101">Décrit les paramètres à utiliser lors de l’encodage de la vidéo d’entrée dans une couche de vitesse de transmission de sortie souhaité avec le codec vidéo H.264.</span><span class="sxs-lookup"><span data-stu-id="754a9-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.264 video codec.</span></span>
+  extends:
+    name: azure-arm-mediaservices.VideoLayer
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.bufferWindow
+  name: bufferWindow
+  fullName: bufferWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="754a9-102">La longueur de la fenêtre VBV mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="754a9-102">The VBV buffer window length.</span></span> <span data-ttu-id="754a9-103">La valeur doit être au format ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="754a9-103">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="754a9-104">La valeur doit être dans les secondes de la plage [0,1-100].</span><span class="sxs-lookup"><span data-stu-id="754a9-104">The value should be in the range [0.1-100] seconds.</span></span> <span data-ttu-id="754a9-105">La valeur par défaut est de 5 secondes (par exemple, PT5S).</span><span class="sxs-lookup"><span data-stu-id="754a9-105">The default is 5 seconds (for example, PT5S).</span></span>
+  optional: true
+  syntax:
+    content: 'bufferWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.entropyMode
+  name: entropyMode
+  fullName: entropyMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"754a9-106\">Le mode d’entropie à utiliser pour cette couche.</span><span class=\"sxs-lookup\"><span data-stu-id=\"754a9-106\">The entropy mode to be used for this layer.</span></span> <span data-ttu-id=\"754a9-107\">Si non spécifié, l’encodeur choisit le mode approprié pour le profil et le niveau.</span><span class=\"sxs-lookup\"><span data-stu-id=\"754a9-107\">If not specified, the encoder chooses the mode that is appropriate for the profile and level.</span></span> <span data-ttu-id=\"754a9-108\">Les valeurs possibles incluent : 'Cabac', 'Cavlc'</span><span class=\"sxs-lookup\"><span data-stu-id=\"754a9-108\">Possible values include: 'Cabac', 'Cavlc'</span></span>"
+  optional: true
+  syntax:
+    content: 'entropyMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.level
+  name: level
+  fullName: level
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="754a9-109">Le niveau de la norme H.264 doit être utilisé lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="754a9-109">Which level of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id="754a9-110">La valeur peut être automatique ou un nombre qui correspond au profil H.264.</span><span class="sxs-lookup"><span data-stu-id="754a9-110">The value can be Auto, or a number that matches the H.264 profile.</span></span> <span data-ttu-id="754a9-111">Si non spécifié, la valeur par défaut est Auto, ce qui permet à l’encodeur de choisir le niveau approprié pour cette couche.</span><span class="sxs-lookup"><span data-stu-id="754a9-111">If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.</span></span>
+  optional: true
+  syntax:
+    content: 'level?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.profile
+  name: profile
+  fullName: profile
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"754a9-112\">Le profil de la norme H.264 doit être utilisé lors de l’encodage de cette couche.</span><span class=\"sxs-lookup\"><span data-stu-id=\"754a9-112\">Which profile of the H.264 standard should be used when encoding this layer.</span></span> <span data-ttu-id=\"754a9-113\">Par défaut est Auto. Les valeurs possibles incluent : « Auto », « Ligne de base », « Principal », « Élevée », 'High422', 'High444'</span><span class=\"sxs-lookup\"><span data-stu-id=\"754a9-113\">Default is Auto. Possible values include: 'Auto', 'Baseline', 'Main', 'High', 'High422', 'High444'</span></span>"
+  optional: true
+  syntax:
+    content: 'profile?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-mediaservices
+- uid: azure-arm-mediaservices.H264Layer.referenceFrames
+  name: referenceFrames
+  fullName: referenceFrames
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="754a9-114">Le nombre de trames de référence à utiliser lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="754a9-114">The number of reference frames to be used when encoding this layer.</span></span> <span data-ttu-id="754a9-115">Si non spécifié, l’encodeur détermine un nombre approprié en fonction du paramètre de la complexité du codeur.</span><span class="sxs-lookup"><span data-stu-id="754a9-115">If not specified, the encoder determines an appropriate number based on the encoder complexity setting.</span></span>
+  optional: true
+  syntax:
+    content: 'referenceFrames?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-mediaservices
+references:
+- uid: azure-arm-mediaservices.VideoLayer
+  name: VideoLayer
+  spec.typeScript:
+  - name: VideoLayer
+    fullName: VideoLayer
+    uid: azure-arm-mediaservices.VideoLayer

@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fbf83409e62f7acedc3729ce9102713395482bd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083894"
+items:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  name: DeployedApplicationHealthStateFilter
+  fullName: DeployedApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="64fd9-101">Définit les critères de correspondance pour déterminer si une application déployée doit être incluse en tant qu’enfant d’une application dans le bloc de contrôle d’intégrité du cluster.</span><span class="sxs-lookup"><span data-stu-id="64fd9-101">Defines matching criteria to determine whether a deployed application should be included as a child of an application in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="64fd9-102">Les applications déployées sont retournées uniquement si l’application parent correspond à un filtre spécifié dans la description de requête de segment d’intégrité cluster.</span><span class="sxs-lookup"><span data-stu-id="64fd9-102">The deployed applications are only returned if the parent application matches a filter specified in the cluster health chunk query description.</span></span>
+
+    <span data-ttu-id="64fd9-103">Un filtre peut mettre en correspondance zéro, un ou plusieurs des applications déployées, en fonction de ses propriétés.</span><span class="sxs-lookup"><span data-stu-id="64fd9-103">One filter can match zero, one or multiple deployed applications, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  name: deployedServicePackageFilters
+  fullName: deployedServicePackageFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="64fd9-104">Définit une liste de filtres qui spécifient quels service déployé des packages à inclure dans le segment d’intégrité de cluster retourné en tant qu’enfants de l’application parent déployé.</span><span class="sxs-lookup"><span data-stu-id="64fd9-104">Defines a list of filters that specify which deployed service packages to be included in the returned cluster health chunk as children of the parent deployed application.</span></span> <span data-ttu-id="64fd9-105">Les packages de service déployé sont retournés uniquement si le parent déployé application correspondances un filtre.</span><span class="sxs-lookup"><span data-stu-id="64fd9-105">The deployed service packages are returned only if the parent deployed application matches a filter.</span></span>
+
+    <span data-ttu-id="64fd9-106">Si la liste est vide, aucun package de service déployé n’est retournés.</span><span class="sxs-lookup"><span data-stu-id="64fd9-106">If the list is empty, no deployed service packages are returned.</span></span> <span data-ttu-id="64fd9-107">Tous les packages de service déployé sont utilisés pour évaluer le parent déployés état d’intégrité application agrégée, quel que soit les filtres d’entrée.</span><span class="sxs-lookup"><span data-stu-id="64fd9-107">All the deployed service packages are used to evaluate the parent deployed application aggregated health state, regardless of the input filters.</span></span>
+
+    <span data-ttu-id="64fd9-108">Le filtre de l’application déployée peut spécifier plusieurs filtres de package de service déployé.</span><span class="sxs-lookup"><span data-stu-id="64fd9-108">The deployed application filter may specify multiple deployed service package filters.</span></span>
+
+    <span data-ttu-id="64fd9-109">Par exemple, il peut spécifier un filtre pour retourner tous les packages de services déployés avec l’état d’intégrité erreur et un autre filtre pour toujours inclure un package de service déployé sur un nœud.</span><span class="sxs-lookup"><span data-stu-id="64fd9-109">For example, it can specify a filter to return all deployed service packages with health state Error and another filter to always include a deployed service package on a node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="64fd9-110">Le filtre pour l’état d’intégrité des applications déployées.</span><span class="sxs-lookup"><span data-stu-id="64fd9-110">The filter for the health state of the deployed applications.</span></span> <span data-ttu-id="64fd9-111">Il permet de sélectionner des applications déployées si elles correspondent les États d’intégrité de votre choix.</span><span class="sxs-lookup"><span data-stu-id="64fd9-111">It allows selecting deployed applications if they match the desired health states.</span></span>
+
+    <span data-ttu-id="64fd9-112">Les valeurs possibles sont la valeur entière d’un des États d’intégrité suivants.</span><span class="sxs-lookup"><span data-stu-id="64fd9-112">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="64fd9-113">Seules les applications déployées qui correspondent au filtre sont retournées.</span><span class="sxs-lookup"><span data-stu-id="64fd9-113">Only deployed applications that match the filter are returned.</span></span> <span data-ttu-id="64fd9-114">Toutes les applications déployées sont utilisées pour évaluer l’état d’intégrité de cluster agrégée.</span><span class="sxs-lookup"><span data-stu-id="64fd9-114">All deployed applications are used to evaluate the cluster aggregated health state.</span></span>
+
+    <span data-ttu-id="64fd9-115">Si non spécifié, valeur par défaut est None, sauf si le nom du nœud est spécifié.</span><span class="sxs-lookup"><span data-stu-id="64fd9-115">If not specified, default value is None, unless the node name is specified.</span></span> <span data-ttu-id="64fd9-116">Si le filtre a la valeur par défaut et le nom du nœud est spécifié, l’application déployée correspondante est retournée.</span><span class="sxs-lookup"><span data-stu-id="64fd9-116">If the filter has default value and node name is specified, the matching deployed application is returned.</span></span>
+
+    <span data-ttu-id="64fd9-117">Les valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit.</span><span class="sxs-lookup"><span data-stu-id="64fd9-117">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="64fd9-118">Par exemple, si la valeur indiquée est 6, elle correspond à des applications déployées avec la valeur HealthState est OK (2) et Warning (4).</span><span class="sxs-lookup"><span data-stu-id="64fd9-118">For example, if the provided value is 6, it matches deployed applications with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="64fd9-119">Default : valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="64fd9-119">Default - Default value.</span></span> <span data-ttu-id="64fd9-120">Correspond à toute valeur HealthState.</span><span class="sxs-lookup"><span data-stu-id="64fd9-120">Matches any HealthState.</span></span> <span data-ttu-id="64fd9-121">La valeur est égale à zéro.</span><span class="sxs-lookup"><span data-stu-id="64fd9-121">The value is zero.</span></span>
+
+    - <span data-ttu-id="64fd9-122">None : filtre qui ne correspond à aucune valeur HealthState.</span><span class="sxs-lookup"><span data-stu-id="64fd9-122">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="64fd9-123">Permet de ne retourner aucun résultat sur une collection donnée d’états.</span><span class="sxs-lookup"><span data-stu-id="64fd9-123">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="64fd9-124">La valeur est égale à 1.</span><span class="sxs-lookup"><span data-stu-id="64fd9-124">The value is 1.</span></span>
+
+    - <span data-ttu-id="64fd9-125">OK : filtre qui correspond à l’entrée avec la valeur HealthState est Ok.</span><span class="sxs-lookup"><span data-stu-id="64fd9-125">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="64fd9-126">La valeur est égale à 2.</span><span class="sxs-lookup"><span data-stu-id="64fd9-126">The value is 2.</span></span>
+
+    - <span data-ttu-id="64fd9-127">Warning : filtre qui correspond à l’entrée à HealthState Warning comme valeur.</span><span class="sxs-lookup"><span data-stu-id="64fd9-127">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="64fd9-128">La valeur est égale à 4.</span><span class="sxs-lookup"><span data-stu-id="64fd9-128">The value is 4.</span></span>
+
+    - <span data-ttu-id="64fd9-129">Error : filtre qui correspond aux entrées ayant Error comme valeur HealthState.</span><span class="sxs-lookup"><span data-stu-id="64fd9-129">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="64fd9-130">La valeur est égale à 8.</span><span class="sxs-lookup"><span data-stu-id="64fd9-130">The value is 8.</span></span>
+
+    - <span data-ttu-id="64fd9-131">All : filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState.</span><span class="sxs-lookup"><span data-stu-id="64fd9-131">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="64fd9-132">La valeur est égale à 65535.</span><span class="sxs-lookup"><span data-stu-id="64fd9-132">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="64fd9-133">Le nom du nœud où l’application est déployée pour faire correspondre le filtre.</span><span class="sxs-lookup"><span data-stu-id="64fd9-133">The name of the node where the application is deployed in order to match the filter.</span></span>
+
+    <span data-ttu-id="64fd9-134">Si spécifié, le filtre est appliqué uniquement à l’application déployée sur le nœud spécifié.</span><span class="sxs-lookup"><span data-stu-id="64fd9-134">If specified, the filter is applied only to the application deployed on the specified node.</span></span>
+
+    <span data-ttu-id="64fd9-135">Si l’application n’est pas déployée sur le nœud portant le nom spécifié, aucune application déployée n’est retournée dans le segment d’intégrité de cluster en fonction de ce filtre.</span><span class="sxs-lookup"><span data-stu-id="64fd9-135">If the application is not deployed on the node with the specified name, no deployed application is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="64fd9-136">Sinon, l’application déployée est incluse dans le segment d’intégrité de cluster si elle respecte les autres propriétés de filtre.</span><span class="sxs-lookup"><span data-stu-id="64fd9-136">Otherwise, the deployed application is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="64fd9-137">Si ce n’est pas spécifiées, tous déployées des applications qui correspondent aux filtres parent (le cas échéant) sont prises en considération et mis en correspondance avec les autres membres de filtre comme filtre d’état d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="64fd9-137">If not specified, all deployed applications that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  name: DeployedServicePackageHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
