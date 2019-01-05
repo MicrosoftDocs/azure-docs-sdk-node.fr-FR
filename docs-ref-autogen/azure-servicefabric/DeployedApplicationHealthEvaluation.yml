@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1239921b097fafe4788897fcb2be88e6c62fb17c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52030863"
+items:
+- uid: azure-servicefabric.DeployedApplicationHealthEvaluation
+  name: DeployedApplicationHealthEvaluation
+  fullName: DeployedApplicationHealthEvaluation
+  children:
+  - azure-servicefabric.DeployedApplicationHealthEvaluation.applicationName
+  - azure-servicefabric.DeployedApplicationHealthEvaluation.nodeName
+  - azure-servicefabric.DeployedApplicationHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: Représente l’évaluation d’intégrité pour une application déployée, contenant des informations sur les données et l’algorithme utilisé par le magasin d’intégrité pour évaluer l’intégrité.
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthEvaluation.applicationName
+  name: applicationName
+  fullName: applicationName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom de l’application, y compris le « fabric : » Schéma d’URI.
+  optional: true
+  syntax:
+    content: 'applicationName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthEvaluation.nodeName
+  name: nodeName
+  fullName: nodeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom du nœud où l’application est déployée sur.
+  optional: true
+  syntax:
+    content: 'nodeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé actuel de l’application déployée.
+
+    Les types d’évaluations non intègres peuvent être DeployedServicePackagesHealthEvaluation ou EventHealthEvaluation.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

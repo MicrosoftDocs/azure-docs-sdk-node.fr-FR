@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 06b60b35e92b1bdb78fb167cb73a13f659ab965c
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658923"
+items:
+- uid: azure-batch.Schedule
+  name: Schedule
+  fullName: Schedule
+  children:
+  - azure-batch.Schedule.doNotRunAfter
+  - azure-batch.Schedule.doNotRunUntil
+  - azure-batch.Schedule.recurrenceInterval
+  - azure-batch.Schedule.startWindow
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunAfter
+  name: doNotRunAfter
+  fullName: doNotRunAfter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si vous ne spécifiez pas une heure doNotRunAfter et que vous créez une planification de travail périodique, la planification du travail reste active jusqu'à ce que vous la terminiez explicitement.
+  optional: true
+  syntax:
+    content: 'doNotRunAfter?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.doNotRunUntil
+  name: doNotRunUntil
+  fullName: doNotRunUntil
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si vous ne spécifiez pas une heure doNotRunUntil, la planification est prête à créer immédiatement des tâches.
+  optional: true
+  syntax:
+    content: 'doNotRunUntil?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.Schedule.recurrenceInterval
+  name: recurrenceInterval
+  fullName: recurrenceInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Une planification de travail peut avoir au maximum un travail actif à un moment donné, s’il est temps de créer un nouveau travail sous une planification de travail, mais la tâche précédente est en cours d’exécution, le service Batch ne crée pas la nouvelle tâche jusqu'à ce que la tâche précédente se termine. Si le travail précédent ne se termine pas dans le délai de la valeur de la nouvelle recurrenceInterval, aucun nouveau travail n’est programmé pour cet intervalle. Pour les tâches périodiques, vous devez normalement spécifier un jobManagerTask dans le jobspecification affectent. Si vous n’utilisez pas jobManagerTask, vous devez un processus externe pour surveiller les travaux sont créés, ajouter des tâches sur les travaux et interrompent les travaux prêts pour la prochaine récurrence. La valeur par défaut est que la planification ne se répète pas : un travail est créé, au sein de la valeur de startWindow après l’heure doNotRunUntil, et la planification est terminée dès que le travail se termine. La valeur minimale est 1 minute. Si vous spécifiez une valeur inférieure, le service Batch rejette la planification avec une erreur ; Si vous appelez l’API REST directement, code d’état HTTP : 400 (demande incorrecte)."
+  optional: true
+  syntax:
+    content: 'recurrenceInterval?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.Schedule.startWindow
+  name: startWindow
+  fullName: startWindow
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Si un travail n’est pas créé dans l’intervalle de valeur, la « opportunité » est perdue ; aucun travail ne sera créé jusqu'à la prochaine récurrence de la planification. Si la planification est récurrente, et la valeur de startWindow est plus longue que l’intervalle de périodicité, puis cela équivaut à une valeur infinie, car le travail qui arrive à échéance dans un seul recurrenceInterval n’est pas transmis dans le prochain intervalle de périodicité. La valeur par défaut est infinie. La valeur minimale est 1 minute. Si vous spécifiez une valeur inférieure, le service Batch rejette la planification avec une erreur ; Si vous appelez l’API REST directement, code d’état HTTP : 400 (demande incorrecte)."
+  optional: true
+  syntax:
+    content: 'startWindow?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
