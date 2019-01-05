@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 403a06562f99d622dbb686ab68530cd3cb593a1d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678013"
+items:
+- uid: azure-batch.CertificateReference
+  name: CertificateReference
+  fullName: CertificateReference
+  children:
+  - azure-batch.CertificateReference.storeLocation
+  - azure-batch.CertificateReference.storeName
+  - azure-batch.CertificateReference.thumbprint
+  - azure-batch.CertificateReference.thumbprintAlgorithm
+  - azure-batch.CertificateReference.visibility
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.CertificateReference.storeLocation
+  name: storeLocation
+  fullName: storeLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="8388e-101">La valeur par défaut est currentuser.</span><span class="sxs-lookup"><span data-stu-id="8388e-101">The default value is currentuser.</span></span> <span data-ttu-id="8388e-102">Cette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows).</span><span class="sxs-lookup"><span data-stu-id="8388e-102">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="8388e-103">Pour les nœuds de calcul Linux, les certificats sont stockés dans un répertoire dans le répertoire de travail tâche et un environnement que variable AZ_BATCH_CERTIFICATES_DIR est fournie à la tâche d’interrogation pour cet emplacement.</span><span class="sxs-lookup"><span data-stu-id="8388e-103">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="8388e-104">Pour les certificats avec une visibilité de l’utilisateur « distant », un répertoire de « certificats » est créé dans le répertoire de base (par exemple, /home/ {nom_utilisateur} / certificats) et les certificats sont placés dans ce répertoire.</span><span class="sxs-lookup"><span data-stu-id="8388e-104">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+
+    <span data-ttu-id="8388e-105">Les valeurs possibles sont : « currentUser », « localMachine »</span><span class="sxs-lookup"><span data-stu-id="8388e-105">Possible values include: 'currentUser', 'localMachine'</span></span>
+  optional: true
+  syntax:
+    content: 'storeLocation?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.storeName
+  name: storeName
+  fullName: storeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="8388e-106">Cette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows).</span><span class="sxs-lookup"><span data-stu-id="8388e-106">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id="8388e-107">Les noms de magasins courantes sont les suivantes : Mon, autorité de certification racine, approbation, non autorisé, TrustedPeople, TrustedPublisher, AuthRoot, carnet d’adresses, mais n’importe quel nom de magasin personnalisé peut également être utilisé.</span><span class="sxs-lookup"><span data-stu-id="8388e-107">Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used.</span></span> <span data-ttu-id="8388e-108">La valeur par défaut est My.</span><span class="sxs-lookup"><span data-stu-id="8388e-108">The default value is My.</span></span>'
+  optional: true
+  syntax:
+    content: 'storeName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.thumbprint
+  name: thumbprint
+  fullName: thumbprint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'thumbprint: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.thumbprintAlgorithm
+  name: thumbprintAlgorithm
+  fullName: thumbprintAlgorithm
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'thumbprintAlgorithm: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.CertificateReference.visibility
+  name: visibility
+  fullName: visibility
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="8388e-109">Vous pouvez spécifier plus d’une visibilité de cette collection.</span><span class="sxs-lookup"><span data-stu-id="8388e-109">You can specify more than one visibility in this collection.</span></span> <span data-ttu-id="8388e-110">La valeur par défaut est tous les comptes.</span><span class="sxs-lookup"><span data-stu-id="8388e-110">The default is all accounts.</span></span>
+  optional: true
+  syntax:
+    content: 'visibility?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-batch
