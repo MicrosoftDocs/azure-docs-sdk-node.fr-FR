@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 21f210c813372698536df44230040a4089b09700
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52169464"
+items:
+- uid: '@azure/event-processor-host.PartitionContext'
+  name: PartitionContext
+  fullName: PartitionContext
+  children:
+  - '@azure/event-processor-host.PartitionContext.checkpoint'
+  - '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  - '@azure/event-processor-host.PartitionContext.consumerGroup'
+  - '@azure/event-processor-host.PartitionContext.eventhubPath'
+  - '@azure/event-processor-host.PartitionContext.lease'
+  - '@azure/event-processor-host.PartitionContext.owner'
+  - '@azure/event-processor-host.PartitionContext.constructor'
+  - '@azure/event-processor-host.PartitionContext.partitionId'
+  - '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  langs:
+  - typeScript
+  type: class
+  summary: Décrit le contexte de la Partition.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpoint'
+  name: checkpoint()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Écrit le décalage actuel et un numéro de séquence dans le magasin de point de contrôle via le Gestionnaire de point de contrôle.
+
+    Les données de point de contrôle sont structurées comme une charge utile JSON (par exemple) : `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`.
+  syntax:
+    content: function checkpoint()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  name: checkpointFromEventData(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Écrit le décalage actuel et un numéro de séquence dans le magasin de point de contrôle via le Gestionnaire de point de contrôle.
+
+    Les données de point de contrôle sont structurées comme une charge utile JSON (par exemple) : `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`.
+  syntax:
+    content: 'function checkpointFromEventData(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: Les données d’événement reçues à partir de la EventHubReceiver.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.consumerGroup'
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} consumerGroup le nom du groupe de consommateurs.'
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.eventhubPath'
+  name: eventhubPath
+  fullName: eventhubPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{string} eventhubPath le chemin d’accès de l’eventhub'
+  syntax:
+    content: 'eventhubPath: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.lease'
+  name: lease
+  fullName: lease
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Bail {location} le bail de la plupart des recdent point de contrôle avec l’ID de partition.
+  syntax:
+    content: 'lease: CompleteLease'
+    return:
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.owner'
+  name: owner
+  fullName: owner
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: propriétaire {string} hôte/propriétaire de la partition.
+  syntax:
+    content: 'owner: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.constructor'
+  name: PartitionContext(HostContextWithCheckpointLeaseManager, string, CompleteLease)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Crée un nouveau PartitionContext.
+  syntax:
+    content: 'new PartitionContext(context: HostContextWithCheckpointLeaseManager, partitionId: string, lease: CompleteLease)'
+    parameters:
+    - id: context
+      type:
+      - HostContextWithCheckpointLeaseManager
+      description: ''
+    - id: partitionId
+      type:
+      - string
+      description: L’id de partition eventhub.
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: >
+        L’objet de bail.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: partitionId {string} l’id de partition eventhub.
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  name: setOffsetAndSequenceNumber(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Définit le nombre de décalage et la séquence du contexte de la partition à partir de la EventData fourni.
+  syntax:
+    content: 'function setOffsetAndSequenceNumber(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: >
+        Les données d’événement `received` à partir de la EventHubReceiver.
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'

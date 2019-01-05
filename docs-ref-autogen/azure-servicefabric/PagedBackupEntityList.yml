@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: feb58d6e5aef924bbbeb86d1d2ede6e0a3280e5a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52060924"
+items:
+- uid: azure-servicefabric.PagedBackupEntityList
+  name: PagedBackupEntityList
+  fullName: PagedBackupEntityList
+  children:
+  - azure-servicefabric.PagedBackupEntityList.continuationToken
+  - azure-servicefabric.PagedBackupEntityList.items
+  langs:
+  - typeScript
+  type: interface
+  summary: La liste des entités de sauvegarde sont sauvegardées régulièrement. La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message. Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupEntityList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+
+    S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedBackupEntityList.items
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Liste d’informations de l’entité de sauvegarde.
+  optional: true
+  syntax:
+    content: 'items?: BackupEntity[]'
+    return:
+      type:
+      - azure-servicefabric.BackupEntity[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupEntity[]
+  name: BackupEntity[]
+  spec.typeScript:
+  - name: BackupEntity
+    fullName: BackupEntity
+    uid: azure-servicefabric.BackupEntity
+  - name: '[]'
+    fullName: '[]'

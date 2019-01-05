@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: c72d05d61ced7ab196257c5b363a0c680fcf42c4
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 3ff4f34a71a603c5c22ba8672c72443fff53a248
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41702858"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52093695"
 items:
 - uid: azure-arm-commerce.RateCard
   name: RateCard
   fullName: RateCard
   children:
   - azure-arm-commerce.RateCard.get
-  - azure-arm-commerce.RateCard.get_1
   - azure-arm-commerce.RateCard.get_2
+  - azure-arm-commerce.RateCard.get_1
   - azure-arm-commerce.RateCard.getWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-commerce
 - uid: azure-arm-commerce.RateCard.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -43,30 +43,8 @@ items:
       type:
       - Promise<azure-arm-commerce.ResourceRateCardInfo>
   package: azure-arm-commerce
-- uid: azure-arm-commerce.RateCard.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Vous permet d’interroger des métadonnées de ressource/compteur et les prix associés utilisés dans un abonnement donné par ID de l’offre, de devise, de paramètres régionaux et de région. Les métadonnées associées aux compteurs de facturation, y compris, mais ne pas limitée aux noms de service, types, les ressources, les unités de mesure et les régions, est susceptible de changer à tout moment et sans préavis. Si vous avez l’intention d’utiliser ces données de facturation de façon automatisée, utilisez le compteur de facturation GUID pour identifier de façon unique chaque élément facturable. Si le compteur de facturation GUID est planifié pour modifier en raison d’un nouveau modèle de facturation, vous serez averti avant la modification.
-  syntax:
-    content: 'function get(filter: string, callback: ServiceCallback<ResourceRateCardInfo>)'
-    parameters:
-    - id: filter
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-commerce.ResourceRateCardInfo>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-commerce.ResourceRateCardInfo>
-  package: azure-arm-commerce
 - uid: azure-arm-commerce.RateCard.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<ResourceRateCardInfo>)
   children: []
   type: method
   langs:
@@ -91,8 +69,30 @@ items:
       type:
       - Promise<azure-arm-commerce.ResourceRateCardInfo>
   package: azure-arm-commerce
+- uid: azure-arm-commerce.RateCard.get_1
+  name: get(string, ServiceCallback<ResourceRateCardInfo>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Vous permet d’interroger des métadonnées de ressource/compteur et les prix associés utilisés dans un abonnement donné par ID de l’offre, de devise, de paramètres régionaux et de région. Les métadonnées associées aux compteurs de facturation, y compris, mais ne pas limitée aux noms de service, types, les ressources, les unités de mesure et les régions, est susceptible de changer à tout moment et sans préavis. Si vous avez l’intention d’utiliser ces données de facturation de façon automatisée, utilisez le compteur de facturation GUID pour identifier de façon unique chaque élément facturable. Si le compteur de facturation GUID est planifié pour modifier en raison d’un nouveau modèle de facturation, vous serez averti avant la modification.
+  syntax:
+    content: 'function get(filter: string, callback: ServiceCallback<ResourceRateCardInfo>)'
+    parameters:
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-commerce.ResourceRateCardInfo>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-commerce.ResourceRateCardInfo>
+  package: azure-arm-commerce
 - uid: azure-arm-commerce.RateCard.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -117,6 +117,7 @@ items:
   package: azure-arm-commerce
 references:
 - uid: Promise<azure-arm-commerce.ResourceRateCardInfo>
+  name: ResourceRateCardInfo>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -126,6 +127,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-commerce.ResourceRateCardInfo>
+  name: ResourceRateCardInfo>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -135,6 +137,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-commerce.ResourceRateCardInfo>>
+  name: ResourceRateCardInfo>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

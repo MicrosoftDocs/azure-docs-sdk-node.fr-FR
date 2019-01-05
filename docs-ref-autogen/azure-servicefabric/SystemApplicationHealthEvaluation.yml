@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 68b77df2fd396cc9975fa4cd8fc187419d129481
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52064870"
+items:
+- uid: azure-servicefabric.SystemApplicationHealthEvaluation
+  name: SystemApplicationHealthEvaluation
+  fullName: SystemApplicationHealthEvaluation
+  children:
+  - azure-servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: 'Représente l’évaluation d’intégrité pour le fabric : / application système, contenant des informations sur les données et de l’algorithme utilisé par le magasin d’intégrité pour évaluer l’intégrité. La version d’évaluation est retournée uniquement lorsque l’état d’intégrité agrégé du cluster est erreur ou avertissement.'
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé actuel de l’application système. Les types d’évaluations non intègres peuvent être DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation ou EventHealthEvaluation.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7c77855b4f09a6b458e73b5e1b0d76d94b54ba6b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52073604"
+items:
+- uid: azure-servicefabric.ServiceInfo
+  name: ServiceInfo
+  fullName: ServiceInfo
+  children:
+  - azure-servicefabric.ServiceInfo.healthState
+  - azure-servicefabric.ServiceInfo.id
+  - azure-servicefabric.ServiceInfo.isServiceGroup
+  - azure-servicefabric.ServiceInfo.manifestVersion
+  - azure-servicefabric.ServiceInfo.name
+  - azure-servicefabric.ServiceInfo.serviceKind
+  - azure-servicefabric.ServiceInfo.serviceStatus
+  - azure-servicefabric.ServiceInfo.typeName
+  langs:
+  - typeScript
+  type: interface
+  summary: Informations sur un service Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent : « Invalid », « Ok », « Avertissement », « Error », « Inconnu »'
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Identité du service. Cet ID est une représentation encodée du nom du service. Cela est utilisé dans les API REST pour identifier la ressource de service.
+
+    Depuis la version 6.0, les noms hiérarchiques sont séparés par le «\~» caractères. Par exemple, si le nom du service est « fabric : / myapp/app1/svc1 », l’identité du service serait « myapp ~ app1\~svc1 » dans 6.0 et supérieures et « mon_app/app1/svc1 » dans les versions précédentes.
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.isServiceGroup
+  name: isServiceGroup
+  fullName: isServiceGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indique si le service est dans un groupe de service.
+  optional: true
+  syntax:
+    content: 'isServiceGroup?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.manifestVersion
+  name: manifestVersion
+  fullName: manifestVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Version du manifeste de service.
+  optional: true
+  syntax:
+    content: 'manifestVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nom complet du service avec « fabric : » Schéma d’URI.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Discriminateur polymorphe
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.serviceStatus
+  name: serviceStatus
+  fullName: serviceStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "L’état de l’application. Les valeurs possibles incluent : 'Inconnu', 'Active', « Mise à niveau », « suppression », « Création », « échec »"
+  optional: true
+  syntax:
+    content: 'serviceStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceInfo.typeName
+  name: typeName
+  fullName: typeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom du type de service tel que spécifié dans le manifeste de service.
+  optional: true
+  syntax:
+    content: 'typeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
