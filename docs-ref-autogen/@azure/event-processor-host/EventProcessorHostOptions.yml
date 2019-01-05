@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9e3f638b19d4ce0c2761dfaa54950d6187dabe66
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52012920"
+items:
+- uid: '@azure/event-processor-host.EventProcessorHostOptions'
+  name: EventProcessorHostOptions
+  fullName: EventProcessorHostOptions
+  children:
+  - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  langs:
+  - typeScript
+  type: interface
+  summary: Décrit les paramètres facultatifs qui peuvent être fournies pour la création d’un EventProcessorHost.
+  extends:
+    name: '@azure/event-processor-host.FromConnectionStringOptions'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+  name: checkpointManager
+  fullName: checkpointManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {CheckpointManager} [checkpointManager] Un gestionnaire pour gérer les points de contrôle.
+
+    Par défaut : ** `AzureStorageCheckpointLeaseManager` **.
+  optional: true
+  syntax:
+    content: 'checkpointManager?: CheckpointManager'
+    return:
+      type:
+      - '@azure/event-processor-host.CheckpointManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+  name: eventHubConnectionString
+  fullName: eventHubConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{chaîne} [eventHubConnectionString] Chaîne de connexion pour le concentrateur d’événements recevoir à partir de. Exemple : « Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/ ; SharedAccessKeyName = my-SA-name ; SharedAccessKey = my-SA-key ».'
+  optional: true
+  syntax:
+    content: 'eventHubConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+  name: leaseManager
+  fullName: leaseManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{LeaseManager} [LeaseManager] Un gestionnaire pour gérer les baux. Par défaut : ** `AzureStorageCheckpointLeaseManager` **.'
+  optional: true
+  syntax:
+    content: 'leaseManager?: LeaseManager'
+    return:
+      type:
+      - '@azure/event-processor-host.LeaseManager'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+  name: storageConnectionString
+  fullName: storageConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{chaîne} [storageConnectionString] Chaîne de connexion au compte de stockage Azure utilisé pour les baux et les points de contrôle. Exemple « DefaultEndpointsProtocol = https ; AccountName = < nom du compte > ; AccountKey = < clé de compte > ; EndpointSuffix=core.windows.net »'
+  optional: true
+  syntax:
+    content: 'storageConnectionString?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+  name: storageContainerName
+  fullName: storageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{chaîne} [storageContainerName] Nom de conteneur de stockage Azure pour une utilisation par le Gestionnaire de bail et de point de contrôle intégré.'
+  optional: true
+  syntax:
+    content: 'storageContainerName?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+  name: tokenProvider
+  fullName: tokenProvider
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{TokenProvider} [tokenProvider] Une instance de l’interface de fournisseur de jetons qui fournit le jeton d’authentification. Valeur par défaut : ** `SasTokenProvider` **.'
+  optional: true
+  syntax:
+    content: 'tokenProvider?: TokenProvider'
+    return:
+      type:
+      - TokenProvider
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  name: FromConnectionStringOptions
+  spec.typeScript:
+  - name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    uid: '@azure/event-processor-host.FromConnectionStringOptions'
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  spec.typeScript:
+  - name: CheckpointManager
+    fullName: CheckpointManager
+    uid: '@azure/event-processor-host.CheckpointManager'
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  spec.typeScript:
+  - name: LeaseManager
+    fullName: LeaseManager
+    uid: '@azure/event-processor-host.LeaseManager'

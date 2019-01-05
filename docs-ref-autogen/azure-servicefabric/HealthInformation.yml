@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b0266aeafd1b03a205eb770e7f390592b64d13cf
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660453"
+items:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  fullName: HealthInformation
+  children:
+  - azure-servicefabric.HealthInformation.description
+  - azure-servicefabric.HealthInformation.healthState
+  - azure-servicefabric.HealthInformation.property
+  - azure-servicefabric.HealthInformation.removeWhenExpired
+  - azure-servicefabric.HealthInformation.sequenceNumber
+  - azure-servicefabric.HealthInformation.sourceId
+  - azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  langs:
+  - typeScript
+  type: interface
+  summary: Représente les informations de rapport d’intégrité courantes. Il est inclus dans tous les rapports d’intégrité envoyés au magasin d’intégrité et dans tous les événements d’intégrité retournées par les requêtes d’intégrité.
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Description des informations d’intégrité. Il s’agit de texte libre utilisé pour ajouter des informations sur le rapport lisibles par l’homme.
+
+    La longueur de chaîne maximale de la description est de 4 096 caractères.
+
+    Si la chaîne fournie est plus longue, elle est automatiquement tronquée.
+
+    Si elle est tronquée, les derniers caractères de la description contiennent un marqueur « [Tronqué] », et la taille totale de la chaîne est de 4 096 caractères.
+
+    La présence du marqueur indique aux utilisateurs qu’une troncation a été effectuée.
+
+    Notez que si elle est tronquée, la description a moins que les 4 096 caractères de la chaîne d’origine.
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent : « Invalid », « Ok », « Avertissement », « Error », « Inconnu »'
+  syntax:
+    content: 'healthState: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.property
+  name: property
+  fullName: property
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Propriété des informations d’intégrité. Une entité peut avoir des rapports d’intégrité pour différentes propriétés.
+
+    La propriété est une chaîne et non une énumération fixe pour offrir au rapporteur la possibilité de catégoriser la condition d’état qui déclenche le rapport.
+
+    Par exemple, un rapporteur avec l’ID source (SourceId) « LocalWatchdog » peut surveiller l’état du disque disponible sur un nœud. Il peut donc signaler la propriété « AvailableDisk » sur ce nœud.
+
+    Le même rapporteur peut surveiller la connectivité du nœud. Il peut donc signaler une propriété « Connectivity » sur le même nœud.
+
+    Dans le magasin d’intégrité, ces rapports sont traités comme des événements d’intégrité distincts pour le nœud spécifié.
+
+    Avec l’ID source (SourceId), la propriété identifie de façon unique les informations d’intégrité.
+  syntax:
+    content: 'property: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.removeWhenExpired
+  name: removeWhenExpired
+  fullName: removeWhenExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Valeur qui indique si le rapport est supprimé du magasin d’intégrité quand il expire.
+
+    Si la valeur définie est true, le rapport est supprimé du magasin d’intégrité après son expiration.
+
+    Si la valeur définie est false, le rapport est traité comme une erreur quand il expire. La valeur de cette propriété est false par défaut.
+
+    Quand les clients créent un rapport régulièrement, ils doivent définir RemoveWhenExpired sur false (valeur par défaut).
+
+    De cette façon, si le rapporteur a des problèmes (par exemple blocage) et ne peut pas signaler, l’entité est évaluée au erreur lorsque le rapport d’intégrité arrive à expiration.
+
+    L’entité est marquée comme étant dans l’état d’intégrité Erreur.
+  optional: true
+  syntax:
+    content: 'removeWhenExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Numéro de séquence de ce rapport d’intégrité sous forme de chaîne numérique.
+
+    Le numéro de séquence de rapport est utilisé par le magasin d’intégrité pour détecter les rapports obsolètes.
+
+    S’il n’est pas spécifié, un numéro de séquence est généré automatiquement par le client d’intégrité quand un rapport est ajouté.
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.sourceId
+  name: sourceId
+  fullName: sourceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nom source qui identifie le composant client/espion/système qui a généré les informations d’intégrité.
+  syntax:
+    content: 'sourceId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthInformation.timeToLiveInMilliSeconds
+  name: timeToLiveInMilliSeconds
+  fullName: timeToLiveInMilliSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Durée pendant laquelle ce rapport d’intégrité est valide. Ce champ utilise le format ISO8601 pour spécifier la durée.
+
+    Quand les clients créent régulièrement des rapports, ils doivent les envoyer avec une fréquence supérieure à la durée de vie.
+
+    Si les clients créent des rapports lors d’une transition, ils peuvent définir la durée de vie sur Infinite (illimitée).
+
+    Quand la durée de vie expire, l’événement d’intégrité qui contient les informations d’intégrité est supprimé du magasin d’intégrité si RemoveWhenExpired est true, ou évalué comme erreur si RemoveWhenExpired est false.
+
+    Si cet argument n’est pas spécifié, la valeur de durée de vie est par défaut Infinite (illimitée).
+  optional: true
+  syntax:
+    content: 'timeToLiveInMilliSeconds?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric

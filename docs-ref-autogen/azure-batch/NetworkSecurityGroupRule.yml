@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 18de5e9dfe7c710d55408e003719f1b162ad7538
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53660403"
+items:
+- uid: azure-batch.NetworkSecurityGroupRule
+  name: NetworkSecurityGroupRule
+  fullName: NetworkSecurityGroupRule
+  children:
+  - azure-batch.NetworkSecurityGroupRule.access
+  - azure-batch.NetworkSecurityGroupRule.priority
+  - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.access
+  name: access
+  fullName: access
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Les valeurs possibles sont : « autoriser », « refuser »'
+  syntax:
+    content: 'access: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Priorités au sein d’un pool doivent être uniques et sont évaluées dans l’ordre de priorité.
+
+    Plus le numéro de priorité est faible, plus la priorité de la règle est élevée. Par exemple, les règles peut être spécifiées avec les numéros d’ordre de 150, 250 et 350. La règle avec le numéro de commande de 150 est prioritaire sur la règle qui a un ordre de 250. Priorités autorisées sont 150 à 3500. Si toutes les valeurs réservées ou en double sont fournies à que la demande échoue avec le code d’état HTTP 400.
+  syntax:
+    content: 'priority: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  name: sourceAddressPrefix
+  fullName: sourceAddressPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Les valeurs valides sont une seule adresse IP (par exemple 10.10.10.10), le sous-réseau IP (par exemple, 192.168.1.0/24), la balise par défaut, ou * (pour toutes les adresses).  Si d’autres valeurs sont fournies à que la demande échoue avec le code d’état HTTP 400.
+  syntax:
+    content: 'sourceAddressPrefix: string'
+    return:
+      type:
+      - string
+  package: azure-batch

@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fedc488f9fe69cda6ac1cbee7028faa2cad4cac6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008133"
+items:
+- uid: azure-servicefabric.Epoch
+  name: Epoch
+  fullName: Epoch
+  children:
+  - azure-servicefabric.Epoch.configurationVersion
+  - azure-servicefabric.Epoch.dataLossVersion
+  langs:
+  - typeScript
+  type: interface
+  summary: Une époque est un numéro de la configuration de la partition dans sa globalité. Lorsque la configuration du réplica de la valeur change, par exemple lorsque les modifications de réplica principal, les opérations qui sont répliquées à partir du nouveau réplica principal sont dits se situer une nouvelle époque de ceux qui ont été envoyés par l’ancien réplica principal.
+  package: azure-servicefabric
+- uid: azure-servicefabric.Epoch.configurationVersion
+  name: configurationVersion
+  fullName: configurationVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nombre de configuration actuel de cet objet Epoch. Le nombre de configuration est une valeur croissante est mis à jour chaque fois que la configuration de ce réplica définie des modifications.
+  optional: true
+  syntax:
+    content: 'configurationVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.Epoch.dataLossVersion
+  name: dataLossVersion
+  fullName: dataLossVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nombre de perte de données en cours de cette époque. La propriété nombre de perte de données est une valeur croissante qui est mis à jour chaque fois qu’une perte de données est suspectée, comme lorsque la valeur perte d’un quorum de réplicas dans le réplica qui inclut le réplica principal.
+  optional: true
+  syntax:
+    content: 'dataLossVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

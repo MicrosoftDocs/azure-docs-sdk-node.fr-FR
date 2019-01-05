@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 62fd16ee404efba59799d1de2f35e41f30d61e8d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126437"
+items:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  name: DeployedServicePackageHealthStateFilter
+  fullName: DeployedServicePackageHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  - azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Définit les critères de correspondance pour déterminer si un package de services déployé doit être inclus en tant qu’enfant d’une application déployée dans le bloc de contrôle d’intégrité du cluster.
+
+    Les packages de service déployé sont retournés uniquement si les entités parent correspond à un filtre spécifié dans la description de requête de segment d’intégrité cluster. Le parent déployé l’application et son application parente doit être incluse dans le segment d’intégrité de cluster.
+
+    Un filtre peut mettre en correspondance zéro, de déployer un ou plusieurs packages, en fonction de ses propriétés de service.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Le filtre pour l’état d’intégrité des packages de service déployé. Il permet la sélection des packages de services déployés s’ils correspondent les États d’intégrité de votre choix.
+
+    Les valeurs possibles sont la valeur entière d’un des États d’intégrité suivants. Seuls les packages de services déployés qui correspondent au filtre sont retournés. Tous les packages de services déployés sont utilisés pour évaluer l’état de contrôle d’intégrité d’application agrégée parent déployé.
+
+    Si non spécifié, valeur par défaut est None, sauf si l’ID de package de service déployé est spécifié.
+
+    Si le filtre a la valeur par défaut et l’ID de package de service déployé est spécifié, le package de service déployé correspondant est retourné.
+
+    Les valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit.
+
+    Par exemple, si la valeur indiquée est 6, elle correspond à des packages de services déployés avec la valeur HealthState est OK (2) et Warning (4).
+
+    - Default : valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.
+
+    - None : filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à 1.
+
+    - OK : filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.
+
+    - Warning : filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.
+
+    - Error : filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.
+
+    - All : filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter
+  name: serviceManifestNameFilter
+  fullName: serviceManifestNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Le nom du manifeste de service qui identifie les packages de services déployés qui correspond au filtre.
+
+    Si spécifié, le filtre est appliqué uniquement pour les packages de services déployé spécifiée, le cas échéant.
+
+    Si aucun package de service déployé avec un nom de manifeste spécifié n’existe, rien n’est retourné dans le bloc de contrôle d’intégrité de cluster en fonction de ce filtre.
+
+    En cas de n’importe quel package de service déployé, ils sont inclus dans le segment d’intégrité de cluster si elle respecte les autres propriétés de filtre.
+
+    Si ce n’est pas les packages de service spécifié, tous déployés qui correspondent aux filtres parent (le cas échéant) sont pris en considération et mis en correspondance avec les autres membres de filtre comme filtre d’état d’intégrité.
+  optional: true
+  syntax:
+    content: 'serviceManifestNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter
+  name: servicePackageActivationIdFilter
+  fullName: servicePackageActivationIdFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    L’ID de l’activation d’un package de services déployé qui correspond au filtre.
+
+    Si non spécifié, le filtre s’applique à tous les packages de services déployé qui correspondent aux autres paramètres.
+
+    Si spécifié, le filtre correspond uniquement le package de service déployé avec l’ID d’activation spécifié.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationIdFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

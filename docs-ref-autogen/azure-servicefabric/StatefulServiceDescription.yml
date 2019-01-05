@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a26081a8779302e6524a8b01778592788b4d8c8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52101354"
+items:
+- uid: azure-servicefabric.StatefulServiceDescription
+  name: StatefulServiceDescription
+  fullName: StatefulServiceDescription
+  children:
+  - azure-servicefabric.StatefulServiceDescription.flags
+  - azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  - azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  - azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  - azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  langs:
+  - typeScript
+  type: interface
+  summary: Décrit un service avec état.
+  extends:
+    name: azure-servicefabric.ServiceDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Indicateurs spécifiant si les autres propriétés sont définies. Les propriétés associées correspond à un indicateur spécifié ci-dessous, qui, si défini, indiquer que la propriété est spécifiée.
+
+    Cette propriété peut être une combinaison de ces indicateurs obtenu à l’aide des opérateur « OR » au niveau du bit.
+
+    Par exemple, si la valeur indiquée est 6 les indicateurs pour le paramètre QuorumLossWaitDuration (2) et StandByReplicaKeepDuration(4) sont définis.
+
+    - None : n’indique pas toutes les autres propriétés sont définies. La valeur est égale à zéro.
+
+    - Paramètre ReplicaRestartWaitDuration - indique la paramètre ReplicaRestartWaitDuration propriété est définie. La valeur est égale à 1.
+
+    - Paramètre QuorumLossWaitDuration - indique la paramètre QuorumLossWaitDuration propriété est définie. La valeur est
+
+    2.
+
+    - Paramètre StandByReplicaKeepDuration - indique la propriété a la valeur de StandByReplicaKeepDuration. La valeur est égale à 4.
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.hasPersistedState
+  name: hasPersistedState
+  fullName: hasPersistedState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Indicateur précisant s’il s’agit d’un service persistant qui stocke des États sur le disque local.
+
+    S’il s’agit ensuite la valeur de cette propriété est true, si ce n’est pas la valeur est false.
+  syntax:
+    content: 'hasPersistedState: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.minReplicaSetSize
+  name: minReplicaSetSize
+  fullName: minReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Taille minimale du jeu de réplicas en tant que nombre.
+  syntax:
+    content: 'minReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds
+  name: quorumLossWaitDurationSeconds
+  fullName: quorumLossWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Durée maximale, en secondes, pendant laquelle une partition est autorisée à être à l’état de perte de quorum.
+  optional: true
+  syntax:
+    content: 'quorumLossWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds
+  name: replicaRestartWaitDurationSeconds
+  fullName: replicaRestartWaitDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Durée, en secondes, entre l’arrêt d’un réplica et la création d’un nouveau réplica.
+  optional: true
+  syntax:
+    content: 'replicaRestartWaitDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds
+  name: standByReplicaKeepDurationSeconds
+  fullName: standByReplicaKeepDurationSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La définition sur la durée pendant laquelle les réplicas de secours doivent être conservées avant d’être supprimés.
+  optional: true
+  syntax:
+    content: 'standByReplicaKeepDurationSeconds?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServiceDescription.targetReplicaSetSize
+  name: targetReplicaSetSize
+  fullName: targetReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Taille cible du jeu de réplicas en tant que nombre.
+  syntax:
+    content: 'targetReplicaSetSize: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceDescription
+  name: ServiceDescription
+  spec.typeScript:
+  - name: ServiceDescription
+    fullName: ServiceDescription
+    uid: azure-servicefabric.ServiceDescription
