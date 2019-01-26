@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ede64883f1ec60cb487bb7278c4dbd33b5b26d86
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55061183"
+items:
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  fullName: ReprovisionPolicy
+  children:
+  - azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  - azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  langs:
+  - typeScript
+  type: interface
+  summary: Le comportement du service doit adopter lorsqu’un appareil est redéployé à un autre IoT Hub.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.migrateDeviceData
+  name: migrateDeviceData
+  fullName: migrateDeviceData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lorsque la valeur true (valeur par défaut) le Service Device Provisioning migre les données de l’appareil (twin, fonctionnalités des appareils et id d’appareil) à partir d’un hub à l’autre pendant une mise à jour des affectations de hub IoT. Si la valeur est false, le Service Device Provisioning réinitialise les données de l’appareil à sa configuration initiale, stockée dans son inscription correspondante.
+  syntax:
+    content: 'migrateDeviceData: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ReprovisionPolicy.updateHubAssignment
+  name: updateHubAssignment
+  fullName: updateHubAssignment
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lorsque la valeur true (valeur par défaut) le Service Device Provisioning sera évaluer l’attribution de hub de l’appareil et mettez-le à jour si nécessaire pour toute demande d’approvisionnement au-delà de la première à partir d’un appareil donné. Si la valeur est false, l’appareil le reste à son hub IoT en cours.
+  syntax:
+    content: 'updateHubAssignment: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iot-provisioning-service

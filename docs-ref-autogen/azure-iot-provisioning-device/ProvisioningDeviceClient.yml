@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e5b87b187860e4c6909a800c9d9d3c6264e861da
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 2adf0926203f00d13978e76c648697c524f0208c
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52145144"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059230"
 items:
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient
   name: ProvisioningDeviceClient
@@ -17,14 +17,14 @@ items:
   summary: Objet de client utilisé pour communiquer avec le Service Azure IoT Hub Device Provisioning.
   package: azure-iot-provisioning-device
 - uid: azure-iot-provisioning-device.ProvisioningDeviceClient.create
-  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport, X509SecurityClient | TpmSecurityClient)
+  name: create(string, string, X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)
   children: []
   type: method
   langs:
   - typeScript
   summary: Construisez un objet client qui peut être utilisé pour communiquer avec le Service Azure Device Provisioning.
   syntax:
-    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient)'
+    content: 'static function create(provisioningHost: string, idScope: string, transport: X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport, securityClient: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient)'
     parameters:
     - id: provisioningHost
       type:
@@ -36,28 +36,28 @@ items:
       description: Étendue d’ID pour le Service Device Provisioning.  Vous trouverez dans le portail Azure dans la section « Essentials » de l’onglet « Présentation » en tant que l’étendue de l’ID de chaîne
     - id: transport
       type:
-      - X509ProvisioningTransport | TpmProvisioningTransport
+      - X509ProvisioningTransport | TpmProvisioningTransport | SymmetricKeyProvisioningTransport
       description: 'Fonction constructeur pour l’approvisionnement de transport à utiliser.  Peut prendre l’une des opérations suivantes : [azure-iot-approvisionnement-device-http. HTTP](xref:azure-iot-provisioning-device-http.Http) [azure-iot-approvisionnement-device-amqp. Amqp](xref:azure-iot-provisioning-device-amqp.Amqp) [azure-iot-approvisionnement-device-amqp. AmqpWs](xref:azure-iot-provisioning-device-amqp.AmqpWs) [azure-iot-approvisionnement-device-mqtt. Mqtt](xref:azure-iot-provisioning-device-mqtt.Mqtt) [azure-iot-approvisionnement-device-mqtt. MqttWs](xref:azure-iot-provisioning-device-mqtt.MqttWs)'
     - id: securityClient
       type:
-      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
+      - azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
       description: >
-        Instance de la sécurité du client objet qui implémente le [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) ou [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interface.
-
-        Suggéré incluent des implémentations de ces interfaces [X509Security](xref:azure-iot-security-x509.X509Security) ou [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient)
+        Instance d’objet de client de sécurité qui implémente le [X509SecurityClient](xref:azure-iot-provisioning-device%3AX509SecurityClient) ou [TpmSecurityClient](xref:azure-iot-provisioning-device%3ATpmSecurityClient) interface.
+                                 [SymmetricKeySecurityClient](xref:azure-iot-provisioning-device%3ASymmetricKeySecurityClient) interface.
+        Suggéré incluent des implémentations de ces interfaces [X509Security](xref:azure-iot-security-x509.X509Security) ou [TpmSecurityClient](xref:azure-iot-security-tpm.TpmSecurityClient) [SymmetricKeySecurityClient](xref:azure-iot-security-symmetric-key.SymmetricKeySecurityClient)
     return:
       type:
       - azure-iot-provisioning-device.RegistrationClient
   package: azure-iot-provisioning-device
 references:
-- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient
-  name: X509SecurityClient | TpmSecurityClient
+- uid: azure-iot-provisioning-device.X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
+  name: X509SecurityClient | TpmSecurityClient | SymmetricKeySecurityClient
   spec.typeScript:
   - name: X509SecurityClient
     fullName: X509SecurityClient
     uid: azure-iot-provisioning-device.X509SecurityClient
-  - name: " | TpmSecurityClient"
-    fullName: " | TpmSecurityClient"
+  - name: " | TpmSecurityClient | SymmetricKeySecurityClient"
+    fullName: " | TpmSecurityClient | SymmetricKeySecurityClient"
 - uid: azure-iot-provisioning-device.RegistrationClient
   name: RegistrationClient
   spec.typeScript:

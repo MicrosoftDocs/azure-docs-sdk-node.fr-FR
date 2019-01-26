@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7274a6ba19eff9196489fcfbd33f8a68ed5572f4
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059370"
+items:
+- uid: azure-arm-batch.StartTask
+  name: StartTask
+  fullName: StartTask
+  children:
+  - azure-arm-batch.StartTask.commandLine
+  - azure-arm-batch.StartTask.containerSettings
+  - azure-arm-batch.StartTask.environmentSettings
+  - azure-arm-batch.StartTask.maxTaskRetryCount
+  - azure-arm-batch.StartTask.resourceFiles
+  - azure-arm-batch.StartTask.userIdentity
+  - azure-arm-batch.StartTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La ligne de commande ne s’exécute pas sous un interpréteur de commandes et par conséquent ne peut pas bénéficier des fonctionnalités de shell comme expansion de variables d’environnement. Si vous souhaitez tirer parti de ces fonctionnalités, vous devez appeler l’interpréteur de commandes dans la ligne de commande, par exemple à l’aide de « cmd /c MyCommand » dans Windows ou « / bin/sh - c MyCommand » dans Linux. Obligatoire si toutes les autres propriétés de la tâche startTask sont spécifiées.
+  optional: true
+  syntax:
+    content: 'commandLine?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lorsque cela est spécifié, tous les répertoires de manière récursive sous le AZ_BATCH_NODE_ROOT_DIR (la racine des répertoires Azure Batch sur le nœud) sont mappées dans le conteneur, toutes les variables d’environnement de tâche sont mappés dans le conteneur, et la ligne de commande de tâche est exécutée dans le conteneur.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-arm-batch.TaskContainerSettings
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-arm-batch.EnvironmentSetting[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le service Batch retente une tâche si le code de sortie de celle-ci diffère de zéro. Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives. Le service Batch tente la tâche une fois et peut réessayer jusqu’à cette limite. Par exemple, si le nombre maximal de tentatives est 3, Batch tente la tâche jusqu'à 4 fois (tentative initiale et 3 tentatives). Si le nombre maximal de tentatives est 0, le service Batch ne retente pas la tâche. Si le nombre maximal de tentatives est -1, les tentatives de service Batch la tâche sans limite.
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-arm-batch.ResourceFile[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si omis, la tâche s’exécute comme un utilisateur non administratif unique à la tâche.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-arm-batch.UserIdentity
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Si la valeur true et que la tâche de démarrage échoue sur un nœud de calcul, le service Batch retente la tâche de démarrage jusqu'à son nombre maximal de tentatives (maxTaskRetryCount). Si la tâche a toujours pas terminée après toutes les nouvelles tentatives, les marques de service Batch le nœud de calcul inutilisable et ne sera pas planifier des tâches à ce dernier. Cette condition peut être détectée par le biais de l’état du nœud et la planification détail de l’erreur. Si la valeur est false, le service Batch n’attend pas la tâche de démarrage se termine. Dans ce cas, les autres tâches peuvent commencer à s’exécuter sur le nœud de calcul tandis que la tâche de démarrage est en cours d’exécution ; et même si la tâche de démarrage échoue, les nouvelles tâches continueront d’être planifiés sur le nœud. La valeur par défaut est false.
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-arm-batch.TaskContainerSettings
+- uid: azure-arm-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-arm-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-arm-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-arm-batch.UserIdentity
