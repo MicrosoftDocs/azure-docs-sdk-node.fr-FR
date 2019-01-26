@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665193"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046613"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -23,7 +23,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="25d31-101">Configuration de la reconnaissance vocale.</span><span class="sxs-lookup"><span data-stu-id="25d31-101">Speech configuration.</span></span>
+  summary: <span data-ttu-id="acf2d-101">Configuration de la reconnaissance vocale.</span><span class="sxs-lookup"><span data-stu-id="acf2d-101">Speech configuration.</span></span>
   package: microsoft-cognitiveservices-speech-sdk
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
   name: authorizationToken
@@ -33,11 +33,11 @@ items:
   - typeScript
   type: property
   summary: >-
-    <span data-ttu-id="25d31-102">Définit le jeton d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="25d31-102">Sets the authorization token.</span></span>
+    <span data-ttu-id="acf2d-102">Obtient ou définit le jeton d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="acf2d-102">Get/Sets the authorization token.</span></span>
 
-    <span data-ttu-id="25d31-103">Si cette option est définie, clé d’abonnement est ignorée.</span><span class="sxs-lookup"><span data-stu-id="25d31-103">If this is set, subscription key is ignored.</span></span>
+    <span data-ttu-id="acf2d-103">Si le jeton autorizaton est défini, la clé d’abonnement est ignorée.</span><span class="sxs-lookup"><span data-stu-id="acf2d-103">If the autorizaton token is set, the subscription key is ignored.</span></span>
 
-    <span data-ttu-id="25d31-104">Utilisateur doit s’assurer que le jeton d’autorisation fourni est valide et n’ayant pas expiré.</span><span class="sxs-lookup"><span data-stu-id="25d31-104">User needs to make sure the provided authorization token is valid and not expired.</span></span>
+    <span data-ttu-id="acf2d-104">Utilisateur doit s’assurer que le jeton d’autorisation fourni est valide et n’ayant pas expiré.</span><span class="sxs-lookup"><span data-stu-id="acf2d-104">User needs to make sure the provided authorization token is valid and not expired.</span></span>
   syntax:
     content: 'public authorizationToken: string'
     return:
@@ -50,7 +50,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="25d31-105">Ferme la configuration.</span><span class="sxs-lookup"><span data-stu-id="25d31-105">Closes the configuration.</span></span>
+  summary: <span data-ttu-id="acf2d-105">Ferme la configuration.</span><span class="sxs-lookup"><span data-stu-id="acf2d-105">Closes the configuration.</span></span>
   syntax:
     content: function close()
     parameters: []
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="25d31-106">Obtient l’ID de point de terminaison d’un modèle de reconnaissance vocale personnalisé qui est utilisé pour la reconnaissance vocale.</span><span class="sxs-lookup"><span data-stu-id="25d31-106">Gets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>
+  summary: <span data-ttu-id="acf2d-106">Obtient/définit l’ID de point de terminaison d’un modèle de reconnaissance vocale personnalisé qui est utilisé pour la reconnaissance vocale.</span><span class="sxs-lookup"><span data-stu-id="acf2d-106">Gets/Sets the endpoint ID of a customized speech model that is used for speech recognition.</span></span>
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,18 +75,21 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="25d31-107">Crée une instance de la fabrique de reconnaissance vocale avec la région et le jeton d’autorisation initial spécifié.</span><span class="sxs-lookup"><span data-stu-id="25d31-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+  summary: >-
+    <span data-ttu-id="acf2d-107">Crée une instance de la fabrique de reconnaissance vocale avec la région et le jeton d’autorisation initial spécifié.</span><span class="sxs-lookup"><span data-stu-id="acf2d-107">Creates an instance of the speech factory with specified initial authorization token and region.</span></span>
+
+    <span data-ttu-id="acf2d-108">Remarque : Utilisez un jeton dérivé de votre clé d’abonnement LanguageUnderstanding au cas où vous souhaitez utiliser le module de reconnaissance intentionnelle.</span><span class="sxs-lookup"><span data-stu-id="acf2d-108">Note: Please use a token derived from your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
     - id: authorizationToken
       type:
       - string
-      description: <span data-ttu-id="25d31-108">Le jeton d’autorisation initiale.</span><span class="sxs-lookup"><span data-stu-id="25d31-108">The initial authorization token.</span></span>
+      description: <span data-ttu-id="acf2d-109">Le jeton d’autorisation initiale.</span><span class="sxs-lookup"><span data-stu-id="acf2d-109">The initial authorization token.</span></span>
     - id: region
       type:
       - string
-      description: <span data-ttu-id="25d31-109">Le nom de la région (voir la <a href="https://aka.ms/csspeech/region">page région</a>).</span><span class="sxs-lookup"><span data-stu-id="25d31-109">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+      description: <span data-ttu-id="acf2d-110">Le nom de la région (voir la <a href="https://aka.ms/csspeech/region">page région</a>).</span><span class="sxs-lookup"><span data-stu-id="acf2d-110">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -98,22 +101,24 @@ items:
   langs:
   - typeScript
   summary: >-
-    <span data-ttu-id="25d31-110">Crée une instance de la fabrique de reconnaissance vocale avec le point de terminaison spécifié et la clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="25d31-110">Creates an instance of the speech factory with specified endpoint and subscription key.</span></span>
+    <span data-ttu-id="acf2d-111">Crée une instance de la fabrique de reconnaissance vocale avec le point de terminaison spécifié et la clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="acf2d-111">Creates an instance of the speech factory with specified endpoint and subscription key.</span></span>
 
-    <span data-ttu-id="25d31-111">Cette méthode est uniquement destinée aux utilisateurs qui utilisent un point de terminaison de service non standard ou les paramètres.</span><span class="sxs-lookup"><span data-stu-id="25d31-111">This method is intended only for users who use a non-standard service endpoint or paramters.</span></span>
+    <span data-ttu-id="acf2d-112">Cette méthode est uniquement destinée aux utilisateurs qui utilisent un point de terminaison de service non standard ou les paramètres.</span><span class="sxs-lookup"><span data-stu-id="acf2d-112">This method is intended only for users who use a non-standard service endpoint or paramters.</span></span>
 
-    <span data-ttu-id="25d31-112">le paramètre de langue dans l’uri est prioritaire, et la langue efficace est « fr-fr ».</span><span class="sxs-lookup"><span data-stu-id="25d31-112">the language setting in uri takes precedence, and the effective language is "de-DE".</span></span>
+    <span data-ttu-id="acf2d-113">le paramètre de langue dans l’uri est prioritaire, et la langue efficace est « fr-fr ».</span><span class="sxs-lookup"><span data-stu-id="acf2d-113">the language setting in uri takes precedence, and the effective language is "de-DE".</span></span>
+
+    <span data-ttu-id="acf2d-114">Remarque : Utilisez votre clé d’abonnement LanguageUnderstanding au cas où vous souhaitez utiliser le module de reconnaissance intentionnelle.</span><span class="sxs-lookup"><span data-stu-id="acf2d-114">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
     - id: endpoint
       type:
       - URL
-      description: <span data-ttu-id="25d31-113">Le point de terminaison de service pour se connecter à.</span><span class="sxs-lookup"><span data-stu-id="25d31-113">The service endpoint to connect to.</span></span>
+      description: <span data-ttu-id="acf2d-115">Le point de terminaison de service pour se connecter à.</span><span class="sxs-lookup"><span data-stu-id="acf2d-115">The service endpoint to connect to.</span></span>
     - id: subscriptionKey
       type:
       - string
-      description: <span data-ttu-id="25d31-114">La clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="25d31-114">The subscription key.</span></span>
+      description: <span data-ttu-id="acf2d-116">La clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="acf2d-116">The subscription key.</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -124,18 +129,21 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="25d31-115">Instance statique de SpeechConfig retournée en passant la région subscriptionKey et le service.</span><span class="sxs-lookup"><span data-stu-id="25d31-115">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+  summary: >-
+    <span data-ttu-id="acf2d-117">Instance statique de SpeechConfig retournée en passant la région subscriptionKey et le service.</span><span class="sxs-lookup"><span data-stu-id="acf2d-117">Static instance of SpeechConfig returned by passing subscriptionKey and service region.</span></span>
+
+    <span data-ttu-id="acf2d-118">Remarque : Utilisez votre clé d’abonnement LanguageUnderstanding au cas où vous souhaitez utiliser le module de reconnaissance intentionnelle.</span><span class="sxs-lookup"><span data-stu-id="acf2d-118">Note: Please use your LanguageUnderstanding subscription key in case you want to use the Intent recognizer.</span></span>
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
     - id: subscriptionKey
       type:
       - string
-      description: <span data-ttu-id="25d31-116">La clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="25d31-116">The subscription key.</span></span>
+      description: <span data-ttu-id="acf2d-119">La clé d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="acf2d-119">The subscription key.</span></span>
     - id: region
       type:
       - string
-      description: <span data-ttu-id="25d31-117">Le nom de la région (voir la <a href="https://aka.ms/csspeech/region">page région</a>).</span><span class="sxs-lookup"><span data-stu-id="25d31-117">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
+      description: <span data-ttu-id="acf2d-120">Le nom de la région (voir la <a href="https://aka.ms/csspeech/region">page région</a>).</span><span class="sxs-lookup"><span data-stu-id="acf2d-120">The region name (see the <a href="https://aka.ms/csspeech/region">region page</a>).</span></span>
     return:
       type:
       - microsoft-cognitiveservices-speech-sdk.SpeechConfig
@@ -146,18 +154,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="25d31-118">Retourne la valeur actuelle d’une propriété arbitraire.</span><span class="sxs-lookup"><span data-stu-id="25d31-118">Returns the current value of an arbitrary property.</span></span>
+  summary: <span data-ttu-id="acf2d-121">Retourne la valeur actuelle d’une propriété arbitraire.</span><span class="sxs-lookup"><span data-stu-id="acf2d-121">Returns the current value of an arbitrary property.</span></span>
   syntax:
     content: 'function getProperty(name: string, def?: string)'
     parameters:
     - id: name
       type:
       - string
-      description: <span data-ttu-id="25d31-119">Le nom de la propriété à la requête.</span><span class="sxs-lookup"><span data-stu-id="25d31-119">The name of the property to query.</span></span>
+      description: <span data-ttu-id="acf2d-122">Le nom de la propriété à la requête.</span><span class="sxs-lookup"><span data-stu-id="acf2d-122">The name of the property to query.</span></span>
     - id: def
       type:
       - string
-      description: <span data-ttu-id="25d31-120">La valeur à retourner si la propriété n’est pas connue.</span><span class="sxs-lookup"><span data-stu-id="25d31-120">The value to return in case the property is not known.</span></span>
+      description: <span data-ttu-id="acf2d-123">La valeur à retourner si la propriété n’est pas connue.</span><span class="sxs-lookup"><span data-stu-id="acf2d-123">The value to return in case the property is not known.</span></span>
       optional: true
     return:
       type:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="25d31-121">Format de sortie obtient.</span><span class="sxs-lookup"><span data-stu-id="25d31-121">Gets output format.</span></span>
+  summary: <span data-ttu-id="acf2d-124">Obtient/définit le format de sortie.</span><span class="sxs-lookup"><span data-stu-id="acf2d-124">Gets/Sets the output format.</span></span>
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -183,19 +191,19 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="25d31-122">Définit une propriété arbitraire.</span><span class="sxs-lookup"><span data-stu-id="25d31-122">Sets an arbitrary property.</span></span>
+  summary: <span data-ttu-id="acf2d-125">Définit une propriété arbitraire.</span><span class="sxs-lookup"><span data-stu-id="acf2d-125">Sets an arbitrary property.</span></span>
   syntax:
     content: 'function setProperty(name: string, value: string)'
     parameters:
     - id: name
       type:
       - string
-      description: <span data-ttu-id="25d31-123">Le nom de la propriété à définir.</span><span class="sxs-lookup"><span data-stu-id="25d31-123">The name of the property to set.</span></span>
+      description: <span data-ttu-id="acf2d-126">Le nom de la propriété à définir.</span><span class="sxs-lookup"><span data-stu-id="acf2d-126">The name of the property to set.</span></span>
     - id: value
       type:
       - string
       description: >
-        <span data-ttu-id="25d31-124">La nouvelle valeur de la propriété.</span><span class="sxs-lookup"><span data-stu-id="25d31-124">The new value of the property.</span></span>
+        <span data-ttu-id="acf2d-127">La nouvelle valeur de la propriété.</span><span class="sxs-lookup"><span data-stu-id="acf2d-127">The new value of the property.</span></span>
   package: microsoft-cognitiveservices-speech-sdk
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
   name: speechRecognitionLanguage
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="25d31-125">Définit la langue d’entrée.</span><span class="sxs-lookup"><span data-stu-id="25d31-125">Sets the input language.</span></span>
+  summary: <span data-ttu-id="acf2d-128">Obtient/définit la langue d’entrée.</span><span class="sxs-lookup"><span data-stu-id="acf2d-128">Gets/Sets the input language.</span></span>
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:
