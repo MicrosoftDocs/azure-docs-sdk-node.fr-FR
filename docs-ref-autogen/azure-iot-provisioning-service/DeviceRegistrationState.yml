@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 078841eb8e2febb0ac9495cc45c334a4adb24739
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 518ad2370ba604fcf3a2de8469224f3f77fc9db3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52121344"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55056560"
 items:
 - uid: azure-iot-provisioning-service.DeviceRegistrationState
   name: DeviceRegistrationState
@@ -19,6 +19,7 @@ items:
   - azure-iot-provisioning-service.DeviceRegistrationState.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.DeviceRegistrationState.registrationId
   - azure-iot-provisioning-service.DeviceRegistrationState.status
+  - azure-iot-provisioning-service.DeviceRegistrationState.substatus
   langs:
   - typeScript
   type: interface
@@ -146,12 +147,33 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Qu’est l’état d’approvisionnement de l’appareil à ce moment particulier.
+  summary: Qu’est l’état d’approvisionnement de l’appareil au moment de la demande.
   syntax:
     content: 'status: RegistrationStatus'
     return:
       type:
       - azure-iot-provisioning-service.RegistrationStatus
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.DeviceRegistrationState.substatus
+  name: substatus
+  fullName: substatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Sous-état pour les appareils « Assigné ». Les valeurs possibles incluent :
+
+    - 'initialAssignment' : Appareil a été affecté à un IoT hub pour la première fois.
+
+    - 'deviceDataMigrated': Appareil a été attribué à un autre hub IoT et ses données de l’appareil a été migrées à partir du hub IoT précédemment attribué. Données de l’appareil a été supprimées à partir du hub IoT précédemment attribué.
+
+    - 'deviceDataReset':  Appareil a été attribué à un autre hub IoT et ses données de l’appareil a été remplies à partir de l’état initial stockée lors de l’inscription. Données de l’appareil a été supprimées à partir du hub IoT précédemment attribué.
+  syntax:
+    content: 'substatus: RegistrationSubstatus'
+    return:
+      type:
+      - azure-iot-provisioning-service.RegistrationSubstatus
   package: azure-iot-provisioning-service
 references:
 - uid: azure-iot-provisioning-service.RegistrationStatus
@@ -160,3 +182,9 @@ references:
   - name: RegistrationStatus
     fullName: RegistrationStatus
     uid: azure-iot-provisioning-service.RegistrationStatus
+- uid: azure-iot-provisioning-service.RegistrationSubstatus
+  name: RegistrationSubstatus
+  spec.typeScript:
+  - name: RegistrationSubstatus
+    fullName: RegistrationSubstatus
+    uid: azure-iot-provisioning-service.RegistrationSubstatus

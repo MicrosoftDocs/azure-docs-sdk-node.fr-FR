@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aa68703453f331e36ff26d7b9358199b37436807
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057350"
+items:
+- uid: azure-arm-batch.DataDisk
+  name: DataDisk
+  fullName: DataDisk
+  children:
+  - azure-arm-batch.DataDisk.caching
+  - azure-arm-batch.DataDisk.diskSizeGB
+  - azure-arm-batch.DataDisk.lun
+  - azure-arm-batch.DataDisk.storageAccountType
+  langs:
+  - typeScript
+  type: interface
+  summary: Paramètres de disque de données qui seront utilisées par les disques de données associées aux nœuds de calcul dans le pool.
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.caching
+  name: caching
+  fullName: caching
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Les valeurs sont :
+
+
+    none : le mode de mise en cache pour le disque n’est pas activée.
+
+    readOnly - le mode de mise en cache pour le disque est en lecture seule.
+
+    lecture/écriture - le mode de mise en cache pour le disque est en lecture et d’écriture.
+
+
+    La valeur par défaut pour la mise en cache est none. Pour plus d’informations sur les options de mise en cache, consultez : https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.
+
+    Les valeurs possibles incluent : 'None', 'ReadOnly', 'ReadWrite'
+  optional: true
+  syntax:
+    content: 'caching?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.diskSizeGB
+  name: diskSizeGB
+  fullName: diskSizeGB
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'diskSizeGB: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.lun
+  name: lun
+  fullName: lun
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le numéro d’unité logique est utilisé pour identifier de manière unique chaque disque de données. Si vous y attacher plusieurs disques, chacune doit avoir un numéro d’unité logique distinct.
+  syntax:
+    content: 'lun: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.DataDisk.storageAccountType
+  name: storageAccountType
+  fullName: storageAccountType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Si omis, la valeur par défaut est « Standard_LRS ». Les valeurs sont :
+
+
+    Standard_LRS - le disque de données doit utiliser le stockage localement redondant standard.
+
+    Premium_LRS - le disque de données doit utiliser stockage premium localement redondant. Les valeurs possibles incluent : 'Standard_LRS', 'Premium_LRS'
+  optional: true
+  syntax:
+    content: 'storageAccountType?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

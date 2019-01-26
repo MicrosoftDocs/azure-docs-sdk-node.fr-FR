@@ -1,0 +1,198 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: beef3a61c6a71440ee20c903a76576ea99f1584f
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55050701"
+items:
+- uid: azure-arm-rediscache.RedisCreateParameters
+  name: RedisCreateParameters
+  fullName: RedisCreateParameters
+  children:
+  - azure-arm-rediscache.RedisCreateParameters.enableNonSslPort
+  - azure-arm-rediscache.RedisCreateParameters.location
+  - azure-arm-rediscache.RedisCreateParameters.minimumTlsVersion
+  - azure-arm-rediscache.RedisCreateParameters.redisConfiguration
+  - azure-arm-rediscache.RedisCreateParameters.shardCount
+  - azure-arm-rediscache.RedisCreateParameters.sku
+  - azure-arm-rediscache.RedisCreateParameters.staticIP
+  - azure-arm-rediscache.RedisCreateParameters.subnetId
+  - azure-arm-rediscache.RedisCreateParameters.tags
+  - azure-arm-rediscache.RedisCreateParameters.tenantSettings
+  - azure-arm-rediscache.RedisCreateParameters.zones
+  langs:
+  - typeScript
+  type: interface
+  summary: Paramètres fournis à l’opération créer Redis.
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.enableNonSslPort
+  name: enableNonSslPort
+  fullName: enableNonSslPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Spécifie si le serveur Redis non ssl port (6379) est activée.
+  optional: true
+  syntax:
+    content: 'enableNonSslPort?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.location
+  name: location
+  fullName: location
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: L’emplacement géographique où se trouve la ressource
+  syntax:
+    content: 'location: string'
+    return:
+      type:
+      - string
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.minimumTlsVersion
+  name: minimumTlsVersion
+  fullName: minimumTlsVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Facultatif : oblige les clients à utiliser une version TLS spécifiée (ou version ultérieure) pour se connecter (e, g, « 1.0 », « 1.1 », « 1,2 »). Les valeurs possibles incluent : '1.0', '1.1', '1.2'"
+  optional: true
+  syntax:
+    content: 'minimumTlsVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.redisConfiguration
+  name: redisConfiguration
+  fullName: redisConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Tous les paramètres de Redis. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries, List-max-ziplist-Value,Hash-max-ziplist-Entries,Hash-max-ziplist-Value,Set-max-intset-Entries,zset-max-ziplist-Entries,zset-max-ziplist-Value et ainsi de suite'
+  optional: true
+  syntax:
+    content: 'redisConfiguration?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.shardCount
+  name: shardCount
+  fullName: shardCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Le nombre de partitions doit être créé sur un Cache de Cluster Premium.
+  optional: true
+  syntax:
+    content: 'shardCount?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.sku
+  name: sku
+  fullName: sku
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: La référence SKU du cache Redis à déployer.
+  syntax:
+    content: 'sku: Sku'
+    return:
+      type:
+      - azure-arm-rediscache.Sku
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.staticIP
+  name: staticIP
+  fullName: staticIP
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Adresse IP statique. Obligatoire lorsque vous déployez un cache Redis à l’intérieur d’un réseau virtuel Azure existant.
+  optional: true
+  syntax:
+    content: 'staticIP?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'L’ID de ressource complet d’un sous-réseau dans un réseau virtuel à déployer le cache Redis. Exemple de format : /subscriptions/ {subscriptionId} /resourceGroups/ {resourceGroupName} / Microsoft. {Réseau | ClassicNetwork} / VirtualNetworks/vnet1/sous-réseaux/subnet1'
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.tags
+  name: tags
+  fullName: tags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Balises de ressource.
+  optional: true
+  syntax:
+    content: 'tags?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.tenantSettings
+  name: tenantSettings
+  fullName: tenantSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Un dictionnaire de paramètres du locataire
+  optional: true
+  syntax:
+    content: 'tenantSettings?: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.RedisCreateParameters.zones
+  name: zones
+  fullName: zones
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Une liste de disponibilité de zones indiquant où la ressource doit provenir.
+  optional: true
+  syntax:
+    content: 'zones?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-rediscache
+references:
+- uid: azure-arm-rediscache.Sku
+  name: Sku
+  spec.typeScript:
+  - name: Sku
+    fullName: Sku
+    uid: azure-arm-rediscache.Sku
