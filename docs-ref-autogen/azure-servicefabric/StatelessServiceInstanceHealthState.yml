@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState
+    name: StatelessServiceInstanceHealthState
+    fullName: StatelessServiceInstanceHealthState
+    children:
+      - azure-servicefabric.StatelessServiceInstanceHealthState.aggregatedHealthState
+      - azure-servicefabric.StatelessServiceInstanceHealthState.partitionId
+      - azure-servicefabric.StatelessServiceInstanceHealthState.replicaId
+      - azure-servicefabric.StatelessServiceInstanceHealthState.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente l’état d’intégrité de l’instance de service sans état, qui contient l’ID d’instance et l’état d’intégrité agrégé.'
+    extends:
+      name: azure-servicefabric.ReplicaHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’ID de la partition à laquelle appartient ce réplica.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de l’instance de service sans état sur le câble, ce champ est appelé ReplicaId.'
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceHealthState.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaHealthState
+    name: ReplicaHealthState
+    spec.typeScript:
+      - name: ReplicaHealthState
+        fullName: ReplicaHealthState
+        uid: azure-servicefabric.ReplicaHealthState
