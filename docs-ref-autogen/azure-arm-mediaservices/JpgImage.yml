@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JpgImage
+    name: JpgImage
+    fullName: JpgImage
+    children:
+      - azure-arm-mediaservices.JpgImage.keyFrameInterval
+      - azure-arm-mediaservices.JpgImage.label
+      - azure-arm-mediaservices.JpgImage.layers
+      - azure-arm-mediaservices.JpgImage.odatatype
+      - azure-arm-mediaservices.JpgImage.range
+      - azure-arm-mediaservices.JpgImage.start
+      - azure-arm-mediaservices.JpgImage.step
+      - azure-arm-mediaservices.JpgImage.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="73909-101">Décrit les propriétés de production d’une série d’images JPEG à partir de la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="73909-101">Describes the properties for producing a series of JPEG images from the input video.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Image
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="73909-102">La distance entre les deux images clés, définissant ainsi un groupe d’images (GOP).</span><span class="sxs-lookup"><span data-stu-id="73909-102">The distance between two key frames, thereby defining a group of pictures (GOP).</span></span> <span data-ttu-id="73909-103">La valeur doit être un entier différent de zéro dans les secondes de la plage [1, 30], spécifié au format ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="73909-103">The value should be a non-zero integer in the range [1, 30] seconds, specified in ISO 8601 format.</span></span> <span data-ttu-id="73909-104">La valeur par défaut est de 2 secondes (PT2S).</span><span class="sxs-lookup"><span data-stu-id="73909-104">The default is 2 seconds (PT2S).</span></span>'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="73909-105">Une étiquette facultative pour le codec.</span><span class="sxs-lookup"><span data-stu-id="73909-105">An optional label for the codec.</span></span> <span data-ttu-id="73909-106">L’étiquette peut être utilisée pour contrôler le comportement de muxing.</span><span class="sxs-lookup"><span data-stu-id="73909-106">The label can be used to control muxing behavior.</span></span>
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="73909-107">Collection de couches d’image JPEG sortie doivent être produites par l’encodeur.</span><span class="sxs-lookup"><span data-stu-id="73909-107">A collection of output JPEG image layers to be produced by the encoder.</span></span>
+    optional: true
+    syntax:
+      content: 'layers?: JpgLayer[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.JpgLayer[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="73909-108">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="73909-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.range
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"73909-109\">Position dans l’entrée vidéo à laquelle arrêter la génération de miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-109\">The position in the input video at which to stop generating thumbnails.</span></span> <span data-ttu-id=\"73909-110\">La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT5M30S pour s’arrêter à 5 minutes et 30 secondes), ou un nombre de frames (par exemple, 300 pour s’arrêter à la trame 300e), ou une valeur relative (par exemple, 100 %).</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-110\">The value can be in absolute timestamp (ISO 8601, e.g: PT5M30S to stop at 5 minutes and 30 seconds), or a frame count (For example, 300 to stop at the 300th frame), or a relative value (For example, 100%).</span></span>"
+    optional: true
+    syntax:
+      content: 'range?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"73909-111\">Position dans la vidéo d’entrée à partir de laquelle démarrer la génération de miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-111\">The position in the input video from where to start generating thumbnails.</span></span> <span data-ttu-id=\"73909-112\">La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT05S), ou un nombre de frames (par exemple, 10 pour le frame de 10), ou une valeur relative (par exemple, 1 %).</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-112\">The value can be in absolute timestamp (ISO 8601, e.g: PT05S), or a frame count (For example, 10 for the 10th frame), or a relative value (For example, 1%).</span></span> <span data-ttu-id=\"73909-113\">Prend également en charge une macro {Best}, ce qui indique à l’encodeur pour sélectionner la meilleure miniature à partir des premières secondes de la vidéo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-113\">Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video.</span></span>"
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.step
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"73909-114\">Les intervalles de génération des miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-114\">The intervals at which thumbnails are generated.</span></span> <span data-ttu-id=\"73909-115\">La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT05S pour une image toutes les 5 secondes), ou un nombre de frames (par exemple, 30 pour toutes les 30 images), ou une valeur relative (par exemple, 1 %).</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-115\">The value can be in absolute timestamp (ISO 8601, e.g: PT05S for one image every 5 seconds), or a frame count (For example, 30 for every 30 frames), or a relative value (For example, 1%).</span></span>"
+    optional: true
+    syntax:
+      content: 'step?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"73909-116\">Le mode de redimensionnement - comment la vidéo d’entrée doit être redimensionnée pour s’ajuster à la solution de sortie souhaité.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-116\">The resizing mode - how the input video will be resized to fit the desired output resolution(s).</span></span> <span data-ttu-id=\"73909-117\">Valeur par défaut est AutoSize.</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-117\">Default is AutoSize.</span></span> <span data-ttu-id=\"73909-118\">Les valeurs possibles incluent\_: 'None', 'AutoSize', 'AutoFit'</span><span class=\"sxs-lookup\"><span data-stu-id=\"73909-118\">Possible values include: 'None', 'AutoSize', 'AutoFit'</span></span>"
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Image
+    name: Image
+    spec.typeScript:
+      - name: Image
+        fullName: Image
+        uid: azure-arm-mediaservices.Image
+  - uid: 'azure-arm-mediaservices.JpgLayer[]'
+    name: 'JpgLayer[]'
+    spec.typeScript:
+      - name: JpgLayer
+        fullName: JpgLayer
+        uid: azure-arm-mediaservices.JpgLayer
+      - name: '[]'
+        fullName: '[]'
