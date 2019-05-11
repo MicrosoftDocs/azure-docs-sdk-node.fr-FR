@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationBackupEntity
+    name: ApplicationBackupEntity
+    fullName: ApplicationBackupEntity
+    children:
+      - azure-servicefabric.ApplicationBackupEntity.applicationName
+      - azure-servicefabric.ApplicationBackupEntity.entityKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Identifie l’application de Service Fabric qui est en cours de sauvegarde.
+    extends:
+      name: azure-servicefabric.BackupEntity
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupEntity.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupEntity.entityKind
+    name: entityKind
+    fullName: entityKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'entityKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupEntity
+    name: BackupEntity
+    spec.typeScript:
+      - name: BackupEntity
+        fullName: BackupEntity
+        uid: azure-servicefabric.BackupEntity

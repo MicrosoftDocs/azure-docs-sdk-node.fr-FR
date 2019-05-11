@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ProductContract
+    name: ProductContract
+    fullName: ProductContract
+    children:
+      - azure-arm-apimanagement.ProductContract.approvalRequired
+      - azure-arm-apimanagement.ProductContract.description
+      - azure-arm-apimanagement.ProductContract.displayName
+      - azure-arm-apimanagement.ProductContract.id
+      - azure-arm-apimanagement.ProductContract.name
+      - azure-arm-apimanagement.ProductContract.state
+      - azure-arm-apimanagement.ProductContract.subscriptionRequired
+      - azure-arm-apimanagement.ProductContract.subscriptionsLimit
+      - azure-arm-apimanagement.ProductContract.terms
+      - azure-arm-apimanagement.ProductContract.type
+    langs:
+      - typeScript
+    type: interface
+    summary: Détails du produit.
+    extends:
+      name: azure-arm-apimanagement.Resource
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.approvalRequired
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indique si une approbation d’abonnement est requise. Si la valeur est false, les nouveaux abonnements seront approuvées automatiquement permettant aux développeurs d’appeler les API du produit juste après l’abonnement. Si la valeur est true, les administrateurs doivent approuver manuellement l’abonnement avant que le développeur puisse appeler les API du produit. Peut être présent uniquement si la propriété de subscriptionRequired est présente et a la valeur False.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description du produit. Peut comporter des balises de mise en forme.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du produit.
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de la ressource
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de la ressource.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indique si le produit est publié ou non. Les produits publiés sont détectables par les utilisateurs du portail des développeurs. Les produits non publiés sont visibles uniquement par les administrateurs. État par défaut du produit est notPublished. Possible values include: ''notPublished'', ''published'''
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.subscriptionRequired
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si un abonnement de produit est requis pour accéder aux API inclus dans ce produit. Si la valeur est true, le produit est considéré comme «\_protégé\_» et une clé d’abonnement valide est nécessaire pour une demande à une API incluse dans le produit réussisse. Si la valeur est false, le produit est considéré comme «\_ouvert\_» et les demandes à une API incluse dans le produit peuvent être effectuées sans une clé d’abonnement.\nSi la propriété est omise lors de la création d’un nouveau produit que sa valeur est supposé avoir la valeur true."
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.subscriptionsLimit
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si le nombre d’abonnements, un utilisateur peut avoir à ce produit en même temps. Définissez cette valeur sur null ou omettez-la pour autoriser illimité d’abonnements par utilisateur. Peut être présent uniquement si la propriété de subscriptionRequired est présente et a la valeur False.'
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.terms
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Conditions d’utilisation du produit. Les développeurs qui veulent s’abonner au produit devront consulter et accepter ces conditions pour pouvoir terminer le processus d’abonnement.
+    optional: true
+    syntax:
+      content: 'terms?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductContract.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type de ressource pour la ressource de gestion des API.
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-apimanagement.Resource

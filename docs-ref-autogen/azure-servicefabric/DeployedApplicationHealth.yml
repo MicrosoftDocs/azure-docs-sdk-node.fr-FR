@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedApplicationHealth
+    name: DeployedApplicationHealth
+    fullName: DeployedApplicationHealth
+    children:
+      - azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+      - azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+      - azure-servicefabric.DeployedApplicationHealth.healthEvents
+      - azure-servicefabric.DeployedApplicationHealth.healthStatistics
+      - azure-servicefabric.DeployedApplicationHealth.name
+      - azure-servicefabric.DeployedApplicationHealth.nodeName
+      - azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: Informations sur l’intégrité d’une application déployée sur un nœud Service Fabric.
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "HealthState représentant l’état d’intégrité agrégé de l’entité calculée par le Gestionnaire de contrôle d’intégrité.\nL’évaluation d’intégrité de l’entité reflète tous les événements signalés sur l’entité et ses enfants (le cas échéant).\nL’agrégation est effectuée en appliquant la stratégie d’intégrité de votre choix. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+    name: deployedServicePackageHealthStates
+    fullName: deployedServicePackageHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Déployé les États de contrôle d’intégrité de package de service pour l’application déployée actuelle telle qu’elle figure dans le magasin d’intégrité.
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStates?: DeployedServicePackageHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des événements d’intégrité signalés sur l’entité.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Affiche les statistiques d’intégrité pour tous les types enfants de l’entité interrogée.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de l’application déployée sur le nœud dont les informations d’intégrité sont décrite par cet objet.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du nœud où cette application est déployée.
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Évaluations non intègres qui indiquent la raison pour laquelle l’état d’intégrité agrégé actuel a été retournée par le Gestionnaire de contrôle d’intégrité.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    name: 'DeployedServicePackageHealthState[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthState
+        fullName: DeployedServicePackageHealthState
+        uid: azure-servicefabric.DeployedServicePackageHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

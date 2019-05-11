@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation
+    name: ApplicationTypeApplicationsHealthEvaluation
+    fullName: ApplicationTypeApplicationsHealthEvaluation
+    children:
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.description
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.kind
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+      - azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente l’évaluation d’intégrité pour les applications d’un type d’application particulier. La version d’évaluation des applications de type application peut être retournée lors de l’évaluation d’intégrité de cluster retourne l’état d’intégrité agrégé défectueux, erreur ou avertissement. Il contient les évaluations d’intégrité pour chaque application non intègre du type d’application inclus qui affectés actuel état d’intégrité agrégé.'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de type application tel que défini dans le manifeste d’application.
+    optional: true
+    syntax:
+      content: 'applicationTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Description de l’évaluation d’intégrité, qui représente un résumé du processus d’évaluation.'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.maxPercentUnhealthyApplications
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Pourcentage maximal autorisé d’applications défectueuses pour le type d’application, spécifié en tant qu’entrée dans ApplicationTypeHealthPolicyMap.'
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre total d’applications du type d’application trouvé dans le magasin d’intégrité.
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationTypeApplicationsHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé. Inclut tous la ApplicationHealthEvaluation défectueuse de ce type d’application qui a affecté l’intégrité agrégée.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo
+    name: PartitionBackupConfigurationInfo
+    fullName: PartitionBackupConfigurationInfo
+    children:
+      - azure-servicefabric.PartitionBackupConfigurationInfo.kind
+      - azure-servicefabric.PartitionBackupConfigurationInfo.partitionId
+      - azure-servicefabric.PartitionBackupConfigurationInfo.policyInheritedFrom
+      - azure-servicefabric.PartitionBackupConfigurationInfo.policyName
+      - azure-servicefabric.PartitionBackupConfigurationInfo.serviceName
+      - azure-servicefabric.PartitionBackupConfigurationInfo.suspensionInfo
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Les informations de configuration de la sauvegarde, d’une partition spécifique, en spécifiant quelle stratégie de sauvegarde est appliquée et suspendre la description, le cas échéant.'
+    extends:
+      name: azure-servicefabric.BackupConfigurationInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’ID de partition identifier la partition.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.policyInheritedFrom
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’étendue à laquelle est appliquée la stratégie de sauvegarde. Les valeurs possibles incluent\_: 'Invalid', 'Partition', 'Service', 'Application'"
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.policyName
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de la stratégie de sauvegarde qui s’applique à cette application ou Service Fabric ou service partition.
+    optional: true
+    syntax:
+      content: 'policyName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom complet du service avec «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionBackupConfigurationInfo.suspensionInfo
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Décrit les détails de la suspension de sauvegarde.
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - azure-servicefabric.BackupSuspensionInfo
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupConfigurationInfo
+    name: BackupConfigurationInfo
+    spec.typeScript:
+      - name: BackupConfigurationInfo
+        fullName: BackupConfigurationInfo
+        uid: azure-servicefabric.BackupConfigurationInfo
+  - uid: azure-servicefabric.BackupSuspensionInfo
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: azure-servicefabric.BackupSuspensionInfo

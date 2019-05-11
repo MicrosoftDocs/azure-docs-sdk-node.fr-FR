@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.CheckValuePropertyBatchOperation
+    name: CheckValuePropertyBatchOperation
+    fullName: CheckValuePropertyBatchOperation
+    children:
+      - azure-servicefabric.CheckValuePropertyBatchOperation.kind
+      - azure-servicefabric.CheckValuePropertyBatchOperation.propertyName
+      - azure-servicefabric.CheckValuePropertyBatchOperation.value
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Représente une PropertyBatchOperation qui compare la valeur de la propriété avec la valeur attendue.
+      La CheckValuePropertyBatchOperation est généralement utilisée comme une condition préalable pour les opérations d’écriture dans le lot.
+      Notez que si un PropertyBatchOperation dans un PropertyBatch échoue, l’ensemble du lot échoue et ne peut pas être validé de manière transactionnelle.
+    extends:
+      name: azure-servicefabric.PropertyBatchOperation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckValuePropertyBatchOperation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckValuePropertyBatchOperation.propertyName
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de la propriété Service Fabric.
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.CheckValuePropertyBatchOperation.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La valeur de propriété attendue.
+    syntax:
+      content: 'value: PropertyValue'
+      return:
+        type:
+          - azure-servicefabric.PropertyValue
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PropertyBatchOperation
+    name: PropertyBatchOperation
+    spec.typeScript:
+      - name: PropertyBatchOperation
+        fullName: PropertyBatchOperation
+        uid: azure-servicefabric.PropertyBatchOperation
+  - uid: azure-servicefabric.PropertyValue
+    name: PropertyValue
+    spec.typeScript:
+      - name: PropertyValue
+        fullName: PropertyValue
+        uid: azure-servicefabric.PropertyValue
