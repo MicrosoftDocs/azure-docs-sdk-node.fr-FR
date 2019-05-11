@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse'
+    name: EntireDetectResponse
+    fullName: EntireDetectResponse
+    children:
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+      - '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant EntireDetectResponse.
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.expectedValues'
+    name: expectedValues
+    fullName: expectedValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ExpectedValues contiennent la valeur attendue pour chaque point d’entrée. L’index du tableau est cohérent avec la série d’entrée.
+    syntax:
+      content: 'expectedValues: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isAnomaly'
+    name: isAnomaly
+    fullName: isAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsAnomaly contient les propriétés d’anomalies pour chaque point d’entrée. True signifie qu'une anomalie positive ou négative a été détectée. L’index du tableau est cohérent avec la série d’entrée.
+    syntax:
+      content: 'isAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isNegativeAnomaly'
+    name: isNegativeAnomaly
+    fullName: isNegativeAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsNegativeAnomaly contient l’état d’anomalies dans une direction négative pour chaque point d’entrée. True signifie qu'une anomalie négative a été détectée. Une anomalie négatif signifie que le point est détecté en tant qu’une anomalie et sa valeur réelle est inférieure à celle attendue. L’index du tableau est cohérent avec la série d’entrée.
+    syntax:
+      content: 'isNegativeAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.isPositiveAnomaly'
+    name: isPositiveAnomaly
+    fullName: isPositiveAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: IsPositiveAnomaly contiennent l’état des anomalies dans le sens positif pour chaque point d’entrée. True signifie qu'une anomalie positif a été détectée. Une anomalie positif signifie que le point est détecté en tant qu’une anomalie et sa valeur réelle est supérieure à celle attendue. L’index du tableau est cohérent avec la série d’entrée.
+    syntax:
+      content: 'isPositiveAnomaly: boolean[]'
+      return:
+        type:
+          - 'boolean[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.lowerMargins'
+    name: lowerMargins
+    fullName: lowerMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'LowerMargins contiennent la marge inférieure de chaque point d’entrée. LowerMargin est utilisée pour calculer lowerBoundary, qui est égal à expectedValue - (100 - marginScale) * lowerMargin. Points entre la limite peuvent être marquées comme celles normales de côté client. L’index du tableau est cohérent avec la série d’entrée.'
+    syntax:
+      content: 'lowerMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Fréquence extraite de la série, zéro, aucun modèle récurrent n’a été trouvé.'
+    syntax:
+      content: 'period: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.EntireDetectResponse.upperMargins'
+    name: upperMargins
+    fullName: upperMargins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'UpperMargins contiennent la marge supérieure de chaque point d’entrée. UpperMargin est utilisée pour calculer upperBoundary, qui est égal à expectedValue + (100 - marginScale) * upperMargin. Anomalies dans la réponse peuvent être filtrées par upperBoundary et lowerBoundary. En ajustant la valeur de marginScale, anomalies moins importantes peuvent être filtrés dans côté client. L’index du tableau est cohérent avec la série d’entrée.'
+    syntax:
+      content: 'upperMargins: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/cognitiveservices-anomalydetector'
