@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    fullName: VideoLayer
+    children:
+      - azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+      - azure-arm-mediaservices.VideoLayer.bFrames
+      - azure-arm-mediaservices.VideoLayer.bitrate
+      - azure-arm-mediaservices.VideoLayer.frameRate
+      - azure-arm-mediaservices.VideoLayer.height
+      - azure-arm-mediaservices.VideoLayer.label
+      - azure-arm-mediaservices.VideoLayer.maxBitrate
+      - azure-arm-mediaservices.VideoLayer.odatatype
+      - azure-arm-mediaservices.VideoLayer.slices
+      - azure-arm-mediaservices.VideoLayer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les paramètres à utiliser lors de l’encodage de la vidéo d’entrée dans une couche de vitesse de transmission de sortie souhaité.
+    extends:
+      name: azure-arm-mediaservices.Layer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ou non les trames B ADAPTATIF doivent être utilisées lors de l’encodage de cette couche. Si non spécifié, l’encodeur s’allumer chaque fois que le profil vidéo permet son utilisation.'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nombre de trames B à utiliser lors de l’encodage de cette couche.  Si non spécifié, l’encodeur choisit un nombre approprié selon le profil vidéo et le niveau.'
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le débit binaire moyen en bits par seconde à utiliser pour coder la vidéo d’entrée lors de la génération de cette couche. Ce champ est obligatoire.
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le frame de taux (en images par seconde) à utiliser pour coder cette couche. La valeur peut être sous la forme M/n, où M et N sont des entiers (par exemple, 30000 1001) ou sous la forme d’un nombre (par exemple, 30 ou 29,97). L’encodeur impose des contraintes sur les fréquences d’images autorisées selon le profil et le niveau. S’il n’est pas spécifié, l’encodeur utilise la même fréquence d’images en tant que la vidéo d’entrée.'
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La hauteur de la vidéo de sortie pour cette couche. La valeur peut être absolu (en pixels) ou relatif (en pourcentage). Par exemple, 50 % signifie que la vidéo de sortie a la moitié des pixels autant de hauteur comme entrée.'
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’étiquette d’alphanumériques pour cette couche, qui peut être utilisée dans le multiplexage des calques différents vidéo et audio, ou pour nommer le fichier de sortie.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le débit maximal (en bits par seconde) à laquelle la mémoire tampon VBV supposer un rechargement.
+      Si non spécifié, par défaut est la même valeur que la vitesse de transmission.
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nombre de secteurs à utiliser lors de l’encodage de cette couche. Si non spécifié, la valeur par défaut est zéro, ce qui signifie que cet encodeur utilise un seul secteur pour chaque trame.'
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La largeur de la vidéo de sortie pour cette couche. La valeur peut être absolu (en pixels) ou relatif (en pourcentage). Par exemple, 50 % signifie que la vidéo de sortie a pixels autant la moitié de la largeur en tant que l’entrée.'
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-arm-mediaservices.Layer

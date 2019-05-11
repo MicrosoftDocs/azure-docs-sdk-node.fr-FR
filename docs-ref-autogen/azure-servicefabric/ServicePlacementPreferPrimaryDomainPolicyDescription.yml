@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName
+      - azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Décrit la stratégie à utiliser pour la sélection élective d’un Service service Fabric où les réplicas principaux du service doivent être placées de manière optimale dans un domaine particulier.
+      Cette stratégie de positionnement est généralement utilisée avec les domaines d’erreur dans les scénarios où le cluster Service Fabric est distribué géographiquement afin d’indiquer que le réplica principal d’un service doit se trouver dans un domaine d’erreur spécifique, ce qui, dans la géo-distribuée scénarios aligne généralement avec des limites régionales ou centre de données. Notez que dans la mesure où il s’agit d’une optimisation il est possible que le réplica principal peut finissent pas situés dans ce domaine en raison d’échecs, les limites de capacité ou les autres contraintes.
+    extends:
+      name: azure-servicefabric.ServicePlacementPolicyDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nom du domaine qui doit utilisé pour la sélection élective, conformément à cette stratégie.'
+    optional: true
+    syntax:
+      content: 'domainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePlacementPolicyDescription
+    name: ServicePlacementPolicyDescription
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription

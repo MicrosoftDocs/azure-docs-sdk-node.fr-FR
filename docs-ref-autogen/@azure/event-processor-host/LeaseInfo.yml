@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.LeaseInfo'
+    name: LeaseInfo
+    fullName: LeaseInfo
+    children:
+      - '@azure/event-processor-host.LeaseInfo.epoch'
+      - '@azure/event-processor-host.LeaseInfo.offset'
+      - '@azure/event-processor-host.LeaseInfo.owner'
+      - '@azure/event-processor-host.LeaseInfo.partitionId'
+      - '@azure/event-processor-host.LeaseInfo.sequenceNumber'
+      - '@azure/event-processor-host.LeaseInfo.token'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les propriétés d’un bail.
+    extends:
+      name: '@azure/event-processor-host.CompleteLeaseInfo'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'époque de {number} le epoch(time) du bail, qui est une valeur que vous pouvez utiliser pour déterminer le propriétaire de la plus récent d’une partition entre les nœuds concurrents.'
+    syntax:
+      content: 'epoch: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.offset'
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} décalage de l’offset de l’événement à être archivé.'
+    optional: true
+    syntax:
+      content: 'offset?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.owner'
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'propriétaire {string} le propriétaire de l’hôte pour la partition.'
+    syntax:
+      content: 'owner: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} partitionId la partitionId associée pour laquelle le bail est maintenu.'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{string} sequenceNumber le numéro de séquence de l’événement à être archivé.'
+    syntax:
+      content: 'sequenceNumber: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.LeaseInfo.token'
+    name: token
+    fullName: token
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'jeton {string} le jeton de bail qui gère l’accès concurrentiel entre des ordinateurs hôtes. Vous pouvez utiliser ce jeton pour garantir l’accès aux ressources requises par le EPH. unique'
+    syntax:
+      content: 'token: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.CompleteLeaseInfo'
+    name: CompleteLeaseInfo
+    spec.typeScript:
+      - name: CompleteLeaseInfo
+        fullName: CompleteLeaseInfo
+        uid: '@azure/event-processor-host.CompleteLeaseInfo'

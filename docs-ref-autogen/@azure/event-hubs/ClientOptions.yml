@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ClientOptions'
+    name: ClientOptions
+    fullName: ClientOptions
+    children:
+      - '@azure/event-hubs.ClientOptions.dataTransformer'
+      - '@azure/event-hubs.ClientOptions.tokenProvider'
+      - '@azure/event-hubs.ClientOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les options qui peuvent être fournies lors de la création du EventHub Client.
+    extends:
+      name: '@azure/event-hubs.ClientOptionsBase'
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{DataTransformer} [dataTransformer] Le transformateur de données qui sera utilisé pour encoder et décoder les messages envoyés et reçus respectivement. Si ce n’est pas fourni, puis nous allons utiliser le DefaultDataTransformer. Le transformateur par défaut doit gérer la majorité des cas. Cette option doit être utilisée uniquement pour des scénarios spécifiques.'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.tokenProvider'
+    name: tokenProvider
+    fullName: tokenProvider
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {TokenProvider} [tokenProvider] - le fournisseur de jetons qui fournit le jeton d’authentification.
+      Valeur par défaut : SasTokenProvider.
+    optional: true
+    syntax:
+      content: 'tokenProvider?: TokenProvider'
+      return:
+        type:
+          - TokenProvider
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [userAgent] L’agent utilisateur qui doit être ajouté à l’utilisateur généré dans chaîne de l’agent.'
+    optional: true
+    syntax:
+      content: 'userAgent?: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-hubs'
+references:
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    spec.typeScript:
+      - name: ClientOptionsBase
+        fullName: ClientOptionsBase
+        uid: '@azure/event-hubs.ClientOptionsBase'

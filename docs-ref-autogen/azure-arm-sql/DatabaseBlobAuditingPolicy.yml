@@ -1,0 +1,211 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy
+    name: DatabaseBlobAuditingPolicy
+    fullName: DatabaseBlobAuditingPolicy
+    children:
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.auditActionsAndGroups
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.id
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.kind
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.name
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.retentionDays
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.state
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.storageAccountAccessKey
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.storageAccountSubscriptionId
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.storageEndpoint
+      - azure-arm-sql.DatabaseBlobAuditingPolicy.type
+    langs:
+      - typeScript
+    type: interface
+    summary: Une stratégie d’audit de base de données blob.
+    extends:
+      name: azure-arm-sql.ProxyResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.auditActionsAndGroups
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie les groupes d’Actions et les Actions d’audit.\nLe jeu de groupes d’actions à utiliser recommandé est la combinaison suivante\_: cela va vérifier toutes les requêtes et les procédures stockées exécutées par rapport à la base de données, ainsi que les connexions réussies et échouées\_:\n\nBATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP.\n\nCela ci-dessus combinaison est également le jeu est configuré par défaut lorsque vous activez l’audit à partir du portail Azure.\n\nLes groupes d’actions prises en charge pour l’audit sont (Remarque\_: choisir les groupes uniquement spécifiques qui couvrent vos besoins d’audit. À l’aide de groupes inutiles peut entraîner de très grandes quantités d’enregistrements d’audit)\_:\n\nAPPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_ PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_ OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP\n\nIl s’agit des groupes qui couvrent toutes les instructions sql et les procédures stockées exécutées sur la base de données et ne doivent pas être utilisés en combinaison avec d’autres groupes car cela se traduit dans les journaux d’audit en double.\n\nPour plus d’informations, consultez [groupes d’actions d’Audit au niveau de la base de données](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).\n\nPour la stratégie d’audit de base de données, des Actions spécifiques peuvent également être spécifié (Notez que les Actions ne peuvent pas être spécifiées pour la stratégie d’audit de serveur). L’audit des actions pris en charge sont\_: EXÉCUTION DE LA MISE À JOUR SELECT INSERT DELETE RECEVOIR DES RÉFÉRENCES\n\nLa forme générale permettant de définir une action pour l’audit est\_: {action} ON {objet} par {principal}\n\nNotez que <object> dans le format ci-dessus peuvent faire référence à un objet comme une table, vue, ou une procédure stockée, ou une base de données entière ou le schéma. Pour ces cas, les formulaires de base de données\_:: {db_name} et le schéma\_:: {schema_name} sont utilisées, respectivement.\n\nExemple\_: Sélectionnez sur dbo.myTable par SELECT publique sur DATABASE::myDatabase par SELECT publique sur SCHEMA::mySchema public\n\nPour plus d’informations, consultez [Actions d’Audit de niveau de base de données](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)\n"
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de la ressource
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Indique si les événements d’audit sont envoyés à Azure Monitor.\nAfin d’envoyer les événements à Azure Monitor, spécifiez «\_State\_» comme «\_Enabled\_» et «\_IsAzureMonitorTargetEnabled\_» en tant que la valeur true.\nLorsque vous utilisez l’API REST pour configurer l’audit, les paramètres de Diagnostic avec la catégorie de journaux de diagnostic 'SQLSecurityAuditEvents' sur la base de données doit être également créés.\nNotez que pour le niveau du serveur d’audit vous devez utiliser la base de données 'master' en tant que {databaseName}.\n\nFormat d’URI de paramètres de diagnostic\_: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview\n\nPour plus d’informations, consultez [API REST de paramètres de Diagnostic](https://go.microsoft.com/fwlink/?linkid=2033207) ou [PowerShell de paramètres de Diagnostic](https://go.microsoft.com/fwlink/?linkid=2033043)\n\n"
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie si la valeur de storageAccountAccessKey est clé secondaire du stockage.
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type de ressource.
+    optional: true
+    syntax:
+      content: 'kind?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de la ressource.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.retentionDays
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie le nombre de jours pendant lesquels conserver dans l’audit consigne dans le compte de stockage.
+    optional: true
+    syntax:
+      content: 'retentionDays?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’état de la stratégie. Si l’état est activé, storageEndpoint ou isAzureMonitorTargetEnabled sont requis. Les valeurs possibles incluent\_: 'Enabled', 'Disabled'"
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.storageAccountAccessKey
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Spécifie la clé de l’identificateur du compte de stockage audit. Si l’état est activé et storageEndpoint est spécifié, storageAccountAccessKey est requis.'
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.storageAccountSubscriptionId
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie l’ID d’abonnement de stockage blob
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.storageEndpoint
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Spécifie le point de terminaison de stockage d’objets blob (par exemple, https://MyAccount.blob.core.windows.net). Si l’état est activé, storageEndpoint est requis.'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.DatabaseBlobAuditingPolicy.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type de ressource.
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-sql.ProxyResource

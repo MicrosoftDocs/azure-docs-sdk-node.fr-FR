@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.Video
+    name: Video
+    fullName: Video
+    children:
+      - azure-arm-mediaservices.Video.keyFrameInterval
+      - azure-arm-mediaservices.Video.label
+      - azure-arm-mediaservices.Video.odatatype
+      - azure-arm-mediaservices.Video.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les propriétés de base pour l’encodage de la vidéo d’entrée.
+    extends:
+      name: azure-arm-mediaservices.Codec
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Video.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La distance entre les deux images clés, définissant ainsi un groupe d’images (GOP). La valeur doit être un entier différent de zéro dans les secondes de la plage [1, 30], spécifié au format ISO 8601. La valeur par défaut est de 2 secondes (PT2S).'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Video.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une étiquette facultative pour le codec. L’étiquette peut être utilisée pour contrôler le comportement de muxing.
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Video.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.Video.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le mode de redimensionnement - comment la vidéo d’entrée doit être redimensionnée pour s’ajuster à la solution de sortie souhaité. Valeur par défaut est AutoSize. Les valeurs possibles incluent\_: 'None', 'AutoSize', 'AutoFit'"
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Codec
+    name: Codec
+    spec.typeScript:
+      - name: Codec
+        fullName: Codec
+        uid: azure-arm-mediaservices.Codec

@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition
+    name: LocationThresholdRuleCondition
+    fullName: LocationThresholdRuleCondition
+    children:
+      - azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+      - azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+      - azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+      - azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Une condition de règle basée sur un certain nombre d’emplacements échouent.
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: la ressource à partir de laquelle la règle collecte les données. Pour ce type de source de données sera toujours de type RuleMetricDataSource.
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+    name: failedLocationCount
+    fullName: failedLocationCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: le nombre d’emplacements qui doivent échouer à activer l’alerte.
+    syntax:
+      content: 'failedLocationCount: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: la période de temps (au format de durée ISO 8601) qui est utilisé pour surveiller l’activité en fonction du seuil d’alerte. Si spécifié doit être comprise entre 5 minutes et 1 jour.
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource
