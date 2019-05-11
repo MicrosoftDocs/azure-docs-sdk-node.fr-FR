@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationEvent
+    name: ApplicationEvent
+    fullName: ApplicationEvent
+    children:
+      - azure-servicefabric.ApplicationEvent.applicationId
+      - azure-servicefabric.ApplicationEvent.category
+      - azure-servicefabric.ApplicationEvent.eventInstanceId
+      - azure-servicefabric.ApplicationEvent.hasCorrelatedEvents
+      - azure-servicefabric.ApplicationEvent.kind
+      - azure-servicefabric.ApplicationEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="70c44-101">Représente la base pour tous les événements d’Application.</span><span class="sxs-lookup"><span data-stu-id="70c44-101">Represents the base for all Application Events.</span></span>
+    extends:
+      name: azure-servicefabric.FabricEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.applicationId
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"70c44-102\">Identité de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70c44-102\">The identity of the application.</span></span> <span data-ttu-id=\"70c44-103\">Il s’agit d’une représentation encodée de nom de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70c44-103\">This is an encoded representation of the application name.</span></span>\n<span data-ttu-id=\"70c44-104\">Cela est utilisé dans les API REST pour identifier la ressource d’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70c44-104\">This is used in the REST APIs to identify the application resource.</span></span>\n<span data-ttu-id=\"70c44-105\">Depuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70c44-105\">Starting in version 6.0, hierarchical names are delimited with the \"\\~\" character.</span></span> <span data-ttu-id=\"70c44-106\">Par exemple, si le nom de l’application est «\_fabric\_: / myapp/app1\_», son identité d’application est «\_myapp\\~app1\_» dans 6.0 et supérieures et «\_mon_app/app1\_» dans les versions précédentes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70c44-106\">For example, if the application name is \"fabric:/myapp/app1\", the application identity would be \"myapp\\~app1\" in 6.0+ and \"myapp/app1\" in previous versions.</span></span>"
+    syntax:
+      content: 'applicationId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70c44-107">La catégorie d’événement.</span><span class="sxs-lookup"><span data-stu-id="70c44-107">The category of event.</span></span>
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70c44-108">L’identificateur pour l’instance FabricEvent.</span><span class="sxs-lookup"><span data-stu-id="70c44-108">The identifier for the FabricEvent instance.</span></span>
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70c44-109">Montre contient déjà des événements connexes disponibles.</span><span class="sxs-lookup"><span data-stu-id="70c44-109">Shows there is existing related events available.</span></span>
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70c44-110">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="70c44-110">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70c44-111">L’événement de temps a été enregistré.</span><span class="sxs-lookup"><span data-stu-id="70c44-111">The time event was logged.</span></span>
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.FabricEvent
+    name: FabricEvent
+    spec.typeScript:
+      - name: FabricEvent
+        fullName: FabricEvent
+        uid: azure-servicefabric.FabricEvent

@@ -1,0 +1,502 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM
+    name: VirtualMachineScaleSetVM
+    fullName: VirtualMachineScaleSetVM
+    children:
+      - azure-arm-compute.VirtualMachineScaleSetVM.additionalCapabilities
+      - azure-arm-compute.VirtualMachineScaleSetVM.availabilitySet
+      - azure-arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile
+      - azure-arm-compute.VirtualMachineScaleSetVM.hardwareProfile
+      - azure-arm-compute.VirtualMachineScaleSetVM.id
+      - azure-arm-compute.VirtualMachineScaleSetVM.instanceId
+      - azure-arm-compute.VirtualMachineScaleSetVM.instanceView
+      - azure-arm-compute.VirtualMachineScaleSetVM.latestModelApplied
+      - azure-arm-compute.VirtualMachineScaleSetVM.licenseType
+      - azure-arm-compute.VirtualMachineScaleSetVM.location
+      - azure-arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied
+      - azure-arm-compute.VirtualMachineScaleSetVM.name
+      - azure-arm-compute.VirtualMachineScaleSetVM.networkProfile
+      - azure-arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration
+      - azure-arm-compute.VirtualMachineScaleSetVM.osProfile
+      - azure-arm-compute.VirtualMachineScaleSetVM.plan
+      - azure-arm-compute.VirtualMachineScaleSetVM.protectionPolicy
+      - azure-arm-compute.VirtualMachineScaleSetVM.provisioningState
+      - azure-arm-compute.VirtualMachineScaleSetVM.resources
+      - azure-arm-compute.VirtualMachineScaleSetVM.sku
+      - azure-arm-compute.VirtualMachineScaleSetVM.storageProfile
+      - azure-arm-compute.VirtualMachineScaleSetVM.tags
+      - azure-arm-compute.VirtualMachineScaleSetVM.type
+      - azure-arm-compute.VirtualMachineScaleSetVM.vmId
+      - azure-arm-compute.VirtualMachineScaleSetVM.zones
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="786fb-101">Décrit une machine virtuelle de machines virtuelles identiques.</span><span class="sxs-lookup"><span data-stu-id="786fb-101">Describes a virtual machine scale set virtual machine.</span></span>
+    extends:
+      name: azure-arm-compute.Resource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.additionalCapabilities
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"786fb-102\">Spécifie des fonctionnalités supplémentaires, activé ou désactivé sur la machine virtuelle dans le groupe identique.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-102\">Specifies additional capabilities enabled or disabled on the virtual machine in the scale set.</span></span>\n<span data-ttu-id=\"786fb-103\">Par exemple\_: si la machine virtuelle a la possibilité de prendre en charge l’attachement gérés des disques de données avec le type de compte de stockage UltraSSD_LRS.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-103\">For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.</span></span>"
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - azure-arm-compute.AdditionalCapabilities
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.availabilitySet
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="786fb-104">Spécifie les informations sur le groupe à haute disponibilité que la machine virtuelle doit être attribuée à.</span><span class="sxs-lookup"><span data-stu-id="786fb-104">Specifies information about the availability set that the virtual machine should be assigned to.</span></span> <span data-ttu-id="786fb-105">Les machines virtuelles spécifiées dans le même groupe à haute disponibilité sont allouées à des nœuds différents pour optimiser la disponibilité.</span><span class="sxs-lookup"><span data-stu-id="786fb-105">Virtual machines specified in the same availability set are allocated to different nodes to maximize availability.</span></span> <span data-ttu-id="786fb-106">Pour plus d’informations sur les groupes à haute disponibilité, consultez [gérer la disponibilité des machines virtuelles](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="786fb-106">For more information about availability sets, see [Manage the availability of virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).</span></span>
+      <br><br> <span data-ttu-id="786fb-107">Pour plus d’informations sur la maintenance planifiée Azure, consultez [maintenance planifiée pour les machines virtuelles dans Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="786fb-107">For more information on Azure planned maintenance, see [Planned maintenance for virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="786fb-108">Actuellement, une machine virtuelle ne peut être ajoutée à la disposition définie au moment de la création.</span><span class="sxs-lookup"><span data-stu-id="786fb-108">Currently, a VM can only be added to availability set at creation time.</span></span> <span data-ttu-id="786fb-109">Impossible d’ajouter une machine virtuelle existante à un groupe à haute disponibilité.</span><span class="sxs-lookup"><span data-stu-id="786fb-109">An existing VM cannot be added to an availability set.</span></span>
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - azure-arm-compute.SubResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"786fb-110\">Spécifie l’état de paramètres de diagnostic de démarrage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-110\">Specifies the boot diagnostic settings state.</span></span> <br><br><span data-ttu-id=\"786fb-111\">Version d’api minimale\_: 2015-06-15.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-111\">Minimum api-version: 2015-06-15.</span></span>"
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - azure-arm-compute.DiagnosticsProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.hardwareProfile
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-112">Spécifie les paramètres matériels de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-112">Specifies the hardware settings for the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - azure-arm-compute.HardwareProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-113">ID de ressource</span><span class="sxs-lookup"><span data-stu-id="786fb-113">Resource Id</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-114">L’ID d’instance de machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-114">The virtual machine instance ID.</span></span>
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.instanceView
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-115">La vue d’instance de machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-115">The virtual machine instance view.</span></span>
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineScaleSetVMInstanceView'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineScaleSetVMInstanceView
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.latestModelApplied
+    name: latestModelApplied
+    fullName: latestModelApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-116">Spécifie si le dernier modèle a été appliqué à la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-116">Specifies whether the latest model has been applied to the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'latestModelApplied?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"786fb-117\">Spécifie que l'image ou le disque utilisé a une licence locale.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-117\">Specifies that the image or disk that is being used was licensed on-premises.</span></span> <span data-ttu-id=\"786fb-118\">Cet élément est utilisé uniquement pour les images qui contiennent le système d’exploitation Windows Server.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-118\">This element is only used for images that contain the Windows Server operating system.</span></span> <br><br> <span data-ttu-id=\"786fb-119\">Les valeurs possibles sont les suivantes\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-119\">Possible values are:</span></span> <br><br> <span data-ttu-id=\"786fb-120\">Windows_Client</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-120\">Windows_Client</span></span> <br><br> <span data-ttu-id=\"786fb-121\">Windows_Server</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-121\">Windows_Server</span></span> <br><br> <span data-ttu-id=\"786fb-122\">Si cet élément est inclus dans une demande pour une mise à jour, la valeur doit correspondre à la valeur initiale.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-122\">If this element is included in a request for an update, the value must match the initial value.</span></span> <span data-ttu-id=\"786fb-123\">Cette valeur ne peut pas être mis à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-123\">This value cannot be updated.</span></span> <br><br> <span data-ttu-id=\"786fb-124\">Pour plus d’informations, consultez [Server Azure Hybrid Use Benefit pour Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-124\">For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>\n<br><br> <span data-ttu-id=\"786fb-125\">Version d’api minimale\_: 2015-06-15</span><span class=\"sxs-lookup\"><span data-stu-id=\"786fb-125\">Minimum api-version: 2015-06-15</span></span>"
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-126">Emplacement de la ressource</span><span class="sxs-lookup"><span data-stu-id="786fb-126">Resource location</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied
+    name: modelDefinitionApplied
+    fullName: modelDefinitionApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-127">Spécifie si le modèle appliqué à la machine virtuelle est le modèle de l’ensemble d’échelle de machine virtuelle ou le modèle personnalisé pour la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-127">Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'modelDefinitionApplied?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-128">Nom de ressource</span><span class="sxs-lookup"><span data-stu-id="786fb-128">Resource name</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.networkProfile
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-129">Spécifie les interfaces réseau de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-129">Specifies the network interfaces of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - azure-arm-compute.NetworkProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration
+    name: networkProfileConfiguration
+    fullName: networkProfileConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-130">Spécifie la configuration du profil réseau de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-130">Specifies the network profile configuration of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'networkProfileConfiguration?: VirtualMachineScaleSetVMNetworkProfileConfiguration'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.osProfile
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-131">Spécifie les paramètres du système d’exploitation de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-131">Specifies the operating system settings for the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - azure-arm-compute.OSProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.plan
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="786fb-132">Spécifie les informations sur l’image de place de marché utilisée pour créer la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-132">Specifies information about the marketplace image used to create the virtual machine.</span></span> <span data-ttu-id="786fb-133">Cet élément est utilisé uniquement pour les images de place de marché.</span><span class="sxs-lookup"><span data-stu-id="786fb-133">This element is only used for marketplace images.</span></span> <span data-ttu-id="786fb-134">Avant de pouvoir utiliser une image de place de marché à partir d’une API, vous devez activer l’image pour l’utilisation par programme.</span><span class="sxs-lookup"><span data-stu-id="786fb-134">Before you can use a marketplace image from an API, you must enable the image for programmatic use.</span></span>  <span data-ttu-id="786fb-135">Dans le portail Azure, recherchez l’image de place de marché que vous souhaitez utiliser, puis cliquez sur **à déployer par programmation, la prise en main ->**.</span><span class="sxs-lookup"><span data-stu-id="786fb-135">In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**.</span></span> <span data-ttu-id="786fb-136">Entrez les informations requises, puis activez **enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="786fb-136">Enter any required information and then click **Save**.</span></span>'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - azure-arm-compute.Plan
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.protectionPolicy
+    name: protectionPolicy
+    fullName: protectionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-137">Spécifie la stratégie de protection de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-137">Specifies the protection policy of the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'protectionPolicy?: VirtualMachineScaleSetVMProtectionPolicy'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineScaleSetVMProtectionPolicy
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="786fb-138">L’état d’approvisionnement, qui apparaît uniquement dans la réponse.</span><span class="sxs-lookup"><span data-stu-id="786fb-138">The provisioning state, which only appears in the response.</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.resources
+    name: resources
+    fullName: resources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-139">Les ressources d’extension de machine virtuelle enfant.</span><span class="sxs-lookup"><span data-stu-id="786fb-139">The virtual machine child extension resources.</span></span>
+    optional: true
+    syntax:
+      content: 'resources?: VirtualMachineExtension[]'
+      return:
+        type:
+          - 'azure-arm-compute.VirtualMachineExtension[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-140">Référence (SKU) de machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-140">The virtual machine SKU.</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-compute.Sku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.storageProfile
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-141">Spécifie les paramètres de stockage des disques de machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-141">Specifies the storage settings for the virtual machine disks.</span></span>
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - azure-arm-compute.StorageProfile
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-142">Balises de ressource</span><span class="sxs-lookup"><span data-stu-id="786fb-142">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-143">Type de ressource</span><span class="sxs-lookup"><span data-stu-id="786fb-143">Resource type</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.vmId
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-144">ID de Azure machine virtuelle unique.</span><span class="sxs-lookup"><span data-stu-id="786fb-144">Azure VM unique ID.</span></span>
+    optional: true
+    syntax:
+      content: 'vmId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetVM.zones
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="786fb-145">Les zones de la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="786fb-145">The virtual machine zones.</span></span>
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-compute.Resource
+  - uid: azure-arm-compute.AdditionalCapabilities
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: azure-arm-compute.AdditionalCapabilities
+  - uid: azure-arm-compute.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+  - uid: azure-arm-compute.DiagnosticsProfile
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: azure-arm-compute.DiagnosticsProfile
+  - uid: azure-arm-compute.HardwareProfile
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: azure-arm-compute.HardwareProfile
+  - uid: azure-arm-compute.VirtualMachineScaleSetVMInstanceView
+    name: VirtualMachineScaleSetVMInstanceView
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMInstanceView
+        fullName: VirtualMachineScaleSetVMInstanceView
+        uid: azure-arm-compute.VirtualMachineScaleSetVMInstanceView
+  - uid: azure-arm-compute.NetworkProfile
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: azure-arm-compute.NetworkProfile
+  - uid: azure-arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration
+    name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        fullName: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        uid: azure-arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration
+  - uid: azure-arm-compute.OSProfile
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: azure-arm-compute.OSProfile
+  - uid: azure-arm-compute.Plan
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: azure-arm-compute.Plan
+  - uid: azure-arm-compute.VirtualMachineScaleSetVMProtectionPolicy
+    name: VirtualMachineScaleSetVMProtectionPolicy
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMProtectionPolicy
+        fullName: VirtualMachineScaleSetVMProtectionPolicy
+        uid: azure-arm-compute.VirtualMachineScaleSetVMProtectionPolicy
+  - uid: 'azure-arm-compute.VirtualMachineExtension[]'
+    name: 'VirtualMachineExtension[]'
+    spec.typeScript:
+      - name: VirtualMachineExtension
+        fullName: VirtualMachineExtension
+        uid: azure-arm-compute.VirtualMachineExtension
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-compute.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-compute.Sku
+  - uid: azure-arm-compute.StorageProfile
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: azure-arm-compute.StorageProfile

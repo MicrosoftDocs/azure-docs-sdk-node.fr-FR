@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealthStateChunk
+    name: ApplicationHealthStateChunk
+    fullName: ApplicationHealthStateChunk
+    children:
+      - azure-servicefabric.ApplicationHealthStateChunk.applicationName
+      - azure-servicefabric.ApplicationHealthStateChunk.applicationTypeName
+      - azure-servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks
+      - azure-servicefabric.ApplicationHealthStateChunk.healthState
+      - azure-servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="3496c-101">Représente le segment d’état d’intégrité d’une application.</span><span class="sxs-lookup"><span data-stu-id="3496c-101">Represents the health state chunk of a application.</span></span>
+      <span data-ttu-id="3496c-102">Segment d’état d’intégrité de l’application contient le nom de l’application, son état d’intégrité agrégé et tous les services enfants et déployé des applications qui respectent les filtres dans la description de la requête de cluster de segment d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="3496c-102">The application health state chunk contains the application name, its aggregated health state and any children services and deployed applications that respect the filters in cluster health chunk query description.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"3496c-103\">Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"3496c-103\">The name of the application, including the 'fabric:' URI scheme.</span></span>"
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3496c-104">Le nom de type application tel que défini dans le manifeste d’application.</span><span class="sxs-lookup"><span data-stu-id="3496c-104">The application type name as defined in the application manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks
+    name: deployedApplicationHealthStateChunks
+    fullName: deployedApplicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3496c-105">La liste des applications déployées segments d’intégrité du cluster qui respectent les filtres dans la description de requête de segment d’intégrité cluster.</span><span class="sxs-lookup"><span data-stu-id="3496c-105">The list of deployed application health state chunks in the cluster that respect the filters in the cluster health chunk query description.</span></span>
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStateChunks?: DeployedApplicationHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.DeployedApplicationHealthStateChunkList
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"3496c-106\">L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"3496c-106\">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>"
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks
+    name: serviceHealthStateChunks
+    fullName: serviceHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3496c-107">Segments de la liste de l’état d’intégrité de service dans le cluster qui respectent les filtres dans la description de requête de segment d’intégrité cluster.</span><span class="sxs-lookup"><span data-stu-id="3496c-107">The list of service health state chunks in the cluster that respect the filters in the cluster health chunk query description.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceHealthStateChunks?: ServiceHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.ServiceHealthStateChunkList
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunkList
+    name: DeployedApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateChunkList
+        fullName: DeployedApplicationHealthStateChunkList
+        uid: azure-servicefabric.DeployedApplicationHealthStateChunkList
+  - uid: azure-servicefabric.ServiceHealthStateChunkList
+    name: ServiceHealthStateChunkList
+    spec.typeScript:
+      - name: ServiceHealthStateChunkList
+        fullName: ServiceHealthStateChunkList
+        uid: azure-servicefabric.ServiceHealthStateChunkList

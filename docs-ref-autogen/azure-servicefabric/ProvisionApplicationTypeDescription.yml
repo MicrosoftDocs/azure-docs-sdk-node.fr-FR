@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+      - azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+      - azure-servicefabric.ProvisionApplicationTypeDescription.async
+      - azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d9c3c-101">Décrit l’opération pour inscrire ou configurer un type d’application à l’aide d’un package d’application téléchargé vers le magasin d’images Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-101">Describes the operation to register or provision an application type using an application package uploaded to the Service Fabric image store.</span></span>
+    extends:
+      name: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"d9c3c-102\">Le genre d’action qui doit être prise pour nettoyer le package d’application après l’approvisionnement réussi.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d9c3c-102\">The kind of action that needs to be taken for cleaning up the application package after successful provision.</span></span> <span data-ttu-id=\"d9c3c-103\">Les valeurs possibles incluent\_: 'Invalid', 'Default', 'Automatic', 'Manual'</span><span class=\"sxs-lookup\"><span data-stu-id=\"d9c3c-103\">Possible values include: 'Invalid', 'Default', 'Automatic', 'Manual'</span></span>"
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d9c3c-104">Chemin d’accès relatif du package d’application dans le magasin d’images spécifié lors de l’opération de chargement préalable.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-104">The relative path for the application package in the image store specified during the prior upload operation.</span></span>
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.async
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d9c3c-105">Indique si l’approvisionnement doit se faire de façon asynchrone.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-105">Indicates whether or not provisioning should occur asynchronously.</span></span> <span data-ttu-id="d9c3c-106">Lorsque la valeur est définie sur true, l’opération d’approvisionnement s’exécute quand la requête est acceptée par le système et l’opération d’approvisionnement se poursuit sans délai d’expiration.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-106">When set to true, the provision operation returns when the request is accepted by the system, and the provision operation continues without any timeout limit.</span></span> <span data-ttu-id="d9c3c-107">La valeur par défaut est false.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-107">The default value is false.</span></span> <span data-ttu-id="d9c3c-108">Pour les packages d’application volumineux, nous vous recommandons de définir la valeur sur true.</span><span class="sxs-lookup"><span data-stu-id="d9c3c-108">For large application packages, we recommend setting the value to true.</span></span>'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d9c3c-109">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="d9c3c-109">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase
+    name: ProvisionApplicationTypeDescriptionBase
+    spec.typeScript:
+      - name: ProvisionApplicationTypeDescriptionBase
+        fullName: ProvisionApplicationTypeDescriptionBase
+        uid: azure-servicefabric.ProvisionApplicationTypeDescriptionBase

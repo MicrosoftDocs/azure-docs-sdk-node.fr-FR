@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackageHealth
+    name: DeployedServicePackageHealth
+    fullName: DeployedServicePackageHealth
+    children:
+      - azure-servicefabric.DeployedServicePackageHealth.aggregatedHealthState
+      - azure-servicefabric.DeployedServicePackageHealth.applicationName
+      - azure-servicefabric.DeployedServicePackageHealth.healthEvents
+      - azure-servicefabric.DeployedServicePackageHealth.healthStatistics
+      - azure-servicefabric.DeployedServicePackageHealth.nodeName
+      - azure-servicefabric.DeployedServicePackageHealth.serviceManifestName
+      - azure-servicefabric.DeployedServicePackageHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="47e46-101">Informations sur l’intégrité d’un package de service pour une application spécifique déployée sur un nœud Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="47e46-101">Information about the health of a service package for a specific application deployed on a Service Fabric node.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"47e46-102\">HealthState représentant l’état d’intégrité agrégé de l’entité calculée par le Gestionnaire de contrôle d’intégrité.</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e46-102\">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>\n<span data-ttu-id=\"47e46-103\">L’évaluation d’intégrité de l’entité reflète tous les événements signalés sur l’entité et ses enfants (le cas échéant).</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e46-103\">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>\n<span data-ttu-id=\"47e46-104\">L’agrégation est effectuée en appliquant la stratégie d’intégrité de votre choix.</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e46-104\">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id=\"47e46-105\">Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e46-105\">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"47e46-106\">Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"47e46-106\">The name of the application, including the 'fabric:' URI scheme.</span></span>"
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="47e46-107">La liste des événements d’intégrité signalés sur l’entité.</span><span class="sxs-lookup"><span data-stu-id="47e46-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="47e46-108">Affiche les statistiques d’intégrité pour tous les types enfants de l’entité interrogée.</span><span class="sxs-lookup"><span data-stu-id="47e46-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="47e46-109">Nom du nœud où ce package de service est déployé.</span><span class="sxs-lookup"><span data-stu-id="47e46-109">Name of the node where this service package is deployed.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.serviceManifestName
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="47e46-110">Nom du manifeste de service.</span><span class="sxs-lookup"><span data-stu-id="47e46-110">Name of the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackageHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="47e46-111">Évaluations non intègres qui indiquent la raison pour laquelle l’état d’intégrité agrégé actuel a été retournée par le Gestionnaire de contrôle d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="47e46-111">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
