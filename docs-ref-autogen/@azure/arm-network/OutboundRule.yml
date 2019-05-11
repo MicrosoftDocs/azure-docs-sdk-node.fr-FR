@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.OutboundRule'
+    name: OutboundRule
+    fullName: OutboundRule
+    children:
+      - '@azure/arm-network.OutboundRule.allocatedOutboundPorts'
+      - '@azure/arm-network.OutboundRule.backendAddressPool'
+      - '@azure/arm-network.OutboundRule.enableTcpReset'
+      - '@azure/arm-network.OutboundRule.etag'
+      - '@azure/arm-network.OutboundRule.frontendIPConfigurations'
+      - '@azure/arm-network.OutboundRule.id'
+      - '@azure/arm-network.OutboundRule.idleTimeoutInMinutes'
+      - '@azure/arm-network.OutboundRule.name'
+      - '@azure/arm-network.OutboundRule.protocol'
+      - '@azure/arm-network.OutboundRule.provisioningState'
+    langs:
+      - typeScript
+    type: interface
+    summary: Pool sortant de l’équilibreur de charge.
+    extends:
+      name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.allocatedOutboundPorts'
+    name: allocatedOutboundPorts
+    fullName: allocatedOutboundPorts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nombre de ports de sortie à utiliser pour NAT.
+    optional: true
+    syntax:
+      content: 'allocatedOutboundPorts?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.backendAddressPool'
+    name: backendAddressPool
+    fullName: backendAddressPool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une référence à un pool d’adresses IP dynamiques. Le trafic sortant est au hasard à charge équilibrée entre les adresses IP dans le serveur principal d’adresses IP.
+    syntax:
+      content: 'backendAddressPool: SubResource'
+      return:
+        type:
+          - '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.enableTcpReset'
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Réception bidirectionnel TCP réinitialisée sur le délai d’inactivité TCP flux ou l’arrêt de connexion inattendu.
+      Cet élément est utilisé uniquement lorsque le protocole est TCP.
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.etag'
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.
+    optional: true
+    syntax:
+      content: 'etag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.frontendIPConfigurations'
+    name: frontendIPConfigurations
+    fullName: frontendIPConfigurations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Adresses IP de Frontend de l’équilibreur de charge.
+    syntax:
+      content: 'frontendIPConfigurations: SubResource[]'
+      return:
+        type:
+          - '@azure/arm-network.SubResource[]'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de la ressource
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.idleTimeoutInMinutes'
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le délai d’expiration de la connexion inactive TCP
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de la ressource qui est unique au sein d’un groupe de ressources. Ce nom peut être utilisé pour accéder à la ressource.
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.protocol'
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le protocole pour la règle sortante dans l’équilibreur de charge. Les valeurs possibles sont les suivantes\_: «\_Tcp\_», «\_Udp\_» et «\_All\_». Les valeurs possibles incluent\_: 'Tcp', 'Udp', 'All'"
+    syntax:
+      content: 'protocol: LoadBalancerOutboundRuleProtocol'
+      return:
+        type:
+          - '@azure/arm-network.LoadBalancerOutboundRuleProtocol'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.OutboundRule.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Obtient l’état d’approvisionnement de la ressource d’adresse IP publique. Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_»."
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+  - uid: '@azure/arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-network.SubResource'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-network.LoadBalancerOutboundRuleProtocol'
+    name: LoadBalancerOutboundRuleProtocol
+    spec.typeScript:
+      - name: LoadBalancerOutboundRuleProtocol
+        fullName: LoadBalancerOutboundRuleProtocol
+        uid: '@azure/arm-network.LoadBalancerOutboundRuleProtocol'

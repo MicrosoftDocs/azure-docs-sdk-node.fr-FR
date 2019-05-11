@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServicePartitionInfo
+    name: StatefulServicePartitionInfo
+    fullName: StatefulServicePartitionInfo
+    children:
+      - azure-servicefabric.StatefulServicePartitionInfo.healthState
+      - azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+      - azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+      - azure-servicefabric.StatefulServicePartitionInfo.partitionInformation
+      - azure-servicefabric.StatefulServicePartitionInfo.partitionStatus
+      - azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+      - azure-servicefabric.StatefulServicePartitionInfo.serviceKind
+      - azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Informations sur une partition d’un service Service Fabric avec état...
+    extends:
+      name: azure-servicefabric.ServicePartitionInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+    name: lastQuorumLossDuration
+    fullName: lastQuorumLossDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La durée pendant laquelle cette partition était une perte de quorum. Si la partition en cours d’une perte de quorum, il retourne la durée dans la mesure où il a été dans cet état. Ce champ utilise le format ISO8601 pour spécifier la durée.'
+    optional: true
+    syntax:
+      content: 'lastQuorumLossDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Taille minimale du jeu de réplicas en tant que nombre.
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.partitionInformation
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informations sur l’identité de la partition, clés prises en charge par ce dernier et le schéma de partitionnement.'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformation'
+      return:
+        type:
+          - azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.partitionStatus
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état de la partition de service service fabric. Les valeurs possibles incluent\_: 'Invalid', 'Ready', 'NotReady', 'InQuorumLoss', 'Reconfiguring', 'Deleting'"
+    optional: true
+    syntax:
+      content: 'partitionStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+    name: primaryEpoch
+    fullName: primaryEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Une époque est un numéro de la configuration de la partition dans sa globalité. Lorsque la configuration du réplica de la valeur change, par exemple lorsque les modifications de réplica principal, les opérations qui sont répliquées à partir du nouveau réplica principal sont dits se situer une nouvelle époque de ceux qui ont été envoyés par l’ancien réplica principal.'
+    optional: true
+    syntax:
+      content: 'primaryEpoch?: Epoch'
+      return:
+        type:
+          - azure-servicefabric.Epoch
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Taille cible du jeu de réplicas en tant que nombre.
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePartitionInfo
+    name: ServicePartitionInfo
+    spec.typeScript:
+      - name: ServicePartitionInfo
+        fullName: ServicePartitionInfo
+        uid: azure-servicefabric.ServicePartitionInfo
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation
+  - uid: azure-servicefabric.Epoch
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: azure-servicefabric.Epoch

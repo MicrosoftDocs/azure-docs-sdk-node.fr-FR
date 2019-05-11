@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.Probe
+    name: Probe
+    fullName: Probe
+    children:
+      - azure-arm-network.Probe.etag
+      - azure-arm-network.Probe.id
+      - azure-arm-network.Probe.intervalInSeconds
+      - azure-arm-network.Probe.loadBalancingRules
+      - azure-arm-network.Probe.name
+      - azure-arm-network.Probe.numberOfProbes
+      - azure-arm-network.Probe.port
+      - azure-arm-network.Probe.protocol
+      - azure-arm-network.Probe.provisioningState
+      - azure-arm-network.Probe.requestPath
+    langs:
+      - typeScript
+    type: interface
+    summary: Une sonde d’équilibreur de charge.
+    extends:
+      name: azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de la ressource
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.intervalInSeconds
+    name: intervalInSeconds
+    fullName: intervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’intervalle, en secondes, de fréquence de détection de l’état d’intégrité du point de terminaison.
+      En règle générale, l’intervalle est légèrement inférieur à la moitié du délai d’expiration alloué (en secondes), ce qui permet d’utiliser deux sondes complètes avant de mettre l’instance hors rotation. La valeur par défaut est 15, la valeur minimum 5.
+    optional: true
+    syntax:
+      content: 'intervalInSeconds?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.loadBalancingRules
+    name: loadBalancingRules
+    fullName: loadBalancingRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les règles d’équilibrage de charge qui utilisent cette sonde.
+    optional: true
+    syntax:
+      content: 'loadBalancingRules?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-network.SubResource[]'
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obtient le nom de la ressource qui est unique au sein d’un groupe de ressources. Ce nom peut être utilisé pour accéder à la ressource.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.numberOfProbes
+    name: numberOfProbes
+    fullName: numberOfProbes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nombre de sondes where si aucune réponse, n’entraîne l’arrêt du trafic supplémentaire soient acheminés vers le point de terminaison. Ces valeurs permet de prendre des points de terminaison hors rotation plus rapide ou plus lente que le nombre de fois habituel dans Azure.'
+    optional: true
+    syntax:
+      content: 'numberOfProbes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.port
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le port de communication de la sonde. Les valeurs possibles sont comprises entre 1 et 65535, ces deux valeurs étant incluses.'
+    syntax:
+      content: 'port: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.protocol
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le protocole du point de terminaison. Les valeurs possibles sont les suivantes\_: «\_Http\_», «\_Tcp\_» ou «\_Https\_». Si «\_Tcp\_» est spécifié, un accusé de réception est requis pour la sonde réussisse. Si «\_Http\_» ou «\_Https\_» est spécifié, une réponse 200 OK de la spécifie l’URI est requis pour la sonde réussisse. Les valeurs possibles incluent\_: 'Http', 'Tcp', 'Https'"
+    syntax:
+      content: 'protocol: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Obtient l’état d’approvisionnement de la ressource d’adresse IP publique. Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_»."
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.requestPath
+    name: requestPath
+    fullName: requestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’URI utilisée pour demander l’état d’intégrité de la machine virtuelle. Chemin d’accès est requis si un protocole est défini sur http. Dans le cas contraire, il n’est pas autorisé. Aucune valeur par défaut.'
+    optional: true
+    syntax:
+      content: 'requestPath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource
+  - uid: 'azure-arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource
+      - name: '[]'
+        fullName: '[]'

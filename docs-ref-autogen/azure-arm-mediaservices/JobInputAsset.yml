@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobInputAsset
+    name: JobInputAsset
+    fullName: JobInputAsset
+    children:
+      - azure-arm-mediaservices.JobInputAsset.assetName
+      - azure-arm-mediaservices.JobInputAsset.files
+      - azure-arm-mediaservices.JobInputAsset.label
+      - azure-arm-mediaservices.JobInputAsset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: Représente un élément multimédia d’entrée dans un travail.
+    extends:
+      name: azure-arm-mediaservices.JobInputClip
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.assetName
+    name: assetName
+    fullName: assetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de l’élément multimédia d’entrée.
+    syntax:
+      content: 'assetName: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des fichiers. Obligatoire pour JobInputHttp. Maximum de 4 000 caractères.
+    optional: true
+    syntax:
+      content: 'files?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Une étiquette qui est affectée à un JobInputClip, qui est utilisé pour satisfaire une référence utilisée dans la transformation. Par exemple, une transformation peut être créée afin de prendre un fichier image portant l’étiquette ''xyz'' et l’appliquer en tant que superposition sur la vidéo d’entrée avant d’être codée. Lorsque vous soumettez un travail, seul le JobInputs doit être le fichier image, et elle doit avoir l’étiquette ''xyz''.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobInputClip
+    name: JobInputClip
+    spec.typeScript:
+      - name: JobInputClip
+        fullName: JobInputClip
+        uid: azure-arm-mediaservices.JobInputClip

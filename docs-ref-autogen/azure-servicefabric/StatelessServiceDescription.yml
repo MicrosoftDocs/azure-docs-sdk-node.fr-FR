@@ -1,0 +1,309 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceDescription
+    name: StatelessServiceDescription
+    fullName: StatelessServiceDescription
+    children:
+      - azure-servicefabric.StatelessServiceDescription.applicationName
+      - azure-servicefabric.StatelessServiceDescription.correlationScheme
+      - azure-servicefabric.StatelessServiceDescription.defaultMoveCost
+      - azure-servicefabric.StatelessServiceDescription.initializationData
+      - azure-servicefabric.StatelessServiceDescription.instanceCount
+      - azure-servicefabric.StatelessServiceDescription.isDefaultMoveCostSpecified
+      - azure-servicefabric.StatelessServiceDescription.partitionDescription
+      - azure-servicefabric.StatelessServiceDescription.placementConstraints
+      - azure-servicefabric.StatelessServiceDescription.scalingPolicies
+      - azure-servicefabric.StatelessServiceDescription.serviceDnsName
+      - azure-servicefabric.StatelessServiceDescription.serviceKind
+      - azure-servicefabric.StatelessServiceDescription.serviceLoadMetrics
+      - azure-servicefabric.StatelessServiceDescription.serviceName
+      - azure-servicefabric.StatelessServiceDescription.servicePackageActivationMode
+      - azure-servicefabric.StatelessServiceDescription.servicePlacementPolicies
+      - azure-servicefabric.StatelessServiceDescription.serviceTypeName
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit un service sans état.
+    extends:
+      name: azure-servicefabric.ServiceDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.correlationScheme
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le schéma de corrélation.
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceCorrelationDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.defaultMoveCost
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le coût de déplacement pour le service. Les valeurs possibles incluent\_: 'Zero', 'Low', 'Medium', 'High'"
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.initializationData
+    name: initializationData
+    fullName: initializationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les données d’initialisation en tant que tableau d’octets. Données d’initialisation sont passées à des instances de service ou réplicas lorsqu’elles sont créées.
+    optional: true
+    syntax:
+      content: 'initializationData?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.instanceCount
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre d’instances.
+    syntax:
+      content: 'instanceCount: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.isDefaultMoveCostSpecified
+    name: isDefaultMoveCostSpecified
+    fullName: isDefaultMoveCostSpecified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indique si la propriété DefaultMoveCost est spécifiée.
+    optional: true
+    syntax:
+      content: 'isDefaultMoveCostSpecified?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.partitionDescription
+    name: partitionDescription
+    fullName: partitionDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La description de la partition en tant qu’objet.
+    syntax:
+      content: 'partitionDescription: PartitionSchemeDescription'
+      return:
+        type:
+          - azure-servicefabric.PartitionSchemeDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Contraintes de placement sous forme de chaîne. Les contraintes de placement sont des expressions booléennes sur les propriétés de nœud et permettent de restreindre un service à des nœuds particuliers en fonction des besoins du service. Par exemple, pour placer un service sur les nœuds où NodeType est bleu spécifier les éléments suivants\_: \"NodeColor == blue)\"."
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.scalingPolicies
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Stratégies de mise à l’échelle pour ce service.
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ScalingPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.serviceDnsName
+    name: serviceDnsName
+    fullName: serviceDnsName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom DNS du service. Elle nécessite le service système DNS doit être activé dans le cluster Service Fabric.
+    optional: true
+    syntax:
+      content: 'serviceDnsName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.serviceLoadMetrics
+    name: serviceLoadMetrics
+    fullName: serviceLoadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les mesures de charge de service.
+    optional: true
+    syntax:
+      content: 'serviceLoadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom complet du service avec «\_fabric\_:\_» Schéma d’URI."
+    syntax:
+      content: 'serviceName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.servicePackageActivationMode
+    name: servicePackageActivationMode
+    fullName: servicePackageActivationMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le mode d’activation du package de service à utiliser pour un service. Les valeurs possibles incluent\_: 'SharedProcess', 'ExclusiveProcess'"
+    optional: true
+    syntax:
+      content: 'servicePackageActivationMode?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les stratégies de positionnement de service.
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceDescription.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du type de service tel que spécifié dans le manifeste de service.
+    syntax:
+      content: 'serviceTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceDescription
+    name: ServiceDescription
+    spec.typeScript:
+      - name: ServiceDescription
+        fullName: ServiceDescription
+        uid: azure-servicefabric.ServiceDescription
+  - uid: 'azure-servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: azure-servicefabric.ServiceCorrelationDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.PartitionSchemeDescription
+    name: PartitionSchemeDescription
+    spec.typeScript:
+      - name: PartitionSchemeDescription
+        fullName: PartitionSchemeDescription
+        uid: azure-servicefabric.PartitionSchemeDescription
+  - uid: 'azure-servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: azure-servicefabric.ScalingPolicyDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'

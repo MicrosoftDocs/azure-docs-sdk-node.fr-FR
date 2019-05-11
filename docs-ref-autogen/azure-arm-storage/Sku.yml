@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.Sku
+    name: Sku
+    fullName: Sku
+    children:
+      - azure-arm-storage.Sku.capabilities
+      - azure-arm-storage.Sku.kind
+      - azure-arm-storage.Sku.locations
+      - azure-arm-storage.Sku.name
+      - azure-arm-storage.Sku.resourceType
+      - azure-arm-storage.Sku.restrictions
+      - azure-arm-storage.Sku.tier
+    langs:
+      - typeScript
+    type: interface
+    summary: La référence (SKU) du compte de stockage.
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.capabilities
+    name: capabilities
+    fullName: capabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les informations de fonctionnalité dans les références spécifiées, y compris le chiffrement de fichier, les ACL, notification de modification, etc. de réseau.'
+    optional: true
+    syntax:
+      content: 'capabilities?: SKUCapability[]'
+      return:
+        type:
+          - 'azure-arm-storage.SKUCapability[]'
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Indique le type de compte de stockage. Les valeurs possibles incluent\_: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'"
+    optional: true
+    syntax:
+      content: 'kind?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.locations
+    name: locations
+    fullName: locations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’ensemble des emplacements que la référence (SKU) est disponible. Cela est pris en charge et inscrit les zones géographiques de Azure (par exemple, ouest des États-Unis, est des États-Unis, Asie du Sud-est, etc.).'
+    optional: true
+    syntax:
+      content: 'locations?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Obtient ou définit le nom de référence (SKU). Requis pour la création du compte\_; facultatif pour la mise à jour. Notez que dans les versions antérieures, le nom de référence a été appelé accountType. Les valeurs possibles incluent\_: 'Standard_LRS', 'Standard_GRS', 'Standard_RAGRS', 'Standard_ZRS', 'Premium_LRS', 'Premium_ZRS', 'Standard_GZRS', 'Standard_RAGZRS'"
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.resourceType
+    name: resourceType
+    fullName: resourceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de la ressource, il se situe généralement «\_storageAccounts\_»."
+    optional: true
+    syntax:
+      content: 'resourceType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.restrictions
+    name: restrictions
+    fullName: restrictions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les restrictions en raison de ce qui référence (SKU) ne peut pas être utilisé. Cela est vide s’il n’existe aucune restriction.
+    optional: true
+    syntax:
+      content: 'restrictions?: Restriction[]'
+      return:
+        type:
+          - 'azure-arm-storage.Restriction[]'
+    package: azure-arm-storage
+  - uid: azure-arm-storage.Sku.tier
+    name: tier
+    fullName: tier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Obtient le niveau de référence. Cela est basé sur le nom de référence (SKU). Les valeurs possibles incluent\_: 'Standard', 'Premium'"
+    optional: true
+    syntax:
+      content: 'tier?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-storage
+references:
+  - uid: 'azure-arm-storage.SKUCapability[]'
+    name: 'SKUCapability[]'
+    spec.typeScript:
+      - name: SKUCapability
+        fullName: SKUCapability
+        uid: azure-arm-storage.SKUCapability
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-storage.Restriction[]'
+    name: 'Restriction[]'
+    spec.typeScript:
+      - name: Restriction
+        fullName: Restriction
+        uid: azure-arm-storage.Restriction
+      - name: '[]'
+        fullName: '[]'

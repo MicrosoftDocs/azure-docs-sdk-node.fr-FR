@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.BasicRetentionPolicyDescription
+    name: BasicRetentionPolicyDescription
+    fullName: BasicRetentionPolicyDescription
+    children:
+      - azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+      - azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+      - azure-servicefabric.BasicRetentionPolicyDescription.retentionPolicyType
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit la stratégie de rétention de base.
+    extends:
+      name: azure-servicefabric.RetentionPolicyDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups
+    name: minimumNumberOfBackups
+    fullName: minimumNumberOfBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il est le nombre minimal de sauvegardes à conserver à tout moment. Si spécifié par un texte non la valeur zéro, les sauvegardes ne seront pas supprimés, même si les sauvegardes ont dépassé la durée de rétention et nombre de sauvegardes inférieur ou égal à celui-ci.'
+    optional: true
+    syntax:
+      content: 'minimumNumberOfBackups?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.BasicRetentionPolicyDescription.retentionDuration
+    name: retentionDuration
+    fullName: retentionDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Il s’agit de la durée minimale pour lequel une sauvegarde créée, reste stockées dans le stockage et peut-être être supprimée après que l’intervalle de temps. Il doit être spécifié dans le format ISO8601.'
+    syntax:
+      content: 'retentionDuration: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+  - uid: azure-servicefabric.BasicRetentionPolicyDescription.retentionPolicyType
+    name: retentionPolicyType
+    fullName: retentionPolicyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'retentionPolicyType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.RetentionPolicyDescription
+    name: RetentionPolicyDescription
+    spec.typeScript:
+      - name: RetentionPolicyDescription
+        fullName: RetentionPolicyDescription
+        uid: azure-servicefabric.RetentionPolicyDescription

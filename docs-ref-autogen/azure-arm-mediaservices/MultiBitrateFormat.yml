@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les propriétés de production d’une collection de fichiers à plusieurs débits de GOP aligné. Le comportement par défaut consiste à produire un fichier de sortie pour chaque couche vidéo qui est entrée multiplex ainsi que toutes les séquences de l’audio. Les fichiers de sortie exacte produits peuvent être contrôlés en spécifiant la collection outputFiles.
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le modèle des noms de fichiers pour les fichiers de sortie générée. Les macros suivantes sont prises en charge dans le nom de fichier\_: {Basename} - le nom de base de la vidéo d’entrée {Extension} - l’extension appropriée pour ce format. {Étiquette} - le nom attribué à la couche de codec /.\n{Index} - un index unique pour les miniatures. Uniquement applicable aux miniatures. {Bitrate}\_: la vitesse de transmission audio/vidéo. Non applicable aux miniatures. {Codec}\_: le type du codec audio/vidéo. Toutes les macros non substitués seront réduits et supprimés à partir du nom de fichier."
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des fichiers de sortie à générer.  Chaque entrée dans la liste est un jeu d’étiquettes de couche audio et vidéo à être entrée multiplex ensemble.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'
