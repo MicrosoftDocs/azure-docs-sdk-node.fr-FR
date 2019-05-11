@@ -1,0 +1,329 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions'
+    name: EventProcessorHostOptions
+    fullName: EventProcessorHostOptions
+    children:
+      - '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+      - '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+      - '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+      - '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+      - '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+      - '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+      - '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+      - '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+      - '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les paramètres facultatifs qui peuvent être fournies pour la création d’un EventProcessorHost.
+    extends:
+      name: '@azure/event-processor-host.FromConnectionStringOptions'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.checkpointManager'
+    name: checkpointManager
+    fullName: checkpointManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{CheckpointManager} [checkpointManager] Un gestionnaire pour gérer les points de contrôle.\nPar défaut\_: ** `AzureStorageCheckpointLeaseManager` **."
+    optional: true
+    syntax:
+      content: 'checkpointManager?: CheckpointManager'
+      return:
+        type:
+          - '@azure/event-processor-host.CheckpointManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{chaîne} [consumerGroup] Le nom du groupe de consommateurs dans le concentrateur d’événements. Valeur par défaut\_: ** `\"$default\"` **."
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{DataTransformer} [dataTransformer] Le transformateur de données qui sera utilisé pour encoder et décoder les messages envoyés et reçus respectivement. Si ce n’est pas fourni, puis nous allons utiliser le DefaultDataTransformer. Le transformateur par défaut doit gérer la majorité des cas. Cette option doit être utilisée uniquement pour des scénarios spécifiques.'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubConnectionString'
+    name: eventHubConnectionString
+    fullName: eventHubConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{chaîne} [eventHubConnectionString] Chaîne de connexion pour le concentrateur d’événements recevoir à partir de. Exemple\_: \"Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key\"."
+    optional: true
+    syntax:
+      content: 'eventHubConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.eventHubPath'
+    name: eventHubPath
+    fullName: eventHubPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [eventHubPath] Le nom de l’EventHub. Cette étape est facultative si la chaîne de connexion EventHub contient EntityPath = nom du hub sinon une erreur sera levée.'
+    optional: true
+    syntax:
+      content: 'eventHubPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.fastScanInterval'
+    name: fastScanInterval
+    fullName: fastScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{number} [fastScanInterval] Il existe deux fois possibles d’intervalle entre chaque analyse des partitions disponibles, rapides et lentes. L’intervalle rapide (court) ** `in seconds` ** est utilisé après une analyse dans le bail vol s’est produite, pour promouvoir un rééquilibrage plus rapide.\nPar défaut\_: ** `3` secondes**."
+    optional: true
+    syntax:
+      content: 'fastScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.initialOffset'
+    name: initialOffset
+    fullName: initialOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'InitialOffset {EventPosition} il s’agit uniquement utilisée lorsque puis récepteur est créé pour la première fois et il n’existe aucune donnée de point de contrôle dans l’objet blob. Pour cette option pour être efficace veillez à fournir un nouveau nom d’hôte n’a pas été utilisé précédemment.'
+    optional: true
+    syntax:
+      content: 'initialOffset?: EventPosition'
+      return:
+        type:
+          - EventPosition
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{number} [leaseDuration] Durée d’un bail ** `in seconds` ** avant son expiration, sauf si renouvelé. Par défaut\_: ** `30` secondes**, la valeur minimale\_: ** `15` secondes**, la valeur maximale\_: ** `60` secondes**."
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseManager'
+    name: leaseManager
+    fullName: leaseManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{LeaseManager} [LeaseManager] Un gestionnaire pour gérer les baux. Par défaut\_: ** `AzureStorageCheckpointLeaseManager` **."
+    optional: true
+    syntax:
+      content: 'leaseManager?: LeaseManager'
+      return:
+        type:
+          - '@azure/event-processor-host.LeaseManager'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.leaseRenewInterval'
+    name: leaseRenewInterval
+    fullName: leaseRenewInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{number} [leaseRenewInterval] L’intervalle de veille ** `in seconds` ** entre les analyses.\nPar défaut\_: ** `10` secondes**.\n\nPermet une implémentation de gestionnaire de bail indiquer à PartitionManager la fréquence à laquelle il doit analyser les baux et de les renouveler. Pour redistribuer les baux en temps voulu après un ordinateur hôte en cas d’arrêt, nous vous recommandons d’un intervalle relativement court, par exemple les dix secondes. Évidemment, il doit être inférieure à la moitié de la durée du bail, afin d’éviter une expiration accidentelle."
+    optional: true
+    syntax:
+      content: 'leaseRenewInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.onEphError'
+    name: onEphError
+    fullName: onEphError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {OnEphError} [onEphError] Gestionnaire d’erreurs qui peut être fournie pour recevoir des notifications pour les erreurs générales.
+
+      Erreurs qui se produisent lors du traitement des événements à partir d’une partition EventHub particulière sont remis à la `onError` gestionnaire fourni dans le `start()` (méthode). Ce gestionnaire est appelé lorsqu’une erreur se produit lors de la gestion des partitions ou des baux pour les partitions des occasions.
+    optional: true
+    syntax:
+      content: 'onEphError?: OnEphError'
+      return:
+        type:
+          - '@azure/event-processor-host.OnEphError'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.slowScanInterval'
+    name: slowScanInterval
+    fullName: slowScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{number} [slowScanInterval] L’intervalle (long) lente ** `in seconds` ** est utilisé après une analyse dans le bail vol ne prenaient pas afin de réduire toute analyse inutile lorsque le système est dans un état stable. Par défaut\_: ** `5` secondes**."
+    optional: true
+    syntax:
+      content: 'slowScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.startupScanDelay'
+    name: startupScanDelay
+    fullName: startupScanDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{number} [startupScanDelay] Le temps de retard ** `in seconds` ** entre la première analyse des partitions disponibles et le second. Cela fait partie d’une optimisation de démarrage qui permet d’hôtes individuels deviennent accessibles à d’autres hôtes et ainsi d’obtenir un nombre plus précis du nombre d’hôtes dans le système, avant d’essayer d’estimer le nombre de partitions qu’ils doivent posséder. Par défaut\_: ** `30` secondes**."
+    optional: true
+    syntax:
+      content: 'startupScanDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageBlobPrefix'
+    name: storageBlobPrefix
+    fullName: storageBlobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [storageBlobPrefix] Préfixe utilisé lorsque vous nommez des objets BLOB dans le conteneur de stockage.'
+    optional: true
+    syntax:
+      content: 'storageBlobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageConnectionString'
+    name: storageConnectionString
+    fullName: storageConnectionString
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [storageConnectionString] Chaîne de connexion au compte de stockage Azure utilisé pour les baux et les points de contrôle. Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"'
+    optional: true
+    syntax:
+      content: 'storageConnectionString?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.storageContainerName'
+    name: storageContainerName
+    fullName: storageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [storageContainerName] Nom de conteneur de stockage Azure pour une utilisation par le Gestionnaire de bail et de point de contrôle intégré.'
+    optional: true
+    syntax:
+      content: 'storageContainerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.tokenProvider'
+    name: tokenProvider
+    fullName: tokenProvider
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{TokenProvider} [tokenProvider] Une instance de l’interface de fournisseur de jetons qui fournit le jeton d’authentification. Valeur par défaut\_: ** `SasTokenProvider` **."
+    optional: true
+    syntax:
+      content: 'tokenProvider?: TokenProvider'
+      return:
+        type:
+          - TokenProvider
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.EventProcessorHostOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [userAgent] L’agent utilisateur qui doit être ajouté à l’utilisateur généré dans chaîne de l’agent.'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions'
+    name: FromConnectionStringOptions
+    spec.typeScript:
+      - name: FromConnectionStringOptions
+        fullName: FromConnectionStringOptions
+        uid: '@azure/event-processor-host.FromConnectionStringOptions'
+  - uid: '@azure/event-processor-host.CheckpointManager'
+    name: CheckpointManager
+    spec.typeScript:
+      - name: CheckpointManager
+        fullName: CheckpointManager
+        uid: '@azure/event-processor-host.CheckpointManager'
+  - uid: '@azure/event-processor-host.LeaseManager'
+    name: LeaseManager
+    spec.typeScript:
+      - name: LeaseManager
+        fullName: LeaseManager
+        uid: '@azure/event-processor-host.LeaseManager'
+  - uid: '@azure/event-processor-host.OnEphError'
+    name: OnEphError
+    spec.typeScript:
+      - name: OnEphError
+        fullName: OnEphError
+        uid: '@azure/event-processor-host.OnEphError'

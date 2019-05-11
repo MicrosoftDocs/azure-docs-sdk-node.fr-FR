@@ -1,0 +1,205 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.AvailabilitySet
+    name: AvailabilitySet
+    fullName: AvailabilitySet
+    children:
+      - azure-arm-compute.AvailabilitySet.id
+      - azure-arm-compute.AvailabilitySet.location
+      - azure-arm-compute.AvailabilitySet.name
+      - azure-arm-compute.AvailabilitySet.platformFaultDomainCount
+      - azure-arm-compute.AvailabilitySet.platformUpdateDomainCount
+      - azure-arm-compute.AvailabilitySet.sku
+      - azure-arm-compute.AvailabilitySet.statuses
+      - azure-arm-compute.AvailabilitySet.tags
+      - azure-arm-compute.AvailabilitySet.type
+      - azure-arm-compute.AvailabilitySet.virtualMachines
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Spécifie les informations sur le groupe à haute disponibilité que la machine virtuelle doit être attribuée à.
+      Les machines virtuelles spécifiées dans le même groupe à haute disponibilité sont allouées à des nœuds différents pour optimiser la disponibilité. Pour plus d’informations sur les groupes à haute disponibilité, consultez [gérer la disponibilité des machines virtuelles](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+      <br><br> Pour plus d’informations sur la maintenance planifiée Azure, consultez [maintenance planifiée pour les machines virtuelles dans Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Actuellement, une machine virtuelle ne peut être ajoutée à la disposition définie au moment de la création. Impossible d’ajouter une machine virtuelle existante à un groupe à haute disponibilité.
+    extends:
+      name: azure-arm-compute.Resource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de ressource
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Emplacement de la ressource
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de ressource
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.platformFaultDomainCount
+    name: platformFaultDomainCount
+    fullName: platformFaultDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre de domaines de l’erreur.
+    optional: true
+    syntax:
+      content: 'platformFaultDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.platformUpdateDomainCount
+    name: platformUpdateDomainCount
+    fullName: platformUpdateDomainCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mettre à jour du nombre de domaines.
+    optional: true
+    syntax:
+      content: 'platformUpdateDomainCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Jeu de référence (SKU) de la disponibilité, nom seul est nécessaire pour être définie. Consultez AvailabilitySetSkuTypes pour l’ensemble de valeurs possible. Utilisez «\_Aligné\_» pour les machines virtuelles avec disques gérés et «\_Classique\_» pour les machines virtuelles avec disques non gérés. Valeur par défaut est «\_Classique\_»."
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - azure-arm-compute.Sku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.statuses
+    name: statuses
+    fullName: statuses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les informations d’état de ressource.
+    optional: true
+    syntax:
+      content: 'statuses?: InstanceViewStatus[]'
+      return:
+        type:
+          - 'azure-arm-compute.InstanceViewStatus[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Balises de ressource
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type de ressource
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.AvailabilitySet.virtualMachines
+    name: virtualMachines
+    fullName: virtualMachines
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des références à toutes les machines virtuelles dans le groupe de disponibilité définies.
+    optional: true
+    syntax:
+      content: 'virtualMachines?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-compute.Resource
+  - uid: azure-arm-compute.Sku
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: azure-arm-compute.Sku
+  - uid: 'azure-arm-compute.InstanceViewStatus[]'
+    name: 'InstanceViewStatus[]'
+    spec.typeScript:
+      - name: InstanceViewStatus
+        fullName: InstanceViewStatus
+        uid: azure-arm-compute.InstanceViewStatus
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-arm-compute.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+      - name: '[]'
+        fullName: '[]'

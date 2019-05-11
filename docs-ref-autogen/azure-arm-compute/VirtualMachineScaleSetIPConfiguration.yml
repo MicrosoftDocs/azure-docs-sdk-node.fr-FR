@@ -1,0 +1,199 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration
+    name: VirtualMachineScaleSetIPConfiguration
+    fullName: VirtualMachineScaleSetIPConfiguration
+    children:
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationGatewayBackendAddressPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationSecurityGroups
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.id
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerBackendAddressPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerInboundNatPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.name
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.primary
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.privateIPAddressVersion
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.publicIPAddressConfiguration
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.subnet
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit la configuration IP de machine virtuelle mise à l’échelle ensemble réseau d’un profil.
+    extends:
+      name: azure-arm-compute.SubResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationGatewayBackendAddressPools
+    name: applicationGatewayBackendAddressPools
+    fullName: applicationGatewayBackendAddressPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie un tableau de références aux pools d’adresses principales de passerelles d’application. Un groupe identique peut faire référence à des pools d’adresses principales de plusieurs passerelles d’application. Plusieurs jeux de mise à l’échelle ne peut pas utiliser la même passerelle d’application.
+    optional: true
+    syntax:
+      content: 'applicationGatewayBackendAddressPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationSecurityGroups
+    name: applicationSecurityGroups
+    fullName: applicationSecurityGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie un tableau de références au groupe de sécurité d’application.
+    optional: true
+    syntax:
+      content: 'applicationSecurityGroups?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de ressource
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerBackendAddressPools
+    name: loadBalancerBackendAddressPools
+    fullName: loadBalancerBackendAddressPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie un tableau de références aux pools d’adresses principales d’équilibreurs de charge. Un groupe identique peut faire référence à des pools d’adresses principales d’un public et un équilibreur de charge interne. Plusieurs jeux de mise à l’échelle ne peut pas utiliser le même équilibreur de charge.
+    optional: true
+    syntax:
+      content: 'loadBalancerBackendAddressPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerInboundNatPools
+    name: loadBalancerInboundNatPools
+    fullName: loadBalancerInboundNatPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie un tableau de références pools Nat des équilibrages de charge de trafic entrant. Un groupe identique peut référencer des pools nat de trafic entrant d’un public et l’équilibreur de charge interne un. Plusieurs jeux de mise à l’échelle ne peut pas utiliser le même équilibreur de charge
+    optional: true
+    syntax:
+      content: 'loadBalancerInboundNatPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de la configuration IP.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.primary
+    name: primary
+    fullName: primary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie l’interface réseau principale au cas où l’ordinateur virtuel possède plus de 1 interface réseau.
+    optional: true
+    syntax:
+      content: 'primary?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.privateIPAddressVersion
+    name: privateIPAddressVersion
+    fullName: privateIPAddressVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Disponible à partir de l’Api-Version 2017-03-30 et versions ultérieures, il indique si la configuration IP spécifique est IPv4 ou IPv6. Par défaut est considéré comme étant de IPv4.  Les valeurs possibles sont les suivantes\_: «\_IPv4\_» et «\_IPv6\_». Les valeurs possibles incluent\_: 'IPv4', 'IPv6'"
+    optional: true
+    syntax:
+      content: 'privateIPAddressVersion?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.publicIPAddressConfiguration
+    name: publicIPAddressConfiguration
+    fullName: publicIPAddressConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La publicIPAddressConfiguration.
+    optional: true
+    syntax:
+      content: 'publicIPAddressConfiguration?: VirtualMachineScaleSetPublicIPAddressConfiguration'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.subnet
+    name: subnet
+    fullName: subnet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie l’identificateur du sous-réseau.
+    optional: true
+    syntax:
+      content: 'subnet?: ApiEntityReference'
+      return:
+        type:
+          - azure-arm-compute.ApiEntityReference
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+  - uid: 'azure-arm-compute.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+    name: VirtualMachineScaleSetPublicIPAddressConfiguration
+    spec.typeScript:
+      - name: VirtualMachineScaleSetPublicIPAddressConfiguration
+        fullName: VirtualMachineScaleSetPublicIPAddressConfiguration
+        uid: azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+  - uid: azure-arm-compute.ApiEntityReference
+    name: ApiEntityReference
+    spec.typeScript:
+      - name: ApiEntityReference
+        fullName: ApiEntityReference
+        uid: azure-arm-compute.ApiEntityReference
