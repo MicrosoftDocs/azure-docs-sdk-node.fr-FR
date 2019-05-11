@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ea3a1-101">Décrit les propriétés de production d’une collection de fichiers à plusieurs débits de GOP aligné.</span><span class="sxs-lookup"><span data-stu-id="ea3a1-101">Describes the properties for producing a collection of GOP aligned multi-bitrate files.</span></span> <span data-ttu-id="ea3a1-102">Le comportement par défaut consiste à produire un fichier de sortie pour chaque couche vidéo qui est entrée multiplex ainsi que toutes les séquences de l’audio.</span><span class="sxs-lookup"><span data-stu-id="ea3a1-102">The default behavior is to produce one output file for each video layer which is muxed together with all the audios.</span></span> <span data-ttu-id="ea3a1-103">Les fichiers de sortie exacte produits peuvent être contrôlés en spécifiant la collection outputFiles.</span><span class="sxs-lookup"><span data-stu-id="ea3a1-103">The exact output files produced can be controlled by specifying the outputFiles collection.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"ea3a1-104\">Le modèle des noms de fichiers pour les fichiers de sortie générée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-104\">The pattern of the file names for the generated output files.</span></span> <span data-ttu-id=\"ea3a1-105\">Les macros suivantes sont prises en charge dans le nom de fichier\_: {Basename} - le nom de base de la vidéo d’entrée {Extension} - l’extension appropriée pour ce format.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-105\">The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format.</span></span> <span data-ttu-id=\"ea3a1-106\">{Étiquette} - le nom attribué à la couche de codec /.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-106\">{Label} - The label assigned to the codec/layer.</span></span>\n<span data-ttu-id=\"ea3a1-107\">{Index} - un index unique pour les miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-107\">{Index} - A unique index for thumbnails.</span></span> <span data-ttu-id=\"ea3a1-108\">Uniquement applicable aux miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-108\">Only applicable to thumbnails.</span></span> <span data-ttu-id=\"ea3a1-109\">{Bitrate}\_: la vitesse de transmission audio/vidéo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-109\">{Bitrate} - The audio/video bitrate.</span></span> <span data-ttu-id=\"ea3a1-110\">Non applicable aux miniatures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-110\">Not applicable to thumbnails.</span></span> <span data-ttu-id=\"ea3a1-111\">{Codec}\_: le type du codec audio/vidéo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-111\">{Codec} - The type of the audio/video codec.</span></span> <span data-ttu-id=\"ea3a1-112\">Toutes les macros non substitués seront réduits et supprimés à partir du nom de fichier.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ea3a1-112\">Any unsubstituted macros will be collapsed and removed from the filename.</span></span>"
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea3a1-113">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="ea3a1-113">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ea3a1-114">La liste des fichiers de sortie à générer.</span><span class="sxs-lookup"><span data-stu-id="ea3a1-114">The list of output files to produce.</span></span>  <span data-ttu-id="ea3a1-115">Chaque entrée dans la liste est un jeu d’étiquettes de couche audio et vidéo à être entrée multiplex ensemble.</span><span class="sxs-lookup"><span data-stu-id="ea3a1-115">Each entry in the list is a set of audio and video layer labels to be muxed together .</span></span>
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'

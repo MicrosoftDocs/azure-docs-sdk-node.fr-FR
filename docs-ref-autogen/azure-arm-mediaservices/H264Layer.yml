@@ -1,0 +1,260 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.H264Layer
+    name: H264Layer
+    fullName: H264Layer
+    children:
+      - azure-arm-mediaservices.H264Layer.adaptiveBFrame
+      - azure-arm-mediaservices.H264Layer.bFrames
+      - azure-arm-mediaservices.H264Layer.bitrate
+      - azure-arm-mediaservices.H264Layer.bufferWindow
+      - azure-arm-mediaservices.H264Layer.entropyMode
+      - azure-arm-mediaservices.H264Layer.frameRate
+      - azure-arm-mediaservices.H264Layer.height
+      - azure-arm-mediaservices.H264Layer.label
+      - azure-arm-mediaservices.H264Layer.level
+      - azure-arm-mediaservices.H264Layer.maxBitrate
+      - azure-arm-mediaservices.H264Layer.odatatype
+      - azure-arm-mediaservices.H264Layer.profile
+      - azure-arm-mediaservices.H264Layer.referenceFrames
+      - azure-arm-mediaservices.H264Layer.slices
+      - azure-arm-mediaservices.H264Layer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="fa7ef-101">Décrit les paramètres à utiliser lors de l’encodage de la vidéo d’entrée dans une couche de vitesse de transmission de sortie souhaité avec le codec vidéo H.264.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-101">Describes the settings to be used when encoding the input video into a desired output bitrate layer with the H.264 video codec.</span></span>
+    extends:
+      name: azure-arm-mediaservices.VideoLayer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-102">Ou non les trames B ADAPTATIF doivent être utilisées lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-102">Whether or not adaptive B-frames are to be used when encoding this layer.</span></span> <span data-ttu-id="fa7ef-103">Si non spécifié, l’encodeur s’allumer chaque fois que le profil vidéo permet son utilisation.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-103">If not specified, the encoder will turn it on whenever the video profile permits its use.</span></span>'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-104">Le nombre de trames B à utiliser lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-104">The number of B-frames to be used when encoding this layer.</span></span>  <span data-ttu-id="fa7ef-105">Si non spécifié, l’encodeur choisit un nombre approprié selon le profil vidéo et le niveau.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-105">If not specified, the encoder chooses an appropriate number based on the video profile and level.</span></span>'
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa7ef-106">Le débit binaire moyen en bits par seconde à utiliser pour coder la vidéo d’entrée lors de la génération de cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-106">The average bitrate in bits per second at which to encode the input video when generating this layer.</span></span> <span data-ttu-id="fa7ef-107">Ce champ est obligatoire.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-107">This is a required field.</span></span>
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.bufferWindow
+    name: bufferWindow
+    fullName: bufferWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-108">La longueur de la fenêtre VBV mémoire tampon.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-108">The VBV buffer window length.</span></span> <span data-ttu-id="fa7ef-109">La valeur doit être au format ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-109">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="fa7ef-110">La valeur doit être dans les secondes de la plage [0,1-100].</span><span class="sxs-lookup"><span data-stu-id="fa7ef-110">The value should be in the range [0.1-100] seconds.</span></span> <span data-ttu-id="fa7ef-111">La valeur par défaut est de 5 secondes (par exemple, PT5S).</span><span class="sxs-lookup"><span data-stu-id="fa7ef-111">The default is 5 seconds (for example, PT5S).</span></span>'
+    optional: true
+    syntax:
+      content: 'bufferWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.entropyMode
+    name: entropyMode
+    fullName: entropyMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"fa7ef-112\">Le mode d’entropie à utiliser pour cette couche.</span><span class=\"sxs-lookup\"><span data-stu-id=\"fa7ef-112\">The entropy mode to be used for this layer.</span></span> <span data-ttu-id=\"fa7ef-113\">Si non spécifié, l’encodeur choisit le mode approprié pour le profil et le niveau.</span><span class=\"sxs-lookup\"><span data-stu-id=\"fa7ef-113\">If not specified, the encoder chooses the mode that is appropriate for the profile and level.</span></span> <span data-ttu-id=\"fa7ef-114\">Les valeurs possibles incluent\_: 'Cabac', 'Cavlc'</span><span class=\"sxs-lookup\"><span data-stu-id=\"fa7ef-114\">Possible values include: 'Cabac', 'Cavlc'</span></span>"
+    optional: true
+    syntax:
+      content: 'entropyMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-115">Le frame de taux (en images par seconde) à utiliser pour coder cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-115">The frame rate (in frames per second) at which to encode this layer.</span></span> <span data-ttu-id="fa7ef-116">La valeur peut être sous la forme M/n, où M et N sont des entiers (par exemple, 30000 1001) ou sous la forme d’un nombre (par exemple, 30 ou 29,97).</span><span class="sxs-lookup"><span data-stu-id="fa7ef-116">The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97).</span></span> <span data-ttu-id="fa7ef-117">L’encodeur impose des contraintes sur les fréquences d’images autorisées selon le profil et le niveau.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-117">The encoder enforces constraints on allowed frame rates based on the profile and level.</span></span> <span data-ttu-id="fa7ef-118">S’il n’est pas spécifié, l’encodeur utilise la même fréquence d’images en tant que la vidéo d’entrée.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-118">If it is not specified, the encoder will use the same frame rate as the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-119">La hauteur de la vidéo de sortie pour cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-119">The height of the output video for this layer.</span></span> <span data-ttu-id="fa7ef-120">La valeur peut être absolu (en pixels) ou relatif (en pourcentage).</span><span class="sxs-lookup"><span data-stu-id="fa7ef-120">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="fa7ef-121">Par exemple, 50 % signifie que la vidéo de sortie a la moitié des pixels autant de hauteur comme entrée.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-121">For example 50% means the output video has half as many pixels in height as the input.</span></span>'
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-122">L’étiquette d’alphanumériques pour cette couche, qui peut être utilisée dans le multiplexage des calques différents vidéo et audio, ou pour nommer le fichier de sortie.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-122">The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.level
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-123">Nous prenons en charge au niveau jusqu''à 6.2.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-123">We currently support Level up to 6.2.</span></span> <span data-ttu-id="fa7ef-124">La valeur peut être automatique ou un nombre qui correspond au profil H.264.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-124">The value can be Auto, or a number that matches the H.264 profile.</span></span> <span data-ttu-id="fa7ef-125">Si non spécifié, la valeur par défaut est Auto, ce qui permet à l’encodeur de choisir le niveau approprié pour cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-125">If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.</span></span>'
+    optional: true
+    syntax:
+      content: 'level?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fa7ef-126">Le débit maximal (en bits par seconde) à laquelle la mémoire tampon VBV supposer un rechargement.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-126">The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill.</span></span>
+      <span data-ttu-id="fa7ef-127">Si non spécifié, par défaut est la même valeur que la vitesse de transmission.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-127">If not specified, defaults to the same value as bitrate.</span></span>
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fa7ef-128">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="fa7ef-128">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.profile
+    name: profile
+    fullName: profile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"fa7ef-129\">Nous prenons en charge actuellement Baseline, Main, haute, High422, High444.</span><span class=\"sxs-lookup\"><span data-stu-id=\"fa7ef-129\">We currently support Baseline, Main, High, High422, High444.</span></span> <span data-ttu-id=\"fa7ef-130\">Par défaut est Auto. Les valeurs possibles incluent\_: «\_Auto\_», «\_Ligne de base\_», «\_Principal\_», «\_Élevée\_», 'High422', 'High444'</span><span class=\"sxs-lookup\"><span data-stu-id=\"fa7ef-130\">Default is Auto. Possible values include: 'Auto', 'Baseline', 'Main', 'High', 'High422', 'High444'</span></span>"
+    optional: true
+    syntax:
+      content: 'profile?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.referenceFrames
+    name: referenceFrames
+    fullName: referenceFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-131">Le nombre de trames de référence à utiliser lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-131">The number of reference frames to be used when encoding this layer.</span></span> <span data-ttu-id="fa7ef-132">Si non spécifié, l’encodeur détermine un nombre approprié en fonction du paramètre de la complexité du codeur.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-132">If not specified, the encoder determines an appropriate number based on the encoder complexity setting.</span></span>'
+    optional: true
+    syntax:
+      content: 'referenceFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-133">Le nombre de secteurs à utiliser lors de l’encodage de cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-133">The number of slices to be used when encoding this layer.</span></span> <span data-ttu-id="fa7ef-134">Si non spécifié, la valeur par défaut est zéro, ce qui signifie que cet encodeur utilise un seul secteur pour chaque trame.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-134">If not specified, default is zero, which means that encoder will use a single slice for each frame.</span></span>'
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.H264Layer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fa7ef-135">La largeur de la vidéo de sortie pour cette couche.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-135">The width of the output video for this layer.</span></span> <span data-ttu-id="fa7ef-136">La valeur peut être absolu (en pixels) ou relatif (en pourcentage).</span><span class="sxs-lookup"><span data-stu-id="fa7ef-136">The value can be absolute (in pixels) or relative (in percentage).</span></span> <span data-ttu-id="fa7ef-137">Par exemple, 50 % signifie que la vidéo de sortie a pixels autant la moitié de la largeur en tant que l’entrée.</span><span class="sxs-lookup"><span data-stu-id="fa7ef-137">For example 50% means the output video has half as many pixels in width as the input.</span></span>'
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    spec.typeScript:
+      - name: VideoLayer
+        fullName: VideoLayer
+        uid: azure-arm-mediaservices.VideoLayer

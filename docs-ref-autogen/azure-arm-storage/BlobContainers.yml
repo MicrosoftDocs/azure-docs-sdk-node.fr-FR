@@ -1,0 +1,2030 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-storage.BlobContainers
+    name: BlobContainers
+    fullName: BlobContainers
+    children:
+      - azure-arm-storage.BlobContainers.clearLegalHold
+      - azure-arm-storage.BlobContainers.clearLegalHold_2
+      - azure-arm-storage.BlobContainers.clearLegalHold_1
+      - azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.create
+      - azure-arm-storage.BlobContainers.create_2
+      - azure-arm-storage.BlobContainers.create_1
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.deleteMethod
+      - azure-arm-storage.BlobContainers.deleteMethod_2
+      - azure-arm-storage.BlobContainers.deleteMethod_1
+      - azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.get
+      - azure-arm-storage.BlobContainers.get_2
+      - azure-arm-storage.BlobContainers.get_1
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.lease
+      - azure-arm-storage.BlobContainers.lease_2
+      - azure-arm-storage.BlobContainers.lease_1
+      - azure-arm-storage.BlobContainers.leaseWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.list
+      - azure-arm-storage.BlobContainers.list_2
+      - azure-arm-storage.BlobContainers.list_1
+      - azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+      - azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.setLegalHold
+      - azure-arm-storage.BlobContainers.setLegalHold_2
+      - azure-arm-storage.BlobContainers.setLegalHold_1
+      - azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+      - azure-arm-storage.BlobContainers.update
+      - azure-arm-storage.BlobContainers.update_2
+      - azure-arm-storage.BlobContainers.update_1
+      - azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold
+    name: 'clearLegalHold(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-101">Efface juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-101">Clears legal hold tags.</span></span> <span data-ttu-id="15756-102">Effacement de la balise même ou inexistante entraîne une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-102">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-103">ClearLegalHold efface uniquement les balises spécifiées dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-103">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-104">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-104">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-105">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-105">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-106\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-106\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-107\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-107\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-108">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-108">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-109">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-109">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-110">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-110">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            <span data-ttu-id="15756-111">Chaque balise doit être 3 et 23 caractères alphanumériques et est normalisée en minuscules à des stratégies de restriction logicielle.</span><span class="sxs-lookup"><span data-stu-id="15756-111">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold_2
+    name: 'clearLegalHold(string, string, string, string[], Object, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-112">Efface juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-112">Clears legal hold tags.</span></span> <span data-ttu-id="15756-113">Effacement de la balise même ou inexistante entraîne une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-113">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-114">ClearLegalHold efface uniquement les balises spécifiées dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-114">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHold_1
+    name: 'clearLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-115">Efface juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-115">Clears legal hold tags.</span></span> <span data-ttu-id="15756-116">Effacement de la balise même ou inexistante entraîne une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-116">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-117">ClearLegalHold efface uniquement les balises spécifiées dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-117">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    syntax:
+      content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.clearLegalHoldWithHttpOperationResponse
+    name: 'clearLegalHoldWithHttpOperationResponse(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-118">Efface juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-118">Clears legal hold tags.</span></span> <span data-ttu-id="15756-119">Effacement de la balise même ou inexistante entraîne une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-119">Clearing the same or non-existent tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-120">ClearLegalHold efface uniquement les balises spécifiées dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-120">ClearLegalHold clears out only the specified tags in the request.</span></span>
+    syntax:
+      content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-121">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-121">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-122">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-122">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-123\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-123\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-124\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-124\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-125">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-125">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-126">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-126">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-127">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-127">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            <span data-ttu-id="15756-128">Chaque balise doit être 3 et 23 caractères alphanumériques et est normalisée en minuscules à des stratégies de restriction logicielle.</span><span class="sxs-lookup"><span data-stu-id="15756-128">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create
+    name: 'create(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-129">Crée un nouveau conteneur sous le compte spécifié comme décrit dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-129">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="15756-130">La ressource de conteneur inclut les métadonnées et propriétés de ce conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-130">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="15756-131">Il n’inclut pas d’une liste des objets BLOB contenus par le conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-131">It does not include a list of the blobs contained by the container.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-132">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-132">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-133">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-133">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-134\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-134\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-135\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-135\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-136">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-136">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-137">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-137">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-138">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-138">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create_2
+    name: 'create(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-139">Crée un nouveau conteneur sous le compte spécifié comme décrit dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-139">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="15756-140">La ressource de conteneur inclut les métadonnées et propriétés de ce conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-140">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="15756-141">Il n’inclut pas d’une liste des objets BLOB contenus par le conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-141">It does not include a list of the blobs contained by the container.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.create_1
+    name: 'create(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-142">Crée un nouveau conteneur sous le compte spécifié comme décrit dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-142">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="15756-143">La ressource de conteneur inclut les métadonnées et propriétés de ce conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-143">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="15756-144">Il n’inclut pas d’une liste des objets BLOB contenus par le conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-144">It does not include a list of the blobs contained by the container.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-145">Crée ou met à jour une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-145">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="15756-146">ETag dans If-Match est honoré si donné, mais pas obligatoire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-146">ETag in If-Match is honored if given but not required for this operation.</span></span>'
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-147">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-147">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-148">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-148">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-149\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-149\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-150\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-150\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-151">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-151">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-152">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-152">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-153">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-153">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            <span data-ttu-id="15756-154">La période d’immuabilité des objets BLOB dans le conteneur depuis la création de la stratégie, en jours.</span><span class="sxs-lookup"><span data-stu-id="15756-154">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_2
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-155">Crée ou met à jour une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-155">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="15756-156">ETag dans If-Match est honoré si donné, mais pas obligatoire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-156">ETag in If-Match is honored if given but not required for this operation.</span></span>'
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicy_1
+    name: 'createOrUpdateImmutabilityPolicy(string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-157">Crée ou met à jour une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-157">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="15756-158">ETag dans If-Match est honoré si donné, mais pas obligatoire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-158">ETag in If-Match is honored if given but not required for this operation.</span></span>'
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createOrUpdateImmutabilityPolicyWithHttpOperationResponse
+    name: 'createOrUpdateImmutabilityPolicyWithHttpOperationResponse(string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-159">Crée ou met à jour une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-159">Creates or updates an unlocked immutability policy.</span></span> <span data-ttu-id="15756-160">ETag dans If-Match est honoré si donné, mais pas obligatoire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-160">ETag in If-Match is honored if given but not required for this operation.</span></span>'
+    syntax:
+      content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-161">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-162">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-162">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-163\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-163\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-164\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-164\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-165">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-165">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-166">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-166">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-167">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-167">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            <span data-ttu-id="15756-168">La période d’immuabilité des objets BLOB dans le conteneur depuis la création de la stratégie, en jours.</span><span class="sxs-lookup"><span data-stu-id="15756-168">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.createWithHttpOperationResponse
+    name: 'createWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-169">Crée un nouveau conteneur sous le compte spécifié comme décrit dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-169">Creates a new container under the specified account as described by request body.</span></span> <span data-ttu-id="15756-170">La ressource de conteneur inclut les métadonnées et propriétés de ce conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-170">The container resource includes metadata and properties for that container.</span></span> <span data-ttu-id="15756-171">Il n’inclut pas d’une liste des objets BLOB contenus par le conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-171">It does not include a list of the blobs contained by the container.</span></span>
+    syntax:
+      content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-172">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-172">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-173">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-173">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-174\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-174\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-175\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-175\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-176">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-176">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-177">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-177">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-178">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-178">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy
+    name: 'deleteImmutabilityPolicy(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-179">Abandonne une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-179">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="15756-180">La réponse de suppression a immutabilityPeriodSinceCreationInDays définie sur 0.</span><span class="sxs-lookup"><span data-stu-id="15756-180">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="15756-181">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-181">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="15756-182">Suppression d’une stratégie d’immuabilité verrouillée est interdit, seul moyen consiste à supprimer le conteneur après la suppression de tous les objets BLOB à l’intérieur du conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-182">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>'
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-183">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-183">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-184">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-184">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-185\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-185\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-186\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-186\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-187">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-187">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-188">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-188">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-189">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-189">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-190\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-190\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-191\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-191\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-192\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-192\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_2
+    name: 'deleteImmutabilityPolicy(string, string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-193">Abandonne une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-193">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="15756-194">La réponse de suppression a immutabilityPeriodSinceCreationInDays définie sur 0.</span><span class="sxs-lookup"><span data-stu-id="15756-194">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="15756-195">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-195">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="15756-196">Suppression d’une stratégie d’immuabilité verrouillée est interdit, seul moyen consiste à supprimer le conteneur après la suppression de tous les objets BLOB à l’intérieur du conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-196">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>'
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicy_1
+    name: 'deleteImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-197">Abandonne une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-197">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="15756-198">La réponse de suppression a immutabilityPeriodSinceCreationInDays définie sur 0.</span><span class="sxs-lookup"><span data-stu-id="15756-198">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="15756-199">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-199">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="15756-200">Suppression d’une stratégie d’immuabilité verrouillée est interdit, seul moyen consiste à supprimer le conteneur après la suppression de tous les objets BLOB à l’intérieur du conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-200">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>'
+    syntax:
+      content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteImmutabilityPolicyWithHttpOperationResponse
+    name: 'deleteImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-201">Abandonne une stratégie d’immuabilité déverrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-201">Aborts an unlocked immutability policy.</span></span> <span data-ttu-id="15756-202">La réponse de suppression a immutabilityPeriodSinceCreationInDays définie sur 0.</span><span class="sxs-lookup"><span data-stu-id="15756-202">The response of delete has immutabilityPeriodSinceCreationInDays set to 0.</span></span> <span data-ttu-id="15756-203">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-203">ETag in If-Match is required for this operation.</span></span> <span data-ttu-id="15756-204">Suppression d’une stratégie d’immuabilité verrouillée est interdit, seul moyen consiste à supprimer le conteneur après la suppression de tous les objets BLOB à l’intérieur du conteneur.</span><span class="sxs-lookup"><span data-stu-id="15756-204">Deleting a locked immutability policy is not allowed, only way is to delete the container after deleting all blobs inside the container.</span></span>'
+    syntax:
+      content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-205">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-205">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-206">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-206">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-207\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-207\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-208\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-208\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-209">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-209">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-210">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-210">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-211">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-211">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-212\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-212\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-213\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-213\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-214\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-214\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod
+    name: 'deleteMethod(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-215">Supprime le conteneur sous son compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-215">Deletes specified container under its account.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-216">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-216">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-217">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-217">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-218\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-218\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-219\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-219\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-220">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-220">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-221">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-221">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-222">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-222">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod_2
+    name: 'deleteMethod(string, string, string, Object, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-223">Supprime le conteneur sous son compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-223">Deletes specified container under its account.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethod_1
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-224">Supprime le conteneur sous son compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-224">Deletes specified container under its account.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: ''
+      return:
+        type:
+          - Promise<void>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.deleteMethodWithHttpOperationResponse
+    name: 'deleteMethodWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-225">Supprime le conteneur sous son compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-225">Deletes specified container under its account.</span></span>
+    syntax:
+      content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-226">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-226">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-227">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-227">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-228\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-228\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-229\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-229\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-230">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-230">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-231">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-231">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-232">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-232">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<void>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-233">Étend l’immutabilityPeriodSinceCreationInDays d’un immutabilityPolicy verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-233">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="15756-234">La seule action autorisée sur une stratégie verrouillé sera cette action.</span><span class="sxs-lookup"><span data-stu-id="15756-234">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="15756-235">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-235">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-236">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-236">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-237">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-237">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-238\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-238\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-239\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-239\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-240">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-240">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-241">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-241">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-242">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-242">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-243\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-243\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-244\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-244\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-245\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-245\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            <span data-ttu-id="15756-246">La période d’immuabilité des objets BLOB dans le conteneur depuis la création de la stratégie, en jours.</span><span class="sxs-lookup"><span data-stu-id="15756-246">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_2
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-247">Étend l’immutabilityPeriodSinceCreationInDays d’un immutabilityPolicy verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-247">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="15756-248">La seule action autorisée sur une stratégie verrouillé sera cette action.</span><span class="sxs-lookup"><span data-stu-id="15756-248">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="15756-249">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-249">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicy_1
+    name: 'extendImmutabilityPolicy(string, string, string, string, number, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-250">Étend l’immutabilityPeriodSinceCreationInDays d’un immutabilityPolicy verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-250">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="15756-251">La seule action autorisée sur une stratégie verrouillé sera cette action.</span><span class="sxs-lookup"><span data-stu-id="15756-251">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="15756-252">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-252">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.extendImmutabilityPolicyWithHttpOperationResponse
+    name: 'extendImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, number, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-253">Étend l’immutabilityPeriodSinceCreationInDays d’un immutabilityPolicy verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-253">Extends the immutabilityPeriodSinceCreationInDays of a locked immutabilityPolicy.</span></span> <span data-ttu-id="15756-254">La seule action autorisée sur une stratégie verrouillé sera cette action.</span><span class="sxs-lookup"><span data-stu-id="15756-254">The only action allowed on a Locked policy will be this action.</span></span> <span data-ttu-id="15756-255">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-255">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-256">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-256">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-257">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-257">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-258\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-258\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-259\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-259\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-260">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-260">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-261">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-261">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-262">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-262">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-263\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-263\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-264\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-264\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-265\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-265\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: immutabilityPeriodSinceCreationInDays
+          type:
+            - number
+          description: |
+            <span data-ttu-id="15756-266">La période d’immuabilité des objets BLOB dans le conteneur depuis la création de la stratégie, en jours.</span><span class="sxs-lookup"><span data-stu-id="15756-266">The immutability period for the blobs in the container since the policy creation, in days.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get
+    name: 'get(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-267">Obtient les propriétés d’un conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-267">Gets properties of a specified container.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-268">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-268">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-269">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-269">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-270\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-270\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-271\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-271\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-272">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-272">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-273">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-273">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-274">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-274">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get_2
+    name: 'get(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-275">Obtient les propriétés d’un conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-275">Gets properties of a specified container.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.get_1
+    name: 'get(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-276">Obtient les propriétés d’un conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-276">Gets properties of a specified container.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy
+    name: 'getImmutabilityPolicy(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-277">Obtient la stratégie d’immuabilité existante, ainsi que l’ETag correspondante dans les en-têtes de réponse et corps.</span><span class="sxs-lookup"><span data-stu-id="15756-277">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>'
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-278">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-278">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-279">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-279">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-280\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-280\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-281\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-281\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-282">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-282">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-283">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-283">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-284">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-284">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_2
+    name: 'getImmutabilityPolicy(string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-285">Obtient la stratégie d’immuabilité existante, ainsi que l’ETag correspondante dans les en-têtes de réponse et corps.</span><span class="sxs-lookup"><span data-stu-id="15756-285">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>'
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicy_1
+    name: 'getImmutabilityPolicy(string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-286">Obtient la stratégie d’immuabilité existante, ainsi que l’ETag correspondante dans les en-têtes de réponse et corps.</span><span class="sxs-lookup"><span data-stu-id="15756-286">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>'
+    syntax:
+      content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getImmutabilityPolicyWithHttpOperationResponse
+    name: 'getImmutabilityPolicyWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-287">Obtient la stratégie d’immuabilité existante, ainsi que l’ETag correspondante dans les en-têtes de réponse et corps.</span><span class="sxs-lookup"><span data-stu-id="15756-287">Gets the existing immutability policy along with the corresponding ETag in response headers and body.</span></span>'
+    syntax:
+      content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-288">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-288">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-289">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-289">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-290\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-290\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-291\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-291\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-292">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-292">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-293">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-293">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-294">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-294">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.getWithHttpOperationResponse
+    name: 'getWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-295">Obtient les propriétés d’un conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-295">Gets properties of a specified container.</span></span>
+    syntax:
+      content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-296">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-296">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-297">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-297">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-298\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-298\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-299\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-299\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-300">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-300">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-301">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-301">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-302">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-302">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease
+    name: 'lease(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-303">L’opération Lease Container établit et gère un verrou sur un conteneur pour les opérations de suppression.</span><span class="sxs-lookup"><span data-stu-id="15756-303">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="15756-304">La durée du verrou peut être de 15 à 60 secondes, ou peut être infinie.</span><span class="sxs-lookup"><span data-stu-id="15756-304">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-305">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-305">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-306">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-306">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-307\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-307\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-308\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-308\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-309">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-309">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-310">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-310">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-311">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-311">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease_2
+    name: 'lease(string, string, string, Object, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-312">L’opération Lease Container établit et gère un verrou sur un conteneur pour les opérations de suppression.</span><span class="sxs-lookup"><span data-stu-id="15756-312">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="15756-313">La durée du verrou peut être de 15 à 60 secondes, ou peut être infinie.</span><span class="sxs-lookup"><span data-stu-id="15756-313">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lease_1
+    name: 'lease(string, string, string, ServiceCallback<LeaseContainerResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-314">L’opération Lease Container établit et gère un verrou sur un conteneur pour les opérations de suppression.</span><span class="sxs-lookup"><span data-stu-id="15756-314">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="15756-315">La durée du verrou peut être de 15 à 60 secondes, ou peut être infinie.</span><span class="sxs-lookup"><span data-stu-id="15756-315">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    syntax:
+      content: 'function lease(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<LeaseContainerResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LeaseContainerResponse>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.leaseWithHttpOperationResponse
+    name: 'leaseWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="15756-316">L’opération Lease Container établit et gère un verrou sur un conteneur pour les opérations de suppression.</span><span class="sxs-lookup"><span data-stu-id="15756-316">The Lease Container operation establishes and manages a lock on a container for delete operations.</span></span> <span data-ttu-id="15756-317">La durée du verrou peut être de 15 à 60 secondes, ou peut être infinie.</span><span class="sxs-lookup"><span data-stu-id="15756-317">The lock duration can be 15 to 60 seconds, or can be infinite.</span></span>'
+    syntax:
+      content: 'function leaseWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-318">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-318">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-319">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-319">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-320\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-320\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-321\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-321\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-322">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-322">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-323">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-323">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-324">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-324">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LeaseContainerResponse>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list
+    name: 'list(string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-325">Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données.</span><span class="sxs-lookup"><span data-stu-id="15756-325">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="15756-326">Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.</span><span class="sxs-lookup"><span data-stu-id="15756-326">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-327">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-327">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-328">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-328">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-329\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-329\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-330\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-330\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list_2
+    name: 'list(string, string, Object, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-331">Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données.</span><span class="sxs-lookup"><span data-stu-id="15756-331">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="15756-332">Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.</span><span class="sxs-lookup"><span data-stu-id="15756-332">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ListContainerItems>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.list_1
+    name: 'list(string, string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-333">Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données.</span><span class="sxs-lookup"><span data-stu-id="15756-333">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="15756-334">Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.</span><span class="sxs-lookup"><span data-stu-id="15756-334">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ListContainerItems>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ListContainerItems>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.listWithHttpOperationResponse
+    name: 'listWithHttpOperationResponse(string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-335">Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données.</span><span class="sxs-lookup"><span data-stu-id="15756-335">Lists all containers and does not support a prefix like data plane.</span></span> <span data-ttu-id="15756-336">Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.</span><span class="sxs-lookup"><span data-stu-id="15756-336">Also SRP today does not return continuation token.</span></span>
+    syntax:
+      content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-337">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-337">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-338">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-338">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-339\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-339\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-340\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-340\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy
+    name: 'lockImmutabilityPolicy(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-341">Définit la stratégie d’immuabilité des état verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-341">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="15756-342">La seule action autorisée sur une stratégie verrouillée est ExtendImmutabilityPolicy action.</span><span class="sxs-lookup"><span data-stu-id="15756-342">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="15756-343">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-343">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-344">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-344">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-345">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-345">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-346\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-346\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-347\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-347\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-348">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-348">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-349">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-349">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-350">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-350">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-351\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-351\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-352\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-352\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-353\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-353\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_2
+    name: 'lockImmutabilityPolicy(string, string, string, string, Object, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-354">Définit la stratégie d’immuabilité des état verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-354">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="15756-355">La seule action autorisée sur une stratégie verrouillée est ExtendImmutabilityPolicy action.</span><span class="sxs-lookup"><span data-stu-id="15756-355">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="15756-356">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-356">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicy_1
+    name: 'lockImmutabilityPolicy(string, string, string, string, ServiceCallback<ImmutabilityPolicy>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-357">Définit la stratégie d’immuabilité des état verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-357">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="15756-358">La seule action autorisée sur une stratégie verrouillée est ExtendImmutabilityPolicy action.</span><span class="sxs-lookup"><span data-stu-id="15756-358">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="15756-359">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-359">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, callback: ServiceCallback<ImmutabilityPolicy>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: ifMatch
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.ImmutabilityPolicy>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.lockImmutabilityPolicyWithHttpOperationResponse
+    name: 'lockImmutabilityPolicyWithHttpOperationResponse(string, string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-360">Définit la stratégie d’immuabilité des état verrouillé.</span><span class="sxs-lookup"><span data-stu-id="15756-360">Sets the ImmutabilityPolicy to Locked state.</span></span> <span data-ttu-id="15756-361">La seule action autorisée sur une stratégie verrouillée est ExtendImmutabilityPolicy action.</span><span class="sxs-lookup"><span data-stu-id="15756-361">The only action allowed on a Locked policy is ExtendImmutabilityPolicy action.</span></span> <span data-ttu-id="15756-362">ETag dans If-Match est requis pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="15756-362">ETag in If-Match is required for this operation.</span></span>
+    syntax:
+      content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-363">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-363">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-364">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-364">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-365\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-365\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-366\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-366\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-367">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-367">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-368">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-368">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-369">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-369">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: ifMatch
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-370\">Version d’état (ETag) entité de la stratégie d’immuabilité pour mettre à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-370\">The entity state (ETag) version of the immutability policy to update.</span></span> <span data-ttu-id=\"15756-371\">La valeur «\_\\*\_» peut être utilisé pour appliquer l’opération uniquement si la stratégie d’immuabilité existe déjà.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-371\">A value of \"\\*\" can be used to apply the operation only if the immutability policy already exists.</span></span> <span data-ttu-id=\"15756-372\">Si omis, cette opération sera toujours appliquée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-372\">If omitted, this operation will always be applied.</span></span>\n"
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold
+    name: 'setLegalHold(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-373">Jeux juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-373">Sets legal hold tags.</span></span> <span data-ttu-id="15756-374">Définir les mêmes résultats de la balise dans une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-374">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-375">SetLegalHold suit un modèle d’ajout et n’out pas effacer les balises existantes qui ne sont pas spécifiés dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-375">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-376">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-376">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-377">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-377">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-378\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-378\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-379\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-379\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-380">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-380">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-381">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-381">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-382">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-382">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            <span data-ttu-id="15756-383">Chaque balise doit être 3 et 23 caractères alphanumériques et est normalisée en minuscules à des stratégies de restriction logicielle.</span><span class="sxs-lookup"><span data-stu-id="15756-383">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold_2
+    name: 'setLegalHold(string, string, string, string[], Object, ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-384">Jeux juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-384">Sets legal hold tags.</span></span> <span data-ttu-id="15756-385">Définir les mêmes résultats de la balise dans une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-385">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-386">SetLegalHold suit un modèle d’ajout et n’out pas effacer les balises existantes qui ne sont pas spécifiés dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-386">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHold_1
+    name: 'setLegalHold(string, string, string, string[], ServiceCallback<LegalHold>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-387">Jeux juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-387">Sets legal hold tags.</span></span> <span data-ttu-id="15756-388">Définir les mêmes résultats de la balise dans une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-388">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-389">SetLegalHold suit un modèle d’ajout et n’out pas effacer les balises existantes qui ne sont pas spécifiés dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-389">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    syntax:
+      content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], callback: ServiceCallback<LegalHold>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: tags
+          type:
+            - 'string[]'
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.LegalHold>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.LegalHold>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.setLegalHoldWithHttpOperationResponse
+    name: 'setLegalHoldWithHttpOperationResponse(string, string, string, string[], Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-390">Jeux juridique conserve des balises.</span><span class="sxs-lookup"><span data-stu-id="15756-390">Sets legal hold tags.</span></span> <span data-ttu-id="15756-391">Définir les mêmes résultats de la balise dans une opération idempotente.</span><span class="sxs-lookup"><span data-stu-id="15756-391">Setting the same tag results in an idempotent operation.</span></span> <span data-ttu-id="15756-392">SetLegalHold suit un modèle d’ajout et n’out pas effacer les balises existantes qui ne sont pas spécifiés dans la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-392">SetLegalHold follows an append pattern and does not clear out the existing tags that are not specified in the request.</span></span>
+    syntax:
+      content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-393">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-393">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-394">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-394">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-395\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-395\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-396\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-396\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-397">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-397">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-398">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-398">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-399">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-399">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: tags
+          type:
+            - 'string[]'
+          description: |
+            <span data-ttu-id="15756-400">Chaque balise doit être 3 et 23 caractères alphanumériques et est normalisée en minuscules à des stratégies de restriction logicielle.</span><span class="sxs-lookup"><span data-stu-id="15756-400">Each tag should be 3 to 23 alphanumeric characters and is normalized to lower case at SRP.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update
+    name: 'update(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-401">Met à jour les propriétés du conteneur comme spécifié dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-401">Updates container properties as specified in request body.</span></span> <span data-ttu-id="15756-402">Propriétés non mentionnées dans la demande sera inchangées.</span><span class="sxs-lookup"><span data-stu-id="15756-402">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="15756-403">Mise à jour échoue si le conteneur spécifié n’existe pas déjà.</span><span class="sxs-lookup"><span data-stu-id="15756-403">Update fails if the specified container doesn't already exist.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-404">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-404">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-405">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-405">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-406\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-406\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-407\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-407\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-408">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-408">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-409">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-409">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-410">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-410">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update_2
+    name: 'update(string, string, string, Object, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-411">Met à jour les propriétés du conteneur comme spécifié dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-411">Updates container properties as specified in request body.</span></span> <span data-ttu-id="15756-412">Propriétés non mentionnées dans la demande sera inchangées.</span><span class="sxs-lookup"><span data-stu-id="15756-412">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="15756-413">Mise à jour échoue si le conteneur spécifié n’existe pas déjà.</span><span class="sxs-lookup"><span data-stu-id="15756-413">Update fails if the specified container doesn't already exist.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - Object
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.update_1
+    name: 'update(string, string, string, ServiceCallback<BlobContainer>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-414">Met à jour les propriétés du conteneur comme spécifié dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-414">Updates container properties as specified in request body.</span></span> <span data-ttu-id="15756-415">Propriétés non mentionnées dans la demande sera inchangées.</span><span class="sxs-lookup"><span data-stu-id="15756-415">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="15756-416">Mise à jour échoue si le conteneur spécifié n’existe pas déjà.</span><span class="sxs-lookup"><span data-stu-id="15756-416">Update fails if the specified container doesn't already exist.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, containerName: string, callback: ServiceCallback<BlobContainer>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: ''
+        - id: accountName
+          type:
+            - string
+          description: ''
+        - id: containerName
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - ServiceCallback<azure-arm-storage.BlobContainer>
+          description: ''
+      return:
+        type:
+          - Promise<azure-arm-storage.BlobContainer>
+    package: azure-arm-storage
+  - uid: azure-arm-storage.BlobContainers.updateWithHttpOperationResponse
+    name: 'updateWithHttpOperationResponse(string, string, string, Object)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15756-417">Met à jour les propriétés du conteneur comme spécifié dans le corps de la demande.</span><span class="sxs-lookup"><span data-stu-id="15756-417">Updates container properties as specified in request body.</span></span> <span data-ttu-id="15756-418">Propriétés non mentionnées dans la demande sera inchangées.</span><span class="sxs-lookup"><span data-stu-id="15756-418">Properties not mentioned in the request will be unchanged.</span></span> <span data-ttu-id="15756-419">Mise à jour échoue si le conteneur spécifié n’existe pas déjà.</span><span class="sxs-lookup"><span data-stu-id="15756-419">Update fails if the specified container doesn't already exist.</span></span>
+    syntax:
+      content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-420">Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="15756-420">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="15756-421">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="15756-421">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: "<span data-ttu-id=\"15756-422\">Le nom du compte de stockage au sein du groupe de ressources spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-422\">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id=\"15756-423\">Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres.</span><span class=\"sxs-lookup\"><span data-stu-id=\"15756-423\">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>\n"
+        - id: containerName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="15756-424">Nom du conteneur d’objets blob au sein du compte de stockage spécifié.</span><span class="sxs-lookup"><span data-stu-id="15756-424">The name of the blob container within the specified storage account.</span></span> <span data-ttu-id="15756-425">Noms de conteneur d’objets BLOB doivent être comprise entre 3 et 63 caractères et des lettres minuscules, des chiffres et tirets (-).</span><span class="sxs-lookup"><span data-stu-id="15756-425">Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only.</span></span>
+            <span data-ttu-id="15756-426">Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un chiffre.</span><span class="sxs-lookup"><span data-stu-id="15756-426">Every dash (-) character must be immediately preceded and followed by a letter or number.</span></span>
+        - id: options
+          type:
+            - Object
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    package: azure-arm-storage
+references:
+  - uid: Promise<azure-arm-storage.LegalHold>
+    name: LegalHold>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.LegalHold>
+    name: LegalHold>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.LegalHold>>
+    name: LegalHold>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: LegalHold
+        fullName: LegalHold
+        uid: azure-arm-storage.LegalHold
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.BlobContainer>
+    name: BlobContainer>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.BlobContainer>
+    name: BlobContainer>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<azure-arm-storage.ImmutabilityPolicy>
+    name: ImmutabilityPolicy>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.ImmutabilityPolicy>
+    name: ImmutabilityPolicy>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.ImmutabilityPolicy>>
+    name: ImmutabilityPolicy>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: ImmutabilityPolicy
+        fullName: ImmutabilityPolicy
+        uid: azure-arm-storage.ImmutabilityPolicy
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.BlobContainer>>
+    name: BlobContainer>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: BlobContainer
+        fullName: BlobContainer
+        uid: azure-arm-storage.BlobContainer
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.LeaseContainerResponse>
+    name: LeaseContainerResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.LeaseContainerResponse>
+    name: LeaseContainerResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.LeaseContainerResponse>>
+    name: LeaseContainerResponse>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: LeaseContainerResponse
+        fullName: LeaseContainerResponse
+        uid: azure-arm-storage.LeaseContainerResponse
+      - name: '>>'
+        fullName: '>>'
+  - uid: Promise<azure-arm-storage.ListContainerItems>
+    name: ListContainerItems>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<azure-arm-storage.ListContainerItems>
+    name: ListContainerItems>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<HttpOperationResponse<azure-arm-storage.ListContainerItems>>
+    name: ListContainerItems>>
+    spec.typeScript:
+      - name: Promise<HttpOperationResponse<
+        fullName: Promise<HttpOperationResponse<
+      - name: ListContainerItems
+        fullName: ListContainerItems
+        uid: azure-arm-storage.ListContainerItems
+      - name: '>>'
+        fullName: '>>'
