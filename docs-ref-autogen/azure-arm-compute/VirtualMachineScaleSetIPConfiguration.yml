@@ -1,0 +1,199 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration
+    name: VirtualMachineScaleSetIPConfiguration
+    fullName: VirtualMachineScaleSetIPConfiguration
+    children:
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationGatewayBackendAddressPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationSecurityGroups
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.id
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerBackendAddressPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerInboundNatPools
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.name
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.primary
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.privateIPAddressVersion
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.publicIPAddressConfiguration
+      - azure-arm-compute.VirtualMachineScaleSetIPConfiguration.subnet
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="95e97-101">Décrit la configuration IP de machine virtuelle mise à l’échelle ensemble réseau d’un profil.</span><span class="sxs-lookup"><span data-stu-id="95e97-101">Describes a virtual machine scale set network profile's IP configuration.</span></span>
+    extends:
+      name: azure-arm-compute.SubResource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationGatewayBackendAddressPools
+    name: applicationGatewayBackendAddressPools
+    fullName: applicationGatewayBackendAddressPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-102">Spécifie un tableau de références aux pools d’adresses principales de passerelles d’application.</span><span class="sxs-lookup"><span data-stu-id="95e97-102">Specifies an array of references to backend address pools of application gateways.</span></span> <span data-ttu-id="95e97-103">Un groupe identique peut faire référence à des pools d’adresses principales de plusieurs passerelles d’application.</span><span class="sxs-lookup"><span data-stu-id="95e97-103">A scale set can reference backend address pools of multiple application gateways.</span></span> <span data-ttu-id="95e97-104">Plusieurs jeux de mise à l’échelle ne peut pas utiliser la même passerelle d’application.</span><span class="sxs-lookup"><span data-stu-id="95e97-104">Multiple scale sets cannot use the same application gateway.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationGatewayBackendAddressPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.applicationSecurityGroups
+    name: applicationSecurityGroups
+    fullName: applicationSecurityGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-105">Spécifie un tableau de références au groupe de sécurité d’application.</span><span class="sxs-lookup"><span data-stu-id="95e97-105">Specifies an array of references to application security group.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationSecurityGroups?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-106">ID de ressource</span><span class="sxs-lookup"><span data-stu-id="95e97-106">Resource Id</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerBackendAddressPools
+    name: loadBalancerBackendAddressPools
+    fullName: loadBalancerBackendAddressPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-107">Spécifie un tableau de références aux pools d’adresses principales d’équilibreurs de charge.</span><span class="sxs-lookup"><span data-stu-id="95e97-107">Specifies an array of references to backend address pools of load balancers.</span></span> <span data-ttu-id="95e97-108">Un groupe identique peut faire référence à des pools d’adresses principales d’un public et un équilibreur de charge interne.</span><span class="sxs-lookup"><span data-stu-id="95e97-108">A scale set can reference backend address pools of one public and one internal load balancer.</span></span> <span data-ttu-id="95e97-109">Plusieurs jeux de mise à l’échelle ne peut pas utiliser le même équilibreur de charge.</span><span class="sxs-lookup"><span data-stu-id="95e97-109">Multiple scale sets cannot use the same load balancer.</span></span>
+    optional: true
+    syntax:
+      content: 'loadBalancerBackendAddressPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.loadBalancerInboundNatPools
+    name: loadBalancerInboundNatPools
+    fullName: loadBalancerInboundNatPools
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-110">Spécifie un tableau de références pools Nat des équilibrages de charge de trafic entrant.</span><span class="sxs-lookup"><span data-stu-id="95e97-110">Specifies an array of references to inbound Nat pools of the load balancers.</span></span> <span data-ttu-id="95e97-111">Un groupe identique peut référencer des pools nat de trafic entrant d’un public et l’équilibreur de charge interne un.</span><span class="sxs-lookup"><span data-stu-id="95e97-111">A scale set can reference inbound nat pools of one public and one internal load balancer.</span></span> <span data-ttu-id="95e97-112">Plusieurs jeux de mise à l’échelle ne peut pas utiliser le même équilibreur de charge</span><span class="sxs-lookup"><span data-stu-id="95e97-112">Multiple scale sets cannot use the same load balancer</span></span>
+    optional: true
+    syntax:
+      content: 'loadBalancerInboundNatPools?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-compute.SubResource[]'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-113">Le nom de la configuration IP.</span><span class="sxs-lookup"><span data-stu-id="95e97-113">The IP configuration name.</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.primary
+    name: primary
+    fullName: primary
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-114">Spécifie l’interface réseau principale au cas où l’ordinateur virtuel possède plus de 1 interface réseau.</span><span class="sxs-lookup"><span data-stu-id="95e97-114">Specifies the primary network interface in case the virtual machine has more than 1 network interface.</span></span>
+    optional: true
+    syntax:
+      content: 'primary?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.privateIPAddressVersion
+    name: privateIPAddressVersion
+    fullName: privateIPAddressVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"95e97-115\">Disponible à partir de l’Api-Version 2017-03-30 et versions ultérieures, il indique si la configuration IP spécifique est IPv4 ou IPv6.</span><span class=\"sxs-lookup\"><span data-stu-id=\"95e97-115\">Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6.</span></span> <span data-ttu-id=\"95e97-116\">Par défaut est considéré comme étant de IPv4.</span><span class=\"sxs-lookup\"><span data-stu-id=\"95e97-116\">Default is taken as IPv4.</span></span>  <span data-ttu-id=\"95e97-117\">Les valeurs possibles sont les suivantes\_: «\_IPv4\_» et «\_IPv6\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"95e97-117\">Possible values are: 'IPv4' and 'IPv6'.</span></span> <span data-ttu-id=\"95e97-118\">Les valeurs possibles incluent\_: 'IPv4', 'IPv6'</span><span class=\"sxs-lookup\"><span data-stu-id=\"95e97-118\">Possible values include: 'IPv4', 'IPv6'</span></span>"
+    optional: true
+    syntax:
+      content: 'privateIPAddressVersion?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.publicIPAddressConfiguration
+    name: publicIPAddressConfiguration
+    fullName: publicIPAddressConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-119">La publicIPAddressConfiguration.</span><span class="sxs-lookup"><span data-stu-id="95e97-119">The publicIPAddressConfiguration.</span></span>
+    optional: true
+    syntax:
+      content: 'publicIPAddressConfiguration?: VirtualMachineScaleSetPublicIPAddressConfiguration'
+      return:
+        type:
+          - azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+    package: azure-arm-compute
+  - uid: azure-arm-compute.VirtualMachineScaleSetIPConfiguration.subnet
+    name: subnet
+    fullName: subnet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="95e97-120">Spécifie l’identificateur du sous-réseau.</span><span class="sxs-lookup"><span data-stu-id="95e97-120">Specifies the identifier of the subnet.</span></span>
+    optional: true
+    syntax:
+      content: 'subnet?: ApiEntityReference'
+      return:
+        type:
+          - azure-arm-compute.ApiEntityReference
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+  - uid: 'azure-arm-compute.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-compute.SubResource
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+    name: VirtualMachineScaleSetPublicIPAddressConfiguration
+    spec.typeScript:
+      - name: VirtualMachineScaleSetPublicIPAddressConfiguration
+        fullName: VirtualMachineScaleSetPublicIPAddressConfiguration
+        uid: azure-arm-compute.VirtualMachineScaleSetPublicIPAddressConfiguration
+  - uid: azure-arm-compute.ApiEntityReference
+    name: ApiEntityReference
+    spec.typeScript:
+      - name: ApiEntityReference
+        fullName: ApiEntityReference
+        uid: azure-arm-compute.ApiEntityReference
