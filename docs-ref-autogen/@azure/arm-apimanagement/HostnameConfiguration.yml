@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration'
+    name: HostnameConfiguration
+    fullName: HostnameConfiguration
+    children:
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+      - '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+      - '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+      - '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+      - '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+      - '@azure/arm-apimanagement.HostnameConfiguration.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c72bb-101">Configuration du nom d’hôte personnalisé.</span><span class="sxs-lookup"><span data-stu-id="c72bb-101">Custom hostname configuration.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificate'
+    name: certificate
+    fullName: certificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c72bb-102">Informations de certificat.</span><span class="sxs-lookup"><span data-stu-id="c72bb-102">Certificate information.</span></span>
+    optional: true
+    syntax:
+      content: 'certificate?: CertificateInformation'
+      return:
+        type:
+          - '@azure/arm-apimanagement.CertificateInformation'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.certificatePassword'
+    name: certificatePassword
+    fullName: certificatePassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c72bb-103">Mot de passe du certificat.</span><span class="sxs-lookup"><span data-stu-id="c72bb-103">Certificate Password.</span></span>
+    optional: true
+    syntax:
+      content: 'certificatePassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.defaultSslBinding'
+    name: defaultSslBinding
+    fullName: defaultSslBinding
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"c72bb-104\">Spécifiez True pour le programme d’installation du certificat associé à ce nom d’hôte en tant que le certificat SSL par défaut.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-104\">Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.</span></span> <span data-ttu-id=\"c72bb-105\">Si un client n’envoie pas l’en-tête SNI, ce sera le certificat est demandé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-105\">If a client does not send the SNI header, then this will be the certificate that will be challenged.</span></span> <span data-ttu-id=\"c72bb-106\">La propriété est utile si un service a plusieurs nom d’hôte personnalisé est activée et qu’il doit choisir le certificat ssl par défaut.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-106\">The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate.</span></span> <span data-ttu-id=\"c72bb-107\">Le paramètre est appliqué uniquement au Type de nom d’hôte Proxy.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-107\">The setting only applied to Proxy Hostname Type.</span></span> <span data-ttu-id=\"c72bb-108\">Valeur par défaut\_: false.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-108\">Default value: false.</span></span>"
+    optional: true
+    syntax:
+      content: 'defaultSslBinding?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.encodedCertificate'
+    name: encodedCertificate
+    fullName: encodedCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c72bb-109">Certificat encodé en base 64.</span><span class="sxs-lookup"><span data-stu-id="c72bb-109">Base64 Encoded certificate.</span></span>
+    optional: true
+    syntax:
+      content: 'encodedCertificate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c72bb-110">Nom d’hôte à configurer sur le service de gestion des Api.</span><span class="sxs-lookup"><span data-stu-id="c72bb-110">Hostname to configure on the Api Management service.</span></span>
+    syntax:
+      content: 'hostName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.keyVaultId'
+    name: keyVaultId
+    fullName: keyVaultId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c72bb-111">URL à la clé secrète de coffre de clés contenant le certificat Ssl.</span><span class="sxs-lookup"><span data-stu-id="c72bb-111">Url to the KeyVault Secret containing the Ssl Certificate.</span></span> <span data-ttu-id="c72bb-112">Si la version contenante des Url absolue est fournie, la mise à jour automatique du certificat ssl ne fonctionnera pas.</span><span class="sxs-lookup"><span data-stu-id="c72bb-112">If absolute Url containing version is provided, auto-update of ssl certificate will not work.</span></span> <span data-ttu-id="c72bb-113">Cela nécessite le service de gestion des Api soit configuré avec MSI.</span><span class="sxs-lookup"><span data-stu-id="c72bb-113">This requires Api Management service to be configured with MSI.</span></span> <span data-ttu-id="c72bb-114">La clé secrète doit être de type *application/x-pkcs12.*</span><span class="sxs-lookup"><span data-stu-id="c72bb-114">The secret should be of type *application/x-pkcs12*</span></span>'
+    optional: true
+    syntax:
+      content: 'keyVaultId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.negotiateClientCertificate'
+    name: negotiateClientCertificate
+    fullName: negotiateClientCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"c72bb-115\">Spécifiez true pour négocier toujours de certificat client sur le nom d’hôte.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-115\">Specify true to always negotiate client certificate on the hostname.</span></span> <span data-ttu-id=\"c72bb-116\">Valeur par défaut est false.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-116\">Default Value is false.</span></span>\n<span data-ttu-id=\"c72bb-117\">Valeur par défaut\_: false.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-117\">Default value: false.</span></span>"
+    optional: true
+    syntax:
+      content: 'negotiateClientCertificate?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.HostnameConfiguration.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"c72bb-118\">Type de nom d’hôte.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-118\">Hostname type.</span></span> <span data-ttu-id=\"c72bb-119\">Les valeurs possibles incluent\_: 'Proxy', 'Portal', 'Management', 'Scm', 'DeveloperPortal'</span><span class=\"sxs-lookup\"><span data-stu-id=\"c72bb-119\">Possible values include: 'Proxy', 'Portal', 'Management', 'Scm', 'DeveloperPortal'</span></span>"
+    syntax:
+      content: 'type: HostnameType'
+      return:
+        type:
+          - '@azure/arm-apimanagement.HostnameType'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.CertificateInformation'
+    name: CertificateInformation
+    spec.typeScript:
+      - name: CertificateInformation
+        fullName: CertificateInformation
+        uid: '@azure/arm-apimanagement.CertificateInformation'
+  - uid: '@azure/arm-apimanagement.HostnameType'
+    name: HostnameType
+    spec.typeScript:
+      - name: HostnameType
+        fullName: HostnameType
+        uid: '@azure/arm-apimanagement.HostnameType'
