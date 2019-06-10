@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.DeliveryRule'
+    name: DeliveryRule
+    fullName: DeliveryRule
+    children:
+      - '@azure/arm-cdn.DeliveryRule.actions'
+      - '@azure/arm-cdn.DeliveryRule.conditions'
+      - '@azure/arm-cdn.DeliveryRule.order'
+    langs:
+      - typeScript
+    type: interface
+    summary: Une règle qui spécifie un ensemble d’actions et conditions
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.DeliveryRule.actions'
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une liste d’actions qui sont exécutées lorsque toutes les conditions d’une règle sont remplies.
+    syntax:
+      content: 'actions: DeliveryRuleActionUnion[]'
+      return:
+        type:
+          - '@azure/arm-cdn.DeliveryRuleActionUnion[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.DeliveryRule.conditions'
+    name: conditions
+    fullName: conditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une liste des conditions qui doivent être remplies pour les actions à exécuter
+    optional: true
+    syntax:
+      content: 'conditions?: DeliveryRuleConditionUnion[]'
+      return:
+        type:
+          - '@azure/arm-cdn.DeliveryRuleConditionUnion[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.DeliveryRule.order'
+    name: order
+    fullName: order
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’ordre dans lequel les règles sont appliquées pour le point de terminaison. Valeurs possibles {0,1,2,3,...}. Une règle avec un ordre moindre sera appliquée avant une règle avec un ordre supérieur. Règle avec l’ordre 0 est une règle spéciale. Il ne nécessite pas de toutes les conditions et actions répertoriées qu’il contient seront appliquées.'
+    syntax:
+      content: 'order: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.DeliveryRuleActionUnion[]'
+    name: 'DeliveryRuleActionUnion[]'
+    spec.typeScript:
+      - name: DeliveryRuleActionUnion
+        fullName: DeliveryRuleActionUnion
+        uid: '@azure/arm-cdn.DeliveryRuleActionUnion'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.DeliveryRuleConditionUnion[]'
+    name: 'DeliveryRuleConditionUnion[]'
+    spec.typeScript:
+      - name: DeliveryRuleConditionUnion
+        fullName: DeliveryRuleConditionUnion
+        uid: '@azure/arm-cdn.DeliveryRuleConditionUnion'
+      - name: '[]'
+        fullName: '[]'
