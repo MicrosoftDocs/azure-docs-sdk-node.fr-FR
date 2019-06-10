@@ -1,0 +1,141 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ImageDataDisk'
+    name: ImageDataDisk
+    fullName: ImageDataDisk
+    children:
+      - '@azure/arm-compute.ImageDataDisk.blobUri'
+      - '@azure/arm-compute.ImageDataDisk.caching'
+      - '@azure/arm-compute.ImageDataDisk.diskSizeGB'
+      - '@azure/arm-compute.ImageDataDisk.lun'
+      - '@azure/arm-compute.ImageDataDisk.managedDisk'
+      - '@azure/arm-compute.ImageDataDisk.snapshot'
+      - '@azure/arm-compute.ImageDataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit un disque de données.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.blobUri'
+    name: blobUri
+    fullName: blobUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le disque dur virtuel.
+    optional: true
+    syntax:
+      content: 'blobUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie les exigences de mise en cache. <br><br> Les valeurs possibles sont les suivantes\_: <br><br> **Aucun** <br><br>\n**Lecture seule** <br><br> **Lecture/écriture** <br><br> Valeur par défaut\_: **Aucun pour le stockage Standard. En lecture seule pour le stockage Premium**. Les valeurs possibles incluent\_: 'None', 'ReadOnly', 'ReadWrite'"
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie la taille des disques de données vide en gigaoctets. Cet élément peut être utilisé pour remplacer le nom du disque dans une image de machine virtuelle. <br><br> Cette valeur ne peut pas être supérieure à 1 023 Go
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie le numéro d’unité logique du disque de données. Cette valeur sert à identifier les disques de données au sein de la machine virtuelle et doit donc être unique pour chaque disque de données attaché à une machine virtuelle.
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le managedDisk.
+    optional: true
+    syntax:
+      content: 'managedDisk?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.snapshot'
+    name: snapshot
+    fullName: snapshot
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’instantané.
+    optional: true
+    syntax:
+      content: 'snapshot?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageDataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie le type de compte de stockage pour le disque géré. REMARQUE\_:  UltraSSD_LRS peut uniquement être utilisé avec des disques de données, il ne peut pas être utilisé avec un disque de système d’exploitation. Les valeurs possibles incluent\_: 'Standard_LRS', 'Premium_LRS', 'StandardSSD_LRS', 'UltraSSD_LRS'"
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountTypes'
+      return:
+        type:
+          - '@azure/arm-compute.StorageAccountTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.StorageAccountTypes'
+    name: StorageAccountTypes
+    spec.typeScript:
+      - name: StorageAccountTypes
+        fullName: StorageAccountTypes
+        uid: '@azure/arm-compute.StorageAccountTypes'
