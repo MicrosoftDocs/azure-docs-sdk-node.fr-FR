@@ -1,0 +1,272 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Snapshot'
+    name: Snapshot
+    fullName: Snapshot
+    children:
+      - '@azure/arm-compute.Snapshot.creationData'
+      - '@azure/arm-compute.Snapshot.diskSizeGB'
+      - '@azure/arm-compute.Snapshot.encryptionSettingsCollection'
+      - '@azure/arm-compute.Snapshot.hyperVGeneration'
+      - '@azure/arm-compute.Snapshot.id'
+      - '@azure/arm-compute.Snapshot.location'
+      - '@azure/arm-compute.Snapshot.managedBy'
+      - '@azure/arm-compute.Snapshot.name'
+      - '@azure/arm-compute.Snapshot.osType'
+      - '@azure/arm-compute.Snapshot.provisioningState'
+      - '@azure/arm-compute.Snapshot.sku'
+      - '@azure/arm-compute.Snapshot.tags'
+      - '@azure/arm-compute.Snapshot.timeCreated'
+      - '@azure/arm-compute.Snapshot.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Ressource de l’instantané.
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.creationData'
+    name: creationData
+    fullName: creationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informations de source de disque. Les informations de CreationData ne peut pas être modifiées une fois que le disque a été créé.
+    syntax:
+      content: 'creationData: CreationData'
+      return:
+        type:
+          - '@azure/arm-compute.CreationData'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si creationData.createOption est vide, ce champ est obligatoire et il indique la taille du disque dur virtuel à créer. Si ce champ est présent pour les mises à jour ou la création avec d’autres options, il indique un redimensionnement. Redimensionne est autorisées uniquement si le disque n’est pas attaché à une machine virtuelle en cours d’exécution et que vous pouvez uniquement augmenter la taille du disque.'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Collection de paramètres de chiffrement utilisée être Azure Disk Encryption, peut contenir plusieurs paramètres de chiffrement par disque ou une capture instantanée.'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.hyperVGeneration'
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La génération de l’hyperviseur de la Machine virtuelle. Applicable aux disques du système d’exploitation uniquement. Les valeurs possibles incluent\_: 'V1', 'V2'"
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: HyperVGeneration'
+      return:
+        type:
+          - '@azure/arm-compute.HyperVGeneration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Id de ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Emplacement des ressources
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.managedBy'
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Non utilisé. Toujours Null.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'managedBy?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Nom de la ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de système d’exploitation. Les valeurs possibles incluent\_: 'Windows', 'Linux'"
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le disque de l’état d’approvisionnement.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: SnapshotSku'
+      return:
+        type:
+          - '@azure/arm-compute.SnapshotSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Balises de ressource
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.timeCreated'
+    name: timeCreated
+    fullName: timeCreated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Heure de création du disque.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshot.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.CreationData'
+    name: CreationData
+    spec.typeScript:
+      - name: CreationData
+        fullName: CreationData
+        uid: '@azure/arm-compute.CreationData'
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.HyperVGeneration'
+    name: HyperVGeneration
+    spec.typeScript:
+      - name: HyperVGeneration
+        fullName: HyperVGeneration
+        uid: '@azure/arm-compute.HyperVGeneration'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.SnapshotSku'
+    name: SnapshotSku
+    spec.typeScript:
+      - name: SnapshotSku
+        fullName: SnapshotSku
+        uid: '@azure/arm-compute.SnapshotSku'
