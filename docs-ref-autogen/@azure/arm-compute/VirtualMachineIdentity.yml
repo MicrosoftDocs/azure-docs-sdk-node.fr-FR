@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineIdentity'
+    name: VirtualMachineIdentity
+    fullName: VirtualMachineIdentity
+    children:
+      - '@azure/arm-compute.VirtualMachineIdentity.principalId'
+      - '@azure/arm-compute.VirtualMachineIdentity.tenantId'
+      - '@azure/arm-compute.VirtualMachineIdentity.type'
+      - '@azure/arm-compute.VirtualMachineIdentity.userAssignedIdentities'
+    langs:
+      - typeScript
+    type: interface
+    summary: Identité de la machine virtuelle.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.principalId'
+    name: principalId
+    fullName: principalId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’id du principal de l’identité de la machine virtuelle. Cette propriété est fournie uniquement pour un système d’identité affecté.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'principalId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’id de client associé à la machine virtuelle. Cette propriété est fournie uniquement pour un système d’identité affecté.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type d’identité utilisé pour la machine virtuelle. Le type «\_SystemAssigned UserAssigned\_» inclut une identité créée implicitement et un ensemble d’identités utilisateur affecté. Le type 'None' supprimera toutes les identités à partir de la machine virtuelle. Les valeurs possibles incluent\_: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'"
+    optional: true
+    syntax:
+      content: 'type?: ResourceIdentityType'
+      return:
+        type:
+          - '@azure/arm-compute.ResourceIdentityType'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.userAssignedIdentities'
+    name: userAssignedIdentities
+    fullName: userAssignedIdentities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La liste des identités d’utilisateur associé à la Machine virtuelle. Les références principales du dictionnaire d’identité utilisateur sera l’ID de ressource ARM sous la forme\_: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'."
+    optional: true
+    syntax:
+      content: 'userAssignedIdentities?: undefined | [key: string]: VirtualMachineIdentityUserAssignedIdentitiesValue'
+      return:
+        type:
+          - 'undefined | [key: string]: @azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ResourceIdentityType'
+    name: ResourceIdentityType
+    spec.typeScript:
+      - name: ResourceIdentityType
+        fullName: ResourceIdentityType
+        uid: '@azure/arm-compute.ResourceIdentityType'
+  - uid: 'undefined | [key: string]: @azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
+    name: VirtualMachineIdentityUserAssignedIdentitiesValue
+    spec.typeScript:
+      - name: 'undefined | [key: string]: '
+        fullName: 'undefined | [key: string]: '
+      - name: VirtualMachineIdentityUserAssignedIdentitiesValue
+        fullName: VirtualMachineIdentityUserAssignedIdentitiesValue
+        uid: '@azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
