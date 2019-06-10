@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent'
+    name: AdditionalUnattendContent
+    fullName: AdditionalUnattendContent
+    children:
+      - '@azure/arm-compute.AdditionalUnattendContent.componentName'
+      - '@azure/arm-compute.AdditionalUnattendContent.content'
+      - '@azure/arm-compute.AdditionalUnattendContent.passName'
+      - '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Spécifie des informations supplémentaires au format XML qui peuvent être incluses dans le fichier Unattend.xml, ce qui est utilisé par le programme d’installation de Windows. Contenu est défini en définissant le nom, le nom de composant et le test dans lequel le contenu est appliqué.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.componentName'
+    name: componentName
+    fullName: componentName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom du composant. Actuellement, la seule valeur autorisée est Microsoft-Windows-Shell-Setup.\nLes valeurs possibles incluent\_: «\_Microsoft-Windows-Shell-Setup\_»"
+    optional: true
+    syntax:
+      content: 'componentName?: ComponentNames'
+      return:
+        type:
+          - '@azure/arm-compute.ComponentNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.content'
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie le contenu au format XML qui est ajouté au fichier unattend.xml pour le chemin d’accès spécifié et le composant. Le code XML doit être inférieure à 4 Ko et doit inclure l’élément racine pour le paramètre ou une fonctionnalité qui est insérée.
+    optional: true
+    syntax:
+      content: 'content?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.passName'
+    name: passName
+    fullName: passName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de la réussite. Actuellement, la seule valeur autorisée est OobeSystem. Les valeurs possibles incluent\_: 'OobeSystem'"
+    optional: true
+    syntax:
+      content: 'passName?: PassNames'
+      return:
+        type:
+          - '@azure/arm-compute.PassNames'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.AdditionalUnattendContent.settingName'
+    name: settingName
+    fullName: settingName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie le nom du paramètre auquel s’applique le contenu. Les valeurs possibles sont les suivantes\_: FirstLogonCommands et AutoLogon. Les valeurs possibles incluent\_: 'AutoLogon', 'FirstLogonCommands'"
+    optional: true
+    syntax:
+      content: 'settingName?: SettingNames'
+      return:
+        type:
+          - '@azure/arm-compute.SettingNames'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComponentNames'
+    name: ComponentNames
+    spec.typeScript:
+      - name: ComponentNames
+        fullName: ComponentNames
+        uid: '@azure/arm-compute.ComponentNames'
+  - uid: '@azure/arm-compute.PassNames'
+    name: PassNames
+    spec.typeScript:
+      - name: PassNames
+        fullName: PassNames
+        uid: '@azure/arm-compute.PassNames'
+  - uid: '@azure/arm-compute.SettingNames'
+    name: SettingNames
+    spec.typeScript:
+      - name: SettingNames
+        fullName: SettingNames
+        uid: '@azure/arm-compute.SettingNames'
