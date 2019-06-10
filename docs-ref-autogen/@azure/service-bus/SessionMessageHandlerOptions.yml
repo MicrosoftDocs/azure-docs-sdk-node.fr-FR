@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    fullName: SessionMessageHandlerOptions
+    children:
+      - '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les options passées à `registerMessageHandler` méthode lors de la réception des messages à partir d’une file d’attente / d’abonnement qui a activé des sessions.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indique si le `complete()` méthode sur le message doit être appelée automatiquement par le Kit de développement logiciel une fois que l’utilisateur a fourni onMessage gestionnaire a été exécutée.
+      L’appel `complete()` sur un message supprime de la file d’attente / l’abonnement.
+      - **Par défaut**: `true`.
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le nombre maximal d’appels simultanés que la bibliothèque peut effectuer pour le Gestionnaire de messages de l’utilisateur. Une fois cette limite atteinte, plus de messages ne seront pas reçues jusqu’au moins un des appels au Gestionnaire de message de l’utilisateur s’est terminée.
+      - **Par défaut**: `1`.
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
