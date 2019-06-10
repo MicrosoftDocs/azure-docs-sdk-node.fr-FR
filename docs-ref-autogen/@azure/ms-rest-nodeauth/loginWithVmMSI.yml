@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI'
+    name: loginWithVmMSI()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: "Avant d’utiliser cette méthode, veuillez installer cli az à partir de https://github.com/Azure/azure-cli/releases.\nSi vous avez une machine virtuelle est configurée avec az cli et a activé les MSI, vous pouvez ensuite utiliser cette méthode pour obtenir des jetons d’authentification à partir de la machine virtuelle.\nPour créer une nouvelle machine virtuelle, activer MSI, exécutez cette commande\_: az vm créer -g < resource_group_name > - n < vm_name >--assign-identity--image < os_image_name > Remarque\_: la commande ci-dessus permet à un point de terminaison de service sur l’hôte, avec un port par défaut 50342\n\nPour activer MSI sur une machine virtuelle déjà configurée, exécutez la commande suivante\_: machine virtuelle az--assign-identity - g < resource_group_name > -n < vm_name >--port < custom_port_number >\n\nPour en savoir plus sur cette commande, exécutez\_: machine virtuelle az--assign-identity - h\n\nS’authentifie à l’aide du service d’identité en cours d’exécution sur une machine virtuelle Azure.\nCette méthode envoie une demande au service d’authentification hébergé sur la machine virtuelle et récupère un jeton d’accès.\n"
+    syntax:
+      content: function loginWithVmMSI()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
