@@ -1,0 +1,757 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.Snapshots'
+    name: Snapshots
+    fullName: Snapshots
+    children:
+      - '@azure/arm-compute.Snapshots.beginCreateOrUpdate'
+      - '@azure/arm-compute.Snapshots.beginDeleteMethod'
+      - '@azure/arm-compute.Snapshots.beginGrantAccess'
+      - '@azure/arm-compute.Snapshots.beginRevokeAccess'
+      - '@azure/arm-compute.Snapshots.beginUpdate'
+      - '@azure/arm-compute.Snapshots.createOrUpdate'
+      - '@azure/arm-compute.Snapshots.deleteMethod'
+      - '@azure/arm-compute.Snapshots.get'
+      - '@azure/arm-compute.Snapshots.get_2'
+      - '@azure/arm-compute.Snapshots.get_1'
+      - '@azure/arm-compute.Snapshots.grantAccess'
+      - '@azure/arm-compute.Snapshots.list'
+      - '@azure/arm-compute.Snapshots.list_2'
+      - '@azure/arm-compute.Snapshots.list_1'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup_2'
+      - '@azure/arm-compute.Snapshots.listByResourceGroup_1'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext_2'
+      - '@azure/arm-compute.Snapshots.listByResourceGroupNext_1'
+      - '@azure/arm-compute.Snapshots.listNext'
+      - '@azure/arm-compute.Snapshots.listNext_2'
+      - '@azure/arm-compute.Snapshots.listNext_1'
+      - '@azure/arm-compute.Snapshots.revokeAccess'
+      - '@azure/arm-compute.Snapshots.constructor'
+      - '@azure/arm-compute.Snapshots.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="f660f-101">Classe représentant une captures instantanées.</span><span class="sxs-lookup"><span data-stu-id="f660f-101">Class representing a Snapshots.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Snapshot, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-102">Crée ou met à jour d’un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-102">Creates or updates a snapshot.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-103">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-103">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-104">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-104">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-105">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-105">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-106">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-106">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-107">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-107">The max name length is 80 characters.</span></span>'
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.Snapshot'
+          description: <span data-ttu-id="f660f-108">Objet instantané fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="f660f-108">Snapshot object supplied in the body of the Put disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-109">Supprime un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-109">Deletes a snapshot.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-110">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-110">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-111">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-111">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-112">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-112">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-113">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-113">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-114">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-114">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginGrantAccess'
+    name: 'beginGrantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-115">Octroie l’accès à un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-115">Grants access to a snapshot.</span></span>
+    syntax:
+      content: 'function beginGrantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-116">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-116">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-117">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-117">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-118">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-118">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-119">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-119">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-120">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-120">The max name length is 80 characters.</span></span>'
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: <span data-ttu-id="f660f-121">Objet de données d’accès fourni dans le corps de l’opération d’accès instantané get.</span><span class="sxs-lookup"><span data-stu-id="f660f-121">Access data object supplied in the body of the get snapshot access operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginRevokeAccess'
+    name: 'beginRevokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-122">Révoque l’accès à un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-122">Revokes access to a snapshot.</span></span>
+    syntax:
+      content: 'function beginRevokeAccess(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-123">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-123">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-124">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-124">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-125">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-125">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-126">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-126">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-127">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-127">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.beginUpdate'
+    name: 'beginUpdate(string, string, SnapshotUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-128">Mises à jour (correctifs) un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-128">Updates (patches) a snapshot.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-129">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-129">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-130">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-130">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-131">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-131">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-132">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-132">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-133">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-133">The max name length is 80 characters.</span></span>'
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.SnapshotUpdate'
+          description: <span data-ttu-id="f660f-134">Instantané d’objet fourni dans le corps de l’opération de capture instantanée de correctif.</span><span class="sxs-lookup"><span data-stu-id="f660f-134">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.createOrUpdate'
+    name: 'createOrUpdate(string, string, Snapshot, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-135">Crée ou met à jour d’un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-135">Creates or updates a snapshot.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, snapshotName: string, snapshot: Snapshot, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-136">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-136">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-137">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-137">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-138">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-138">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-139">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-139">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-140">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-140">The max name length is 80 characters.</span></span>'
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.Snapshot'
+          description: <span data-ttu-id="f660f-141">Objet instantané fourni dans le corps de l’opération de disque Put.</span><span class="sxs-lookup"><span data-stu-id="f660f-141">Snapshot object supplied in the body of the Put disk operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsCreateOrUpdateResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-142">Supprime un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-142">Deletes a snapshot.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-143">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-143">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-144">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-144">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-145">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-145">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-146">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-146">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-147">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-147">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-148">Obtient des informations sur un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-148">Gets information about a snapshot.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-149">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-149">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-150">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-150">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-151">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-151">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-152">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-152">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-153">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-153">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-154">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-154">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-155">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-155">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-156">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-156">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-157">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-157">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-158">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-158">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f660f-159">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="f660f-159">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Snapshot>
+          description: |
+            <span data-ttu-id="f660f-160">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.get_1'
+    name: 'get(string, string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, snapshotName: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-161">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-161">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-162">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-162">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-163">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-163">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-164">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-164">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-165">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-165">The max name length is 80 characters.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.Snapshot>
+          description: |
+            <span data-ttu-id="f660f-166">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsGetResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.grantAccess'
+    name: 'grantAccess(string, string, GrantAccessData, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-167">Octroie l’accès à un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-167">Grants access to a snapshot.</span></span>
+    syntax:
+      content: 'function grantAccess(resourceGroupName: string, snapshotName: string, grantAccessData: GrantAccessData, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-168">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-168">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-169">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-169">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-170">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-170">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-171">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-171">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-172">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-172">The max name length is 80 characters.</span></span>'
+        - id: grantAccessData
+          type:
+            - '@azure/arm-compute.GrantAccessData'
+          description: <span data-ttu-id="f660f-173">Objet de données d’accès fourni dans le corps de l’opération d’accès instantané get.</span><span class="sxs-lookup"><span data-stu-id="f660f-173">Access data object supplied in the body of the get snapshot access operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsGrantAccessResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-174">Répertorie les instantanés sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="f660f-174">Lists snapshots under a subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f660f-175">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="f660f-175">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-176">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.list_1'
+    name: list(ServiceCallback<SnapshotList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-177">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-178">Répertorie les instantanés sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-178">Lists snapshots under a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-179">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-179">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-180">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-180">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f660f-181">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="f660f-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-182">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-183">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-183">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-184">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-185">Répertorie les instantanés sous un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-185">Lists snapshots under a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-186">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-186">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-187">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-187">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f660f-188">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="f660f-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-189">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-190">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-190">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-191">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListByResourceGroupNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-192">Répertorie les instantanés sous un abonnement.</span><span class="sxs-lookup"><span data-stu-id="f660f-192">Lists snapshots under a subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-193">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-194">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-194">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="f660f-195">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="f660f-195">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-196">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.listNext_1'
+    name: 'listNext(string, ServiceCallback<SnapshotList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<SnapshotList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="f660f-197">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="f660f-197">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-compute.SnapshotList>
+          description: |
+            <span data-ttu-id="f660f-198">Le rappel</span><span class="sxs-lookup"><span data-stu-id="f660f-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.SnapshotsListNextResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.revokeAccess'
+    name: 'revokeAccess(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-199">Révoque l’accès à un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-199">Revokes access to a snapshot.</span></span>
+    syntax:
+      content: 'function revokeAccess(resourceGroupName: string, snapshotName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-200">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-200">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-201">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-201">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-202">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-202">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-203">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-203">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-204">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-204">The max name length is 80 characters.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.constructor'
+    name: Snapshots(ComputeManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-205">Créer un instantanés.</span><span class="sxs-lookup"><span data-stu-id="f660f-205">Create a Snapshots.</span></span>
+    syntax:
+      content: 'new Snapshots(client: ComputeManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-compute.ComputeManagementClientContext'
+          description: |
+            <span data-ttu-id="f660f-206">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="f660f-206">Reference to the service client.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.Snapshots.update'
+    name: 'update(string, string, SnapshotUpdate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="f660f-207">Mises à jour (correctifs) un instantané.</span><span class="sxs-lookup"><span data-stu-id="f660f-207">Updates (patches) a snapshot.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, snapshotName: string, snapshot: SnapshotUpdate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="f660f-208">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="f660f-208">The name of the resource group.</span></span>
+        - id: snapshotName
+          type:
+            - string
+          description: '<span data-ttu-id="f660f-209">Le nom de l’instantané est en cours de création.</span><span class="sxs-lookup"><span data-stu-id="f660f-209">The name of the snapshot that is being created.</span></span> <span data-ttu-id="f660f-210">Impossible de modifier le nom une fois que l’instantané est créé.</span><span class="sxs-lookup"><span data-stu-id="f660f-210">The name can''t be changed after the snapshot is created.</span></span> <span data-ttu-id="f660f-211">Les caractères pris en charge pour le nom sont d’a à z, A-Z, 0-9 et _.</span><span class="sxs-lookup"><span data-stu-id="f660f-211">Supported characters for the name are a-z, A-Z, 0-9 and _.</span></span> <span data-ttu-id="f660f-212">La longueur maximale du nom est de 80 caractères.</span><span class="sxs-lookup"><span data-stu-id="f660f-212">The max name length is 80 characters.</span></span>'
+        - id: snapshot
+          type:
+            - '@azure/arm-compute.SnapshotUpdate'
+          description: <span data-ttu-id="f660f-213">Instantané d’objet fourni dans le corps de l’opération de capture instantanée de correctif.</span><span class="sxs-lookup"><span data-stu-id="f660f-213">Snapshot object supplied in the body of the Patch snapshot operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotsUpdateResponse>
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ComputeManagementClientContext'
+    name: ComputeManagementClientContext
+    spec.typeScript:
+      - name: ComputeManagementClientContext
+        fullName: ComputeManagementClientContext
+        uid: '@azure/arm-compute.ComputeManagementClientContext'
+  - uid: '@azure/arm-compute.Snapshot'
+    name: Snapshot
+    spec.typeScript:
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/arm-compute.Snapshot'
+  - uid: '@azure/arm-compute.GrantAccessData'
+    name: GrantAccessData
+    spec.typeScript:
+      - name: GrantAccessData
+        fullName: GrantAccessData
+        uid: '@azure/arm-compute.GrantAccessData'
+  - uid: '@azure/arm-compute.SnapshotUpdate'
+    name: SnapshotUpdate
+    spec.typeScript:
+      - name: SnapshotUpdate
+        fullName: SnapshotUpdate
+        uid: '@azure/arm-compute.SnapshotUpdate'
+  - uid: ServiceCallback<@azure/arm-compute.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/arm-compute.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-compute.SnapshotList>
+    name: SnapshotList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SnapshotList
+        fullName: SnapshotList
+        uid: '@azure/arm-compute.SnapshotList'
+      - name: '>'
+        fullName: '>'

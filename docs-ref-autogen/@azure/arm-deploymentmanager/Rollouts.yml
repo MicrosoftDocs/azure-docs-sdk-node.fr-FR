@@ -1,0 +1,465 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-deploymentmanager.Rollouts'
+    name: Rollouts
+    fullName: Rollouts
+    children:
+      - '@azure/arm-deploymentmanager.Rollouts.beginCreateOrUpdate'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel_2'
+      - '@azure/arm-deploymentmanager.Rollouts.cancel_1'
+      - '@azure/arm-deploymentmanager.Rollouts.createOrUpdate'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod_2'
+      - '@azure/arm-deploymentmanager.Rollouts.deleteMethod_1'
+      - '@azure/arm-deploymentmanager.Rollouts.get'
+      - '@azure/arm-deploymentmanager.Rollouts.get_2'
+      - '@azure/arm-deploymentmanager.Rollouts.get_1'
+      - '@azure/arm-deploymentmanager.Rollouts.restart'
+      - '@azure/arm-deploymentmanager.Rollouts.restart_2'
+      - '@azure/arm-deploymentmanager.Rollouts.restart_1'
+      - '@azure/arm-deploymentmanager.Rollouts.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="d234c-101">Classe représentant un lancements.</span><span class="sxs-lookup"><span data-stu-id="d234c-101">Class representing a Rollouts.</span></span>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, Models.RolloutsBeginCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-102">Cela est une opération asynchrone et peut être interrogé pour la saisie semi-automatique à l’aide de l’en-tête location retourné par cette opération.</span><span class="sxs-lookup"><span data-stu-id="d234c-102">This is an asynchronous operation and can be polled to completion using the location header returned by this operation.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsBeginCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-103">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-103">The name of the resource group.</span></span> <span data-ttu-id="d234c-104">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-104">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-105">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-105">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsBeginCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel'
+    name: 'cancel(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-106">Déploiements en cours d’exécution seulement peut être annulée.</span><span class="sxs-lookup"><span data-stu-id="d234c-106">Only running rollouts can be canceled.</span></span>
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-107">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-107">The name of the resource group.</span></span> <span data-ttu-id="d234c-108">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-108">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-109">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-109">The rollout name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel_2'
+    name: 'cancel(string, string, RequestOptionsBase, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, options: RequestOptionsBase, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-110">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-110">The name of the resource group.</span></span> <span data-ttu-id="d234c-111">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-111">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-112">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-112">The rollout name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d234c-113">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="d234c-113">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-114">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.cancel_1'
+    name: 'cancel(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-115">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-115">The name of the resource group.</span></span> <span data-ttu-id="d234c-116">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-116">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-117">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-117">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-118">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-118">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsCancelResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.createOrUpdate'
+    name: 'createOrUpdate(string, string, Models.RolloutsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-119">Cela est une opération asynchrone et peut être interrogé pour la saisie semi-automatique à l’aide de l’en-tête location retourné par cette opération.</span><span class="sxs-lookup"><span data-stu-id="d234c-119">This is an asynchronous operation and can be polled to completion using the location header returned by this operation.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-120">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-120">The name of the resource group.</span></span> <span data-ttu-id="d234c-121">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-121">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-122">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-122">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsCreateOrUpdateResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-123">Vous pouvez supprimer uniquement les déploiements dans un état terminal.</span><span class="sxs-lookup"><span data-stu-id="d234c-123">Only rollouts in terminal state can be deleted.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-124">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-124">The name of the resource group.</span></span> <span data-ttu-id="d234c-125">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-125">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-126">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-126">The rollout name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-127">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-127">The name of the resource group.</span></span> <span data-ttu-id="d234c-128">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-128">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-129">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-129">The rollout name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="d234c-130">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="d234c-130">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="d234c-131">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-131">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-132">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-132">The name of the resource group.</span></span> <span data-ttu-id="d234c-133">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-133">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-134">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-134">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="d234c-135">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-135">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get'
+    name: 'get(string, string, Models.RolloutsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-136">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-136">The name of the resource group.</span></span> <span data-ttu-id="d234c-137">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-137">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-138">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-138">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get_2'
+    name: 'get(string, string, RolloutsGetOptionalParams, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, options: RolloutsGetOptionalParams, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-139">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-139">The name of the resource group.</span></span> <span data-ttu-id="d234c-140">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-140">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-141">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-141">The rollout name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+          description: <span data-ttu-id="d234c-142">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="d234c-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-143">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.get_1'
+    name: 'get(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-144">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-144">The name of the resource group.</span></span> <span data-ttu-id="d234c-145">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-145">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-146">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-146">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-147">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsGetResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart'
+    name: 'restart(string, string, Models.RolloutsRestartOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-148">Uniquement les déploiements ayant échoués peuvent être redémarrés.</span><span class="sxs-lookup"><span data-stu-id="d234c-148">Only failed rollouts can be restarted.</span></span>
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, options?: Models.RolloutsRestartOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-149">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-149">The name of the resource group.</span></span> <span data-ttu-id="d234c-150">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-150">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-151">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-151">The rollout name.</span></span>
+        - id: options
+          type:
+            - Models.RolloutsRestartOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart_2'
+    name: 'restart(string, string, RolloutsRestartOptionalParams, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, options: RolloutsRestartOptionalParams, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-152">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-152">The name of the resource group.</span></span> <span data-ttu-id="d234c-153">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-153">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-154">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-154">The rollout name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
+          description: <span data-ttu-id="d234c-155">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="d234c-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-156">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.restart_1'
+    name: 'restart(string, string, ServiceCallback<Rollout>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function restart(resourceGroupName: string, rolloutName: string, callback: ServiceCallback<Rollout>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-157">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="d234c-157">The name of the resource group.</span></span> <span data-ttu-id="d234c-158">Le nom respecte la casse.</span><span class="sxs-lookup"><span data-stu-id="d234c-158">The name is case insensitive.</span></span>
+        - id: rolloutName
+          type:
+            - string
+          description: <span data-ttu-id="d234c-159">Le nom de déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-159">The rollout name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+          description: |
+            <span data-ttu-id="d234c-160">Le rappel</span><span class="sxs-lookup"><span data-stu-id="d234c-160">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RolloutsRestartResponse>
+    package: '@azure/arm-deploymentmanager'
+  - uid: '@azure/arm-deploymentmanager.Rollouts.constructor'
+    name: Rollouts(AzureDeploymentManagerContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="d234c-161">Créer un déploiement.</span><span class="sxs-lookup"><span data-stu-id="d234c-161">Create a Rollouts.</span></span>
+    syntax:
+      content: 'new Rollouts(client: AzureDeploymentManagerContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+          description: |
+            <span data-ttu-id="d234c-162">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="d234c-162">Reference to the service client.</span></span>
+    package: '@azure/arm-deploymentmanager'
+references:
+  - uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+    name: AzureDeploymentManagerContext
+    spec.typeScript:
+      - name: AzureDeploymentManagerContext
+        fullName: AzureDeploymentManagerContext
+        uid: '@azure/arm-deploymentmanager.AzureDeploymentManagerContext'
+  - uid: ServiceCallback<@azure/arm-deploymentmanager.Rollout>
+    name: Rollout>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Rollout
+        fullName: Rollout
+        uid: '@azure/arm-deploymentmanager.Rollout'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+    name: RolloutsGetOptionalParams
+    spec.typeScript:
+      - name: RolloutsGetOptionalParams
+        fullName: RolloutsGetOptionalParams
+        uid: '@azure/arm-deploymentmanager.RolloutsGetOptionalParams'
+  - uid: '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
+    name: RolloutsRestartOptionalParams
+    spec.typeScript:
+      - name: RolloutsRestartOptionalParams
+        fullName: RolloutsRestartOptionalParams
+        uid: '@azure/arm-deploymentmanager.RolloutsRestartOptionalParams'
