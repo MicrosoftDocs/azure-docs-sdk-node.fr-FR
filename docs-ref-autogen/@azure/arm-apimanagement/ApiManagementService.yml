@@ -1,0 +1,1011 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiManagementService'
+    name: ApiManagementService
+    fullName: ApiManagementService
+    children:
+      - '@azure/arm-apimanagement.ApiManagementService.constructor'
+      - '@azure/arm-apimanagement.ApiManagementService.applyNetworkConfigurationUpdates'
+      - '@azure/arm-apimanagement.ApiManagementService.backup'
+      - '@azure/arm-apimanagement.ApiManagementService.beginApplyNetworkConfigurationUpdates'
+      - '@azure/arm-apimanagement.ApiManagementService.beginBackup'
+      - '@azure/arm-apimanagement.ApiManagementService.beginCreateOrUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.beginDeleteMethod'
+      - '@azure/arm-apimanagement.ApiManagementService.beginRestore'
+      - '@azure/arm-apimanagement.ApiManagementService.beginUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_2'
+      - '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_1'
+      - '@azure/arm-apimanagement.ApiManagementService.createOrUpdate'
+      - '@azure/arm-apimanagement.ApiManagementService.deleteMethod'
+      - '@azure/arm-apimanagement.ApiManagementService.get'
+      - '@azure/arm-apimanagement.ApiManagementService.get_2'
+      - '@azure/arm-apimanagement.ApiManagementService.get_1'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken_2'
+      - '@azure/arm-apimanagement.ApiManagementService.getSsoToken_1'
+      - '@azure/arm-apimanagement.ApiManagementService.list'
+      - '@azure/arm-apimanagement.ApiManagementService.list_2'
+      - '@azure/arm-apimanagement.ApiManagementService.list_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_1'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext_2'
+      - '@azure/arm-apimanagement.ApiManagementService.listNext_1'
+      - '@azure/arm-apimanagement.ApiManagementService.restore'
+      - '@azure/arm-apimanagement.ApiManagementService.update'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="0e836-101">Classe représentant un ApiManagementService.</span><span class="sxs-lookup"><span data-stu-id="0e836-101">Class representing a ApiManagementService.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.constructor'
+    name: ApiManagementService(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-102">Créer un ApiManagementService.</span><span class="sxs-lookup"><span data-stu-id="0e836-102">Create a ApiManagementService.</span></span>
+    syntax:
+      content: 'new ApiManagementService(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            <span data-ttu-id="0e836-103">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="0e836-103">Reference to the service client.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.applyNetworkConfigurationUpdates'
+    name: 'applyNetworkConfigurationUpdates(string, string, Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-104">Met à jour la ressource Microsoft.ApiManagement exécutées dans le réseau virtuel pour choisir les paramètres réseau mis à jour.</span><span class="sxs-lookup"><span data-stu-id="0e836-104">Updates the Microsoft.ApiManagement resource running in the Virtual network to pick the updated network settings.</span></span>
+    syntax:
+      content: 'function applyNetworkConfigurationUpdates(resourceGroupName: string, serviceName: string, options?: Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-105">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-105">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-106">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-106">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - Models.ApiManagementServiceApplyNetworkConfigurationUpdatesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceApplyNetworkConfigurationUpdatesResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.backup'
+    name: 'backup(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-107">Crée une sauvegarde du service Gestion des API pour le compte de stockage Azure donné.</span><span class="sxs-lookup"><span data-stu-id="0e836-107">Creates a backup of the API Management service to the given Azure Storage Account.</span></span> <span data-ttu-id="0e836-108">Cette opération en cours d’exécution et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-108">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function backup(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-109">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-109">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-110">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-110">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="0e836-111">Paramètres fournis à l’opération ApiManagementService_Backup.</span><span class="sxs-lookup"><span data-stu-id="0e836-111">Parameters supplied to the ApiManagementService_Backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceBackupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginApplyNetworkConfigurationUpdates'
+    name: 'beginApplyNetworkConfigurationUpdates(string, string, Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-112">Met à jour la ressource Microsoft.ApiManagement exécutées dans le réseau virtuel pour choisir les paramètres réseau mis à jour.</span><span class="sxs-lookup"><span data-stu-id="0e836-112">Updates the Microsoft.ApiManagement resource running in the Virtual network to pick the updated network settings.</span></span>
+    syntax:
+      content: 'function beginApplyNetworkConfigurationUpdates(resourceGroupName: string, serviceName: string, options?: Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-113">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-113">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-114">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-114">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - Models.ApiManagementServiceBeginApplyNetworkConfigurationUpdatesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginBackup'
+    name: 'beginBackup(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-115">Crée une sauvegarde du service Gestion des API pour le compte de stockage Azure donné.</span><span class="sxs-lookup"><span data-stu-id="0e836-115">Creates a backup of the API Management service to the given Azure Storage Account.</span></span> <span data-ttu-id="0e836-116">Cette opération en cours d’exécution et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-116">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginBackup(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-117">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-117">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-118">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-118">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="0e836-119">Paramètres fournis à l’opération ApiManagementService_Backup.</span><span class="sxs-lookup"><span data-stu-id="0e836-119">Parameters supplied to the ApiManagementService_Backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, ApiManagementServiceResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-120">Crée ou met à jour un service de gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-120">Creates or updates an API Management service.</span></span> <span data-ttu-id="0e836-121">Cette opération en cours d’exécution et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-121">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-122">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-122">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-123">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-123">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceResource'
+          description: <span data-ttu-id="0e836-124">Paramètres fournis à l’opération de service de gestion des API CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="0e836-124">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-125">Supprime un service de gestion des API existant.</span><span class="sxs-lookup"><span data-stu-id="0e836-125">Deletes an existing API Management service.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-126">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-126">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-127">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-127">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginRestore'
+    name: 'beginRestore(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-128">Restaure une sauvegarde d’un service de gestion des API créé à l’aide de l’opération ApiManagementService_Backup sur le service en cours.</span><span class="sxs-lookup"><span data-stu-id="0e836-128">Restores a backup of an API Management service created using the ApiManagementService_Backup operation on the current service.</span></span> <span data-ttu-id="0e836-129">Cela est une opération longue et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-129">This is a long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function beginRestore(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-130">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-130">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-131">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-131">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="0e836-132">Paramètres fournis pour le service de gestion des API de restauration à partir de l’opération de sauvegarde.</span><span class="sxs-lookup"><span data-stu-id="0e836-132">Parameters supplied to the Restore API Management service from backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.beginUpdate'
+    name: 'beginUpdate(string, string, ApiManagementServiceUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-133">Met à jour un service de gestion des API existant.</span><span class="sxs-lookup"><span data-stu-id="0e836-133">Updates an existing API Management service.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-134">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-134">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-135">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-135">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+          description: <span data-ttu-id="0e836-136">Paramètres fournis à l’opération de service de gestion des API CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="0e836-136">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-137">Vérifie la disponibilité et l’exactitude d’un nom pour un service de gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-137">Checks availability and correctness of a name for an API Management service.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="0e836-138">Paramètres fournis à l’opération CheckNameAvailability.</span><span class="sxs-lookup"><span data-stu-id="0e836-138">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_2'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, RequestOptionsBase, ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="0e836-139">Paramètres fournis à l’opération CheckNameAvailability.</span><span class="sxs-lookup"><span data-stu-id="0e836-139">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-140">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-140">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="0e836-141">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.checkNameAvailability_1'
+    name: 'checkNameAvailability(ApiManagementServiceCheckNameAvailabilityParameters, ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(parameters: ApiManagementServiceCheckNameAvailabilityParameters, callback: ServiceCallback<ApiManagementServiceNameAvailabilityResult>)'
+      parameters:
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+          description: <span data-ttu-id="0e836-142">Paramètres fournis à l’opération CheckNameAvailability.</span><span class="sxs-lookup"><span data-stu-id="0e836-142">Parameters supplied to the CheckNameAvailability operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="0e836-143">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCheckNameAvailabilityResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.createOrUpdate'
+    name: 'createOrUpdate(string, string, ApiManagementServiceResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-144">Crée ou met à jour un service de gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-144">Creates or updates an API Management service.</span></span> <span data-ttu-id="0e836-145">Cette opération en cours d’exécution et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-145">This is long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-146">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-146">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-147">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-147">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceResource'
+          description: <span data-ttu-id="0e836-148">Paramètres fournis à l’opération de service de gestion des API CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="0e836-148">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-149">Supprime un service de gestion des API existant.</span><span class="sxs-lookup"><span data-stu-id="0e836-149">Deletes an existing API Management service.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-150">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-150">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-151">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-151">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceDeleteMethodResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-152">Obtient une description de ressource de service de gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-152">Gets an API Management service resource description.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-153">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-153">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-154">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-154">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<ApiManagementServiceResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-155">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-155">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-156">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-156">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-157">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-157">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+          description: |
+            <span data-ttu-id="0e836-158">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.get_1'
+    name: 'get(string, string, ServiceCallback<ApiManagementServiceResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, callback: ServiceCallback<ApiManagementServiceResource>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-159">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-159">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-160">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-160">The name of the API Management service.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+          description: |
+            <span data-ttu-id="0e836-161">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken'
+    name: 'getSsoToken(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-162">Obtient le jeton authentification unique avec le Service Gestion des API qui est valide pendant 5 Minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-162">Gets the Single-Sign-On token for the API Management Service which is valid for 5 Minutes.</span></span>
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-163">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-163">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-164">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-164">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken_2'
+    name: 'getSsoToken(string, string, RequestOptionsBase, ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-165">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-165">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-166">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-166">The name of the API Management service.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-167">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-167">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+          description: |
+            <span data-ttu-id="0e836-168">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.getSsoToken_1'
+    name: 'getSsoToken(string, string, ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getSsoToken(resourceGroupName: string, serviceName: string, callback: ServiceCallback<ApiManagementServiceGetSsoTokenResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-169">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-169">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-170">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-170">The name of the API Management service.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+          description: |
+            <span data-ttu-id="0e836-171">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceGetSsoTokenResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-172">Répertorie tous les services de gestion des API dans un abonnement Azure.</span><span class="sxs-lookup"><span data-stu-id="0e836-172">Lists all API Management services within an Azure subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-173">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-174">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.list_1'
+    name: list(ServiceCallback<ApiManagementServiceListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-175">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-176">Liste de tous les services de gestion des API au sein d’un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-176">List all API Management services within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-177">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-177">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-178">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-178">The name of the resource group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-179">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-179">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-180">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-181">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-181">The name of the resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-182">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-183">Liste de tous les services de gestion des API au sein d’un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-183">List all API Management services within a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-184">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-185">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-185">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-186">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-186">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-187">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-188">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-188">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-189">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListByResourceGroupNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-190">Répertorie tous les services de gestion des API dans un abonnement Azure.</span><span class="sxs-lookup"><span data-stu-id="0e836-190">Lists all API Management services within an Azure subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-191">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-191">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-192">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="0e836-193">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="0e836-193">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-194">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.listNext_1'
+    name: 'listNext(string, ServiceCallback<ApiManagementServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ApiManagementServiceListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="0e836-195">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="0e836-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+          description: |
+            <span data-ttu-id="0e836-196">Le rappel</span><span class="sxs-lookup"><span data-stu-id="0e836-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceListNextResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.restore'
+    name: 'restore(string, string, ApiManagementServiceBackupRestoreParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-197">Restaure une sauvegarde d’un service de gestion des API créé à l’aide de l’opération ApiManagementService_Backup sur le service en cours.</span><span class="sxs-lookup"><span data-stu-id="0e836-197">Restores a backup of an API Management service created using the ApiManagementService_Backup operation on the current service.</span></span> <span data-ttu-id="0e836-198">Cela est une opération longue et peut prendre plusieurs minutes.</span><span class="sxs-lookup"><span data-stu-id="0e836-198">This is a long running operation and could take several minutes to complete.</span></span>
+    syntax:
+      content: 'function restore(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceBackupRestoreParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-199">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-199">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-200">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-200">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+          description: <span data-ttu-id="0e836-201">Paramètres fournis pour le service de gestion des API de restauration à partir de l’opération de sauvegarde.</span><span class="sxs-lookup"><span data-stu-id="0e836-201">Parameters supplied to the Restore API Management service from backup operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceRestoreResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiManagementService.update'
+    name: 'update(string, string, ApiManagementServiceUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0e836-202">Met à jour un service de gestion des API existant.</span><span class="sxs-lookup"><span data-stu-id="0e836-202">Updates an existing API Management service.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, serviceName: string, parameters: ApiManagementServiceUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-203">Nom du groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="0e836-203">The name of the resource group.</span></span>
+        - id: serviceName
+          type:
+            - string
+          description: <span data-ttu-id="0e836-204">Le nom du service Gestion des API.</span><span class="sxs-lookup"><span data-stu-id="0e836-204">The name of the API Management service.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+          description: <span data-ttu-id="0e836-205">Paramètres fournis à l’opération de service de gestion des API CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="0e836-205">Parameters supplied to the CreateOrUpdate API Management service operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiManagementServiceUpdateResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+    name: ApiManagementServiceBackupRestoreParameters
+    spec.typeScript:
+      - name: ApiManagementServiceBackupRestoreParameters
+        fullName: ApiManagementServiceBackupRestoreParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceBackupRestoreParameters'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+    name: ApiManagementServiceResource
+    spec.typeScript:
+      - name: ApiManagementServiceResource
+        fullName: ApiManagementServiceResource
+        uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+    name: ApiManagementServiceUpdateParameters
+    spec.typeScript:
+      - name: ApiManagementServiceUpdateParameters
+        fullName: ApiManagementServiceUpdateParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceUpdateParameters'
+  - uid: '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+    name: ApiManagementServiceCheckNameAvailabilityParameters
+    spec.typeScript:
+      - name: ApiManagementServiceCheckNameAvailabilityParameters
+        fullName: ApiManagementServiceCheckNameAvailabilityParameters
+        uid: '@azure/arm-apimanagement.ApiManagementServiceCheckNameAvailabilityParameters'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult>
+    name: ApiManagementServiceNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceNameAvailabilityResult
+        fullName: ApiManagementServiceNameAvailabilityResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceResource>
+    name: ApiManagementServiceResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceResource
+        fullName: ApiManagementServiceResource
+        uid: '@azure/arm-apimanagement.ApiManagementServiceResource'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult>
+    name: ApiManagementServiceGetSsoTokenResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceGetSsoTokenResult
+        fullName: ApiManagementServiceGetSsoTokenResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceGetSsoTokenResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-apimanagement.ApiManagementServiceListResult>
+    name: ApiManagementServiceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ApiManagementServiceListResult
+        fullName: ApiManagementServiceListResult
+        uid: '@azure/arm-apimanagement.ApiManagementServiceListResult'
+      - name: '>'
+        fullName: '>'
