@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: Les paramètres de configuration utilisés lors de l’exécution d’une mise à niveau propagée.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le pourcentage maximum total instances de machine virtuelle qui deviendront simultanément par la mise à niveau propagée dans un lot. Comme il s’agit d’un maximum, des instances défectueuses par lots antérieure ou ultérieure peuvent provoquer le pourcentage d’instances dans un lot à diminuer pour garantir une plus grande fiabilité. La valeur par défaut pour ce paramètre est de 20 %.'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le pourcentage maximal du total instances de machine virtuelle dans le jeu de mise à l’échelle pouvant être simultanément défectueux, suite à la mise à niveau, ou en trouvé dans un état défectueux par les vérifications d’intégrité de machine virtuelle avant la mise à niveau propagée est abandonnée. Cette contrainte sera vérifiée avant de démarrer un lot. La valeur par défaut pour ce paramètre est de 20 %.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le pourcentage maximal d’instances de machine virtuelle mise à niveau qui se trouvent être dans un état défectueux. Cette vérification se produit après la mise à niveau de chaque lot. Si ce pourcentage est jamais dépassé, la mise à jour propagée est abandonnée. La valeur par défaut pour ce paramètre est de 20 %.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Délai d’attente entre la fin de la mise à jour pour toutes les machines virtuelles dans un lot et le démarrage le lot suivant. La durée doit être spécifiée au format ISO 8601. La valeur par défaut est 0 seconde (PT0S).
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
