@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetIdentity'
+    name: VirtualMachineScaleSetIdentity
+    fullName: VirtualMachineScaleSetIdentity
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetIdentity.principalId'
+      - '@azure/arm-compute.VirtualMachineScaleSetIdentity.tenantId'
+      - '@azure/arm-compute.VirtualMachineScaleSetIdentity.type'
+      - '@azure/arm-compute.VirtualMachineScaleSetIdentity.userAssignedIdentities'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="f17ed-101">Identité pour les machines virtuelles identiques.</span><span class="sxs-lookup"><span data-stu-id="f17ed-101">Identity for the virtual machine scale set.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetIdentity.principalId'
+    name: principalId
+    fullName: principalId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f17ed-102\">L’id du principal de machines virtuelles identiques définie l’identité.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-102\">The principal id of virtual machine scale set identity.</span></span> <span data-ttu-id=\"f17ed-103\">Cette propriété est fournie uniquement pour un système d’identité affecté.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-103\">This property will only be provided for a system assigned identity.</span></span>\n<span data-ttu-id=\"f17ed-104\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-104\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'principalId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetIdentity.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f17ed-105\">Définir l’id de client associé à l’échelle de machine virtuelle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-105\">The tenant id associated with the virtual machine scale set.</span></span> <span data-ttu-id=\"f17ed-106\">Cette propriété est fournie uniquement pour un système d’identité affecté.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-106\">This property will only be provided for a system assigned identity.</span></span>\n<span data-ttu-id=\"f17ed-107\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-107\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetIdentity.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f17ed-108\">Le type d’identité utilisée pour l’échelle de machine virtuelle est défini.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-108\">The type of identity used for the virtual machine scale set.</span></span> <span data-ttu-id=\"f17ed-109\">Le type «\_SystemAssigned UserAssigned\_» inclut une identité créée implicitement et un ensemble d’identités utilisateur affecté.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-109\">The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.</span></span> <span data-ttu-id=\"f17ed-110\">Le type 'None' supprimera toutes les identités de l’ensemble d’échelle de machine virtuelle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-110\">The type 'None' will remove any identities from the virtual machine scale set.</span></span>\n<span data-ttu-id=\"f17ed-111\">Les valeurs possibles incluent\_: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-111\">Possible values include: 'SystemAssigned', 'UserAssigned', 'SystemAssigned, UserAssigned', 'None'</span></span>"
+    optional: true
+    syntax:
+      content: 'type?: ResourceIdentityType'
+      return:
+        type:
+          - '@azure/arm-compute.ResourceIdentityType'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetIdentity.userAssignedIdentities'
+    name: userAssignedIdentities
+    fullName: userAssignedIdentities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f17ed-112\">La liste des identités d’utilisateur associé à l’échelle de machine virtuelle est définie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-112\">The list of user identities associated with the virtual machine scale set.</span></span> <span data-ttu-id=\"f17ed-113\">Les références principales du dictionnaire d’identité utilisateur sera l’ID de ressource ARM sous la forme\_: ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f17ed-113\">The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.</span></span>"
+    optional: true
+    syntax:
+      content: 'userAssignedIdentities?: undefined | [key: string]: VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue'
+      return:
+        type:
+          - 'undefined | [key: string]: @azure/arm-compute.VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ResourceIdentityType'
+    name: ResourceIdentityType
+    spec.typeScript:
+      - name: ResourceIdentityType
+        fullName: ResourceIdentityType
+        uid: '@azure/arm-compute.ResourceIdentityType'
+  - uid: 'undefined | [key: string]: @azure/arm-compute.VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue'
+    name: VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue
+    spec.typeScript:
+      - name: 'undefined | [key: string]: '
+        fullName: 'undefined | [key: string]: '
+      - name: VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue
+        fullName: VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue
+        uid: '@azure/arm-compute.VirtualMachineScaleSetIdentityUserAssignedIdentitiesValue'
