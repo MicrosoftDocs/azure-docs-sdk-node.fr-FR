@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: Les données d’intégrité pour un point de terminaison
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID du point de terminaison
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "États d’intégrité ont suivant significations. L’état «\_sain\_» indique que le point de terminaison accepte des messages comme prévu. L’état «\_défectueux\_» indique que le point de terminaison n’accepte pas les messages comme prévu et IoT Hub est une nouvelle tentative pour envoyer des données à ce point de terminaison. L’état d’un point de terminaison défectueux est être mis à jour intègre IoT Hub a établi un état cohérent d’intégrité. L’état «\_inactif\_» indique que le point de terminaison n’accepte pas les messages, après l’exécution de IoT Hub envoi de messages pour la période retrial. Voir les métriques IoT Hub pour identifier les erreurs et de surveiller les problèmes avec les points de terminaison. L’état «\_inconnu\_» indique que l’IoT Hub n’a pas établi une connexion avec le point de terminaison. Aucun message ont été remis à ou rejetée à partir de ce point de terminaison. Les valeurs possibles sont\_: «\_inconnus\_», «\_sains\_», «\_défectueux\_», «\_morts\_»"
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'

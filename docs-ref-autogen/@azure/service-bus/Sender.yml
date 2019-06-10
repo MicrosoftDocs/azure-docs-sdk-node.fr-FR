@@ -1,0 +1,189 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    fullName: Sender
+    children:
+      - '@azure/service-bus.Sender.cancelScheduledMessage'
+      - '@azure/service-bus.Sender.cancelScheduledMessages'
+      - '@azure/service-bus.Sender.close'
+      - '@azure/service-bus.Sender.isClosed'
+      - '@azure/service-bus.Sender.scheduleMessage'
+      - '@azure/service-bus.Sender.scheduleMessages'
+      - '@azure/service-bus.Sender.send'
+      - '@azure/service-bus.Sender.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      La classe de l’expéditeur peut être utilisée pour envoyer des messages, de planifier des messages à envoyer à une date ultérieure et annuler ces messages planifiés.
+      Utilisez le `createSender` fonction sur le QueueClient ou le TopicClient pour instancier un expéditeur.
+      La classe de l’expéditeur est une abstraction sur le lien de l’expéditeur AMQP sous-jacent.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessage'
+    name: cancelScheduledMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Annule un message qui a été planifié pour s’affichent sur une file d’attente ServiceBus/abonnement.
+    syntax:
+      content: 'function cancelScheduledMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: Le numéro de séquence du message à annuler.
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessages'
+    name: 'cancelScheduledMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Annule plusieurs messages ont été planifiées pour s’affichent sur une file d’attente ServiceBus/abonnement.
+    syntax:
+      content: 'function cancelScheduledMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: Tableau des numéros de séquence des messages à être annulée.
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Ferme le lien de l’expéditeur AMQP sous-jacent.
+      Une fois fermée, l’expéditeur ne peut pas être utilisé pour des opérations supplémentaires.
+      Utilisez le `createSender` sur le QueueClient ou le TopicClient pour instancier un nouvel expéditeur (fonction)
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Retourne `true` si l’expéditeur ou le client qui l’a créé a été fermé.
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessage'
+    name: 'scheduleMessage(Date, SendableMessageInfo)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Planifications étant données le message s’affiche sur le Bus de Service file d’attente/abonnement à une date ultérieure.
+    syntax:
+      content: 'function scheduleMessage(scheduledEnqueueTimeUtc: Date, message: SendableMessageInfo)'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: L’heure UTC à laquelle le message doit être en file d’attente.
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: Le message qui doit être planifiée.
+      return:
+        type:
+          - Promise<Long>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessages'
+    name: 'scheduleMessages(Date, SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Planifications étant données les messages apparaissent sur le Bus de Service file d’attente/abonnement à une date ultérieure.
+    syntax:
+      content: 'function scheduleMessages(scheduledEnqueueTimeUtc: Date, messages: SendableMessageInfo[])'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: L’heure UTC à laquelle les messages doivent être en file d’attente.
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: Tableau de Messages qui doivent être planifiées.
+      return:
+        type:
+          - 'Promise<Long[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.send'
+    name: send(SendableMessageInfo)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Envoie le message donné après que la création d’un lien de l’expéditeur AMQP si ce n’est pas déjà existe.
+      Pour envoyer un message à un `session` et/ou `partition` file d’attente/rubrique est activée, définissez la `sessionId` et/ou `partitionKey` propriétés respectivement sur le message.
+    syntax:
+      content: 'function send(message: SendableMessageInfo)'
+      parameters:
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: Message à envoyer.
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.sendBatch'
+    name: 'sendBatch(SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Envoie les messages donnés dans un lot unique, par exemple, dans un seul message AMQP après que la création d’un lien de l’expéditeur AMQP si ce n’est pas déjà existe.
+      - Pour envoyer des messages à un `session` et/ou `partition` file d’attente/rubrique est activée, définissez la `sessionId` et/ou `partitionKey` propriétés respectivement sur les messages.
+      - Ce cas, tous les messages du lot doivent avoir le même `sessionId` (si vous utilisez des sessions) et les mêmes `parititionKey` (si vous utilisez des partitions différentes).
+    syntax:
+      content: 'function sendBatch(messages: SendableMessageInfo[])'
+      parameters:
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: Tableau d’objets SendableMessageInfo à envoyer dans un lot de messages.
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.SendableMessageInfo[]'
+    name: 'SendableMessageInfo[]'
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+      - name: '[]'
+        fullName: '[]'
