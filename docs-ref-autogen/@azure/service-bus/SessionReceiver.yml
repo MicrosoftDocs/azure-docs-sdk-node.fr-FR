@@ -1,0 +1,400 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    fullName: SessionReceiver
+    children:
+      - '@azure/service-bus.SessionReceiver.close'
+      - '@azure/service-bus.SessionReceiver.getMessageIterator'
+      - '@azure/service-bus.SessionReceiver.getState'
+      - '@azure/service-bus.SessionReceiver.isClosed'
+      - '@azure/service-bus.SessionReceiver.isReceivingMessages'
+      - '@azure/service-bus.SessionReceiver.peek'
+      - '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+      - '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMessages'
+      - '@azure/service-bus.SessionReceiver.receiveMode'
+      - '@azure/service-bus.SessionReceiver.registerMessageHandler'
+      - '@azure/service-bus.SessionReceiver.renewSessionLock'
+      - '@azure/service-bus.SessionReceiver.sessionId'
+      - '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+      - '@azure/service-bus.SessionReceiver.setState'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="751a6-101">La classe SessionReceiver peut être utilisée pour recevoir des messages à partir d’une session activée file d’attente ou abonnement dans un lot ou en inscrivant des gestionnaires.</span><span class="sxs-lookup"><span data-stu-id="751a6-101">The SessionReceiver class can be used to receive messages from a session enabled Queue or Subscription in a batch or by registering handlers.</span></span>
+      <span data-ttu-id="751a6-102">Utilisez le `createReceiver` fonction sur le QueueClient ou le SubscriptionClient pour instancier un SessionReceiver.</span><span class="sxs-lookup"><span data-stu-id="751a6-102">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a SessionReceiver.</span></span>
+      <span data-ttu-id="751a6-103">La classe SessionReceiver est une abstraction sur le lien du récepteur AMQP sous-jacent.</span><span class="sxs-lookup"><span data-stu-id="751a6-103">The SessionReceiver class is an abstraction over the underlying AMQP receiver link.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="751a6-104">Ferme le lien du récepteur AMQP sous-jacent.</span><span class="sxs-lookup"><span data-stu-id="751a6-104">Closes the underlying AMQP receiver link.</span></span>
+      <span data-ttu-id="751a6-105">Une fois fermée, le récepteur ne peut pas être utilisé pour des opérations supplémentaires.</span><span class="sxs-lookup"><span data-stu-id="751a6-105">Once closed, the receiver cannot be used for any further operations.</span></span>
+      <span data-ttu-id="751a6-106">Utilisez le `createReceiver` sur le QueueClient ou le SubscriptionClient pour instancier un nouveau destinataire (fonction)</span><span class="sxs-lookup"><span data-stu-id="751a6-106">Use the `createReceiver` function on the QueueClient or SubscriptionClient to instantiate a new Receiver</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="751a6-107">Obtient un itérateur asynchrone sur des messages du récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-107">Gets an async iterator over messages from the receiver.</span></span>
+      <span data-ttu-id="751a6-108">Génère une erreur s’il existe une autre opération de réception en cours d’exécution sur le même récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-108">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="751a6-109">Si vous ne savez pas s’il existe une autre exécution de l’opération de réception, vérifiez le `isReceivingMessages` propriété sur le récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-109">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+
+      <span data-ttu-id="751a6-110">Si l’itérateur n’est pas en mesure d’extraire un nouveau message dans par minute, `undefined` sera retourné</span><span class="sxs-lookup"><span data-stu-id="751a6-110">If the iterator is not able to fetch a new message in over a minute, `undefined` will be returned</span></span>
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.getState'
+    name: getState()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="751a6-111">Obtient l’état de la Session.</span><span class="sxs-lookup"><span data-stu-id="751a6-111">Gets the state of the Session.</span></span> <span data-ttu-id="751a6-112">Pour plus d’informations sur les États de session, consultez [l’état de Session](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span><span class="sxs-lookup"><span data-stu-id="751a6-112">For more on session states, see [Session State](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span></span>'
+    syntax:
+      content: function getState()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="751a6-113">Retourne `true` si le récepteur est fermé.</span><span class="sxs-lookup"><span data-stu-id="751a6-113">Returns `true` if the receiver is closed.</span></span> <span data-ttu-id="751a6-114">Cela peut arriver soit parce que le récepteur lui-même a été fermé ou le client qui l’a créé a été fermé.</span><span class="sxs-lookup"><span data-stu-id="751a6-114">This can happen either because the receiver itself has been closed or the client that created it has been closed.</span></span>
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="751a6-115">Indique si le récepteur actuellement reçoit des messages ou non.</span><span class="sxs-lookup"><span data-stu-id="751a6-115">Indicates whether the receiver is currently receiving messages or not.</span></span>
+      <span data-ttu-id="751a6-116">Lorsque cela retourne la valeur true, nouveau `registerMessageHandler()` ou `receiveMessages()` appel ne peut pas être effectué.</span><span class="sxs-lookup"><span data-stu-id="751a6-116">When this returns true, new `registerMessageHandler()` or `receiveMessages()` calls cannot be made.</span></span>
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="751a6-117">Extrait le lot suivant de messages actifs (y compris différée, mais pas les messages deadlettered) dans la session active.</span><span class="sxs-lookup"><span data-stu-id="751a6-117">Fetches the next batch of active messages (including deferred but not deadlettered messages) in the current session.</span></span>
+      - <span data-ttu-id="751a6-118">Le premier appel à `peek()` extrait le premier message actif.</span><span class="sxs-lookup"><span data-stu-id="751a6-118">The first call to `peek()` fetches the first active message.</span></span> <span data-ttu-id="751a6-119">Chaque appel suivant extrait le message suivant.</span><span class="sxs-lookup"><span data-stu-id="751a6-119">Each subsequent call fetches the subsequent message.</span></span>
+      - <span data-ttu-id="751a6-120">Contrairement à un `received` message, `peeked` message est une version en lecture seule du message.</span><span class="sxs-lookup"><span data-stu-id="751a6-120">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="751a6-121">Il ne peut pas être `Completed/Abandoned/Deferred/Deadlettered`.</span><span class="sxs-lookup"><span data-stu-id="751a6-121">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="751a6-122">Le verrou sur ce dernier ne peut pas être renouvelé.</span><span class="sxs-lookup"><span data-stu-id="751a6-122">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: <span data-ttu-id="751a6-123">Le nombre maximal de messages à examiner.</span><span class="sxs-lookup"><span data-stu-id="751a6-123">The maximum number of messages to peek.</span></span> <span data-ttu-id="751a6-124">Valeur par défaut `1`.</span><span class="sxs-lookup"><span data-stu-id="751a6-124">Default value `1`.</span></span>
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="751a6-125">Lit le nombre souhaité de messages actifs (y compris différée, mais pas les messages deadlettered) à partir du numéro de séquence spécifié dans la session active.</span><span class="sxs-lookup"><span data-stu-id="751a6-125">Peeks the desired number of active messages (including deferred but not deadlettered messages) from the specified sequence number in the current session.</span></span>
+      - <span data-ttu-id="751a6-126">Contrairement à un `received` message, `peeked` message est une version en lecture seule du message.</span><span class="sxs-lookup"><span data-stu-id="751a6-126">Unlike a `received` message, `peeked` message is a read-only version of the message.</span></span>
+      <span data-ttu-id="751a6-127">Il ne peut pas être `Completed/Abandoned/Deferred/Deadlettered`.</span><span class="sxs-lookup"><span data-stu-id="751a6-127">It cannot be `Completed/Abandoned/Deferred/Deadlettered`.</span></span> <span data-ttu-id="751a6-128">Le verrou sur ce dernier ne peut pas être renouvelé.</span><span class="sxs-lookup"><span data-stu-id="751a6-128">The lock on it cannot be renewed.</span></span>
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="751a6-129">Le numéro de séquence à partir de laquelle lire le message.</span><span class="sxs-lookup"><span data-stu-id="751a6-129">The sequence number from where to read the message.</span></span>
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="751a6-130">Retourne une promesse qui correspond à un message différé identifié par la donnée `sequenceNumber`.</span><span class="sxs-lookup"><span data-stu-id="751a6-130">Returns a promise that resolves to a deferred message identified by the given `sequenceNumber`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="751a6-131">Le numéro de séquence du message qui doit être reçu.</span><span class="sxs-lookup"><span data-stu-id="751a6-131">The sequence number of the message that needs to be received.</span></span>
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="751a6-132">Retourne une promesse qui correspond à un tableau des messages différés identifié par `sequenceNumbers`.</span><span class="sxs-lookup"><span data-stu-id="751a6-132">Returns a promise that resolves to an array of deferred messages identified by given `sequenceNumbers`.</span></span>
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: <span data-ttu-id="751a6-133">Tableau des numéros de séquence pour les messages qui doivent être reçus.</span><span class="sxs-lookup"><span data-stu-id="751a6-133">An array of sequence numbers for the messages that need to be received.</span></span>
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="751a6-134">Retourne une promesse qui correspond à un tableau de messages en fonction du étant donné le nombre et le délai d’attente dans un récepteur d’AMQP lien à partir d’une file d’attente / d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="751a6-134">Returns a promise that resolves to an array of messages based on given count and timeout over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="751a6-135">Génère une erreur s’il existe une autre opération de réception en cours d’exécution sur le même récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-135">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="751a6-136">Si vous ne savez pas s’il existe une autre exécution de l’opération de réception, vérifiez le `isReceivingMessages` propriété sur le récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-136">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, maxWaitTimeInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: <span data-ttu-id="751a6-137">Le nombre maximal de messages à recevoir à partir de la file d’attente / d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="751a6-137">The maximum number of messages to receive from Queue/Subscription.</span></span>
+        - id: maxWaitTimeInSeconds
+          type:
+            - undefined | number
+          description: |-
+            <span data-ttu-id="751a6-138">Le délai maximal en secondes pour laquelle le récepteur doit attendre de recevoir le premier message.</span><span class="sxs-lookup"><span data-stu-id="751a6-138">The maximum wait time in seconds for which the Receiver should wait to receive the first message.</span></span> <span data-ttu-id="751a6-139">Si aucun message n’est reçu à ce stade, la promesse retournée obtient résolue en un tableau vide.</span><span class="sxs-lookup"><span data-stu-id="751a6-139">If no message is received by this time, the returned promise gets resolved to an empty array.</span></span>
+            - <span data-ttu-id="751a6-140">**Par défaut**: `60` secondes.</span><span class="sxs-lookup"><span data-stu-id="751a6-140">**Default**: `60` seconds.</span></span>
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="751a6-141">Indique receiveMode de ce récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-141">Denotes receiveMode of this receiver.</span></span>
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, SessionMessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="751a6-142">Inscrit des gestionnaires pour gérer le flux de messages entrant via un lien du récepteur AMQP à partir d’une file d’attente / d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="751a6-142">Registers handlers to deal with the incoming stream of messages over an AMQP receiver link from a Queue/Subscription.</span></span>
+      <span data-ttu-id="751a6-143">Pour arrêter la réception de messages, appelez `close()` sur le SessionReceiver.</span><span class="sxs-lookup"><span data-stu-id="751a6-143">To stop receiving messages, call `close()` on the SessionReceiver.</span></span>
+      <span data-ttu-id="751a6-144">Génère une erreur s’il existe une autre opération de réception en cours d’exécution sur le même récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-144">Throws an error if there is another receive operation in progress on the same receiver.</span></span> <span data-ttu-id="751a6-145">Si vous ne savez pas s’il existe une autre exécution de l’opération de réception, vérifiez le `isReceivingMessages` propriété sur le récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-145">If you are not sure whether there is another receive operation running, check the `isReceivingMessages` property on the receiver.</span></span>
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: SessionMessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: <span data-ttu-id="751a6-146">Gestionnaire pour le traitement de chaque message entrant.</span><span class="sxs-lookup"><span data-stu-id="751a6-146">Handler for processing each incoming message.</span></span>
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: <span data-ttu-id="751a6-147">Gestionnaire pour les erreurs qui se produit lors de la réception ou le traitement des messages.</span><span class="sxs-lookup"><span data-stu-id="751a6-147">Handler for any error that occurs while receiving or processing messages.</span></span>
+        - id: options
+          type:
+            - '@azure/service-bus.SessionMessageHandlerOptions'
+          description: |
+            <span data-ttu-id="751a6-148">Options pour contrôler si les messages doivent être automatiquement effectuées ou si le verrou sur la session doit être renouvelé automatiquement.</span><span class="sxs-lookup"><span data-stu-id="751a6-148">Options to control whether messages should be automatically completed or if the lock on the session should be automatically renewed.</span></span> <span data-ttu-id="751a6-149">Vous pouvez contrôler le nombre maximal de messages qui doivent être traités simultanément.</span><span class="sxs-lookup"><span data-stu-id="751a6-149">You can control the maximum number of messages that should be concurrently processed.</span></span> <span data-ttu-id="751a6-150">Vous pouvez également fournir un délai d’expiration en secondes pour indiquer la quantité de temps d’attente pour un nouveau message avant de fermer le récepteur.</span><span class="sxs-lookup"><span data-stu-id="751a6-150">You can also provide a timeout in seconds to denote the amount of time to wait for a new message before closing the receiver.</span></span>
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.renewSessionLock'
+    name: renewSessionLock()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="751a6-151">Renouvelle le verrou sur la session pendant la durée spécifiée lors de la création de la file d’attente / d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="751a6-151">Renews the lock on the session for the duration as specified during the Queue/Subscription creation.</span></span>
+      - <span data-ttu-id="751a6-152">Vérifier le `sessionLockedUntilUtc` propriété sur le SessionReceiver pour l’heure d’expiration du verrou.</span><span class="sxs-lookup"><span data-stu-id="751a6-152">Check the `sessionLockedUntilUtc` property on the SessionReceiver for the time when the lock expires.</span></span>
+      - <span data-ttu-id="751a6-153">Lorsque le verrou sur la session expire</span><span class="sxs-lookup"><span data-stu-id="751a6-153">When the lock on the session expires</span></span>
+          - <span data-ttu-id="751a6-154">Aucun message supplémentaire ne peut être reçus à l’aide de ce récepteur</span><span class="sxs-lookup"><span data-stu-id="751a6-154">No more messages can be received using this receiver</span></span>
+          - <span data-ttu-id="751a6-155">Si un message n’est pas réglé (à l’aide `complete()`, `defer()` ou `deadletter()`, avant la session de verrouillage arrive à expiration, puis les terres de message dans la file d’attente / l’abonnement pour la prochaine opération de réception.</span><span class="sxs-lookup"><span data-stu-id="751a6-155">If a message is not settled (using either `complete()`, `defer()` or `deadletter()`, before the session lock expires, then the message lands back in the Queue/Subscription for the next receive operation.</span></span>
+    syntax:
+      content: function renewSessionLock()
+      parameters: []
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="751a6-156">L’id de la session à partir de laquelle ce récepteur reçoit les messages.</span><span class="sxs-lookup"><span data-stu-id="751a6-156">The id of the session from which this receiver will receive messages.</span></span>
+      <span data-ttu-id="751a6-157">Retournera non défini jusqu'à ce qu’un lien du récepteur AMQP a été correctement configuré pour la session.</span><span class="sxs-lookup"><span data-stu-id="751a6-157">Will return undefined until a AMQP receiver link has been successfully set up for the session.</span></span>
+    syntax:
+      content: 'sessionId: string | undefined'
+      return:
+        type:
+          - string | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.sessionLockedUntilUtc'
+    name: sessionLockedUntilUtc
+    fullName: sessionLockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="751a6-158">L’heure UTC jusqu'à laquelle la session est verrouillée.</span><span class="sxs-lookup"><span data-stu-id="751a6-158">The time in UTC until which the session is locked.</span></span>
+      <span data-ttu-id="751a6-159">Chaque fois que `renewSessionLock()` est appelée, ce temps est mis à jour à l’heure actuelle plus la durée de verrouillage, tel que spécifié lors de la création de la file d’attente / d’abonnement.</span><span class="sxs-lookup"><span data-stu-id="751a6-159">Everytime `renewSessionLock()` is called, this time gets updated to current time plus the lock duration as specified during the Queue/Subscription creation.</span></span>
+
+      <span data-ttu-id="751a6-160">Retournera non défini jusqu'à ce qu’un lien du récepteur AMQP a été correctement configuré pour la session.</span><span class="sxs-lookup"><span data-stu-id="751a6-160">Will return undefined until a AMQP receiver link has been successfully set up for the session.</span></span>
+    syntax:
+      content: 'sessionLockedUntilUtc: Date | undefined'
+      return:
+        type:
+          - Date | undefined
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionReceiver.setState'
+    name: setState(any)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="751a6-161">Définit l’état sur la Session.</span><span class="sxs-lookup"><span data-stu-id="751a6-161">Sets the state on the Session.</span></span> <span data-ttu-id="751a6-162">Pour plus d’informations sur les États de session, consultez [l’état de Session](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span><span class="sxs-lookup"><span data-stu-id="751a6-162">For more on session states, see [Session State](https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#message-session-state)</span></span>'
+    syntax:
+      content: 'function setState(state: any)'
+      parameters:
+        - id: state
+          type:
+            - any
+          description: |
+            <span data-ttu-id="751a6-163">L’état qui doit être définie.</span><span class="sxs-lookup"><span data-stu-id="751a6-163">The state that needs to be set.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    spec.typeScript:
+      - name: SessionMessageHandlerOptions
+        fullName: SessionMessageHandlerOptions
+        uid: '@azure/service-bus.SessionMessageHandlerOptions'
