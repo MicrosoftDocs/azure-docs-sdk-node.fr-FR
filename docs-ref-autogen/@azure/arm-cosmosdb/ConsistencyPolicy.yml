@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy'
+    name: ConsistencyPolicy
+    fullName: ConsistencyPolicy
+    children:
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+      - '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: La stratégie de cohérence pour le compte de base de données Cosmos DB.
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.defaultConsistencyLevel'
+    name: defaultConsistencyLevel
+    fullName: defaultConsistencyLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les paramètres par défaut la cohérence au niveau et la configuration du compte Cosmos DB. Les valeurs possibles incluent\_: 'Eventual', 'Session', 'BoundedStaleness', 'Strong', 'ConsistentPrefix'"
+    syntax:
+      content: 'defaultConsistencyLevel: DefaultConsistencyLevel'
+      return:
+        type:
+          - '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxIntervalInSeconds'
+    name: maxIntervalInSeconds
+    fullName: maxIntervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Lorsqu’il est utilisé avec le niveau de cohérence obsolescence, cette valeur représente la quantité de temps de (en secondes) de l’obsolescence tolérée. La plage acceptée pour cette valeur est 5-86400. Obligatoire lorsque defaultConsistencyPolicy est défini sur «\_BoundedStaleness\_»."
+    optional: true
+    syntax:
+      content: 'maxIntervalInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.ConsistencyPolicy.maxStalenessPrefix'
+    name: maxStalenessPrefix
+    fullName: maxStalenessPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Lorsqu’il est utilisé avec le niveau de cohérence obsolescence, cette valeur représente le nombre de requêtes d’obsolescence tolérée. Les valeurs acceptables sont 1-2, 147, 483 et 647. Obligatoire lorsque defaultConsistencyPolicy est défini sur «\_BoundedStaleness\_»."
+    optional: true
+    syntax:
+      content: 'maxStalenessPrefix?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
+    name: DefaultConsistencyLevel
+    spec.typeScript:
+      - name: DefaultConsistencyLevel
+        fullName: DefaultConsistencyLevel
+        uid: '@azure/arm-cosmosdb.DefaultConsistencyLevel'
