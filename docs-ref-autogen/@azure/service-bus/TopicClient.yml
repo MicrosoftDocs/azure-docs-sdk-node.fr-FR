@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="1c94d-101">Décrit le client qui permet l’interaction avec une rubrique Service Bus.</span><span class="sxs-lookup"><span data-stu-id="1c94d-101">Describes the client that allows interacting with a Service Bus Topic.</span></span>
+      <span data-ttu-id="1c94d-102">Utilisez le `createTopicClient` sur l’objet ServiceBusClient pour instancier un TopicClient (fonction)</span><span class="sxs-lookup"><span data-stu-id="1c94d-102">Use the `createTopicClient` function on the ServiceBusClient object to instantiate a TopicClient</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="1c94d-103">Ferme le lien AMQP pour l’expéditeur créé par ce client.</span><span class="sxs-lookup"><span data-stu-id="1c94d-103">Closes the AMQP link for the sender created by this client.</span></span>
+      <span data-ttu-id="1c94d-104">Une fois fermée, ni le TopicClient ni ses expéditeurs peuvent servir pour toute autre opération.</span><span class="sxs-lookup"><span data-stu-id="1c94d-104">Once closed, neither the TopicClient nor its senders can be used for any further operations.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="1c94d-105">Crée un expéditeur à utiliser pour envoyer des messages, la planification des messages soient envoyés à une date ultérieure et l’annulation de ces messages planifiés.</span><span class="sxs-lookup"><span data-stu-id="1c94d-105">Creates a Sender to be used for sending messages, scheduling messages to be sent at a later time and cancelling such scheduled messages.</span></span>
+      - <span data-ttu-id="1c94d-106">Génère l’erreur si un expéditeur ouvert existe déjà pour cette TopicClient.</span><span class="sxs-lookup"><span data-stu-id="1c94d-106">Throws error if an open sender already exists for this TopicClient.</span></span>
+      <span data-ttu-id="1c94d-107">Si le sujet a des abonnements de la session est activée, les messages envoyés sans le `sessionId` propriété passera à la file d’attente de lettres mortes de ces abonnements.</span><span class="sxs-lookup"><span data-stu-id="1c94d-107">If the Topic has session enabled Subscriptions, then messages sent without the `sessionId` property will go to the dead letter queue of such subscriptions.</span></span>
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1c94d-108">Le chemin d’accès pour la rubrique Service Bus pour lequel ce client est créé.</span><span class="sxs-lookup"><span data-stu-id="1c94d-108">The path for the Service Bus Topic for which this client is created.</span></span>
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="1c94d-109">Retourne le nom de rubrique de lettres mortes correspondante pour les noms de rubrique et abonnement donnés.</span><span class="sxs-lookup"><span data-stu-id="1c94d-109">Returns the corresponding dead letter topic name for the given topic and subscription names.</span></span>
+      <span data-ttu-id="1c94d-110">Utilisez-le dans le `createSubscriptionClient` fonction de la `ServiceBusClient` instance pour recevoir des messages de file d’attente de lettres mortes pour certains abonnement.</span><span class="sxs-lookup"><span data-stu-id="1c94d-110">Use this in the `createSubscriptionClient` function of the `ServiceBusClient` instance to receive messages from dead letter queue for given subscription.</span></span>
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1c94d-111">Nom de la rubrique les nom de dont l’équivalent lettres mortes sont en cours d’extraction</span><span class="sxs-lookup"><span data-stu-id="1c94d-111">Name of the topic whose dead letter counterpart's name is being fetched</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="1c94d-112">Nom de l’abonnement de nom de dont l’équivalent lettres mortes est en cours d’extraction</span><span class="sxs-lookup"><span data-stu-id="1c94d-112">Name of the subscription whose dead letter counterpart's name is being fetched</span></span>
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1c94d-113">Un identificateur unique pour ce client.</span><span class="sxs-lookup"><span data-stu-id="1c94d-113">A unique identifier for this client.</span></span>
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'

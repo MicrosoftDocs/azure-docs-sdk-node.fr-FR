@@ -1,0 +1,169 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.PercentileSourceTarget'
+    name: PercentileSourceTarget
+    fullName: PercentileSourceTarget
+    children:
+      - '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics'
+      - '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics_2'
+      - '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics_1'
+      - '@azure/arm-cosmosdb.PercentileSourceTarget.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="8d298-101">Classe représentant un PercentileSourceTarget.</span><span class="sxs-lookup"><span data-stu-id="8d298-101">Class representing a PercentileSourceTarget.</span></span>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics'
+    name: 'listMetrics(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="8d298-102">Récupère les mesures déterminés par le filtre spécifié pour la région de compte, source et cible donné.</span><span class="sxs-lookup"><span data-stu-id="8d298-102">Retrieves the metrics determined by the given filter for the given account, source and target region.</span></span> <span data-ttu-id="8d298-103">Cette url est uniquement pour les données PBS et la latence de réplication</span><span class="sxs-lookup"><span data-stu-id="8d298-103">This url is only for PBS and Replication Latency data</span></span>'
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, sourceRegion: string, targetRegion: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-104">Nom du groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="8d298-104">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-105">Nom de compte de base de données COSMOS DB.</span><span class="sxs-lookup"><span data-stu-id="8d298-105">Cosmos DB database account name.</span></span>
+        - id: sourceRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-106">Région source à partir de laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-106">Source region from which data is written.</span></span> <span data-ttu-id="8d298-107">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-107">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-108">Région cible à laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-108">Target region to which data is written.</span></span> <span data-ttu-id="8d298-109">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-109">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-110">Une expression de filtre OData qui décrit un sous-ensemble des métriques à retourner.</span><span class="sxs-lookup"><span data-stu-id="8d298-110">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8d298-111">Les paramètres qui peuvent être filtrés sont name.value (nom de la mesure, peut avoir une ou de plusieurs noms), startTime, endTime et timeGrain.</span><span class="sxs-lookup"><span data-stu-id="8d298-111">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8d298-112">L’opérateur pris en charge est égalisation.</span><span class="sxs-lookup"><span data-stu-id="8d298-112">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PercentileSourceTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, string, RequestOptionsBase, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, sourceRegion: string, targetRegion: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-113">Nom du groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="8d298-113">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-114">Nom de compte de base de données COSMOS DB.</span><span class="sxs-lookup"><span data-stu-id="8d298-114">Cosmos DB database account name.</span></span>
+        - id: sourceRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-115">Région source à partir de laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-115">Source region from which data is written.</span></span> <span data-ttu-id="8d298-116">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-116">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-117">Région cible à laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-117">Target region to which data is written.</span></span> <span data-ttu-id="8d298-118">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-118">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-119">Une expression de filtre OData qui décrit un sous-ensemble des métriques à retourner.</span><span class="sxs-lookup"><span data-stu-id="8d298-119">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8d298-120">Les paramètres qui peuvent être filtrés sont name.value (nom de la mesure, peut avoir une ou de plusieurs noms), startTime, endTime et timeGrain.</span><span class="sxs-lookup"><span data-stu-id="8d298-120">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8d298-121">L’opérateur pris en charge est égalisation.</span><span class="sxs-lookup"><span data-stu-id="8d298-121">The supported operator is eq.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="8d298-122">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="8d298-122">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            <span data-ttu-id="8d298-123">Le rappel</span><span class="sxs-lookup"><span data-stu-id="8d298-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PercentileSourceTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileSourceTarget.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, string, ServiceCallback<PercentileMetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, sourceRegion: string, targetRegion: string, filter: string, callback: ServiceCallback<PercentileMetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-124">Nom du groupe de ressources Azure.</span><span class="sxs-lookup"><span data-stu-id="8d298-124">Name of an Azure resource group.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="8d298-125">Nom de compte de base de données COSMOS DB.</span><span class="sxs-lookup"><span data-stu-id="8d298-125">Cosmos DB database account name.</span></span>
+        - id: sourceRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-126">Région source à partir de laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-126">Source region from which data is written.</span></span> <span data-ttu-id="8d298-127">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-127">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: targetRegion
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-128">Région cible à laquelle les données sont écrites.</span><span class="sxs-lookup"><span data-stu-id="8d298-128">Target region to which data is written.</span></span> <span data-ttu-id="8d298-129">Région de COSMOS DB, avec des espaces entre les mots et chaque mot en majuscules.</span><span class="sxs-lookup"><span data-stu-id="8d298-129">Cosmos DB region, with spaces between words and each word capitalized.</span></span>'
+        - id: filter
+          type:
+            - string
+          description: '<span data-ttu-id="8d298-130">Une expression de filtre OData qui décrit un sous-ensemble des métriques à retourner.</span><span class="sxs-lookup"><span data-stu-id="8d298-130">An OData filter expression that describes a subset of metrics to return.</span></span> <span data-ttu-id="8d298-131">Les paramètres qui peuvent être filtrés sont name.value (nom de la mesure, peut avoir une ou de plusieurs noms), startTime, endTime et timeGrain.</span><span class="sxs-lookup"><span data-stu-id="8d298-131">The parameters that can be filtered are name.value (name of the metric, can have an or of multiple names), startTime, endTime, and timeGrain.</span></span> <span data-ttu-id="8d298-132">L’opérateur pris en charge est égalisation.</span><span class="sxs-lookup"><span data-stu-id="8d298-132">The supported operator is eq.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+          description: |
+            <span data-ttu-id="8d298-133">Le rappel</span><span class="sxs-lookup"><span data-stu-id="8d298-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PercentileSourceTargetListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.PercentileSourceTarget.constructor'
+    name: PercentileSourceTarget(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="8d298-134">Créer un PercentileSourceTarget.</span><span class="sxs-lookup"><span data-stu-id="8d298-134">Create a PercentileSourceTarget.</span></span>
+    syntax:
+      content: 'new PercentileSourceTarget(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            <span data-ttu-id="8d298-135">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="8d298-135">Reference to the service client.</span></span>
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.PercentileMetricListResult>
+    name: PercentileMetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PercentileMetricListResult
+        fullName: PercentileMetricListResult
+        uid: '@azure/arm-cosmosdb.PercentileMetricListResult'
+      - name: '>'
+        fullName: '>'
