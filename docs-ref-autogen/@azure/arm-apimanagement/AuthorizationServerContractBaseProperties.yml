@@ -1,0 +1,222 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties'
+    name: AuthorizationServerContractBaseProperties
+    fullName: AuthorizationServerContractBaseProperties
+    children:
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.authorizationMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.bearerTokenSendingMethods'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientAuthenticationMethod'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientSecret'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.defaultScope'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.description'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerPassword'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerUsername'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.supportState'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenBodyParameters'
+      - '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenEndpoint'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="71285-101">Paramètres de mise à jour serveur de d’autorisation OAuth externes de contrat.</span><span class="sxs-lookup"><span data-stu-id="71285-101">External OAuth authorization server Update settings contract.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.authorizationMethods'
+    name: authorizationMethods
+    fullName: authorizationMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-102">Verbes HTTP pris en charge par le point de terminaison d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-102">HTTP verbs supported by the authorization endpoint.</span></span> <span data-ttu-id="71285-103">GET doit toujours être présent.</span><span class="sxs-lookup"><span data-stu-id="71285-103">GET must be always present.</span></span> <span data-ttu-id="71285-104">POST est facultative.</span><span class="sxs-lookup"><span data-stu-id="71285-104">POST is optional.</span></span>
+    optional: true
+    syntax:
+      content: 'authorizationMethods?: AuthorizationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.AuthorizationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.bearerTokenSendingMethods'
+    name: bearerTokenSendingMethods
+    fullName: bearerTokenSendingMethods
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-105">Spécifie le mécanisme par lequel l’accès le jeton est passé à l’API.</span><span class="sxs-lookup"><span data-stu-id="71285-105">Specifies the mechanism by which access token is passed to the API.</span></span>
+    optional: true
+    syntax:
+      content: 'bearerTokenSendingMethods?: BearerTokenSendingMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientAuthenticationMethod'
+    name: clientAuthenticationMethod
+    fullName: clientAuthenticationMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="71285-106">Méthode d’authentification pris en charge par le point de terminaison de jeton de ce serveur d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-106">Method of authentication supported by the token endpoint of this authorization server.</span></span>
+      <span data-ttu-id="71285-107">Les valeurs possibles sont Basic et/ou le corps.</span><span class="sxs-lookup"><span data-stu-id="71285-107">Possible values are Basic and/or Body.</span></span> <span data-ttu-id="71285-108">Lorsque le corps est spécifié, les informations d’identification du client et d’autres paramètres sont passés dans le corps de demande au format application/x--www-form-urlencoded.</span><span class="sxs-lookup"><span data-stu-id="71285-108">When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.</span></span>
+    optional: true
+    syntax:
+      content: 'clientAuthenticationMethod?: ClientAuthenticationMethod[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.clientSecret'
+    name: clientSecret
+    fullName: clientSecret
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-109">Clé secrète client ou l’application inscrit avec ce serveur d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-109">Client or app secret registered with this authorization server.</span></span>
+    optional: true
+    syntax:
+      content: 'clientSecret?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.defaultScope'
+    name: defaultScope
+    fullName: defaultScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-110">Jeton étendue d’accès qui va être demandée par défaut.</span><span class="sxs-lookup"><span data-stu-id="71285-110">Access token scope that is going to be requested by default.</span></span> <span data-ttu-id="71285-111">Peut être remplacée au niveau de l’API.</span><span class="sxs-lookup"><span data-stu-id="71285-111">Can be overridden at the API level.</span></span> <span data-ttu-id="71285-112">Doit être fournie sous la forme d’une chaîne contenant des valeurs délimitées par des espaces.</span><span class="sxs-lookup"><span data-stu-id="71285-112">Should be provided in the form of a string containing space-delimited values.</span></span>
+    optional: true
+    syntax:
+      content: 'defaultScope?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-113">Description du serveur d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-113">Description of the authorization server.</span></span> <span data-ttu-id="71285-114">Peut contenir des balises au format HTML.</span><span class="sxs-lookup"><span data-stu-id="71285-114">Can contain HTML formatting tags.</span></span>
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerPassword'
+    name: resourceOwnerPassword
+    fullName: resourceOwnerPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-115">Peut être spécifiée lorsque le type de grant de mot de passe de propriétaire de ressource est prise en charge par ce serveur d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-115">Can be optionally specified when resource owner password grant type is supported by this authorization server.</span></span> <span data-ttu-id="71285-116">Mot de passe du propriétaire de ressource par défaut.</span><span class="sxs-lookup"><span data-stu-id="71285-116">Default resource owner password.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceOwnerPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.resourceOwnerUsername'
+    name: resourceOwnerUsername
+    fullName: resourceOwnerUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-117">Peut être spécifiée lorsque le type de grant de mot de passe de propriétaire de ressource est prise en charge par ce serveur d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="71285-117">Can be optionally specified when resource owner password grant type is supported by this authorization server.</span></span> <span data-ttu-id="71285-118">Nom d’utilisateur du propriétaire de ressource de valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="71285-118">Default resource owner username.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceOwnerUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.supportState'
+    name: supportState
+    fullName: supportState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="71285-119">Si la valeur est true, le serveur d’autorisation inclura paramètre d’état à partir de la demande d’autorisation dans sa réponse.</span><span class="sxs-lookup"><span data-stu-id="71285-119">If true, authorization server will include state parameter from the authorization request to its response.</span></span> <span data-ttu-id="71285-120">Client peut utiliser le paramètre d’état pour augmenter la sécurité du protocole.</span><span class="sxs-lookup"><span data-stu-id="71285-120">Client may use state parameter to raise protocol security.</span></span>'
+    optional: true
+    syntax:
+      content: 'supportState?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenBodyParameters'
+    name: tokenBodyParameters
+    fullName: tokenBodyParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"71285-121\">Paramètres supplémentaires requis par le point de terminaison de jeton de ce serveur d’autorisation représenté comme un tableau JSON des objets avec des propriétés de chaîne de nom et la valeur, par exemple, {«\_name\_»\_: «\_valeur de nom\_», «\_value\_»\_: «\_valeur\_»}.</span><span class=\"sxs-lookup\"><span data-stu-id=\"71285-121\">Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {\"name\" : \"name value\", \"value\": \"a value\"}.</span></span>"
+    optional: true
+    syntax:
+      content: 'tokenBodyParameters?: TokenBodyParameterContract[]'
+      return:
+        type:
+          - '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.AuthorizationServerContractBaseProperties.tokenEndpoint'
+    name: tokenEndpoint
+    fullName: tokenEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="71285-122">Point de terminaison de jeton OAuth.</span><span class="sxs-lookup"><span data-stu-id="71285-122">OAuth token endpoint.</span></span> <span data-ttu-id="71285-123">Contient un URI absolu vers l’entité référencée.</span><span class="sxs-lookup"><span data-stu-id="71285-123">Contains absolute URI to entity being referenced.</span></span>
+    optional: true
+    syntax:
+      content: 'tokenEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.AuthorizationMethod[]'
+    name: 'AuthorizationMethod[]'
+    spec.typeScript:
+      - name: AuthorizationMethod
+        fullName: AuthorizationMethod
+        uid: '@azure/arm-apimanagement.AuthorizationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.BearerTokenSendingMethod[]'
+    name: 'BearerTokenSendingMethod[]'
+    spec.typeScript:
+      - name: BearerTokenSendingMethod
+        fullName: BearerTokenSendingMethod
+        uid: '@azure/arm-apimanagement.BearerTokenSendingMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.ClientAuthenticationMethod[]'
+    name: 'ClientAuthenticationMethod[]'
+    spec.typeScript:
+      - name: ClientAuthenticationMethod
+        fullName: ClientAuthenticationMethod
+        uid: '@azure/arm-apimanagement.ClientAuthenticationMethod'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-apimanagement.TokenBodyParameterContract[]'
+    name: 'TokenBodyParameterContract[]'
+    spec.typeScript:
+      - name: TokenBodyParameterContract
+        fullName: TokenBodyParameterContract
+        uid: '@azure/arm-apimanagement.TokenBodyParameterContract'
+      - name: '[]'
+        fullName: '[]'
