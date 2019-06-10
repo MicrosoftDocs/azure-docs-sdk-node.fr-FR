@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SnapshotUpdate'
+    name: SnapshotUpdate
+    fullName: SnapshotUpdate
+    children:
+      - '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+      - '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.SnapshotUpdate.osType'
+      - '@azure/arm-compute.SnapshotUpdate.sku'
+      - '@azure/arm-compute.SnapshotUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: Ressources de mise à jour d’instantané.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si creationData.createOption est vide, ce champ est obligatoire et il indique la taille du disque dur virtuel à créer. Si ce champ est présent pour les mises à jour ou la création avec d’autres options, il indique un redimensionnement. Redimensionne est autorisées uniquement si le disque n’est pas attaché à une machine virtuelle en cours d’exécution et que vous pouvez uniquement augmenter la taille du disque.'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Collection de paramètres de chiffrement utilisée être Azure Disk Encryption, peut contenir plusieurs paramètres de chiffrement par disque ou une capture instantanée.'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de système d’exploitation. Les valeurs possibles incluent\_: 'Windows', 'Linux'"
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: SnapshotSku'
+      return:
+        type:
+          - '@azure/arm-compute.SnapshotSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SnapshotUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Balises de ressource
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.SnapshotSku'
+    name: SnapshotSku
+    spec.typeScript:
+      - name: SnapshotSku
+        fullName: SnapshotSku
+        uid: '@azure/arm-compute.SnapshotSku'

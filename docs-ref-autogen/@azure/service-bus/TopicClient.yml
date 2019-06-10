@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Décrit le client qui permet l’interaction avec une rubrique Service Bus.
+      Utilisez le `createTopicClient` sur l’objet ServiceBusClient pour instancier un TopicClient (fonction)
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Ferme le lien AMQP pour l’expéditeur créé par ce client.
+      Une fois fermée, ni le TopicClient ni ses expéditeurs peuvent servir pour toute autre opération.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Crée un expéditeur à utiliser pour envoyer des messages, la planification des messages soient envoyés à une date ultérieure et l’annulation de ces messages planifiés.
+      - Génère l’erreur si un expéditeur ouvert existe déjà pour cette TopicClient.
+      Si le sujet a des abonnements de la session est activée, les messages envoyés sans le `sessionId` propriété passera à la file d’attente de lettres mortes de ces abonnements.
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le chemin d’accès pour la rubrique Service Bus pour lequel ce client est créé.
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Retourne le nom de rubrique de lettres mortes correspondante pour les noms de rubrique et abonnement donnés.
+      Utilisez-le dans le `createSubscriptionClient` fonction de la `ServiceBusClient` instance pour recevoir des messages de file d’attente de lettres mortes pour certains abonnement.
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: Nom de la rubrique les nom de dont l’équivalent lettres mortes sont en cours d’extraction
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            Nom de l’abonnement de nom de dont l’équivalent lettres mortes est en cours d’extraction
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Un identificateur unique pour ce client.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
