@@ -1,0 +1,785 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.PoolOperations'
+    name: PoolOperations
+    fullName: PoolOperations
+    children:
+      - '@azure/arm-batch.PoolOperations.beginCreate'
+      - '@azure/arm-batch.PoolOperations.beginDeleteMethod'
+      - '@azure/arm-batch.PoolOperations.create'
+      - '@azure/arm-batch.PoolOperations.deleteMethod'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale_2'
+      - '@azure/arm-batch.PoolOperations.disableAutoScale_1'
+      - '@azure/arm-batch.PoolOperations.get'
+      - '@azure/arm-batch.PoolOperations.get_2'
+      - '@azure/arm-batch.PoolOperations.get_1'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.PoolOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.PoolOperations.constructor'
+      - '@azure/arm-batch.PoolOperations.stopResize'
+      - '@azure/arm-batch.PoolOperations.stopResize_2'
+      - '@azure/arm-batch.PoolOperations.stopResize_1'
+      - '@azure/arm-batch.PoolOperations.update'
+      - '@azure/arm-batch.PoolOperations.update_2'
+      - '@azure/arm-batch.PoolOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="2b7b9-101">Classe représentant une PoolOperations.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-101">Class representing a PoolOperations.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.beginCreate'
+    name: 'beginCreate(string, string, string, Pool, Models.PoolBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-102">Crée un pool à l’intérieur du compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-102">Creates a new pool inside the specified account.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-103">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-103">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-104">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-104">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-105">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-105">The pool name.</span></span> <span data-ttu-id="2b7b9-106">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-106">This must be unique within the account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: <span data-ttu-id="2b7b9-107">Paramètres supplémentaires pour la création du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-107">Additional parameters for pool creation.</span></span>
+        - id: options
+          type:
+            - Models.PoolBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-108">Supprime le pool spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-108">Deletes the specified pool.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-109">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-109">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-110">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-110">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-111">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-111">The pool name.</span></span> <span data-ttu-id="2b7b9-112">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-112">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.create'
+    name: 'create(string, string, string, Pool, Models.PoolCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-113">Crée un pool à l’intérieur du compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-113">Creates a new pool inside the specified account.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-114">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-114">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-115">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-115">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-116">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-116">The pool name.</span></span> <span data-ttu-id="2b7b9-117">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-117">This must be unique within the account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: <span data-ttu-id="2b7b9-118">Paramètres supplémentaires pour la création du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-118">Additional parameters for pool creation.</span></span>
+        - id: options
+          type:
+            - Models.PoolCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-119">Supprime le pool spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-119">Deletes the specified pool.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-120">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-120">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-121">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-121">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-122">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-122">The pool name.</span></span> <span data-ttu-id="2b7b9-123">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-123">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale'
+    name: 'disableAutoScale(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-124">Désactive la mise à l’échelle automatique pour un pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-124">Disables automatic scaling for a pool.</span></span>
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-125">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-125">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-126">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-126">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-127">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-127">The pool name.</span></span> <span data-ttu-id="2b7b9-128">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-128">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale_2'
+    name: 'disableAutoScale(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-129">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-129">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-130">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-130">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-131">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-131">The pool name.</span></span> <span data-ttu-id="2b7b9-132">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-132">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2b7b9-133">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-133">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-134">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-134">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.disableAutoScale_1'
+    name: 'disableAutoScale(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-135">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-135">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-136">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-136">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-137">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-137">The pool name.</span></span> <span data-ttu-id="2b7b9-138">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-138">This must be unique within the account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-139">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-140">Obtient des informations sur le pool spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-140">Gets information about the specified pool.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-141">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-141">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-142">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-142">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-143">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-143">The pool name.</span></span> <span data-ttu-id="2b7b9-144">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-144">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-145">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-145">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-146">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-146">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-147">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-147">The pool name.</span></span> <span data-ttu-id="2b7b9-148">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-148">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2b7b9-149">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-149">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-150">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-150">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-151">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-151">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-152">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-152">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-153">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-153">The pool name.</span></span> <span data-ttu-id="2b7b9-154">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-154">This must be unique within the account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-155">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.PoolListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-156">Répertorie tous les pools dans le compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-156">Lists all of the pools in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.PoolListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-157">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-157">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-158">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-158">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - Models.PoolListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, PoolListByBatchAccountOptionalParams, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: PoolListByBatchAccountOptionalParams, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-159">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-159">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-160">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-160">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+          description: <span data-ttu-id="2b7b9-161">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            <span data-ttu-id="2b7b9-162">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-163">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-163">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-164">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-164">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            <span data-ttu-id="2b7b9-165">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-166">Répertorie tous les pools dans le compte spécifié.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-166">Lists all of the pools in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-167">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-167">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-168">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-168">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2b7b9-169">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            <span data-ttu-id="2b7b9-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListPoolsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListPoolsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-171">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-171">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListPoolsResult>
+          description: |
+            <span data-ttu-id="2b7b9-172">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.constructor'
+    name: PoolOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-173">Créer une PoolOperations.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-173">Create a PoolOperations.</span></span>
+    syntax:
+      content: 'new PoolOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            <span data-ttu-id="2b7b9-174">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-174">Reference to the service client.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize'
+    name: 'stopResize(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: "<span data-ttu-id=\"2b7b9-175\">Cela ne restaure pas le pool dans son état précédent avant l’opération de redimensionnement\_: il cesse seulement d’autres modifications effectuées, et le pool conserve son état actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b7b9-175\">This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.</span></span> <span data-ttu-id=\"2b7b9-176\">Après l’arrêt, le pool se stabilise au nombre de nœuds qu’elle avait lorsque l’opération d’arrêt a été effectuée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b7b9-176\">After stopping, the pool stabilizes at the number of nodes it was at when the stop operation was done.</span></span> <span data-ttu-id=\"2b7b9-177\">Pendant l’opération d’arrêt, l’état d’allocation de pool passe tout d’abord à l’arrêt, puis à stable.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b7b9-177\">During the stop operation, the pool allocation state changes first to stopping and then to steady.</span></span> <span data-ttu-id=\"2b7b9-178\">Une opération de redimensionnement ne sont pas nécessairement une requête de pool de redimensionnement explicite\_; Cette API peut également être utilisée pour arrêter la taille initiale du pool lorsqu’il est créé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b7b9-178\">A resize operation need not be an explicit resize pool request; this API can also be used to halt the initial sizing of the pool when it is created.</span></span>"
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-179">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-179">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-180">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-180">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-181">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-181">The pool name.</span></span> <span data-ttu-id="2b7b9-182">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-182">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize_2'
+    name: 'stopResize(string, string, string, RequestOptionsBase, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, options: RequestOptionsBase, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-183">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-183">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-184">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-184">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-185">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-185">The pool name.</span></span> <span data-ttu-id="2b7b9-186">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-186">This must be unique within the account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="2b7b9-187">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-187">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-188">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.stopResize_1'
+    name: 'stopResize(string, string, string, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(resourceGroupName: string, accountName: string, poolName: string, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-189">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-189">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-190">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-190">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-191">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-191">The pool name.</span></span> <span data-ttu-id="2b7b9-192">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-192">This must be unique within the account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-193">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-193">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update'
+    name: 'update(string, string, string, Pool, Models.PoolUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="2b7b9-194">Met à jour les propriétés d’un pool existant.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-194">Updates the properties of an existing pool.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options?: Models.PoolUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-195">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-195">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-196">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-196">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-197">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-197">The pool name.</span></span> <span data-ttu-id="2b7b9-198">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-198">This must be unique within the account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: '<span data-ttu-id="2b7b9-199">Propriétés du pool doivent être mis à jour.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-199">Pool properties that should be updated.</span></span> <span data-ttu-id="2b7b9-200">Seront à jour les propriétés qui sont fournies, n’importe quelle propriété ne pas fournie sera inchangée.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-200">Properties that are supplied will be updated, any property not supplied will be unchanged.</span></span>'
+        - id: options
+          type:
+            - Models.PoolUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update_2'
+    name: 'update(string, string, string, Pool, PoolUpdateOptionalParams, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, options: PoolUpdateOptionalParams, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-201">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-201">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-202">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-202">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-203">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-203">The pool name.</span></span> <span data-ttu-id="2b7b9-204">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-204">This must be unique within the account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: '<span data-ttu-id="2b7b9-205">Propriétés du pool doivent être mis à jour.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-205">Pool properties that should be updated.</span></span> <span data-ttu-id="2b7b9-206">Seront à jour les propriétés qui sont fournies, n’importe quelle propriété ne pas fournie sera inchangée.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-206">Properties that are supplied will be updated, any property not supplied will be unchanged.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-batch.PoolUpdateOptionalParams'
+          description: <span data-ttu-id="2b7b9-207">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="2b7b9-207">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-208">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-208">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.PoolOperations.update_1'
+    name: 'update(string, string, string, Pool, ServiceCallback<Pool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, poolName: string, parameters: Pool, callback: ServiceCallback<Pool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-209">Le nom du groupe de ressources qui contient le compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-209">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-210">Le nom du compte Batch.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-210">The name of the Batch account.</span></span>
+        - id: poolName
+          type:
+            - string
+          description: <span data-ttu-id="2b7b9-211">Le nom du pool.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-211">The pool name.</span></span> <span data-ttu-id="2b7b9-212">Cela doit être unique au sein du compte.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-212">This must be unique within the account.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-batch.Pool'
+          description: '<span data-ttu-id="2b7b9-213">Propriétés du pool doivent être mis à jour.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-213">Pool properties that should be updated.</span></span> <span data-ttu-id="2b7b9-214">Seront à jour les propriétés qui sont fournies, n’importe quelle propriété ne pas fournie sera inchangée.</span><span class="sxs-lookup"><span data-stu-id="2b7b9-214">Properties that are supplied will be updated, any property not supplied will be unchanged.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Pool>
+          description: |
+            <span data-ttu-id="2b7b9-215">Le rappel</span><span class="sxs-lookup"><span data-stu-id="2b7b9-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PoolUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.Pool'
+    name: Pool
+    spec.typeScript:
+      - name: Pool
+        fullName: Pool
+        uid: '@azure/arm-batch.Pool'
+  - uid: ServiceCallback<@azure/arm-batch.Pool>
+    name: Pool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Pool
+        fullName: Pool
+        uid: '@azure/arm-batch.Pool'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListPoolsResult>
+    name: ListPoolsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListPoolsResult
+        fullName: ListPoolsResult
+        uid: '@azure/arm-batch.ListPoolsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+    name: PoolListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: PoolListByBatchAccountOptionalParams
+        fullName: PoolListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.PoolListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.PoolUpdateOptionalParams'
+    name: PoolUpdateOptionalParams
+    spec.typeScript:
+      - name: PoolUpdateOptionalParams
+        fullName: PoolUpdateOptionalParams
+        uid: '@azure/arm-batch.PoolUpdateOptionalParams'
