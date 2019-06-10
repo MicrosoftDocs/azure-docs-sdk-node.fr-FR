@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerregistry.Webhook'
+    name: Webhook
+    fullName: Webhook
+    children:
+      - '@azure/arm-containerregistry.Webhook.actions'
+      - '@azure/arm-containerregistry.Webhook.id'
+      - '@azure/arm-containerregistry.Webhook.location'
+      - '@azure/arm-containerregistry.Webhook.name'
+      - '@azure/arm-containerregistry.Webhook.provisioningState'
+      - '@azure/arm-containerregistry.Webhook.scope'
+      - '@azure/arm-containerregistry.Webhook.status'
+      - '@azure/arm-containerregistry.Webhook.tags'
+      - '@azure/arm-containerregistry.Webhook.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8ffba-101">Objet qui représente un webhook pour un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="8ffba-101">An object that represents a webhook for a container registry.</span></span>
+    extends:
+      name: '@azure/arm-containerregistry.Resource'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.actions'
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8ffba-102">La liste des actions qui déclenchent le webhook pour publier des notifications.</span><span class="sxs-lookup"><span data-stu-id="8ffba-102">The list of actions that trigger the webhook to post notifications.</span></span>
+    syntax:
+      content: 'actions: WebhookAction[]'
+      return:
+        type:
+          - '@azure/arm-containerregistry.WebhookAction[]'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-103\">L’ID de ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-103\">The resource ID.</span></span>\n<span data-ttu-id=\"8ffba-104\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-104\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8ffba-105">L’emplacement de la ressource.</span><span class="sxs-lookup"><span data-stu-id="8ffba-105">The location of the resource.</span></span> <span data-ttu-id="8ffba-106">Cela ne peut pas être modifié une fois que la ressource est créée.</span><span class="sxs-lookup"><span data-stu-id="8ffba-106">This cannot be changed after the resource is created.</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-107\">Nom de la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-107\">The name of the resource.</span></span>\n<span data-ttu-id=\"8ffba-108\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-108\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-109\">L’état d’approvisionnement du webhook au moment où l’opération a été appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-109\">The provisioning state of the webhook at the time the operation was called.</span></span> <span data-ttu-id=\"8ffba-110\">Les valeurs possibles incluent\_: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled' **NOTE: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-110\">Possible values include: 'Creating', 'Updating', 'Deleting', 'Succeeded', 'Failed', 'Canceled' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'provisioningState?: ProvisioningState'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ProvisioningState'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.scope'
+    name: scope
+    fullName: scope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-111\">L’étendue des dépôts où l’événement peut être déclenché.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-111\">The scope of repositories where the event can be triggered.</span></span> <span data-ttu-id=\"8ffba-112\">Par exemple, «\_foo\_: \\*' signifie que les événements pour toutes les balises sous le dépôt «\_foo\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-112\">For example, 'foo:\\*' means events for all tags under repository 'foo'.</span></span> <span data-ttu-id=\"8ffba-113\">«\_Bar\_» signifie que les événements pour «\_bar\_» uniquement.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-113\">'foo:bar' means events for 'foo:bar' only.</span></span> <span data-ttu-id=\"8ffba-114\">«\_foo\_» est équivalent à «\_foo\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-114\">'foo' is equivalent to 'foo:latest'.</span></span> <span data-ttu-id=\"8ffba-115\">Vide signifie que tous les événements.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-115\">Empty means all events.</span></span>"
+    optional: true
+    syntax:
+      content: 'scope?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-116\">L’état du webhook au moment où l’opération a été appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-116\">The status of the webhook at the time the operation was called.</span></span> <span data-ttu-id=\"8ffba-117\">Les valeurs possibles sont\_: «\_enabled\_», «\_disabled\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-117\">Possible values include: 'enabled', 'disabled'</span></span>"
+    optional: true
+    syntax:
+      content: 'status?: WebhookStatus'
+      return:
+        type:
+          - '@azure/arm-containerregistry.WebhookStatus'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8ffba-118">Les balises de la ressource.</span><span class="sxs-lookup"><span data-stu-id="8ffba-118">The tags of the resource.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Webhook.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8ffba-119\">Type de la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-119\">The type of the resource.</span></span>\n<span data-ttu-id=\"8ffba-120\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"8ffba-120\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+references:
+  - uid: '@azure/arm-containerregistry.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-containerregistry.Resource'
+  - uid: '@azure/arm-containerregistry.WebhookAction[]'
+    name: 'WebhookAction[]'
+    spec.typeScript:
+      - name: WebhookAction
+        fullName: WebhookAction
+        uid: '@azure/arm-containerregistry.WebhookAction'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-containerregistry.ProvisioningState'
+    name: ProvisioningState
+    spec.typeScript:
+      - name: ProvisioningState
+        fullName: ProvisioningState
+        uid: '@azure/arm-containerregistry.ProvisioningState'
+  - uid: '@azure/arm-containerregistry.WebhookStatus'
+    name: WebhookStatus
+    spec.typeScript:
+      - name: WebhookStatus
+        fullName: WebhookStatus
+        uid: '@azure/arm-containerregistry.WebhookStatus'
