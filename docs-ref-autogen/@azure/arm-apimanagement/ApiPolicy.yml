@@ -1,0 +1,597 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ApiPolicy'
+    name: ApiPolicy
+    fullName: ApiPolicy
+    children:
+      - '@azure/arm-apimanagement.ApiPolicy.constructor'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_2'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate'
+      - '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_1'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod_2'
+      - '@azure/arm-apimanagement.ApiPolicy.deleteMethod_1'
+      - '@azure/arm-apimanagement.ApiPolicy.get_2'
+      - '@azure/arm-apimanagement.ApiPolicy.get'
+      - '@azure/arm-apimanagement.ApiPolicy.get_1'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag_2'
+      - '@azure/arm-apimanagement.ApiPolicy.getEntityTag_1'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi_2'
+      - '@azure/arm-apimanagement.ApiPolicy.listByApi_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant un ApiPolicy.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.constructor'
+    name: ApiPolicy(ApiManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer un ApiPolicy.
+    syntax:
+      content: 'new ApiPolicy(client: ApiManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-apimanagement.ApiManagementClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, PolicyContract, ApiPolicyCreateOrUpdateOptionalParams, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, options: ApiPolicyCreateOrUpdateOptionalParams, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: Le contenu de la stratégie à appliquer.
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, PolicyContract, Models.ApiPolicyCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crée ou met à jour de configuration de stratégie pour l’API.
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, options?: Models.ApiPolicyCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: Le contenu de la stratégie à appliquer.
+        - id: options
+          type:
+            - Models.ApiPolicyCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, PolicyContract, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: PolicyContract, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: parameters
+          type:
+            - '@azure/arm-apimanagement.PolicyContract'
+          description: Le contenu de la stratégie à appliquer.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyCreateOrUpdateResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime la configuration de stratégie à l’Api.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: ifMatch
+          type:
+            - string
+          description: 'ETag de l’entité. ETag doit correspondre à l’état d’entité en cours à partir de la réponse de l’en-tête de la demande GET, ou elle doit être * pour une mise à jour inconditionnelle.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: ifMatch
+          type:
+            - string
+          description: 'ETag de l’entité. ETag doit correspondre à l’état d’entité en cours à partir de la réponse de l’en-tête de la demande GET, ou elle doit être * pour une mise à jour inconditionnelle.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: ifMatch
+          type:
+            - string
+          description: 'ETag de l’entité. ETag doit correspondre à l’état d’entité en cours à partir de la réponse de l’en-tête de la demande GET, ou elle doit être * pour une mise à jour inconditionnelle.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get_2'
+    name: 'get(string, string, string, ApiPolicyGetOptionalParams, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options: ApiPolicyGetOptionalParams, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get'
+    name: 'get(string, string, string, Models.ApiPolicyGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtenir la configuration de stratégie au niveau de l’API.
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options?: Models.ApiPolicyGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - Models.ApiPolicyGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.get_1'
+    name: 'get(string, string, string, ServiceCallback<PolicyContract>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<PolicyContract>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag'
+    name: 'getEntityTag(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient la version de l’état (Etag) d’entité de la stratégie d’API spécifiée par son identificateur.
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag_2'
+    name: 'getEntityTag(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.getEntityTag_1'
+    name: 'getEntityTag(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyGetEntityTagResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi'
+    name: 'listByApi(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtenir la configuration de stratégie au niveau de l’API.
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi_2'
+    name: 'listByApi(string, string, string, RequestOptionsBase, ServiceCallback<PolicyCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ApiPolicy.listByApi_1'
+    name: 'listByApi(string, string, string, ServiceCallback<PolicyCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByApi(resourceGroupName: string, serviceName: string, apiId: string, callback: ServiceCallback<PolicyCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: serviceName
+          type:
+            - string
+          description: Le nom du service Gestion des API.
+        - id: apiId
+          type:
+            - string
+          description: "Identificateur de révision d’API. Doit être unique dans l’instance de service de gestion des API actuelle. Non actualisée révision a\_; rev = n comme suffixe où n est le numéro de révision."
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ApiPolicyListByApiResponse>
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+    name: ApiManagementClientContext
+    spec.typeScript:
+      - name: ApiManagementClientContext
+        fullName: ApiManagementClientContext
+        uid: '@azure/arm-apimanagement.ApiManagementClientContext'
+  - uid: '@azure/arm-apimanagement.PolicyContract'
+    name: PolicyContract
+    spec.typeScript:
+      - name: PolicyContract
+        fullName: PolicyContract
+        uid: '@azure/arm-apimanagement.PolicyContract'
+  - uid: ServiceCallback<@azure/arm-apimanagement.PolicyContract>
+    name: PolicyContract>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyContract
+        fullName: PolicyContract
+        uid: '@azure/arm-apimanagement.PolicyContract'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+    name: ApiPolicyCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: ApiPolicyCreateOrUpdateOptionalParams
+        fullName: ApiPolicyCreateOrUpdateOptionalParams
+        uid: '@azure/arm-apimanagement.ApiPolicyCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+    name: ApiPolicyGetOptionalParams
+    spec.typeScript:
+      - name: ApiPolicyGetOptionalParams
+        fullName: ApiPolicyGetOptionalParams
+        uid: '@azure/arm-apimanagement.ApiPolicyGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-apimanagement.PolicyCollection>
+    name: PolicyCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyCollection
+        fullName: PolicyCollection
+        uid: '@azure/arm-apimanagement.PolicyCollection'
+      - name: '>'
+        fullName: '>'
