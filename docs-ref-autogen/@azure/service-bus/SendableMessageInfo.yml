@@ -1,0 +1,245 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    fullName: SendableMessageInfo
+    children:
+      - '@azure/service-bus.SendableMessageInfo.body'
+      - '@azure/service-bus.SendableMessageInfo.contentType'
+      - '@azure/service-bus.SendableMessageInfo.correlationId'
+      - '@azure/service-bus.SendableMessageInfo.label'
+      - '@azure/service-bus.SendableMessageInfo.messageId'
+      - '@azure/service-bus.SendableMessageInfo.partitionKey'
+      - '@azure/service-bus.SendableMessageInfo.replyTo'
+      - '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+      - '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.SendableMessageInfo.sessionId'
+      - '@azure/service-bus.SendableMessageInfo.timeToLive'
+      - '@azure/service-bus.SendableMessageInfo.to'
+      - '@azure/service-bus.SendableMessageInfo.userProperties'
+      - '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit le message à envoyer au Service Bus.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le corps du message qui doit être envoyé ou reçu.
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de contenu du message. Si vous le souhaitez, décrit la charge utile du message, avec un descripteur conforme au format de RFC2045, Section 5, par exemple «\_application/json\_»."
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’identificateur de corrélation qui permet à une application de spécifier un contexte pour le message dans le cadre de la corrélation, par exemple reflétant le MessageId d’un message qui est en cours a répondu à.
+      Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’étiquette spécifique de l’application. Cette propriété permet à l’application indiquer l’objectif du message au récepteur dans une offre standard. Round Robin, similaire à une ligne d’objet de courrier électronique. La propriété AMQP mappée est «\_objet\_»."
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’identificateur de message est une valeur définie par l’application qui identifie de manière unique le message et sa charge utile.\n\nRemarque\_: Nombres qui ne sont pas des entiers ne sont pas autorisés."
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La clé de partition pour envoyer un message à une entité partitionnée.
+      Longueur maximale est de 128 caractères. Dans le cas des [entités partitionnées](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), la définition de cette valeur permet d’attribuer des messages associés à la même partition interne, afin que l’ordre de séquence d’envoi soit correctement enregistré. La partition est choisie par une fonction de hachage prioritaire sur cette valeur et ne peut pas être sélectionnée directement.
+      - Pour les entités prenant en charge de session, le `sessionId` propriété substitue à cette valeur.
+      - Pour les entités non partitionnées, clé de partition sera ignorée
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’adresse d’une entité d’envoyer des réponses à. Cette valeur facultative et définie par l’application est un moyen standard d’exprimer un chemin d’accès de réponse à l’intention du destinataire du message. Lorsqu’un expéditeur attend une réponse, cette propriété définit cette valeur sur le chemin d’accès absolu ou relatif de la file d’attente ou de la rubrique auxquelles la réponse doit être envoyée. Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’augmentation de l’identificateur de session le `replyTo` adresse.
+      Longueur maximale est de 128 caractères. Cette valeur augmente les informations ReplyTo et spécifie les ID de session doit être définie pour la réponse lors de l’envoi à l’entité de réponse.
+      Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La date et l’heure en heure UTC à laquelle le message sera placé. Cette propriété retourne l’heure UTC\_; Lorsque vous définissez la propriété, la valeur DateTime fournie doit également être au format UTC. Cette valeur est pour l’envoi des messages retardés.\nIl est utilisé pour différer l’envoi d’un moment précis dans le futur des messages. Durée de file d’attente de messages ne signifie pas que le message sera envoyé en même temps. Il obtient en file d’attente, mais l’heure d’envoi réelle varie selon la charge de travail de la file d’attente et son état."
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’identificateur de session pour une entité prenant en charge de session. Longueur maximale est de 128 caractères. Dans le cas des entités prenant en charge la session, cette valeur définie par l’application spécifie l’affiliation de session du message. Les messages dotés du même identificateur de session sont soumis à un verrouillage du résumé et permettent un traitement et un démultiplexage chronologiques. Dans le cas des entités ne prenant pas en charge la session, cette valeur est ignorée.
+      [Sessions de messagerie](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le message de durée de vie de valeur. Cette valeur est la durée relative au terme duquel le message expire, à partir de l’instant le message a été accepté et stocké par le répartiteur, tel que défini dans `enqueuedTimeUtc`. Lorsque ne pas défini explicitement, la valeur par défaut est le DefaultTimeToLive pour la file d’attente ou la rubrique. Un message au niveau `timeToLive` valeur ne peut pas être supérieure à celle de l’entité DefaultTimeToLive paramètre et elle est automatiquement ajustée si c’est le cas. Consultez [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’adresse «\_to\_». Cette propriété est réservée pour une utilisation ultérieure dans les scénarios de routage et est actuellement ignorée par le répartiteur proprement dit. Applications peuvent utiliser cette valeur dans basés sur des règles [automatique chaînage de transferts](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scénarios pour indiquer la destination logique prévue du message."
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les propriétés spécifiques d’application qui peuvent être utilisées pour les métadonnées de message personnalisé.
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La clé de partition pour l’envoi d’un message dans une entité via une file d’attente partitionnées de transfert. Longueur maximale est de 128 caractères. Si un message est envoyé via une file d’attente de transfert dans la portée d’une transaction, cette valeur sélectionne la partition de file d’attente de transfert\_: Cela équivaut fonctionnellement à `partitionKey` propriété et garantit que les messages sont conservés ensemble et dans l’ordre comme ils sont transférés.\nConsultez [transfère et envoyer](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via)."
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
