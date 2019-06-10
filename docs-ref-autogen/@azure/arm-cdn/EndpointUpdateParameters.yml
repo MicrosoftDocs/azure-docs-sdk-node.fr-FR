@@ -1,0 +1,232 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters'
+    name: EndpointUpdateParameters
+    fullName: EndpointUpdateParameters
+    children:
+      - '@azure/arm-cdn.EndpointUpdateParameters.contentTypesToCompress'
+      - '@azure/arm-cdn.EndpointUpdateParameters.deliveryPolicy'
+      - '@azure/arm-cdn.EndpointUpdateParameters.geoFilters'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isCompressionEnabled'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isHttpAllowed'
+      - '@azure/arm-cdn.EndpointUpdateParameters.isHttpsAllowed'
+      - '@azure/arm-cdn.EndpointUpdateParameters.optimizationType'
+      - '@azure/arm-cdn.EndpointUpdateParameters.originHostHeader'
+      - '@azure/arm-cdn.EndpointUpdateParameters.originPath'
+      - '@azure/arm-cdn.EndpointUpdateParameters.probePath'
+      - '@azure/arm-cdn.EndpointUpdateParameters.queryStringCachingBehavior'
+      - '@azure/arm-cdn.EndpointUpdateParameters.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="75a8f-101">Propriétés requises pour créer ou mettre à jour d’un point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="75a8f-101">Properties required to create or update an endpoint.</span></span>
+    extends:
+      name: BaseResource
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.contentTypesToCompress'
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a8f-102">Liste des types de contenu sur lequel s’applique la compression.</span><span class="sxs-lookup"><span data-stu-id="75a8f-102">List of content types on which compression applies.</span></span> <span data-ttu-id="75a8f-103">La valeur doit être un type MIME valide.</span><span class="sxs-lookup"><span data-stu-id="75a8f-103">The value should be a valid MIME type.</span></span>
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.deliveryPolicy'
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a8f-104">Une stratégie qui spécifie les règles de remise à utiliser pour un point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="75a8f-104">A policy that specifies the delivery rules to be used for an endpoint.</span></span>
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.geoFilters'
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a8f-105">Liste des règles définissant le géo accès utilisateur au sein d’un point de terminaison CDN.</span><span class="sxs-lookup"><span data-stu-id="75a8f-105">List of rules defining the user''s geo access within a CDN endpoint.</span></span> <span data-ttu-id="75a8f-106">Chaque filtre géographique définit une règle d’accès à un chemin d’accès spécifié ou le contenu, par exemple, bloc pour /pictures/ de chemin d’accès Asie-Pacifique</span><span class="sxs-lookup"><span data-stu-id="75a8f-106">Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/</span></span>'
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - '@azure/arm-cdn.GeoFilter[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isCompressionEnabled'
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a8f-107">Indique si la compression du contenu est activée sur le CDN.</span><span class="sxs-lookup"><span data-stu-id="75a8f-107">Indicates whether content compression is enabled on CDN.</span></span> <span data-ttu-id="75a8f-108">La valeur par défaut est false.</span><span class="sxs-lookup"><span data-stu-id="75a8f-108">Default value is false.</span></span> <span data-ttu-id="75a8f-109">Si la compression est activée, le contenu sera rendu en tant que compressés si l’utilisateur demande une version compressée.</span><span class="sxs-lookup"><span data-stu-id="75a8f-109">If compression is enabled, content will be served as compressed if user requests for a compressed version.</span></span> <span data-ttu-id="75a8f-110">Contenu ne sont pas être compressé dans CDN lorsque le contenu demandé est inférieure à 1 octet ou supérieure à 1 Mo.</span><span class="sxs-lookup"><span data-stu-id="75a8f-110">Content won''t be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.</span></span>'
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isHttpAllowed'
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a8f-111">Indique si le trafic HTTP est autorisé sur le point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="75a8f-111">Indicates whether HTTP traffic is allowed on the endpoint.</span></span> <span data-ttu-id="75a8f-112">Valeur par défaut est true.</span><span class="sxs-lookup"><span data-stu-id="75a8f-112">Default value is true.</span></span> <span data-ttu-id="75a8f-113">Au moins un protocole (HTTP ou HTTPS) doit être autorisé.</span><span class="sxs-lookup"><span data-stu-id="75a8f-113">At least one protocol (HTTP or HTTPS) must be allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.isHttpsAllowed'
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a8f-114">Indique si le trafic HTTPS est autorisé sur le point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="75a8f-114">Indicates whether HTTPS traffic is allowed on the endpoint.</span></span> <span data-ttu-id="75a8f-115">Valeur par défaut est true.</span><span class="sxs-lookup"><span data-stu-id="75a8f-115">Default value is true.</span></span> <span data-ttu-id="75a8f-116">Au moins un protocole (HTTP ou HTTPS) doit être autorisé.</span><span class="sxs-lookup"><span data-stu-id="75a8f-116">At least one protocol (HTTP or HTTPS) must be allowed.</span></span>
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.optimizationType'
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"75a8f-117\">Spécifie quel est le scénario le client souhaite que ce point de terminaison CDN pour optimiser pour, par exemple, télécharger, le Media services.</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-117\">Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services.</span></span> <span data-ttu-id=\"75a8f-118\">Avec ces informations, CDN peut appliquer fondée sur l’optimisation des scénarios.</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-118\">With this information, CDN can apply scenario driven optimization.</span></span> <span data-ttu-id=\"75a8f-119\">Les valeurs possibles incluent\_: 'GeneralWebDelivery', 'GeneralMediaStreaming', 'VideoOnDemandMediaStreaming', 'LargeFileDownload', 'DynamicSiteAcceleration'</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-119\">Possible values include: 'GeneralWebDelivery', 'GeneralMediaStreaming', 'VideoOnDemandMediaStreaming', 'LargeFileDownload', 'DynamicSiteAcceleration'</span></span>"
+    optional: true
+    syntax:
+      content: 'optimizationType?: OptimizationType'
+      return:
+        type:
+          - '@azure/arm-cdn.OptimizationType'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.originHostHeader'
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a8f-120">La valeur d’en-tête d’hôte envoyée à l’origine avec chaque requête.</span><span class="sxs-lookup"><span data-stu-id="75a8f-120">The host header value sent to the origin with each request.</span></span> <span data-ttu-id="75a8f-121">Si vous laissez ce champ vide, le nom d’hôte de la demande détermine cette valeur.</span><span class="sxs-lookup"><span data-stu-id="75a8f-121">If you leave this blank, the request hostname determines this value.</span></span> <span data-ttu-id="75a8f-122">Origines du CDN Azure, tels que les applications Web, de stockage d’objets Blob et de Services Cloud requièrent cette valeur d’en-tête hôte pour faire correspondre le nom d’hôte d’origine par défaut.</span><span class="sxs-lookup"><span data-stu-id="75a8f-122">Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.</span></span>'
+    optional: true
+    syntax:
+      content: 'originHostHeader?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.originPath'
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a8f-123">Chemin d’accès de répertoire sur l’origine CDN peut utiliser pour récupérer le contenu à partir, par exemple, contoso.cloudapp.net/originpath.</span><span class="sxs-lookup"><span data-stu-id="75a8f-123">A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.</span></span>'
+    optional: true
+    syntax:
+      content: 'originPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.probePath'
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a8f-124">Chemin d’accès d’un fichier hébergé sur l’origine, qui vous aide à accélérer la livraison de contenu dynamique et calculer les itinéraires optimales pour le CDN.</span><span class="sxs-lookup"><span data-stu-id="75a8f-124">Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN.</span></span> <span data-ttu-id="75a8f-125">Il s’agit par rapport au chemin d’accès d’origine.</span><span class="sxs-lookup"><span data-stu-id="75a8f-125">This is relative to the origin path.</span></span>'
+    optional: true
+    syntax:
+      content: 'probePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.queryStringCachingBehavior'
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"75a8f-126\">Définit comment le CDN met en cache les requêtes qui incluent des chaînes de requête.</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-126\">Defines how CDN caches requests that include query strings.</span></span> <span data-ttu-id=\"75a8f-127\">Vous pouvez ignorer toutes les chaînes de requête lors de la mise en cache, ignorer la mise en cache pour empêcher les requêtes qui contiennent des chaînes de requête à partir de la mise en cache, ou mettre en cache chaque demande avec une URL unique.</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-127\">You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.</span></span> <span data-ttu-id=\"75a8f-128\">Les valeurs possibles incluent\_: 'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'</span><span class=\"sxs-lookup\"><span data-stu-id=\"75a8f-128\">Possible values include: 'IgnoreQueryString', 'BypassCaching', 'UseQueryString', 'NotSet'</span></span>"
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: QueryStringCachingBehavior'
+      return:
+        type:
+          - '@azure/arm-cdn.QueryStringCachingBehavior'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a8f-129">Étiquettes de point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="75a8f-129">Endpoint tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+  - uid: '@azure/arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: '@azure/arm-cdn.GeoFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.OptimizationType'
+    name: OptimizationType
+    spec.typeScript:
+      - name: OptimizationType
+        fullName: OptimizationType
+        uid: '@azure/arm-cdn.OptimizationType'
+  - uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+    name: QueryStringCachingBehavior
+    spec.typeScript:
+      - name: QueryStringCachingBehavior
+        fullName: QueryStringCachingBehavior
+        uid: '@azure/arm-cdn.QueryStringCachingBehavior'
