@@ -1,0 +1,245 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    fullName: SendableMessageInfo
+    children:
+      - '@azure/service-bus.SendableMessageInfo.body'
+      - '@azure/service-bus.SendableMessageInfo.contentType'
+      - '@azure/service-bus.SendableMessageInfo.correlationId'
+      - '@azure/service-bus.SendableMessageInfo.label'
+      - '@azure/service-bus.SendableMessageInfo.messageId'
+      - '@azure/service-bus.SendableMessageInfo.partitionKey'
+      - '@azure/service-bus.SendableMessageInfo.replyTo'
+      - '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+      - '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.SendableMessageInfo.sessionId'
+      - '@azure/service-bus.SendableMessageInfo.timeToLive'
+      - '@azure/service-bus.SendableMessageInfo.to'
+      - '@azure/service-bus.SendableMessageInfo.userProperties'
+      - '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="eb0fb-101">Décrit le message à envoyer au Service Bus.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-101">Describes the message to be sent to Service Bus.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eb0fb-102">Le corps du message qui doit être envoyé ou reçu.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-102">The message body that needs to be sent or is received.</span></span>
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-103\">Le type de contenu du message.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-103\">The content type of the message.</span></span> <span data-ttu-id=\"eb0fb-104\">Si vous le souhaitez, décrit la charge utile du message, avec un descripteur conforme au format de RFC2045, Section 5, par exemple «\_application/json\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-104\">Optionally describes the payload of the message, with a descriptor following the format of RFC2045, Section 5, for example \"application/json\".</span></span>"
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb0fb-105">L’identificateur de corrélation qui permet à une application de spécifier un contexte pour le message dans le cadre de la corrélation, par exemple reflétant le MessageId d’un message qui est en cours a répondu à.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-105">The correlation identifier that allows an application to specify a context for the message for the purposes of correlation, for example reflecting the MessageId of a message that is being replied to.</span></span>
+      <span data-ttu-id="eb0fb-106">Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="eb0fb-106">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-107\">L’étiquette spécifique de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-107\">The application specific label.</span></span> <span data-ttu-id=\"eb0fb-108\">Cette propriété permet à l’application indiquer l’objectif du message au récepteur dans une offre standard.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-108\">This property enables the application to indicate the purpose of the message to the receiver in a standardized.</span></span> <span data-ttu-id=\"eb0fb-109\">Round Robin, similaire à une ligne d’objet de courrier électronique.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-109\">fashion, similar to an email subject line.</span></span> <span data-ttu-id=\"eb0fb-110\">La propriété AMQP mappée est «\_objet\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-110\">The mapped AMQP property is \"subject\".</span></span>"
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-111\">L’identificateur de message est une valeur définie par l’application qui identifie de manière unique le message et sa charge utile.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-111\">The message identifier is an application-defined value that uniquely identifies the message and its payload.</span></span>\n\n<span data-ttu-id=\"eb0fb-112\">Remarque\_: Nombres qui ne sont pas des entiers ne sont pas autorisés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-112\">Note: Numbers that are not whole integers are not allowed.</span></span>"
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb0fb-113">La clé de partition pour envoyer un message à une entité partitionnée.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-113">The partition key for sending a message to a partitioned entity.</span></span>
+      <span data-ttu-id="eb0fb-114">Longueur maximale est de 128 caractères.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-114">Maximum length is 128 characters.</span></span> <span data-ttu-id="eb0fb-115">Dans le cas des [entités partitionnées](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), la définition de cette valeur permet d’attribuer des messages associés à la même partition interne, afin que l’ordre de séquence d’envoi soit correctement enregistré.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-115">For [partitioned entities](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning), setting this value enables assigning related messages to the same internal partition, so that submission sequence order is correctly recorded.</span></span> <span data-ttu-id="eb0fb-116">La partition est choisie par une fonction de hachage prioritaire sur cette valeur et ne peut pas être sélectionnée directement.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-116">The partition is chosen by a hash function over this value and cannot be chosen directly.</span></span>
+      - <span data-ttu-id="eb0fb-117">Pour les entités prenant en charge de session, le `sessionId` propriété substitue à cette valeur.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-117">For session-aware entities, the `sessionId` property overrides this value.</span></span>
+      - <span data-ttu-id="eb0fb-118">Pour les entités non partitionnées, clé de partition sera ignorée</span><span class="sxs-lookup"><span data-stu-id="eb0fb-118">For non partitioned entities, partition key will be ignored</span></span>
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="eb0fb-119">L’adresse d’une entité d’envoyer des réponses à.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-119">The address of an entity to send replies to.</span></span> <span data-ttu-id="eb0fb-120">Cette valeur facultative et définie par l’application est un moyen standard d’exprimer un chemin d’accès de réponse à l’intention du destinataire du message.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-120">This optional and application-defined value is a standard way to express a reply path to the receiver of the message.</span></span> <span data-ttu-id="eb0fb-121">Lorsqu’un expéditeur attend une réponse, cette propriété définit cette valeur sur le chemin d’accès absolu ou relatif de la file d’attente ou de la rubrique auxquelles la réponse doit être envoyée.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-121">When a sender expects a reply, it sets the value to the absolute or relative path of the queue or topic it expects the reply to be sent to.</span></span> <span data-ttu-id="eb0fb-122">Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="eb0fb-122">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb0fb-123">L’augmentation de l’identificateur de session le `replyTo` adresse.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-123">The session identifier augmenting the `replyTo` address.</span></span>
+      <span data-ttu-id="eb0fb-124">Longueur maximale est de 128 caractères.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-124">Maximum length is 128 characters.</span></span> <span data-ttu-id="eb0fb-125">Cette valeur augmente les informations ReplyTo et spécifie les ID de session doit être définie pour la réponse lors de l’envoi à l’entité de réponse.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-125">This value augments the ReplyTo information and specifies which SessionId should be set for the reply when sent to the reply entity.</span></span>
+      <span data-ttu-id="eb0fb-126">Consultez [le routage des messages et la corrélation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span><span class="sxs-lookup"><span data-stu-id="eb0fb-126">See [Message Routing and Correlation](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).</span></span>
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-127\">La date et l’heure en heure UTC à laquelle le message sera placé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-127\">The date and time in UTC at which the message will be enqueued.</span></span> <span data-ttu-id=\"eb0fb-128\">Cette propriété retourne l’heure UTC\_; Lorsque vous définissez la propriété, la valeur DateTime fournie doit également être au format UTC.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-128\">This property returns the time in UTC; when setting the property, the supplied DateTime value must also be in UTC.</span></span> <span data-ttu-id=\"eb0fb-129\">Cette valeur est pour l’envoi des messages retardés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-129\">This value is for delayed message sending.</span></span>\n<span data-ttu-id=\"eb0fb-130\">Il est utilisé pour différer l’envoi d’un moment précis dans le futur des messages.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-130\">It is utilized to delay messages sending to a specific time in the future.</span></span> <span data-ttu-id=\"eb0fb-131\">Durée de file d’attente de messages ne signifie pas que le message sera envoyé en même temps.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-131\">Message enqueuing time does not mean that the message will be sent at the same time.</span></span> <span data-ttu-id=\"eb0fb-132\">Il obtient en file d’attente, mais l’heure d’envoi réelle varie selon la charge de travail de la file d’attente et son état.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-132\">It will get enqueued, but the actual sending time depends on the queue's workload and its state.</span></span>"
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb0fb-133">L’identificateur de session pour une entité prenant en charge de session.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-133">The session identifier for a session-aware entity.</span></span> <span data-ttu-id="eb0fb-134">Longueur maximale est de 128 caractères.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-134">Maximum length is 128 characters.</span></span> <span data-ttu-id="eb0fb-135">Dans le cas des entités prenant en charge la session, cette valeur définie par l’application spécifie l’affiliation de session du message.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-135">For session-aware entities, this application-defined value specifies the session affiliation of the message.</span></span> <span data-ttu-id="eb0fb-136">Les messages dotés du même identificateur de session sont soumis à un verrouillage du résumé et permettent un traitement et un démultiplexage chronologiques.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-136">Messages with the same session identifier are subject to summary locking and enable exact in-order processing and demultiplexing.</span></span> <span data-ttu-id="eb0fb-137">Dans le cas des entités ne prenant pas en charge la session, cette valeur est ignorée.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-137">For session-unaware entities, this value is ignored.</span></span>
+      <span data-ttu-id="eb0fb-138">[Sessions de messagerie](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span><span class="sxs-lookup"><span data-stu-id="eb0fb-138">[Message Sessions](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).</span></span>
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="eb0fb-139">Le message de durée de vie de valeur.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-139">The message’s time to live value.</span></span> <span data-ttu-id="eb0fb-140">Cette valeur est la durée relative au terme duquel le message expire, à partir de l’instant le message a été accepté et stocké par le répartiteur, tel que défini dans `enqueuedTimeUtc`.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-140">This value is the relative duration after which the message expires, starting from the instant the message has been accepted and stored by the broker, as captured in `enqueuedTimeUtc`.</span></span> <span data-ttu-id="eb0fb-141">Lorsque ne pas défini explicitement, la valeur par défaut est le DefaultTimeToLive pour la file d’attente ou la rubrique.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-141">When not set explicitly, the assumed value is the DefaultTimeToLive for the respective queue or topic.</span></span> <span data-ttu-id="eb0fb-142">Un message au niveau `timeToLive` valeur ne peut pas être supérieure à celle de l’entité DefaultTimeToLive paramètre et elle est automatiquement ajustée si c’est le cas.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-142">A message-level `timeToLive` value cannot be longer than the entity''s DefaultTimeToLive setting and it is silently adjusted if it does.</span></span> <span data-ttu-id="eb0fb-143">Consultez [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span><span class="sxs-lookup"><span data-stu-id="eb0fb-143">See [Expiration](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-144\">L’adresse «\_to\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-144\">The \"to\" address.</span></span> <span data-ttu-id=\"eb0fb-145\">Cette propriété est réservée pour une utilisation ultérieure dans les scénarios de routage et est actuellement ignorée par le répartiteur proprement dit.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-145\">This property is reserved for future use in routing scenarios and presently ignored by the broker itself.</span></span> <span data-ttu-id=\"eb0fb-146\">Applications peuvent utiliser cette valeur dans basés sur des règles [automatique chaînage de transferts](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scénarios pour indiquer la destination logique prévue du message.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-146\">Applications can use this value in rule-driven [auto-forward chaining](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) scenarios to indicate the intended logical destination of the message.</span></span>"
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eb0fb-147">Les propriétés spécifiques d’application qui peuvent être utilisées pour les métadonnées de message personnalisé.</span><span class="sxs-lookup"><span data-stu-id="eb0fb-147">The application specific properties which can be used for custom message metadata.</span></span>
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"eb0fb-148\">La clé de partition pour l’envoi d’un message dans une entité via une file d’attente partitionnées de transfert.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-148\">The partition key for sending a message into an entity via a partitioned transfer queue.</span></span> <span data-ttu-id=\"eb0fb-149\">Longueur maximale est de 128 caractères.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-149\">Maximum length is 128 characters.</span></span> <span data-ttu-id=\"eb0fb-150\">Si un message est envoyé via une file d’attente de transfert dans la portée d’une transaction, cette valeur sélectionne la partition de file d’attente de transfert\_: Cela équivaut fonctionnellement à `partitionKey` propriété et garantit que les messages sont conservés ensemble et dans l’ordre comme ils sont transférés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-150\">If a message is sent via a transfer queue in the scope of a transaction, this value selects the transfer queue partition: This is functionally equivalent to `partitionKey` property and ensures that messages are kept together and in order as they are transferred.</span></span>\n<span data-ttu-id=\"eb0fb-151\">Consultez [transfère et envoyer](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span><span class=\"sxs-lookup\"><span data-stu-id=\"eb0fb-151\">See [Transfers and Send Via](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).</span></span>"
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
