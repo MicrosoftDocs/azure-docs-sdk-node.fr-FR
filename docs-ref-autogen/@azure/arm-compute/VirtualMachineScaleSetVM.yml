@@ -1,0 +1,502 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM'
+    name: VirtualMachineScaleSetVM
+    fullName: VirtualMachineScaleSetVM
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.availabilitySet'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.id'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.instanceId'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.instanceView'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.latestModelApplied'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.licenseType'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.location'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.name'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.osProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.plan'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.protectionPolicy'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.provisioningState'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.resources'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.sku'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.storageProfile'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.tags'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.type'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.vmId'
+      - '@azure/arm-compute.VirtualMachineScaleSetVM.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit une machine virtuelle de machines virtuelles identiques.
+    extends:
+      name: '@azure/arm-compute.Resource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie des fonctionnalités supplémentaires, activé ou désactivé sur la machine virtuelle dans le groupe identique.\nPar exemple\_: si la machine virtuelle a la possibilité de prendre en charge l’attachement gérés des disques de données avec le type de compte de stockage UltraSSD_LRS."
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.availabilitySet'
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Spécifie les informations sur le groupe à haute disponibilité que la machine virtuelle doit être attribuée à. Les machines virtuelles spécifiées dans le même groupe à haute disponibilité sont allouées à des nœuds différents pour optimiser la disponibilité. Pour plus d’informations sur les groupes à haute disponibilité, consultez [gérer la disponibilité des machines virtuelles](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+      <br><br> Pour plus d’informations sur la maintenance planifiée Azure, consultez [maintenance planifiée pour les machines virtuelles dans Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Actuellement, une machine virtuelle ne peut être ajoutée à la disposition définie au moment de la création. Impossible d’ajouter une machine virtuelle existante à un groupe à haute disponibilité.
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’état de paramètres de diagnostic de démarrage. <br><br>Version d’api minimale\_: 2015-06-15."
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.hardwareProfile'
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie les paramètres matériels de la machine virtuelle.
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - '@azure/arm-compute.HardwareProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Id de ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’ID d’instance de machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.instanceView'
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La vue d’instance de machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineScaleSetVMInstanceView'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.latestModelApplied'
+    name: latestModelApplied
+    fullName: latestModelApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie si le dernier modèle a été appliqué à la machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'latestModelApplied?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie que l’image ou le disque utilisé a une licence locale. Cet élément est utilisé uniquement pour les images qui contiennent le système d’exploitation Windows Server. <br><br> Les valeurs possibles sont les suivantes\_: <br><br> Windows_Client <br><br> Windows_Server <br><br> Si cet élément est inclus dans une demande pour une mise à jour, la valeur doit correspondre à la valeur initiale. Cette valeur ne peut pas être mis à jour. <br><br> Pour plus d’informations, consultez [Server Azure Hybrid Use Benefit pour Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)\n<br><br> Version d’api minimale\_: 2015-06-15"
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Emplacement des ressources
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.modelDefinitionApplied'
+    name: modelDefinitionApplied
+    fullName: modelDefinitionApplied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie si le modèle appliqué à la machine virtuelle est le modèle de l’ensemble d’échelle de machine virtuelle ou le modèle personnalisé pour la machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'modelDefinitionApplied?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Nom de la ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie les interfaces réseau de la machine virtuelle.
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.NetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.networkProfileConfiguration'
+    name: networkProfileConfiguration
+    fullName: networkProfileConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie la configuration du profil réseau de la machine virtuelle.
+    optional: true
+    syntax:
+      content: 'networkProfileConfiguration?: VirtualMachineScaleSetVMNetworkProfileConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie les paramètres du système d’exploitation de la machine virtuelle.
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.OSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.plan'
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Spécifie les informations sur l’image de place de marché utilisée pour créer la machine virtuelle. Cet élément est utilisé uniquement pour les images de place de marché. Avant de pouvoir utiliser une image de place de marché à partir d’une API, vous devez activer l’image pour l’utilisation par programme.  Dans le portail Azure, recherchez l’image de place de marché que vous souhaitez utiliser, puis cliquez sur **à déployer par programmation, la prise en main ->**. Entrez les informations requises, puis activez **enregistrer**.'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - '@azure/arm-compute.Plan'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.protectionPolicy'
+    name: protectionPolicy
+    fullName: protectionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie la stratégie de protection de la machine virtuelle.
+    optional: true
+    syntax:
+      content: 'protectionPolicy?: VirtualMachineScaleSetVMProtectionPolicy'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’approvisionnement, qui apparaît uniquement dans la réponse.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.resources'
+    name: resources
+    fullName: resources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les ressources d’extension de machine virtuelle enfant.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'resources?: VirtualMachineExtension[]'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineExtension[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Référence (SKU) de machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-compute.Sku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie les paramètres de stockage des disques de machine virtuelle.
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.StorageProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Balises de ressource
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de ressource **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.vmId'
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "ID de Azure machine virtuelle unique.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'vmId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVM.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les zones de la machine virtuelle.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-compute.Resource'
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.HardwareProfile'
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: '@azure/arm-compute.HardwareProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+    name: VirtualMachineScaleSetVMInstanceView
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMInstanceView
+        fullName: VirtualMachineScaleSetVMInstanceView
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMInstanceView'
+  - uid: '@azure/arm-compute.NetworkProfile'
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: '@azure/arm-compute.NetworkProfile'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+    name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        fullName: VirtualMachineScaleSetVMNetworkProfileConfiguration
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMNetworkProfileConfiguration'
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: '@azure/arm-compute.OSProfile'
+  - uid: '@azure/arm-compute.Plan'
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+    name: VirtualMachineScaleSetVMProtectionPolicy
+    spec.typeScript:
+      - name: VirtualMachineScaleSetVMProtectionPolicy
+        fullName: VirtualMachineScaleSetVMProtectionPolicy
+        uid: '@azure/arm-compute.VirtualMachineScaleSetVMProtectionPolicy'
+  - uid: '@azure/arm-compute.VirtualMachineExtension[]'
+    name: 'VirtualMachineExtension[]'
+    spec.typeScript:
+      - name: VirtualMachineExtension
+        fullName: VirtualMachineExtension
+        uid: '@azure/arm-compute.VirtualMachineExtension'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-compute.Sku'
+  - uid: '@azure/arm-compute.StorageProfile'
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: '@azure/arm-compute.StorageProfile'
