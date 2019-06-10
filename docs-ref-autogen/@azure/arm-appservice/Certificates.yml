@@ -1,0 +1,735 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-appservice.Certificates'
+    name: Certificates
+    fullName: Certificates
+    children:
+      - '@azure/arm-appservice.Certificates.constructor'
+      - '@azure/arm-appservice.Certificates.createOrUpdate'
+      - '@azure/arm-appservice.Certificates.createOrUpdate_2'
+      - '@azure/arm-appservice.Certificates.createOrUpdate_1'
+      - '@azure/arm-appservice.Certificates.deleteMethod'
+      - '@azure/arm-appservice.Certificates.deleteMethod_2'
+      - '@azure/arm-appservice.Certificates.deleteMethod_1'
+      - '@azure/arm-appservice.Certificates.get'
+      - '@azure/arm-appservice.Certificates.get_2'
+      - '@azure/arm-appservice.Certificates.get_1'
+      - '@azure/arm-appservice.Certificates.list'
+      - '@azure/arm-appservice.Certificates.list_2'
+      - '@azure/arm-appservice.Certificates.list_1'
+      - '@azure/arm-appservice.Certificates.listByResourceGroup'
+      - '@azure/arm-appservice.Certificates.listByResourceGroup_2'
+      - '@azure/arm-appservice.Certificates.listByResourceGroup_1'
+      - '@azure/arm-appservice.Certificates.listByResourceGroupNext'
+      - '@azure/arm-appservice.Certificates.listByResourceGroupNext_2'
+      - '@azure/arm-appservice.Certificates.listByResourceGroupNext_1'
+      - '@azure/arm-appservice.Certificates.listNext'
+      - '@azure/arm-appservice.Certificates.listNext_2'
+      - '@azure/arm-appservice.Certificates.listNext_1'
+      - '@azure/arm-appservice.Certificates.update'
+      - '@azure/arm-appservice.Certificates.update_2'
+      - '@azure/arm-appservice.Certificates.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="6baaf-101">Classe représentant un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-101">Class representing a Certificates.</span></span>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.constructor'
+    name: Certificates(WebSiteManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-102">Créer un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-102">Create a Certificates.</span></span>
+    syntax:
+      content: 'new Certificates(client: WebSiteManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-appservice.WebSiteManagementClientContext'
+          description: |
+            <span data-ttu-id="6baaf-103">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="6baaf-103">Reference to the service client.</span></span>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.createOrUpdate'
+    name: 'createOrUpdate(string, string, Certificate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-104">Créer ou mettre à jour un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-104">Create or update a certificate.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, name: string, certificateEnvelope: Certificate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-105">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-105">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-106">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-106">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.Certificate'
+          description: '<span data-ttu-id="6baaf-107">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-107">Details of certificate, if it exists already.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesCreateOrUpdateResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, Certificate, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, name: string, certificateEnvelope: Certificate, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-108">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-108">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-109">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-109">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.Certificate'
+          description: '<span data-ttu-id="6baaf-110">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-110">Details of certificate, if it exists already.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-111">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-112">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesCreateOrUpdateResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, Certificate, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, name: string, certificateEnvelope: Certificate, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-113">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-113">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-114">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-114">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.Certificate'
+          description: '<span data-ttu-id="6baaf-115">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-115">Details of certificate, if it exists already.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-116">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesCreateOrUpdateResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-117">Supprimer un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-117">Delete a certificate.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-118">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-118">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-119">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-119">Name of the certificate.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, name: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-120">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-120">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-121">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-121">Name of the certificate.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-122">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-122">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="6baaf-123">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-123">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-124">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-124">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-125">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-125">Name of the certificate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="6baaf-126">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-126">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-127">Obtenir un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-127">Get a certificate.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-128">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-128">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-129">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-129">Name of the certificate.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesGetResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, name: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-130">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-130">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-131">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-131">Name of the certificate.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-132">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-133">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesGetResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.get_1'
+    name: 'get(string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, name: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-134">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-134">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-135">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-135">Name of the certificate.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-136">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesGetResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-137">Obtenir tous les certificats pour un abonnement.</span><span class="sxs-lookup"><span data-stu-id="6baaf-137">Get all certificates for a subscription.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesListResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-138">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-138">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-139">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.list_1'
+    name: list(ServiceCallback<CertificateCollection>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-140">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-141">Obtenir tous les certificats dans un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="6baaf-141">Get all certificates in a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-142">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-142">Name of the resource group to which the resource belongs.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-143">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-143">Name of the resource group to which the resource belongs.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-144">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-144">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-145">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-145">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-146">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-146">Name of the resource group to which the resource belongs.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-147">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-148">Obtenir tous les certificats dans un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="6baaf-148">Get all certificates in a resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-149">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-149">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-150">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-150">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-151">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-152">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-153">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-153">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-154">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListByResourceGroupNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-155">Obtenir tous les certificats pour un abonnement.</span><span class="sxs-lookup"><span data-stu-id="6baaf-155">Get all certificates for a subscription.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-156">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-156">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesListNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-157">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-157">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-158">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-158">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-159">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-159">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.listNext_1'
+    name: 'listNext(string, ServiceCallback<CertificateCollection>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CertificateCollection>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-160">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="6baaf-160">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.CertificateCollection>
+          description: |
+            <span data-ttu-id="6baaf-161">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesListNextResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.update'
+    name: 'update(string, string, CertificatePatchResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="6baaf-162">Créer ou mettre à jour un certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-162">Create or update a certificate.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, name: string, certificateEnvelope: CertificatePatchResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-163">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-163">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-164">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-164">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.CertificatePatchResource'
+          description: '<span data-ttu-id="6baaf-165">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-165">Details of certificate, if it exists already.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificatesUpdateResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.update_2'
+    name: 'update(string, string, CertificatePatchResource, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, name: string, certificateEnvelope: CertificatePatchResource, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-166">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-166">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-167">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-167">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.CertificatePatchResource'
+          description: '<span data-ttu-id="6baaf-168">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-168">Details of certificate, if it exists already.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="6baaf-169">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="6baaf-169">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesUpdateResponse>
+    package: '@azure/arm-appservice'
+  - uid: '@azure/arm-appservice.Certificates.update_1'
+    name: 'update(string, string, CertificatePatchResource, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, name: string, certificateEnvelope: CertificatePatchResource, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-171">Nom du groupe de ressources auquel appartient la ressource.</span><span class="sxs-lookup"><span data-stu-id="6baaf-171">Name of the resource group to which the resource belongs.</span></span>
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="6baaf-172">Nom du certificat.</span><span class="sxs-lookup"><span data-stu-id="6baaf-172">Name of the certificate.</span></span>
+        - id: certificateEnvelope
+          type:
+            - '@azure/arm-appservice.CertificatePatchResource'
+          description: '<span data-ttu-id="6baaf-173">Détails du certificat, si elle existe déjà.</span><span class="sxs-lookup"><span data-stu-id="6baaf-173">Details of certificate, if it exists already.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-appservice.Certificate>
+          description: |
+            <span data-ttu-id="6baaf-174">Le rappel</span><span class="sxs-lookup"><span data-stu-id="6baaf-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificatesUpdateResponse>
+    package: '@azure/arm-appservice'
+references:
+  - uid: '@azure/arm-appservice.WebSiteManagementClientContext'
+    name: WebSiteManagementClientContext
+    spec.typeScript:
+      - name: WebSiteManagementClientContext
+        fullName: WebSiteManagementClientContext
+        uid: '@azure/arm-appservice.WebSiteManagementClientContext'
+  - uid: '@azure/arm-appservice.Certificate'
+    name: Certificate
+    spec.typeScript:
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-appservice.Certificate'
+  - uid: ServiceCallback<@azure/arm-appservice.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-appservice.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-appservice.CertificateCollection>
+    name: CertificateCollection>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CertificateCollection
+        fullName: CertificateCollection
+        uid: '@azure/arm-appservice.CertificateCollection'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-appservice.CertificatePatchResource'
+    name: CertificatePatchResource
+    spec.typeScript:
+      - name: CertificatePatchResource
+        fullName: CertificatePatchResource
+        uid: '@azure/arm-appservice.CertificatePatchResource'
