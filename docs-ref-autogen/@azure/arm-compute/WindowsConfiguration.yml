@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    children:
+      - '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+      - '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+      - '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.WindowsConfiguration.timeZone'
+      - '@azure/arm-compute.WindowsConfiguration.winRM'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ca979-101">Spécifie les paramètres du système d’exploitation Windows sur la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="ca979-101">Specifies Windows operating system settings on the virtual machine.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+    name: additionalUnattendContent
+    fullName: additionalUnattendContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ca979-102">Spécifie la base-64 codé au format XML des informations supplémentaires qui peuvent être incluses dans le fichier Unattend.xml, ce qui est utilisé par le programme d’installation de Windows.</span><span class="sxs-lookup"><span data-stu-id="ca979-102">Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.</span></span>'
+    optional: true
+    syntax:
+      content: 'additionalUnattendContent?: AdditionalUnattendContent[]'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalUnattendContent[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+    name: enableAutomaticUpdates
+    fullName: enableAutomaticUpdates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ca979-103">Indique si la machine virtuelle est activée pour les mises à jour automatiques.</span><span class="sxs-lookup"><span data-stu-id="ca979-103">Indicates whether virtual machine is enabled for automatic updates.</span></span>
+    optional: true
+    syntax:
+      content: 'enableAutomaticUpdates?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ca979-104">Indique si l’agent de machine virtuelle doit être configuré sur la machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="ca979-104">Indicates whether virtual machine agent should be provisioned on the virtual machine.</span></span> <br><br>
+      <span data-ttu-id="ca979-105">Lorsque cette propriété n’est pas spécifiée dans le corps de la demande, le comportement par défaut consiste à définir sur true.</span><span class="sxs-lookup"><span data-stu-id="ca979-105">When this property is not specified in the request body, default behavior is to set it to true.</span></span>  <span data-ttu-id="ca979-106">Cela garantit que l’Agent de machine virtuelle est installé sur la machine virtuelle afin que les extensions peuvent être ajoutées à la machine virtuelle plus tard.</span><span class="sxs-lookup"><span data-stu-id="ca979-106">This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later.</span></span>
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
+    name: timeZone
+    fullName: timeZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"ca979-107\">Spécifie le fuseau horaire de la machine virtuelle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ca979-107\">Specifies the time zone of the virtual machine.</span></span> <span data-ttu-id=\"ca979-108\">Par exemple «\_Pacific Standard Time\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"ca979-108\">e.g. \"Pacific Standard Time\"</span></span>"
+    optional: true
+    syntax:
+      content: 'timeZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
+    name: winRM
+    fullName: winRM
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ca979-109">Spécifie les écouteurs de la gestion à distance de Windows.</span><span class="sxs-lookup"><span data-stu-id="ca979-109">Specifies the Windows Remote Management listeners.</span></span> <span data-ttu-id="ca979-110">Cela permet à distance Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ca979-110">This enables remote Windows PowerShell.</span></span>
+    optional: true
+    syntax:
+      content: 'winRM?: WinRMConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WinRMConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent[]'
+    name: 'AdditionalUnattendContent[]'
+    spec.typeScript:
+      - name: AdditionalUnattendContent
+        fullName: AdditionalUnattendContent
+        uid: '@azure/arm-compute.AdditionalUnattendContent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WinRMConfiguration'
+    name: WinRMConfiguration
+    spec.typeScript:
+      - name: WinRMConfiguration
+        fullName: WinRMConfiguration
+        uid: '@azure/arm-compute.WinRMConfiguration'
