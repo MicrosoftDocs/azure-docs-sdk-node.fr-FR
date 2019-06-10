@@ -1,0 +1,138 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions'
+    name: InteractiveLoginOptions
+    fullName: InteractiveLoginOptions
+    children:
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.clientId'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.domain'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.environment'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.language'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenAudience'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenCache'
+      - '@azure/ms-rest-nodeauth.InteractiveLoginOptions.userCodeResponseLogger'
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.clientId'
+    name: clientId
+    fullName: clientId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{chaîne} [clientId] - l’id de client d’application active directory. Consultez [Active Directory démarrage rapide pour .net](https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-dotnet/) pour obtenir un exemple.'
+    optional: true
+    syntax:
+      content: 'clientId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.domain'
+    name: domain
+    fullName: domain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{chaîne} [domaine] - le domaine ou id de locataire contenant cette application. Valeur par défaut est «\_commune\_»."
+    optional: true
+    syntax:
+      content: 'domain?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.environment'
+    name: environment
+    fullName: environment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{AzureEnvironment} [environment] - environnement pour s’authentifier auprès de Azure.'
+    optional: true
+    syntax:
+      content: 'environment?: Environment'
+      return:
+        type:
+          - Environment
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.language'
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{chaîne} [langue] Spécifiant la façon dont le message doit être localisé pour le code de langue. Valeur par défaut «\_en-us\_»."
+    optional: true
+    syntax:
+      content: 'language?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenAudience'
+    name: tokenAudience
+    fullName: tokenAudience
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "{TokenAudience} [tokenAudience] - le public pour lequel le jeton est demandé. Les valeurs valides sont «\_graphique\_», «\_batch\_», ou toute autre ressource tels que «https://vault.azure.net/».\nSi tokenAudience est «\_graphique\_» puis domaine doit également être fourni et sa valeur ne doit pas être le locataire «\_commune\_» par défaut. Il doit être une chaîne (de préférence dans un format guid)."
+    optional: true
+    syntax:
+      content: 'tokenAudience?: TokenAudience'
+      return:
+        type:
+          - '@azure/ms-rest-nodeauth.TokenAudience'
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.tokenCache'
+    name: tokenCache
+    fullName: tokenCache
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{TokenCache} [tokenCache] - le cache de jetons. Valeur par défaut est MemoryCache à partir de la bibliothèque adal.'
+    optional: true
+    syntax:
+      content: 'tokenCache?: adal.TokenCache'
+      return:
+        type:
+          - adal.TokenCache
+    package: '@azure/ms-rest-nodeauth'
+  - uid: '@azure/ms-rest-nodeauth.InteractiveLoginOptions.userCodeResponseLogger'
+    name: userCodeResponseLogger
+    fullName: userCodeResponseLogger
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{objet | fonction} [userCodeResponseLogger] Un journal qui consigne le message de réponse de code utilisateur nécessaire pour la connexion interactive. Lorsque cette option est spécifiée le message de réponse du code utilisateur n’est pas connecté à la console.'
+    optional: true
+    syntax:
+      content: 'userCodeResponseLogger?: any'
+      return:
+        type:
+          - any
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+    name: LoginWithUsernamePasswordOptions
+    spec.typeScript:
+      - name: LoginWithUsernamePasswordOptions
+        fullName: LoginWithUsernamePasswordOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithUsernamePasswordOptions'
+  - uid: '@azure/ms-rest-nodeauth.TokenAudience'
+    name: TokenAudience
+    spec.typeScript:
+      - name: TokenAudience
+        fullName: TokenAudience
+        uid: '@azure/ms-rest-nodeauth.TokenAudience'

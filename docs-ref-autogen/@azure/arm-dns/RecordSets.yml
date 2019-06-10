@@ -1,0 +1,1073 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-dns.RecordSets'
+    name: RecordSets
+    fullName: RecordSets
+    children:
+      - '@azure/arm-dns.RecordSets.createOrUpdate'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_2'
+      - '@azure/arm-dns.RecordSets.createOrUpdate_1'
+      - '@azure/arm-dns.RecordSets.deleteMethod'
+      - '@azure/arm-dns.RecordSets.deleteMethod_2'
+      - '@azure/arm-dns.RecordSets.deleteMethod_1'
+      - '@azure/arm-dns.RecordSets.get'
+      - '@azure/arm-dns.RecordSets.get_2'
+      - '@azure/arm-dns.RecordSets.get_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZone'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZone_1'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+      - '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+      - '@azure/arm-dns.RecordSets.listByType'
+      - '@azure/arm-dns.RecordSets.listByType_2'
+      - '@azure/arm-dns.RecordSets.listByType_1'
+      - '@azure/arm-dns.RecordSets.listByTypeNext'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_2'
+      - '@azure/arm-dns.RecordSets.listByTypeNext_1'
+      - '@azure/arm-dns.RecordSets.constructor'
+      - '@azure/arm-dns.RecordSets.update'
+      - '@azure/arm-dns.RecordSets.update_2'
+      - '@azure/arm-dns.RecordSets.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant un jeux d’enregistrements.
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crée ou met à jour un enregistrement dans une zone DNS.
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA peut être mis à jour mais pas créé d’enregistrements (ils sont créés quand la zone DNS est créée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération CreateOrUpdate.
+        - id: options
+          type:
+            - Models.RecordSetsCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, RecordSetsCreateOrUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsCreateOrUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA peut être mis à jour mais pas créé d’enregistrements (ils sont créés quand la zone DNS est créée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération CreateOrUpdate.
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA peut être mis à jour mais pas créé d’enregistrements (ils sont créés quand la zone DNS est créée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération CreateOrUpdate.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsCreateOrUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod'
+    name: 'deleteMethod(string, string, string, Models.RecordType, Models.RecordSetsDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime un jeu à partir d’une zone DNS d’enregistrements. Il est impossible d’annuler cette opération.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: Models.RecordSetsDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA ne peut pas être supprimé d’enregistrements (ils sont supprimés lorsque la zone DNS est supprimée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - Models.RecordSetsDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, Models.RecordType, RecordSetsDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RecordSetsDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA ne peut pas être supprimé d’enregistrements (ils sont supprimés lorsque la zone DNS est supprimée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, Models.RecordType, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Jeux de type SOA ne peut pas être supprimé d’enregistrements (ils sont supprimés lorsque la zone DNS est supprimée). Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get'
+    name: 'get(string, string, string, Models.RecordType, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient un jeu d’enregistrements.
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_2'
+    name: 'get(string, string, string, Models.RecordType, RequestOptionsBase, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, options: RequestOptionsBase, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.get_1'
+    name: 'get(string, string, string, Models.RecordType, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsGetResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone'
+    name: 'listAllByDnsZone(string, string, Models.RecordSetsListAllByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les jeux d’enregistrements dans une zone DNS.
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListAllByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: options
+          type:
+            - Models.RecordSetsListAllByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_2'
+    name: 'listAllByDnsZone(string, string, RecordSetsListAllByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListAllByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZone_1'
+    name: 'listAllByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext'
+    name: 'listAllByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les jeux d’enregistrements dans une zone DNS.
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_2'
+    name: 'listAllByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listAllByDnsZoneNext_1'
+    name: 'listAllByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAllByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListAllByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone'
+    name: 'listByDnsZone(string, string, Models.RecordSetsListByDnsZoneOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les jeux d’enregistrements dans une zone DNS.
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options?: Models.RecordSetsListByDnsZoneOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: options
+          type:
+            - Models.RecordSetsListByDnsZoneOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_2'
+    name: 'listByDnsZone(string, string, RecordSetsListByDnsZoneOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options: RecordSetsListByDnsZoneOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZone_1'
+    name: 'listByDnsZone(string, string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext'
+    name: 'listByDnsZoneNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les jeux d’enregistrements dans une zone DNS.
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_2'
+    name: 'listByDnsZoneNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByDnsZoneNext_1'
+    name: 'listByDnsZoneNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDnsZoneNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByDnsZoneNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType'
+    name: 'listByType(string, string, Models.RecordType, Models.RecordSetsListByTypeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie les jeux d’enregistrements d’un type spécifié dans une zone DNS.
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options?: Models.RecordSetsListByTypeOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type de jeux d’enregistrements à énumérer. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - Models.RecordSetsListByTypeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_2'
+    name: 'listByType(string, string, Models.RecordType, RecordSetsListByTypeOptionalParams, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, options: RecordSetsListByTypeOptionalParams, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type de jeux d’enregistrements à énumérer. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByType_1'
+    name: 'listByType(string, string, Models.RecordType, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: Models.RecordType, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type de jeux d’enregistrements à énumérer. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext'
+    name: 'listByTypeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie les jeux d’enregistrements d’un type spécifié dans une zone DNS.
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_2'
+    name: 'listByTypeNext(string, RequestOptionsBase, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.listByTypeNext_1'
+    name: 'listByTypeNext(string, ServiceCallback<RecordSetListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByTypeNext(nextPageLink: string, callback: ServiceCallback<RecordSetListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSetListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsListByTypeNextResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.constructor'
+    name: RecordSets(DnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer un jeux d’enregistrements.
+    syntax:
+      content: 'new RecordSets(client: DnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-dns.DnsManagementClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, Models.RecordSetsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Met à jour un jeu dans une zone DNS d’enregistrements.
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options?: Models.RecordSetsUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération de mise à jour.
+        - id: options
+          type:
+            - Models.RecordSetsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_2'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, RecordSetsUpdateOptionalParams, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, options: RecordSetsUpdateOptionalParams, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération de mise à jour.
+        - id: options
+          type:
+            - '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+  - uid: '@azure/arm-dns.RecordSets.update_1'
+    name: 'update(string, string, string, Models.RecordType, RecordSet, ServiceCallback<RecordSet>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: Models.RecordType, parameters: RecordSet, callback: ServiceCallback<RecordSet>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: zoneName
+          type:
+            - string
+          description: Le nom de la zone DNS (sans un point de terminaison).
+        - id: relativeRecordSetName
+          type:
+            - string
+          description: 'Le nom de l’enregistrement défini, relatif au nom de la zone.'
+        - id: recordType
+          type:
+            - Models.RecordType
+          description: "Le type d’enregistrement DNS dans ce jeu d’enregistrements. Les valeurs possibles incluent\_: 'A', 'AAAA', 'CAA', 'CNAME', 'MX', 'NS', 'PTR', 'SOA', 'SRV', 'TXT'"
+        - id: parameters
+          type:
+            - '@azure/arm-dns.RecordSet'
+          description: Paramètres fournis à l’opération de mise à jour.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-dns.RecordSet>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.RecordSetsUpdateResponse>
+    package: '@azure/arm-dns'
+references:
+  - uid: '@azure/arm-dns.DnsManagementClientContext'
+    name: DnsManagementClientContext
+    spec.typeScript:
+      - name: DnsManagementClientContext
+        fullName: DnsManagementClientContext
+        uid: '@azure/arm-dns.DnsManagementClientContext'
+  - uid: '@azure/arm-dns.RecordSet'
+    name: RecordSet
+    spec.typeScript:
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSet>
+    name: RecordSet>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSet
+        fullName: RecordSet
+        uid: '@azure/arm-dns.RecordSet'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+    name: RecordSetsCreateOrUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsCreateOrUpdateOptionalParams
+        fullName: RecordSetsCreateOrUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsCreateOrUpdateOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+    name: RecordSetsDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: RecordSetsDeleteMethodOptionalParams
+        fullName: RecordSetsDeleteMethodOptionalParams
+        uid: '@azure/arm-dns.RecordSetsDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-dns.RecordSetListResult>
+    name: RecordSetListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RecordSetListResult
+        fullName: RecordSetListResult
+        uid: '@azure/arm-dns.RecordSetListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+    name: RecordSetsListAllByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListAllByDnsZoneOptionalParams
+        fullName: RecordSetsListAllByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListAllByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+    name: RecordSetsListByDnsZoneOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByDnsZoneOptionalParams
+        fullName: RecordSetsListByDnsZoneOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByDnsZoneOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+    name: RecordSetsListByTypeOptionalParams
+    spec.typeScript:
+      - name: RecordSetsListByTypeOptionalParams
+        fullName: RecordSetsListByTypeOptionalParams
+        uid: '@azure/arm-dns.RecordSetsListByTypeOptionalParams'
+  - uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'
+    name: RecordSetsUpdateOptionalParams
+    spec.typeScript:
+      - name: RecordSetsUpdateOptionalParams
+        fullName: RecordSetsUpdateOptionalParams
+        uid: '@azure/arm-dns.RecordSetsUpdateOptionalParams'

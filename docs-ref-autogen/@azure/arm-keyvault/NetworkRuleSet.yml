@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.NetworkRuleSet'
+    name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    children:
+      - '@azure/arm-keyvault.NetworkRuleSet.bypass'
+      - '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+      - '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+      - '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un ensemble de règles qui régissent l’accessibilité du réseau d’un coffre.
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.bypass'
+    name: bypass
+    fullName: bypass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Indique à quel trafic peut contourner les règles de réseau. Cela peut être «\_AzureServices\_» ou «\_None\_».  La valeur par défaut est 'AzureServices' indication contraire. Les valeurs possibles incluent\_: 'AzureServices', 'None'"
+    optional: true
+    syntax:
+      content: 'bypass?: NetworkRuleBypassOptions'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.defaultAction'
+    name: defaultAction
+    fullName: defaultAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’action par défaut lorsque aucune règle d’ipRules et de correspondance de virtualNetworkRules. Cela est utilisé uniquement une fois que la propriété de contournement a été évaluée. Les valeurs possibles incluent\_: «\_Autoriser\_», «\_refuser\_»"
+    optional: true
+    syntax:
+      content: 'defaultAction?: NetworkRuleAction'
+      return:
+        type:
+          - '@azure/arm-keyvault.NetworkRuleAction'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.ipRules'
+    name: ipRules
+    fullName: ipRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des règles d’adresses IP.
+    optional: true
+    syntax:
+      content: 'ipRules?: IPRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.IPRule[]'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.NetworkRuleSet.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des règles de réseau virtuel.
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-keyvault.VirtualNetworkRule[]'
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+    name: NetworkRuleBypassOptions
+    spec.typeScript:
+      - name: NetworkRuleBypassOptions
+        fullName: NetworkRuleBypassOptions
+        uid: '@azure/arm-keyvault.NetworkRuleBypassOptions'
+  - uid: '@azure/arm-keyvault.NetworkRuleAction'
+    name: NetworkRuleAction
+    spec.typeScript:
+      - name: NetworkRuleAction
+        fullName: NetworkRuleAction
+        uid: '@azure/arm-keyvault.NetworkRuleAction'
+  - uid: '@azure/arm-keyvault.IPRule[]'
+    name: 'IPRule[]'
+    spec.typeScript:
+      - name: IPRule
+        fullName: IPRule
+        uid: '@azure/arm-keyvault.IPRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-keyvault.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-keyvault.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'
