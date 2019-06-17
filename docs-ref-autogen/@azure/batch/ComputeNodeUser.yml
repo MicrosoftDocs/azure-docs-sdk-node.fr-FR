@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNodeUser'
+    name: ComputeNodeUser
+    fullName: ComputeNodeUser
+    children:
+      - '@azure/batch.ComputeNodeUser.expiryTime'
+      - '@azure/batch.ComputeNodeUser.isAdmin'
+      - '@azure/batch.ComputeNodeUser.name'
+      - '@azure/batch.ComputeNodeUser.password'
+      - '@azure/batch.ComputeNodeUser.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant ComputeNodeUser.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’heure à laquelle le compte doit expirer. Si omis, la valeur par défaut est 1 jour à partir de l’heure actuelle. Pour les nœuds de calcul Linux, l’expiryTime a une précision par jour.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.isAdmin'
+    name: isAdmin
+    fullName: isAdmin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indique si le compte doit être un administrateur sur le nœud de calcul. La valeur par défaut est false.
+    optional: true
+    syntax:
+      content: 'isAdmin?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom d’utilisateur du compte.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le mot de passe du compte. Le mot de passe est requis pour les nœuds Windows (celles créées avec 'cloudServiceConfiguration', ou avec «\_virtualMachineConfiguration\_» à l’aide d’une référence d’image Windows). Pour les nœuds de calcul Linux, le mot de passe peut éventuellement être spécifiée avec la propriété sshPublicKey."
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La clé publique SSH qui peut être utilisée pour la connexion à distance au nœud de calcul. La clé publique doit être compatible avec encodage OpenSSH et doit être encodé en base 64. Cette propriété peut être spécifiée uniquement pour les nœuds Linux. Si cela est spécifié pour un nœud Windows, le service Batch rejette la demande\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte)."
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
