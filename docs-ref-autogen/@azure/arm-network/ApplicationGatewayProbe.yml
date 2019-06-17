@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -21,7 +22,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="d873f-101">Sonde de la passerelle d’application.</span><span class="sxs-lookup"><span data-stu-id="d873f-101">Probe of the application gateway.</span></span>
+    summary: <span data-ttu-id="ff27c-101">Sonde de la passerelle d’application.</span><span class="sxs-lookup"><span data-stu-id="ff27c-101">Probe of the application gateway.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -32,7 +33,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-102">En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.</span><span class="sxs-lookup"><span data-stu-id="d873f-102">A unique read-only string that changes whenever the resource is updated.</span></span>
+    summary: <span data-ttu-id="ff27c-102">En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.</span><span class="sxs-lookup"><span data-stu-id="ff27c-102">A unique read-only string that changes whenever the resource is updated.</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -47,7 +48,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-103">Nom d’hôte pour envoyer la sonde.</span><span class="sxs-lookup"><span data-stu-id="d873f-103">Host name to send the probe to.</span></span>
+    summary: <span data-ttu-id="ff27c-103">Nom d’hôte pour envoyer la sonde.</span><span class="sxs-lookup"><span data-stu-id="ff27c-103">Host name to send the probe to.</span></span>
     optional: true
     syntax:
       content: 'host?: undefined | string'
@@ -62,7 +63,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-104">ID de la ressource</span><span class="sxs-lookup"><span data-stu-id="d873f-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="ff27c-104">ID de la ressource</span><span class="sxs-lookup"><span data-stu-id="ff27c-104">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -78,8 +79,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="d873f-105">L’intervalle de sondage en secondes.</span><span class="sxs-lookup"><span data-stu-id="d873f-105">The probing interval in seconds.</span></span> <span data-ttu-id="d873f-106">Il s’agit de l’intervalle de temps qui s’écoule entre deux analyses consécutives.</span><span class="sxs-lookup"><span data-stu-id="d873f-106">This is the time interval between two consecutive probes.</span></span>
-      <span data-ttu-id="d873f-107">Les valeurs acceptables vont de 1 seconde à 86 400 secondes.</span><span class="sxs-lookup"><span data-stu-id="d873f-107">Acceptable values are from 1 second to 86400 seconds.</span></span>
+      <span data-ttu-id="ff27c-105">L’intervalle de sondage en secondes.</span><span class="sxs-lookup"><span data-stu-id="ff27c-105">The probing interval in seconds.</span></span> <span data-ttu-id="ff27c-106">Il s’agit de l’intervalle de temps qui s’écoule entre deux analyses consécutives.</span><span class="sxs-lookup"><span data-stu-id="ff27c-106">This is the time interval between two consecutive probes.</span></span>
+      <span data-ttu-id="ff27c-107">Les valeurs acceptables vont de 1 seconde à 86 400 secondes.</span><span class="sxs-lookup"><span data-stu-id="ff27c-107">Acceptable values are from 1 second to 86400 seconds.</span></span>
     optional: true
     syntax:
       content: 'interval?: undefined | number'
@@ -94,7 +95,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-108">Critère pour la classification d’une réponse de sonde d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="d873f-108">Criterion for classifying a healthy probe response.</span></span>
+    summary: <span data-ttu-id="ff27c-108">Critère pour la classification d’une réponse de sonde d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="ff27c-108">Criterion for classifying a healthy probe response.</span></span>
     optional: true
     syntax:
       content: 'match?: ApplicationGatewayProbeHealthResponseMatch'
@@ -109,7 +110,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-109">Nombre minimal de serveurs qui sont toujours marqués sain.</span><span class="sxs-lookup"><span data-stu-id="d873f-109">Minimum number of servers that are always marked healthy.</span></span> <span data-ttu-id="d873f-110">Valeur par défaut est 0.</span><span class="sxs-lookup"><span data-stu-id="d873f-110">Default value is 0.</span></span>
+    summary: <span data-ttu-id="ff27c-109">Nombre minimal de serveurs qui sont toujours marqués sain.</span><span class="sxs-lookup"><span data-stu-id="ff27c-109">Minimum number of servers that are always marked healthy.</span></span> <span data-ttu-id="ff27c-110">Valeur par défaut est 0.</span><span class="sxs-lookup"><span data-stu-id="ff27c-110">Default value is 0.</span></span>
     optional: true
     syntax:
       content: 'minServers?: undefined | number'
@@ -124,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-111">Nom de la sonde est unique au sein d’une passerelle d’Application.</span><span class="sxs-lookup"><span data-stu-id="d873f-111">Name of the probe that is unique within an Application Gateway.</span></span>
+    summary: <span data-ttu-id="ff27c-111">Nom de la sonde est unique au sein d’une passerelle d’Application.</span><span class="sxs-lookup"><span data-stu-id="ff27c-111">Name of the probe that is unique within an Application Gateway.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="d873f-112">Chemin d’accès relatif de la sonde.</span><span class="sxs-lookup"><span data-stu-id="d873f-112">Relative path of probe.</span></span> <span data-ttu-id="d873f-113">Chemin valide commence par ''/''.</span><span class="sxs-lookup"><span data-stu-id="d873f-113">Valid path starts from ''/''.</span></span> <span data-ttu-id="d873f-114">Sonde est envoyée à <Protocol>://<host>:<port><path></span><span class="sxs-lookup"><span data-stu-id="d873f-114">Probe is sent to <Protocol>://<host>:<port><path></span></span>'
+    summary: '<span data-ttu-id="ff27c-112">Chemin d’accès relatif de la sonde.</span><span class="sxs-lookup"><span data-stu-id="ff27c-112">Relative path of probe.</span></span> <span data-ttu-id="ff27c-113">Chemin valide commence par ''/''.</span><span class="sxs-lookup"><span data-stu-id="ff27c-113">Valid path starts from ''/''.</span></span> <span data-ttu-id="ff27c-114">Sonde est envoyée à <Protocol>://<host>:<port><path>.</span><span class="sxs-lookup"><span data-stu-id="ff27c-114">Probe is sent to <Protocol>://<host>:<port><path>.</span></span>'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -154,13 +155,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-115">Indique si l’en-tête d’hôte doit-elle être sélectionné dans les paramètres http principaux.</span><span class="sxs-lookup"><span data-stu-id="d873f-115">Whether the host header should be picked from the backend http settings.</span></span> <span data-ttu-id="d873f-116">La valeur par défaut est false.</span><span class="sxs-lookup"><span data-stu-id="d873f-116">Default value is false.</span></span>
+    summary: <span data-ttu-id="ff27c-115">Indique si l’en-tête d’hôte doit-elle être sélectionné dans les paramètres http principaux.</span><span class="sxs-lookup"><span data-stu-id="ff27c-115">Whether the host header should be picked from the backend http settings.</span></span> <span data-ttu-id="ff27c-116">La valeur par défaut est false.</span><span class="sxs-lookup"><span data-stu-id="ff27c-116">Default value is false.</span></span>
     optional: true
     syntax:
       content: 'pickHostNameFromBackendHttpSettings?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ff27c-117">Port personnalisé qui sera utilisé pour la détection des serveurs principaux.</span><span class="sxs-lookup"><span data-stu-id="ff27c-117">Custom port which will be used for probing the backend servers.</span></span> <span data-ttu-id="ff27c-118">La valeur valide est comprise entre 1 et 65535.</span><span class="sxs-lookup"><span data-stu-id="ff27c-118">The valid value ranges from 1 to 65535.</span></span> <span data-ttu-id="ff27c-119">Paramètres seront utilisés dans les cas non définie, le port à partir de http.</span><span class="sxs-lookup"><span data-stu-id="ff27c-119">In case not set, port from http settings will be used.</span></span> <span data-ttu-id="ff27c-120">Cette propriété est uniquement valide pour Standard_v2 et WAF_v2.</span><span class="sxs-lookup"><span data-stu-id="ff27c-120">This property is valid for Standard_v2 and WAF_v2 only.</span></span>'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
@@ -169,7 +185,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"d873f-117\">Le protocole utilisé pour la sonde.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d873f-117\">The protocol used for the probe.</span></span> <span data-ttu-id=\"d873f-118\">Les valeurs possibles incluent\_: 'Http', 'Https'</span><span class=\"sxs-lookup\"><span data-stu-id=\"d873f-118\">Possible values include: 'Http', 'Https'</span></span>"
+    summary: "<span data-ttu-id=\"ff27c-121\">Le protocole utilisé pour la sonde.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ff27c-121\">The protocol used for the probe.</span></span> <span data-ttu-id=\"ff27c-122\">Les valeurs possibles incluent\_: 'Http', 'Https'</span><span class=\"sxs-lookup\"><span data-stu-id=\"ff27c-122\">Possible values include: 'Http', 'Https'</span></span>"
     optional: true
     syntax:
       content: 'protocol?: ApplicationGatewayProtocol'
@@ -184,7 +200,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"d873f-119\">État de configuration de la ressource de paramètres http backend.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d873f-119\">Provisioning state of the backend http settings resource.</span></span> <span data-ttu-id=\"d873f-120\">Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"d873f-120\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+    summary: "<span data-ttu-id=\"ff27c-123\">État de configuration de la ressource de paramètres http backend.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ff27c-123\">Provisioning state of the backend http settings resource.</span></span> <span data-ttu-id=\"ff27c-124\">Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"ff27c-124\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -199,7 +215,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-121">le délai d’expiration en secondes.</span><span class="sxs-lookup"><span data-stu-id="d873f-121">The probe timeout in seconds.</span></span> <span data-ttu-id="d873f-122">Sonde marquée comme ayant échoué si une réponse valide n’est pas reçue avec cette période de délai d’attente.</span><span class="sxs-lookup"><span data-stu-id="d873f-122">Probe marked as failed if valid response is not received with this timeout period.</span></span> <span data-ttu-id="d873f-123">Les valeurs acceptables vont de 1 seconde à 86 400 secondes.</span><span class="sxs-lookup"><span data-stu-id="d873f-123">Acceptable values are from 1 second to 86400 seconds.</span></span>
+    summary: <span data-ttu-id="ff27c-125">le délai d’expiration en secondes.</span><span class="sxs-lookup"><span data-stu-id="ff27c-125">The probe timeout in seconds.</span></span> <span data-ttu-id="ff27c-126">Sonde marquée comme ayant échoué si une réponse valide n’est pas reçue avec cette période de délai d’attente.</span><span class="sxs-lookup"><span data-stu-id="ff27c-126">Probe marked as failed if valid response is not received with this timeout period.</span></span> <span data-ttu-id="ff27c-127">Les valeurs acceptables vont de 1 seconde à 86 400 secondes.</span><span class="sxs-lookup"><span data-stu-id="ff27c-127">Acceptable values are from 1 second to 86400 seconds.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -214,7 +230,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-124">Type de la ressource.</span><span class="sxs-lookup"><span data-stu-id="d873f-124">Type of the resource.</span></span>
+    summary: <span data-ttu-id="ff27c-128">Type de la ressource.</span><span class="sxs-lookup"><span data-stu-id="ff27c-128">Type of the resource.</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -229,7 +245,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="d873f-125">Nombre de tentatives de la sonde.</span><span class="sxs-lookup"><span data-stu-id="d873f-125">The probe retry count.</span></span> <span data-ttu-id="d873f-126">Serveur principal est marquée comme défaillante après que le nombre d’échecs de sonde consécutifs atteint UnhealthyThreshold.</span><span class="sxs-lookup"><span data-stu-id="d873f-126">Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold.</span></span> <span data-ttu-id="d873f-127">Les valeurs acceptables sont comprise entre 1 seconde à 20.</span><span class="sxs-lookup"><span data-stu-id="d873f-127">Acceptable values are from 1 second to 20.</span></span>
+    summary: <span data-ttu-id="ff27c-129">Nombre de tentatives de la sonde.</span><span class="sxs-lookup"><span data-stu-id="ff27c-129">The probe retry count.</span></span> <span data-ttu-id="ff27c-130">Serveur principal est marquée comme défaillante après que le nombre d’échecs de sonde consécutifs atteint UnhealthyThreshold.</span><span class="sxs-lookup"><span data-stu-id="ff27c-130">Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold.</span></span> <span data-ttu-id="ff27c-131">Les valeurs acceptables sont comprise entre 1 seconde à 20.</span><span class="sxs-lookup"><span data-stu-id="ff27c-131">Acceptable values are from 1 second to 20.</span></span>
     optional: true
     syntax:
       content: 'unhealthyThreshold?: undefined | number'
