@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Objet état de l’opération. Opération fait référence à la tâche asynchrone de serveur principal, y compris un instantané et en appliquant une capture instantanée.'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A combiné de chaîne de date et l’heure UTC qui décrit l’heure lorsque l’opération (prennent ou d’appliquer une capture instantanée) est demandé. Par exemple, 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A combiné de date UTC et la chaîne d’heure qui décrit la dernière heure de la (prennent ou d’appliquer une capture instantanée) est activement migrer des données. Le lastActionTime sera conserver augmenter jusqu''à ce que l’opération se termine. Par exemple, 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Afficher le message d’échec en cas d’échec de l’opération (omis lors de l’opération réussit).
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lorsque l’opération réussit avec succès, pour prendre l’opération de capture instantanée, l’id d’instantané sera inclus dans ce champ, et pour la capture instantanée de l’application d’opération, le chemin d’accès pour obtenir l’objet cible sera retourné dans ce champ.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "État de l’opération\_: notstarted, en cours d’exécution, a réussi, échoué. Si l’opération est exigée et attend d’effectuer, l’état notstarted. Si l’opération est en cours dans le serveur principal, l’état est en cours d’exécution. État de réussite signifie que l’opération est terminée avec succès, spécifiquement pour l’opération de prise d’instantané, il illustre la capture instantanée est bien effectuée et prêt à appliquer et de capture instantanée de l’application d’opération, il présente la cible objet a fini de créer par la capture instantanée et le prêt à être utilisé. Échoué de l’état est souvent dû à la modification de l’objet source lors de la capture instantanée ou modifiez l’objet cible lors de l’application de l’instantané avant son achèvement, consultez le champ «\_message\_» pour vérifier la raison de l’échec.\nLes valeurs possibles sont\_: «\_notstarted', «\_en cours d’exécution\_», «\_réussi\_», «\_échec\_»"
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

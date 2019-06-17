@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Tâches multi-instances sont couramment utilisés pour prendre en charge des tâches MPI. Dans le cas MPI, si une des tâches subordonnées échoue (par exemple en raison d’une sortie avec un code de sortie différent de zéro) la tâche multi-instances tout entière échoue. La tâche multi-instances s’arrête ensuite puis reprend, dans la limite du nombre de nouvelles tentatives défini.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Une liste de fichiers qui permet de télécharger le service Batch avant d’exécuter la ligne de commande de coordination. La différence entre les fichiers de ressources communs et les fichiers de ressources de tâche est que les fichiers de ressources communs sont téléchargés pour toutes les tâches subordonnées, y compris le réplica principal, tandis que les fichiers de ressources de tâche sont téléchargés uniquement pour le serveur principal. Notez également que ces fichiers de ressources ne sont pas téléchargées vers le répertoire de travail de tâche, mais au lieu de cela, sont téléchargés vers le répertoire racine de tâche (un répertoire au-dessus du répertoire de travail).  Il existe une taille maximale pour la liste des fichiers de ressources.  Lorsque la taille maximale est dépassée, la demande échoue et le code d’erreur de réponse sera RequestEntityTooLarge. Si cela se produit, la collection de ResourceFiles doit être réduite en taille. Cela est possible en utilisant les fichiers .zip, les Packages d’Application ou les conteneurs Docker.'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La ligne de commande à exécuter sur tous les nœuds de calcul pour les activer coordonner lorsque le réplica principal exécute la commande de tâche principale. Une ligne de commande de coordination type lance un service en arrière-plan et vérifie que le service est prêt à traiter les messages de communication entre les nœuds.
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nombre de nœuds de calcul requis pour la tâche. Si omis, la valeur par défaut est 1.'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'

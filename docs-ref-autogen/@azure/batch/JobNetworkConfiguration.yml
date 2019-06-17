@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant JobNetworkConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’identificateur de ressource ARM de sous-réseau de réseau virtuel qui seront joignent des nœuds exécutant des tâches à partir de la tâche pendant la durée de la tâche. Cela est uniquement pris en charge pour les travaux en cours d’exécution sur les pools VirtualMachineConfiguration. Il s’agit de la /providers/ {provider} /virtualNetworks/ {network} /subnets/ {sous-réseau} formulaire /subscriptions/ {subscription} /resourceGroups/ {groupe}.
+      Le réseau virtuel doit être dans la même région et abonnement que le compte Azure Batch.
+      Le sous-réseau spécifié doit avoir suffisamment d’adresses IP libre pour prendre en compte le nombre de nœuds qui exécutera les tâches à partir de la tâche. Pour plus d’informations, consultez https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
