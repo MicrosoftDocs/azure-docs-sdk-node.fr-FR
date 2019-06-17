@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.NetworkRuleSet'
+    name: NetworkRuleSet
+    fullName: NetworkRuleSet
+    children:
+      - '@azure/arm-storage.NetworkRuleSet.bypass'
+      - '@azure/arm-storage.NetworkRuleSet.defaultAction'
+      - '@azure/arm-storage.NetworkRuleSet.ipRules'
+      - '@azure/arm-storage.NetworkRuleSet.virtualNetworkRules'
+    langs:
+      - typeScript
+    type: interface
+    summary: Ensemble de règles de réseau
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.bypass'
+    name: bypass
+    fullName: bypass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie si le trafic est contourné pour les métriques/journalisation/AzureServices. Les valeurs possibles sont n’importe quelle combinaison de journalisation | Mesures | AzureServices (par exemple, «\_journalisation, métriques\_»), ou None pour ignorer aucune de ce le trafic. Les valeurs possibles incluent\_: «\_None\_», «\_Journalisation\_», «\_Mesures\_», «\_AzureServices\_». Valeur par défaut : 'AzureServices'."
+    optional: true
+    syntax:
+      content: 'bypass?: Bypass'
+      return:
+        type:
+          - '@azure/arm-storage.Bypass'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.defaultAction'
+    name: defaultAction
+    fullName: defaultAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’action par défaut d’autoriser ou refuser lorsque correspond à aucune autre règle. Les valeurs possibles incluent\_: «\_Autoriser\_», «\_Refuser\_». Valeur par défaut : «\_Autoriser\_»."
+    syntax:
+      content: 'defaultAction: DefaultAction'
+      return:
+        type:
+          - '@azure/arm-storage.DefaultAction'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.ipRules'
+    name: ipRules
+    fullName: ipRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Définit des règles de l’ACL IP
+    optional: true
+    syntax:
+      content: 'ipRules?: IPRule[]'
+      return:
+        type:
+          - '@azure/arm-storage.IPRule[]'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.NetworkRuleSet.virtualNetworkRules'
+    name: virtualNetworkRules
+    fullName: virtualNetworkRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Définit les règles de réseau virtuel
+    optional: true
+    syntax:
+      content: 'virtualNetworkRules?: VirtualNetworkRule[]'
+      return:
+        type:
+          - '@azure/arm-storage.VirtualNetworkRule[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.Bypass'
+    name: Bypass
+    spec.typeScript:
+      - name: Bypass
+        fullName: Bypass
+        uid: '@azure/arm-storage.Bypass'
+  - uid: '@azure/arm-storage.DefaultAction'
+    name: DefaultAction
+    spec.typeScript:
+      - name: DefaultAction
+        fullName: DefaultAction
+        uid: '@azure/arm-storage.DefaultAction'
+  - uid: '@azure/arm-storage.IPRule[]'
+    name: 'IPRule[]'
+    spec.typeScript:
+      - name: IPRule
+        fullName: IPRule
+        uid: '@azure/arm-storage.IPRule'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-storage.VirtualNetworkRule[]'
+    name: 'VirtualNetworkRule[]'
+    spec.typeScript:
+      - name: VirtualNetworkRule
+        fullName: VirtualNetworkRule
+        uid: '@azure/arm-storage.VirtualNetworkRule'
+      - name: '[]'
+        fullName: '[]'

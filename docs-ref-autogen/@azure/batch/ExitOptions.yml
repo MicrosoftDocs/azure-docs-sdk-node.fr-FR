@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant ExitOptions.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Action effectuée par le traitement par lots service sur les tâches qui dépendent de cette tâche. La valeur par défaut est «\_à satisfaire\_» pour le code de sortie 0 et «\_bloc\_» pour toutes les autres conditions de sortie. Si la propriété d’usesTaskDependencies du travail est définie sur false, puis en spécifiant la propriété dependencyAction retourne une erreur et la demande de tâche d’ajout échoue avec une erreur de valeur de propriété non valide\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte). Les valeurs possibles sont\_: «\_satisfaire aux\_», «\_bloquer\_»"
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Une action à entreprendre lors de la tâche qui contient la tâche, si la tâche se termine avec la condition de sortie donné et la propriété d’onTaskFailed du travail est «\_performExitOptionsJobAction\_». La valeur par défaut est aucun code de sortie 0 et mettre fin pour toutes les autres conditions de sortie. Si la propriété d’onTaskFailed du travail est noaction, puis en spécifiant cette propriété retourne une erreur et la demande de tâche d’ajout échoue avec une erreur de valeur de propriété non valide\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte). Les valeurs possibles sont\_: «\_none\_», «\_désactiver\_», «\_terminate\_»"
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
