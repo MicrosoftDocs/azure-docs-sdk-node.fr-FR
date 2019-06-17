@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset'
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+      - '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un analyseur vidéo prédéfinie qui extrait des informations (métadonnées riches) d’audio et vidéo et génère un fichier de format JSON.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.audioLanguage'
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La langue de la charge utile audio dans l’entrée en utilisant le format BCP-47 de «\_balise de langue-région\_» (par exemple\_: «\_en-US\_»).  La liste des langues prises en charge sont l’anglais («\_en-US\_» et «\_en-GB\_»), espagnol («\_es-ES\_» et «\_es-MX\_»), Français («\_fr-FR\_»), italien («\_it-IT\_»), japonais («\_ja-JP\_»), portugais («\_pt-BR\_»), chinois («\_zh-CN\_»), allemand («\_de-DE\_»), arabe («\_ar-EG\_» et «\_ar-SY\_»), russe (' ru-RU\_»), Hindi («\_hi-IN\_») et le coréen («\_ko-KR\_»). Si vous connaissez le langage de votre contenu, il est recommandé que vous le spécifiez. Si la langue n’est pas spécifiée ou a la valeur Null, la fonctionnalité de détection automatique de la langue choisit la première langue détectée qu’elle utilise pendant la durée de traitement du fichier. Cette fonctionnalité de détection de langage prend actuellement en charge l’anglais, chinois, Français, allemand, italien, japonais, espagnol, russe et portugais. Actuellement, elle ne prend pas en charge le basculement dynamique d’une langue à l’autre après la détection de la première langue. La détection automatique fonctionne mieux avec des enregistrements audio avec reconnaissance vocale clairement être distinguée. Si la détection automatique ne parvient pas à rechercher la langue, transcription serait secours «\_en-us\_».\_»"
+    optional: true
+    syntax:
+      content: 'audioLanguage?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.insightsToExtract'
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type d’informations à extraire. Si ce n’est pas le cas, puis en fonction du contenu que sera le type de jeu sélectionné.  Si le contenu est audio uniquement puis insights uniquement audio sont extraits et si elle est vidéo uniquement. Les valeurs possibles incluent\_: 'AudioInsightsOnly', 'VideoInsightsOnly', 'AllInsights'"
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: InsightsType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.InsightsType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.VideoAnalyzerPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.VideoAnalyzerPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.VideoAnalyzerPreset"'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.InsightsType'
+    name: InsightsType
+    spec.typeScript:
+      - name: InsightsType
+        fullName: InsightsType
+        uid: '@azure/arm-mediaservices.InsightsType'
