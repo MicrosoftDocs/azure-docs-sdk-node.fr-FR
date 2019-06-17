@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    fullName: Schedule
+    children:
+      - '@azure/batch.Schedule.doNotRunAfter'
+      - '@azure/batch.Schedule.doNotRunUntil'
+      - '@azure/batch.Schedule.recurrenceInterval'
+      - '@azure/batch.Schedule.startWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="14996-101">Une interface qui représente la planification.</span><span class="sxs-lookup"><span data-stu-id="14996-101">An interface representing Schedule.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunAfter'
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="14996-102">Heure après laquelle aucun travail n’est créé sous cette planification de travail.</span><span class="sxs-lookup"><span data-stu-id="14996-102">A time after which no job will be created under this job schedule.</span></span> <span data-ttu-id="14996-103">La planification passe à l’état terminé dès que cette échéance est dépassée et il n’existe aucune tâche active sous cette planification de travail.</span><span class="sxs-lookup"><span data-stu-id="14996-103">The schedule will move to the completed state as soon as this deadline is past and there is no active job under this job schedule.</span></span> <span data-ttu-id="14996-104">Si vous ne spécifiez pas une heure doNotRunAfter et que vous créez une planification de travail périodique, la planification du travail reste active jusqu''à ce que vous la terminiez explicitement.</span><span class="sxs-lookup"><span data-stu-id="14996-104">If you do not specify a doNotRunAfter time, and you are creating a recurring job schedule, the job schedule will remain active until you explicitly terminate it.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunUntil'
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="14996-105">La première heure à laquelle une tâche peut être créée dans cette planification de travail.</span><span class="sxs-lookup"><span data-stu-id="14996-105">The earliest time at which any job may be created under this job schedule.</span></span> <span data-ttu-id="14996-106">Si vous ne spécifiez pas une heure doNotRunUntil, la planification est prête à créer immédiatement des tâches.</span><span class="sxs-lookup"><span data-stu-id="14996-106">If you do not specify a doNotRunUntil time, the schedule becomes ready to create jobs immediately.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.recurrenceInterval'
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"14996-107\">L’intervalle de temps entre les heures de début de deux travaux successifs sous la planification du travail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-107\">The time interval between the start times of two successive jobs under the job schedule.</span></span> <span data-ttu-id=\"14996-108\">Une planification de travail peut avoir au maximum un travail actif à un moment donné.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-108\">A job schedule can have at most one active job under it at any given time.</span></span> <span data-ttu-id=\"14996-109\">Une planification de travail peut avoir au maximum un travail actif à un moment donné, s’il est temps de créer un nouveau travail sous une planification de travail, mais la tâche précédente est en cours d’exécution, le service Batch ne crée pas la nouvelle tâche jusqu'à ce que la tâche précédente se termine.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-109\">Because a job schedule can have at most one active job under it at any given time, if it is time to create a new job under a job schedule, but the previous job is still running, the Batch service will not create the new job until the previous job finishes.</span></span> <span data-ttu-id=\"14996-110\">Si le travail précédent ne se termine pas dans le délai de la valeur de la nouvelle recurrenceInterval, aucun nouveau travail n’est programmé pour cet intervalle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-110\">If the previous job does not finish within the startWindow period of the new recurrenceInterval, then no new job will be scheduled for that interval.</span></span> <span data-ttu-id=\"14996-111\">Pour les tâches périodiques, vous devez normalement spécifier un jobManagerTask dans le jobspecification affectent.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-111\">For recurring jobs, you should normally specify a jobManagerTask in the jobSpecification.</span></span> <span data-ttu-id=\"14996-112\">Si vous n’utilisez pas jobManagerTask, vous devez un processus externe pour surveiller les travaux sont créés, ajouter des tâches sur les travaux et interrompent les travaux prêts pour la prochaine récurrence.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-112\">If you do not use jobManagerTask, you will need an external process to monitor when jobs are created, add tasks to the jobs and terminate the jobs ready for the next recurrence.</span></span> <span data-ttu-id=\"14996-113\">La valeur par défaut est que la planification ne se répète pas\_: un travail est créé, au sein de la valeur de startWindow après l’heure doNotRunUntil, et la planification est terminée dès que le travail se termine.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-113\">The default is that the schedule does not recur: one job is created, within the startWindow after the doNotRunUntil time, and the schedule is complete as soon as that job finishes.</span></span> <span data-ttu-id=\"14996-114\">La valeur minimale est 1 minute.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-114\">The minimum value is 1 minute.</span></span> <span data-ttu-id=\"14996-115\">Si vous spécifiez une valeur inférieure, le service Batch rejette la planification avec une erreur\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte).</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-115\">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>"
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.startWindow'
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"14996-116\">L’intervalle de temps, à partir du moment auquel la planification indique un travail doit être créée, dans laquelle un travail doit être créé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-116\">The time interval, starting from the time at which the schedule indicates a job should be created, within which a job must be created.</span></span> <span data-ttu-id=\"14996-117\">Si un travail n’est pas créé dans l’intervalle de valeur, la «\_opportunité\_» est perdue\_; aucun travail ne sera créé jusqu'à la prochaine récurrence de la planification.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-117\">If a job is not created within the startWindow interval, then the 'opportunity' is lost; no job will be created until the next recurrence of the schedule.</span></span> <span data-ttu-id=\"14996-118\">Si la planification est récurrente, et la valeur de startWindow est plus longue que l’intervalle de périodicité, puis cela équivaut à une valeur infinie, car le travail qui arrive à échéance dans un seul recurrenceInterval n’est pas transmis dans le prochain intervalle de périodicité.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-118\">If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the job that is 'due' in one recurrenceInterval is not carried forward into the next recurrence interval.</span></span> <span data-ttu-id=\"14996-119\">La valeur par défaut est infinie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-119\">The default is infinite.</span></span> <span data-ttu-id=\"14996-120\">La valeur minimale est 1 minute.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-120\">The minimum value is 1 minute.</span></span> <span data-ttu-id=\"14996-121\">Si vous spécifiez une valeur inférieure, le service Batch rejette la planification avec une erreur\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte).</span><span class=\"sxs-lookup\"><span data-stu-id=\"14996-121\">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>"
+    optional: true
+    syntax:
+      content: 'startWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

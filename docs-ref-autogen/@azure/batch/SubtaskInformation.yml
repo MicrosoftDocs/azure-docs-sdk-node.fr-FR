@@ -1,0 +1,234 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.SubtaskInformation'
+    name: SubtaskInformation
+    fullName: SubtaskInformation
+    children:
+      - '@azure/batch.SubtaskInformation.containerInfo'
+      - '@azure/batch.SubtaskInformation.endTime'
+      - '@azure/batch.SubtaskInformation.exitCode'
+      - '@azure/batch.SubtaskInformation.failureInfo'
+      - '@azure/batch.SubtaskInformation.id'
+      - '@azure/batch.SubtaskInformation.nodeInfo'
+      - '@azure/batch.SubtaskInformation.previousState'
+      - '@azure/batch.SubtaskInformation.previousStateTransitionTime'
+      - '@azure/batch.SubtaskInformation.result'
+      - '@azure/batch.SubtaskInformation.startTime'
+      - '@azure/batch.SubtaskInformation.state'
+      - '@azure/batch.SubtaskInformation.stateTransitionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="2e032-101">Interface représentant SubtaskInformation.</span><span class="sxs-lookup"><span data-stu-id="2e032-101">An interface representing SubtaskInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-102">Informations sur le conteneur sous lequel la tâche s’exécute.</span><span class="sxs-lookup"><span data-stu-id="2e032-102">Information about the container under which the task is executing.</span></span> <span data-ttu-id="2e032-103">Cette propriété est définie uniquement si la tâche s’exécute dans un contexte de conteneur.</span><span class="sxs-lookup"><span data-stu-id="2e032-103">This property is set only if the task runs in a container context.</span></span>
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-104">Heure à laquelle la tâche subordonnée est terminée.</span><span class="sxs-lookup"><span data-stu-id="2e032-104">The time at which the subtask completed.</span></span> <span data-ttu-id="2e032-105">Cette propriété est définie uniquement si la tâche subordonnée est dans l’état terminé.</span><span class="sxs-lookup"><span data-stu-id="2e032-105">This property is set only if the subtask is in the Completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2e032-106">Le code de sortie du programme spécifié sur la ligne de commande de tâche subordonnée.</span><span class="sxs-lookup"><span data-stu-id="2e032-106">The exit code of the program specified on the subtask command line.</span></span> <span data-ttu-id="2e032-107">Cette propriété est définie uniquement si la tâche subordonnée est dans l’état terminé.</span><span class="sxs-lookup"><span data-stu-id="2e032-107">This property is set only if the subtask is in the completed state.</span></span> <span data-ttu-id="2e032-108">En règle générale, le code de sortie pour un processus reflète la convention spécifique implémentée par le développeur d’applications pour ce processus.</span><span class="sxs-lookup"><span data-stu-id="2e032-108">In general, the exit code for a process reflects the specific convention implemented by the application developer for that process.</span></span> <span data-ttu-id="2e032-109">Si vous utilisez la valeur de code de sortie pour prendre des décisions dans votre code, n’oubliez pas que vous connaissez la convention de code de sortie utilisée par le processus d’application.</span><span class="sxs-lookup"><span data-stu-id="2e032-109">If you use the exit code value to make decisions in your code, be sure that you know the exit code convention used by the application process.</span></span> <span data-ttu-id="2e032-110">Toutefois, si le service Batch met fin à la tâche subordonnée (en raison de l’expiration ou d’arrêt utilisateur via l’API), vous pouvez voir un code de sortie défini par le système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="2e032-110">However, if the Batch service terminates the subtask (due to timeout, or user termination via the API) you may see an operating system-defined exit code.</span></span>'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2e032-111">Informations de description de l’échec de la tâche, le cas échéant.</span><span class="sxs-lookup"><span data-stu-id="2e032-111">Information describing the task failure, if any.</span></span> <span data-ttu-id="2e032-112">Cette propriété est définie uniquement si la tâche est dans l’état terminé et a rencontré une erreur.</span><span class="sxs-lookup"><span data-stu-id="2e032-112">This property is set only if the task is in the completed state and encountered a failure.</span></span>'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-113">L’ID de la tâche subordonnée.</span><span class="sxs-lookup"><span data-stu-id="2e032-113">The ID of the subtask.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.nodeInfo'
+    name: nodeInfo
+    fullName: nodeInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-114">Informations sur le nœud de calcul sur lequel la tâche subordonnée a été exécutée.</span><span class="sxs-lookup"><span data-stu-id="2e032-114">Information about the compute node on which the subtask ran.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeInfo?: ComputeNodeInformation'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2e032-115\">L’état précédent de la tâche subordonnée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-115\">The previous state of the subtask.</span></span> <span data-ttu-id=\"2e032-116\">Cette propriété n’est pas définie si la tâche subordonnée est dans son état initial en cours d’exécution.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-116\">This property is not set if the subtask is in its initial running state.</span></span> <span data-ttu-id=\"2e032-117\">Les valeurs possibles sont\_: «\_préparation\_», «\_running\_», «\_terminée\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-117\">Possible values include: 'preparing', 'running', 'completed'</span></span>"
+    optional: true
+    syntax:
+      content: 'previousState?: SubtaskState'
+      return:
+        type:
+          - '@azure/batch.SubtaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-118">Heure à laquelle la tâche subordonnée est passé à son état précédent.</span><span class="sxs-lookup"><span data-stu-id="2e032-118">The time at which the subtask entered its previous state.</span></span> <span data-ttu-id="2e032-119">Cette propriété n’est pas définie si la tâche subordonnée est dans son état initial en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="2e032-119">This property is not set if the subtask is in its initial running state.</span></span>
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2e032-120\">Le résultat de l’exécution des tâches.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-120\">The result of the task execution.</span></span> <span data-ttu-id=\"2e032-121\">Si la valeur est 'échec', les détails de l’échec peuvent être trouvés dans la propriété failureInfo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-121\">If the value is 'failed', then the details of the failure can be found in the failureInfo property.</span></span> <span data-ttu-id=\"2e032-122\">Les valeurs possibles sont\_: «\_réussite\_», «\_échec\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-122\">Possible values include: 'success', 'failure'</span></span>"
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2e032-123">Heure à laquelle la tâche subordonnée a démarré en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="2e032-123">The time at which the subtask started running.</span></span> <span data-ttu-id="2e032-124">Si la tâche subordonnée a été redémarrée ou retentée, il s’agit de la dernière heure à laquelle la tâche subordonnée a démarré en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="2e032-124">If the subtask has been restarted or retried, this is the most recent time at which the subtask started running.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2e032-125\">L’état actuel de la tâche subordonnée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-125\">The current state of the subtask.</span></span> <span data-ttu-id=\"2e032-126\">Les valeurs possibles sont\_: «\_préparation\_», «\_running\_», «\_terminée\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"2e032-126\">Possible values include: 'preparing', 'running', 'completed'</span></span>"
+    optional: true
+    syntax:
+      content: 'state?: SubtaskState'
+      return:
+        type:
+          - '@azure/batch.SubtaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.SubtaskInformation.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2e032-127">Heure à laquelle la tâche subordonnée est passé à son état actuel.</span><span class="sxs-lookup"><span data-stu-id="2e032-127">The time at which the subtask entered its current state.</span></span>
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.ComputeNodeInformation'
+    name: ComputeNodeInformation
+    spec.typeScript:
+      - name: ComputeNodeInformation
+        fullName: ComputeNodeInformation
+        uid: '@azure/batch.ComputeNodeInformation'
+  - uid: '@azure/batch.SubtaskState'
+    name: SubtaskState
+    spec.typeScript:
+      - name: SubtaskState
+        fullName: SubtaskState
+        uid: '@azure/batch.SubtaskState'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
