@@ -1,0 +1,523 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ReplicationLinks'
+    name: ReplicationLinks
+    fullName: ReplicationLinks
+    children:
+      - '@azure/arm-sql.ReplicationLinks.beginFailover'
+      - '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+      - '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+      - '@azure/arm-sql.ReplicationLinks.failover'
+      - '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+      - '@azure/arm-sql.ReplicationLinks.get'
+      - '@azure/arm-sql.ReplicationLinks.get_2'
+      - '@azure/arm-sql.ReplicationLinks.get_1'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+      - '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+      - '@azure/arm-sql.ReplicationLinks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant un ReplicationLinks.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailover'
+    name: 'beginFailover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Définit la base de données réplica principale en basculant à partir de la base de données réplica principale actuelle.
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication à être basculée.
+        - id: linkId
+          type:
+            - string
+          description: ID du lien de réplication à être basculée.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.beginFailoverAllowDataLoss'
+    name: 'beginFailoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Définit la base de données réplica principale en basculant à partir de la base de données réplica principale actuelle. Cette opération peut entraîner une perte de données.
+    syntax:
+      content: 'function beginFailoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication à être basculée.
+        - id: linkId
+          type:
+            - string
+          description: ID du lien de réplication à être basculée.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime un lien de réplication de base de données. Opération impossible pendant le basculement.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication doit être supprimée.
+        - id: linkId
+          type:
+            - string
+          description: L’ID du lien de réplication doit être supprimé.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication doit être supprimée.
+        - id: linkId
+          type:
+            - string
+          description: L’ID du lien de réplication doit être supprimé.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication doit être supprimée.
+        - id: linkId
+          type:
+            - string
+          description: L’ID du lien de réplication doit être supprimé.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failover'
+    name: 'failover(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Définit la base de données réplica principale en basculant à partir de la base de données réplica principale actuelle.
+    syntax:
+      content: 'function failover(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication à être basculée.
+        - id: linkId
+          type:
+            - string
+          description: ID du lien de réplication à être basculée.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.failoverAllowDataLoss'
+    name: 'failoverAllowDataLoss(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Définit la base de données réplica principale en basculant à partir de la base de données réplica principale actuelle. Cette opération peut entraîner une perte de données.
+    syntax:
+      content: 'function failoverAllowDataLoss(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données qui a le lien de réplication à être basculée.
+        - id: linkId
+          type:
+            - string
+          description: ID du lien de réplication à être basculée.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get'
+    name: 'get(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient un lien de réplication de base de données.
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour obtenir le lien correspondant.
+        - id: linkId
+          type:
+            - string
+          description: L’ID de lien de réplication doit être récupéré.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_2'
+    name: 'get(string, string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour obtenir le lien correspondant.
+        - id: linkId
+          type:
+            - string
+          description: L’ID de lien de réplication doit être récupéré.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.get_1'
+    name: 'get(string, string, string, string, ServiceCallback<ReplicationLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, linkId: string, callback: ServiceCallback<ReplicationLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour obtenir le lien correspondant.
+        - id: linkId
+          type:
+            - string
+          description: L’ID de lien de réplication doit être récupéré.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLink>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ReplicationLinksGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase'
+    name: 'listByDatabase(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie les liens de réplication de base de données.
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour récupérer les liens pour.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_2'
+    name: 'listByDatabase(string, string, string, RequestOptionsBase, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options: RequestOptionsBase, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour récupérer les liens pour.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.listByDatabase_1'
+    name: 'listByDatabase(string, string, string, ServiceCallback<ReplicationLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ReplicationLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: serverName
+          type:
+            - string
+          description: Le nom du serveur
+        - id: databaseName
+          type:
+            - string
+          description: Le nom de la base de données pour récupérer les liens pour.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.ReplicationLinksListByDatabaseResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ReplicationLinks.constructor'
+    name: ReplicationLinks(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer un ReplicationLinks.
+    syntax:
+      content: 'new ReplicationLinks(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLink>
+    name: ReplicationLink>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLink
+        fullName: ReplicationLink
+        uid: '@azure/arm-sql.ReplicationLink'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.ReplicationLinkListResult>
+    name: ReplicationLinkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ReplicationLinkListResult
+        fullName: ReplicationLinkListResult
+        uid: '@azure/arm-sql.ReplicationLinkListResult'
+      - name: '>'
+        fullName: '>'
