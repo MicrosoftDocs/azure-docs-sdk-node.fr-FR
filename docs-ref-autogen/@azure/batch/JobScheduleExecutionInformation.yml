@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="dcd1e-101">Interface représentant JobScheduleExecutionInformation.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-101">An interface representing JobScheduleExecutionInformation.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dcd1e-102">L’heure de fin de la planification.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-102">The time at which the schedule ended.</span></span> <span data-ttu-id="dcd1e-103">Cette propriété est définie uniquement si la planification du travail est dans l’état terminé.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-103">This property is set only if the job schedule is in the completed state.</span></span>
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dcd1e-104">La prochaine fois auquel un travail est créé dans cette planification.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-104">The next time at which a job will be created under this schedule.</span></span> <span data-ttu-id="dcd1e-105">Cette propriété est significative uniquement si la planification est dans un état actif, le moment venu.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-105">This property is meaningful only if the schedule is in the active state when the time comes around.</span></span> <span data-ttu-id="dcd1e-106">Par exemple, si la planification est désactivée, aucun travail ne sera créé à nextRunTime, sauf si le travail est activé avant cette date.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-106">For example, if the schedule is disabled, no job will be created at nextRunTime unless the job is enabled before then.</span></span>'
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dcd1e-107">Informations sur le travail le plus récent sous la planification du travail.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-107">Information about the most recent job under the job schedule.</span></span> <span data-ttu-id="dcd1e-108">Cette propriété est présente uniquement si le travail au moins un a exécuté sous la planification.</span><span class="sxs-lookup"><span data-stu-id="dcd1e-108">This property is present only if the at least one job has run under the schedule.</span></span>
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'
