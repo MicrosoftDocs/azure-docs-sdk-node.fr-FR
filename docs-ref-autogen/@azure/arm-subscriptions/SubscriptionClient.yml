@@ -1,0 +1,335 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-subscriptions.SubscriptionClient'
+    name: SubscriptionClient
+    fullName: SubscriptionClient
+    children:
+      - '@azure/arm-subscriptions.SubscriptionClient.acceptLanguage'
+      - '@azure/arm-subscriptions.SubscriptionClient.beginLongRunningRequest'
+      - '@azure/arm-subscriptions.SubscriptionClient.credentials'
+      - '@azure/arm-subscriptions.SubscriptionClient.longRunningOperationRetryTimeout'
+      - '@azure/arm-subscriptions.SubscriptionClient.operations'
+      - '@azure/arm-subscriptions.SubscriptionClient.restoreLROPoller'
+      - '@azure/arm-subscriptions.SubscriptionClient.sendLongRunningRequest'
+      - '@azure/arm-subscriptions.SubscriptionClient.sendLRORequest'
+      - '@azure/arm-subscriptions.SubscriptionClient.sendOperationRequest'
+      - '@azure/arm-subscriptions.SubscriptionClient.sendRequest'
+      - '@azure/arm-subscriptions.SubscriptionClient.constructor'
+      - '@azure/arm-subscriptions.SubscriptionClient.subscriptionFactory'
+      - '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperations'
+      - '@azure/arm-subscriptions.SubscriptionClient.subscriptions'
+      - '@azure/arm-subscriptions.SubscriptionClient.tenants'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure/arm-subscriptions.SubscriptionClientContext'
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.acceptLanguage'
+    name: acceptLanguage
+    fullName: acceptLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'acceptLanguage: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.beginLongRunningRequest'
+    name: 'beginLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer la demande initiale d’un LRO (opération longue) et d’obtenir un HttpLongRunningOperationResponse qui fournit des méthodes pour l’interrogation de la LRO et en vérifiant si le LRO est terminée.
+    syntax:
+      content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: L’objet de requête
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.longRunningOperationRetryTimeout'
+    name: longRunningOperationRetryTimeout
+    fullName: longRunningOperationRetryTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le délai de nouvelle tentative en secondes pour les opérations en cours d’exécution longue. La valeur par défaut est 30.
+    optional: true
+    syntax:
+      content: 'longRunningOperationRetryTimeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.operations'
+    name: operations
+    fullName: operations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'operations: Operations'
+      return:
+        type:
+          - '@azure/arm-subscriptions.Operations'
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.restoreLROPoller'
+    name: restoreLROPoller(LROPollState)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Restaurer un LROPoller à partir de la LROPollState fourni. Cette méthode peut être utilisée pour recréer un LROPoller sur un ordinateur ou un autre processus.
+    syntax:
+      content: 'function restoreLROPoller(lroPollState: LROPollState)'
+      parameters:
+        - id: lroPollState
+          type:
+            - LROPollState
+          description: ''
+      return:
+        type:
+          - LROPoller
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.sendLongRunningRequest'
+    name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Fournit un mécanisme pour effectuer une requête qui interroge et fournir le résultat final.
+    syntax:
+      content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
+      parameters:
+        - id: request
+          type:
+            - RequestPrepareOptions | WebResource
+          description: L’objet de requête
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.sendLRORequest'
+    name: 'sendLRORequest(OperationArguments, OperationSpec, RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer la demande initiale d’un LRO (opération longue) et d’obtenir un LROPoller qui fournit des méthodes pour l’interrogation de la LRO et en vérifiant si le LRO est terminée.
+    syntax:
+      content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: Arguments de l’opération.
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: La spécification pour l’opération.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Options supplémentaires à envoyer lors de la requête.
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer une requête HTTP qui est remplie à l’aide de la OperationSpec fourni.
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: Les arguments qui contiendra à partir de valeurs basé sur un modèle de demande HTTP.
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: OperationSpec à utiliser pour remplir la requête HTTP.
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            Le rappel à appeler lorsque la réponse est reçue.
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer la requête HTTP fournie.
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.constructor'
+    name: 'SubscriptionClient(ServiceClientCredentials, Models.SubscriptionClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Initialise une nouvelle instance de la classe SubscriptionClient.
+    syntax:
+      content: 'new SubscriptionClient(credentials: ServiceClientCredentials, options?: Models.SubscriptionClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: Informations d’identification nécessaires pour le client pour se connecter à Azure.
+        - id: options
+          type:
+            - Models.SubscriptionClientOptions
+          description: ''
+          optional: true
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptionFactory'
+    name: subscriptionFactory
+    fullName: subscriptionFactory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptionFactory: SubscriptionFactory'
+      return:
+        type:
+          - '@azure/arm-subscriptions.SubscriptionFactory'
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptionOperations'
+    name: subscriptionOperations
+    fullName: subscriptionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptionOperations: SubscriptionOperations'
+      return:
+        type:
+          - '@azure/arm-subscriptions.SubscriptionOperations'
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.subscriptions'
+    name: subscriptions
+    fullName: subscriptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'subscriptions: Subscriptions'
+      return:
+        type:
+          - '@azure/arm-subscriptions.Subscriptions'
+    package: '@azure/arm-subscriptions'
+  - uid: '@azure/arm-subscriptions.SubscriptionClient.tenants'
+    name: tenants
+    fullName: tenants
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'tenants: Tenants'
+      return:
+        type:
+          - '@azure/arm-subscriptions.Tenants'
+    package: '@azure/arm-subscriptions'
+references:
+  - uid: '@azure/arm-subscriptions.SubscriptionClientContext'
+    name: SubscriptionClientContext
+    spec.typeScript:
+      - name: SubscriptionClientContext
+        fullName: SubscriptionClientContext
+        uid: '@azure/arm-subscriptions.SubscriptionClientContext'
+  - uid: '@azure/arm-subscriptions.Operations'
+    name: Operations
+    spec.typeScript:
+      - name: Operations
+        fullName: Operations
+        uid: '@azure/arm-subscriptions.Operations'
+  - uid: '@azure/arm-subscriptions.SubscriptionFactory'
+    name: SubscriptionFactory
+    spec.typeScript:
+      - name: SubscriptionFactory
+        fullName: SubscriptionFactory
+        uid: '@azure/arm-subscriptions.SubscriptionFactory'
+  - uid: '@azure/arm-subscriptions.SubscriptionOperations'
+    name: SubscriptionOperations
+    spec.typeScript:
+      - name: SubscriptionOperations
+        fullName: SubscriptionOperations
+        uid: '@azure/arm-subscriptions.SubscriptionOperations'
+  - uid: '@azure/arm-subscriptions.Subscriptions'
+    name: Subscriptions
+    spec.typeScript:
+      - name: Subscriptions
+        fullName: Subscriptions
+        uid: '@azure/arm-subscriptions.Subscriptions'
+  - uid: '@azure/arm-subscriptions.Tenants'
+    name: Tenants
+    spec.typeScript:
+      - name: Tenants
+        fullName: Tenants
+        uid: '@azure/arm-subscriptions.Tenants'

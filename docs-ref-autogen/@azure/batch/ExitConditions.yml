@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    fullName: ExitConditions
+    children:
+      - '@azure/batch.ExitConditions.default'
+      - '@azure/batch.ExitConditions.exitCodeRanges'
+      - '@azure/batch.ExitConditions.exitCodes'
+      - '@azure/batch.ExitConditions.fileUploadError'
+      - '@azure/batch.ExitConditions.preProcessingError'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant ExitConditions.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.default'
+    name: default
+    fullName: default
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Comment le service Batch doit répondre si la tâche échoue avec une condition de sortie non couverte par les autres propriétés. Cette valeur est utilisée si la tâche se termine avec n’importe quel code de sortie différent de zéro n’apparaît ne pas dans la collection exitCodes ou exitCodeRanges, une erreur de prétraitement si la propriété preProcessingError n’est pas présente ou avec une erreur de chargement de fichier si la propriété fileUploadError n’est pas présent. Si vous souhaitez que le comportement par défaut sur le code de sortie 0, vous devez répertorier explicitement à l’aide de la collection exitCodes ou exitCodeRanges.'
+    optional: true
+    syntax:
+      content: 'default?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.exitCodeRanges'
+    name: exitCodeRanges
+    fullName: exitCodeRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une liste de plages de codes de sortie de tâche et comment le service Batch doit y répondre.
+    optional: true
+    syntax:
+      content: 'exitCodeRanges?: ExitCodeRangeMapping[]'
+      return:
+        type:
+          - '@azure/batch.ExitCodeRangeMapping[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.exitCodes'
+    name: exitCodes
+    fullName: exitCodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des codes de sortie de tâche individuelle et comment le service Batch doit y répondre.
+    optional: true
+    syntax:
+      content: 'exitCodes?: ExitCodeMapping[]'
+      return:
+        type:
+          - '@azure/batch.ExitCodeMapping[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.fileUploadError'
+    name: fileUploadError
+    fullName: fileUploadError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Comment le service Batch doit répondre si une erreur de chargement se produit. Si la tâche s’est arrêté avec un code de sortie qui a été spécifié via exitCodes ou exitCodeRanges, puis a rencontré une erreur de chargement de fichier, l’action spécifiée par le code de sortie est prioritaire.'
+    optional: true
+    syntax:
+      content: 'fileUploadError?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.preProcessingError'
+    name: preProcessingError
+    fullName: preProcessingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Comment le service Batch doit répondre si la tâche échoue à démarrer en raison d’une erreur.
+    optional: true
+    syntax:
+      content: 'preProcessingError?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    spec.typeScript:
+      - name: ExitOptions
+        fullName: ExitOptions
+        uid: '@azure/batch.ExitOptions'
+  - uid: '@azure/batch.ExitCodeRangeMapping[]'
+    name: 'ExitCodeRangeMapping[]'
+    spec.typeScript:
+      - name: ExitCodeRangeMapping
+        fullName: ExitCodeRangeMapping
+        uid: '@azure/batch.ExitCodeRangeMapping'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ExitCodeMapping[]'
+    name: 'ExitCodeMapping[]'
+    spec.typeScript:
+      - name: ExitCodeMapping
+        fullName: ExitCodeMapping
+        uid: '@azure/batch.ExitCodeMapping'
+      - name: '[]'
+        fullName: '[]'
