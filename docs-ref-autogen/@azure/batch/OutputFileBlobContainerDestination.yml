@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFileBlobContainerDestination'
+    name: OutputFileBlobContainerDestination
+    fullName: OutputFileBlobContainerDestination
+    children:
+      - '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+      - '@azure/batch.OutputFileBlobContainerDestination.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="c0fd7-101">Interface représentant OutputFileBlobContainerDestination.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-101">An interface representing OutputFileBlobContainerDestination.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0fd7-102">L’URL du conteneur dans le stockage Blob Azure vers lequel télécharger les fichiers.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-102">The URL of the container within Azure Blob Storage to which to upload the file(s).</span></span> <span data-ttu-id="c0fd7-103">L’URL doit inclure une Signature d’accès partagé (SAP) l’octroi d’autorisations d’écriture au conteneur.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-103">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span>
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0fd7-104">L’objet blob de destination ou un répertoire virtuel au sein du conteneur de stockage Azure.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-104">The destination blob or virtual directory within the Azure Storage container.</span></span> <span data-ttu-id="c0fd7-105">Si filePattern fait référence à un fichier spécifique (c''est-à-dire ne contient aucun des caractères génériques), puis le chemin d’accès est le nom de l’objet blob dans lequel vous chargez ce fichier.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-105">If filePattern refers to a specific file (i.e. contains no wildcards), then path is the name of the blob to which to upload that file.</span></span> <span data-ttu-id="c0fd7-106">Si filePattern contient un ou plusieurs des caractères génériques (et par conséquent peut correspondre à plusieurs fichiers), chemin d’accès est le nom du répertoire virtuel d’objets blob (qui est ajouté devant chaque nom d’objet blob) dans lequel charger l’ou les fichiers.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-106">If filePattern contains one or more wildcards (and therefore may match multiple files), then path is the name of the blob virtual directory (which is prepended to each blob name) to which to upload the file(s).</span></span> <span data-ttu-id="c0fd7-107">Si omis, ou les fichiers sont téléchargés vers la racine du conteneur avec un nom d’objet blob correspondant à leur nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="c0fd7-107">If omitted, file(s) are uploaded to the root of the container with a blob name matching their file name.</span></span>'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
