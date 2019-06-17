@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+      - '@azure/batch.AutoPoolSpecification.keepAlive'
+      - '@azure/batch.AutoPoolSpecification.pool'
+      - '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="5cf60-101">Interface représentant l’élément AutoPoolSpecification.</span><span class="sxs-lookup"><span data-stu-id="5cf60-101">An interface representing AutoPoolSpecification.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5cf60-102">Un préfixe à ajouter à l’identificateur unique lorsqu’un pool est créé automatiquement.</span><span class="sxs-lookup"><span data-stu-id="5cf60-102">A prefix to be added to the unique identifier when a pool is automatically created.</span></span> <span data-ttu-id="5cf60-103">Le service Batch assigne chaque pool automatique un identificateur unique lors de la création.</span><span class="sxs-lookup"><span data-stu-id="5cf60-103">The Batch service assigns each auto pool a unique identifier on creation.</span></span> <span data-ttu-id="5cf60-104">Pour faire la distinction entre les pools créés à des fins différentes, vous pouvez spécifier cet élément pour ajouter un préfixe à l’ID qui est assigné.</span><span class="sxs-lookup"><span data-stu-id="5cf60-104">To distinguish between pools created for different purposes, you can specify this element to add a prefix to the ID that is assigned.</span></span> <span data-ttu-id="5cf60-105">Le préfixe peut comporter jusqu''à 20 caractères.</span><span class="sxs-lookup"><span data-stu-id="5cf60-105">The prefix can be up to 20 characters long.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"5cf60-106\">Si vous souhaitez conserver un pool automatique actif après expiration de sa durée de vie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-106\">Whether to keep an auto pool alive after its lifetime expires.</span></span> <span data-ttu-id=\"5cf60-107\">Si la valeur est false, le service Batch supprime le pool une fois que l’expiration de sa durée de vie (tel que déterminé par la valeur de poolLifetimeOption)\_; Autrement dit, lorsque le travail ou un travail de planification est terminée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-107\">If false, the Batch service deletes the pool once its lifetime (as determined by the poolLifetimeOption setting) expires; that is, when the job or job schedule completes.</span></span> <span data-ttu-id=\"5cf60-108\">Si la valeur est true, le service Batch ne supprime pas automatiquement le pool.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-108\">If true, the Batch service does not delete the pool automatically.</span></span> <span data-ttu-id=\"5cf60-109\">C’est à l’utilisateur à supprimer les pools automatiquement créés avec cette option.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-109\">It is up to the user to delete auto pools created with this option.</span></span>"
+    optional: true
+    syntax:
+      content: 'keepAlive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.pool'
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5cf60-110">La spécification du pool pour le pool automatique.</span><span class="sxs-lookup"><span data-stu-id="5cf60-110">The pool specification for the auto pool.</span></span>
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - '@azure/batch.PoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"5cf60-111\">La durée de vie minimale automatique créé les pools et comment plusieurs travaux selon une planification sont affectés aux pools.</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-111\">The minimum lifetime of created auto pools, and how multiple jobs on a schedule are assigned to pools.</span></span> <span data-ttu-id=\"5cf60-112\">Les valeurs possibles sont\_: «\_jobSchedule\_», «\_travail\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"5cf60-112\">Possible values include: 'jobSchedule', 'job'</span></span>"
+    syntax:
+      content: 'poolLifetimeOption: PoolLifetimeOption'
+      return:
+        type:
+          - '@azure/batch.PoolLifetimeOption'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: '@azure/batch.PoolSpecification'
+  - uid: '@azure/batch.PoolLifetimeOption'
+    name: PoolLifetimeOption
+    spec.typeScript:
+      - name: PoolLifetimeOption
+        fullName: PoolLifetimeOption
+        uid: '@azure/batch.PoolLifetimeOption'
