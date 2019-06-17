@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.GeoReplicationStats'
+    name: GeoReplicationStats
+    fullName: GeoReplicationStats
+    children:
+      - '@azure/arm-storage.GeoReplicationStats.canFailover'
+      - '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+      - '@azure/arm-storage.GeoReplicationStats.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Statistiques relatives à la réplication pour du compte de stockage Blob, Table, file d’attente et fichier services. Il est disponible uniquement lorsque la réplication géographique redondante est activée pour le compte de stockage.'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.canFailover'
+    name: canFailover
+    fullName: canFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Indicateur booléen qui indique si ou n’est pas le basculement du compte est pris en charge pour le compte.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'canFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+    name: lastSyncTime
+    fullName: lastSyncTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Toutes les écritures principales antérieures cette date/heure UTC valeur sont assurées d’être disponible pour les opérations de lecture. Les écritures principales après ce point dans le temps peut ou ne peut pas être disponible pour les lectures.\nÉlément peut être la valeur par défaut si la valeur de LastSyncTime n’est pas disponible, cela peut se produire si secondaire est hors connexion ou il s’agit d’amorçage.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'lastSyncTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état de l’emplacement secondaire. Les valeurs possibles sont\_: - en direct\_: Indique que l’emplacement secondaire est actif et opérationnel. -Bootstrap\_: Indique que la synchronisation initiale de l’emplacement principal vers l’emplacement secondaire est en cours. Cela se produit généralement lors de la première activation de la réplication. -Non disponible\_: Indique que l’emplacement secondaire est provisoirement indisponible. Les valeurs possibles incluent\_: «\_Live\_», «\_Démarrer\_», «\_Non disponible\_» **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'status?: GeoReplicationStatus'
+      return:
+        type:
+          - '@azure/arm-storage.GeoReplicationStatus'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.GeoReplicationStatus'
+    name: GeoReplicationStatus
+    spec.typeScript:
+      - name: GeoReplicationStatus
+        fullName: GeoReplicationStatus
+        uid: '@azure/arm-storage.GeoReplicationStatus'

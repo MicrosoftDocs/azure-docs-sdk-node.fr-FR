@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.FailoverGroupReadWriteEndpoint'
+    name: FailoverGroupReadWriteEndpoint
+    fullName: FailoverGroupReadWriteEndpoint
+    children:
+      - '@azure/arm-sql.FailoverGroupReadWriteEndpoint.failoverPolicy'
+      - '@azure/arm-sql.FailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Point de terminaison en lecture-écriture de l’instance de groupe de basculement.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.FailoverGroupReadWriteEndpoint.failoverPolicy'
+    name: failoverPolicy
+    fullName: failoverPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Stratégie de basculement du point de terminaison en lecture-écriture pour le groupe de basculement. Si failoverPolicy est automatique failoverWithDataLossGracePeriodMinutes est requis. Les valeurs possibles incluent\_: 'Manual', 'Automatic'"
+    syntax:
+      content: 'failoverPolicy: ReadWriteEndpointFailoverPolicy'
+      return:
+        type:
+          - '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.FailoverGroupReadWriteEndpoint.failoverWithDataLossGracePeriodMinutes'
+    name: failoverWithDataLossGracePeriodMinutes
+    fullName: failoverWithDataLossGracePeriodMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Période de grâce avant la tentative de basculement avec perte de données pour le point de terminaison en lecture-écriture. Si failoverPolicy est automatique failoverWithDataLossGracePeriodMinutes est requis.
+    optional: true
+    syntax:
+      content: 'failoverWithDataLossGracePeriodMinutes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
+    name: ReadWriteEndpointFailoverPolicy
+    spec.typeScript:
+      - name: ReadWriteEndpointFailoverPolicy
+        fullName: ReadWriteEndpointFailoverPolicy
+        uid: '@azure/arm-sql.ReadWriteEndpointFailoverPolicy'
