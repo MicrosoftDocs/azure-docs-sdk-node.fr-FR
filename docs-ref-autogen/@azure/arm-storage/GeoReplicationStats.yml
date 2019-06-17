@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.GeoReplicationStats'
+    name: GeoReplicationStats
+    fullName: GeoReplicationStats
+    children:
+      - '@azure/arm-storage.GeoReplicationStats.canFailover'
+      - '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+      - '@azure/arm-storage.GeoReplicationStats.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="cd4e7-101">Statistiques relatives à la réplication pour du compte de stockage Blob, Table, file d’attente et fichier services.</span><span class="sxs-lookup"><span data-stu-id="cd4e7-101">Statistics related to replication for storage account''s Blob, Table, Queue and File services.</span></span> <span data-ttu-id="cd4e7-102">Il est disponible uniquement lorsque la réplication géographique redondante est activée pour le compte de stockage.</span><span class="sxs-lookup"><span data-stu-id="cd4e7-102">It is only available when geo-redundant replication is enabled for the storage account.</span></span>'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.canFailover'
+    name: canFailover
+    fullName: canFailover
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"cd4e7-103\">Indicateur booléen qui indique si ou n’est pas le basculement du compte est pris en charge pour le compte.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-103\">A boolean flag which indicates whether or not account failover is supported for the account.</span></span>\n<span data-ttu-id=\"cd4e7-104\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-104\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'canFailover?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.lastSyncTime'
+    name: lastSyncTime
+    fullName: lastSyncTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"cd4e7-105\">Toutes les écritures principales antérieures cette date/heure UTC valeur sont assurées d’être disponible pour les opérations de lecture.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-105\">All primary writes preceding this UTC date/time value are guaranteed to be available for read operations.</span></span> <span data-ttu-id=\"cd4e7-106\">Les écritures principales après ce point dans le temps peut ou ne peut pas être disponible pour les lectures.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-106\">Primary writes following this point in time may or may not be available for reads.</span></span>\n<span data-ttu-id=\"cd4e7-107\">Élément peut être la valeur par défaut si la valeur de LastSyncTime n’est pas disponible, cela peut se produire si secondaire est hors connexion ou il s’agit d’amorçage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-107\">Element may be default value if value of LastSyncTime is not available, this can happen if secondary is offline or we are in bootstrap.</span></span>\n<span data-ttu-id=\"cd4e7-108\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-108\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'lastSyncTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.GeoReplicationStats.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"cd4e7-109\">L’état de l’emplacement secondaire.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-109\">The status of the secondary location.</span></span> <span data-ttu-id=\"cd4e7-110\">Les valeurs possibles sont\_: - en direct\_: Indique que l’emplacement secondaire est actif et opérationnel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-110\">Possible values are: - Live: Indicates that the secondary location is active and operational.</span></span> <span data-ttu-id=\"cd4e7-111\">-Bootstrap\_: Indique que la synchronisation initiale de l’emplacement principal vers l’emplacement secondaire est en cours. Cela se produit généralement lors de la première activation de la réplication.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-111\">- Bootstrap: Indicates initial synchronization from the primary location to the secondary location is in progress.This typically occurs when replication is first enabled.</span></span> <span data-ttu-id=\"cd4e7-112\">-Non disponible\_: Indique que l’emplacement secondaire est provisoirement indisponible.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-112\">- Unavailable: Indicates that the secondary location is temporarily unavailable.</span></span> <span data-ttu-id=\"cd4e7-113\">Les valeurs possibles incluent\_: «\_Live\_», «\_Démarrer\_», «\_Non disponible\_» **Remarque\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd4e7-113\">Possible values include: 'Live', 'Bootstrap', 'Unavailable' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'status?: GeoReplicationStatus'
+      return:
+        type:
+          - '@azure/arm-storage.GeoReplicationStatus'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.GeoReplicationStatus'
+    name: GeoReplicationStatus
+    spec.typeScript:
+      - name: GeoReplicationStatus
+        fullName: GeoReplicationStatus
+        uid: '@azure/arm-storage.GeoReplicationStatus'
