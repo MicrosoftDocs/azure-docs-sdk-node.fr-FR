@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.LeaseContainerRequest'
+    name: LeaseContainerRequest
+    fullName: LeaseContainerRequest
+    children:
+      - '@azure/arm-storage.LeaseContainerRequest.action'
+      - '@azure/arm-storage.LeaseContainerRequest.breakPeriod'
+      - '@azure/arm-storage.LeaseContainerRequest.leaseDuration'
+      - '@azure/arm-storage.LeaseContainerRequest.leaseId'
+      - '@azure/arm-storage.LeaseContainerRequest.proposedLeaseId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="882ab-101">Schéma de demande de conteneur de bail.</span><span class="sxs-lookup"><span data-stu-id="882ab-101">Lease Container request schema.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"882ab-102\">Spécifie l’action de bail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"882ab-102\">Specifies the lease action.</span></span> <span data-ttu-id=\"882ab-103\">Peut prendre l’une des actions disponibles.</span><span class=\"sxs-lookup\"><span data-stu-id=\"882ab-103\">Can be one of the available actions.</span></span> <span data-ttu-id=\"882ab-104\">Les valeurs possibles incluent\_: «\_Acquérir\_», «\_Renew\_», «\_Modifier\_», «\_Release\_», «\_Break\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"882ab-104\">Possible values include: 'Acquire', 'Renew', 'Change', 'Release', 'Break'</span></span>"
+    syntax:
+      content: 'action: Action1'
+      return:
+        type:
+          - '@azure/arm-storage.Action1'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.breakPeriod'
+    name: breakPeriod
+    fullName: breakPeriod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="882ab-105">facultatif.</span><span class="sxs-lookup"><span data-stu-id="882ab-105">Optional.</span></span> <span data-ttu-id="882ab-106">Pour une action d’arrêt, proposée durée du bail doit continuer avant qu’il soit interrompu, en secondes, entre 0 et 60.</span><span class="sxs-lookup"><span data-stu-id="882ab-106">For a break action, proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.</span></span>'
+    optional: true
+    syntax:
+      content: 'breakPeriod?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="882ab-107">Obligatoire pour l’acquisition.</span><span class="sxs-lookup"><span data-stu-id="882ab-107">Required for acquire.</span></span> <span data-ttu-id="882ab-108">Spécifie la durée du bail, en secondes, ou négatif (-1 pour un bail qui n’expire jamais).</span><span class="sxs-lookup"><span data-stu-id="882ab-108">Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.leaseId'
+    name: leaseId
+    fullName: leaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="882ab-109">Identifie le bail.</span><span class="sxs-lookup"><span data-stu-id="882ab-109">Identifies the lease.</span></span> <span data-ttu-id="882ab-110">Peut être spécifié dans n’importe quel format de chaîne GUID valide.</span><span class="sxs-lookup"><span data-stu-id="882ab-110">Can be specified in any valid GUID string format.</span></span>
+    optional: true
+    syntax:
+      content: 'leaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LeaseContainerRequest.proposedLeaseId'
+    name: proposedLeaseId
+    fullName: proposedLeaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="882ab-111">Facultatif pour l’acquisition, requise pour modification.</span><span class="sxs-lookup"><span data-stu-id="882ab-111">Optional for acquire, required for change.</span></span> <span data-ttu-id="882ab-112">ID de bail proposé, dans un format de chaîne GUID.</span><span class="sxs-lookup"><span data-stu-id="882ab-112">Proposed lease ID, in a GUID string format.</span></span>'
+    optional: true
+    syntax:
+      content: 'proposedLeaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.Action1'
+    name: Action1
+    spec.typeScript:
+      - name: Action1
+        fullName: Action1
+        uid: '@azure/arm-storage.Action1'
