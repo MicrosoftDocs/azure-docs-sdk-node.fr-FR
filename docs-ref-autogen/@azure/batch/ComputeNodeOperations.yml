@@ -1,0 +1,1353 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNodeOperations'
+    name: ComputeNodeOperations
+    fullName: ComputeNodeOperations
+    children:
+      - '@azure/batch.ComputeNodeOperations.addUser_2'
+      - '@azure/batch.ComputeNodeOperations.addUser'
+      - '@azure/batch.ComputeNodeOperations.addUser_1'
+      - '@azure/batch.ComputeNodeOperations.constructor'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_2'
+      - '@azure/batch.ComputeNodeOperations.deleteUser'
+      - '@azure/batch.ComputeNodeOperations.deleteUser_1'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling'
+      - '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling'
+      - '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+      - '@azure/batch.ComputeNodeOperations.get_2'
+      - '@azure/batch.ComputeNodeOperations.get'
+      - '@azure/batch.ComputeNodeOperations.get_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+      - '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+      - '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+      - '@azure/batch.ComputeNodeOperations.list_2'
+      - '@azure/batch.ComputeNodeOperations.list'
+      - '@azure/batch.ComputeNodeOperations.list_1'
+      - '@azure/batch.ComputeNodeOperations.listNext_2'
+      - '@azure/batch.ComputeNodeOperations.listNext'
+      - '@azure/batch.ComputeNodeOperations.listNext_1'
+      - '@azure/batch.ComputeNodeOperations.reboot_2'
+      - '@azure/batch.ComputeNodeOperations.reboot'
+      - '@azure/batch.ComputeNodeOperations.reboot_1'
+      - '@azure/batch.ComputeNodeOperations.reimage_2'
+      - '@azure/batch.ComputeNodeOperations.reimage'
+      - '@azure/batch.ComputeNodeOperations.reimage_1'
+      - '@azure/batch.ComputeNodeOperations.updateUser_2'
+      - '@azure/batch.ComputeNodeOperations.updateUser'
+      - '@azure/batch.ComputeNodeOperations.updateUser_1'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+      - '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="967c1-101">Classe représentant une ComputeNodeOperations.</span><span class="sxs-lookup"><span data-stu-id="967c1-101">Class representing a ComputeNodeOperations.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_2'
+    name: 'addUser(string, string, ComputeNodeUser, ComputeNodeAddUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options: ComputeNodeAddUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-102">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-102">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-103">L’ID de l’ordinateur sur lequel vous souhaitez créer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-103">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="967c1-104">Le compte d’utilisateur doit être créé.</span><span class="sxs-lookup"><span data-stu-id="967c1-104">The user account to be created.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeAddUserOptionalParams'
+          description: <span data-ttu-id="967c1-105">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-105">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-106">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-106">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser'
+    name: 'addUser(string, string, ComputeNodeUser, Models.ComputeNodeAddUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-107">Vous pouvez ajouter un compte d’utilisateur à un nœud uniquement lorsqu’il est dans un état inactif ou en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="967c1-107">You can add a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, options?: Models.ComputeNodeAddUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-108">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-108">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-109">L’ID de l’ordinateur sur lequel vous souhaitez créer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-109">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="967c1-110">Le compte d’utilisateur doit être créé.</span><span class="sxs-lookup"><span data-stu-id="967c1-110">The user account to be created.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeAddUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.addUser_1'
+    name: 'addUser(string, string, ComputeNodeUser, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addUser(poolId: string, nodeId: string, user: ComputeNodeUser, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-111">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-111">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-112">L’ID de l’ordinateur sur lequel vous souhaitez créer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-112">The ID of the machine on which you want to create a user account.</span></span>
+        - id: user
+          type:
+            - '@azure/batch.ComputeNodeUser'
+          description: <span data-ttu-id="967c1-113">Le compte d’utilisateur doit être créé.</span><span class="sxs-lookup"><span data-stu-id="967c1-113">The user account to be created.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-114">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-114">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeAddUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.constructor'
+    name: ComputeNodeOperations(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-115">Créer une ComputeNodeOperations.</span><span class="sxs-lookup"><span data-stu-id="967c1-115">Create a ComputeNodeOperations.</span></span>
+    syntax:
+      content: 'new ComputeNodeOperations(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            <span data-ttu-id="967c1-116">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="967c1-116">Reference to the service client.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_2'
+    name: 'deleteUser(string, string, string, ComputeNodeDeleteUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options: ComputeNodeDeleteUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-117">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-117">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-118">L’ID de l’ordinateur sur lequel vous souhaitez supprimer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-118">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-119">Le nom du compte d’utilisateur à supprimer.</span><span class="sxs-lookup"><span data-stu-id="967c1-119">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+          description: <span data-ttu-id="967c1-120">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-121">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser'
+    name: 'deleteUser(string, string, string, Models.ComputeNodeDeleteUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-122">Vous pouvez supprimer un compte d’utilisateur à un nœud uniquement lorsqu’il est dans un état inactif ou en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="967c1-122">You can delete a user account to a node only when it is in the idle or running state.</span></span>
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, options?: Models.ComputeNodeDeleteUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-123">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-123">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-124">L’ID de l’ordinateur sur lequel vous souhaitez supprimer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-124">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-125">Le nom du compte d’utilisateur à supprimer.</span><span class="sxs-lookup"><span data-stu-id="967c1-125">The name of the user account to delete.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDeleteUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.deleteUser_1'
+    name: 'deleteUser(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteUser(poolId: string, nodeId: string, userName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-126">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-126">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-127">L’ID de l’ordinateur sur lequel vous souhaitez supprimer un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-127">The ID of the machine on which you want to delete a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-128">Le nom du compte d’utilisateur à supprimer.</span><span class="sxs-lookup"><span data-stu-id="967c1-128">The name of the user account to delete.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-129">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-129">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDeleteUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_2'
+    name: 'disableScheduling(string, string, ComputeNodeDisableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options: ComputeNodeDisableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-130">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-130">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-131">L’ID du nœud de calcul sur lequel vous souhaitez désactiver la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-131">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+          description: <span data-ttu-id="967c1-132">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-132">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-133">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling'
+    name: 'disableScheduling(string, string, Models.ComputeNodeDisableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-134">Vous pouvez désactiver la tâche de planification sur un nœud uniquement si son état actuel de planification est activée.</span><span class="sxs-lookup"><span data-stu-id="967c1-134">You can disable task scheduling on a node only if its current scheduling state is enabled.</span></span>
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeDisableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-135">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-135">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-136">L’ID du nœud de calcul sur lequel vous souhaitez désactiver la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-136">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeDisableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.disableScheduling_1'
+    name: 'disableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-137">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-137">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-138">L’ID du nœud de calcul sur lequel vous souhaitez désactiver la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-138">The ID of the compute node on which you want to disable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-139">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeDisableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_2'
+    name: 'enableScheduling(string, string, ComputeNodeEnableSchedulingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options: ComputeNodeEnableSchedulingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-140">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-140">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-141">L’ID du nœud de calcul sur lequel vous souhaitez activer la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-141">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+          description: <span data-ttu-id="967c1-142">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-143">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-143">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling'
+    name: 'enableScheduling(string, string, Models.ComputeNodeEnableSchedulingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-144">Vous pouvez activer la tâche de planification sur un nœud uniquement si son état actuel de planification est désactivée.</span><span class="sxs-lookup"><span data-stu-id="967c1-144">You can enable task scheduling on a node only if its current scheduling state is disabled</span></span>
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, options?: Models.ComputeNodeEnableSchedulingOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-145">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-145">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-146">L’ID du nœud de calcul sur lequel vous souhaitez activer la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-146">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeEnableSchedulingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.enableScheduling_1'
+    name: 'enableScheduling(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableScheduling(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-147">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-147">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-148">L’ID du nœud de calcul sur lequel vous souhaitez activer la planification des tâches.</span><span class="sxs-lookup"><span data-stu-id="967c1-148">The ID of the compute node on which you want to enable task scheduling.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-149">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeEnableSchedulingResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_2'
+    name: 'get(string, string, ComputeNodeGetOptionalParams, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options: ComputeNodeGetOptionalParams, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-150">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-150">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-151">L’ID du nœud de calcul que vous souhaitez obtenir des informations.</span><span class="sxs-lookup"><span data-stu-id="967c1-151">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetOptionalParams'
+          description: <span data-ttu-id="967c1-152">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-152">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="967c1-153">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-153">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get'
+    name: 'get(string, string, Models.ComputeNodeGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, options?: Models.ComputeNodeGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-154">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-154">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-155">L’ID du nœud de calcul que vous souhaitez obtenir des informations.</span><span class="sxs-lookup"><span data-stu-id="967c1-155">The ID of the compute node that you want to get information about.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.get_1'
+    name: 'get(string, string, ServiceCallback<ComputeNode>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNode>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-156">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-156">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-157">L’ID du nœud de calcul que vous souhaitez obtenir des informations.</span><span class="sxs-lookup"><span data-stu-id="967c1-157">The ID of the compute node that you want to get information about.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNode>
+          description: |
+            <span data-ttu-id="967c1-158">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_2'
+    name: 'getRemoteDesktop(string, string, ComputeNodeGetRemoteDesktopOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options: ComputeNodeGetRemoteDesktopOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-159">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-159">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-160">L’ID du nœud de calcul pour lequel vous souhaitez obtenir le fichier protocole Bureau à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-160">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+          description: <span data-ttu-id="967c1-161">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-161">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-162">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop'
+    name: 'getRemoteDesktop(string, string, Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="967c1-163">Avant que vous pouvez accéder à un nœud en utilisant le fichier RDP, vous devez créer un compte d’utilisateur sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="967c1-163">Before you can access a node by using the RDP file, you must create a user account on the node.</span></span>
+      <span data-ttu-id="967c1-164">Cette API peut être appelée uniquement sur les pools créés avec une configuration de service cloud.</span><span class="sxs-lookup"><span data-stu-id="967c1-164">This API can only be invoked on pools created with a cloud service configuration.</span></span> <span data-ttu-id="967c1-165">Pour les pools créés avec une configuration de machine virtuelle, consultez l’API GetRemoteLoginSettings.</span><span class="sxs-lookup"><span data-stu-id="967c1-165">For pools created with a virtual machine configuration, see the GetRemoteLoginSettings API.</span></span>
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteDesktopOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-166">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-166">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-167">L’ID du nœud de calcul pour lequel vous souhaitez obtenir le fichier protocole Bureau à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-167">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteDesktopOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteDesktop_1'
+    name: 'getRemoteDesktop(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteDesktop(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-168">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-168">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-169">L’ID du nœud de calcul pour lequel vous souhaitez obtenir le fichier protocole Bureau à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-169">The ID of the compute node for which you want to get the Remote Desktop Protocol file.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteDesktopResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_2'
+    name: 'getRemoteLoginSettings(string, string, ComputeNodeGetRemoteLoginSettingsOptionalParams, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options: ComputeNodeGetRemoteLoginSettingsOptionalParams, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-171">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-171">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-172">L’ID du nœud de calcul pour lequel obtenir les paramètres de connexion à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-172">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+          description: <span data-ttu-id="967c1-173">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="967c1-174">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings'
+    name: 'getRemoteLoginSettings(string, string, Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="967c1-175">Avant de pouvoir à distance se connecter à un nœud en utilisant les paramètres de connexion à distance, vous devez créer un compte d’utilisateur sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="967c1-175">Before you can remotely login to a node using the remote login settings, you must create a user account on the node.</span></span> <span data-ttu-id="967c1-176">Cette API peut être appelée uniquement sur les pools créés avec la propriété de configuration de machine virtuelle.</span><span class="sxs-lookup"><span data-stu-id="967c1-176">This API can be invoked only on pools created with the virtual machine configuration property.</span></span> <span data-ttu-id="967c1-177">Pour les pools créés avec une configuration de service cloud, consultez l’API GetRemoteDesktop.</span><span class="sxs-lookup"><span data-stu-id="967c1-177">For pools created with a cloud service configuration, see the GetRemoteDesktop API.</span></span>'
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, options?: Models.ComputeNodeGetRemoteLoginSettingsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-178">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-178">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-179">L’ID du nœud de calcul pour lequel obtenir les paramètres de connexion à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-179">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeGetRemoteLoginSettingsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.getRemoteLoginSettings_1'
+    name: 'getRemoteLoginSettings(string, string, ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getRemoteLoginSettings(poolId: string, nodeId: string, callback: ServiceCallback<ComputeNodeGetRemoteLoginSettingsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-180">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-180">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-181">L’ID du nœud de calcul pour lequel obtenir les paramètres de connexion à distance.</span><span class="sxs-lookup"><span data-stu-id="967c1-181">The ID of the compute node for which to obtain the remote login settings.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+          description: |
+            <span data-ttu-id="967c1-182">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeGetRemoteLoginSettingsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_2'
+    name: 'list(string, ComputeNodeListOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options: ComputeNodeListOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-183">ID du pool à partir de laquelle vous souhaitez les nœuds de la liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-183">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListOptionalParams'
+          description: <span data-ttu-id="967c1-184">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="967c1-185">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list'
+    name: 'list(string, Models.ComputeNodeListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, options?: Models.ComputeNodeListOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-186">ID du pool à partir de laquelle vous souhaitez les nœuds de la liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-186">The ID of the pool from which you want to list nodes.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.list_1'
+    name: 'list(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(poolId: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-187">ID du pool à partir de laquelle vous souhaitez les nœuds de la liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-187">The ID of the pool from which you want to list nodes.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="967c1-188">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-188">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_2'
+    name: 'listNext(string, ComputeNodeListNextOptionalParams, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: ComputeNodeListNextOptionalParams, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="967c1-189">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-189">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeListNextOptionalParams'
+          description: <span data-ttu-id="967c1-190">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-190">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="967c1-191">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-191">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext'
+    name: 'listNext(string, Models.ComputeNodeListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.ComputeNodeListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="967c1-192">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<ComputeNodeListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ComputeNodeListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="967c1-193">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="967c1-193">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.ComputeNodeListResult>
+          description: |
+            <span data-ttu-id="967c1-194">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_2'
+    name: 'reboot(string, string, ComputeNodeRebootOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options: ComputeNodeRebootOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-195">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-195">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-196">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-196">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeRebootOptionalParams'
+          description: <span data-ttu-id="967c1-197">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-197">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-198">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-198">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot'
+    name: 'reboot(string, string, Models.ComputeNodeRebootOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-199">Vous pouvez redémarrer un nœud uniquement si elle est dans un état inactif ou en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="967c1-199">You can restart a node only if it is in an idle or running state.</span></span>
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, options?: Models.ComputeNodeRebootOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-200">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-200">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-201">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-201">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeRebootOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reboot_1'
+    name: 'reboot(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reboot(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-202">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-202">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-203">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-203">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-204">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-204">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeRebootResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_2'
+    name: 'reimage(string, string, ComputeNodeReimageOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options: ComputeNodeReimageOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-205">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-205">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-206">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-206">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeReimageOptionalParams'
+          description: <span data-ttu-id="967c1-207">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-207">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-208">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-208">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage'
+    name: 'reimage(string, string, Models.ComputeNodeReimageOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-209">Vous pouvez réinstaller le système d’exploitation sur un nœud uniquement si elle est dans un état inactif ou en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="967c1-209">You can reinstall the operating system on a node only if it is in an idle or running state.</span></span> <span data-ttu-id="967c1-210">Cette API peut être appelée uniquement sur les pools créés avec la propriété de configuration de service cloud.</span><span class="sxs-lookup"><span data-stu-id="967c1-210">This API can be invoked only on pools created with the cloud service configuration property.</span></span>
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, options?: Models.ComputeNodeReimageOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-211">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-211">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-212">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-212">The ID of the compute node that you want to restart.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeReimageOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.reimage_1'
+    name: 'reimage(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reimage(poolId: string, nodeId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-213">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-213">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-214">L’ID du nœud de calcul que vous souhaitez redémarrer.</span><span class="sxs-lookup"><span data-stu-id="967c1-214">The ID of the compute node that you want to restart.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-215">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeReimageResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_2'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ComputeNodeUpdateUserOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options: ComputeNodeUpdateUserOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-216">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-216">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-217">L’ID de l’ordinateur sur lequel vous souhaitez mettre à jour d’un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-217">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-218">Le nom du compte d’utilisateur pour mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="967c1-218">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="967c1-219">Les paramètres de la demande.</span><span class="sxs-lookup"><span data-stu-id="967c1-219">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+          description: <span data-ttu-id="967c1-220">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-220">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-221">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-221">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, Models.ComputeNodeUpdateUserOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="967c1-222">Cette opération remplace toutes les propriétés modifiables du compte.</span><span class="sxs-lookup"><span data-stu-id="967c1-222">This operation replaces of all the updatable properties of the account.</span></span> <span data-ttu-id="967c1-223">Par exemple, si l’élément expiryTime n’est pas spécifié, la valeur actuelle est remplacée par la valeur par défaut, pas gauche tels quels.</span><span class="sxs-lookup"><span data-stu-id="967c1-223">For example, if the expiryTime element is not specified, the current value is replaced with the default value, not left unmodified.</span></span> <span data-ttu-id="967c1-224">Vous pouvez mettre à jour un compte d’utilisateur sur un nœud uniquement lorsqu’il est dans un état inactif ou en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="967c1-224">You can update a user account on a node only when it is in the idle or running state.</span></span>'
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, options?: Models.ComputeNodeUpdateUserOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-225">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-225">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-226">L’ID de l’ordinateur sur lequel vous souhaitez mettre à jour d’un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-226">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-227">Le nom du compte d’utilisateur pour mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="967c1-227">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="967c1-228">Les paramètres de la demande.</span><span class="sxs-lookup"><span data-stu-id="967c1-228">The parameters for the request.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUpdateUserOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.updateUser_1'
+    name: 'updateUser(string, string, string, NodeUpdateUserParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateUser(poolId: string, nodeId: string, userName: string, nodeUpdateUserParameter: NodeUpdateUserParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-229">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-229">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-230">L’ID de l’ordinateur sur lequel vous souhaitez mettre à jour d’un compte d’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="967c1-230">The ID of the machine on which you want to update a user account.</span></span>
+        - id: userName
+          type:
+            - string
+          description: <span data-ttu-id="967c1-231">Le nom du compte d’utilisateur pour mettre à jour.</span><span class="sxs-lookup"><span data-stu-id="967c1-231">The name of the user account to update.</span></span>
+        - id: nodeUpdateUserParameter
+          type:
+            - '@azure/batch.NodeUpdateUserParameter'
+          description: <span data-ttu-id="967c1-232">Les paramètres de la demande.</span><span class="sxs-lookup"><span data-stu-id="967c1-232">The parameters for the request.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="967c1-233">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-233">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUpdateUserResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_2'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ComputeNodeUploadBatchServiceLogsOptionalParams, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options: ComputeNodeUploadBatchServiceLogsOptionalParams, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-234">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-234">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-235">L’ID du nœud de calcul à partir de laquelle vous souhaitez télécharger les fichiers journaux du service Azure Batch.</span><span class="sxs-lookup"><span data-stu-id="967c1-235">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="967c1-236">Les fichiers journaux du service Azure Batch chargement la configuration.</span><span class="sxs-lookup"><span data-stu-id="967c1-236">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+          description: <span data-ttu-id="967c1-237">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="967c1-237">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="967c1-238">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-238">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="967c1-239">Il s’agit de collecte des fichiers journaux du service Azure Batch de manière automatique à partir des nœuds si vous rencontrez une erreur et que vous souhaitez faire remonter au support Azure.</span><span class="sxs-lookup"><span data-stu-id="967c1-239">This is for gathering Azure Batch service log files in an automated fashion from nodes if you are experiencing an error and wish to escalate to Azure support.</span></span> <span data-ttu-id="967c1-240">Les fichiers journaux du service Azure Batch doivent être partagées avec le support Azure pour faciliter le débogage des problèmes avec le service Batch.</span><span class="sxs-lookup"><span data-stu-id="967c1-240">The Azure Batch service log files should be shared with Azure support to aid in debugging issues with the Batch service.</span></span>
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, options?: Models.ComputeNodeUploadBatchServiceLogsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-241">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-241">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-242">L’ID du nœud de calcul à partir de laquelle vous souhaitez télécharger les fichiers journaux du service Azure Batch.</span><span class="sxs-lookup"><span data-stu-id="967c1-242">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="967c1-243">Les fichiers journaux du service Azure Batch chargement la configuration.</span><span class="sxs-lookup"><span data-stu-id="967c1-243">The Azure Batch service log files upload configuration.</span></span>
+        - id: options
+          type:
+            - Models.ComputeNodeUploadBatchServiceLogsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeOperations.uploadBatchServiceLogs_1'
+    name: 'uploadBatchServiceLogs(string, string, UploadBatchServiceLogsConfiguration, ServiceCallback<UploadBatchServiceLogsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function uploadBatchServiceLogs(poolId: string, nodeId: string, uploadBatchServiceLogsConfiguration: UploadBatchServiceLogsConfiguration, callback: ServiceCallback<UploadBatchServiceLogsResult>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-244">ID du pool qui contient le nœud de calcul.</span><span class="sxs-lookup"><span data-stu-id="967c1-244">The ID of the pool that contains the compute node.</span></span>
+        - id: nodeId
+          type:
+            - string
+          description: <span data-ttu-id="967c1-245">L’ID du nœud de calcul à partir de laquelle vous souhaitez télécharger les fichiers journaux du service Azure Batch.</span><span class="sxs-lookup"><span data-stu-id="967c1-245">The ID of the compute node from which you want to upload the Azure Batch service log files.</span></span>
+        - id: uploadBatchServiceLogsConfiguration
+          type:
+            - '@azure/batch.UploadBatchServiceLogsConfiguration'
+          description: <span data-ttu-id="967c1-246">Les fichiers journaux du service Azure Batch chargement la configuration.</span><span class="sxs-lookup"><span data-stu-id="967c1-246">The Azure Batch service log files upload configuration.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+          description: |
+            <span data-ttu-id="967c1-247">Le rappel</span><span class="sxs-lookup"><span data-stu-id="967c1-247">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ComputeNodeUploadBatchServiceLogsResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.ComputeNodeUser'
+    name: ComputeNodeUser
+    spec.typeScript:
+      - name: ComputeNodeUser
+        fullName: ComputeNodeUser
+        uid: '@azure/batch.ComputeNodeUser'
+  - uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+    name: ComputeNodeAddUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeAddUserOptionalParams
+        fullName: ComputeNodeAddUserOptionalParams
+        uid: '@azure/batch.ComputeNodeAddUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+    name: ComputeNodeDeleteUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDeleteUserOptionalParams
+        fullName: ComputeNodeDeleteUserOptionalParams
+        uid: '@azure/batch.ComputeNodeDeleteUserOptionalParams'
+  - uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+    name: ComputeNodeDisableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeDisableSchedulingOptionalParams
+        fullName: ComputeNodeDisableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeDisableSchedulingOptionalParams'
+  - uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+    name: ComputeNodeEnableSchedulingOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeEnableSchedulingOptionalParams
+        fullName: ComputeNodeEnableSchedulingOptionalParams
+        uid: '@azure/batch.ComputeNodeEnableSchedulingOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNode>
+    name: ComputeNode>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNode
+        fullName: ComputeNode
+        uid: '@azure/batch.ComputeNode'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetOptionalParams'
+    name: ComputeNodeGetOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetOptionalParams
+        fullName: ComputeNodeGetOptionalParams
+        uid: '@azure/batch.ComputeNodeGetOptionalParams'
+  - uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+    name: ComputeNodeGetRemoteDesktopOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteDesktopOptionalParams
+        fullName: ComputeNodeGetRemoteDesktopOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteDesktopOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeGetRemoteLoginSettingsResult>
+    name: ComputeNodeGetRemoteLoginSettingsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeGetRemoteLoginSettingsResult
+        fullName: ComputeNodeGetRemoteLoginSettingsResult
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+    name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        fullName: ComputeNodeGetRemoteLoginSettingsOptionalParams
+        uid: '@azure/batch.ComputeNodeGetRemoteLoginSettingsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.ComputeNodeListResult>
+    name: ComputeNodeListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ComputeNodeListResult
+        fullName: ComputeNodeListResult
+        uid: '@azure/batch.ComputeNodeListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeListOptionalParams'
+    name: ComputeNodeListOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListOptionalParams
+        fullName: ComputeNodeListOptionalParams
+        uid: '@azure/batch.ComputeNodeListOptionalParams'
+  - uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+    name: ComputeNodeListNextOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeListNextOptionalParams
+        fullName: ComputeNodeListNextOptionalParams
+        uid: '@azure/batch.ComputeNodeListNextOptionalParams'
+  - uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+    name: ComputeNodeRebootOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeRebootOptionalParams
+        fullName: ComputeNodeRebootOptionalParams
+        uid: '@azure/batch.ComputeNodeRebootOptionalParams'
+  - uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+    name: ComputeNodeReimageOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeReimageOptionalParams
+        fullName: ComputeNodeReimageOptionalParams
+        uid: '@azure/batch.ComputeNodeReimageOptionalParams'
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    spec.typeScript:
+      - name: NodeUpdateUserParameter
+        fullName: NodeUpdateUserParameter
+        uid: '@azure/batch.NodeUpdateUserParameter'
+  - uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+    name: ComputeNodeUpdateUserOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUpdateUserOptionalParams
+        fullName: ComputeNodeUpdateUserOptionalParams
+        uid: '@azure/batch.ComputeNodeUpdateUserOptionalParams'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    spec.typeScript:
+      - name: UploadBatchServiceLogsConfiguration
+        fullName: UploadBatchServiceLogsConfiguration
+        uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+  - uid: ServiceCallback<@azure/batch.UploadBatchServiceLogsResult>
+    name: UploadBatchServiceLogsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UploadBatchServiceLogsResult
+        fullName: UploadBatchServiceLogsResult
+        uid: '@azure/batch.UploadBatchServiceLogsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
+    name: ComputeNodeUploadBatchServiceLogsOptionalParams
+    spec.typeScript:
+      - name: ComputeNodeUploadBatchServiceLogsOptionalParams
+        fullName: ComputeNodeUploadBatchServiceLogsOptionalParams
+        uid: '@azure/batch.ComputeNodeUploadBatchServiceLogsOptionalParams'
