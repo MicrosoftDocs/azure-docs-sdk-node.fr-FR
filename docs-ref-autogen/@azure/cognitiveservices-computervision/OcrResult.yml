@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-computervision.OcrResult'
+    name: OcrResult
+    fullName: OcrResult
+    children:
+      - '@azure/cognitiveservices-computervision.OcrResult.language'
+      - '@azure/cognitiveservices-computervision.OcrResult.orientation'
+      - '@azure/cognitiveservices-computervision.OcrResult.regions'
+      - '@azure/cognitiveservices-computervision.OcrResult.textAngle'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant OcrResult.
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.OcrResult.language'
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le code de langue BCP-47 du texte dans l’image.
+    optional: true
+    syntax:
+      content: 'language?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.OcrResult.orientation'
+    name: orientation
+    fullName: orientation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Orientation du texte reconnu dans l’image. La valeur (haut, vers le bas, gauche ou droite) fait référence à la direction dans laquelle la partie supérieure du texte reconnu est face, une fois que l’image a subi une rotation autour de son centre selon le texte détecté (voir la propriété de textAngle) d’angle.'
+    optional: true
+    syntax:
+      content: 'orientation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.OcrResult.regions'
+    name: regions
+    fullName: regions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Un tableau d’objets, où chaque objet représente une zone de texte de reconnu.'
+    optional: true
+    syntax:
+      content: 'regions?: OcrRegion[]'
+      return:
+        type:
+          - '@azure/cognitiveservices-computervision.OcrRegion[]'
+    package: '@azure/cognitiveservices-computervision'
+  - uid: '@azure/cognitiveservices-computervision.OcrResult.textAngle'
+    name: textAngle
+    fullName: textAngle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Angle, en degrés, du texte détecté par rapport à la direction horizontale ou verticale le plus proche. Après rotation de l’image d’entrée dans le sens horaire par cet angle, les lignes de texte reconnu deviennent horizontale ou verticale. En association avec la propriété orientation, il peut être utilisé à superposer des résultats de reconnaissance correctement sur l’image d’origine, en faisant pivoter soit les résultats d’origine image ou reconnaissance selon un angle approprié autour du centre de l’image d’origine. Si l’angle ne peuvent pas être détecté en toute confiance, cette propriété n’est pas présente. Si l’image contient du texte sous différents angles, seule une partie du texte soit correctement reconnue.'
+    optional: true
+    syntax:
+      content: 'textAngle?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-computervision'
+references:
+  - uid: '@azure/cognitiveservices-computervision.OcrRegion[]'
+    name: 'OcrRegion[]'
+    spec.typeScript:
+      - name: OcrRegion
+        fullName: OcrRegion
+        uid: '@azure/cognitiveservices-computervision.OcrRegion'
+      - name: '[]'
+        fullName: '[]'
