@@ -1,0 +1,645 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant une SnapshotOperations.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: "Soumettre une opération pour appliquer un instantané à l’abonnement actuel. Pour chaque instantané, seuls les abonnements inclus dans l’applyScope d’instantané - Take pouvez l’appliquer.<br />\nLes interfaces de capture instantanée sont destinés aux utilisateurs sauvegarder et restaurer leurs données face à partir de l’abonnement d’une face à un autre, au sein de la même région ou dans différentes régions. Le flux de travail contient deux phases, appelle d’abord utilisateur instantané - Take pour créer une copie de l’objet source et le stocker en tant qu’instantané, puis appelle instantané - appliquer pour coller la capture instantanée à un abonnement cible. Les instantanés sont stockés dans un emplacement centralisé (par instance Azure), afin qu’elles puissent être appliquées entre les comptes et les régions.<br />\nInstantané de l’application est une opération asynchrone. Id d’opération peut être obtenu à partir du champ «\_Opération-Location\_» dans l’en-tête de réponse, utilisable dans OperationStatus - Get pour suivre la progression de l’application de l’instantané. L’id d’objet cible sera inclus dans le champ «\_resourceLocation\_» OperationStatus - réponse Get lorsque l’état de l’opération est «\_réussi\_».<br />\nCapture instantanée de l’application de temps varie selon le nombre d’entrées de face et de la personne dans l’objet de l’instantané.\nIl pourrait être secondes, ou jusqu'à 1 heure pour 1 000 000 personnes avec plusieurs faces.<br />\nInstantanés seront automatiquement expirés et nettoyées dans 48 heures après sa création par capture instantanée\n- Prendre. L’abonnement cible est donc nécessaire d’appliquer l’instantané dans les 48 heures depuis sa création.<br />\nApplication d’un instantané ne sera pas bloquer toute autre opération sur la cible de l’objet, toutefois il n’est pas recommandé, car l’exactitude ne peut pas être garantie au cours de l’application de l’instantané. Une fois que l’application de la capture instantanée est terminée, toutes les opérations vers l’objet cible peuvent fonctionner normalement.\nInstantané inclut également les résultats de la formation de l’objet source, ce qui signifie qu’abonnement cible de la capture instantanée appliquée pour ne pas besoin recalculer l’objet cible avant d’appeler identifier/FindSimilar.<br />\nUn seul instantané peut être appliqué plusieurs fois en parallèle, lorsque actuellement, seuls CreateNew apply est pris en charge, ce qui signifie que l’opération d’application échoue si l’abonnement cible déjà contient un objet du même type et à l’aide de la même ID d’objet. Les utilisateurs peuvent spécifier «\_objectId\_» dans le corps de la demande afin d’éviter ces conflits.<br />\n* Quota d’abonnement de niveau gratuit\_: appliquer des 100 opérations par mois.\n* Quota d’abonnement le niveau s0\_: 100 appliquer des opérations par jour."
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet cible spécifié utilisateur créé à partir de l’instantané.
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet cible spécifié utilisateur créé à partir de l’instantané.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet cible spécifié utilisateur créé à partir de l’instantané.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Supprimer un instantané existant en fonction de l’ID d’instantané. Toutes les données d’objet et les informations dans l’instantané seront également supprimés. Uniquement l’abonnement source qui a pris l’instantané peut supprimer la capture instantanée. Si l’utilisateur ne supprime pas une capture instantanée avec cette API, l’instantané est toujours supprimée automatiquement dans les 48 heures après sa création.'
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Récupérer des informations sur un instantané. Capture instantanée est uniquement accessible à l’abonnement source qui a accédé et abonnements cibles inclus dans l’applyScope dans instantané - prennent.
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Récupérer l’état d’une opération de capture instantanée ou d’appliquer take.
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID faisant référence à une opération de capture instantanée particulier take / s’appliquent.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID faisant référence à une opération de capture instantanée particulier take / s’appliquent.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: ID faisant référence à une opération de capture instantanée particulier take / s’appliquent.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Répertorier tous les instantanés accessibles avec les informations connexes, y compris les captures instantanées qui ont été effectuées par l’utilisateur ou captures instantanées à appliquer à l’utilisateur (id d’abonnement a été inclus dans l’applyScope d’instantané - prendre).'
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer une SnapshotOperations.
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: "Soumettre une opération de prendre un instantané de la liste de visage, liste de visages de grande taille, personne groupe ou personne volumineux, avec le type de l’instantané spécifié par l’utilisateur, id d’objet source, d’appliquer une utilisateur facultatif de données et la portée.<br />\nLes interfaces de capture instantanée sont destinés aux utilisateurs sauvegarder et restaurer leurs données face à partir de l’abonnement d’une face à un autre, au sein de la même région ou dans différentes régions. Le flux de travail contient deux phases, appelle d’abord utilisateur instantané - Take pour créer une copie de l’objet source et le stocker en tant qu’instantané, puis appelle instantané - appliquer pour coller la capture instantanée à un abonnement cible. Les instantanés sont stockés dans un emplacement centralisé (par instance Azure), afin qu’elles puissent être appliquées entre les comptes et les régions.<br />\nCréer un instantané est une opération asynchrone. Id d’opération peut être obtenu à partir du champ «\_Opération-Location\_» dans l’en-tête de réponse, utilisable dans OperationStatus - Get pour suivre la progression de la création de l’instantané. L’id d’instantané sera inclus dans le champ «\_resourceLocation\_» OperationStatus - réponse Get lorsque l’état de l’opération est «\_réussi\_».<br />\nInstantané pris temps varie selon le nombre d’entrées de face et de la personne dans l’objet source. Il peut être en secondes, ou jusqu'à plusieurs heures pour les 1 000 000 personnes à plusieurs faces.<br />\nInstantanés seront automatiquement expirés et nettoyées dans 48 heures après sa création par capture instantanée\n- Prendre. Utilisateur peut supprimer l’instantané à l’aide de la capture instantanée - Delete par eux-mêmes à tout moment avant l’expiration.<br />\nPrise d’instantané pour un objet particulier ne bloque pas toutes les autres opérations sur l’objet. Toutes les opérations de lecture (Get/liste et identifiez/FindSimilar/Verify) peuvent être effectuées comme d’habitude. Pour toutes les opérations accessible en écriture, y compris Add/Update/Delete, l’objet source ou de ses personnes/visages et former, ils sont pas bloqués, mais pas recommandées, car les mises à jour accessible en écriture ne sont pas répercutées dans la capture instantanée pendant sa prise. Une fois en prenant des instantanés sont terminée, toutes les opérations de lecture et en écriture peuvent fonctionner normalement. Instantané inclura également les résultats de la formation de l’objet source, ce qui signifie qu’abonnement cible de la capture instantanée appliquée pour ne pas besoin recalculer l’objet cible avant d’appeler identifier/FindSimilar.<br />\n* Quota d’abonnement de niveau gratuit\_: 100 effectuer des opérations par mois.\n* Quota d’abonnement le niveau s0\_: 100 effectuer des opérations par jour."
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: "Utilisateur spécifié de type pour l’objet source pour prendre un instantané à partir de. Actuellement FaceList, groupe de personnes, LargeFaceList et LargePersonGroup sont pris en charge. Les valeurs possibles incluent\_: 'FaceList', 'LargeFaceList', 'LargePersonGroup', 'PersonGroup'"
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet utilisateur source spécifié pour prendre un instantané à partir de.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Utilisateur spécifié un tableau d’ID d’abonnement de visage cible pour l’instantané. Pour chaque instantané, seuls les abonnements inclus dans l’applyScope d’instantané - Take pouvez l’appliquer.'
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: "Utilisateur spécifié de type pour l’objet source pour prendre un instantané à partir de. Actuellement FaceList, groupe de personnes, LargeFaceList et LargePersonGroup sont pris en charge. Les valeurs possibles incluent\_: 'FaceList', 'LargeFaceList', 'LargePersonGroup', 'PersonGroup'"
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet utilisateur source spécifié pour prendre un instantané à partir de.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Utilisateur spécifié un tableau d’ID d’abonnement de visage cible pour l’instantané. Pour chaque instantané, seuls les abonnements inclus dans l’applyScope d’instantané - Take pouvez l’appliquer.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: "Utilisateur spécifié de type pour l’objet source pour prendre un instantané à partir de. Actuellement FaceList, groupe de personnes, LargeFaceList et LargePersonGroup sont pris en charge. Les valeurs possibles incluent\_: 'FaceList', 'LargeFaceList', 'LargePersonGroup', 'PersonGroup'"
+        - id: objectId
+          type:
+            - string
+          description: Id d’objet utilisateur source spécifié pour prendre un instantané à partir de.
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Utilisateur spécifié un tableau d’ID d’abonnement de visage cible pour l’instantané. Pour chaque instantané, seuls les abonnements inclus dans l’applyScope d’instantané - Take pouvez l’appliquer.'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Mettre à jour les informations d’un instantané. Uniquement l’abonnement source qui a pris l’instantané peut mettre à jour l’instantané.
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: ID faisant référence à un instantané particulier.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'

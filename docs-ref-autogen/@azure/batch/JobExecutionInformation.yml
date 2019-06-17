@@ -1,0 +1,100 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - '@azure/batch.JobExecutionInformation.endTime'
+      - '@azure/batch.JobExecutionInformation.poolId'
+      - '@azure/batch.JobExecutionInformation.schedulingError'
+      - '@azure/batch.JobExecutionInformation.startTime'
+      - '@azure/batch.JobExecutionInformation.terminateReason'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant JobExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’heure d’achèvement du travail. Cette propriété est définie uniquement si le travail est dans l’état terminé.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ID du pool auquel ce travail est affecté. Cet élément contient le pool réel où le travail est assigné. Lorsque vous obtenez des détails d’une tâche à partir du service, elles contiennent également un élément poolInfo, qui contient les données de configuration de pool de lorsque le travail a été ajouté ou mis à jour.
+      Cet élément poolInfo peut également contenir un élément poolId. Le cas échéant, les deux ID sont les mêmes.
+      Si elle n’est pas le cas, cela signifie que l’exécution du travail sur un pool automatique, et cette propriété contient l’ID de ce pool automatique.
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.schedulingError'
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Détails de toute erreur rencontrée par le service de démarrage du travail. Cette propriété n’est pas définie si aucune erreur de démarrage de la tâche s’est produite.
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - '@azure/batch.JobSchedulingError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’heure de début de la tâche. Il s’agit de l’heure à laquelle le travail a été créé.
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.terminateReason'
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Une chaîne décrivant la raison de la tâche est terminée. Cette propriété est définie uniquement si le travail est dans l’état terminé. Si le service Batch met fin au travail, il définit la raison comme suit\_: JMComplete - la tâche du Gestionnaire de travaux terminée et killJobOnCompletion a été définie sur true.\nMaxWallClockTimeExpiry - la tâche atteint son la contrainte. TerminateJobSchedule\n- l’exécution du travail dans le cadre d’une planification et la planification s’est arrêté. AllTasksComplete - attribut d’onAllTasksComplete du travail est défini sur terminatejob, et toutes les tâches du travail sont terminées.\nTâche ayant échoué - attribut d’onTaskFailure du travail a performExitOptionsJobAction et une tâche du travail a échoué avec une condition de sortie qui a spécifié une action de tâche de terminatejob. Toute autre chaîne est une raison définie par l’utilisateur spécifiée dans un appel à l’opération «\_Arrêter un travail\_»."
+    optional: true
+    syntax:
+      content: 'terminateReason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSchedulingError'
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: '@azure/batch.JobSchedulingError'

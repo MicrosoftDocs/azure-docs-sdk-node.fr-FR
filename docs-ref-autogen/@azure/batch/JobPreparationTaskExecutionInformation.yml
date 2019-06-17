@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation'
+    name: JobPreparationTaskExecutionInformation
+    fullName: JobPreparationTaskExecutionInformation
+    children:
+      - '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.result'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.state'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant JobPreparationTaskExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informations sur le conteneur sous lequel la tâche s’exécute. Cette propriété est définie uniquement si la tâche s’exécute dans un contexte de conteneur.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Heure à laquelle la tâche de préparation du travail terminée. Cette propriété est définie uniquement si la tâche est dans l’état terminé.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le code de sortie du programme spécifié sur la ligne de commande de tâche. Ce paramètre est renvoyé uniquement si la tâche est dans l’état terminé. Le code de sortie pour un processus reflète la convention spécifique implémentée par le développeur d’applications pour ce processus. Si vous utilisez la valeur de code de sortie pour prendre des décisions dans votre code, n’oubliez pas que vous connaissez la convention de code de sortie utilisée par le processus d’application. Notez que le code de sortie peut également être généré par le système d’exploitation de nœud de calcul, par exemple quand un processus d’arrêt est forcé.'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informations de description de l’échec de la tâche, le cas échéant. Cette propriété est définie uniquement si la tâche est dans l’état terminé et a rencontré une erreur.'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La dernière heure à laquelle une nouvelle tentative de la tâche de préparation du travail a démarré en cours d’exécution. Cette propriété est définie uniquement si la tâche a été tentée (autrement dit, retryCount est différent de zéro). S’il est présent, cela est généralement identique à l’heure de début, mais peut être différent si la tâche a été redémarrée pour des raisons autres que de nouvelles tentatives\_; par exemple, si le nœud de calcul a été redémarré pendant une nouvelle tentative, l’heure de début est mis à jour mais n’est pas le lastRetryTime."
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le résultat de l’exécution des tâches. Si la valeur est 'échec', les détails de l’échec peuvent être trouvés dans la propriété failureInfo. Les valeurs possibles sont\_: «\_réussite\_», «\_échec\_»"
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nombre de fois que le service Batch a réessayé d’exécuter la tâche. Tâche application (code de sortie différent de zéro) sont réessayées, erreurs (la tâche n’a pas pu être exécutée) de prétraitement et erreurs de chargement de fichier ne sont pas retentées. Le service Batch réessaie la tâche jusqu''à atteindre la limite spécifiée par les contraintes. Tâche application (code de sortie différent de zéro) sont réessayées, erreurs (la tâche n’a pas pu être exécutée) de prétraitement et erreurs de chargement de fichier ne sont pas retentées. Le service Batch réessaie la tâche jusqu''à atteindre la limite spécifiée par les contraintes.'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Heure à laquelle l’exécution de la tâche a commencé. Si la tâche a été redémarrée ou retentée, il s’agit de la dernière heure à laquelle l’exécution de la tâche a commencé.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état actuel de la tâche de préparation du travail sur le nœud de calcul. Les valeurs possibles sont\_: «\_running\_», «\_terminée\_»"
+    syntax:
+      content: 'state: JobPreparationTaskState'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le répertoire racine de la tâche de préparation du travail sur le nœud de calcul. Vous pouvez utiliser ce chemin d’accès pour récupérer les fichiers créés par la tâche, telles que des fichiers journaux.'
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: URL vers le répertoire racine de la tâche de préparation du travail sur le nœud de calcul.
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobPreparationTaskState'
+    name: JobPreparationTaskState
+    spec.typeScript:
+      - name: JobPreparationTaskState
+        fullName: JobPreparationTaskState
+        uid: '@azure/batch.JobPreparationTaskState'
