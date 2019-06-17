@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a1961-101">Une interface qui représente la valeur de JobConstraints.</span><span class="sxs-lookup"><span data-stu-id="a1961-101">An interface representing JobConstraints.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a1961-102">Le nombre maximal de fois où que chaque tâche peut être retentée.</span><span class="sxs-lookup"><span data-stu-id="a1961-102">The maximum number of times each task may be retried.</span></span> <span data-ttu-id="a1961-103">Le service Batch retente une tâche si le code de sortie de celle-ci diffère de zéro.</span><span class="sxs-lookup"><span data-stu-id="a1961-103">The Batch service retries a task if its exit code is nonzero.</span></span> <span data-ttu-id="a1961-104">Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives.</span><span class="sxs-lookup"><span data-stu-id="a1961-104">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="a1961-105">Le service Batch va tenter de chaque tâche qu’une seule fois et peut réessayer jusqu''à cette limite.</span><span class="sxs-lookup"><span data-stu-id="a1961-105">The Batch service will try each task once, and may then retry up to this limit.</span></span> <span data-ttu-id="a1961-106">Par exemple, si le nombre maximal de nouvelles tentatives est 3, le service Batch peut tenter d’exécuter la tâche jusqu’à 4 fois (tentative initiale + 3 tentatives supplémentaires).</span><span class="sxs-lookup"><span data-stu-id="a1961-106">For example, if the maximum retry count is 3, Batch tries a task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="a1961-107">Si le nombre maximal de tentatives est 0, le service Batch ne réessaye pas d’exécuter des tâches.</span><span class="sxs-lookup"><span data-stu-id="a1961-107">If the maximum retry count is 0, the Batch service does not retry tasks.</span></span> <span data-ttu-id="a1961-108">Si le nombre maximal de nouvelles tentatives est -1, le service Batch réessaie d’exécuter les tâches sans limite.</span><span class="sxs-lookup"><span data-stu-id="a1961-108">If the maximum retry count is -1, the Batch service retries tasks without limit.</span></span> <span data-ttu-id="a1961-109">La valeur par défaut est 0 (aucune nouvelle tentative).</span><span class="sxs-lookup"><span data-stu-id="a1961-109">The default value is 0 (no retries).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a1961-110">La durée maximale, il peut s’exécuter, mesurée à partir de la création de la tâche.</span><span class="sxs-lookup"><span data-stu-id="a1961-110">The maximum elapsed time that the job may run, measured from the time the job is created.</span></span> <span data-ttu-id="a1961-111">Si la tâche ne se termine pas dans le délai imparti, le service Batch met fin à elle et toutes les tâches qui sont en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="a1961-111">If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running.</span></span> <span data-ttu-id="a1961-112">Dans ce cas, la raison d’arrêt sera MaxWallClockTimeExpiry.</span><span class="sxs-lookup"><span data-stu-id="a1961-112">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span>
+      <span data-ttu-id="a1961-113">Si cette propriété n’est pas spécifiée, il n’existe aucune limite de temps sur la durée pendant laquelle il peut s’exécuter.</span><span class="sxs-lookup"><span data-stu-id="a1961-113">If this property is not specified, there is no time limit on how long the job may run.</span></span>
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

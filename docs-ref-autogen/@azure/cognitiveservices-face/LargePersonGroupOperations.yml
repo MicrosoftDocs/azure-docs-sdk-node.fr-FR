@@ -1,0 +1,609 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations'
+    name: LargePersonGroupOperations
+    fullName: LargePersonGroupOperations
+    children:
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.create_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.create'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.create_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.get_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.get'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.get_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.constructor'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.list_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.list'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.list_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.train'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.train_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.train_1'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.update_2'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.update'
+      - '@azure/cognitiveservices-face.LargePersonGroupOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="25a89-101">Classe représentant une LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="25a89-101">Class representing a LargePersonGroupOperations.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_2'
+    name: 'create(string, LargePersonGroupCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(largePersonGroupId: string, options: LargePersonGroupCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-102">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-102">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.LargePersonGroupCreateOptionalParams'
+          description: <span data-ttu-id="25a89-103">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-103">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-104">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-104">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create'
+    name: 'create(string, Models.LargePersonGroupCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: "<span data-ttu-id=\"25a89-105\">Créer un nouveau groupe de personne volumineux avec largePersonGroupId spécifié par l’utilisateur, nom, un userData facultatif et le recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-105\">Create a new large person group with user-specified largePersonGroupId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"25a89-106\">Un groupe de personnes volumineux est le conteneur des données personne chargées, y compris les images de face et de la fonctionnalité de reconnaissance faciale et jusqu'à 1 000 000 personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-106\">A large person group is the container of the uploaded person data, including face images and face recognition feature, and up to 1,000,000 people.</span></span>\n<br /> <span data-ttu-id=\"25a89-107\">Après la création, utilisez [LargePersonGroup personne - créer](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) pour ajouter une personne dans le groupe et appelez [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) pour préparer ce groupe [doivent faire Face\_: identifier](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-107\">After creation, use [LargePersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) to add person into the group, and call [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"25a89-108\">Le visage de la personne, l’image et userData seront stockées sur le serveur jusqu'à ce que [LargePersonGroup personne - supprimer](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) ou [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-108\">The person face, image, and userData will be stored on server until [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>\n<br />\n* <span data-ttu-id=\"25a89-109\">Quota d’abonnement de niveau gratuit\_: 1 000 groupes de personnes de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-109\">Free-tier subscription quota: 1,000 large person groups.</span></span>\n* <span data-ttu-id=\"25a89-110\">Quota d’abonnement le niveau s0\_: 1 000 000 groupes de personnes de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-110\">S0-tier subscription quota: 1,000,000 large person groups.</span></span>\n<br />\n<span data-ttu-id=\"25a89-111\">'recognitionModel' doit être spécifié à associer à ce groupe de personnes volumineux.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-111\">'recognitionModel' should be specified to associate with this large person group.</span></span> <span data-ttu-id=\"25a89-112\">La valeur par défaut pour 'recognitionModel' est 'recognition_01', si le dernier modèle nécessaire, veuillez spécifier explicitement le modèle que vous avez besoin dans ce paramètre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-112\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"25a89-113\">Nouvelles faces qui sont ajoutés à un groupe existant de la personne volumineux utilisera le modèle de reconnaissance qui a déjà associé à la collection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-113\">New faces that are added to an existing large person group will use the recognition model that's already associated with the collection.</span></span>\n<span data-ttu-id=\"25a89-114\">Fonctionnalités existantes de face dans un groupe de personnes volumineux ne peut pas être mis à jour aux fonctionnalités extraites par une autre version de modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-114\">Existing face features in a large person group can't be updated to features extracted by another version of recognition model.</span></span>"
+    syntax:
+      content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-115">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-115">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - Models.LargePersonGroupCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_1'
+    name: 'create(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(largePersonGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-116">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-116">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-117">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-117">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="25a89-118">Supprimer un groupe existant de la personne volumineux.</span><span class="sxs-lookup"><span data-stu-id="25a89-118">Delete an existing large person group.</span></span> <span data-ttu-id="25a89-119">Conservées face les fonctionnalités de toutes les personnes dans le groupe de personnes volumineux seront également supprimées.</span><span class="sxs-lookup"><span data-stu-id="25a89-119">Persisted face features of all people in the large person group will also be deleted.</span></span>
+    syntax:
+      content: 'function deleteMethod(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-120">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-120">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(largePersonGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-121">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-121">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="25a89-122">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-122">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-123">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-123">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(largePersonGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-124">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-124">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-125">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-125">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.get_2'
+    name: 'get(string, LargePersonGroupGetOptionalParams, ServiceCallback<LargePersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(largePersonGroupId: string, options: LargePersonGroupGetOptionalParams, callback: ServiceCallback<LargePersonGroup>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-126">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-126">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.LargePersonGroupGetOptionalParams'
+          description: <span data-ttu-id="25a89-127">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-127">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
+          description: |
+            <span data-ttu-id="25a89-128">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-128">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.get'
+    name: 'get(string, Models.LargePersonGroupGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="25a89-129">Récupérer les informations d’un groupe de personnes volumineux, notamment son nom et userData recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="25a89-129">Retrieve the information of a large person group, including its name, userData and recognitionModel.</span></span> <span data-ttu-id="25a89-130">Cette API renvoie une personne volumineuse uniquement les informations de groupe, utilisez [LargePersonGroup personne - liste](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) à la place pour récupérer des informations de personne sous le groupe de personnes volumineux.</span><span class="sxs-lookup"><span data-stu-id="25a89-130">This API returns large person group information only, use [LargePersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) instead to retrieve person information under the large person group.</span></span>'
+    syntax:
+      content: 'function get(largePersonGroupId: string, options?: Models.LargePersonGroupGetOptionalParams)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-131">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-131">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - Models.LargePersonGroupGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.get_1'
+    name: 'get(string, ServiceCallback<LargePersonGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(largePersonGroupId: string, callback: ServiceCallback<LargePersonGroup>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-132">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-132">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
+          description: |
+            <span data-ttu-id="25a89-133">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-133">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus'
+    name: 'getTrainingStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="25a89-134">Récupérer l’état de la formation d’un groupe de personne volumineux (terminé ou en cours).</span><span class="sxs-lookup"><span data-stu-id="25a89-134">Retrieve the training status of a large person group (completed or ongoing).</span></span>
+    syntax:
+      content: 'function getTrainingStatus(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-135">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-135">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus_2'
+    name: 'getTrainingStatus(string, RequestOptionsBase, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(largePersonGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-136">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-136">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="25a89-137">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-137">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            <span data-ttu-id="25a89-138">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-138">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.getTrainingStatus_1'
+    name: 'getTrainingStatus(string, ServiceCallback<TrainingStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrainingStatus(largePersonGroupId: string, callback: ServiceCallback<TrainingStatus>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-139">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-139">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+          description: |
+            <span data-ttu-id="25a89-140">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-140">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.constructor'
+    name: LargePersonGroupOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="25a89-141">Créer une LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="25a89-141">Create a LargePersonGroupOperations.</span></span>
+    syntax:
+      content: 'new LargePersonGroupOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            <span data-ttu-id="25a89-142">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="25a89-142">Reference to the service client.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.list_2'
+    name: 'list(LargePersonGroupListOptionalParams, ServiceCallback<LargePersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: LargePersonGroupListOptionalParams, callback: ServiceCallback<LargePersonGroup[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.LargePersonGroupListOptionalParams'
+          description: <span data-ttu-id="25a89-143">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-143">The optional parameters</span></span>
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
+          description: |
+            <span data-ttu-id="25a89-144">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.list'
+    name: list(Models.LargePersonGroupListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: "<span data-ttu-id=\"25a89-145\">Répertorient des tous les grandes personne groupes existants largePersonGroupId, nom, userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-145\">List all existing large person groups’ largePersonGroupId, name, userData and recognitionModel.</span></span><br />\n* <span data-ttu-id=\"25a89-146\">Groupes de personnes volumineux sont stockés dans l’ordre alphabétique de largePersonGroupId.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-146\">Large person groups are stored in alphabetical order of largePersonGroupId.</span></span>\n* <span data-ttu-id=\"25a89-147\">paramètre «\_start\_» (chaîne, facultatif) est une valeur de largePersonGroupId fourni par l’utilisateur qui les entrées ayant le plus grands ID par comparaison de chaînes retournés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-147\">\"start\" parameter (string, optional) is a user-provided largePersonGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id=\"25a89-148\">«\_start\_» la valeur vide pour indiquer le retour à partir du premier élément.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-148\">\"start\" set to empty to indicate return from the first item.</span></span>\n* <span data-ttu-id=\"25a89-149\">paramètre «\_top\_» (int, facultatif) spécifie le nombre d’entrées à retourner.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-149\">\"top\" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id=\"25a89-150\">Un nombre maximal de 1 000 entrées peut être retournée dans un seul appel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-150\">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id=\"25a89-151\">Pour extraire plus, vous pouvez spécifier «\_start\_» avec l’Id de l’entrée retournée dernière de l’appel actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-151\">To fetch more, you can specify \"start\" with the last returned entry’s Id of the current call.</span></span>\n<br />\n<span data-ttu-id=\"25a89-152\">Par exemple, nombre total de 5 groupes de personnes volumineux\_: «\_group1\_»,..., «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-152\">For example, total 5 large person groups: \"group1\", ..., \"group5\".</span></span>\n<br /> <span data-ttu-id=\"25a89-153\">«\_Démarrer = & haut =\_» renvoie tous les groupes de 5.</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-153\">\"start=&top=\" will return all 5 groups.</span></span>\n<br /> <span data-ttu-id=\"25a89-154\">«\_Démarrer = & haut = 2\_» retournera «\_group1\_», «\_group2\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-154\">\"start=&top=2\" will return \"group1\", \"group2\".</span></span>\n<br /> <span data-ttu-id=\"25a89-155\">«\_Démarrer = group2 & haut = 3\_» retournera «\_Groupe3\_», «\_groupe 4\_», «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"25a89-155\">\"start=group2&top=3\" will return \"group3\", \"group4\", \"group5\".</span></span>"
+    syntax:
+      content: 'function list(options?: Models.LargePersonGroupListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.LargePersonGroupListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.LargePersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.list_1'
+    name: 'list(ServiceCallback<LargePersonGroup[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<LargePersonGroup[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
+          description: |
+            <span data-ttu-id="25a89-156">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.LargePersonGroupListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.train'
+    name: 'train(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="25a89-157">File d’attente d’une tâche de formation de personne grand groupe, la tâche de formation ne peut pas être démarrée immédiatement.</span><span class="sxs-lookup"><span data-stu-id="25a89-157">Queue a large person group training task, the training task may not be started immediately.</span></span>'
+    syntax:
+      content: 'function train(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-158">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-158">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.train_2'
+    name: 'train(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(largePersonGroupId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-159">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-159">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="25a89-160">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-160">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-161">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-161">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.train_1'
+    name: 'train(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function train(largePersonGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-162">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-162">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-163">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-163">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.update_2'
+    name: 'update(string, LargePersonGroupUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(largePersonGroupId: string, options: LargePersonGroupUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-164">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-164">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.LargePersonGroupUpdateOptionalParams'
+          description: <span data-ttu-id="25a89-165">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="25a89-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-166">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-166">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.update'
+    name: 'update(string, Models.LargePersonGroupUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="25a89-167">Mettre à jour le nom d’affichage de personne grand groupe existante et userData.</span><span class="sxs-lookup"><span data-stu-id="25a89-167">Update an existing large person group's display name and userData.</span></span> <span data-ttu-id="25a89-168">Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.</span><span class="sxs-lookup"><span data-stu-id="25a89-168">The properties which does not appear in request body will not be updated.</span></span>
+    syntax:
+      content: 'function update(largePersonGroupId: string, options?: Models.LargePersonGroupUpdateOptionalParams)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-169">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-169">Id referencing a particular large person group.</span></span>
+        - id: options
+          type:
+            - Models.LargePersonGroupUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(largePersonGroupId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: largePersonGroupId
+          type:
+            - string
+          description: <span data-ttu-id="25a89-170">ID faisant référence à un groupe de personnes de grand particulier.</span><span class="sxs-lookup"><span data-stu-id="25a89-170">Id referencing a particular large person group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="25a89-171">Le rappel</span><span class="sxs-lookup"><span data-stu-id="25a89-171">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupCreateOptionalParams'
+    name: LargePersonGroupCreateOptionalParams
+    spec.typeScript:
+      - name: LargePersonGroupCreateOptionalParams
+        fullName: LargePersonGroupCreateOptionalParams
+        uid: '@azure/cognitiveservices-face.LargePersonGroupCreateOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
+    name: LargePersonGroup>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LargePersonGroup
+        fullName: LargePersonGroup
+        uid: '@azure/cognitiveservices-face.LargePersonGroup'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupGetOptionalParams'
+    name: LargePersonGroupGetOptionalParams
+    spec.typeScript:
+      - name: LargePersonGroupGetOptionalParams
+        fullName: LargePersonGroupGetOptionalParams
+        uid: '@azure/cognitiveservices-face.LargePersonGroupGetOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
+    name: TrainingStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TrainingStatus
+        fullName: TrainingStatus
+        uid: '@azure/cognitiveservices-face.TrainingStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
+    name: 'LargePersonGroup[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: LargePersonGroup
+        fullName: LargePersonGroup
+        uid: '@azure/cognitiveservices-face.LargePersonGroup'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupListOptionalParams'
+    name: LargePersonGroupListOptionalParams
+    spec.typeScript:
+      - name: LargePersonGroupListOptionalParams
+        fullName: LargePersonGroupListOptionalParams
+        uid: '@azure/cognitiveservices-face.LargePersonGroupListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupUpdateOptionalParams'
+    name: LargePersonGroupUpdateOptionalParams
+    spec.typeScript:
+      - name: LargePersonGroupUpdateOptionalParams
+        fullName: LargePersonGroupUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.LargePersonGroupUpdateOptionalParams'
