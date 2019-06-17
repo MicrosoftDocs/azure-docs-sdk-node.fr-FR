@@ -1,0 +1,220 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.Job'
+    name: Job
+    fullName: Job
+    children:
+      - '@azure/arm-mediaservices.Job.correlationData'
+      - '@azure/arm-mediaservices.Job.created'
+      - '@azure/arm-mediaservices.Job.description'
+      - '@azure/arm-mediaservices.Job.id'
+      - '@azure/arm-mediaservices.Job.input'
+      - '@azure/arm-mediaservices.Job.lastModified'
+      - '@azure/arm-mediaservices.Job.name'
+      - '@azure/arm-mediaservices.Job.outputs'
+      - '@azure/arm-mediaservices.Job.priority'
+      - '@azure/arm-mediaservices.Job.state'
+      - '@azure/arm-mediaservices.Job.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Un type de ressource de travail. La progression et l’état peuvent être obtenus par l’interrogation d’un travail ou de s’abonner aux événements à l’aide de EventGrid.
+    extends:
+      name: '@azure/arm-mediaservices.ProxyResource'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.correlationData'
+    name: correlationData
+    fullName: correlationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Pour le client, valeur paires de clés qui seront affichera dans les événements d’état de travail et JobOutput.'
+    optional: true
+    syntax:
+      content: 'correlationData?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.created'
+    name: created
+    fullName: created
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Date et heure UTC de création du travail, au format « AAAA-MM-JJThh:mm:ssZ ».\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'created?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description facultative du travail fournie par le client.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "ID de ressource complet pour la ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.input'
+    name: input
+    fullName: input
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Entrées du travail.
+    syntax:
+      content: 'input: JobInputUnion'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobInputUnion'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Date et heure UTC de dernière modification du travail, au format « AAAA-MM-JJThh:mm:ssZ ».\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Nom de la ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.outputs'
+    name: outputs
+    fullName: outputs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sorties du travail.
+    syntax:
+      content: 'outputs: JobOutputUnion[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobOutputUnion[]'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Priorité avec laquelle le travail doit être traité. Les travaux de priorité plus élevée sont traités avant ceux de priorité plus faible. Si aucune valeur n’est définie, la priorité par défaut est «\_normale\_». Les valeurs possibles incluent\_: «\_Low\_», «\_Normal\_», «\_High\_»"
+    optional: true
+    syntax:
+      content: 'priority?: Priority'
+      return:
+        type:
+          - '@azure/arm-mediaservices.Priority'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "État actuel du travail. Les valeurs possibles incluent\_: 'Canceled', 'Canceling', 'Error', 'Finished', 'Processing', 'Queued', 'Scheduled' **NOTE: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobState'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Job.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de la ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.ProxyResource'
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: '@azure/arm-mediaservices.ProxyResource'
+  - uid: '@azure/arm-mediaservices.JobInputUnion'
+    name: JobInputUnion
+    spec.typeScript:
+      - name: JobInputUnion
+        fullName: JobInputUnion
+        uid: '@azure/arm-mediaservices.JobInputUnion'
+  - uid: '@azure/arm-mediaservices.JobOutputUnion[]'
+    name: 'JobOutputUnion[]'
+    spec.typeScript:
+      - name: JobOutputUnion
+        fullName: JobOutputUnion
+        uid: '@azure/arm-mediaservices.JobOutputUnion'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-mediaservices.Priority'
+    name: Priority
+    spec.typeScript:
+      - name: Priority
+        fullName: Priority
+        uid: '@azure/arm-mediaservices.Priority'
+  - uid: '@azure/arm-mediaservices.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/arm-mediaservices.JobState'

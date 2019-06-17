@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant UploadBatchServiceLogsConfiguration.
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’URL du conteneur dans le stockage Blob Azure vers lequel télécharger les fichiers journaux de Service Batch. L’URL doit inclure une Signature d’accès partagé (SAP) l’octroi d’autorisations d’écriture au conteneur. La durée SAP doit permettre suffisamment de temps à la fin du téléchargement. L’heure de début pour la signature d’accès partagé est facultative et nous vous recommandons ne pas être spécifié.
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La fin de la plage horaire à partir duquel télécharger les fichiers journaux de Service Batch. N’importe quel fichier journal contenant un message de journal dans la plage horaire sera téléchargé. Cela signifie que l’opération peut récupérer plus de journaux ont été demandés dans la mesure où l’intégralité du fichier journal est toujours chargé, mais l’opération ne doit pas récupérer les journaux de moins qu’ont été demandés. Si omis, la valeur par défaut est de télécharger tous les journaux disponibles après l’heure de début.'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Début de l’intervalle de temps à partir de laquelle charger les fichiers journaux de Service Batch. N’importe quel fichier journal contenant un message de journal dans la plage horaire sera téléchargé. Cela signifie que l’opération peut récupérer plus de journaux ont été demandés dans la mesure où l’intégralité du fichier journal est toujours chargé, mais l’opération ne doit pas récupérer les journaux de moins qu’ont été demandés.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'

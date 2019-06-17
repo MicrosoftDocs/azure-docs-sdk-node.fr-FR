@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ApplicationPackageReference'
+    name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    children:
+      - '@azure/batch.ApplicationPackageReference.applicationId'
+      - '@azure/batch.ApplicationPackageReference.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant ApplicationPackageReference.
+    package: '@azure/batch'
+  - uid: '@azure/batch.ApplicationPackageReference.applicationId'
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de l’application à déployer.
+    syntax:
+      content: 'applicationId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ApplicationPackageReference.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La version de l’application à déployer. Si omis, la version par défaut est déployée. Si cet élément est omis sur un pool, et aucune version par défaut est spécifiée pour cette application, la demande échoue avec le code d’erreur InvalidApplicationPackageReferences et le code d’état HTTP 409. Si cet élément est omis sur une tâche, et aucune version par défaut est spécifiée pour cette application, la tâche échoue avec une erreur de prétraitement.'
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

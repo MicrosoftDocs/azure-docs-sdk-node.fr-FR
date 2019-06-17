@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    fullName: TaskDependencies
+    children:
+      - '@azure/batch.TaskDependencies.taskIdRanges'
+      - '@azure/batch.TaskDependencies.taskIds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant TaskDependencies.
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIdRanges'
+    name: taskIdRanges
+    fullName: taskIdRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des plages d’ID de tâche qui dépend de cette tâche. Toutes les tâches dans toutes les plages doivent aboutir avant la planification de la tâche dépendante.
+    optional: true
+    syntax:
+      content: 'taskIdRanges?: TaskIdRange[]'
+      return:
+        type:
+          - '@azure/batch.TaskIdRange[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskDependencies.taskIds'
+    name: taskIds
+    fullName: taskIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La liste des ID cette tâche dépend de tâche. Toutes les tâches de cette liste doivent aboutir avant la planification de la tâche dépendante. La collection taskIds est limitée à 64000 caractères au total (par exemple, la longueur combinée de tous les ID de tâche). Si la collection taskIds dépasse la longueur maximale, la demande d’ajouter une tâche échoue avec le code d’erreur TaskDependencyListTooLong. Dans ce cas, envisagez à l’aide de plages d’ID de tâche à la place.'
+    optional: true
+    syntax:
+      content: 'taskIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskIdRange[]'
+    name: 'TaskIdRange[]'
+    spec.typeScript:
+      - name: TaskIdRange
+        fullName: TaskIdRange
+        uid: '@azure/batch.TaskIdRange'
+      - name: '[]'
+        fullName: '[]'

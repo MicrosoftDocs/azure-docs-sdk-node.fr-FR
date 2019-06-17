@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.Image'
+    name: Image
+    fullName: Image
+    children:
+      - '@azure/arm-mediaservices.Image.keyFrameInterval'
+      - '@azure/arm-mediaservices.Image.label'
+      - '@azure/arm-mediaservices.Image.odatatype'
+      - '@azure/arm-mediaservices.Image.range'
+      - '@azure/arm-mediaservices.Image.start'
+      - '@azure/arm-mediaservices.Image.step'
+      - '@azure/arm-mediaservices.Image.stretchMode'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les propriétés de base pour générer des miniatures à partir de la vidéo d’entrée
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.keyFrameInterval'
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La distance entre les deux images clés, définissant ainsi un groupe d’images (GOP). La valeur doit être un entier différent de zéro dans les secondes de la plage [1, 30], spécifié au format ISO 8601. La valeur par défaut est de 2 secondes (PT2S).'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une étiquette facultative pour le codec. L’étiquette peut être utilisée pour contrôler le comportement de muxing.
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.Image"'
+      return:
+        type:
+          - '"#Microsoft.Media.Image"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.range'
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Position dans l’entrée vidéo à laquelle arrêter la génération de miniatures. La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT5M30S pour s’arrêter à 5 minutes et 30 secondes), ou un nombre de frames (par exemple, 300 pour s’arrêter à la trame 300e), ou une valeur relative (par exemple, 100 %)."
+    optional: true
+    syntax:
+      content: 'range?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.start'
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Position dans la vidéo d’entrée à partir de laquelle démarrer la génération de miniatures. La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT05S), ou un nombre de frames (par exemple, 10 pour le frame de 10), ou une valeur relative (par exemple, 1 %). Prend également en charge une macro {Best}, ce qui indique à l’encodeur pour sélectionner la meilleure miniature à partir des premières secondes de la vidéo."
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.step'
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les intervalles de génération des miniatures. La valeur peut être absolu timestamp (ISO 8601, par exemple\_: PT05S pour une image toutes les 5 secondes), ou un nombre de frames (par exemple, 30 pour toutes les 30 images), ou une valeur relative (par exemple, 1 %)."
+    optional: true
+    syntax:
+      content: 'step?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.Image.stretchMode'
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le mode de redimensionnement - comment la vidéo d’entrée doit être redimensionnée pour s’ajuster à la solution de sortie souhaité. Valeur par défaut est AutoSize. Les valeurs possibles incluent\_: 'None', 'AutoSize', 'AutoFit'"
+    optional: true
+    syntax:
+      content: 'stretchMode?: StretchMode'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StretchMode'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.StretchMode'
+    name: StretchMode
+    spec.typeScript:
+      - name: StretchMode
+        fullName: StretchMode
+        uid: '@azure/arm-mediaservices.StretchMode'
