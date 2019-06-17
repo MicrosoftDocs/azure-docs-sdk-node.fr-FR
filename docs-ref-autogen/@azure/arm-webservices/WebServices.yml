@@ -1,0 +1,805 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-webservices.WebServices'
+    name: WebServices
+    fullName: WebServices
+    children:
+      - '@azure/arm-webservices.WebServices.beginCreateOrUpdate'
+      - '@azure/arm-webservices.WebServices.beginCreateRegionalProperties'
+      - '@azure/arm-webservices.WebServices.beginPatch'
+      - '@azure/arm-webservices.WebServices.beginRemove'
+      - '@azure/arm-webservices.WebServices.createOrUpdate'
+      - '@azure/arm-webservices.WebServices.createRegionalProperties'
+      - '@azure/arm-webservices.WebServices.get'
+      - '@azure/arm-webservices.WebServices.get_1'
+      - '@azure/arm-webservices.WebServices.get_2'
+      - '@azure/arm-webservices.WebServices.listByResourceGroup'
+      - '@azure/arm-webservices.WebServices.listByResourceGroup_1'
+      - '@azure/arm-webservices.WebServices.listByResourceGroup_2'
+      - '@azure/arm-webservices.WebServices.listByResourceGroupNext'
+      - '@azure/arm-webservices.WebServices.listByResourceGroupNext_2'
+      - '@azure/arm-webservices.WebServices.listByResourceGroupNext_1'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionId'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionId_1'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionId_2'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionIdNext'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionIdNext_2'
+      - '@azure/arm-webservices.WebServices.listBySubscriptionIdNext_1'
+      - '@azure/arm-webservices.WebServices.listKeys'
+      - '@azure/arm-webservices.WebServices.listKeys_2'
+      - '@azure/arm-webservices.WebServices.listKeys_1'
+      - '@azure/arm-webservices.WebServices.patch'
+      - '@azure/arm-webservices.WebServices.remove'
+      - '@azure/arm-webservices.WebServices.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant un WebServices.
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, WebService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Créer ou mettre à jour un service web. Cet appel remplace un service web existant. Notez qu’il n’existe aucun avertissement ou une confirmation. Il s’agit d’une opération non récupérable. Si votre objectif est de créer un nouveau service web, appelez l’opération Get tout d’abord pour vérifier qu’il n’existe pas.'
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, webServiceName: string, createOrUpdatePayload: WebService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: createOrUpdatePayload
+          type:
+            - '@azure/arm-webservices.WebService'
+          description: La charge utile qui est utilisée pour créer ou mettre à jour le service web.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.beginCreateRegionalProperties'
+    name: 'beginCreateRegionalProperties(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Crée un objet blob de paramètre informations d’identification chiffrées pour la région spécifiée. Pour obtenir le service web à partir d’une région autre que la région dans lequel il a été créé, vous devez d’abord appeler créer des propriétés de Services Web régionaux pour créer une copie de l’objet blob de paramètre informations d’identification chiffrées dans cette région. Vous devez uniquement effectuer cette opération avant la première fois que vous obtenez le service web dans la nouvelle région.'
+    syntax:
+      content: 'function beginCreateRegionalProperties(resourceGroupName: string, webServiceName: string, region: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: region
+          type:
+            - string
+          description: La région pour laquelle les paramètres d’informations d’identification chiffrées sont créés.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.beginPatch'
+    name: 'beginPatch(string, string, WebService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Modifie une ressource de service web existant. L’appel d’API des correctifs est une opération asynchrone. Pour déterminer si elle est terminée avec succès, vous devez effectuer une opération Get.'
+    syntax:
+      content: 'function beginPatch(resourceGroupName: string, webServiceName: string, patchPayload: WebService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: patchPayload
+          type:
+            - '@azure/arm-webservices.WebService'
+          description: La charge utile à utiliser pour le service web des correctifs.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.beginRemove'
+    name: 'beginRemove(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime le service web spécifié.
+    syntax:
+      content: 'function beginRemove(resourceGroupName: string, webServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.createOrUpdate'
+    name: 'createOrUpdate(string, string, WebService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Créer ou mettre à jour un service web. Cet appel remplace un service web existant. Notez qu’il n’existe aucun avertissement ou une confirmation. Il s’agit d’une opération non récupérable. Si votre objectif est de créer un nouveau service web, appelez l’opération Get tout d’abord pour vérifier qu’il n’existe pas.'
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, webServiceName: string, createOrUpdatePayload: WebService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: createOrUpdatePayload
+          type:
+            - '@azure/arm-webservices.WebService'
+          description: La charge utile qui est utilisée pour créer ou mettre à jour le service web.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesCreateOrUpdateResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.createRegionalProperties'
+    name: 'createRegionalProperties(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Crée un objet blob de paramètre informations d’identification chiffrées pour la région spécifiée. Pour obtenir le service web à partir d’une région autre que la région dans lequel il a été créé, vous devez d’abord appeler créer des propriétés de Services Web régionaux pour créer une copie de l’objet blob de paramètre informations d’identification chiffrées dans cette région. Vous devez uniquement effectuer cette opération avant la première fois que vous obtenez le service web dans la nouvelle région.'
+    syntax:
+      content: 'function createRegionalProperties(resourceGroupName: string, webServiceName: string, region: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: region
+          type:
+            - string
+          description: La région pour laquelle les paramètres d’informations d’identification chiffrées sont créés.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesCreateRegionalPropertiesResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.get'
+    name: 'get(string, string, Models.WebServicesGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Obtient la définition de Service Web tel que spécifié par un abonnement, un groupe de ressources et un nom. Notez que les informations d’identification de stockage et les clés de service web ne sont pas retournées par cet appel. Pour obtenir des clés d’accès de service web, appelez répertorier les clés.'
+    syntax:
+      content: 'function get(resourceGroupName: string, webServiceName: string, options?: Models.WebServicesGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - Models.WebServicesGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesGetResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.get_1'
+    name: 'get(string, string, ServiceCallback<WebService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, webServiceName: string, callback: ServiceCallback<WebService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.WebService>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesGetResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.get_2'
+    name: 'get(string, string, WebServicesGetOptionalParams, ServiceCallback<WebService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, webServiceName: string, options: WebServicesGetOptionalParams, callback: ServiceCallback<WebService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - '@azure/arm-webservices.WebServicesGetOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.WebService>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesGetResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.WebServicesListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les services web dans le groupe de ressources spécifié.
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.WebServicesListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: options
+          type:
+            - Models.WebServicesListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, WebServicesListByResourceGroupOptionalParams, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: WebServicesListByResourceGroupOptionalParams, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: options
+          type:
+            - '@azure/arm-webservices.WebServicesListByResourceGroupOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroupNext'
+    name: 'listByResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les services web dans le groupe de ressources spécifié.
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroupNext_2'
+    name: 'listByResourceGroupNext(string, RequestOptionsBase, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listByResourceGroupNext_1'
+    name: 'listByResourceGroupNext(string, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListByResourceGroupNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionId'
+    name: listBySubscriptionId(Models.WebServicesListBySubscriptionIdOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les services web dans l’abonnement spécifié.
+    syntax:
+      content: 'function listBySubscriptionId(options?: Models.WebServicesListBySubscriptionIdOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.WebServicesListBySubscriptionIdOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionId_1'
+    name: listBySubscriptionId(ServiceCallback<PaginatedWebServicesList>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionId(callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionId_2'
+    name: 'listBySubscriptionId(WebServicesListBySubscriptionIdOptionalParams, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionId(options: WebServicesListBySubscriptionIdOptionalParams, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-webservices.WebServicesListBySubscriptionIdOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionIdNext'
+    name: 'listBySubscriptionIdNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les services web dans l’abonnement spécifié.
+    syntax:
+      content: 'function listBySubscriptionIdNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionIdNext_2'
+    name: 'listBySubscriptionIdNext(string, RequestOptionsBase, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionIdNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listBySubscriptionIdNext_1'
+    name: 'listBySubscriptionIdNext(string, ServiceCallback<PaginatedWebServicesList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionIdNext(nextPageLink: string, callback: ServiceCallback<PaginatedWebServicesList>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListBySubscriptionIdNextResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listKeys'
+    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les clés d’accès pour le service web spécifié.
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, webServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesListKeysResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listKeys_2'
+    name: 'listKeys(string, string, RequestOptionsBase, ServiceCallback<WebServiceKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, webServiceName: string, options: RequestOptionsBase, callback: ServiceCallback<WebServiceKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.WebServiceKeys>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListKeysResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.listKeys_1'
+    name: 'listKeys(string, string, ServiceCallback<WebServiceKeys>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, webServiceName: string, callback: ServiceCallback<WebServiceKeys>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-webservices.WebServiceKeys>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.WebServicesListKeysResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.patch'
+    name: 'patch(string, string, WebService, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Modifie une ressource de service web existant. L’appel d’API des correctifs est une opération asynchrone. Pour déterminer si elle est terminée avec succès, vous devez effectuer une opération Get.'
+    syntax:
+      content: 'function patch(resourceGroupName: string, webServiceName: string, patchPayload: WebService, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: patchPayload
+          type:
+            - '@azure/arm-webservices.WebService'
+          description: La charge utile à utiliser pour le service web des correctifs.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.WebServicesPatchResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.remove'
+    name: 'remove(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime le service web spécifié.
+    syntax:
+      content: 'function remove(resourceGroupName: string, webServiceName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources dans lequel se trouve le service web.
+        - id: webServiceName
+          type:
+            - string
+          description: Le nom du service web.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-webservices'
+  - uid: '@azure/arm-webservices.WebServices.constructor'
+    name: WebServices(AzureMLWebServicesManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer un WebServices.
+    syntax:
+      content: 'new WebServices(client: AzureMLWebServicesManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-webservices.AzureMLWebServicesManagementClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-webservices'
+references:
+  - uid: '@azure/arm-webservices.AzureMLWebServicesManagementClientContext'
+    name: AzureMLWebServicesManagementClientContext
+    spec.typeScript:
+      - name: AzureMLWebServicesManagementClientContext
+        fullName: AzureMLWebServicesManagementClientContext
+        uid: '@azure/arm-webservices.AzureMLWebServicesManagementClientContext'
+  - uid: '@azure/arm-webservices.WebService'
+    name: WebService
+    spec.typeScript:
+      - name: WebService
+        fullName: WebService
+        uid: '@azure/arm-webservices.WebService'
+  - uid: ServiceCallback<@azure/arm-webservices.WebService>
+    name: WebService>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: WebService
+        fullName: WebService
+        uid: '@azure/arm-webservices.WebService'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-webservices.WebServicesGetOptionalParams'
+    name: WebServicesGetOptionalParams
+    spec.typeScript:
+      - name: WebServicesGetOptionalParams
+        fullName: WebServicesGetOptionalParams
+        uid: '@azure/arm-webservices.WebServicesGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-webservices.PaginatedWebServicesList>
+    name: PaginatedWebServicesList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PaginatedWebServicesList
+        fullName: PaginatedWebServicesList
+        uid: '@azure/arm-webservices.PaginatedWebServicesList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-webservices.WebServicesListByResourceGroupOptionalParams'
+    name: WebServicesListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: WebServicesListByResourceGroupOptionalParams
+        fullName: WebServicesListByResourceGroupOptionalParams
+        uid: '@azure/arm-webservices.WebServicesListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-webservices.WebServicesListBySubscriptionIdOptionalParams'
+    name: WebServicesListBySubscriptionIdOptionalParams
+    spec.typeScript:
+      - name: WebServicesListBySubscriptionIdOptionalParams
+        fullName: WebServicesListBySubscriptionIdOptionalParams
+        uid: '@azure/arm-webservices.WebServicesListBySubscriptionIdOptionalParams'
+  - uid: ServiceCallback<@azure/arm-webservices.WebServiceKeys>
+    name: WebServiceKeys>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: WebServiceKeys
+        fullName: WebServiceKeys
+        uid: '@azure/arm-webservices.WebServiceKeys'
+      - name: '>'
+        fullName: '>'
