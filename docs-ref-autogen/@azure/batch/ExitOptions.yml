@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="f1090-101">Interface représentant ExitOptions.</span><span class="sxs-lookup"><span data-stu-id="f1090-101">An interface representing ExitOptions.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f1090-102\">Action effectuée par le traitement par lots service sur les tâches qui dépendent de cette tâche.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-102\">An action that the Batch service performs on tasks that depend on this task.</span></span> <span data-ttu-id=\"f1090-103\">La valeur par défaut est «\_à satisfaire\_» pour le code de sortie 0 et «\_bloc\_» pour toutes les autres conditions de sortie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-103\">The default is 'satisfy' for exit code 0, and 'block' for all other exit conditions.</span></span> <span data-ttu-id=\"f1090-104\">Si la propriété d’usesTaskDependencies du travail est définie sur false, puis en spécifiant la propriété dependencyAction retourne une erreur et la demande de tâche d’ajout échoue avec une erreur de valeur de propriété non valide\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-104\">If the job's usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400  (Bad Request).</span></span> <span data-ttu-id=\"f1090-105\">Les valeurs possibles sont\_: «\_satisfaire aux\_», «\_bloquer\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-105\">Possible values include: 'satisfy', 'block'</span></span>"
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f1090-106\">Une action à entreprendre lors de la tâche qui contient la tâche, si la tâche se termine avec la condition de sortie donné et la propriété d’onTaskFailed du travail est «\_performExitOptionsJobAction\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-106\">An action to take on the job containing the task, if the task completes with the given exit condition and the job's onTaskFailed property is 'performExitOptionsJobAction'.</span></span> <span data-ttu-id=\"f1090-107\">La valeur par défaut est aucun code de sortie 0 et mettre fin pour toutes les autres conditions de sortie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-107\">The default is none for exit code 0 and terminate for all other exit conditions.</span></span> <span data-ttu-id=\"f1090-108\">Si la propriété d’onTaskFailed du travail est noaction, puis en spécifiant cette propriété retourne une erreur et la demande de tâche d’ajout échoue avec une erreur de valeur de propriété non valide\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-108\">If the job's onTaskFailed property is noaction, then specifying this property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id=\"f1090-109\">Les valeurs possibles sont\_: «\_none\_», «\_désactiver\_», «\_terminate\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"f1090-109\">Possible values include: 'none', 'disable', 'terminate'</span></span>"
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
