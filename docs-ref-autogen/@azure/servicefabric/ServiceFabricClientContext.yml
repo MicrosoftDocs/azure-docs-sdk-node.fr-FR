@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceFabricClientContext'
+    name: ServiceFabricClientContext
+    fullName: ServiceFabricClientContext
+    children:
+      - '@azure/servicefabric.ServiceFabricClientContext.sendOperationRequest'
+      - '@azure/servicefabric.ServiceFabricClientContext.sendRequest'
+      - '@azure/servicefabric.ServiceFabricClientContext.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: ServiceClient
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClientContext.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer une requête HTTP qui est remplie à l’aide de la OperationSpec fourni.
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: Les arguments qui contiendra à partir de valeurs basé sur un modèle de demande HTTP.
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: OperationSpec à utiliser pour remplir la requête HTTP.
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            Le rappel à appeler lorsque la réponse est reçue.
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClientContext.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Envoyer la requête HTTP fournie.
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClientContext.constructor'
+    name: ServiceFabricClientContext(Models.ServiceFabricClientOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Initialise une nouvelle instance de la classe ServiceFabricClientContext.
+    syntax:
+      content: 'new ServiceFabricClientContext(options?: Models.ServiceFabricClientOptions)'
+      parameters:
+        - id: options
+          type:
+            - Models.ServiceFabricClientOptions
+          description: ''
+          optional: true
+    package: '@azure/servicefabric'
