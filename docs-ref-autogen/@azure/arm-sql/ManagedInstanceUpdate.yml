@@ -1,0 +1,280 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate'
+    name: ManagedInstanceUpdate
+    fullName: ManagedInstanceUpdate
+    children:
+      - '@azure/arm-sql.ManagedInstanceUpdate.administratorLogin'
+      - '@azure/arm-sql.ManagedInstanceUpdate.administratorLoginPassword'
+      - '@azure/arm-sql.ManagedInstanceUpdate.collation'
+      - '@azure/arm-sql.ManagedInstanceUpdate.dnsZone'
+      - '@azure/arm-sql.ManagedInstanceUpdate.dnsZonePartner'
+      - '@azure/arm-sql.ManagedInstanceUpdate.fullyQualifiedDomainName'
+      - '@azure/arm-sql.ManagedInstanceUpdate.licenseType'
+      - '@azure/arm-sql.ManagedInstanceUpdate.proxyOverride'
+      - '@azure/arm-sql.ManagedInstanceUpdate.publicDataEndpointEnabled'
+      - '@azure/arm-sql.ManagedInstanceUpdate.sku'
+      - '@azure/arm-sql.ManagedInstanceUpdate.state'
+      - '@azure/arm-sql.ManagedInstanceUpdate.storageSizeInGB'
+      - '@azure/arm-sql.ManagedInstanceUpdate.subnetId'
+      - '@azure/arm-sql.ManagedInstanceUpdate.tags'
+      - '@azure/arm-sql.ManagedInstanceUpdate.timezoneId'
+      - '@azure/arm-sql.ManagedInstanceUpdate.vCores'
+    langs:
+      - typeScript
+    type: interface
+    summary: Une demande de mise à jour pour une base de données Azure SQL managed instance.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.administratorLogin'
+    name: administratorLogin
+    fullName: administratorLogin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom d’utilisateur administrateur pour l’instance gérée. Peut être spécifié uniquement lorsque l’instance managée est en cours de création (et est requise pour la création).
+    optional: true
+    syntax:
+      content: 'administratorLogin?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.administratorLoginPassword'
+    name: administratorLoginPassword
+    fullName: administratorLoginPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La connexion mot de passe administrateur (requis pour la création d’instance gérée).
+    optional: true
+    syntax:
+      content: 'administratorLoginPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Classement de l’instance gérée.
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.dnsZone'
+    name: dnsZone
+    fullName: dnsZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’instance managée est dans la Zone Dns.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'dnsZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.dnsZonePartner'
+    name: dnsZonePartner
+    fullName: dnsZonePartner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’id de ressource d’une autre instance managée dont zone DNS partage cette instance managée après sa création.
+    optional: true
+    syntax:
+      content: 'dnsZonePartner?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.fullyQualifiedDomainName'
+    name: fullyQualifiedDomainName
+    fullName: fullyQualifiedDomainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de domaine complet de l’instance gérée.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'fullyQualifiedDomainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de licence. Les valeurs possibles sont «\_LicenseIncluded\_» et «\_BasePrice\_»."
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.proxyOverride'
+    name: proxyOverride
+    fullName: proxyOverride
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de connexion utilisée pour se connecter à l’instance. Les valeurs possibles incluent\_: 'Proxy', 'Redirect', 'Default'"
+    optional: true
+    syntax:
+      content: 'proxyOverride?: ManagedInstanceProxyOverride'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedInstanceProxyOverride'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.publicDataEndpointEnabled'
+    name: publicDataEndpointEnabled
+    fullName: publicDataEndpointEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le point de terminaison public de données est activé ou non.
+    optional: true
+    syntax:
+      content: 'publicDataEndpointEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Référence (SKU) instance managée
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état de l’instance gérée.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'state?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.storageSizeInGB'
+    name: storageSizeInGB
+    fullName: storageSizeInGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La taille maximale de stockage en Go.
+    optional: true
+    syntax:
+      content: 'storageSizeInGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de ressource de sous-réseau pour l’instance gérée.
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Balises de ressource.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.timezoneId'
+    name: timezoneId
+    fullName: timezoneId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "ID du fuseau horaire. Les valeurs autorisées sont des fuseaux horaires pris en charge par Windows.\nWindows conserve les détails sur les fuseaux horaires pris en charge, y compris l’id, dans le Registre sous KEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones.\nVous pouvez obtenir ces valeurs de Registre par le biais de SQL Server en interrogeant SELECT name comme timezone_id FROM sys.time_zone_info.\nListe des ID peut également être obtenue en exécutant [System.TimeZoneInfo]\_::\_::GetSystemTimeZones() dans PowerShell.\nUn exemple d’id de fuseau horaire valide est «\_Pacific Standard Time\_» ou «\_W. Europe Standard Time\_»."
+    optional: true
+    syntax:
+      content: 'timezoneId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceUpdate.vCores'
+    name: vCores
+    fullName: vCores
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nombre de VCores.
+    optional: true
+    syntax:
+      content: 'vCores?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ManagedInstanceProxyOverride'
+    name: ManagedInstanceProxyOverride
+    spec.typeScript:
+      - name: ManagedInstanceProxyOverride
+        fullName: ManagedInstanceProxyOverride
+        uid: '@azure/arm-sql.ManagedInstanceProxyOverride'
+  - uid: '@azure/arm-sql.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-sql.Sku'
