@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFile'
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - '@azure/batch.OutputFile.destination'
+      - '@azure/batch.OutputFile.filePattern'
+      - '@azure/batch.OutputFile.uploadOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: Une interface qui représente le fichier de sortie.
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.destination'
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La destination pour les fichiers de sortie.
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - '@azure/batch.OutputFileDestination'
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.filePattern'
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Un modèle indiquant qui fichier (s) à charger. Les chemins d’accès relatifs et absolus sont pris en charge.\nChemins d’accès relatifs sont relatif au répertoire de travail de tâche. Les caractères génériques suivants sont pris en charge\_: * correspond à 0 ou plusieurs caractères (pour l’exemple de modèle abc * correspondrait à abc ou abcdef), ** correspond à n’importe quel répertoire,\_? correspond à n’importe quel caractère unique, [abc] correspond à un caractère entre crochets et un caractère dans la plage [a-c] correspondances. Crochets peuvent inclure une négation pour correspondre à n’importe quel caractère sauf indication contraire (par exemple [\_! abc] correspond à tout caractère, mais a, b ou c). Si un nom de fichier commence par «.\_» il est ignoré par défaut mais peut être mis en correspondance en le spécifiant explicitement (par exemple *.gif ne correspondront pas. a.gif, mais.*. GIF sera). Un exemple simple\_: **\\*.txt correspond à n’importe quel fichier qui ne démarre pas dans '.' et se termine par .txt dans le répertoire de travail de tâche ou de n’importe quel sous-répertoire. Si le nom de fichier contient un caractère générique qu’il peut être évitée à l’aide de crochets (par exemple abc [*] correspondrait à un fichier nommé abc *). Notez que les deux \\ et / sont traités comme des séparateurs de répertoire sur Windows, mais uniquement / est sur Linux. Variables d’environnement (% % var sur Windows) ou $var sur Linux sont développées avant le modèle en cours d’application."
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFile.uploadOptions'
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Options supplémentaires pour l’opération de chargement, y compris sous quelles conditions pour effectuer le chargement.'
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - '@azure/batch.OutputFileUploadOptions'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OutputFileDestination'
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: '@azure/batch.OutputFileDestination'
+  - uid: '@azure/batch.OutputFileUploadOptions'
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: '@azure/batch.OutputFileUploadOptions'
