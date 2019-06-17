@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeAgentSku'
+    name: NodeAgentSku
+    fullName: NodeAgentSku
+    children:
+      - '@azure/batch.NodeAgentSku.id'
+      - '@azure/batch.NodeAgentSku.osType'
+      - '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'L’agent de nœud Batch est un programme qui s’exécute sur chaque nœud dans le pool et fournit l’interface de commande et de contrôle entre le nœud et le service Batch. Il existe différentes implémentations de l’agent de nœud pour différents systèmes d’exploitation, connues sous le nom de références.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de référence (SKU) de l’agent de nœud.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de système d’exploitation (par exemple, Windows ou Linux) compatible avec l’agent de nœud référence (SKU).\nLes valeurs possibles sont\_: «\_linux\_», «\_windows\_»"
+    optional: true
+    syntax:
+      content: 'osType?: OSType'
+      return:
+        type:
+          - '@azure/batch.OSType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    name: verifiedImageReferences
+    fullName: verifiedImageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des images Azure Marketplace vérifié pour être compatible avec la référence de l’agent de ce nœud. Cette collection n’est pas exhaustive (l’agent de nœud peut être compatible avec d’autres images).
+    optional: true
+    syntax:
+      content: 'verifiedImageReferences?: ImageReference[]'
+      return:
+        type:
+          - '@azure/batch.ImageReference[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OSType'
+    name: OSType
+    spec.typeScript:
+      - name: OSType
+        fullName: OSType
+        uid: '@azure/batch.OSType'
+  - uid: '@azure/batch.ImageReference[]'
+    name: 'ImageReference[]'
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: '@azure/batch.ImageReference'
+      - name: '[]'
+        fullName: '[]'
