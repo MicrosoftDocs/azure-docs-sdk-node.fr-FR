@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ScaleAction'
+    name: ScaleAction
+    fullName: ScaleAction
+    children:
+      - '@azure/arm-monitor.ScaleAction.cooldown'
+      - '@azure/arm-monitor.ScaleAction.direction'
+      - '@azure/arm-monitor.ScaleAction.type'
+      - '@azure/arm-monitor.ScaleAction.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: Les paramètres pour l’action de mise à l’échelle.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.cooldown'
+    name: cooldown
+    fullName: cooldown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: le délai d’attente depuis la dernière action de mise à l’échelle avant que cette action se produit. Il doit être comprise entre 1 semaine et 1 minute au format ISO 8601.
+    syntax:
+      content: 'cooldown: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.direction'
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "la direction de l’échelle. Indique si l’action de mise à l’échelle augmente ou diminue le nombre d’instances. Les valeurs possibles incluent\_: «\_None\_», «\_Augmentation\_», «\_réduire\_»"
+    syntax:
+      content: 'direction: ScaleDirection'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleDirection'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "le type d’action qui doit se produire lorsque la règle de mise à l’échelle se déclenche. Les valeurs possibles incluent\_: 'ChangeCount', 'PercentChangeCount', 'ExactCount'"
+    syntax:
+      content: 'type: ScaleType'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'le nombre d’instances qui sont impliqués dans l’action de mise à l’échelle. Cette valeur doit être définie sur 1 ou supérieur. La valeur par défaut est 1. Valeur par défaut : ''1''.'
+    optional: true
+    syntax:
+      content: 'value?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleDirection'
+    name: ScaleDirection
+    spec.typeScript:
+      - name: ScaleDirection
+        fullName: ScaleDirection
+        uid: '@azure/arm-monitor.ScaleDirection'
+  - uid: '@azure/arm-monitor.ScaleType'
+    name: ScaleType
+    spec.typeScript:
+      - name: ScaleType
+        fullName: ScaleType
+        uid: '@azure/arm-monitor.ScaleType'

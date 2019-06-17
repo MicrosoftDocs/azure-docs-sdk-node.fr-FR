@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses'
+    name: BackupOperationStatuses
+    fullName: BackupOperationStatuses
+    children:
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.constructor'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_2'
+      - '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant un BackupOperationStatuses.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.constructor'
+    name: BackupOperationStatuses(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer un BackupOperationStatuses.
+    syntax:
+      content: 'new BackupOperationStatuses(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Récupère l’état d’une opération comme le déclenchement d’une sauvegarde et restauration. L’état peut être en cours, terminée ou a échoué. Vous pouvez faire référence à l’énumération OperationStatus pour tous les états possibles d’une opération. Certaines opérations de créent des travaux. Cette méthode retourne la liste des tâches lorsque l’opération est terminée.'
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Le nom du coffre recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Le nom du groupe de ressources où la récupération services coffre est présent.
+        - id: operationId
+          type:
+            - string
+          description: OperationID qui représente l’opération.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Le nom du coffre recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Le nom du groupe de ressources où la récupération services coffre est présent.
+        - id: operationId
+          type:
+            - string
+          description: OperationID qui représente l’opération.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.BackupOperationStatuses.get_1'
+    name: 'get(string, string, string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: Le nom du coffre recovery services.
+        - id: resourceGroupName
+          type:
+            - string
+          description: Le nom du groupe de ressources où la récupération services coffre est présent.
+        - id: operationId
+          type:
+            - string
+          description: OperationID qui représente l’opération.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.BackupOperationStatusesGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/arm-recoveryservicesbackup.OperationStatus'
+      - name: '>'
+        fullName: '>'

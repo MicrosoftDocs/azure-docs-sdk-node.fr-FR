@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateAddParameter'
+    name: CertificateAddParameter
+    fullName: CertificateAddParameter
+    children:
+      - '@azure/batch.CertificateAddParameter.certificateFormat'
+      - '@azure/batch.CertificateAddParameter.data'
+      - '@azure/batch.CertificateAddParameter.password'
+      - '@azure/batch.CertificateAddParameter.thumbprint'
+      - '@azure/batch.CertificateAddParameter.thumbprintAlgorithm'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant CertificateAddParameter.
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateAddParameter.certificateFormat'
+    name: certificateFormat
+    fullName: certificateFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le format des données du certificat. Les valeurs possibles sont\_: «\_pfx\_», «\_cer\_»"
+    optional: true
+    syntax:
+      content: 'certificateFormat?: CertificateFormat'
+      return:
+        type:
+          - '@azure/batch.CertificateFormat'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateAddParameter.data'
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le contenu codé en base64 du certificat. La taille maximale est de 10 Ko.
+    syntax:
+      content: 'data: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateAddParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le mot de passe pour accéder à la clé privée du certificat. Cela est nécessaire si le format du certificat est pfx. Il doit être omis si le format du certificat est la région d’exécution limitée.
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateAddParameter.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Empreinte du certificat X.509. Il s’agit d’une séquence de 40 chiffres hexadécimaux (il peut inclure des espaces, mais celles-ci sont supprimées).'
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateAddParameter.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’algorithme utilisé pour dériver l’empreinte numérique. Cela doit être sha1.
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateFormat'
+    name: CertificateFormat
+    spec.typeScript:
+      - name: CertificateFormat
+        fullName: CertificateFormat
+        uid: '@azure/batch.CertificateFormat'
