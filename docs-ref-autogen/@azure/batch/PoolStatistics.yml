@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolStatistics'
+    name: PoolStatistics
+    fullName: PoolStatistics
+    children:
+      - '@azure/batch.PoolStatistics.lastUpdateTime'
+      - '@azure/batch.PoolStatistics.resourceStats'
+      - '@azure/batch.PoolStatistics.startTime'
+      - '@azure/batch.PoolStatistics.url'
+      - '@azure/batch.PoolStatistics.usageStats'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant PoolStatistics.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolStatistics.lastUpdateTime'
+    name: lastUpdateTime
+    fullName: lastUpdateTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Heure à laquelle les statistiques ont été dernière mise à jour. Toutes les statistiques sont limités à la plage comprise entre startTime et lastUpdateTime.
+    syntax:
+      content: 'lastUpdateTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolStatistics.resourceStats'
+    name: resourceStats
+    fullName: resourceStats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Statistiques relatives à la consommation des ressources par les nœuds de calcul dans le pool.
+    optional: true
+    syntax:
+      content: 'resourceStats?: ResourceStatistics'
+      return:
+        type:
+          - '@azure/batch.ResourceStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolStatistics.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’heure de début de la période couverte par les statistiques.
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolStatistics.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’URL pour les statistiques.
+    syntax:
+      content: 'url: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolStatistics.usageStats'
+    name: usageStats
+    fullName: usageStats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Statistiques relatives à l’utilisation du pool, tels que la quantité de core-temps est utilisée.'
+    optional: true
+    syntax:
+      content: 'usageStats?: UsageStatistics'
+      return:
+        type:
+          - '@azure/batch.UsageStatistics'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceStatistics'
+    name: ResourceStatistics
+    spec.typeScript:
+      - name: ResourceStatistics
+        fullName: ResourceStatistics
+        uid: '@azure/batch.ResourceStatistics'
+  - uid: '@azure/batch.UsageStatistics'
+    name: UsageStatistics
+    spec.typeScript:
+      - name: UsageStatistics
+        fullName: UsageStatistics
+        uid: '@azure/batch.UsageStatistics'
