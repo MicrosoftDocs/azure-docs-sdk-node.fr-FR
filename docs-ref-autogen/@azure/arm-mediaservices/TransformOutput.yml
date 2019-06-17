@@ -1,0 +1,77 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.TransformOutput'
+    name: TransformOutput
+    fullName: TransformOutput
+    children:
+      - '@azure/arm-mediaservices.TransformOutput.onError'
+      - '@azure/arm-mediaservices.TransformOutput.preset'
+      - '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Décrit les propriétés d’un TransformOutput, qui sont les règles à appliquer lors de la génération de la sortie souhaitée.'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.onError'
+    name: onError
+    fullName: onError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Une transformation peut définir plusieurs sorties. Cette propriété définit ce que le service doit faire en cas d’échec d’une sortie, soit continuer à produire d’autres sorties, ou arrêter les autres sorties.\nL’état du travail global ne reflète pas les échecs de sorties sont spécifiées avec 'ContinueJob'. La valeur par défaut est «\_StopProcessingJob\_». Les valeurs possibles incluent\_: 'StopProcessingJob', 'ContinueJob'"
+    optional: true
+    syntax:
+      content: 'onError?: OnErrorType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OnErrorType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.preset'
+    name: preset
+    fullName: preset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Présélection qui décrit les opérations qui seront utilisées pour modifier, transcoder, ou extraire des analyses à partir du fichier source pour générer la sortie.'
+    syntax:
+      content: 'preset: PresetUnion'
+      return:
+        type:
+          - '@azure/arm-mediaservices.PresetUnion'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    name: relativePriority
+    fullName: relativePriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Définit la priorité relative de la TransformOutputs au sein d’une transformation. Cela définit la priorité que le service utilise pour le traitement TransformOutputs. La priorité par défaut est Normal.\nLes valeurs possibles incluent\_: «\_Low\_», «\_Normal\_», «\_High\_»"
+    optional: true
+    syntax:
+      content: 'relativePriority?: Priority'
+      return:
+        type:
+          - '@azure/arm-mediaservices.Priority'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OnErrorType'
+    name: OnErrorType
+    spec.typeScript:
+      - name: OnErrorType
+        fullName: OnErrorType
+        uid: '@azure/arm-mediaservices.OnErrorType'
+  - uid: '@azure/arm-mediaservices.PresetUnion'
+    name: PresetUnion
+    spec.typeScript:
+      - name: PresetUnion
+        fullName: PresetUnion
+        uid: '@azure/arm-mediaservices.PresetUnion'
+  - uid: '@azure/arm-mediaservices.Priority'
+    name: Priority
+    spec.typeScript:
+      - name: Priority
+        fullName: Priority
+        uid: '@azure/arm-mediaservices.Priority'
