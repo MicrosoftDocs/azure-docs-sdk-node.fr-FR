@@ -10,6 +10,7 @@ items:
       - '@azure/arm-network.ResourceNavigationLink.linkedResourceType'
       - '@azure/arm-network.ResourceNavigationLink.name'
       - '@azure/arm-network.ResourceNavigationLink.provisioningState'
+      - '@azure/arm-network.ResourceNavigationLink.type'
     langs:
       - typeScript
     type: interface
@@ -54,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: Lier à la ressource externe
+    summary: Lier à la ressource externe.
     optional: true
     syntax:
       content: 'link?: undefined | string'
@@ -103,6 +104,21 @@ items:
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ResourceNavigationLink.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string

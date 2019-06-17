@@ -9,6 +9,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.beginReset'
@@ -29,6 +30,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.getAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.getBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.getLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.list'
@@ -138,7 +140,7 @@ items:
         - id: peer
           type:
             - string
-          description: L’adresse IP de l’homologue
+          description: L’adresse IP de l’homologue.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -184,6 +186,33 @@ items:
     summary: 'Cette opération récupère une liste d’itinéraires qu''a appris de la passerelle de réseau virtuel, y compris les itinéraires appris à partir d’homologues BGP.'
     syntax:
       content: 'function beginGetLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: Le nom de la passerelle de réseau virtuel.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
+    name: 'beginGetVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Détails d’intégrité de connexion du client VPN Get par connexion de client P2S de la passerelle de réseau virtuel dans le groupe de ressources spécifié.
+    syntax:
+      content: 'function beginGetVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
@@ -730,7 +759,7 @@ items:
         - id: peer
           type:
             - string
-          description: L’adresse IP de l’homologue
+          description: L’adresse IP de l’homologue.
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -793,6 +822,33 @@ items:
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
+    name: 'getVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Détails d’intégrité de connexion du client VPN Get par connexion de client P2S de la passerelle de réseau virtuel dans le groupe de ressources spécifié.
+    syntax:
+      content: 'function getVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nom du groupe de ressources.
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: Le nom de la passerelle de réseau virtuel.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
     name: 'getVpnclientIpsecParameters(string, string, msRest.RequestOptionsBase)'
