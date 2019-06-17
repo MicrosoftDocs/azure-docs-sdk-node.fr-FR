@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Une interface qui représente la valeur de JobConstraints.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nombre maximal de fois où que chaque tâche peut être retentée. Le service Batch retente une tâche si le code de sortie de celle-ci diffère de zéro. Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives. Le service Batch va tenter de chaque tâche qu’une seule fois et peut réessayer jusqu''à cette limite. Par exemple, si le nombre maximal de nouvelles tentatives est 3, le service Batch peut tenter d’exécuter la tâche jusqu’à 4 fois (tentative initiale + 3 tentatives supplémentaires). Si le nombre maximal de tentatives est 0, le service Batch ne réessaye pas d’exécuter des tâches. Si le nombre maximal de nouvelles tentatives est -1, le service Batch réessaie d’exécuter les tâches sans limite. La valeur par défaut est 0 (aucune nouvelle tentative).'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      La durée maximale, il peut s’exécuter, mesurée à partir de la création de la tâche. Si la tâche ne se termine pas dans le délai imparti, le service Batch met fin à elle et toutes les tâches qui sont en cours d’exécution. Dans ce cas, la raison d’arrêt sera MaxWallClockTimeExpiry.
+      Si cette propriété n’est pas spécifiée, il n’existe aucune limite de temps sur la durée pendant laquelle il peut s’exécuter.
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

@@ -1,0 +1,201 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy'
+    name: ServerSecurityAlertPolicy
+    fullName: ServerSecurityAlertPolicy
+    children:
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.creationTime'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.disabledAlerts'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.emailAccountAdmins'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.emailAddresses'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.id'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.name'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.retentionDays'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.state'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.storageAccountAccessKey'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.storageEndpoint'
+      - '@azure/arm-sql.ServerSecurityAlertPolicy.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Une stratégie de sécurité alerte server.
+    extends:
+      name: '@azure/arm-sql.ProxyResource'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’heure UTC de création de la stratégie.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.disabledAlerts'
+    name: disabledAlerts
+    fullName: disabledAlerts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie un tableau des alertes sont désactivés. Les valeurs autorisées sont les suivantes\_: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action"
+    optional: true
+    syntax:
+      content: 'disabledAlerts?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.emailAccountAdmins'
+    name: emailAccountAdmins
+    fullName: emailAccountAdmins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie que l’alerte est envoyée aux administrateurs de compte.
+    optional: true
+    syntax:
+      content: 'emailAccountAdmins?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.emailAddresses'
+    name: emailAddresses
+    fullName: emailAddresses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie un tableau d’adresses de messagerie à laquelle l’alerte est envoyée.
+    optional: true
+    syntax:
+      content: 'emailAddresses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "ID de la ressource\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Nom de la ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.retentionDays'
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie le nombre de jours pendant lesquels conserver dans les journaux d’audit de la détection des menaces.
+    optional: true
+    syntax:
+      content: 'retentionDays?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Spécifie l’état de la stratégie, si elle est activée ou désactivée ou une stratégie n’a pas été encore appliqué sur la base de données spécifique. Les valeurs possibles incluent\_: 'New', 'Enabled', 'Disabled'"
+    syntax:
+      content: 'state: SecurityAlertPolicyState'
+      return:
+        type:
+          - '@azure/arm-sql.SecurityAlertPolicyState'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.storageAccountAccessKey'
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Spécifie la clé de l’identificateur du compte de stockage pour la détection des menaces d’audit.
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.storageEndpoint'
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Spécifie le point de terminaison de stockage d’objets blob (par exemple, https://MyAccount.blob.core.windows.net). Ce stockage blob contiendra tous les journaux d’audit de la détection des menaces.'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ServerSecurityAlertPolicy.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Type de ressource.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.ProxyResource'
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: '@azure/arm-sql.ProxyResource'
+  - uid: '@azure/arm-sql.SecurityAlertPolicyState'
+    name: SecurityAlertPolicyState
+    spec.typeScript:
+      - name: SecurityAlertPolicyState
+        fullName: SecurityAlertPolicyState
+        uid: '@azure/arm-sql.SecurityAlertPolicyState'
