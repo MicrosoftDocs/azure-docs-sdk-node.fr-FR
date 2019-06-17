@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeAgentSku'
+    name: NodeAgentSku
+    fullName: NodeAgentSku
+    children:
+      - '@azure/batch.NodeAgentSku.id'
+      - '@azure/batch.NodeAgentSku.osType'
+      - '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a9b4c-101">L’agent de nœud Batch est un programme qui s’exécute sur chaque nœud dans le pool et fournit l’interface de commande et de contrôle entre le nœud et le service Batch.</span><span class="sxs-lookup"><span data-stu-id="a9b4c-101">The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service.</span></span> <span data-ttu-id="a9b4c-102">Il existe différentes implémentations de l’agent de nœud pour différents systèmes d’exploitation, connues sous le nom de références.</span><span class="sxs-lookup"><span data-stu-id="a9b4c-102">There are different implementations of the node agent, known as SKUs, for different operating systems.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a9b4c-103">ID de référence (SKU) de l’agent de nœud.</span><span class="sxs-lookup"><span data-stu-id="a9b4c-103">The ID of the node agent SKU.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"a9b4c-104\">Le type de système d’exploitation (par exemple, Windows ou Linux) compatible avec l’agent de nœud référence (SKU).</span><span class=\"sxs-lookup\"><span data-stu-id=\"a9b4c-104\">The type of operating system (e.g. Windows or Linux) compatible with the node agent SKU.</span></span>\n<span data-ttu-id=\"a9b4c-105\">Les valeurs possibles sont\_: «\_linux\_», «\_windows\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"a9b4c-105\">Possible values include: 'linux', 'windows'</span></span>"
+    optional: true
+    syntax:
+      content: 'osType?: OSType'
+      return:
+        type:
+          - '@azure/batch.OSType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeAgentSku.verifiedImageReferences'
+    name: verifiedImageReferences
+    fullName: verifiedImageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a9b4c-106">La liste des images Azure Marketplace vérifié pour être compatible avec la référence de l’agent de ce nœud.</span><span class="sxs-lookup"><span data-stu-id="a9b4c-106">The list of Azure Marketplace images verified to be compatible with this node agent SKU.</span></span> <span data-ttu-id="a9b4c-107">Cette collection n’est pas exhaustive (l’agent de nœud peut être compatible avec d’autres images).</span><span class="sxs-lookup"><span data-stu-id="a9b4c-107">This collection is not exhaustive (the node agent may be compatible with other images).</span></span>
+    optional: true
+    syntax:
+      content: 'verifiedImageReferences?: ImageReference[]'
+      return:
+        type:
+          - '@azure/batch.ImageReference[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.OSType'
+    name: OSType
+    spec.typeScript:
+      - name: OSType
+        fullName: OSType
+        uid: '@azure/batch.OSType'
+  - uid: '@azure/batch.ImageReference[]'
+    name: 'ImageReference[]'
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: '@azure/batch.ImageReference'
+      - name: '[]'
+        fullName: '[]'
