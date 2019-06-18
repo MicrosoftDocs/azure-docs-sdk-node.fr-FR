@@ -10,10 +10,11 @@ items:
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.id'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.name'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.provisioningState'
+      - '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="30b8d-101">Autorisation dans une ressource ExpressRouteCircuit.</span><span class="sxs-lookup"><span data-stu-id="30b8d-101">Authorization in an ExpressRouteCircuit resource.</span></span>
+    summary: <span data-ttu-id="021e0-101">Autorisation dans une ressource ExpressRouteCircuit.</span><span class="sxs-lookup"><span data-stu-id="021e0-101">Authorization in an ExpressRouteCircuit resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -24,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="30b8d-102">La clé d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="30b8d-102">The authorization key.</span></span>
+    summary: <span data-ttu-id="021e0-102">La clé d’autorisation.</span><span class="sxs-lookup"><span data-stu-id="021e0-102">The authorization key.</span></span>
     optional: true
     syntax:
       content: 'authorizationKey?: undefined | string'
@@ -39,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"30b8d-103\">AuthorizationUseStatus.</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-103\">AuthorizationUseStatus.</span></span> <span data-ttu-id=\"30b8d-104\">Les valeurs possibles sont les suivantes\_: «\_Disponible\_» et «\_InUse\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-104\">Possible values are: 'Available' and 'InUse'.</span></span> <span data-ttu-id=\"30b8d-105\">Les valeurs possibles incluent\_: 'Available', 'InUse'</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-105\">Possible values include: 'Available', 'InUse'</span></span>"
+    summary: "<span data-ttu-id=\"021e0-103\">État de l’utilisation d’autorisation.</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-103\">The authorization use status.</span></span> <span data-ttu-id=\"021e0-104\">Les valeurs possibles incluent\_: 'Available', 'InUse'</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-104\">Possible values include: 'Available', 'InUse'</span></span>"
     optional: true
     syntax:
       content: 'authorizationUseStatus?: AuthorizationUseStatus'
@@ -54,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"30b8d-106\">En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-106\">A unique read-only string that changes whenever the resource is updated.</span></span>\n<span data-ttu-id=\"30b8d-107\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-107\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    summary: "<span data-ttu-id=\"021e0-105\">En lecture seule chaîne unique qui change chaque fois que la ressource est mise à jour.</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-105\">A unique read-only string that changes whenever the resource is updated.</span></span>\n<span data-ttu-id=\"021e0-106\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-106\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -69,7 +70,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="30b8d-108">ID de la ressource</span><span class="sxs-lookup"><span data-stu-id="30b8d-108">Resource ID.</span></span>
+    summary: <span data-ttu-id="021e0-107">ID de la ressource</span><span class="sxs-lookup"><span data-stu-id="021e0-107">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -84,7 +85,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="30b8d-109">Obtient le nom de la ressource qui est unique au sein d’un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="30b8d-109">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="30b8d-110">Ce nom peut être utilisé pour accéder à la ressource.</span><span class="sxs-lookup"><span data-stu-id="30b8d-110">This name can be used to access the resource.</span></span>
+    summary: <span data-ttu-id="021e0-108">Obtient le nom de la ressource qui est unique au sein d’un groupe de ressources.</span><span class="sxs-lookup"><span data-stu-id="021e0-108">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="021e0-109">Ce nom peut être utilisé pour accéder à la ressource.</span><span class="sxs-lookup"><span data-stu-id="021e0-109">This name can be used to access the resource.</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -99,10 +100,25 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"30b8d-111\">Obtient l’état d’approvisionnement de la ressource d’adresse IP publique.</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-111\">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id=\"30b8d-112\">Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"30b8d-112\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+    summary: "<span data-ttu-id=\"021e0-110\">Obtient l’état d’approvisionnement de la ressource d’adresse IP publique.</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-110\">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id=\"021e0-111\">Les valeurs possibles sont les suivantes\_: «\_La mise à jour\_», «\_Suppression\_» et «\_Failed\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-111\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"021e0-112\">Type de la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-112\">Type of the resource.</span></span>\n<span data-ttu-id=\"021e0-113\">**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**</span><span class=\"sxs-lookup\"><span data-stu-id=\"021e0-113\">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string

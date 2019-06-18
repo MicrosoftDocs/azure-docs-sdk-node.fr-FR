@@ -1,0 +1,731 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Outputs'
+    name: Outputs
+    fullName: Outputs
+    children:
+      - '@azure/arm-streamanalytics.Outputs.beginTest'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Outputs.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Outputs.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Outputs.get'
+      - '@azure/arm-streamanalytics.Outputs.get_2'
+      - '@azure/arm-streamanalytics.Outputs.get_1'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Outputs.constructor'
+      - '@azure/arm-streamanalytics.Outputs.test'
+      - '@azure/arm-streamanalytics.Outputs.update'
+      - '@azure/arm-streamanalytics.Outputs.update_2'
+      - '@azure/arm-streamanalytics.Outputs.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="db200-101">Classe représentant un sorties.</span><span class="sxs-lookup"><span data-stu-id="db200-101">Class representing a Outputs.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.beginTest'
+    name: 'beginTest(string, string, string, Models.OutputsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-102">Teste si la source de données de sortie est accessible et utilisable par le service Azure Stream Analytique.</span><span class="sxs-lookup"><span data-stu-id="db200-102">Tests whether an output’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-103\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-103\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-104\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-104\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-105">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-105">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-106">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-106">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace'
+    name: 'createOrReplace(Output, string, string, string, Models.OutputsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-107">Crée une sortie ou remplace une sortie déjà existante dans un travail de diffusion en continu existant.</span><span class="sxs-lookup"><span data-stu-id="db200-107">Creates an output or replaces an already existing output under an existing streaming job.</span></span>
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-108">La définition de la sortie qui sera utilisée pour créer une nouvelle sortie ou de remplacer l’existant sous le travail de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-108">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-109\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-109\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-110\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-110\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-111">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-111">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-112">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-112">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace_2'
+    name: 'createOrReplace(Output, string, string, string, OutputsCreateOrReplaceOptionalParams, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, options: OutputsCreateOrReplaceOptionalParams, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-113">La définition de la sortie qui sera utilisée pour créer une nouvelle sortie ou de remplacer l’existant sous le travail de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-113">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-114\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-114\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-115\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-115\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-116">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-116">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-117">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-117">The name of the output.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+          description: <span data-ttu-id="db200-118">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-118">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-119">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-119">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.createOrReplace_1'
+    name: 'createOrReplace(Output, string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(output: Output, resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-120">La définition de la sortie qui sera utilisée pour créer une nouvelle sortie ou de remplacer l’existant sous le travail de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-120">The definition of the output that will be used to create a new output or replace the existing one under the streaming job.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-121\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-121\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-122\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-122\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-123">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-123">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-124">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-124">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-125">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-125">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-126">Supprime une sortie à partir de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-126">Deletes an output from the streaming job.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-127\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-127\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-128\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-128\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-129">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-129">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-130">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-130">The name of the output.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-131\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-131\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-132\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-132\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-133">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-133">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-134">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-134">The name of the output.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="db200-135">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="db200-136">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-137\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-137\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-138\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-138\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-139">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-139">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-140">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-140">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="db200-141">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-141">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-142">Obtient les détails de la sortie spécifiée.</span><span class="sxs-lookup"><span data-stu-id="db200-142">Gets details about the specified output.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-143\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-143\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-144\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-144\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-145">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-145">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-146">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-146">The name of the output.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, options: RequestOptionsBase, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-147\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-147\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-148\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-148\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-149">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-149">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-150">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-150">The name of the output.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="db200-151">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-151">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-152">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-152">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.get_1'
+    name: 'get(string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-153\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-153\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-154\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-154\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-155">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-155">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-156">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-156">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-157">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-157">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.OutputsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-158">Répertorie toutes les sorties sous le travail de diffusion en continu spécifié.</span><span class="sxs-lookup"><span data-stu-id="db200-158">Lists all of the outputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.OutputsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-159\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-159\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-160\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-160\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-161">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-161">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - Models.OutputsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, OutputsListByStreamingJobOptionalParams, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: OutputsListByStreamingJobOptionalParams, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-162\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-162\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-163\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-163\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-164">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-164">The name of the streaming job.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+          description: <span data-ttu-id="db200-165">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="db200-166">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-167\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-167\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-168\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-168\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-169">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-169">The name of the streaming job.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="db200-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-171">Répertorie toutes les sorties sous le travail de diffusion en continu spécifié.</span><span class="sxs-lookup"><span data-stu-id="db200-171">Lists all of the outputs under the specified streaming job.</span></span>
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="db200-172">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="db200-172">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="db200-173">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="db200-173">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="db200-174">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="db200-175">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<OutputListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<OutputListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="db200-176">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="db200-176">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+          description: |
+            <span data-ttu-id="db200-177">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.constructor'
+    name: Outputs(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-178">Créez des sorties.</span><span class="sxs-lookup"><span data-stu-id="db200-178">Create a Outputs.</span></span>
+    syntax:
+      content: 'new Outputs(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            <span data-ttu-id="db200-179">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="db200-179">Reference to the service client.</span></span>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.test'
+    name: 'test(string, string, string, Models.OutputsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-180">Teste si la source de données de sortie est accessible et utilisable par le service Azure Stream Analytique.</span><span class="sxs-lookup"><span data-stu-id="db200-180">Tests whether an output’s datasource is reachable and usable by the Azure Stream Analytics service.</span></span>
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-181\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-181\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-182\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-182\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-183">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-183">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-184">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-184">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update'
+    name: 'update(Output, string, string, string, Models.OutputsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="db200-185">Met à jour une sortie existante dans un travail de diffusion en continu existant.</span><span class="sxs-lookup"><span data-stu-id="db200-185">Updates an existing output under an existing streaming job.</span></span> <span data-ttu-id="db200-186">Cela peut être utilisé pour mettre à jour partiellement (p. ex.</span><span class="sxs-lookup"><span data-stu-id="db200-186">This can be used to partially update (ie.</span></span> <span data-ttu-id="db200-187">mettre à jour les propriétés d’un ou deux) une sortie sans affecter le reste de la définition de travail ou de sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-187">update one or two properties) an output without affecting the rest the job or output definition.</span></span>
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, options?: Models.OutputsUpdateOptionalParams)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-188">Un objet de sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-188">An Output object.</span></span> <span data-ttu-id="db200-189">Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la sortie existante (p. ex. Ces propriétés seront actualisées).</span><span class="sxs-lookup"><span data-stu-id="db200-189">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="db200-190">Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la sortie existante sera restent les mêmes et ne change pas suite à cette opération PATCH.</span><span class="sxs-lookup"><span data-stu-id="db200-190">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-191\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-191\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-192\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-192\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-193">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-193">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-194">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-194">The name of the output.</span></span>
+        - id: options
+          type:
+            - Models.OutputsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update_2'
+    name: 'update(Output, string, string, string, OutputsUpdateOptionalParams, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, options: OutputsUpdateOptionalParams, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-195">Un objet de sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-195">An Output object.</span></span> <span data-ttu-id="db200-196">Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la sortie existante (p. ex. Ces propriétés seront actualisées).</span><span class="sxs-lookup"><span data-stu-id="db200-196">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="db200-197">Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la sortie existante sera restent les mêmes et ne change pas suite à cette opération PATCH.</span><span class="sxs-lookup"><span data-stu-id="db200-197">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-198\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-198\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-199\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-199\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-200">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-200">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-201">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-201">The name of the output.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'
+          description: <span data-ttu-id="db200-202">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="db200-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-203">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Outputs.update_1'
+    name: 'update(Output, string, string, string, ServiceCallback<Output>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(output: Output, resourceGroupName: string, jobName: string, outputName: string, callback: ServiceCallback<Output>)'
+      parameters:
+        - id: output
+          type:
+            - '@azure/arm-streamanalytics.Output'
+          description: <span data-ttu-id="db200-204">Un objet de sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-204">An Output object.</span></span> <span data-ttu-id="db200-205">Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la sortie existante (p. ex. Ces propriétés seront actualisées).</span><span class="sxs-lookup"><span data-stu-id="db200-205">The properties specified here will overwrite the corresponding properties in the existing output (ie. Those properties will be updated).</span></span> <span data-ttu-id="db200-206">Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la sortie existante sera restent les mêmes et ne change pas suite à cette opération PATCH.</span><span class="sxs-lookup"><span data-stu-id="db200-206">Any properties that are set to null here will mean that the corresponding property in the existing output will remain the same and not change as a result of this PATCH operation.</span></span>
+        - id: resourceGroupName
+          type:
+            - string
+          description: "<span data-ttu-id=\"db200-207\">Nom du groupe de ressources qui contient la ressource.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-207\">The name of the resource group that contains the resource.</span></span> <span data-ttu-id=\"db200-208\">Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"db200-208\">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>"
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="db200-209">Le nom de la tâche de diffusion en continu.</span><span class="sxs-lookup"><span data-stu-id="db200-209">The name of the streaming job.</span></span>
+        - id: outputName
+          type:
+            - string
+          description: <span data-ttu-id="db200-210">Le nom de la sortie.</span><span class="sxs-lookup"><span data-stu-id="db200-210">The name of the output.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.Output>
+          description: |
+            <span data-ttu-id="db200-211">Le rappel</span><span class="sxs-lookup"><span data-stu-id="db200-211">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.OutputsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.Output'
+    name: Output
+    spec.typeScript:
+      - name: Output
+        fullName: Output
+        uid: '@azure/arm-streamanalytics.Output'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.Output>
+    name: Output>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Output
+        fullName: Output
+        uid: '@azure/arm-streamanalytics.Output'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+    name: OutputsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: OutputsCreateOrReplaceOptionalParams
+        fullName: OutputsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.OutputListResult>
+    name: OutputListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OutputListResult
+        fullName: OutputListResult
+        uid: '@azure/arm-streamanalytics.OutputListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+    name: OutputsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: OutputsListByStreamingJobOptionalParams
+        fullName: OutputsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'
+    name: OutputsUpdateOptionalParams
+    spec.typeScript:
+      - name: OutputsUpdateOptionalParams
+        fullName: OutputsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.OutputsUpdateOptionalParams'
