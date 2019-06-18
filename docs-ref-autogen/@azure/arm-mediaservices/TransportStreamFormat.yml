@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat'
+    name: TransportStreamFormat
+    fullName: TransportStreamFormat
+    children:
+      - '@azure/arm-mediaservices.TransportStreamFormat.filenamePattern'
+      - '@azure/arm-mediaservices.TransportStreamFormat.odatatype'
+      - '@azure/arm-mediaservices.TransportStreamFormat.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit les propriétés de génération d’un Stream de Transport MPEG-2 (ISO/IEC 13818 - 1) Ou les fichiers vidéo de sortie.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le modèle des noms de fichiers pour les fichiers de sortie générée. Les macros suivantes sont prises en charge dans le nom de fichier\_: {Basename} - le nom de base de la vidéo d’entrée {Extension} - l’extension appropriée pour ce format. {Étiquette} - le nom attribué à la couche de codec /.\n{Index} - un index unique pour les miniatures. Uniquement applicable aux miniatures. {Bitrate}\_: la vitesse de transmission audio/vidéo. Non applicable aux miniatures. {Codec}\_: le type du codec audio/vidéo. Toutes les macros non substitués seront réduits et supprimés à partir du nom de fichier."
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.TransportStreamFormat"'
+      return:
+        type:
+          - '"#Microsoft.Media.TransportStreamFormat"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransportStreamFormat.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La liste des fichiers de sortie à générer.  Chaque entrée dans la liste est un jeu d’étiquettes de couche audio et vidéo à être entrée multiplex ensemble.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'

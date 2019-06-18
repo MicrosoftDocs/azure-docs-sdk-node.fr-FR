@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: "La tâche Gestionnaire de travaux est lancée automatiquement lorsque le travail est créé. Le service Batch tente de planifier la tâche du Gestionnaire de travaux avant toutes les autres tâches du travail. Lors de la réduction d’un pool, le service Batch tente de préserver les nœuds de calcul où les tâches de gestionnaire de travaux s’exécutent aussi longtemps que possible (autrement dit, les nœuds des tâches en cours d’exécution à la valeur «\_normales\_» sont supprimées avant les nœuds exécutant des tâches du Gestionnaire de travaux). Lorsqu’une tâche de gestionnaire de travaux échoue et doit être redémarré, le système tente de planifier son avec la priorité la plus élevée. Si aucun nœud inactif ne sont disponibles, le système peut mettre fin à une des tâches en cours d’exécution dans le pool et retourner à la file d’attente afin de libérer de l’espace pour la tâche du Gestionnaire de travaux à redémarrer. Notez qu’une tâche de gestionnaire de travaux dans un travail n’a pas de priorité sur des tâches d’autres travaux. Parmi les travaux, seules les priorités du niveau de la tâche sont observées. Par exemple, si un gestionnaire de travaux dans un travail de priorité 0 doit être redémarré, il ne modifiera en rien les tâches d’un travail de priorité 1. Lot réessaiera tâches quand une opération de récupération est déclenchée sur un nœud de calcul. Exemples d’opérations de récupération incluent (mais ne sont pas limitées à) quand un nœud de calcul défectueux est redémarré ou un nœud de calcul a disparu en raison d’une défaillance de l’hôte. Effectue une nouvelle tentative en raison d’une récupération opérations sont indépendantes d’et ne sont pas comptées dans le maxTaskRetryCount. Même si le maxTaskRetryCount est 0, une nouvelle tentative interne en raison d’une opération de récupération peut-être se produire. Pour cette raison, toutes les tâches doivent être idempotentes. Cela signifie que les tâches doivent tolérer est interrompu et redémarré sans provoquer de toute altération ou des données en double. Les meilleures pratiques pour les tâches de longue est d’utiliser une forme de points de contrôle."
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indique si le Gestionnaire de travaux peut s’exécuter sur un nœud de calcul de faible priorité. La valeur par défaut est true.
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Une liste des packages d’application qui déploie le service Batch pour le nœud de calcul avant d’exécuter la ligne de commande. Packages d’application sont téléchargés et déployées vers un répertoire partagé, pas la tâche de répertoire de travail. Par conséquent, si un package référencé se trouve déjà sur le nœud de calcul et est à jour, puis il n’est pas nouveau téléchargé\_; la copie existante sur le nœud de calcul est utilisée. Si un package d’application référencé ne peut pas être installé, par exemple, car le package a été supprimé ou parce que le téléchargement a échoué, la tâche échoue."
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les paramètres pour un jeton d’authentification que la tâche peut utiliser pour effectuer des opérations de service Batch. Si cette propriété est définie, le service Batch fournit la tâche avec un jeton d’authentification qui peut être utilisé pour authentifier les opérations de service Batch sans nécessiter une clé d’accès. Le jeton est fourni par le biais de la variable d’environnement AZ_BATCH_AUTHENTICATION_TOKEN. Les opérations que la tâche en utilisant le jeton peut effectuer dépendent des paramètres. Par exemple, une tâche peut demander des autorisations de travail afin d’ajouter d’autres tâches au travail, ou vérifier l’état du travail ou d’autres tâches sous le travail.'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La ligne de commande de la tâche du Gestionnaire de travaux. La ligne de commande ne s’exécute pas sous un interpréteur de commandes et par conséquent ne peut pas bénéficier des fonctionnalités de shell comme expansion de variables d’environnement. Si vous souhaitez tirer parti de ces fonctionnalités, vous devez appeler l’interpréteur de commandes dans la ligne de commande, par exemple à l’aide de «\_cmd /c MyCommand\_» dans Windows ou «\_/ bin/sh - c MyCommand\_» dans Linux. Si la ligne de commande fait référence à des chemins d’accès de fichier, il doit utiliser un chemin d’accès relatif (relatif au répertoire de travail tâche), ou la variable d’environnement fourni par lots (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)."
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Contraintes qui s’appliquent à la tâche Gestionnaire de travaux.
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les paramètres pour le conteneur sous lequel s’exécute la tâche du Gestionnaire de travaux. Si containerConfiguration est définie pour le pool qui exécutera cette tâche, il doit être définie. Si le pool qui exécutera cette tâche containerConfiguration n’est pas défini, cela ne doit pas être définie. Lorsque cela est spécifié, tous les répertoires de manière récursive sous le AZ_BATCH_NODE_ROOT_DIR (la racine des répertoires Azure Batch sur le nœud) sont mappées dans le conteneur, toutes les variables d’environnement de tâche sont mappés dans le conteneur, et la ligne de commande de tâche est exécutée dans le conteneur.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom complet de la tâche du Gestionnaire de travaux. Il ne doit pas être unique et peut contenir jusqu'à une longueur maximale de 1024 caractères Unicode.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une liste de paramètres de variable d’environnement pour la tâche du Gestionnaire de travaux.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Chaîne qui identifie de façon unique la tâche du Gestionnaire de travaux au sein du travail. L’ID peut contenir n’importe quelle combinaison de caractères alphanumériques, y compris des traits d’union et des traits de soulignement et ne peut pas contenir plus de 64 caractères.'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indique si la tâche du Gestionnaire de travaux signifie achèvement de l’intégralité du travail. Si la valeur est true, lorsque la tâche du Gestionnaire de travaux est terminée, les marques de service Batch le travail en tant que termine. Si toutes les tâches sont en cours d’exécution pour l’instant (autres que la tâche de fin), ces tâches sont terminées. Si la valeur est false, l’achèvement de la tâche du Gestionnaire de travaux n’affecte pas l’état du travail. Dans ce cas, vous devez utiliser l’attribut onAllTasksComplete pour arrêter le traitement, ou un utilisateur de mettre fin explicitement à la tâche ou le client. Un exemple de ceci est si le Gestionnaire de travaux crée un ensemble de tâches, mais ne prend ensuite aucun rôle supplémentaire dans leur exécution. La valeur par défaut est true. Si vous utilisez les attributs onAllTasksComplete et onTaskFailure à durée de vie de tâche contrôle et à l’aide de la tâche du Gestionnaire de travaux que pour créer les tâches du travail (à ne pas surveiller la progression), il est important de définir killJobOnCompletion sur false.'
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Une liste de fichiers qui permet de télécharger le service Batch à partir du nœud de calcul après l’exécution de la ligne de commande. Pour les tâches multi-instances, les fichiers seront téléchargés uniquement à partir du nœud de calcul sur lequel est exécutée la tâche principale.'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Une liste de fichiers qui permet de télécharger le service Batch pour le nœud de calcul avant d’exécuter la ligne de commande. Les fichiers répertoriés sous cet élément se trouvent dans le répertoire de travail de la tâche.
+      Il existe une taille maximale pour la liste des fichiers de ressources.  Lorsque la taille maximale est dépassée, la demande échoue et le code d’erreur de réponse sera RequestEntityTooLarge. Si cela se produit, la collection de ResourceFiles doit être réduite en taille. Cela est possible en utilisant les fichiers .zip, les Packages d’Application ou les conteneurs Docker.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indique si la tâche du Gestionnaire de travaux requiert une utilisation exclusive du nœud de calcul où elle s’exécute. Si la valeur est true, aucune autre tâche n’exécutera sur le même nœud de calcul pour tant que le Gestionnaire de travaux est en cours d’exécution. Si la valeur est false, autres tâches peuvent s’exécuter simultanément avec le Gestionnaire de travaux sur un nœud de calcul.
+      Le Gestionnaire de travaux le nombre de tâches normalement par rapport à la limite de tâches simultanées du nœud, c’est uniquement pertinente si le nœud autorise plusieurs tâches simultanées. La valeur par défaut est true.
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’identité d’utilisateur sous lequel s’exécute la tâche du Gestionnaire de travaux. Si omis, la tâche s’exécute comme un utilisateur non administratif unique à la tâche.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

@@ -1,0 +1,837 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-streamanalytics.Functions'
+    name: Functions
+    fullName: Functions
+    children:
+      - '@azure/arm-streamanalytics.Functions.beginTest'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace'
+      - '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+      - '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+      - '@azure/arm-streamanalytics.Functions.constructor'
+      - '@azure/arm-streamanalytics.Functions.get'
+      - '@azure/arm-streamanalytics.Functions.get_2'
+      - '@azure/arm-streamanalytics.Functions.get_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+      - '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+      - '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+      - '@azure/arm-streamanalytics.Functions.test'
+      - '@azure/arm-streamanalytics.Functions.update_2'
+      - '@azure/arm-streamanalytics.Functions.update'
+      - '@azure/arm-streamanalytics.Functions.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe représentant une fonction.
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.beginTest'
+    name: 'beginTest(string, string, string, Models.FunctionsBeginTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Teste si les informations fournies pour une fonction sont valides. Cela peut consister à partir de test de la connexion au service web sous-jacent derrière la fonction ou de s’assurer que le code de fonction fourni est syntaxiquement correct.
+    syntax:
+      content: 'function beginTest(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsBeginTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - Models.FunctionsBeginTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_2'
+    name: 'createOrReplace(FunctionModel, string, string, string, FunctionsCreateOrReplaceOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsCreateOrReplaceOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: La définition de la fonction qui sera utilisée pour créer une fonction ou de remplacer l’existant sous le travail de diffusion en continu.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace'
+    name: 'createOrReplace(FunctionModel, string, string, string, Models.FunctionsCreateOrReplaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Crée une fonction ou remplace une fonction déjà existante dans un travail de diffusion en continu existant.
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsCreateOrReplaceOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: La définition de la fonction qui sera utilisée pour créer une fonction ou de remplacer l’existant sous le travail de diffusion en continu.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - Models.FunctionsCreateOrReplaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.createOrReplace_1'
+    name: 'createOrReplace(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrReplace(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: La définition de la fonction qui sera utilisée pour créer une fonction ou de remplacer l’existant sous le travail de diffusion en continu.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsCreateOrReplaceResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Supprime une fonction de la tâche de diffusion en continu.
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.constructor'
+    name: Functions(StreamAnalyticsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Créer une fonction.
+    syntax:
+      content: 'new Functions(client: StreamAnalyticsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+          description: |
+            Référence au client du service.
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtient les détails de la fonction spécifiée.
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.get_1'
+    name: 'get(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsGetResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_2'
+    name: 'listByStreamingJob(string, string, FunctionsListByStreamingJobOptionalParams, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options: FunctionsListByStreamingJobOptionalParams, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob'
+    name: 'listByStreamingJob(string, string, Models.FunctionsListByStreamingJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie toutes les fonctions sous le travail de diffusion en continu spécifié.
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, options?: Models.FunctionsListByStreamingJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: options
+          type:
+            - Models.FunctionsListByStreamingJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJob_1'
+    name: 'listByStreamingJob(string, string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJob(resourceGroupName: string, jobName: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext'
+    name: 'listByStreamingJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie toutes les fonctions sous le travail de diffusion en continu spécifié.
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_2'
+    name: 'listByStreamingJobNext(string, RequestOptionsBase, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.listByStreamingJobNext_1'
+    name: 'listByStreamingJobNext(string, ServiceCallback<FunctionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByStreamingJobNext(nextPageLink: string, callback: ServiceCallback<FunctionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsListByStreamingJobNextResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_2'
+    name: 'retrieveDefaultDefinition(string, string, string, FunctionsRetrieveDefaultDefinitionOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options: FunctionsRetrieveDefaultDefinitionOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition'
+    name: 'retrieveDefaultDefinition(string, string, string, Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Récupère la définition par défaut d’une fonction selon les paramètres spécifiés.
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsRetrieveDefaultDefinitionOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - Models.FunctionsRetrieveDefaultDefinitionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.retrieveDefaultDefinition_1'
+    name: 'retrieveDefaultDefinition(string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function retrieveDefaultDefinition(resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsRetrieveDefaultDefinitionResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.test'
+    name: 'test(string, string, string, Models.FunctionsTestOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Teste si les informations fournies pour une fonction sont valides. Cela peut consister à partir de test de la connexion au service web sous-jacent derrière la fonction ou de s’assurer que le code de fonction fourni est syntaxiquement correct.
+    syntax:
+      content: 'function test(resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsTestOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - Models.FunctionsTestOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsTestResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_2'
+    name: 'update(FunctionModel, string, string, string, FunctionsUpdateOptionalParams, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options: FunctionsUpdateOptionalParams, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: Un objet de fonction. Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la fonction existante (p. ex. Ces propriétés seront actualisées). Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la fonction existante sera restent les mêmes et ne change pas suite à cette opération PATCH.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update'
+    name: 'update(FunctionModel, string, string, string, Models.FunctionsUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Met à jour une fonction existante dans un travail de diffusion en continu existant. Cela peut être utilisé pour mettre à jour partiellement (p. ex. mettre à jour les propriétés d’un ou deux) une fonction sans affecter le reste de la définition de travail ou de fonction.
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, options?: Models.FunctionsUpdateOptionalParams)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: Un objet de fonction. Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la fonction existante (p. ex. Ces propriétés seront actualisées). Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la fonction existante sera restent les mêmes et ne change pas suite à cette opération PATCH.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: options
+          type:
+            - Models.FunctionsUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+  - uid: '@azure/arm-streamanalytics.Functions.update_1'
+    name: 'update(FunctionModel, string, string, string, ServiceCallback<FunctionModel>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(functionParameter: FunctionModel, resourceGroupName: string, jobName: string, functionName: string, callback: ServiceCallback<FunctionModel>)'
+      parameters:
+        - id: functionParameter
+          type:
+            - '@azure/arm-streamanalytics.FunctionModel'
+          description: Un objet de fonction. Les propriétés spécifiées ici remplacent les propriétés correspondantes dans la fonction existante (p. ex. Ces propriétés seront actualisées). Toutes les propriétés qui sont définies sur null ici signifie que la propriété correspondante dans la fonction existante sera restent les mêmes et ne change pas suite à cette opération PATCH.
+        - id: resourceGroupName
+          type:
+            - string
+          description: "Nom du groupe de ressources qui contient la ressource. Vous pouvez obtenir cette valeur à partir de l’API Azure\_Resource\_Manager ou du portail."
+        - id: jobName
+          type:
+            - string
+          description: Le nom de la tâche de diffusion en continu.
+        - id: functionName
+          type:
+            - string
+          description: Nom de la fonction.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.FunctionsUpdateResponse>
+    package: '@azure/arm-streamanalytics'
+references:
+  - uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+    name: StreamAnalyticsManagementClientContext
+    spec.typeScript:
+      - name: StreamAnalyticsManagementClientContext
+        fullName: StreamAnalyticsManagementClientContext
+        uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext'
+  - uid: '@azure/arm-streamanalytics.FunctionModel'
+    name: FunctionModel
+    spec.typeScript:
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionModel>
+    name: FunctionModel>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionModel
+        fullName: FunctionModel
+        uid: '@azure/arm-streamanalytics.FunctionModel'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+    name: FunctionsCreateOrReplaceOptionalParams
+    spec.typeScript:
+      - name: FunctionsCreateOrReplaceOptionalParams
+        fullName: FunctionsCreateOrReplaceOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsCreateOrReplaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-streamanalytics.FunctionListResult>
+    name: FunctionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FunctionListResult
+        fullName: FunctionListResult
+        uid: '@azure/arm-streamanalytics.FunctionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+    name: FunctionsListByStreamingJobOptionalParams
+    spec.typeScript:
+      - name: FunctionsListByStreamingJobOptionalParams
+        fullName: FunctionsListByStreamingJobOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsListByStreamingJobOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+    name: FunctionsRetrieveDefaultDefinitionOptionalParams
+    spec.typeScript:
+      - name: FunctionsRetrieveDefaultDefinitionOptionalParams
+        fullName: FunctionsRetrieveDefaultDefinitionOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsRetrieveDefaultDefinitionOptionalParams'
+  - uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'
+    name: FunctionsUpdateOptionalParams
+    spec.typeScript:
+      - name: FunctionsUpdateOptionalParams
+        fullName: FunctionsUpdateOptionalParams
+        uid: '@azure/arm-streamanalytics.FunctionsUpdateOptionalParams'

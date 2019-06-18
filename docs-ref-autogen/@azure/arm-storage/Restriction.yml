@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: La restriction en raison de ce qui référence (SKU) ne peut pas être utilisé.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La raison de la restriction. À partir de maintenant, cela peut être «\_QuotaId\_» ou «\_NotAvailableForSubscription\_». Id de quota est défini lors de la référence SKU a requiredQuotas paramètre car l’abonnement n’appartient pas à ce quota. La «\_NotAvailableForSubscription\_» est liée à la capacité au contrôleur de domaine. Les valeurs possibles incluent\_: 'QuotaId', 'NotAvailableForSubscription'"
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de restrictions. À partir de maintenant uniquement les valeur possible pour ce est emplacement.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La valeur de restrictions. Si le type de restriction est défini à l’emplacement. Il s’agit de différents emplacements où la référence (SKU) est limitée.\n**REMARQUE\_: Cette propriété n’est pas sérialisée. Il peut uniquement être rempli par le serveur.**"
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'

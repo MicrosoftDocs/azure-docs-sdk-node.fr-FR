@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.DataDisk'
+    name: DataDisk
+    fullName: DataDisk
+    children:
+      - '@azure/batch.DataDisk.caching'
+      - '@azure/batch.DataDisk.diskSizeGB'
+      - '@azure/batch.DataDisk.lun'
+      - '@azure/batch.DataDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant DataDisk.
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de mise en cache pour être activée pour les disques de données. La valeur par défaut pour la mise en cache est lecture/écriture. Pour plus d’informations sur les options de mise en cache, consultez\_: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/.\nLes valeurs possibles sont\_: «\_none', 'readOnly', «\_readWrite\_»"
+    optional: true
+    syntax:
+      content: 'caching?: CachingType'
+      return:
+        type:
+          - '@azure/batch.CachingType'
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La taille de disque initiale, en gigaoctets.'
+    syntax:
+      content: 'diskSizeGB: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le numéro d’unité logique. Le numéro d’unité logique est utilisé pour identifier de manière unique chaque disque de données. Si vous y attacher plusieurs disques, chacune doit avoir un numéro d’unité logique distinct.'
+    syntax:
+      content: 'lun: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.DataDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le type de compte de stockage à utiliser pour le disque de données. Si omis, la valeur par défaut est «\_standard_lrs\_». Les valeurs possibles incluent\_: 'StandardLRS', 'PremiumLRS'"
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountType'
+      return:
+        type:
+          - '@azure/batch.StorageAccountType'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CachingType'
+    name: CachingType
+    spec.typeScript:
+      - name: CachingType
+        fullName: CachingType
+        uid: '@azure/batch.CachingType'
+  - uid: '@azure/batch.StorageAccountType'
+    name: StorageAccountType
+    spec.typeScript:
+      - name: StorageAccountType
+        fullName: StorageAccountType
+        uid: '@azure/batch.StorageAccountType'
