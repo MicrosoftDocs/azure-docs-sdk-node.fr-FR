@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="0da96-101">Interface représentant CertificateReference.</span><span class="sxs-lookup"><span data-stu-id="0da96-101">An interface representing CertificateReference.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"0da96-102\">L’emplacement du magasin de certificats sur le nœud de calcul dans laquelle installer le certificat.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-102\">The location of the certificate store on the compute node into which to install the certificate.</span></span> <span data-ttu-id=\"0da96-103\">La valeur par défaut est currentuser.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-103\">The default value is currentuser.</span></span> <span data-ttu-id=\"0da96-104\">Cette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows).</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-104\">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id=\"0da96-105\">Pour les nœuds de calcul Linux, les certificats sont stockés dans un répertoire dans le répertoire de travail tâche et un environnement que variable AZ_BATCH_CERTIFICATES_DIR est fournie à la tâche d’interrogation pour cet emplacement.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-105\">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id=\"0da96-106\">Pour les certificats avec une visibilité de l’utilisateur «\_distant\_», un répertoire de «\_certificats\_» est créé dans le répertoire de base (par exemple, /home/ {nom_utilisateur} / certificats) et les certificats sont placés dans ce répertoire.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-106\">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>\n<span data-ttu-id=\"0da96-107\">Possible values include: 'currentUser', 'localMachine'</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-107\">Possible values include: 'currentUser', 'localMachine'</span></span>"
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"0da96-108\">Le nom du magasin de certificats sur le nœud de calcul dans laquelle installer le certificat.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-108\">The name of the certificate store on the compute node into which to install the certificate.</span></span>\n<span data-ttu-id=\"0da96-109\">Cette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows).</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-109\">This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference).</span></span> <span data-ttu-id=\"0da96-110\">Les noms de magasins courantes sont les suivantes\_: Mon, autorité de certification racine, approbation, non autorisé, TrustedPeople, TrustedPublisher, AuthRoot, carnet d’adresses, mais n’importe quel nom de magasin personnalisé peut également être utilisé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-110\">Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used.</span></span> <span data-ttu-id=\"0da96-111\">La valeur par défaut est My.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0da96-111\">The default value is My.</span></span>"
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da96-112">L'empreinte numérique du certificat.</span><span class="sxs-lookup"><span data-stu-id="0da96-112">The thumbprint of the certificate.</span></span>
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da96-113">L’algorithme auquel est associé l’empreinte numérique.</span><span class="sxs-lookup"><span data-stu-id="0da96-113">The algorithm with which the thumbprint is associated.</span></span> <span data-ttu-id="0da96-114">Cela doit être sha1.</span><span class="sxs-lookup"><span data-stu-id="0da96-114">This must be sha1.</span></span>
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="0da96-115">Les comptes d’utilisateur sur le nœud de calcul doit avoir accès aux données privées du certificat.</span><span class="sxs-lookup"><span data-stu-id="0da96-115">Which user accounts on the compute node should have access to the private data of the certificate.</span></span> <span data-ttu-id="0da96-116">Vous pouvez spécifier plus d’une visibilité de cette collection.</span><span class="sxs-lookup"><span data-stu-id="0da96-116">You can specify more than one visibility in this collection.</span></span> <span data-ttu-id="0da96-117">La valeur par défaut est tous les comptes.</span><span class="sxs-lookup"><span data-stu-id="0da96-117">The default is all accounts.</span></span>
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'
