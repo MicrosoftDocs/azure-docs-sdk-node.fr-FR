@@ -16,10 +16,11 @@ items:
       - '@azure/arm-network.AzureFirewall.tags'
       - '@azure/arm-network.AzureFirewall.threatIntelMode'
       - '@azure/arm-network.AzureFirewall.type'
+      - '@azure/arm-network.AzureFirewall.zones'
     langs:
       - typeScript
     type: interface
-    summary: Ressource de pare-feu Azure
+    summary: Ressource de pare-feu Azure.
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -202,6 +203,21 @@ items:
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.AzureFirewall.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Une liste de disponibilité de zones indiquant où la ressource doit provenir.
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
     package: '@azure/arm-network'
 references:
   - uid: '@azure/arm-network.Resource'
