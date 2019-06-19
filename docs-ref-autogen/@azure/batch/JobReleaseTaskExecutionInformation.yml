@@ -1,0 +1,178 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation'
+    name: JobReleaseTaskExecutionInformation
+    fullName: JobReleaseTaskExecutionInformation
+    children:
+      - '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.result'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.state'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant JobReleaseTaskExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informations sur le conteneur sous lequel la tâche s’exécute. Cette propriété est définie uniquement si la tâche s’exécute dans un contexte de conteneur.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Heure à laquelle la tâche de mise en production de la tâche terminée. Cette propriété est définie uniquement si la tâche est dans l’état terminé.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le code de sortie du programme spécifié sur la ligne de commande de tâche. Ce paramètre est renvoyé uniquement si la tâche est dans l’état terminé. Le code de sortie pour un processus reflète la convention spécifique implémentée par le développeur d’applications pour ce processus. Si vous utilisez la valeur de code de sortie pour prendre des décisions dans votre code, n’oubliez pas que vous connaissez la convention de code de sortie utilisée par le processus d’application. Notez que le code de sortie peut également être généré par le système d’exploitation de nœud de calcul, par exemple quand un processus d’arrêt est forcé.'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informations de description de l’échec de la tâche, le cas échéant. Cette propriété est définie uniquement si la tâche est dans l’état terminé et a rencontré une erreur.'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le résultat de l’exécution des tâches. Si la valeur est 'échec', les détails de l’échec peuvent être trouvés dans la propriété failureInfo. Les valeurs possibles sont\_: «\_réussite\_», «\_échec\_»"
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Heure à laquelle l’exécution de la tâche a commencé. Si la tâche a été redémarrée ou retentée, il s’agit de la dernière heure à laquelle l’exécution de la tâche a commencé.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état actuel de la tâche de mise en production du travail sur le nœud de calcul. Les valeurs possibles sont\_: «\_running\_», «\_terminée\_»"
+    syntax:
+      content: 'state: JobReleaseTaskState'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le répertoire racine de la tâche de mise en production du travail sur le nœud de calcul. Vous pouvez utiliser ce chemin d’accès pour récupérer les fichiers créés par la tâche, telles que des fichiers journaux.'
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobReleaseTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: URL vers le répertoire racine de la tâche de validation de travail sur le nœud de calcul.
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobReleaseTaskState'
+    name: JobReleaseTaskState
+    spec.typeScript:
+      - name: JobReleaseTaskState
+        fullName: JobReleaseTaskState
+        uid: '@azure/batch.JobReleaseTaskState'

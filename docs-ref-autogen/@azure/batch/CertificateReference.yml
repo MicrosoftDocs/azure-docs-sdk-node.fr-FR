@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface représentant CertificateReference.
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’emplacement du magasin de certificats sur le nœud de calcul dans laquelle installer le certificat. La valeur par défaut est currentuser. Cette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows). Pour les nœuds de calcul Linux, les certificats sont stockés dans un répertoire dans le répertoire de travail tâche et un environnement que variable AZ_BATCH_CERTIFICATES_DIR est fournie à la tâche d’interrogation pour cet emplacement. Pour les certificats avec une visibilité de l’utilisateur «\_distant\_», un répertoire de «\_certificats\_» est créé dans le répertoire de base (par exemple, /home/ {nom_utilisateur} / certificats) et les certificats sont placés dans ce répertoire.\nPossible values include: 'currentUser', 'localMachine'"
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom du magasin de certificats sur le nœud de calcul dans laquelle installer le certificat.\nCette propriété est applicable uniquement aux pools configurés avec des nœuds Windows (autrement dit, créés avec cloudServiceConfiguration, ou référence d’image avec virtualMachineConfiguration à l’aide d’un Windows). Les noms de magasins courantes sont les suivantes\_: Mon, autorité de certification racine, approbation, non autorisé, TrustedPeople, TrustedPublisher, AuthRoot, carnet d’adresses, mais n’importe quel nom de magasin personnalisé peut également être utilisé. La valeur par défaut est My."
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L'empreinte numérique du certificat.
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’algorithme auquel est associé l’empreinte numérique. Cela doit être sha1.
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les comptes d’utilisateur sur le nœud de calcul doit avoir accès aux données privées du certificat. Vous pouvez spécifier plus d’une visibilité de cette collection. La valeur par défaut est tous les comptes.
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'
