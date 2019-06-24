@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPatchParameter
+    name: JobPatchParameter
+    fullName: JobPatchParameter
+    children:
+      - azure-batch.JobPatchParameter.constraints
+      - azure-batch.JobPatchParameter.metadata
+      - azure-batch.JobPatchParameter.onAllTasksComplete
+      - azure-batch.JobPatchParameter.poolInfo
+      - azure-batch.JobPatchParameter.priority
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si omis, l’exécution existante contraintes restent inchangés.'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si omis, le travail existant métadonnées reste inchangé.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si omis, le comportement de saisie semi-automatique reste inchangé. Impossible de modifier la valeur à partir de terminatejob à noaction\_: autrement dit, une fois que vous avez impliqué arrêt automatique, vous ne pouvez pas désactiver de nouveau. Si vous tentez cette opération, la requête échoue avec une réponse d’erreur «\_valeur de propriété non valide\_»\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte). Les valeurs possibles sont\_: 'noAction', 'terminateJob'"
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Vous pouvez modifier le Pool pour un travail uniquement lorsque le travail est désactivé. L’appel de la tâche correction échoue si vous incluez l’élément poolInfo et que le travail n’est pas désactivé. Si vous spécifiez une spécification de l’élément autoPoolSpecification dans le poolInfo, uniquement la propriété keepAlive peut être mis à jour, puis uniquement si le Pool automatique a une poolLifetimeOption de travail. Si omis, la tâche continue de s’exécuter sur son Pool actuel.'
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les valeurs de priorité peuvent varier de -1000 et 1000,-1000 correspondant à la priorité la plus basse et 1000 la plus haute priorité. Si omis, la priorité de la tâche reste inchangé.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

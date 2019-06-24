@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: "La tâche de validation s’exécute lorsque la tâche se termine, en raison d’une des opérations suivantes\_: L’utilisateur appelle l’API de tâche arrêter ou de l’API de tâche supprimer pendant que le travail est toujours actif, contrainte de temps horloge du travail mur maximale est atteinte, le travail est toujours actif, ou la tâche de gestionnaire de travaux est terminée et le travail est configuré pour mettre fin à lorsque le travail gére SQL Server se termine.\nLa tâche de validation s’exécute sur chaque nœud sur lequel les tâches du travail ont été exécutées et la tâche de préparation du travail exécuté et terminé. Si vous réinitialisez un nœud une fois qu’il a exécuté la tâche de préparation et la tâche se termine sans aucune tâche supplémentaire de la tâche en cours d’exécution sur ce nœud (et par conséquent, la tâche de préparation ne pas réexécuter), puis la tâche de validation ne s’exécute pas sur ce nœud de calcul.\nSi un nœud redémarre alors que la tâche de validation est en cours d’exécution, la tâche de validation s’exécute à nouveau lorsque le nœud de calcul démarre. Le travail n’est pas marqué comme terminé jusqu'à ce que toutes les tâches de mise en production de travail terminées. La tâche de validation s’exécute en arrière-plan. Elle n’occupe pas un emplacement de planification\_; Autrement dit, il ne compte pas dans la limite de maxTasksPerNode spécifiée dans le Pool."
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La ligne de commande ne s’exécute pas sous un interpréteur de commandes et par conséquent ne peut pas bénéficier des fonctionnalités de shell comme expansion de variables d’environnement. Si vous souhaitez tirer parti de ces fonctionnalités, vous devez appeler l’interpréteur de commandes dans la ligne de commande, par exemple à l’aide de «\_cmd /c MyCommand\_» dans Windows ou «\_/ bin/sh - c MyCommand\_» dans Linux. Si la ligne de commande fait référence à des chemins d’accès de fichier, il doit utiliser un chemin d’accès relatif (relatif au répertoire de travail tâche), ou la variable d’environnement fourni par lots (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)."
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lorsque cela est spécifié, tous les répertoires de manière récursive sous le AZ_BATCH_NODE_ROOT_DIR (la racine des répertoires Azure Batch sur le nœud) sont mappées dans le conteneur, toutes les variables d’environnement de tâche sont mappés dans le conteneur, et la ligne de commande de tâche est exécutée dans le conteneur. Fichiers générés dans le conteneur en dehors de AZ_BATCH_NODE_ROOT_DIR peuvent ne pas être reflétées sur le disque hôte, ce qui signifie que le fichier de commandes API ne sera pas en mesure d’accéder à ces fichiers.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’ID peut contenir n’importe quelle combinaison de caractères alphanumériques, y compris des traits d’union et des traits de soulignement et ne peut pas contenir plus de 64 caractères. Si vous ne spécifiez pas cette propriété, le service Batch attribue une valeur par défaut «\_jobrelease\_». Aucune autre tâche dans le travail ne peut avoir le même ID que la tâche de validation. Si vous essayez d’envoyer une tâche avec le même id, le service Batch rejette la demande avec le code d’erreur TaskIdSameAsJobReleaseTask\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 409 (conflit)."
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les fichiers répertoriés sous cet élément se trouvent dans le répertoire de travail de la tâche.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La valeur par défaut est de 7 jours, par exemple, le répertoire de tâche est conservé pendant 7 jours, sauf si la suppression du nœud de calcul ou le travail est supprimé.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si omis, la tâche s’exécute comme un utilisateur non administratif unique à la tâche.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

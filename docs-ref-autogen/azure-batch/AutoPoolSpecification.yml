@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+      - azure-batch.AutoPoolSpecification.keepAlive
+      - azure-batch.AutoPoolSpecification.pool
+      - azure-batch.AutoPoolSpecification.poolLifetimeOption
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.autoPoolIdPrefix
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le service Batch affecte chaque automatique un identificateur unique lors de la création de Pool. Pour faire la distinction entre les Pools créés à des fins différentes, vous pouvez spécifier cet élément pour ajouter un préfixe à l’ID qui est assigné. Le préfixe peut comporter jusqu''à 20 caractères.'
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.keepAlive
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si la valeur est false, le service Batch supprime le Pool une fois que l’expiration de sa durée de vie (tel que déterminé par la valeur de poolLifetimeOption)\_; Autrement dit, lorsque le travail ou la planification du travail est terminé. Si la valeur est true, le service Batch ne supprime pas automatiquement le Pool. C’est à l’utilisateur de supprimer automatiquement les Pools créés avec cette option."
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.pool
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - azure-batch.PoolSpecification
+    package: azure-batch
+  - uid: azure-batch.AutoPoolSpecification.poolLifetimeOption
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les valeurs possibles sont\_: «\_jobSchedule\_», «\_travail\_»"
+    syntax:
+      content: 'poolLifetimeOption: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: azure-batch.PoolSpecification

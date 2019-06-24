@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.LinuxUserConfiguration
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - azure-batch.LinuxUserConfiguration.gid
+      - azure-batch.LinuxUserConfiguration.sshPrivateKey
+      - azure-batch.LinuxUserConfiguration.uid
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.gid
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les propriétés uid et gid doivent être spécifiées ensemble ou pas du tout. Sauf indication contraire au système d’exploitation sous-jacent système ils récupèrent le gid.
+    optional: true
+    syntax:
+      content: 'gid?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.sshPrivateKey
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La clé privée ne doit pas être protégé par mot de passe. La clé privée est utilisée pour configurer automatiquement l’authentification basée sur clé asymétrique pour SSH entre les nœuds de calcul dans un Linux Pool lorsque la propriété du Pool enableInterNodeCommunication est vraie (elle est ignorée si enableInterNodeCommunication a la valeur false). Il effectue cela en plaçant la paire de clés dans le répertoire .ssh de l’utilisateur. Si ce n’est pas spécifié, sans mot de passe SSH n’est pas configuré entre les nœuds de calcul (aucune modification de répertoire .ssh de l’utilisateur n’est effectuée).'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.LinuxUserConfiguration.uid
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Les propriétés uid et gid doivent être spécifiées ensemble ou pas du tout. Sauf indication contraire au système d’exploitation sous-jacent système ils récupèrent l’uid.
+    optional: true
+    syntax:
+      content: 'uid?: number'
+      return:
+        type:
+          - number
+    package: azure-batch

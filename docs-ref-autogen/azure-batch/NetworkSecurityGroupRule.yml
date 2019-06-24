@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les valeurs possibles sont\_: «\_autoriser\_», «\_refuser\_»"
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Priorités au sein d’un Pool doivent être uniques et sont évaluées dans l’ordre de priorité.
+      Plus le numéro de priorité est faible, plus la priorité de la règle est élevée. Par exemple, les règles peut être spécifiées avec les numéros d’ordre de 150, 250 et 350. La règle avec le numéro de commande de 150 est prioritaire sur la règle qui a un ordre de 250. Priorités autorisées sont 150 à 3500. Si toutes les valeurs réservées ou en double sont fournies à que la demande échoue avec le code d’état HTTP 400.
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les valeurs valides sont une seule adresse IP (par exemple 10.10.10.10), le sous-réseau IP (par exemple, 192.168.1.0/24), la balise par défaut, ou * (pour toutes les adresses).  Si d’autres valeurs sont fournies à que la demande échoue avec le code d’état HTTP 400.'
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Les valeurs valides sont «*» (pour tous les ports 0 - 65535), un port spécifique (par exemple, 22) ou un port de plage (par exemple, 100-200). Les ports doivent être dans la plage comprise entre 0 et 65535. Chaque entrée dans cette collection ne doit pas chevaucher une autre entrée (une plage ou un port individuel). Si d’autres valeurs sont fournies à que la demande échoue avec le code d’état HTTP 400. La valeur par défaut est «*».'
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

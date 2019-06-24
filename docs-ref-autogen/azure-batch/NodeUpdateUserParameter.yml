@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NodeUpdateUserParameter
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - azure-batch.NodeUpdateUserParameter.expiryTime
+      - azure-batch.NodeUpdateUserParameter.password
+      - azure-batch.NodeUpdateUserParameter.sshPublicKey
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.expiryTime
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si omis, la valeur par défaut est 1 jour à partir de l’heure actuelle. Pour les nœuds de calcul Linux, l’expiryTime a une précision par jour.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.password
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le mot de passe est requis pour les nœuds de calcul Windows (celles créées avec 'cloudServiceConfiguration', ou avec «\_virtualMachineConfiguration\_» à l’aide d’une référence d’Image de Windows). Pour les nœuds de calcul Linux, le mot de passe peut éventuellement être spécifiée avec la propriété sshPublicKey. Si omis, n’importe quel mot de passe existant est supprimé."
+    optional: true
+    syntax:
+      content: 'password?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NodeUpdateUserParameter.sshPublicKey
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La clé publique doit être compatible avec encodage OpenSSH et doit être encodé en base 64. Cette propriété peut être spécifiée uniquement pour les nœuds de calcul Linux. Si cela est spécifié pour un nœud de calcul Windows, le service Batch rejette la demande\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte). Si omis, toutes les clés publiques SSH existant sont supprimé."
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

@@ -32,9 +32,12 @@ items:
       - '@azure/arm-storage.BlobContainers.lease_2'
       - '@azure/arm-storage.BlobContainers.lease'
       - '@azure/arm-storage.BlobContainers.lease_1'
-      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_2'
+      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_1'
+      - '@azure/arm-storage.BlobContainers.listNext'
+      - '@azure/arm-storage.BlobContainers.listNext_2'
+      - '@azure/arm-storage.BlobContainers.listNext_1'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
@@ -1000,42 +1003,15 @@ items:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainers.list'
-    name: 'list(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données. Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.
-    syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur. Le nom respecte la casse.
-        - id: accountName
-          type:
-            - string
-          description: "Le nom du compte de stockage au sein du groupe de ressources spécifié. Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres."
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.BlobContainersListResponse>
-    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.list_2'
-    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    name: 'list(string, string, BlobContainersListOptionalParams, ServiceCallback<ListContainerItems>)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      content: 'function list(resourceGroupName: string, accountName: string, options: BlobContainersListOptionalParams, callback: ServiceCallback<ListContainerItems>)'
       parameters:
         - id: resourceGroupName
           type:
@@ -1047,13 +1023,40 @@ items:
           description: "Le nom du compte de stockage au sein du groupe de ressources spécifié. Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres."
         - id: options
           type:
-            - RequestOptionsBase
+            - '@azure/arm-storage.BlobContainersListOptionalParams'
           description: Les paramètres facultatifs
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
             Le rappel
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list'
+    name: 'list(string, string, Models.BlobContainersListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données. Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Models.BlobContainersListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Le nom du groupe de ressources au sein de l’abonnement de l’utilisateur. Le nom respecte la casse.
+        - id: accountName
+          type:
+            - string
+          description: "Le nom du compte de stockage au sein du groupe de ressources spécifié. Ce nom doit comprendre entre 3 et 24\_caractères, uniquement des lettres en minuscules et des nombres."
+        - id: options
+          type:
+            - Models.BlobContainersListOptionalParams
+          description: ''
+          optional: true
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
@@ -1084,6 +1087,79 @@ items:
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Répertorie tous les conteneurs et ne prend pas en charge un préfixe comme plan de données. Stratégies de restriction logicielle aujourd'hui ne retourne le jeton de continuation.
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Les paramètres facultatifs
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_1'
+    name: 'listNext(string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink de l’appel réussi précédent à l’opération de liste.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Le rappel
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
     name: 'lockImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1481,6 +1557,12 @@ references:
         uid: '@azure/arm-storage.ListContainerItems'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersListOptionalParams'
+    name: BlobContainersListOptionalParams
+    spec.typeScript:
+      - name: BlobContainersListOptionalParams
+        fullName: BlobContainersListOptionalParams
+        uid: '@azure/arm-storage.BlobContainersListOptionalParams'
   - uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'
     name: BlobContainersUpdateOptionalParams
     spec.typeScript:

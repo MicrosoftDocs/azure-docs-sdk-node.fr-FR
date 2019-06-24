@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.CertificateReference
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - azure-batch.CertificateReference.storeLocation
+      - azure-batch.CertificateReference.storeName
+      - azure-batch.CertificateReference.thumbprint
+      - azure-batch.CertificateReference.thumbprintAlgorithm
+      - azure-batch.CertificateReference.visibility
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeLocation
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "La valeur par défaut est currentuser. Cette propriété est applicable uniquement aux Pools configurés avec les nœuds de calcul Windows (qui est, créés avec cloudServiceConfiguration et virtualMachineConfiguration à l’aide d’une référence d’Image de Windows). Pour les nœuds de calcul Linux, les certificats sont stockés dans un répertoire à l’intérieur de la tâche de répertoire et une variable d’environnement qu'az_batch_certificates_dir est fournie à la tâche de requête pour cet emplacement de travail. Pour les certificats avec une visibilité de l’utilisateur «\_distant\_», un répertoire de «\_certificats\_» est créé dans le répertoire de base (par exemple, /home/ {nom_utilisateur} / certificats) et les certificats sont placés dans ce répertoire. Possible values include: 'currentUser', 'localMachine'"
+    optional: true
+    syntax:
+      content: 'storeLocation?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.storeName
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Cette propriété est applicable uniquement aux Pools configurés avec les nœuds de calcul Windows (qui est, créés avec cloudServiceConfiguration et virtualMachineConfiguration à l’aide d’une référence d’Image de Windows). Les noms de magasins courantes sont les suivantes\_: Mon, autorité de certification racine, approbation, non autorisé, TrustedPeople, TrustedPublisher, AuthRoot, carnet d’adresses, mais n’importe quel nom de magasin personnalisé peut également être utilisé. La valeur par défaut est My."
+    optional: true
+    syntax:
+      content: 'storeName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprint
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.thumbprintAlgorithm
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.CertificateReference.visibility
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Vous pouvez spécifier plus d’une visibilité de cette collection. La valeur par défaut est tous les comptes.
+    optional: true
+    syntax:
+      content: 'visibility?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

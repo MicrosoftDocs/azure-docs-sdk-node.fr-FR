@@ -1,0 +1,26 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le réseau virtuel doit être dans la même région et abonnement que le compte Azure Batch. Le sous-réseau spécifié doit avoir suffisamment d’adresses IP libre pour accueillir le nombre de nœuds de calcul qui exécutera les tâches à partir de la tâche. Il peut s’agir jusqu’au nombre de nœuds de calcul dans le Pool. Le principal de service «\_MicrosoftAzureBatch\_» doit avoir le «\_Classic collaborateur de Machine virtuelle «\_rôle de contrôle d’accès en fonction du rôle (RBAC) pour le réseau virtuel spécifié afin que le service Azure Batch peut planifier des tâches sur les nœuds. Cela peut être vérifié en vérifiant si le réseau virtuel spécifié possède des groupes de sécurité réseau (NSG) associés. Si la communication vers les nœuds dans le sous-réseau spécifié est refusée par un groupe de sécurité réseau, le service Batch définit l’état des nœuds de calcul à inutilisable. Il s’agit de la /providers/ {provider} /virtualNetworks/ {network} /subnets/ {sous-réseau} formulaire /subscriptions/ {subscription} /resourceGroups/ {groupe}.\nSi le réseau virtuel spécifié possède des groupes de sécurité réseau (NSG) associés, quelques ports système réservés doivent être activés pour les communications entrantes à partir du service Azure Batch. Pour les Pools créés avec une configuration de Machine virtuelle, activez les ports 29876 et 29877, ainsi que le port 22 pour Linux et le port 3389 pour Windows. Le port 443 doit également être ouvert pour les connexions sortantes pour les communications vers le stockage Azure. Pour plus d’informations, consultez\_: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration"
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch

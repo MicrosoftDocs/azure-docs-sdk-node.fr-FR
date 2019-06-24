@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - azure-batch.JobConstraints.maxTaskRetryCount
+      - azure-batch.JobConstraints.maxWallClockTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Notez que cette valeur contrôle spécifiquement le nombre de nouvelles tentatives. Le service Batch va tenter de chaque tâche qu’une seule fois et peut réessayer jusqu''à cette limite. Par exemple, si le nombre maximal de tentatives est 3, les tentatives de traitement par lots une tâche jusqu''à 4 fois (tentative initiale et 3 tentatives). Si le nombre maximal de tentatives est 0, le service Batch ne retente pas de tâches. Si le nombre maximal de tentatives est -1, le service Batch retente tâches sans limite. La valeur par défaut est 0 (aucune nouvelle tentative).'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si la tâche ne se termine pas dans le délai imparti, le service Batch met fin à elle et toutes les tâches qui sont en cours d’exécution. Dans ce cas, la raison d’arrêt sera MaxWallClockTimeExpiry. Si cette propriété n’est pas spécifiée, il n’existe aucune limite de temps sur la durée pendant laquelle il peut s’exécuter.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

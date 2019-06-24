@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: La configuration réseau pour un Pool.
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Les valeurs possibles sont\_: «\_none\_», «\_travail\_»"
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Configuration de point de terminaison de pool est uniquement pris en charge sur les Pools avec la propriété virtualMachineConfiguration.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le réseau virtuel doit être dans la même région et abonnement que le compte Azure Batch. Le sous-réseau spécifié doit avoir suffisamment libre pour accueillir le nombre de nœuds de calcul dans le Pool d’adresses IP. Si le sous-réseau n’a pas suffisamment d’adresses IP libre, le Pool alloue partiellement les nœuds, et une erreur de redimensionnement se produit. Le principal de service «\_MicrosoftAzureBatch\_» doit avoir le «\_Classic collaborateur de Machine virtuelle «\_rôle de contrôle d’accès en fonction du rôle (RBAC) pour le réseau virtuel spécifié. Le sous-réseau spécifié doit autoriser les communications à partir du service Azure Batch pour pouvoir planifier des tâches sur les nœuds. Cela peut être vérifié en vérifiant si le réseau virtuel spécifié possède des groupes de sécurité réseau (NSG) associés. Si la communication vers les nœuds dans le sous-réseau spécifié est refusée par un groupe de sécurité réseau, le service Batch définit l’état des nœuds de calcul à inutilisable. Pour les Pools créés avec virtualMachineConfiguration, seuls les réseaux virtuels ARM («\_Microsoft.Network/virtualnetworks\_») sont pris en charge, mais pour les Pools créés avec cloudServiceConfiguration ARM et les réseaux virtuels classiques sont pris en charge. Si le réseau virtuel spécifié possède des groupes de sécurité réseau associés, quelques ports système réservés doivent être activés pour les communications entrantes. Pour les Pools créés avec une configuration de machine virtuelle, activez les ports 29876 et 29877, ainsi que le port 22 pour Linux et le port 3389 pour Windows. Pour les Pools créés avec une configuration de service cloud, activez les ports 10100, 20100 et 30100. Activez également les connexions sortantes vers le stockage Azure sur le port 443. Pour plus d’informations, consultez\_: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration"
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

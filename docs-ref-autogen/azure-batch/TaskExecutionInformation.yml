@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskExecutionInformation
+    name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    children:
+      - azure-batch.TaskExecutionInformation.containerInfo
+      - azure-batch.TaskExecutionInformation.endTime
+      - azure-batch.TaskExecutionInformation.exitCode
+      - azure-batch.TaskExecutionInformation.failureInfo
+      - azure-batch.TaskExecutionInformation.lastRequeueTime
+      - azure-batch.TaskExecutionInformation.lastRetryTime
+      - azure-batch.TaskExecutionInformation.requeueCount
+      - azure-batch.TaskExecutionInformation.result
+      - azure-batch.TaskExecutionInformation.retryCount
+      - azure-batch.TaskExecutionInformation.startTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.containerInfo
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cette propriété est définie uniquement si la tâche s’exécute dans un contexte de conteneur.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - azure-batch.TaskContainerExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cette propriété est définie uniquement si la tâche est dans l’état terminé.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.exitCode
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cette propriété est définie uniquement si la tâche est dans l’état terminé. En règle générale, le code de sortie pour un processus reflète la convention spécifique implémentée par le développeur d’applications pour ce processus. Si vous utilisez la valeur de code de sortie pour prendre des décisions dans votre code, n’oubliez pas que vous connaissez la convention de code de sortie utilisée par le processus d’application. Toutefois, si le service Batch met fin à la tâche (en raison de l’expiration ou d’arrêt utilisateur via l’API), vous pouvez voir un code de sortie défini par le système d’exploitation.'
+    optional: true
+    syntax:
+      content: 'exitCode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.failureInfo
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cette propriété est définie uniquement si la tâche est dans l’état terminé et a rencontré une erreur.
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - azure-batch.TaskFailureInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRequeueTime
+    name: lastRequeueTime
+    fullName: lastRequeueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Cette propriété est définie uniquement si la valeur requeueCount est différente de zéro.
+    optional: true
+    syntax:
+      content: 'lastRequeueTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRetryTime
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Cet élément est présent uniquement si la tâche a été tentée (autrement dit, retryCount est différent de zéro). S’il est présent, cela est généralement identique à l’heure de début, mais peut être différent si la tâche a été redémarrée pour des raisons autres que de nouvelles tentatives\_; par exemple, si le nœud de calcul a été redémarré pendant une nouvelle tentative, l’heure de début est mis à jour mais n’est pas le lastRetryTime."
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.requeueCount
+    name: requeueCount
+    fullName: requeueCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lorsque l’utilisateur supprime des nœuds de calcul d’un Pool (en redimensionnant ou réduisant le pool), ou lorsque le travail est désactivé, l’utilisateur peut spécifier que l’exécution des tâches sur les nœuds de calcul est la file d’attente pour l’exécution. Ce nombre reflète le nombre de fois où la tâche a été la file d’attente pour ces raisons.'
+    syntax:
+      content: 'requeueCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si la valeur est 'échec', les détails de l’échec peuvent être trouvés dans la propriété failureInfo. Les valeurs possibles sont\_: «\_réussite\_», «\_échec\_»"
+    optional: true
+    syntax:
+      content: 'result?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.retryCount
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tâche application (code de sortie différent de zéro) sont réessayées, erreurs (la tâche n’a pas pu être exécutée) de prétraitement et erreurs de chargement de fichier ne sont pas retentées. Le service Batch réessaie la tâche jusqu''à atteindre la limite spécifiée par les contraintes.'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "«\_En cours d’exécution\_» correspond à l’état en cours d’exécution, par conséquent, si la tâche spécifie les fichiers de ressources ou des Packages, puis l’heure de début reflète l’heure à laquelle a commencé la tâche de téléchargement et à déployer ces. Si la tâche a été redémarrée ou retentée, il s’agit de la dernière heure à laquelle la tâche a commencé en cours d’exécution. Cette propriété est présente uniquement les tâches qui sont dans l’état en cours d’exécution ou terminé."
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerExecutionInformation
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: azure-batch.TaskContainerExecutionInformation
+  - uid: azure-batch.TaskFailureInformation
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: azure-batch.TaskFailureInformation

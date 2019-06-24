@@ -1,0 +1,330 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskAddParameter
+    name: TaskAddParameter
+    fullName: TaskAddParameter
+    children:
+      - azure-batch.TaskAddParameter.affinityInfo
+      - azure-batch.TaskAddParameter.applicationPackageReferences
+      - azure-batch.TaskAddParameter.authenticationTokenSettings
+      - azure-batch.TaskAddParameter.commandLine
+      - azure-batch.TaskAddParameter.constraints
+      - azure-batch.TaskAddParameter.containerSettings
+      - azure-batch.TaskAddParameter.dependsOn
+      - azure-batch.TaskAddParameter.displayName
+      - azure-batch.TaskAddParameter.environmentSettings
+      - azure-batch.TaskAddParameter.exitConditions
+      - azure-batch.TaskAddParameter.id
+      - azure-batch.TaskAddParameter.multiInstanceSettings
+      - azure-batch.TaskAddParameter.outputFiles
+      - azure-batch.TaskAddParameter.resourceFiles
+      - azure-batch.TaskAddParameter.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Lot réessaiera tâches quand une opération de récupération est déclenchée sur un nœud. Exemples d’opérations de récupération incluent (mais ne sont pas limitées à) quand un nœud défectueux est redémarré ou un nœud de calcul a disparu en raison d’une défaillance de l’hôte. Effectue une nouvelle tentative en raison d’une récupération opérations sont indépendantes d’et ne sont pas comptées dans le maxTaskRetryCount. Même si le maxTaskRetryCount est 0, une nouvelle tentative interne en raison d’une opération de récupération peut-être se produire. Pour cette raison, toutes les tâches doivent être idempotentes. Cela signifie que les tâches doivent tolérer est interrompu et redémarré sans provoquer de toute altération ou des données en double. Les meilleures pratiques pour les tâches de longue est d’utiliser une forme de points de contrôle.'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.affinityInfo
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - azure-batch.AffinityInformation
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Packages d’application sont téléchargés et déployées vers un répertoire partagé, pas la tâche de répertoire de travail. Par conséquent, si un package référencé est déjà sur le nœud et est à jour, puis il n’est pas nouveau téléchargé\_; la copie existante sur le nœud de calcul est utilisée. Si un Package référencé ne peut pas être installé, par exemple, car le package a été supprimé ou parce que le téléchargement a échoué, la tâche échoue."
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.authenticationTokenSettings
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si cette propriété est définie, le service Batch fournit la tâche avec un jeton d’authentification qui peut être utilisé pour authentifier les opérations de service Batch sans nécessiter une clé d’accès. Le jeton est fourni par le biais de la variable d’environnement AZ_BATCH_AUTHENTICATION_TOKEN. Les opérations que la tâche en utilisant le jeton peut effectuer dépendent des paramètres. Par exemple, une tâche peut demander des autorisations de travail afin d’ajouter d’autres tâches au travail ou vérifier l’état du travail ou d’autres tâches sous le travail.'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - azure-batch.AuthenticationTokenSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Pour les tâches multi-instances, la ligne de commande est exécutée en tant que la tâche principale, une fois la tâche principale et toutes les tâches subordonnées ont terminé d’exécuter la ligne de commande de coordination. La ligne de commande ne s’exécute pas sous un interpréteur de commandes et par conséquent ne peut pas bénéficier des fonctionnalités de shell comme expansion de variables d’environnement. Si vous souhaitez tirer parti de ces fonctionnalités, vous devez appeler l’interpréteur de commandes dans la ligne de commande, par exemple à l’aide de «\_cmd /c MyCommand\_» dans Windows ou «\_/ bin/sh - c MyCommand\_» dans Linux. Si la ligne de commande fait référence à des chemins d’accès de fichier, il doit utiliser un chemin d’accès relatif (relatif au répertoire de travail tâche), ou la variable d’environnement fourni par lots (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables)."
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si vous ne spécifiez pas de contraintes, le maxTaskRetryCount est la maxTaskRetryCount spécifiée pour le projet, le maxWallClockTime est infinie et le retentionTime est de 7 jours.'
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si containerConfiguration est définie pour le Pool qui exécutera cette tâche, il doit être définie. Si le Pool qui exécutera cette tâche containerConfiguration n’est pas défini, cela ne doit pas être définie. Lorsque cela est spécifié, tous les répertoires de manière récursive sous le AZ_BATCH_NODE_ROOT_DIR (la racine des répertoires Azure Batch sur le nœud) sont mappées dans le conteneur, toutes les variables d’environnement de tâche sont mappés dans le conteneur, et la ligne de commande de tâche est exécutée dans le conteneur. Fichiers générés dans le conteneur en dehors de AZ_BATCH_NODE_ROOT_DIR peuvent ne pas être reflétées sur le disque hôte, ce qui signifie que le fichier de commandes API ne sera pas en mesure d’accéder à ces fichiers.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.dependsOn
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Cette tâche ne sera pas planifiée jusqu''à ce que toutes les tâches dont il dépend terminées avec succès. Si une de ces tâches échouent et épuiser leurs décomptes de nouvelle tentative, il se peut que cette tâche ne sera jamais planifiée. Si la tâche n’a pas usesTaskDependencies définie sur true et cet élément est présent, la requête échoue avec le code d’erreur TaskDependenciesNotSpecifiedOnJob.'
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - azure-batch.TaskDependencies
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom complet ne doit pas être unique et peut contenir jusqu'à une longueur maximale de 1024 caractères Unicode.
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.exitConditions
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Comment le service Batch doit répondre lors de la tâche se termine.
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - azure-batch.ExitConditions
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'L’ID peut contenir n’importe quelle combinaison de caractères alphanumériques, y compris des traits d’union et des traits de soulignement et ne peut pas contenir plus de 64 caractères. L’ID n’est pas la casse et en conservant la casse (autrement dit, vous n’avez pas deux ID au sein d’un travail qui diffèrent uniquement par la casse).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.multiInstanceSettings
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - azure-batch.MultiInstanceSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Pour les tâches multi-instances, les fichiers seront téléchargés uniquement à partir du nœud de calcul sur lequel est exécutée la tâche principale.'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-batch.OutputFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Pour les tâches multi-instances, les fichiers de ressources ne sera téléchargées vers le nœud de calcul sur lequel est exécutée la tâche principale. Il existe une taille maximale pour la liste des fichiers de ressources.  Lorsque la taille maximale est dépassée, la demande échoue et le code d’erreur de réponse sera RequestEntityTooLarge. Si cela se produit, la collection de ResourceFiles doit être réduite en taille. Cela est possible en utilisant les fichiers .zip, les Packages d’Application ou les conteneurs Docker.'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Si omis, la tâche s’exécute comme un utilisateur non administratif unique à la tâche.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.AffinityInformation
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: azure-batch.AffinityInformation
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.AuthenticationTokenSettings
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: azure-batch.AuthenticationTokenSettings
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: azure-batch.TaskDependencies
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: azure-batch.TaskDependencies
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ExitConditions
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: azure-batch.ExitConditions
+  - uid: azure-batch.MultiInstanceSettings
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: azure-batch.MultiInstanceSettings
+  - uid: 'azure-batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-batch.OutputFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity
