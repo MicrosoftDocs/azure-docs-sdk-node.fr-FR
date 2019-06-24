@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPatchParameter
+    name: JobPatchParameter
+    fullName: JobPatchParameter
+    children:
+      - azure-batch.JobPatchParameter.constraints
+      - azure-batch.JobPatchParameter.metadata
+      - azure-batch.JobPatchParameter.onAllTasksComplete
+      - azure-batch.JobPatchParameter.poolInfo
+      - azure-batch.JobPatchParameter.priority
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6c191-101">Si omis, l’exécution existante contraintes restent inchangés.</span><span class="sxs-lookup"><span data-stu-id="6c191-101">If omitted, the existing execution constraints are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6c191-102">Si omis, le travail existant métadonnées reste inchangé.</span><span class="sxs-lookup"><span data-stu-id="6c191-102">If omitted, the existing Job metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"6c191-103\">Si omis, le comportement de saisie semi-automatique reste inchangé.</span><span class=\"sxs-lookup\"><span data-stu-id=\"6c191-103\">If omitted, the completion behavior is left unchanged.</span></span> <span data-ttu-id=\"6c191-104\">Impossible de modifier la valeur à partir de terminatejob à noaction\_: autrement dit, une fois que vous avez impliqué arrêt automatique, vous ne pouvez pas désactiver de nouveau.</span><span class=\"sxs-lookup\"><span data-stu-id=\"6c191-104\">You may not change the value from terminatejob to noaction - that is, once you have engaged automatic Job termination, you cannot turn it off again.</span></span> <span data-ttu-id=\"6c191-105\">Si vous tentez cette opération, la requête échoue avec une réponse d’erreur «\_valeur de propriété non valide\_»\_; Si vous appelez l’API REST directement, code d’état HTTP\_: 400 (demande incorrecte).</span><span class=\"sxs-lookup\"><span data-stu-id=\"6c191-105\">If you try to do this, the request fails with an 'invalid property value' error response; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id=\"6c191-106\">Les valeurs possibles sont\_: 'noAction', 'terminateJob'</span><span class=\"sxs-lookup\"><span data-stu-id=\"6c191-106\">Possible values include: 'noAction', 'terminateJob'</span></span>"
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6c191-107">Vous pouvez modifier le Pool pour un travail uniquement lorsque le travail est désactivé.</span><span class="sxs-lookup"><span data-stu-id="6c191-107">You may change the Pool for a Job only when the Job is disabled.</span></span> <span data-ttu-id="6c191-108">L’appel de la tâche correction échoue si vous incluez l’élément poolInfo et que le travail n’est pas désactivé.</span><span class="sxs-lookup"><span data-stu-id="6c191-108">The Patch Job call will fail if you include the poolInfo element and the Job is not disabled.</span></span> <span data-ttu-id="6c191-109">Si vous spécifiez une spécification de l’élément autoPoolSpecification dans le poolInfo, uniquement la propriété keepAlive peut être mis à jour, puis uniquement si le Pool automatique a une poolLifetimeOption de travail.</span><span class="sxs-lookup"><span data-stu-id="6c191-109">If you specify an autoPoolSpecification specification in the poolInfo, only the keepAlive property can be updated, and then only if the auto Pool has a poolLifetimeOption of Job.</span></span> <span data-ttu-id="6c191-110">Si omis, la tâche continue de s’exécuter sur son Pool actuel.</span><span class="sxs-lookup"><span data-stu-id="6c191-110">If omitted, the Job continues to run on its current Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobPatchParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6c191-111">Les valeurs de priorité peuvent varier de -1000 et 1000,-1000 correspondant à la priorité la plus basse et 1000 la plus haute priorité.</span><span class="sxs-lookup"><span data-stu-id="6c191-111">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="6c191-112">Si omis, la priorité de la tâche reste inchangé.</span><span class="sxs-lookup"><span data-stu-id="6c191-112">If omitted, the priority of the Job is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

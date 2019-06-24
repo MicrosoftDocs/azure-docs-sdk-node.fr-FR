@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolUpdatePropertiesParameter
+    name: PoolUpdatePropertiesParameter
+    fullName: PoolUpdatePropertiesParameter
+    children:
+      - azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+      - azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+      - azure-batch.PoolUpdatePropertiesParameter.metadata
+      - azure-batch.PoolUpdatePropertiesParameter.startTask
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="2b29f-101">La liste remplace les références de Package d’Application existantes sur le Pool.</span><span class="sxs-lookup"><span data-stu-id="2b29f-101">The list replaces any existing Application Package references on the Pool.</span></span>
+      <span data-ttu-id="2b29f-102">Modifications des références de Package d’Application affectent tous les nouveaux nœuds de calcul rejoindre le Pool, mais n’affectent pas les nœuds de calcul de calcul qui se trouvent déjà dans le Pool jusqu'à ce qu’ils sont redémarrés ou réimagés.</span><span class="sxs-lookup"><span data-stu-id="2b29f-102">Changes to Application Package references affect all new Compute Nodes joining the Pool, but do not affect Compute Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="2b29f-103">Il existe un maximum de 10 références de Package d’Application sur n’importe quel Pool donné.</span><span class="sxs-lookup"><span data-stu-id="2b29f-103">There is a maximum of 10 Application Package references on any given Pool.</span></span> <span data-ttu-id="2b29f-104">Si omis, ou si vous spécifiez une collection vide, toutes les références des Packages d’Application existants sont supprimés à partir du Pool.</span><span class="sxs-lookup"><span data-stu-id="2b29f-104">If omitted, or if you specify an empty collection, any existing Application Packages references are removed from the Pool.</span></span> <span data-ttu-id="2b29f-105">Un maximum de 10 références peut-être être spécifié sur un Pool donné.</span><span class="sxs-lookup"><span data-stu-id="2b29f-105">A maximum of 10 references may be specified on a given Pool.</span></span>
+    syntax:
+      content: 'applicationPackageReferences: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2b29f-106\">Cette liste remplace les références de certificat existants configurés sur le Pool.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b29f-106\">This list replaces any existing Certificate references configured on the Pool.</span></span> <span data-ttu-id=\"2b29f-107\">Si vous spécifiez une collection vide, toutes les références certificat existants sont supprimés à partir du Pool.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b29f-107\">If you specify an empty collection, any existing Certificate references are removed from the Pool.</span></span> <span data-ttu-id=\"2b29f-108\">Pour les nœuds de Windows, le service Batch installe les certificats à l’emplacement et le magasin de certificats spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b29f-108\">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id=\"2b29f-109\">Pour les nœuds de calcul Linux, les certificats sont stockés dans un répertoire à l’intérieur de la tâche de répertoire et une variable d’environnement qu'az_batch_certificates_dir est fournie à la tâche de requête pour cet emplacement de travail.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b29f-109\">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id=\"2b29f-110\">Pour les certificats avec une visibilité de l’utilisateur «\_distant\_», un répertoire de «\_certificats\_» est créé dans le répertoire de base (par exemple, /home/ {nom_utilisateur} / certificats) et les certificats sont placés dans ce répertoire.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2b29f-110\">For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>"
+    syntax:
+      content: 'certificateReferences: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2b29f-111">Cette liste remplace toutes les métadonnées existantes configurée sur le Pool.</span><span class="sxs-lookup"><span data-stu-id="2b29f-111">This list replaces any existing metadata configured on the Pool.</span></span> <span data-ttu-id="2b29f-112">Si omis, ou si vous spécifiez une collection vide, toutes les métadonnées existantes sont supprimée à partir du Pool.</span><span class="sxs-lookup"><span data-stu-id="2b29f-112">If omitted, or if you specify an empty collection, any existing metadata is removed from the Pool.</span></span>'
+    syntax:
+      content: 'metadata: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolUpdatePropertiesParameter.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2b29f-113">Si cet élément est présent, elle remplace toute tâche de démarrage existant.</span><span class="sxs-lookup"><span data-stu-id="2b29f-113">If this element is present, it overwrites any existing start Task.</span></span> <span data-ttu-id="2b29f-114">Cas d’omission, toute tâche de démarrage existant est supprimé à partir du Pool.</span><span class="sxs-lookup"><span data-stu-id="2b29f-114">If omitted, any existing start Task is removed from the Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask

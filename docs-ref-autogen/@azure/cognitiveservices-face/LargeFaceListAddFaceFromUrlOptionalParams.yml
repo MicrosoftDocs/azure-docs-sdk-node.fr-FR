@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.targetFace'
@@ -14,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="2ebf1-101">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-101">Optional Parameters.</span></span>
+    summary: <span data-ttu-id="bc70a-101">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="bc70a-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/cognitiveservices-face'
@@ -25,7 +26,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2ebf1-102">Le signal qui peut être utilisé pour les demandes d’abandon.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-102">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="bc70a-102">Le signal qui peut être utilisé pour les demandes d’abandon.</span><span class="sxs-lookup"><span data-stu-id="bc70a-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,13 +41,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="2ebf1-103">{objet} [customHeaders] En-têtes de requête personnalisés qui seront appliqués avant que la demande est envoyée défini par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="bc70a-103">{objet} [customHeaders] En-têtes de requête personnalisés qui seront appliqués avant que la demande est envoyée défini par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="bc70a-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"bc70a-104\">Nom du modèle de détection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-104\">Name of detection model.</span></span> <span data-ttu-id=\"bc70a-105\">Modèle de détection est utilisé pour détecter les visages dans l’image soumis.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-105\">Detection model is used to detect faces in the submitted image.</span></span> <span data-ttu-id=\"bc70a-106\">Un nom de modèle de détection peut être fourni lors de l’exécution de visage - détecter ou (Large) FaceList - ajouter un visage ou groupe de personnes (Large) - ajouter Face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-106\">A detection model name can be provided when performing Face - Detect or (Large)FaceList - Add Face or (Large)PersonGroup - Add Face.</span></span> <span data-ttu-id=\"bc70a-107\">La valeur par défaut est «\_detection_01\_», si un autre modèle est nécessaire, spécifiez explicitement.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-107\">The default value is 'detection_01', if another model is needed, please explicitly specify it.</span></span> <span data-ttu-id=\"bc70a-108\">Les valeurs possibles sont\_: 'detection_01', 'detection_02'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-108\">Possible values include: 'detection_01', 'detection_02'.</span></span> <span data-ttu-id=\"bc70a-109\">Valeur par défaut\_: «\_detection_01\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-109\">Default value: 'detection_01'.</span></span>"
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -55,7 +71,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2ebf1-104">Rappel qui se déclenche lors de progression du téléchargement.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-104">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="bc70a-110">Rappel qui se déclenche lors de progression du téléchargement.</span><span class="sxs-lookup"><span data-stu-id="bc70a-110">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -70,7 +86,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2ebf1-105">Rappel qui se déclenche lors de progression du chargement.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-105">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="bc70a-111">Rappel qui se déclenche lors de progression du chargement.</span><span class="sxs-lookup"><span data-stu-id="bc70a-111">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +101,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"2ebf1-106\">Un rectangle de face pour spécifier la face de la cible à ajouter à une personne au format «\_targetFace = gauche, haut, largeur, hauteur\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"2ebf1-106\">A face rectangle to specify the target face to be added to a person in the format of \"targetFace=left,top,width,height\".</span></span> <span data-ttu-id=\"2ebf1-107\">Par exemple,</span><span class=\"sxs-lookup\"><span data-stu-id=\"2ebf1-107\">E.g.</span></span> <span data-ttu-id=\"2ebf1-108\">\"targetFace=10,10,100,100\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"2ebf1-108\">\"targetFace=10,10,100,100\".</span></span> <span data-ttu-id=\"2ebf1-109\">S’il existe plusieurs visages dans l’image, targetFace est nécessaire de spécifier qui doivent faire face à ajouter.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2ebf1-109\">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id=\"2ebf1-110\">Aucun targetFace ne ne signifie qu’une seule face détectée dans l’image entière.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2ebf1-110\">No targetFace means there is only one face detected in the entire image.</span></span>"
+    summary: "<span data-ttu-id=\"bc70a-112\">Un rectangle de face pour spécifier la face de la cible à ajouter à une personne au format «\_targetFace = gauche, haut, largeur, hauteur\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-112\">A face rectangle to specify the target face to be added to a person in the format of \"targetFace=left,top,width,height\".</span></span> <span data-ttu-id=\"bc70a-113\">Par exemple,</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-113\">E.g.</span></span> <span data-ttu-id=\"bc70a-114\">\"targetFace=10,10,100,100\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-114\">\"targetFace=10,10,100,100\".</span></span> <span data-ttu-id=\"bc70a-115\">S’il existe plusieurs visages dans l’image, targetFace est nécessaire de spécifier qui doivent faire face à ajouter.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-115\">If there is more than one face in the image, targetFace is required to specify which face to add.</span></span> <span data-ttu-id=\"bc70a-116\">Aucun targetFace ne ne signifie qu’une seule face détectée dans l’image entière.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bc70a-116\">No targetFace means there is only one face detected in the entire image.</span></span>"
     optional: true
     syntax:
       content: 'targetFace?: number[]'
@@ -100,7 +116,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2ebf1-111">Le nombre de millisecondes qu’une demande peut prendre avant automatiquement son interruption.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-111">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="bc70a-117">Le nombre de millisecondes qu’une demande peut prendre avant automatiquement son interruption.</span><span class="sxs-lookup"><span data-stu-id="bc70a-117">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="2ebf1-112">Données spécifiées par l’utilisateur sur la face à des fins.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-112">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="2ebf1-113">La longueur maximale est de 1 Ko.</span><span class="sxs-lookup"><span data-stu-id="2ebf1-113">The maximum length is 1KB.</span></span>
+    summary: <span data-ttu-id="bc70a-118">Données spécifiées par l’utilisateur sur la face à des fins.</span><span class="sxs-lookup"><span data-stu-id="bc70a-118">User-specified data about the face for any purpose.</span></span> <span data-ttu-id="bc70a-119">La longueur maximale est de 1 Ko.</span><span class="sxs-lookup"><span data-stu-id="bc70a-119">The maximum length is 1KB.</span></span>
     optional: true
     syntax:
       content: 'userData?: undefined | string'
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

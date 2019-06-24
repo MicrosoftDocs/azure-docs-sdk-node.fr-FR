@@ -6,15 +6,16 @@ items:
     children:
       - '@azure/arm-containerregistry.Registries.beginCreate'
       - '@azure/arm-containerregistry.Registries.beginDeleteMethod'
+      - '@azure/arm-containerregistry.Registries.beginGenerateCredentials'
       - '@azure/arm-containerregistry.Registries.beginImportImage'
       - '@azure/arm-containerregistry.Registries.beginScheduleRun'
       - '@azure/arm-containerregistry.Registries.beginUpdate'
-      - '@azure/arm-containerregistry.Registries.beginUpdatePolicies'
       - '@azure/arm-containerregistry.Registries.checkNameAvailability'
       - '@azure/arm-containerregistry.Registries.checkNameAvailability_2'
       - '@azure/arm-containerregistry.Registries.checkNameAvailability_1'
       - '@azure/arm-containerregistry.Registries.create'
       - '@azure/arm-containerregistry.Registries.deleteMethod'
+      - '@azure/arm-containerregistry.Registries.generateCredentials'
       - '@azure/arm-containerregistry.Registries.get'
       - '@azure/arm-containerregistry.Registries.get_2'
       - '@azure/arm-containerregistry.Registries.get_1'
@@ -37,9 +38,6 @@ items:
       - '@azure/arm-containerregistry.Registries.listNext'
       - '@azure/arm-containerregistry.Registries.listNext_2'
       - '@azure/arm-containerregistry.Registries.listNext_1'
-      - '@azure/arm-containerregistry.Registries.listPolicies'
-      - '@azure/arm-containerregistry.Registries.listPolicies_2'
-      - '@azure/arm-containerregistry.Registries.listPolicies_1'
       - '@azure/arm-containerregistry.Registries.listUsages'
       - '@azure/arm-containerregistry.Registries.listUsages_2'
       - '@azure/arm-containerregistry.Registries.listUsages_1'
@@ -49,11 +47,10 @@ items:
       - '@azure/arm-containerregistry.Registries.constructor'
       - '@azure/arm-containerregistry.Registries.scheduleRun'
       - '@azure/arm-containerregistry.Registries.update'
-      - '@azure/arm-containerregistry.Registries.updatePolicies'
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="9598c-101">Classe représentant un registres.</span><span class="sxs-lookup"><span data-stu-id="9598c-101">Class representing a Registries.</span></span>
+    summary: <span data-ttu-id="15d02-101">Classe représentant un registres.</span><span class="sxs-lookup"><span data-stu-id="15d02-101">Class representing a Registries.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registries.beginCreate'
     name: 'beginCreate(string, string, Registry, msRest.RequestOptionsBase)'
@@ -61,22 +58,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-102">Crée un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="9598c-102">Creates a container registry with the specified parameters.</span></span>
+    summary: <span data-ttu-id="15d02-102">Crée un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="15d02-102">Creates a container registry with the specified parameters.</span></span>
     syntax:
       content: 'function beginCreate(resourceGroupName: string, registryName: string, registry: Registry, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-103">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-103">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-103">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-103">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-104">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-104">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-104">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-104">The name of the container registry.</span></span>
         - id: registry
           type:
             - '@azure/arm-containerregistry.Registry'
-          description: <span data-ttu-id="9598c-105">Les paramètres pour la création d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-105">The parameters for creating a container registry.</span></span>
+          description: <span data-ttu-id="15d02-105">Les paramètres pour la création d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-105">The parameters for creating a container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -92,18 +89,49 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-106">Supprime un registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-106">Deletes a container registry.</span></span>
+    summary: <span data-ttu-id="15d02-106">Supprime un registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-106">Deletes a container registry.</span></span>
     syntax:
       content: 'function beginDeleteMethod(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-107">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-107">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-107">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-107">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-108">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-108">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-108">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-108">The name of the container registry.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Registries.beginGenerateCredentials'
+    name: 'beginGenerateCredentials(string, string, GenerateCredentialsParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15d02-109">Générer des clés pour un jeton d’un Registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-109">Generate keys for a token of a specified container registry.</span></span>
+    syntax:
+      content: 'function beginGenerateCredentials(resourceGroupName: string, registryName: string, generateCredentialsParameters: GenerateCredentialsParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="15d02-110">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-110">The name of the resource group to which the container registry belongs.</span></span>
+        - id: registryName
+          type:
+            - string
+          description: <span data-ttu-id="15d02-111">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-111">The name of the container registry.</span></span>
+        - id: generateCredentialsParameters
+          type:
+            - '@azure/arm-containerregistry.GenerateCredentialsParameters'
+          description: <span data-ttu-id="15d02-112">Paramètres de génération des informations d’identification.</span><span class="sxs-lookup"><span data-stu-id="15d02-112">The parameters for generating credentials.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -119,22 +147,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-109">Copie une image dans ce Registre de conteneurs à partir du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-109">Copies an image to this container registry from the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-113">Copie une image dans ce Registre de conteneurs à partir du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-113">Copies an image to this container registry from the specified container registry.</span></span>
     syntax:
       content: 'function beginImportImage(resourceGroupName: string, registryName: string, parameters: ImportImageParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-110">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-110">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-114">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-114">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-111">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-111">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-115">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-115">The name of the container registry.</span></span>
         - id: parameters
           type:
             - '@azure/arm-containerregistry.ImportImageParameters'
-          description: <span data-ttu-id="9598c-112">Les paramètres spécifiant l’image à copier et le Registre de conteneur source.</span><span class="sxs-lookup"><span data-stu-id="9598c-112">The parameters specifying the image to copy and the source container registry.</span></span>
+          description: <span data-ttu-id="15d02-116">Les paramètres spécifiant l’image à copier et le Registre de conteneur source.</span><span class="sxs-lookup"><span data-stu-id="15d02-116">The parameters specifying the image to copy and the source container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -150,22 +178,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="9598c-113">Planifications un nouveau exécutée, selon les paramètres de requête et l’ajouter à la file d’attente à l’exécution.</span><span class="sxs-lookup"><span data-stu-id="9598c-113">Schedules a new run based on the request parameters and add it to the run queue.</span></span>'
+    summary: '<span data-ttu-id="15d02-117">Planifications un nouveau exécutée, selon les paramètres de requête et l’ajouter à la file d’attente à l’exécution.</span><span class="sxs-lookup"><span data-stu-id="15d02-117">Schedules a new run based on the request parameters and add it to the run queue.</span></span>'
     syntax:
       content: 'function beginScheduleRun(resourceGroupName: string, registryName: string, runRequest: Models.RunRequestUnion, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-114">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-114">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-118">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-118">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-115">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-115">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-119">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-119">The name of the container registry.</span></span>
         - id: runRequest
           type:
             - Models.RunRequestUnion
-          description: <span data-ttu-id="9598c-116">Les paramètres d’une exécution qui doit planifiée.</span><span class="sxs-lookup"><span data-stu-id="9598c-116">The parameters of a run that needs to scheduled.</span></span>
+          description: <span data-ttu-id="15d02-120">Les paramètres d’une exécution qui doit planifiée.</span><span class="sxs-lookup"><span data-stu-id="15d02-120">The parameters of a run that needs to scheduled.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -181,53 +209,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-117">Met à jour un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="9598c-117">Updates a container registry with the specified parameters.</span></span>
+    summary: <span data-ttu-id="15d02-121">Met à jour un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="15d02-121">Updates a container registry with the specified parameters.</span></span>
     syntax:
       content: 'function beginUpdate(resourceGroupName: string, registryName: string, registryUpdateParameters: RegistryUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-118">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-118">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-122">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-122">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-119">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-119">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-123">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-123">The name of the container registry.</span></span>
         - id: registryUpdateParameters
           type:
             - '@azure/arm-containerregistry.RegistryUpdateParameters'
-          description: <span data-ttu-id="9598c-120">Les paramètres de mise à jour d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-120">The parameters for updating a container registry.</span></span>
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<LROPoller>
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Registries.beginUpdatePolicies'
-    name: 'beginUpdatePolicies(string, string, RegistryPolicies, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="9598c-121">Met à jour les stratégies pour le Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-121">Updates the policies for the specified container registry.</span></span>
-    syntax:
-      content: 'function beginUpdatePolicies(resourceGroupName: string, registryName: string, registryPoliciesUpdateParameters: RegistryPolicies, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-122">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-122">The name of the resource group to which the container registry belongs.</span></span>
-        - id: registryName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-123">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-123">The name of the container registry.</span></span>
-        - id: registryPoliciesUpdateParameters
-          type:
-            - '@azure/arm-containerregistry.RegistryPolicies'
-          description: <span data-ttu-id="9598c-124">Les paramètres de mise à jour des stratégies d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-124">The parameters for updating policies of a container registry.</span></span>
+          description: <span data-ttu-id="15d02-124">Les paramètres de mise à jour d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-124">The parameters for updating a container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -243,14 +240,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="9598c-125">Vérifie si le nom de registre de conteneurs est disponible pour utilisation.</span><span class="sxs-lookup"><span data-stu-id="9598c-125">Checks whether the container registry name is available for use.</span></span> <span data-ttu-id="9598c-126">Le nom doit contenir uniquement des caractères alphanumériques, être globalement unique et entre 5 et 50 caractères.</span><span class="sxs-lookup"><span data-stu-id="9598c-126">The name must contain only alphanumeric characters, be globally unique, and between 5 and 50 characters in length.</span></span>'
+    summary: '<span data-ttu-id="15d02-125">Vérifie si le nom de registre de conteneurs est disponible pour utilisation.</span><span class="sxs-lookup"><span data-stu-id="15d02-125">Checks whether the container registry name is available for use.</span></span> <span data-ttu-id="15d02-126">Le nom doit contenir uniquement des caractères alphanumériques, être globalement unique et entre 5 et 50 caractères.</span><span class="sxs-lookup"><span data-stu-id="15d02-126">The name must contain only alphanumeric characters, be globally unique, and between 5 and 50 characters in length.</span></span>'
     syntax:
       content: 'function checkNameAvailability(registryNameCheckRequest: RegistryNameCheckRequest, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: registryNameCheckRequest
           type:
             - '@azure/arm-containerregistry.RegistryNameCheckRequest'
-          description: <span data-ttu-id="9598c-127">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="9598c-127">The object containing information for the availability request.</span></span>
+          description: <span data-ttu-id="15d02-127">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="15d02-127">The object containing information for the availability request.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -273,16 +270,16 @@ items:
         - id: registryNameCheckRequest
           type:
             - '@azure/arm-containerregistry.RegistryNameCheckRequest'
-          description: <span data-ttu-id="9598c-128">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="9598c-128">The object containing information for the availability request.</span></span>
+          description: <span data-ttu-id="15d02-128">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="15d02-128">The object containing information for the availability request.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-129">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-129">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-129">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-129">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryNameStatus>
           description: |
-            <span data-ttu-id="9598c-130">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-130">The callback</span></span>
+            <span data-ttu-id="15d02-130">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-130">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesCheckNameAvailabilityResponse>
@@ -300,12 +297,12 @@ items:
         - id: registryNameCheckRequest
           type:
             - '@azure/arm-containerregistry.RegistryNameCheckRequest'
-          description: <span data-ttu-id="9598c-131">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="9598c-131">The object containing information for the availability request.</span></span>
+          description: <span data-ttu-id="15d02-131">Objet contenant des informations pour la demande de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="15d02-131">The object containing information for the availability request.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryNameStatus>
           description: |
-            <span data-ttu-id="9598c-132">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-132">The callback</span></span>
+            <span data-ttu-id="15d02-132">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-132">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesCheckNameAvailabilityResponse>
@@ -316,22 +313,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-133">Crée un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="9598c-133">Creates a container registry with the specified parameters.</span></span>
+    summary: <span data-ttu-id="15d02-133">Crée un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="15d02-133">Creates a container registry with the specified parameters.</span></span>
     syntax:
       content: 'function create(resourceGroupName: string, registryName: string, registry: Registry, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-134">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-134">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-134">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-134">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-135">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-135">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-135">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-135">The name of the container registry.</span></span>
         - id: registry
           type:
             - '@azure/arm-containerregistry.Registry'
-          description: <span data-ttu-id="9598c-136">Les paramètres pour la création d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-136">The parameters for creating a container registry.</span></span>
+          description: <span data-ttu-id="15d02-136">Les paramètres pour la création d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-136">The parameters for creating a container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -347,18 +344,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-137">Supprime un registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-137">Deletes a container registry.</span></span>
+    summary: <span data-ttu-id="15d02-137">Supprime un registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-137">Deletes a container registry.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-138">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-138">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-138">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-138">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-139">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-139">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-139">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-139">The name of the container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -368,24 +365,55 @@ items:
         type:
           - Promise<RestResponse>
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Registries.generateCredentials'
+    name: 'generateCredentials(string, string, GenerateCredentialsParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="15d02-140">Générer des clés pour un jeton d’un Registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-140">Generate keys for a token of a specified container registry.</span></span>
+    syntax:
+      content: 'function generateCredentials(resourceGroupName: string, registryName: string, generateCredentialsParameters: GenerateCredentialsParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="15d02-141">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-141">The name of the resource group to which the container registry belongs.</span></span>
+        - id: registryName
+          type:
+            - string
+          description: <span data-ttu-id="15d02-142">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-142">The name of the container registry.</span></span>
+        - id: generateCredentialsParameters
+          type:
+            - '@azure/arm-containerregistry.GenerateCredentialsParameters'
+          description: <span data-ttu-id="15d02-143">Paramètres de génération des informations d’identification.</span><span class="sxs-lookup"><span data-stu-id="15d02-143">The parameters for generating credentials.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RegistriesGenerateCredentialsResponse>
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registries.get'
     name: 'get(string, string, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-140">Obtient les propriétés du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-140">Gets the properties of the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-144">Obtient les propriétés du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-144">Gets the properties of the specified container registry.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-141">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-141">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-145">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-145">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-142">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-142">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-146">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-146">The name of the container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -408,20 +436,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-143">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-143">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-147">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-147">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-144">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-144">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-148">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-148">The name of the container registry.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-145">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-145">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-149">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-149">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.Registry>
           description: |
-            <span data-ttu-id="9598c-146">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-146">The callback</span></span>
+            <span data-ttu-id="15d02-150">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-150">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesGetResponse>
@@ -439,16 +467,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-147">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-147">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-151">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-151">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-148">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-148">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-152">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-152">The name of the container registry.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.Registry>
           description: |
-            <span data-ttu-id="9598c-149">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-149">The callback</span></span>
+            <span data-ttu-id="15d02-153">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-153">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesGetResponse>
@@ -459,18 +487,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-150">Obtenir l’emplacement de téléchargement de l’utilisateur soit en mesure de charger la source.</span><span class="sxs-lookup"><span data-stu-id="9598c-150">Get the upload location for the user to be able to upload the source.</span></span>
+    summary: <span data-ttu-id="15d02-154">Obtenir l’emplacement de téléchargement de l’utilisateur soit en mesure de charger la source.</span><span class="sxs-lookup"><span data-stu-id="15d02-154">Get the upload location for the user to be able to upload the source.</span></span>
     syntax:
       content: 'function getBuildSourceUploadUrl(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-151">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-151">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-155">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-155">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-152">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-152">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-156">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-156">The name of the container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -493,20 +521,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-153">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-153">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-157">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-157">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-154">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-154">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-158">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-158">The name of the container registry.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-155">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-155">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-159">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-159">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.SourceUploadDefinition>
           description: |
-            <span data-ttu-id="9598c-156">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-156">The callback</span></span>
+            <span data-ttu-id="15d02-160">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-160">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesGetBuildSourceUploadUrlResponse>
@@ -524,16 +552,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-157">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-157">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-161">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-161">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-158">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-158">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-162">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-162">The name of the container registry.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.SourceUploadDefinition>
           description: |
-            <span data-ttu-id="9598c-159">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-159">The callback</span></span>
+            <span data-ttu-id="15d02-163">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-163">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesGetBuildSourceUploadUrlResponse>
@@ -544,22 +572,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-160">Copie une image dans ce Registre de conteneurs à partir du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-160">Copies an image to this container registry from the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-164">Copie une image dans ce Registre de conteneurs à partir du Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-164">Copies an image to this container registry from the specified container registry.</span></span>
     syntax:
       content: 'function importImage(resourceGroupName: string, registryName: string, parameters: ImportImageParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-161">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-161">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-165">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-165">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-162">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-162">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-166">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-166">The name of the container registry.</span></span>
         - id: parameters
           type:
             - '@azure/arm-containerregistry.ImportImageParameters'
-          description: <span data-ttu-id="9598c-163">Les paramètres spécifiant l’image à copier et le Registre de conteneur source.</span><span class="sxs-lookup"><span data-stu-id="9598c-163">The parameters specifying the image to copy and the source container registry.</span></span>
+          description: <span data-ttu-id="15d02-167">Les paramètres spécifiant l’image à copier et le Registre de conteneur source.</span><span class="sxs-lookup"><span data-stu-id="15d02-167">The parameters specifying the image to copy and the source container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -575,7 +603,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-164">Répertorie tous les registres de conteneurs sous l’abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-164">Lists all the container registries under the specified subscription.</span></span>
+    summary: <span data-ttu-id="15d02-168">Répertorie tous les registres de conteneurs sous l’abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-168">Lists all the container registries under the specified subscription.</span></span>
     syntax:
       content: 'function list(options?: msRest.RequestOptionsBase)'
       parameters:
@@ -601,12 +629,12 @@ items:
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-165">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-165">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-169">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-169">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-166">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-166">The callback</span></span>
+            <span data-ttu-id="15d02-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-170">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListResponse>
@@ -625,7 +653,7 @@ items:
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-167">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-167">The callback</span></span>
+            <span data-ttu-id="15d02-171">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-171">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListResponse>
@@ -636,14 +664,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-168">Répertorie tous les registres de conteneurs sous le groupe de ressources spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-168">Lists all the container registries under the specified resource group.</span></span>
+    summary: <span data-ttu-id="15d02-172">Répertorie tous les registres de conteneurs sous le groupe de ressources spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-172">Lists all the container registries under the specified resource group.</span></span>
     syntax:
       content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-169">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-169">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-173">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-173">The name of the resource group to which the container registry belongs.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -666,16 +694,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-170">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-170">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-174">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-174">The name of the resource group to which the container registry belongs.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-171">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-171">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-175">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-175">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-172">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-172">The callback</span></span>
+            <span data-ttu-id="15d02-176">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-176">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListByResourceGroupResponse>
@@ -693,12 +721,12 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-173">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-173">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-177">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-177">The name of the resource group to which the container registry belongs.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-174">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-174">The callback</span></span>
+            <span data-ttu-id="15d02-178">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-178">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListByResourceGroupResponse>
@@ -709,14 +737,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-175">Répertorie tous les registres de conteneurs sous le groupe de ressources spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-175">Lists all the container registries under the specified resource group.</span></span>
+    summary: <span data-ttu-id="15d02-179">Répertorie tous les registres de conteneurs sous le groupe de ressources spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-179">Lists all the container registries under the specified resource group.</span></span>
     syntax:
       content: 'function listByResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-176">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-176">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-180">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-180">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -739,16 +767,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-177">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-177">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-181">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-181">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-178">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-178">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-182">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-182">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-179">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-179">The callback</span></span>
+            <span data-ttu-id="15d02-183">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-183">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListByResourceGroupNextResponse>
@@ -766,12 +794,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-180">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-180">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-184">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-184">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-181">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-181">The callback</span></span>
+            <span data-ttu-id="15d02-185">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-185">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListByResourceGroupNextResponse>
@@ -782,18 +810,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-182">Répertorie les informations d’identification pour le registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-182">Lists the login credentials for the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-186">Répertorie les informations d’identification pour le registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-186">Lists the login credentials for the specified container registry.</span></span>
     syntax:
       content: 'function listCredentials(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-183">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-183">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-187">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-187">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-184">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-184">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-188">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-188">The name of the container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -816,20 +844,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-185">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-185">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-189">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-189">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-186">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-186">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-190">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-190">The name of the container registry.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-187">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-187">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-191">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-191">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListCredentialsResult>
           description: |
-            <span data-ttu-id="9598c-188">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-188">The callback</span></span>
+            <span data-ttu-id="15d02-192">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-192">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListCredentialsResponse>
@@ -847,16 +875,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-189">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-189">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-193">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-193">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-190">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-190">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-194">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-194">The name of the container registry.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListCredentialsResult>
           description: |
-            <span data-ttu-id="9598c-191">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-191">The callback</span></span>
+            <span data-ttu-id="15d02-195">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-195">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListCredentialsResponse>
@@ -867,14 +895,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-192">Répertorie tous les registres de conteneurs sous l’abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-192">Lists all the container registries under the specified subscription.</span></span>
+    summary: <span data-ttu-id="15d02-196">Répertorie tous les registres de conteneurs sous l’abonnement spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-196">Lists all the container registries under the specified subscription.</span></span>
     syntax:
       content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-193">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-193">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-197">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-197">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -897,16 +925,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-194">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-194">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-198">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-198">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-195">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-195">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-199">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-199">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-196">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-196">The callback</span></span>
+            <span data-ttu-id="15d02-200">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-200">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListNextResponse>
@@ -924,100 +952,15 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="9598c-197">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="9598c-197">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="15d02-201">NextLink de l’appel réussi précédent à l’opération de liste.</span><span class="sxs-lookup"><span data-stu-id="15d02-201">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListResult>
           description: |
-            <span data-ttu-id="9598c-198">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-198">The callback</span></span>
+            <span data-ttu-id="15d02-202">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-202">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListNextResponse>
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Registries.listPolicies'
-    name: 'listPolicies(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="9598c-199">Répertorie les stratégies pour le Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-199">Lists the policies for the specified container registry.</span></span>
-    syntax:
-      content: 'function listPolicies(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-200">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-200">The name of the resource group to which the container registry belongs.</span></span>
-        - id: registryName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-201">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-201">The name of the container registry.</span></span>
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.RegistriesListPoliciesResponse>
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Registries.listPolicies_2'
-    name: 'listPolicies(string, string, RequestOptionsBase, ServiceCallback<RegistryPolicies>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function listPolicies(resourceGroupName: string, registryName: string, options: RequestOptionsBase, callback: ServiceCallback<RegistryPolicies>)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-202">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-202">The name of the resource group to which the container registry belongs.</span></span>
-        - id: registryName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-203">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-203">The name of the container registry.</span></span>
-        - id: options
-          type:
-            - RequestOptionsBase
-          description: <span data-ttu-id="9598c-204">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-204">The optional parameters</span></span>
-        - id: callback
-          type:
-            - ServiceCallback<@azure/arm-containerregistry.RegistryPolicies>
-          description: |
-            <span data-ttu-id="9598c-205">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-205">The callback</span></span>
-      return:
-        type:
-          - Promise<Models.RegistriesListPoliciesResponse>
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Registries.listPolicies_1'
-    name: 'listPolicies(string, string, ServiceCallback<RegistryPolicies>)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      content: 'function listPolicies(resourceGroupName: string, registryName: string, callback: ServiceCallback<RegistryPolicies>)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-206">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-206">The name of the resource group to which the container registry belongs.</span></span>
-        - id: registryName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-207">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-207">The name of the container registry.</span></span>
-        - id: callback
-          type:
-            - ServiceCallback<@azure/arm-containerregistry.RegistryPolicies>
-          description: |
-            <span data-ttu-id="9598c-208">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-208">The callback</span></span>
-      return:
-        type:
-          - Promise<Models.RegistriesListPoliciesResponse>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registries.listUsages'
     name: 'listUsages(string, string, msRest.RequestOptionsBase)'
@@ -1025,18 +968,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-209">Obtient les utilisations du quota pour le Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-209">Gets the quota usages for the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-203">Obtient les utilisations du quota pour le Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-203">Gets the quota usages for the specified container registry.</span></span>
     syntax:
       content: 'function listUsages(resourceGroupName: string, registryName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-210">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-210">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-204">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-204">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-211">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-211">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-205">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-205">The name of the container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1059,20 +1002,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-212">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-212">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-206">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-206">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-213">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-213">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-207">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-207">The name of the container registry.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-214">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-214">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-208">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-208">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryUsageListResult>
           description: |
-            <span data-ttu-id="9598c-215">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-215">The callback</span></span>
+            <span data-ttu-id="15d02-209">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-209">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListUsagesResponse>
@@ -1090,16 +1033,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-216">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-216">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-210">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-210">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-217">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-217">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-211">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-211">The name of the container registry.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryUsageListResult>
           description: |
-            <span data-ttu-id="9598c-218">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-218">The callback</span></span>
+            <span data-ttu-id="15d02-212">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-212">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesListUsagesResponse>
@@ -1110,22 +1053,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-219">Régénère l’une des informations d’identification pour le registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-219">Regenerates one of the login credentials for the specified container registry.</span></span>
+    summary: <span data-ttu-id="15d02-213">Régénère l’une des informations d’identification pour le registre de conteneurs spécifié.</span><span class="sxs-lookup"><span data-stu-id="15d02-213">Regenerates one of the login credentials for the specified container registry.</span></span>
     syntax:
       content: 'function regenerateCredential(resourceGroupName: string, registryName: string, regenerateCredentialParameters: RegenerateCredentialParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-220">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-220">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-214">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-214">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-221">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-221">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-215">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-215">The name of the container registry.</span></span>
         - id: regenerateCredentialParameters
           type:
             - '@azure/arm-containerregistry.RegenerateCredentialParameters'
-          description: <span data-ttu-id="9598c-222">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="9598c-222">Specifies name of the password which should be regenerated -- password or password2.</span></span>
+          description: <span data-ttu-id="15d02-216">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="15d02-216">Specifies name of the password which should be regenerated -- password or password2.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1148,24 +1091,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-223">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-223">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-217">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-217">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-224">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-224">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-218">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-218">The name of the container registry.</span></span>
         - id: regenerateCredentialParameters
           type:
             - '@azure/arm-containerregistry.RegenerateCredentialParameters'
-          description: <span data-ttu-id="9598c-225">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="9598c-225">Specifies name of the password which should be regenerated -- password or password2.</span></span>
+          description: <span data-ttu-id="15d02-219">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="15d02-219">Specifies name of the password which should be regenerated -- password or password2.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="9598c-226">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="9598c-226">The optional parameters</span></span>
+          description: <span data-ttu-id="15d02-220">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="15d02-220">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListCredentialsResult>
           description: |
-            <span data-ttu-id="9598c-227">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-227">The callback</span></span>
+            <span data-ttu-id="15d02-221">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-221">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesRegenerateCredentialResponse>
@@ -1183,20 +1126,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-228">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-228">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-222">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-222">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-229">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-229">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-223">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-223">The name of the container registry.</span></span>
         - id: regenerateCredentialParameters
           type:
             - '@azure/arm-containerregistry.RegenerateCredentialParameters'
-          description: <span data-ttu-id="9598c-230">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="9598c-230">Specifies name of the password which should be regenerated -- password or password2.</span></span>
+          description: <span data-ttu-id="15d02-224">Spécifie le nom du mot de passe qui doit être régénéré--mot de passe ou password2.</span><span class="sxs-lookup"><span data-stu-id="15d02-224">Specifies name of the password which should be regenerated -- password or password2.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-containerregistry.RegistryListCredentialsResult>
           description: |
-            <span data-ttu-id="9598c-231">Le rappel</span><span class="sxs-lookup"><span data-stu-id="9598c-231">The callback</span></span>
+            <span data-ttu-id="15d02-225">Le rappel</span><span class="sxs-lookup"><span data-stu-id="15d02-225">The callback</span></span>
       return:
         type:
           - Promise<Models.RegistriesRegenerateCredentialResponse>
@@ -1207,7 +1150,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-232">Créer un registres.</span><span class="sxs-lookup"><span data-stu-id="9598c-232">Create a Registries.</span></span>
+    summary: <span data-ttu-id="15d02-226">Créer un registres.</span><span class="sxs-lookup"><span data-stu-id="15d02-226">Create a Registries.</span></span>
     syntax:
       content: 'new Registries(client: ContainerRegistryManagementClientContext)'
       parameters:
@@ -1215,7 +1158,7 @@ items:
           type:
             - '@azure/arm-containerregistry.ContainerRegistryManagementClientContext'
           description: |
-            <span data-ttu-id="9598c-233">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="9598c-233">Reference to the service client.</span></span>
+            <span data-ttu-id="15d02-227">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="15d02-227">Reference to the service client.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registries.scheduleRun'
     name: 'scheduleRun(string, string, Models.RunRequestUnion, msRest.RequestOptionsBase)'
@@ -1223,22 +1166,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="9598c-234">Planifications un nouveau exécutée, selon les paramètres de requête et l’ajouter à la file d’attente à l’exécution.</span><span class="sxs-lookup"><span data-stu-id="9598c-234">Schedules a new run based on the request parameters and add it to the run queue.</span></span>'
+    summary: '<span data-ttu-id="15d02-228">Planifications un nouveau exécutée, selon les paramètres de requête et l’ajouter à la file d’attente à l’exécution.</span><span class="sxs-lookup"><span data-stu-id="15d02-228">Schedules a new run based on the request parameters and add it to the run queue.</span></span>'
     syntax:
       content: 'function scheduleRun(resourceGroupName: string, registryName: string, runRequest: Models.RunRequestUnion, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-235">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-235">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-229">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-229">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-236">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-236">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-230">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-230">The name of the container registry.</span></span>
         - id: runRequest
           type:
             - Models.RunRequestUnion
-          description: <span data-ttu-id="9598c-237">Les paramètres d’une exécution qui doit planifiée.</span><span class="sxs-lookup"><span data-stu-id="9598c-237">The parameters of a run that needs to scheduled.</span></span>
+          description: <span data-ttu-id="15d02-231">Les paramètres d’une exécution qui doit planifiée.</span><span class="sxs-lookup"><span data-stu-id="15d02-231">The parameters of a run that needs to scheduled.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1254,22 +1197,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="9598c-238">Met à jour un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="9598c-238">Updates a container registry with the specified parameters.</span></span>
+    summary: <span data-ttu-id="15d02-232">Met à jour un Registre de conteneurs avec les paramètres spécifiés.</span><span class="sxs-lookup"><span data-stu-id="15d02-232">Updates a container registry with the specified parameters.</span></span>
     syntax:
       content: 'function update(resourceGroupName: string, registryName: string, registryUpdateParameters: RegistryUpdateParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="9598c-239">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-239">The name of the resource group to which the container registry belongs.</span></span>
+          description: <span data-ttu-id="15d02-233">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-233">The name of the resource group to which the container registry belongs.</span></span>
         - id: registryName
           type:
             - string
-          description: <span data-ttu-id="9598c-240">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-240">The name of the container registry.</span></span>
+          description: <span data-ttu-id="15d02-234">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="15d02-234">The name of the container registry.</span></span>
         - id: registryUpdateParameters
           type:
             - '@azure/arm-containerregistry.RegistryUpdateParameters'
-          description: <span data-ttu-id="9598c-241">Les paramètres de mise à jour d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-241">The parameters for updating a container registry.</span></span>
+          description: <span data-ttu-id="15d02-235">Les paramètres de mise à jour d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="15d02-235">The parameters for updating a container registry.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1278,37 +1221,6 @@ items:
       return:
         type:
           - Promise<Models.RegistriesUpdateResponse>
-    package: '@azure/arm-containerregistry'
-  - uid: '@azure/arm-containerregistry.Registries.updatePolicies'
-    name: 'updatePolicies(string, string, RegistryPolicies, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: <span data-ttu-id="9598c-242">Met à jour les stratégies pour le Registre de conteneur spécifié.</span><span class="sxs-lookup"><span data-stu-id="9598c-242">Updates the policies for the specified container registry.</span></span>
-    syntax:
-      content: 'function updatePolicies(resourceGroupName: string, registryName: string, registryPoliciesUpdateParameters: RegistryPolicies, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-243">Le nom du groupe de ressources auquel appartient le Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-243">The name of the resource group to which the container registry belongs.</span></span>
-        - id: registryName
-          type:
-            - string
-          description: <span data-ttu-id="9598c-244">Le nom du Registre de conteneur.</span><span class="sxs-lookup"><span data-stu-id="9598c-244">The name of the container registry.</span></span>
-        - id: registryPoliciesUpdateParameters
-          type:
-            - '@azure/arm-containerregistry.RegistryPolicies'
-          description: <span data-ttu-id="9598c-245">Les paramètres de mise à jour des stratégies d’un Registre de conteneurs.</span><span class="sxs-lookup"><span data-stu-id="9598c-245">The parameters for updating policies of a container registry.</span></span>
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.RegistriesUpdatePoliciesResponse>
     package: '@azure/arm-containerregistry'
 references:
   - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClientContext'
@@ -1323,6 +1235,12 @@ references:
       - name: Registry
         fullName: Registry
         uid: '@azure/arm-containerregistry.Registry'
+  - uid: '@azure/arm-containerregistry.GenerateCredentialsParameters'
+    name: GenerateCredentialsParameters
+    spec.typeScript:
+      - name: GenerateCredentialsParameters
+        fullName: GenerateCredentialsParameters
+        uid: '@azure/arm-containerregistry.GenerateCredentialsParameters'
   - uid: '@azure/arm-containerregistry.ImportImageParameters'
     name: ImportImageParameters
     spec.typeScript:
@@ -1335,12 +1253,6 @@ references:
       - name: RegistryUpdateParameters
         fullName: RegistryUpdateParameters
         uid: '@azure/arm-containerregistry.RegistryUpdateParameters'
-  - uid: '@azure/arm-containerregistry.RegistryPolicies'
-    name: RegistryPolicies
-    spec.typeScript:
-      - name: RegistryPolicies
-        fullName: RegistryPolicies
-        uid: '@azure/arm-containerregistry.RegistryPolicies'
   - uid: '@azure/arm-containerregistry.RegistryNameCheckRequest'
     name: RegistryNameCheckRequest
     spec.typeScript:
@@ -1395,16 +1307,6 @@ references:
       - name: RegistryListCredentialsResult
         fullName: RegistryListCredentialsResult
         uid: '@azure/arm-containerregistry.RegistryListCredentialsResult'
-      - name: '>'
-        fullName: '>'
-  - uid: ServiceCallback<@azure/arm-containerregistry.RegistryPolicies>
-    name: RegistryPolicies>
-    spec.typeScript:
-      - name: ServiceCallback<
-        fullName: ServiceCallback<
-      - name: RegistryPolicies
-        fullName: RegistryPolicies
-        uid: '@azure/arm-containerregistry.RegistryPolicies'
       - name: '>'
         fullName: '>'
   - uid: ServiceCallback<@azure/arm-containerregistry.RegistryUsageListResult>

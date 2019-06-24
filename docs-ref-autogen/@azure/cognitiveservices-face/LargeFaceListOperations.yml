@@ -47,7 +47,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="efcaa-101">Classe représentant une LargeFaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="efcaa-101">Class representing a LargeFaceListOperations.</span></span>
+    summary: <span data-ttu-id="c0427-101">Classe représentant une LargeFaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="c0427-101">Class representing a LargeFaceListOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListOperations.addFaceFromStream_2'
     name: 'addFaceFromStream(string, msRest.HttpRequestBody, LargeFaceListAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -62,20 +62,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-102">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-102">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-102">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-102">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="efcaa-103">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="efcaa-103">An image stream.</span></span>
+          description: <span data-ttu-id="c0427-103">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="c0427-103">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="efcaa-104">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-104">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-104">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-104">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-105">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-105">The callback</span></span>
+            <span data-ttu-id="c0427-105">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-105">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromStreamResponse>
@@ -86,18 +86,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="efcaa-106">Ajouter une face à une liste de visages de grande taille.</span><span class="sxs-lookup"><span data-stu-id="efcaa-106">Add a face to a large face list.</span></span> <span data-ttu-id="efcaa-107">Le visage d’entrée est spécifié en tant qu’image avec un rectangle targetFace.</span><span class="sxs-lookup"><span data-stu-id="efcaa-107">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="efcaa-108">Elle retourne un persistedFaceId représentant la face ajoutée et persistedFaceId n’expirent pas.</span><span class="sxs-lookup"><span data-stu-id="efcaa-108">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>'
+    summary: "<span data-ttu-id=\"c0427-106\">Ajouter une face à une liste de visage de grande taille spécifiée, jusqu'à 1 000 000 visages.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-106\">Add a face to a specified large face list, up to 1,000,000 faces.</span></span>\n<br /> <span data-ttu-id=\"c0427-107\">Pour faire face à une image contient plusieurs visages, face d’entrée peut être spécifié en tant qu’image avec un rectangle targetFace.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-107\">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id=\"c0427-108\">Elle retourne un persistedFaceId représentant la face ajoutée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-108\">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id=\"c0427-109\">Aucune image ne sera stockée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-109\">No image will be stored.</span></span> <span data-ttu-id=\"c0427-110\">Uniquement la fonctionnalité de visage extraits est stockée sur le serveur jusqu'à ce que [LargeFaceList Face - supprimer](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) ou [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-110\">Only the extracted face feature will be stored on server until [LargeFaceList Face - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) or [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>\n<br /> <span data-ttu-id=\"c0427-111\">Remarque persistedFaceId est différent de faceId généré par [doivent faire Face\_: détecter](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-111\">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>\n* <span data-ttu-id=\"c0427-112\">Qualité d’image face supérieure signifie une plus grande précision de la reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-112\">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id=\"c0427-113\">Pensez aux visages de haute qualité\_: frontal, clear et face taille est de 200 x 200 pixels (100 pixels entre les yeux) ou plus grand.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-113\">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>\n* <span data-ttu-id=\"c0427-114\">JPEG, PNG, GIF (la première image) et format BMP sont pris en charge.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-114\">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id=\"c0427-115\">La taille du fichier image autorisée est de 1 Ko à 6 Mo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-115\">The allowed image file size is from 1KB to 6MB.</span></span>\n* <span data-ttu-id=\"c0427-116\">rectangle de «\_targetFace\_» doit contenir une face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-116\">\"targetFace\" rectangle should contain one face.</span></span> <span data-ttu-id=\"c0427-117\">Zéro ou plusieurs faces sont considérées comme une erreur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-117\">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id=\"c0427-118\">Si le rectangle fourni «\_targetFace\_» n’est pas retourné à partir de [doivent faire Face\_: détecter](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), il n’existe aucune garantie pour détecter et ajouter la face avec succès.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-118\">If the provided \"targetFace\" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>\n* <span data-ttu-id=\"c0427-119\">En dehors de la taille de la face détectables (36 x 36-4096 pixels de 4096 x), grandes occlusions de tête ou de grande taille entraîne des échecs.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-119\">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>\n* <span data-ttu-id=\"c0427-120\">Ajout/Suppression de visages vers/à partir d’une même liste de visages sont traitées de manière séquentielle et différents face vers/depuis les listes sont en parallèle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-120\">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>\n* <span data-ttu-id=\"c0427-121\">La taille minimale de visages sont détectables selon est une image ne dépasse pas 1920 x 1080 pixels 36 x 36 pixels.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-121\">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>\n<span data-ttu-id=\"c0427-122\">Les images avec des dimensions supérieurs à 1920 x 1080 pixels aurez besoin d’une taille de police minimale proportionnellement plus importantes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-122\">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>\n* <span data-ttu-id=\"c0427-123\">Les valeurs de différents «\_detectionModel\_» peuvent être fournis.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-123\">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id=\"c0427-124\">Pour utiliser et comparer des modèles de détection différents, reportez-vous à [comment spécifier un modèle de détection](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-124\">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>\n| <span data-ttu-id=\"c0427-125\">Modèle</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-125\">Model</span></span> | <span data-ttu-id=\"c0427-126\">Utilisation recommandée-case(s)</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-126\">Recommended use-case(s)</span></span> |\n| ---------- | -------- |\n| <span data-ttu-id=\"c0427-127\">'detection_01'\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-127\">'detection_01':</span></span> | <span data-ttu-id=\"c0427-128\">Le modèle de détection par défaut pour [LargeFaceList - ajouter</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-128\">The default detection model for [LargeFaceList - Add</span></span>\n<span data-ttu-id=\"c0427-129\">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-129\">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span></span> <span data-ttu-id=\"c0427-130\">Recommander pour près de détection de visage de face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-130\">Recommend for near frontal face detection.</span></span> <span data-ttu-id=\"c0427-131\">Pour les scénarios avec des visages angle particulièrement volumineux (head-pose), un vaisseau faces ou l’orientation d’image incorrect, les visages dans ce cas ne peuvent pas être détectés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-131\">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id=\"c0427-132\">| | 'detection_02'\_: | Modèle de détection publiée en 2019 peut avec une meilleure précision en particulier sur les visages de petite, côtés et est flous.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-132\">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> <span data-ttu-id=\"c0427-133\">| Quota\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-133\">| Quota:</span></span>\n* <span data-ttu-id=\"c0427-134\">Quota d’abonnement de niveau gratuit\_: visages 1 000 par liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-134\">Free-tier subscription quota: 1,000 faces per large face list.</span></span>\n* <span data-ttu-id=\"c0427-135\">Quota d’abonnement le niveau s0\_: visages 1 000 000 par liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-135\">S0-tier subscription quota: 1,000,000 faces per large face list.</span></span>"
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-109">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-109">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-136">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-136">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="efcaa-110">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="efcaa-110">An image stream.</span></span>
+          description: <span data-ttu-id="c0427-137">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="c0427-137">An image stream.</span></span>
         - id: options
           type:
             - Models.LargeFaceListAddFaceFromStreamOptionalParams
@@ -120,16 +120,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-111">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-111">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-138">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-138">Id referencing a particular large face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="efcaa-112">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="efcaa-112">An image stream.</span></span>
+          description: <span data-ttu-id="c0427-139">Un flux d’image.</span><span class="sxs-lookup"><span data-stu-id="c0427-139">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-113">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-113">The callback</span></span>
+            <span data-ttu-id="c0427-140">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-140">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromStreamResponse>
@@ -147,20 +147,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-114">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-114">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-141">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-141">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="efcaa-115">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="efcaa-115">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c0427-142">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="c0427-142">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="efcaa-116">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-116">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-143">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-143">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-117">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-117">The callback</span></span>
+            <span data-ttu-id="c0427-144">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-144">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromUrlResponse>
@@ -171,18 +171,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="efcaa-118">Ajouter une face à une liste de visages de grande taille.</span><span class="sxs-lookup"><span data-stu-id="efcaa-118">Add a face to a large face list.</span></span> <span data-ttu-id="efcaa-119">Le visage d’entrée est spécifié en tant qu’image avec un rectangle targetFace.</span><span class="sxs-lookup"><span data-stu-id="efcaa-119">The input face is specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="efcaa-120">Elle retourne un persistedFaceId représentant la face ajoutée et persistedFaceId n’expirent pas.</span><span class="sxs-lookup"><span data-stu-id="efcaa-120">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>'
+    summary: "<span data-ttu-id=\"c0427-145\">Ajouter une face à une liste de visage de grande taille spécifiée, jusqu'à 1 000 000 visages.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-145\">Add a face to a specified large face list, up to 1,000,000 faces.</span></span>\n<br /> <span data-ttu-id=\"c0427-146\">Pour faire face à une image contient plusieurs visages, face d’entrée peut être spécifié en tant qu’image avec un rectangle targetFace.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-146\">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id=\"c0427-147\">Elle retourne un persistedFaceId représentant la face ajoutée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-147\">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id=\"c0427-148\">Aucune image ne sera stockée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-148\">No image will be stored.</span></span> <span data-ttu-id=\"c0427-149\">Uniquement la fonctionnalité de visage extraits est stockée sur le serveur jusqu'à ce que [LargeFaceList Face - supprimer](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) ou [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-149\">Only the extracted face feature will be stored on server until [LargeFaceList Face - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) or [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>\n<br /> <span data-ttu-id=\"c0427-150\">Remarque persistedFaceId est différent de faceId généré par [doivent faire Face\_: détecter](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-150\">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>\n* <span data-ttu-id=\"c0427-151\">Qualité d’image face supérieure signifie une plus grande précision de la reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-151\">Higher face image quality means better recognition precision.</span></span> <span data-ttu-id=\"c0427-152\">Pensez aux visages de haute qualité\_: frontal, clear et face taille est de 200 x 200 pixels (100 pixels entre les yeux) ou plus grand.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-152\">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>\n* <span data-ttu-id=\"c0427-153\">JPEG, PNG, GIF (la première image) et format BMP sont pris en charge.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-153\">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id=\"c0427-154\">La taille du fichier image autorisée est de 1 Ko à 6 Mo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-154\">The allowed image file size is from 1KB to 6MB.</span></span>\n* <span data-ttu-id=\"c0427-155\">rectangle de «\_targetFace\_» doit contenir une face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-155\">\"targetFace\" rectangle should contain one face.</span></span> <span data-ttu-id=\"c0427-156\">Zéro ou plusieurs faces sont considérées comme une erreur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-156\">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id=\"c0427-157\">Si le rectangle fourni «\_targetFace\_» n’est pas retourné à partir de [doivent faire Face\_: détecter](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), il n’existe aucune garantie pour détecter et ajouter la face avec succès.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-157\">If the provided \"targetFace\" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>\n* <span data-ttu-id=\"c0427-158\">En dehors de la taille de la face détectables (36 x 36-4096 pixels de 4096 x), grandes occlusions de tête ou de grande taille entraîne des échecs.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-158\">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>\n* <span data-ttu-id=\"c0427-159\">Ajout/Suppression de visages vers/à partir d’une même liste de visages sont traitées de manière séquentielle et différents face vers/depuis les listes sont en parallèle.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-159\">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>\n* <span data-ttu-id=\"c0427-160\">La taille minimale de visages sont détectables selon est une image ne dépasse pas 1920 x 1080 pixels 36 x 36 pixels.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-160\">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>\n<span data-ttu-id=\"c0427-161\">Les images avec des dimensions supérieurs à 1920 x 1080 pixels aurez besoin d’une taille de police minimale proportionnellement plus importantes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-161\">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>\n* <span data-ttu-id=\"c0427-162\">Les valeurs de différents «\_detectionModel\_» peuvent être fournis.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-162\">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id=\"c0427-163\">Pour utiliser et comparer des modèles de détection différents, reportez-vous à [comment spécifier un modèle de détection](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-163\">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>\n| <span data-ttu-id=\"c0427-164\">Modèle</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-164\">Model</span></span> | <span data-ttu-id=\"c0427-165\">Utilisation recommandée-case(s)</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-165\">Recommended use-case(s)</span></span> |\n| ---------- | -------- |\n| <span data-ttu-id=\"c0427-166\">'detection_01'\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-166\">'detection_01':</span></span> | <span data-ttu-id=\"c0427-167\">Le modèle de détection par défaut pour [LargeFaceList - ajouter</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-167\">The default detection model for [LargeFaceList - Add</span></span>\n<span data-ttu-id=\"c0427-168\">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-168\">Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3).</span></span> <span data-ttu-id=\"c0427-169\">Recommander pour près de détection de visage de face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-169\">Recommend for near frontal face detection.</span></span> <span data-ttu-id=\"c0427-170\">Pour les scénarios avec des visages angle particulièrement volumineux (head-pose), un vaisseau faces ou l’orientation d’image incorrect, les visages dans ce cas ne peuvent pas être détectés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-170\">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id=\"c0427-171\">| | 'detection_02'\_: | Modèle de détection publiée en 2019 peut avec une meilleure précision en particulier sur les visages de petite, côtés et est flous.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-171\">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> <span data-ttu-id=\"c0427-172\">| Quota\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-172\">| Quota:</span></span>\n* <span data-ttu-id=\"c0427-173\">Quota d’abonnement de niveau gratuit\_: visages 1 000 par liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-173\">Free-tier subscription quota: 1,000 faces per large face list.</span></span>\n* <span data-ttu-id=\"c0427-174\">Quota d’abonnement le niveau s0\_: visages 1 000 000 par liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-174\">S0-tier subscription quota: 1,000,000 faces per large face list.</span></span>"
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-121">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-121">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-175">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-175">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="efcaa-122">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="efcaa-122">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c0427-176">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="c0427-176">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.LargeFaceListAddFaceFromUrlOptionalParams
@@ -205,16 +205,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-123">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-123">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-177">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-177">Id referencing a particular large face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="efcaa-124">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="efcaa-124">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c0427-178">URL accessible publiquement d’une image</span><span class="sxs-lookup"><span data-stu-id="c0427-178">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-125">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-125">The callback</span></span>
+            <span data-ttu-id="c0427-179">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-179">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListAddFaceFromUrlResponse>
@@ -232,16 +232,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-126">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-126">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-180">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-180">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListCreateOptionalParams'
-          description: <span data-ttu-id="efcaa-127">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-127">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-181">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-181">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-128">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-128">The callback</span></span>
+            <span data-ttu-id="c0427-182">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-182">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -252,14 +252,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: "<span data-ttu-id=\"efcaa-129\">Créer une liste de visage volumineux vide avec largeFaceListId spécifié par l’utilisateur, le nom, un userData facultatif et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-129\">Create an empty large face list with user-specified largeFaceListId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"efcaa-130\">Liste de visages de grande taille est une liste de visages, jusqu'à 1 000 000 visages et utilisé par [Face - Rechercher similaire](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-130\">Large face list is a list of faces, up to 1,000,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>\n<br /> <span data-ttu-id=\"efcaa-131\">Après la création, l’utilisateur doit utiliser [LargeFaceList Face - ajouter](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) pour importer les visages et [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) pour le rendre prêt pour [Face - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-131\">After creation, user should use [LargeFaceList Face - Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) to import the faces and [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) to make it ready for [Face - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id=\"efcaa-132\">Visages stockés sur le serveur jusqu'à ce que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-132\">Faces are stored on server until [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>\n<br /> <span data-ttu-id=\"efcaa-133\">Rechercher que similaire est utilisée pour le scénario de recherche de visages similaires de célébrités, face similaire au filtrage, ou comme un voyant fait face d’identification.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-133\">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id=\"efcaa-134\">Mais si l’utilisation réelle consiste à identifier la personne, veuillez utiliser [groupe de personnes](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) et [doivent faire Face\_: identifier](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-134\">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br />\n* <span data-ttu-id=\"efcaa-135\">Quota d’abonnement de niveau gratuit\_: 64 face grandes listes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-135\">Free-tier subscription quota: 64 large face lists.</span></span>\n* <span data-ttu-id=\"efcaa-136\">Quota d’abonnement le niveau s0\_: 1 000 000 face grandes listes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-136\">S0-tier subscription quota: 1,000,000 large face lists.</span></span>\n<br />\n<span data-ttu-id=\"efcaa-137\">'recognitionModel' doit être spécifié à associer à cette liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-137\">'recognitionModel' should be specified to associate with this large face list.</span></span> <span data-ttu-id=\"efcaa-138\">La valeur par défaut pour 'recognitionModel' est 'recognition_01', si le dernier modèle nécessaire, veuillez spécifier explicitement le modèle que vous avez besoin dans ce paramètre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-138\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"efcaa-139\">Nouvelles faces qui sont ajoutés à une liste existante de la grande face utilisera le modèle de reconnaissance qui a déjà associé à la collection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-139\">New faces that are added to an existing large face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"efcaa-140\">Fonctionnalités existantes de visage dans une liste de visages de grande taille ne peut pas être mis à jour aux fonctionnalités extraites par une autre version de modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-140\">Existing face features in a large face list can't be updated to features extracted by another version of recognition model.</span></span>"
+    summary: "<span data-ttu-id=\"c0427-183\">Créer une liste de visage volumineux vide avec largeFaceListId spécifié par l’utilisateur, le nom, un userData facultatif et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-183\">Create an empty large face list with user-specified largeFaceListId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"c0427-184\">Liste de visages de grande taille est une liste de visages, jusqu'à 1 000 000 visages et utilisé par [Face - Rechercher similaire](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-184\">Large face list is a list of faces, up to 1,000,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>\n<br /> <span data-ttu-id=\"c0427-185\">Après la création, l’utilisateur doit utiliser [LargeFaceList Face - ajouter](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) pour importer les visages et [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) pour le rendre prêt pour [Face - Rechercher similaire](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-185\">After creation, user should use [LargeFaceList Face - Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) to import the faces and [LargeFaceList - Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) to make it ready for [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id=\"c0427-186\">Aucune image ne sera stockée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-186\">No image will be stored.</span></span> <span data-ttu-id=\"c0427-187\">Uniquement les fonctionnalités de visage extraits sont stockées sur le serveur jusqu'à ce que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-187\">Only the extracted face features are stored on server until [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) is called.</span></span>\n<br /> <span data-ttu-id=\"c0427-188\">Rechercher que similaire est utilisée pour le scénario de recherche de visages similaires de célébrités, face similaire au filtrage, ou comme un voyant fait face d’identification.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-188\">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id=\"c0427-189\">Mais si l’utilisation réelle consiste à identifier la personne, veuillez utiliser [groupe de personnes](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) et [doivent faire Face\_: identifier](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-189\">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br/><span data-ttu-id=\"c0427-190\">'recognitionModel' doit être spécifié à associer à cette liste de visages de grande taille.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-190\">'recognitionModel' should be specified to associate with this large face list.</span></span> <span data-ttu-id=\"c0427-191\">La valeur par défaut pour 'recognitionModel' est 'recognition_01', si le dernier modèle nécessaire, veuillez spécifier explicitement le modèle que vous avez besoin dans ce paramètre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-191\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"c0427-192\">Nouvelles faces qui sont ajoutés à une liste existante de la grande face utilisera le modèle de reconnaissance qui a déjà associé à la collection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-192\">New faces that are added to an existing large face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"c0427-193\">Fonctionnalités existantes de visage dans une liste de visages de grande taille ne peut pas être mis à jour aux fonctionnalités extraites par une autre version de modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-193\">Existing face features in a large face list can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"c0427-194\">'recognition_01'\_: Le modèle de reconnaissance par défaut pour [LargeFaceList - créer](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-194\">'recognition_01': The default recognition model for [LargeFaceList- Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc).</span></span> <span data-ttu-id=\"c0427-195\">Toutes les listes de ces grandes face créés avant 2019 mars sont fixées avec ce modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-195\">All those large face lists created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"c0427-196\">'recognition_02'\_: Modèle de reconnaissance publiée en mars de 2019.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-196\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"c0427-197\">«\_recognition_02\_» est recommandé dans la mesure où son exactitude globale est améliorée par rapport à «\_recognition_01\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-197\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>\n<span data-ttu-id=\"c0427-198\">Quota de liste de visage volumineux\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-198\">Large face list quota:</span></span>\n* <span data-ttu-id=\"c0427-199\">Quota d’abonnement de niveau gratuit\_: 64 face grandes listes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-199\">Free-tier subscription quota: 64 large face lists.</span></span>\n* <span data-ttu-id=\"c0427-200\">Quota d’abonnement le niveau s0\_: 1 000 000 face grandes listes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-200\">S0-tier subscription quota: 1,000,000 large face lists.</span></span>"
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-141">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-141">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-201">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-201">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListCreateOptionalParams
@@ -282,12 +282,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-142">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-142">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-202">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-202">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-143">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-143">The callback</span></span>
+            <span data-ttu-id="c0427-203">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-203">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -298,18 +298,20 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-144">Supprimer un visage existant d’une liste de visages de grande taille (donnée par un persistedFaceId et un largeFaceListId).</span><span class="sxs-lookup"><span data-stu-id="efcaa-144">Delete an existing face from a large face list (given by a persistedFaceId and a largeFaceListId).</span></span> <span data-ttu-id="efcaa-145">Image persistante lié à la face est également supprimé.</span><span class="sxs-lookup"><span data-stu-id="efcaa-145">Persisted image related to the face will also be deleted.</span></span>
+    summary: |-
+      <span data-ttu-id="c0427-204">Supprimer un visage dans une liste de visages de grande taille en persistedFaceId et largeFaceListId spécifié.</span><span class="sxs-lookup"><span data-stu-id="c0427-204">Delete a face from a large face list by specified largeFaceListId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="c0427-205">Ajout/Suppression de visages vers/à partir d’une même liste de visages de grande taille sont traitées de façon séquentielle et vers/à partir de différents face grandes listes sont en parallèle.</span><span class="sxs-lookup"><span data-stu-id="c0427-205">Adding/deleting faces to/from a same large face list are processed sequentially and to/from different large face lists are in parallel.</span></span>
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-146">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-146">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-206">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-206">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-147">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-147">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-207">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-207">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -332,20 +334,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-148">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-148">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-208">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-208">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-149">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-149">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-209">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-209">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="efcaa-150">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-150">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-210">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-210">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-151">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-151">The callback</span></span>
+            <span data-ttu-id="c0427-211">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-211">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -363,16 +365,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-152">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-152">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-212">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-212">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-153">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-153">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-213">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-213">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-154">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-154">The callback</span></span>
+            <span data-ttu-id="c0427-214">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-214">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -383,14 +385,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-155">Supprimer une liste de grandes face existante en fonction de faceListId.</span><span class="sxs-lookup"><span data-stu-id="efcaa-155">Delete an existing large face list according to faceListId.</span></span> <span data-ttu-id="efcaa-156">Conservées face images dans la liste de visages de grande taille seront également supprimées.</span><span class="sxs-lookup"><span data-stu-id="efcaa-156">Persisted face images in the large face list will also be deleted.</span></span>
+    summary: <span data-ttu-id="c0427-215">Supprimer une liste de visage de grande taille spécifiée.</span><span class="sxs-lookup"><span data-stu-id="c0427-215">Delete a specified large face list.</span></span>
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-157">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-157">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-216">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-216">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -413,16 +415,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-158">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-158">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-217">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-217">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="efcaa-159">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-159">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-218">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-218">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-160">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-160">The callback</span></span>
+            <span data-ttu-id="c0427-219">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-219">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -440,12 +442,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-161">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-161">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-220">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-220">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-162">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-162">The callback</span></span>
+            <span data-ttu-id="c0427-221">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-221">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -463,16 +465,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-163">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-163">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-222">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-222">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListGetOptionalParams'
-          description: <span data-ttu-id="efcaa-164">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-164">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-223">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-223">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargeFaceList>
           description: |
-            <span data-ttu-id="efcaa-165">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-165">The callback</span></span>
+            <span data-ttu-id="c0427-224">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-224">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetResponse>
@@ -483,14 +485,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="efcaa-166">Récupérer une liste de grandes face largeFaceListId, nom, userData et recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="efcaa-166">Retrieve a large face list’s largeFaceListId, name, userData and recognitionModel.</span></span>'
+    summary: '<span data-ttu-id="c0427-225">Récupérer une liste de grandes face largeFaceListId, nom, userData et recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="c0427-225">Retrieve a large face list’s largeFaceListId, name, userData and recognitionModel.</span></span>'
     syntax:
       content: 'function get(largeFaceListId: string, options?: Models.LargeFaceListGetOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-167">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-167">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-226">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-226">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListGetOptionalParams
@@ -513,12 +515,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-168">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-168">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-227">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-227">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargeFaceList>
           description: |
-            <span data-ttu-id="efcaa-169">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-169">The callback</span></span>
+            <span data-ttu-id="c0427-228">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-228">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetResponse>
@@ -529,18 +531,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-170">Récupérer des informations sur une face persistante (spécifiée par persistedFaceId et son largeFaceListId appartenant).</span><span class="sxs-lookup"><span data-stu-id="efcaa-170">Retrieve information about a persisted face (specified by persistedFaceId and its belonging largeFaceListId).</span></span>
+    summary: <span data-ttu-id="c0427-229">Récupérer des informations sur une face persistante (spécifiée par persistedFaceId et son largeFaceListId appartenant).</span><span class="sxs-lookup"><span data-stu-id="c0427-229">Retrieve information about a persisted face (specified by persistedFaceId and its belonging largeFaceListId).</span></span>
     syntax:
       content: 'function getFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-171">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-171">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-230">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-230">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-172">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-172">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-231">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-231">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -563,20 +565,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-173">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-173">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-232">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-232">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-174">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-174">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-233">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="efcaa-175">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-175">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-234">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-176">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-176">The callback</span></span>
+            <span data-ttu-id="c0427-235">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-235">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetFaceResponse>
@@ -594,16 +596,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-177">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-177">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-236">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-236">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-178">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-178">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-237">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-237">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="efcaa-179">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-179">The callback</span></span>
+            <span data-ttu-id="c0427-238">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-238">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetFaceResponse>
@@ -614,14 +616,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-180">Récupérer l’état de la formation d’une liste de visages de grande taille (terminée ou en cours).</span><span class="sxs-lookup"><span data-stu-id="efcaa-180">Retrieve the training status of a large face list (completed or ongoing).</span></span>
+    summary: <span data-ttu-id="c0427-239">Récupérer l’état de la formation d’une liste de visages de grande taille (terminée ou en cours).</span><span class="sxs-lookup"><span data-stu-id="c0427-239">Retrieve the training status of a large face list (completed or ongoing).</span></span>
     syntax:
       content: 'function getTrainingStatus(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-181">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-181">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-240">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-240">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -644,16 +646,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-182">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-182">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-241">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-241">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="efcaa-183">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-183">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-242">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-242">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="efcaa-184">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-184">The callback</span></span>
+            <span data-ttu-id="c0427-243">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-243">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetTrainingStatusResponse>
@@ -671,12 +673,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-185">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-185">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-244">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-244">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="efcaa-186">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-186">The callback</span></span>
+            <span data-ttu-id="c0427-245">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-245">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListGetTrainingStatusResponse>
@@ -687,7 +689,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-187">Créer une LargeFaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="efcaa-187">Create a LargeFaceListOperations.</span></span>
+    summary: <span data-ttu-id="c0427-246">Créer une LargeFaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="c0427-246">Create a LargeFaceListOperations.</span></span>
     syntax:
       content: 'new LargeFaceListOperations(client: FaceClientContext)'
       parameters:
@@ -695,7 +697,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="efcaa-188">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="efcaa-188">Reference to the service client.</span></span>
+            <span data-ttu-id="c0427-247">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="c0427-247">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargeFaceListOperations.list_2'
     name: 'list(LargeFaceListListOptionalParams, ServiceCallback<LargeFaceList[]>)'
@@ -710,12 +712,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListListOptionalParams'
-          description: <span data-ttu-id="efcaa-189">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-189">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-248">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-248">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargeFaceList[]>'
           description: |
-            <span data-ttu-id="efcaa-190">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-190">The callback</span></span>
+            <span data-ttu-id="c0427-249">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-249">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListResponse>
@@ -726,7 +728,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: "<span data-ttu-id=\"efcaa-191\">Liste des informations des grandes face affiche de largeFaceListId, nom, userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-191\">List large face lists’ information of largeFaceListId, name, userData and recognitionModel.</span></span> <br\n/>\n<span data-ttu-id=\"efcaa-192\">Pour obtenir des informations de face à l’intérieur d’utilisation de largeFaceList [LargeFaceList Face - obtenir](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-192\">To get face information inside largeFaceList use [LargeFaceList Face - Get](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span></span><br />\n* <span data-ttu-id=\"efcaa-193\">Visage grandes listes sont stockés dans l’ordre alphabétique de largeFaceListId.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-193\">Large face lists are stored in alphabetical order of largeFaceListId.</span></span>\n* <span data-ttu-id=\"efcaa-194\">paramètre «\_start\_» (chaîne, facultatif) est une valeur de largeFaceListId fourni par l’utilisateur qui les entrées ayant le plus grands ID par comparaison de chaînes retournés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-194\">\"start\" parameter (string, optional) is a user-provided largeFaceListId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id=\"efcaa-195\">«\_start\_» la valeur vide pour indiquer le retour à partir du premier élément.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-195\">\"start\" set to empty to indicate return from the first item.</span></span>\n* <span data-ttu-id=\"efcaa-196\">paramètre «\_top\_» (int, facultatif) spécifie le nombre d’entrées à retourner.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-196\">\"top\" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id=\"efcaa-197\">Un nombre maximal de 1 000 entrées peut être retournée dans un seul appel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-197\">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id=\"efcaa-198\">Pour extraire plus, vous pouvez spécifier «\_start\_» avec l’Id de l’entrée retournée dernière de l’appel actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-198\">To fetch more, you can specify \"start\" with the last returned entry’s Id of the current call.</span></span>\n<br />\n<span data-ttu-id=\"efcaa-199\">Par exemple, nombre total de 5 personnes grande liste\_: «\_list1\_»,..., «\_list5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-199\">For example, total 5 large person lists: \"list1\", ..., \"list5\".</span></span>\n<br /> <span data-ttu-id=\"efcaa-200\">«\_Démarrer = & haut =\_» renvoie toutes les listes de 5.</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-200\">\"start=&top=\" will return all 5 lists.</span></span>\n<br /> <span data-ttu-id=\"efcaa-201\">\"start=&top=2\" will return \"list1\", \"list2\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-201\">\"start=&top=2\" will return \"list1\", \"list2\".</span></span>\n<br /> <span data-ttu-id=\"efcaa-202\">\"start=list2&top=3\" will return \"list3\", \"list4\", \"list5\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"efcaa-202\">\"start=list2&top=3\" will return \"list3\", \"list4\", \"list5\".</span></span>"
+    summary: "<span data-ttu-id=\"c0427-250\">Liste des informations des grandes face affiche de largeFaceListId, nom, userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-250\">List large face lists’ information of largeFaceListId, name, userData and recognitionModel.</span></span> <br\n/>\n<span data-ttu-id=\"c0427-251\">Pour obtenir des informations de face à l’intérieur d’utilisation de largeFaceList [LargeFaceList Face - obtenir](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-251\">To get face information inside largeFaceList use [LargeFaceList Face - Get](/docs/services/563879b61984550e40cbbe8d/operations/5a158cf2d2de3616c086f2d5)</span></span><br />\n* <span data-ttu-id=\"c0427-252\">Visage grandes listes sont stockés dans l’ordre alphabétique de largeFaceListId.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-252\">Large face lists are stored in alphabetical order of largeFaceListId.</span></span>\n* <span data-ttu-id=\"c0427-253\">paramètre «\_start\_» (chaîne, facultatif) est une valeur de largeFaceListId fourni par l’utilisateur qui les entrées ayant le plus grands ID par comparaison de chaînes retournés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-253\">\"start\" parameter (string, optional) is a user-provided largeFaceListId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id=\"c0427-254\">«\_start\_» la valeur vide pour indiquer le retour à partir du premier élément.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-254\">\"start\" set to empty to indicate return from the first item.</span></span>\n* <span data-ttu-id=\"c0427-255\">paramètre «\_top\_» (int, facultatif) spécifie le nombre d’entrées à retourner.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-255\">\"top\" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id=\"c0427-256\">Un nombre maximal de 1 000 entrées peut être retournée dans un seul appel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-256\">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id=\"c0427-257\">Pour extraire plus, vous pouvez spécifier «\_start\_» avec l’Id de l’entrée retournée dernière de l’appel actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-257\">To fetch more, you can specify \"start\" with the last returned entry’s Id of the current call.</span></span>\n<br />\n<span data-ttu-id=\"c0427-258\">Par exemple, nombre total de 5 personnes grande liste\_: «\_list1\_»,..., «\_list5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-258\">For example, total 5 large person lists: \"list1\", ..., \"list5\".</span></span>\n<br /> <span data-ttu-id=\"c0427-259\">«\_Démarrer = & haut =\_» renvoie toutes les listes de 5.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-259\">\"start=&top=\" will return all 5 lists.</span></span>\n<br /> <span data-ttu-id=\"c0427-260\">\"start=&top=2\" will return \"list1\", \"list2\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-260\">\"start=&top=2\" will return \"list1\", \"list2\".</span></span>\n<br /> <span data-ttu-id=\"c0427-261\">\"start=list2&top=3\" will return \"list3\", \"list4\", \"list5\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"c0427-261\">\"start=list2&top=3\" will return \"list3\", \"list4\", \"list5\".</span></span>"
     syntax:
       content: 'function list(options?: Models.LargeFaceListListOptionalParams)'
       parameters:
@@ -753,7 +755,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargeFaceList[]>'
           description: |
-            <span data-ttu-id="efcaa-203">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-203">The callback</span></span>
+            <span data-ttu-id="c0427-262">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-262">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListResponse>
@@ -771,16 +773,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-204">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-204">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-263">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-263">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListListFacesOptionalParams'
-          description: <span data-ttu-id="efcaa-205">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-205">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-264">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-264">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersistedFace[]>'
           description: |
-            <span data-ttu-id="efcaa-206">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-206">The callback</span></span>
+            <span data-ttu-id="c0427-265">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-265">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListFacesResponse>
@@ -791,14 +793,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="efcaa-207">Liste de tous les visages dans une liste de visages de grande taille et récupérer des informations de face (y compris userData et persistedFaceIds des faces inscrits du visage).</span><span class="sxs-lookup"><span data-stu-id="efcaa-207">List all faces in a large face list, and retrieve face information (including userData and persistedFaceIds of registered faces of the face).</span></span>'
+    summary: '<span data-ttu-id="c0427-266">Liste de tous les visages dans une liste de visages de grande taille et récupérer des informations de face (y compris userData et persistedFaceIds des faces inscrits du visage).</span><span class="sxs-lookup"><span data-stu-id="c0427-266">List all faces in a large face list, and retrieve face information (including userData and persistedFaceIds of registered faces of the face).</span></span>'
     syntax:
       content: 'function listFaces(largeFaceListId: string, options?: Models.LargeFaceListListFacesOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-208">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-208">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-267">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-267">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListListFacesOptionalParams
@@ -821,12 +823,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-209">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-209">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-268">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-268">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersistedFace[]>'
           description: |
-            <span data-ttu-id="efcaa-210">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-210">The callback</span></span>
+            <span data-ttu-id="c0427-269">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-269">The callback</span></span>
       return:
         type:
           - Promise<Models.LargeFaceListListFacesResponse>
@@ -837,14 +839,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="efcaa-211">File d’attente d’une tâche de formation de liste face volumineux, la tâche de formation ne peut pas être démarrée immédiatement.</span><span class="sxs-lookup"><span data-stu-id="efcaa-211">Queue a large face list training task, the training task may not be started immediately.</span></span>'
+    summary: '<span data-ttu-id="c0427-270">File d’attente d’une tâche de formation de liste face volumineux, la tâche de formation ne peut pas être démarrée immédiatement.</span><span class="sxs-lookup"><span data-stu-id="c0427-270">Queue a large face list training task, the training task may not be started immediately.</span></span>'
     syntax:
       content: 'function train(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-212">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-212">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-271">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-271">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -867,16 +869,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-213">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-213">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-272">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-272">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="efcaa-214">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-214">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-273">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-273">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-215">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-215">The callback</span></span>
+            <span data-ttu-id="c0427-274">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-274">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -894,12 +896,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-216">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-216">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-275">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-275">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-217">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-217">The callback</span></span>
+            <span data-ttu-id="c0427-276">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-276">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -917,16 +919,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-218">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-218">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-277">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-277">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListUpdateOptionalParams'
-          description: <span data-ttu-id="efcaa-219">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-219">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-278">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-278">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-220">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-220">The callback</span></span>
+            <span data-ttu-id="c0427-279">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-279">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -937,14 +939,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-221">Mettre à jour les informations d’une liste de visages de grande taille.</span><span class="sxs-lookup"><span data-stu-id="efcaa-221">Update information of a large face list.</span></span>
+    summary: <span data-ttu-id="c0427-280">Mettre à jour les informations d’une liste de visages de grande taille.</span><span class="sxs-lookup"><span data-stu-id="c0427-280">Update information of a large face list.</span></span>
     syntax:
       content: 'function update(largeFaceListId: string, options?: Models.LargeFaceListUpdateOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-222">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-222">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-281">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-281">Id referencing a particular large face list.</span></span>
         - id: options
           type:
             - Models.LargeFaceListUpdateOptionalParams
@@ -967,12 +969,12 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-223">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-223">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-282">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-282">Id referencing a particular large face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-224">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-224">The callback</span></span>
+            <span data-ttu-id="c0427-283">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-283">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -990,20 +992,20 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-225">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-225">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-284">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-284">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-226">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-226">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-285">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-285">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargeFaceListUpdateFaceOptionalParams'
-          description: <span data-ttu-id="efcaa-227">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="efcaa-227">The optional parameters</span></span>
+          description: <span data-ttu-id="c0427-286">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="c0427-286">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-228">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-228">The callback</span></span>
+            <span data-ttu-id="c0427-287">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-287">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -1014,18 +1016,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="efcaa-229">Mettre à jour de champ d’userData un persistantes face.</span><span class="sxs-lookup"><span data-stu-id="efcaa-229">Update a persisted face's userData field.</span></span>
+    summary: <span data-ttu-id="c0427-288">Mettre à jour de champ d’userData un persistantes face.</span><span class="sxs-lookup"><span data-stu-id="c0427-288">Update a persisted face's userData field.</span></span>
     syntax:
       content: 'function updateFace(largeFaceListId: string, persistedFaceId: string, options?: Models.LargeFaceListUpdateFaceOptionalParams)'
       parameters:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-230">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-230">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-289">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-289">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-231">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-231">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-290">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-290">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - Models.LargeFaceListUpdateFaceOptionalParams
@@ -1048,16 +1050,16 @@ items:
         - id: largeFaceListId
           type:
             - string
-          description: <span data-ttu-id="efcaa-232">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="efcaa-232">Id referencing a particular large face list.</span></span>
+          description: <span data-ttu-id="c0427-291">ID de référence à une liste particulière face volumineux.</span><span class="sxs-lookup"><span data-stu-id="c0427-291">Id referencing a particular large face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="efcaa-233">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="efcaa-233">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c0427-292">ID faisant référence à un persistedFaceId particulier d’un visage existant.</span><span class="sxs-lookup"><span data-stu-id="c0427-292">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="efcaa-234">Le rappel</span><span class="sxs-lookup"><span data-stu-id="efcaa-234">The callback</span></span>
+            <span data-ttu-id="c0427-293">Le rappel</span><span class="sxs-lookup"><span data-stu-id="c0427-293">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

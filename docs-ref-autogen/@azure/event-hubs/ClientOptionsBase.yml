@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-hubs.ClientOptionsBase'
+    name: ClientOptionsBase
+    fullName: ClientOptionsBase
+    children:
+      - '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+      - '@azure/event-hubs.ClientOptionsBase.userAgent'
+      - '@azure/event-hubs.ClientOptionsBase.webSocket'
+      - '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="055bb-101">Décrit les options de client de base.</span><span class="sxs-lookup"><span data-stu-id="055bb-101">Describes the base client options.</span></span>
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="055bb-102">{DataTransformer} [dataTransformer] Le transformateur de données qui sera utilisé pour encoder et décoder les messages envoyés et reçus respectivement.</span><span class="sxs-lookup"><span data-stu-id="055bb-102">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="055bb-103">Si ce n’est pas fourni, puis nous allons utiliser le DefaultDataTransformer.</span><span class="sxs-lookup"><span data-stu-id="055bb-103">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="055bb-104">Le transformateur par défaut doit gérer la majorité des cas.</span><span class="sxs-lookup"><span data-stu-id="055bb-104">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="055bb-105">Cette option doit être utilisée uniquement pour des scénarios spécifiques.</span><span class="sxs-lookup"><span data-stu-id="055bb-105">This option needs to be used only for specialized scenarios.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="055bb-106">{chaîne} [userAgent] L’agent utilisateur qui doit être ajouté à l’utilisateur généré dans chaîne de l’agent.</span><span class="sxs-lookup"><span data-stu-id="055bb-106">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="055bb-107">Le constructeur WebSocket est utilisé pour créer une connexion AMQP sur un WebSocket.</span><span class="sxs-lookup"><span data-stu-id="055bb-107">The WebSocket constructor used to create an AMQP connection over a WebSocket.</span></span>
+      <span data-ttu-id="055bb-108">Cette option doit être fournie dans les scénarios ci-dessous</span><span class="sxs-lookup"><span data-stu-id="055bb-108">This option should be provided in the below scenarios</span></span>
+      - <span data-ttu-id="055bb-109">Le port TCP 5671 qui est celui utilisé par la connexion AMQP vers Event Hubs est bloqué dans votre environnement.</span><span class="sxs-lookup"><span data-stu-id="055bb-109">The TCP port 5671 which is what is used by the AMQP connection to Event Hubs is blocked in your environment.</span></span>
+      - <span data-ttu-id="055bb-110">Votre application doit être exécuté derrière un serveur proxy</span><span class="sxs-lookup"><span data-stu-id="055bb-110">Your application needs to be run behind a proxy server</span></span>
+      - <span data-ttu-id="055bb-111">Votre application doit s’exécuter dans le navigateur et que vous souhaitez fournir votre propre choix de l’implémentation de Websocket au lieu du WebSocket intégré dans le navigateur.</span><span class="sxs-lookup"><span data-stu-id="055bb-111">Your application needs to run in the browser and you want to provide your own choice of Websocket implementation instead of the built-in WebSocket in the browser.</span></span>
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptionsBase.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="055bb-112">{webSocketConstructorOptions} - Options à passer au constructeur de WebSocket</span><span class="sxs-lookup"><span data-stu-id="055bb-112">{webSocketConstructorOptions} - Options to be passed to the WebSocket constructor</span></span>'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
+    package: '@azure/event-hubs'

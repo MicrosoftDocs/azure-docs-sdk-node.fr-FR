@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="40bb9-101">Classe représentant une PersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="40bb9-101">Class representing a PersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="ef283-101">Classe représentant une PersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="ef283-101">Class representing a PersonGroupOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.PersonGroupOperations.create'
     name: 'create(string, Models.PersonGroupCreateOptionalParams)'
@@ -37,14 +37,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: "<span data-ttu-id=\"40bb9-102\">Créer un nouveau groupe de personnes avec personGroupId spécifié, le nom, fourni par l’utilisateur userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-102\">Create a new person group with specified personGroupId, name, user-provided userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"40bb9-103\">Un groupe de personnes est le conteneur des données téléchargées personne, y compris les images de visage et des fonctionnalités de reconnaissance faciale.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-103\">A person group is the container of the uploaded person data, including face images and face recognition features.</span></span>\n<br /> <span data-ttu-id=\"40bb9-104\">Après la création, utilisez [créer de groupe de personnes personne -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) pour ajouter des personnes dans le groupe, puis appelez [groupe de personnes - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) pour préparer ce groupe [doivent faire Face\_: identifier](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-104\">After creation, use [PersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) to add persons into the group, and then call [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"40bb9-105\">Visage de la personne, l’image et userData seront stockés sur le serveur jusqu'à [groupe de personnes personne</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-105\">The person's face, image, and userData will be stored on server until [PersonGroup Person</span></span>\n- <span data-ttu-id=\"40bb9-106\">DELETE](/docs/services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) ou [groupe de personnes - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-106\">Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) or [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) is called.</span></span>\n<br />\n* <span data-ttu-id=\"40bb9-107\">Quota d’abonnement de niveau gratuit\_: 1 000 groupes de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-107\">Free-tier subscription quota: 1,000 person groups.</span></span> <span data-ttu-id=\"40bb9-108\">Chacun conserve jusqu'à 1 000 personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-108\">Each holds up to 1,000 persons.</span></span>\n* <span data-ttu-id=\"40bb9-109\">Quota d’abonnement le niveau s0\_: 1 000 000 groupes de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-109\">S0-tier subscription quota: 1,000,000 person groups.</span></span> <span data-ttu-id=\"40bb9-110\">Chacun conserve jusqu'à 10 000 personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-110\">Each holds up to 10,000 persons.</span></span>\n* <span data-ttu-id=\"40bb9-111\">pour gérer le problème d’identification de visage de mise à l’échelle plus important, envisagez d’utiliser [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-111\">to handle larger scale face identification problem, please consider using [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span></span>\n<br />\n<span data-ttu-id=\"40bb9-112\">'recognitionModel' doit être spécifié à associer à ce groupe de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-112\">'recognitionModel' should be specified to associate with this person group.</span></span> <span data-ttu-id=\"40bb9-113\">La valeur par défaut pour 'recognitionModel' est 'recognition_01', si le dernier modèle nécessaire, veuillez spécifier explicitement le modèle que vous avez besoin dans ce paramètre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-113\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"40bb9-114\">Nouvelles faces qui sont ajoutés à un groupe existant de la personne utilisera le modèle de reconnaissance qui a déjà associé à la collection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-114\">New faces that are added to an existing person group will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"40bb9-115\">Les fonctionnalités de visage existantes dans un groupe de personnes ne peut pas être mis à jour aux fonctionnalités extraites par une autre version de modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-115\">Existing face features in a person group can't be updated to features extracted by another version of recognition model.</span></span>"
+    summary: "<span data-ttu-id=\"ef283-102\">Créer un nouveau groupe de personnes avec personGroupId spécifié, le nom, fourni par l’utilisateur userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-102\">Create a new person group with specified personGroupId, name, user-provided userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"ef283-103\">Un groupe de personnes est le conteneur des données téléchargées personne, y compris des fonctionnalités de reconnaissance faciale.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-103\">A person group is the container of the uploaded person data, including face recognition features.</span></span>\n<br /> <span data-ttu-id=\"ef283-104\">Après la création, utilisez [créer de groupe de personnes personne -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) pour ajouter des personnes dans le groupe, puis appelez [groupe de personnes - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) pour préparer ce groupe [doivent faire Face\_: identifier](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-104\">After creation, use [PersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) to add persons into the group, and then call [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"ef283-105\">Aucune image ne sera stockée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-105\">No image will be stored.</span></span> <span data-ttu-id=\"ef283-106\">Seule la personne de l’extrait de caractéristiques de visage et userData sera stocké sur le serveur jusqu'à ce que [supprimer du groupe de personnes personne -](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) ou [groupe de personnes - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) est appelée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-106\">Only the person's extracted face features and userData will be stored on server until [PersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) or [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) is called.</span></span>\n<br/><span data-ttu-id=\"ef283-107\">'recognitionModel' doit être spécifié à associer à ce groupe de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-107\">'recognitionModel' should be specified to associate with this person group.</span></span> <span data-ttu-id=\"ef283-108\">La valeur par défaut pour 'recognitionModel' est 'recognition_01', si le dernier modèle nécessaire, veuillez spécifier explicitement le modèle que vous avez besoin dans ce paramètre.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-108\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"ef283-109\">Nouvelles faces qui sont ajoutés à un groupe existant de la personne utilisera le modèle de reconnaissance qui a déjà associé à la collection.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-109\">New faces that are added to an existing person group will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"ef283-110\">Les fonctionnalités de visage existantes dans un groupe de personnes ne peut pas être mis à jour aux fonctionnalités extraites par une autre version de modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-110\">Existing face features in a person group can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"ef283-111\">'recognition_01'\_: Le modèle de reconnaissance par défaut pour [groupe de personnes - créer](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244).</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-111\">'recognition_01': The default recognition model for [PersonGroup - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244).</span></span> <span data-ttu-id=\"ef283-112\">Tous ces groupes de personne créés avant 2019 mars sont fixées avec ce modèle de reconnaissance.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-112\">All those person groups created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"ef283-113\">'recognition_02'\_: Modèle de reconnaissance publiée en mars de 2019.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-113\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"ef283-114\">«\_recognition_02\_» est recommandé dans la mesure où son exactitude globale est améliorée par rapport à «\_recognition_01\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-114\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>\n<span data-ttu-id=\"ef283-115\">Quota de groupe personne\_:</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-115\">Person group quota:</span></span>\n* <span data-ttu-id=\"ef283-116\">Quota d’abonnement de niveau gratuit\_: 1 000 groupes de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-116\">Free-tier subscription quota: 1,000 person groups.</span></span> <span data-ttu-id=\"ef283-117\">Chacun conserve jusqu'à 1 000 personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-117\">Each holds up to 1,000 persons.</span></span>\n* <span data-ttu-id=\"ef283-118\">Quota d’abonnement le niveau s0\_: 1 000 000 groupes de personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-118\">S0-tier subscription quota: 1,000,000 person groups.</span></span> <span data-ttu-id=\"ef283-119\">Chacun conserve jusqu'à 10 000 personnes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-119\">Each holds up to 10,000 persons.</span></span>\n* <span data-ttu-id=\"ef283-120\">pour gérer le problème d’identification de visage de mise à l’échelle plus important, envisagez d’utiliser [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-120\">to handle larger scale face identification problem, please consider using [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span></span>"
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-116">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-116">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-121">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-121">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - Models.PersonGroupCreateOptionalParams
@@ -67,16 +67,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-117">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-117">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-122">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-122">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.PersonGroupCreateOptionalParams'
-          description: <span data-ttu-id="40bb9-118">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-118">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-123">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-123">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-119">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-119">The callback</span></span>
+            <span data-ttu-id="ef283-124">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-124">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -94,12 +94,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-120">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-120">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-125">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-125">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-121">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-121">The callback</span></span>
+            <span data-ttu-id="ef283-126">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-126">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -110,14 +110,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="40bb9-122">Supprimer un groupe existant de la personne.</span><span class="sxs-lookup"><span data-stu-id="40bb9-122">Delete an existing person group.</span></span> <span data-ttu-id="40bb9-123">Conservées face les fonctionnalités de toutes les personnes dans le groupe de personnes seront également supprimées.</span><span class="sxs-lookup"><span data-stu-id="40bb9-123">Persisted face features of all people in the person group will also be deleted.</span></span>
+    summary: <span data-ttu-id="ef283-127">Supprimer un groupe existant de la personne.</span><span class="sxs-lookup"><span data-stu-id="ef283-127">Delete an existing person group.</span></span> <span data-ttu-id="ef283-128">Conservées face les fonctionnalités de toutes les personnes dans le groupe de personnes seront également supprimées.</span><span class="sxs-lookup"><span data-stu-id="ef283-128">Persisted face features of all people in the person group will also be deleted.</span></span>
     syntax:
       content: 'function deleteMethod(personGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-124">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-124">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-129">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-129">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -140,16 +140,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-125">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-125">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-130">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-130">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="40bb9-126">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-126">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-131">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-131">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-127">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-127">The callback</span></span>
+            <span data-ttu-id="ef283-132">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-132">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -167,12 +167,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-128">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-128">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-133">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-133">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-129">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-129">The callback</span></span>
+            <span data-ttu-id="ef283-134">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-134">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -183,14 +183,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="40bb9-130">Récupérer recognitionModel, userData et le nom de groupe de personne.</span><span class="sxs-lookup"><span data-stu-id="40bb9-130">Retrieve person group name, userData and recognitionModel.</span></span> <span data-ttu-id="40bb9-131">Pour obtenir des informations de la personne sous ce groupe de personnes, utilisez [personne du groupe de personnes - liste](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span><span class="sxs-lookup"><span data-stu-id="40bb9-131">To get person information under this personGroup, use [PersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span></span>'
+    summary: '<span data-ttu-id="ef283-135">Récupérer recognitionModel, userData et le nom de groupe de personne.</span><span class="sxs-lookup"><span data-stu-id="ef283-135">Retrieve person group name, userData and recognitionModel.</span></span> <span data-ttu-id="ef283-136">Pour obtenir des informations de la personne sous ce groupe de personnes, utilisez [personne du groupe de personnes - liste](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span><span class="sxs-lookup"><span data-stu-id="ef283-136">To get person information under this personGroup, use [PersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395241).</span></span>'
     syntax:
       content: 'function get(personGroupId: string, options?: Models.PersonGroupGetOptionalParams)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-132">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-132">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-137">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-137">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - Models.PersonGroupGetOptionalParams
@@ -213,16 +213,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-133">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-133">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-138">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-138">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.PersonGroupGetOptionalParams'
-          description: <span data-ttu-id="40bb9-134">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-134">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-139">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-139">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
           description: |
-            <span data-ttu-id="40bb9-135">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-135">The callback</span></span>
+            <span data-ttu-id="ef283-140">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-140">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupGetResponse>
@@ -240,12 +240,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-136">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-136">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-141">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-141">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersonGroup>
           description: |
-            <span data-ttu-id="40bb9-137">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-137">The callback</span></span>
+            <span data-ttu-id="ef283-142">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-142">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupGetResponse>
@@ -256,14 +256,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="40bb9-138">Récupérer l’état de la formation d’un groupe de personnes (terminé ou en cours).</span><span class="sxs-lookup"><span data-stu-id="40bb9-138">Retrieve the training status of a person group (completed or ongoing).</span></span>
+    summary: <span data-ttu-id="ef283-143">Récupérer l’état de la formation d’un groupe de personnes (terminé ou en cours).</span><span class="sxs-lookup"><span data-stu-id="ef283-143">Retrieve the training status of a person group (completed or ongoing).</span></span>
     syntax:
       content: 'function getTrainingStatus(personGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-139">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-139">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-144">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-144">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -286,16 +286,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-140">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-140">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-145">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-145">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="40bb9-141">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-141">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-146">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-146">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="40bb9-142">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-142">The callback</span></span>
+            <span data-ttu-id="ef283-147">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-147">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupGetTrainingStatusResponse>
@@ -313,12 +313,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-143">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-143">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-148">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-148">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="40bb9-144">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-144">The callback</span></span>
+            <span data-ttu-id="ef283-149">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-149">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupGetTrainingStatusResponse>
@@ -329,7 +329,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: "<span data-ttu-id=\"40bb9-145\">Liste des groupes de personnes personGroupId, nom, userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-145\">List person groups’ personGroupId, name, userData and recognitionModel.</span></span><br />\n* <span data-ttu-id=\"40bb9-146\">Groupes de personnes sont stockées dans l’ordre alphabétique de personGroupId.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-146\">Person groups are stored in alphabetical order of personGroupId.</span></span>\n* <span data-ttu-id=\"40bb9-147\">paramètre «\_start\_» (chaîne, facultatif) est une valeur de personGroupId fourni par l’utilisateur qui les entrées ayant le plus grands ID par comparaison de chaînes retournés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-147\">\"start\" parameter (string, optional) is a user-provided personGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id=\"40bb9-148\">«\_start\_» la valeur vide pour indiquer le retour à partir du premier élément.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-148\">\"start\" set to empty to indicate return from the first item.</span></span>\n* <span data-ttu-id=\"40bb9-149\">paramètre «\_top\_» (int, facultatif) spécifie le nombre d’entrées à retourner.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-149\">\"top\" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id=\"40bb9-150\">Un nombre maximal de 1 000 entrées peut être retournée dans un seul appel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-150\">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id=\"40bb9-151\">Pour extraire plus, vous pouvez spécifier «\_start\_» avec l’Id de l’entrée retournée dernière de l’appel actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-151\">To fetch more, you can specify \"start\" with the last returned entry’s Id of the current call.</span></span>\n<br />\n<span data-ttu-id=\"40bb9-152\">Par exemple, nombre total de groupes de personnes 5\_: «\_group1\_»,..., «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-152\">For example, total 5 person groups: \"group1\", ..., \"group5\".</span></span>\n<br /> <span data-ttu-id=\"40bb9-153\">«\_Démarrer = & haut =\_» renvoie tous les groupes de 5.</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-153\">\"start=&top=\" will return all 5 groups.</span></span>\n<br /> <span data-ttu-id=\"40bb9-154\">«\_Démarrer = & haut = 2\_» retournera «\_group1\_», «\_group2\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-154\">\"start=&top=2\" will return \"group1\", \"group2\".</span></span>\n<br /> <span data-ttu-id=\"40bb9-155\">«\_Démarrer = group2 & haut = 3\_» retournera «\_Groupe3\_», «\_groupe 4\_», «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"40bb9-155\">\"start=group2&top=3\" will return \"group3\", \"group4\", \"group5\".</span></span>"
+    summary: "<span data-ttu-id=\"ef283-150\">Liste des groupes de personnes personGroupId, nom, userData et recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-150\">List person groups’ personGroupId, name, userData and recognitionModel.</span></span><br />\n* <span data-ttu-id=\"ef283-151\">Groupes de personnes sont stockées dans l’ordre alphabétique de personGroupId.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-151\">Person groups are stored in alphabetical order of personGroupId.</span></span>\n* <span data-ttu-id=\"ef283-152\">paramètre «\_start\_» (chaîne, facultatif) est une valeur de personGroupId fourni par l’utilisateur qui les entrées ayant le plus grands ID par comparaison de chaînes retournés.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-152\">\"start\" parameter (string, optional) is a user-provided personGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id=\"ef283-153\">«\_start\_» la valeur vide pour indiquer le retour à partir du premier élément.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-153\">\"start\" set to empty to indicate return from the first item.</span></span>\n* <span data-ttu-id=\"ef283-154\">paramètre «\_top\_» (int, facultatif) spécifie le nombre d’entrées à retourner.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-154\">\"top\" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id=\"ef283-155\">Un nombre maximal de 1 000 entrées peut être retournée dans un seul appel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-155\">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id=\"ef283-156\">Pour extraire plus, vous pouvez spécifier «\_start\_» avec l’Id de l’entrée retournée dernière de l’appel actuel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-156\">To fetch more, you can specify \"start\" with the last returned entry’s Id of the current call.</span></span>\n<br />\n<span data-ttu-id=\"ef283-157\">Par exemple, nombre total de groupes de personnes 5\_: «\_group1\_»,..., «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-157\">For example, total 5 person groups: \"group1\", ..., \"group5\".</span></span>\n<br /> <span data-ttu-id=\"ef283-158\">«\_Démarrer = & haut =\_» renvoie tous les groupes de 5.</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-158\">\"start=&top=\" will return all 5 groups.</span></span>\n<br /> <span data-ttu-id=\"ef283-159\">«\_Démarrer = & haut = 2\_» retournera «\_group1\_», «\_group2\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-159\">\"start=&top=2\" will return \"group1\", \"group2\".</span></span>\n<br /> <span data-ttu-id=\"ef283-160\">«\_Démarrer = group2 & haut = 3\_» retournera «\_Groupe3\_», «\_groupe 4\_», «\_Groupe5\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"ef283-160\">\"start=group2&top=3\" will return \"group3\", \"group4\", \"group5\".</span></span>"
     syntax:
       content: 'function list(options?: Models.PersonGroupListOptionalParams)'
       parameters:
@@ -355,12 +355,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.PersonGroupListOptionalParams'
-          description: <span data-ttu-id="40bb9-156">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-156">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-161">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-161">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
           description: |
-            <span data-ttu-id="40bb9-157">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-157">The callback</span></span>
+            <span data-ttu-id="ef283-162">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-162">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupListResponse>
@@ -379,7 +379,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.PersonGroup[]>'
           description: |
-            <span data-ttu-id="40bb9-158">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-158">The callback</span></span>
+            <span data-ttu-id="ef283-163">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-163">The callback</span></span>
       return:
         type:
           - Promise<Models.PersonGroupListResponse>
@@ -390,7 +390,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="40bb9-159">Créer une PersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="40bb9-159">Create a PersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="ef283-164">Créer une PersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="ef283-164">Create a PersonGroupOperations.</span></span>
     syntax:
       content: 'new PersonGroupOperations(client: FaceClientContext)'
       parameters:
@@ -398,7 +398,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="40bb9-160">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="40bb9-160">Reference to the service client.</span></span>
+            <span data-ttu-id="ef283-165">Référence au client du service.</span><span class="sxs-lookup"><span data-stu-id="ef283-165">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.PersonGroupOperations.train'
     name: 'train(string, msRest.RequestOptionsBase)'
@@ -406,14 +406,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="40bb9-161">Une tâche de formation de groupe personne en file d’attente, la tâche de formation ne peut pas être démarrée immédiatement.</span><span class="sxs-lookup"><span data-stu-id="40bb9-161">Queue a person group training task, the training task may not be started immediately.</span></span>'
+    summary: '<span data-ttu-id="ef283-166">Une tâche de formation de groupe personne en file d’attente, la tâche de formation ne peut pas être démarrée immédiatement.</span><span class="sxs-lookup"><span data-stu-id="ef283-166">Queue a person group training task, the training task may not be started immediately.</span></span>'
     syntax:
       content: 'function train(personGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-162">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-162">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-167">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-167">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -436,16 +436,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-163">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-163">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-168">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-168">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="40bb9-164">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-164">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-169">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-169">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-165">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-165">The callback</span></span>
+            <span data-ttu-id="ef283-170">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-170">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -463,12 +463,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-166">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-166">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-171">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-171">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-167">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-167">The callback</span></span>
+            <span data-ttu-id="ef283-172">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-172">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -479,14 +479,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="40bb9-168">Mettre à jour le nom d’affichage d’un groupe de personne existante et userData.</span><span class="sxs-lookup"><span data-stu-id="40bb9-168">Update an existing person group's display name and userData.</span></span> <span data-ttu-id="40bb9-169">Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.</span><span class="sxs-lookup"><span data-stu-id="40bb9-169">The properties which does not appear in request body will not be updated.</span></span>
+    summary: <span data-ttu-id="ef283-173">Mettre à jour le nom d’affichage d’un groupe de personne existante et userData.</span><span class="sxs-lookup"><span data-stu-id="ef283-173">Update an existing person group's display name and userData.</span></span> <span data-ttu-id="ef283-174">Les propriétés qui n’apparaît pas dans le corps de la demande ne seront pas mis à jour.</span><span class="sxs-lookup"><span data-stu-id="ef283-174">The properties which does not appear in request body will not be updated.</span></span>
     syntax:
       content: 'function update(personGroupId: string, options?: Models.PersonGroupUpdateOptionalParams)'
       parameters:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-170">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-170">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-175">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-175">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - Models.PersonGroupUpdateOptionalParams
@@ -509,16 +509,16 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-171">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-171">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-176">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-176">Id referencing a particular person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.PersonGroupUpdateOptionalParams'
-          description: <span data-ttu-id="40bb9-172">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="40bb9-172">The optional parameters</span></span>
+          description: <span data-ttu-id="ef283-177">Les paramètres facultatifs</span><span class="sxs-lookup"><span data-stu-id="ef283-177">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-173">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-173">The callback</span></span>
+            <span data-ttu-id="ef283-178">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-178">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -536,12 +536,12 @@ items:
         - id: personGroupId
           type:
             - string
-          description: <span data-ttu-id="40bb9-174">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="40bb9-174">Id referencing a particular person group.</span></span>
+          description: <span data-ttu-id="ef283-179">ID faisant référence à un groupe de personnes particulier.</span><span class="sxs-lookup"><span data-stu-id="ef283-179">Id referencing a particular person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="40bb9-175">Le rappel</span><span class="sxs-lookup"><span data-stu-id="40bb9-175">The callback</span></span>
+            <span data-ttu-id="ef283-180">Le rappel</span><span class="sxs-lookup"><span data-stu-id="ef283-180">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
