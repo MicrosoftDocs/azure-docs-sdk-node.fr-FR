@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - azure-batch.TaskContainerSettings.containerRunOptions
+      - azure-batch.TaskContainerSettings.imageName
+      - azure-batch.TaskContainerSettings.registry
+      - azure-batch.TaskContainerSettings.workingDirectory
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.containerRunOptions
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"70e19-101\">Ces options supplémentaires sont fournies comme arguments à la commande «\_docker create\_», en plus de celles qui sont contrôlées par le Service Batch.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70e19-101\">These additional options are supplied as arguments to the \"docker create\" command, in addition to those controlled by the Batch Service.</span></span>"
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.imageName
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"70e19-102\">Il s’agit de la référence complète de l’Image, telle qu’elle serait spécifiée dans «\_docker pull\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"70e19-102\">This is the full Image reference, as would be specified to \"docker pull\".</span></span> <span data-ttu-id=\"70e19-103\">Si aucune balise n’est fournie en tant que partie du nom d’Image, la balise «\_: dernière\_» est utilisé comme valeur par défaut.</span><span class=\"sxs-lookup\"><span data-stu-id=\"70e19-103\">If no tag is provided as part of the Image name, the tag \":latest\" is used as a default.</span></span>"
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.registry
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="70e19-104">Ce paramètre peut être omis si a déjà été fourni lors de la création du Pool.</span><span class="sxs-lookup"><span data-stu-id="70e19-104">This setting can be omitted if was already provided at Pool creation.</span></span>
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - azure-batch.ContainerRegistry
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.workingDirectory
+    name: workingDirectory
+    fullName: workingDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"70e19-105\">La valeur par défaut est «\_taskWorkingDirectory\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"70e19-105\">The default is 'taskWorkingDirectory'.</span></span> <span data-ttu-id=\"70e19-106\">Les valeurs possibles sont\_: 'taskWorkingDirectory', 'containerImageDefault'</span><span class=\"sxs-lookup\"><span data-stu-id=\"70e19-106\">Possible values include: 'taskWorkingDirectory', 'containerImageDefault'</span></span>"
+    optional: true
+    syntax:
+      content: 'workingDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerRegistry
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: azure-batch.ContainerRegistry

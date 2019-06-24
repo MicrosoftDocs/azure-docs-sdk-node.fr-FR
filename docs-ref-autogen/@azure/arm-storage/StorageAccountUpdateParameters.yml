@@ -5,8 +5,8 @@ items:
     fullName: StorageAccountUpdateParameters
     children:
       - '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.azureFilesIdentityBasedAuthentication'
       - '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
-      - '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
       - '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
       - '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
       - '@azure/arm-storage.StorageAccountUpdateParameters.identity'
@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="bef23-101">Les paramètres qui peuvent être fournies lorsque la mise à jour les propriétés de compte de stockage.</span><span class="sxs-lookup"><span data-stu-id="bef23-101">The parameters that can be provided when updating the storage account properties.</span></span>
+    summary: <span data-ttu-id="45e2d-101">Les paramètres qui peuvent être fournies lorsque la mise à jour les propriétés de compte de stockage.</span><span class="sxs-lookup"><span data-stu-id="45e2d-101">The parameters that can be provided when updating the storage account properties.</span></span>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
     name: accessTier
@@ -26,13 +26,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"bef23-102\">Requis pour les comptes de stockage où kind = BlobStorage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-102\">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id=\"bef23-103\">Le niveau d’accès utilisé pour la facturation.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-103\">The access tier used for billing.</span></span>\n<span data-ttu-id=\"bef23-104\">Les valeurs possibles incluent\_: «\_À chaud\_», «\_froid\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-104\">Possible values include: 'Hot', 'Cool'</span></span>"
+    summary: "<span data-ttu-id=\"45e2d-102\">Requis pour les comptes de stockage où kind = BlobStorage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-102\">Required for storage accounts where kind = BlobStorage.</span></span> <span data-ttu-id=\"45e2d-103\">Le niveau d’accès utilisé pour la facturation.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-103\">The access tier used for billing.</span></span>\n<span data-ttu-id=\"45e2d-104\">Les valeurs possibles incluent\_: «\_À chaud\_», «\_froid\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-104\">Possible values include: 'Hot', 'Cool'</span></span>"
     optional: true
     syntax:
       content: 'accessTier?: AccessTier'
       return:
         type:
           - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.azureFilesIdentityBasedAuthentication'
+    name: azureFilesIdentityBasedAuthentication
+    fullName: azureFilesIdentityBasedAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="45e2d-105">Fournit les paramètres d’authentification en fonction des identités pour Azure Files.</span><span class="sxs-lookup"><span data-stu-id="45e2d-105">Provides the identity based authentication settings for Azure Files.</span></span>
+    optional: true
+    syntax:
+      content: 'azureFilesIdentityBasedAuthentication?: AzureFilesIdentityBasedAuthentication'
+      return:
+        type:
+          - '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
     name: customDomain
@@ -41,28 +56,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="bef23-105">Domaine personnalisé attribué au compte de stockage par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="bef23-105">Custom domain assigned to the storage account by the user.</span></span> <span data-ttu-id="bef23-106">Nom est la source de l’enregistrement CNAME.</span><span class="sxs-lookup"><span data-stu-id="bef23-106">Name is the CNAME source.</span></span> <span data-ttu-id="bef23-107">Qu’un seul domaine personnalisé est pris en charge par compte de stockage pour l’instant.</span><span class="sxs-lookup"><span data-stu-id="bef23-107">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="bef23-108">Pour effacer le domaine personnalisé existant, utilisez une chaîne vide pour la propriété de nom de domaine personnalisé.</span><span class="sxs-lookup"><span data-stu-id="bef23-108">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
+    summary: '<span data-ttu-id="45e2d-106">Domaine personnalisé attribué au compte de stockage par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="45e2d-106">Custom domain assigned to the storage account by the user.</span></span> <span data-ttu-id="45e2d-107">Nom est la source de l’enregistrement CNAME.</span><span class="sxs-lookup"><span data-stu-id="45e2d-107">Name is the CNAME source.</span></span> <span data-ttu-id="45e2d-108">Qu’un seul domaine personnalisé est pris en charge par compte de stockage pour l’instant.</span><span class="sxs-lookup"><span data-stu-id="45e2d-108">Only one custom domain is supported per storage account at this time.</span></span> <span data-ttu-id="45e2d-109">Pour effacer le domaine personnalisé existant, utilisez une chaîne vide pour la propriété de nom de domaine personnalisé.</span><span class="sxs-lookup"><span data-stu-id="45e2d-109">To clear the existing custom domain, use an empty string for the custom domain name property.</span></span>'
     optional: true
     syntax:
       content: 'customDomain?: CustomDomain'
       return:
         type:
           - '@azure/arm-storage.CustomDomain'
-    package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
-    name: enableAzureFilesAadIntegration
-    fullName: enableAzureFilesAadIntegration
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="bef23-109">Permet l’intégration de AAD de fichiers Azure pour SMB si affecte la valeur true.</span><span class="sxs-lookup"><span data-stu-id="bef23-109">Enables Azure Files AAD Integration for SMB if sets to true.</span></span>
-    optional: true
-    syntax:
-      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
-      return:
-        type:
-          - undefined | false | true
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
     name: enableHttpsTrafficOnly
@@ -71,7 +71,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="bef23-110">Autorise le trafic https uniquement au service de stockage si affecte la valeur true.</span><span class="sxs-lookup"><span data-stu-id="bef23-110">Allows https traffic only to storage service if sets to true.</span></span>
+    summary: <span data-ttu-id="45e2d-110">Autorise le trafic https uniquement au service de stockage si affecte la valeur true.</span><span class="sxs-lookup"><span data-stu-id="45e2d-110">Allows https traffic only to storage service if sets to true.</span></span>
     optional: true
     syntax:
       content: 'enableHttpsTrafficOnly?: undefined | false | true'
@@ -86,7 +86,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="bef23-111">Fournit les paramètres de chiffrement sur le compte.</span><span class="sxs-lookup"><span data-stu-id="bef23-111">Provides the encryption settings on the account.</span></span> <span data-ttu-id="bef23-112">Le paramètre par défaut n’est pas chiffré.</span><span class="sxs-lookup"><span data-stu-id="bef23-112">The default setting is unencrypted.</span></span>
+    summary: <span data-ttu-id="45e2d-111">Fournit les paramètres de chiffrement sur le compte.</span><span class="sxs-lookup"><span data-stu-id="45e2d-111">Provides the encryption settings on the account.</span></span> <span data-ttu-id="45e2d-112">Le paramètre par défaut n’est pas chiffré.</span><span class="sxs-lookup"><span data-stu-id="45e2d-112">The default setting is unencrypted.</span></span>
     optional: true
     syntax:
       content: 'encryption?: Encryption'
@@ -101,7 +101,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="bef23-113">L’identité de la ressource.</span><span class="sxs-lookup"><span data-stu-id="bef23-113">The identity of the resource.</span></span>
+    summary: <span data-ttu-id="45e2d-113">L’identité de la ressource.</span><span class="sxs-lookup"><span data-stu-id="45e2d-113">The identity of the resource.</span></span>
     optional: true
     syntax:
       content: 'identity?: Identity'
@@ -116,7 +116,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: "<span data-ttu-id=\"bef23-114\">facultatif.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-114\">Optional.</span></span> <span data-ttu-id=\"bef23-115\">Indique le type de compte de stockage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-115\">Indicates the type of storage account.</span></span> <span data-ttu-id=\"bef23-116\">Actuellement uniquement StorageV2 valeur prise en charge par le serveur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-116\">Currently only StorageV2 value supported by server.</span></span> <span data-ttu-id=\"bef23-117\">Les valeurs possibles incluent\_: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'</span><span class=\"sxs-lookup\"><span data-stu-id=\"bef23-117\">Possible values include: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'</span></span>"
+    summary: "<span data-ttu-id=\"45e2d-114\">facultatif.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-114\">Optional.</span></span> <span data-ttu-id=\"45e2d-115\">Indique le type de compte de stockage.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-115\">Indicates the type of storage account.</span></span> <span data-ttu-id=\"45e2d-116\">Actuellement uniquement StorageV2 valeur prise en charge par le serveur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-116\">Currently only StorageV2 value supported by server.</span></span> <span data-ttu-id=\"45e2d-117\">Les valeurs possibles incluent\_: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'</span><span class=\"sxs-lookup\"><span data-stu-id=\"45e2d-117\">Possible values include: 'Storage', 'StorageV2', 'BlobStorage', 'FileStorage', 'BlockBlobStorage'</span></span>"
     optional: true
     syntax:
       content: 'kind?: Kind'
@@ -131,7 +131,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="bef23-118">Ensemble de règles de réseau</span><span class="sxs-lookup"><span data-stu-id="bef23-118">Network rule set</span></span>
+    summary: <span data-ttu-id="45e2d-118">Ensemble de règles de réseau</span><span class="sxs-lookup"><span data-stu-id="45e2d-118">Network rule set</span></span>
     optional: true
     syntax:
       content: 'networkRuleSet?: NetworkRuleSet'
@@ -146,7 +146,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="bef23-119">Obtient ou définit le nom de référence (SKU).</span><span class="sxs-lookup"><span data-stu-id="bef23-119">Gets or sets the SKU name.</span></span> <span data-ttu-id="bef23-120">Notez que le nom de référence (SKU) ne peut pas être mise à jour Standard_ZRS, Premium_LRS ou Premium_ZRS, ni les comptes de ces noms de référence (SKU) peuvent être mis à jour pour toute autre valeur.</span><span class="sxs-lookup"><span data-stu-id="bef23-120">Note that the SKU name cannot be updated to Standard_ZRS, Premium_LRS or Premium_ZRS, nor can accounts of those SKU names be updated to any other value.</span></span>'
+    summary: '<span data-ttu-id="45e2d-119">Obtient ou définit le nom de référence (SKU).</span><span class="sxs-lookup"><span data-stu-id="45e2d-119">Gets or sets the SKU name.</span></span> <span data-ttu-id="45e2d-120">Notez que le nom de référence (SKU) ne peut pas être mise à jour Standard_ZRS, Premium_LRS ou Premium_ZRS, ni les comptes de ces noms de référence (SKU) peuvent être mis à jour pour toute autre valeur.</span><span class="sxs-lookup"><span data-stu-id="45e2d-120">Note that the SKU name cannot be updated to Standard_ZRS, Premium_LRS or Premium_ZRS, nor can accounts of those SKU names be updated to any other value.</span></span>'
     optional: true
     syntax:
       content: 'sku?: Sku'
@@ -161,7 +161,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="bef23-121">Obtient ou définit une liste de paires clé / valeur décrivant la ressource.</span><span class="sxs-lookup"><span data-stu-id="bef23-121">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="bef23-122">Ces balises peuvent servir à l’affichage et au regroupement des ressources (parmi tous les groupes de ressources).</span><span class="sxs-lookup"><span data-stu-id="bef23-122">These tags can be used in viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="bef23-123">Un maximum de 15 balises peut être fourni pour une ressource.</span><span class="sxs-lookup"><span data-stu-id="bef23-123">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="bef23-124">Chaque balise doit avoir une clé non supérieure dans la longueur de 128 caractères et une valeur non supérieure dans la longueur de 256 caractères.</span><span class="sxs-lookup"><span data-stu-id="bef23-124">Each tag must have a key no greater in length than 128 characters and a value no greater in length than 256 characters.</span></span>
+    summary: <span data-ttu-id="45e2d-121">Obtient ou définit une liste de paires clé / valeur décrivant la ressource.</span><span class="sxs-lookup"><span data-stu-id="45e2d-121">Gets or sets a list of key value pairs that describe the resource.</span></span> <span data-ttu-id="45e2d-122">Ces balises peuvent servir à l’affichage et au regroupement des ressources (parmi tous les groupes de ressources).</span><span class="sxs-lookup"><span data-stu-id="45e2d-122">These tags can be used in viewing and grouping this resource (across resource groups).</span></span> <span data-ttu-id="45e2d-123">Un maximum de 15 balises peut être fourni pour une ressource.</span><span class="sxs-lookup"><span data-stu-id="45e2d-123">A maximum of 15 tags can be provided for a resource.</span></span> <span data-ttu-id="45e2d-124">Chaque balise doit avoir une clé non supérieure dans la longueur de 128 caractères et une valeur non supérieure dans la longueur de 256 caractères.</span><span class="sxs-lookup"><span data-stu-id="45e2d-124">Each tag must have a key no greater in length than 128 characters and a value no greater in length than 256 characters.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -176,6 +176,12 @@ references:
       - name: AccessTier
         fullName: AccessTier
         uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
+    name: AzureFilesIdentityBasedAuthentication
+    spec.typeScript:
+      - name: AzureFilesIdentityBasedAuthentication
+        fullName: AzureFilesIdentityBasedAuthentication
+        uid: '@azure/arm-storage.AzureFilesIdentityBasedAuthentication'
   - uid: '@azure/arm-storage.CustomDomain'
     name: CustomDomain
     spec.typeScript:
