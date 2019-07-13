@@ -1,0 +1,257 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - '@azure/servicefabric.HealthEvent.description'
+      - '@azure/servicefabric.HealthEvent.healthState'
+      - '@azure/servicefabric.HealthEvent.isExpired'
+      - '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+      - '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+      - '@azure/servicefabric.HealthEvent.property'
+      - '@azure/servicefabric.HealthEvent.removeWhenExpired'
+      - '@azure/servicefabric.HealthEvent.sequenceNumber'
+      - '@azure/servicefabric.HealthEvent.sourceId'
+      - '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+      - '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente les informations de contrôle d’intégrité signalées sur une entité d’intégrité, tels que le cluster, application ou nœud, avec des métadonnées supplémentaires ajoutées par le Gestionnaire de contrôle d’intégrité.'
+    extends:
+      name: '@azure/servicefabric.HealthInformation'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Description des informations d’intégrité. Il s’agit de texte libre utilisé pour ajouter des informations sur le rapport lisibles par l’homme.
+      La longueur de chaîne maximale de la description est de 4 096 caractères.
+      Si la chaîne fournie est plus longue, elle est automatiquement tronquée.
+      Si elle est tronquée, les derniers caractères de la description contiennent un marqueur « [Tronqué] », et la taille totale de la chaîne est de 4 096 caractères.
+      La présence du marqueur indique aux utilisateurs qu’une troncation a été effectuée.
+      Notez que si elle est tronquée, la description a moins que les 4 096 caractères de la chaîne d’origine.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.isExpired'
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Retourne la valeur true si l’événement d’intégrité est expiré, sinon false.'
+    optional: true
+    syntax:
+      content: 'isExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastErrorTransitionAt'
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si l’état d’intégrité actuel est «\_Erreur\_», cette propriété retourne l’heure à laquelle le rapport d’intégrité a été signalé initialement avec «\_Erreur\_». Pour la création de rapports réguliers, de nombreux rapports avec le même état peuvent avoir été générées Toutefois, cette propriété retourne uniquement la date et l’heure à la première 'erreur «\_rapport d’intégrité a été reçu.\nSi l’état d’intégrité actuel est «\_Ok\_» ou «\_Avertissement\_», retourne la date et l’heure à laquelle l’état d’intégrité a été dernière dans «\_Error\_», avant de passer à un état différent.\n\nSi l’état d’intégrité n’a jamais été «\_Error\_», la valeur sera zéro date-heure.\n"
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastModifiedUtcTimestamp'
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La date et l’heure lorsque le rapport d’intégrité a été modifié par le magasin d’intégrité.
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastOkTransitionAt'
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si l’état d’intégrité actuel est «\_Ok\_», cette propriété retourne l’heure à laquelle le rapport d’intégrité a été signalé initialement avec «\_Ok\_».\nPour la création de rapports réguliers, de nombreux rapports avec le même état peuvent avoir été générées.\nCette propriété retourne la date et l’heure à laquelle le premier rapport d’intégrité «\_Ok\_» a été reçu.\nSi l’état d’intégrité actuel est «\_Error\_» ou «\_Avertissement\_», retourne la date et l’heure à laquelle l’état d’intégrité a été dernière dans «\_Ok\_», avant de passer à un état différent.\n\nSi l’état d’intégrité n’a jamais été «\_Ok\_», la valeur sera zéro date-heure.\n"
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.lastWarningTransitionAt'
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Si l’état d’intégrité actuel est «\_avertissement\_», cette propriété retourne l’heure à laquelle le rapport d’intégrité a été signalé initialement avec «\_Avertissement\_». Pour la création de rapports réguliers, de nombreux rapports avec le même état peuvent avoir été générées Toutefois, cette propriété retourne uniquement la date et l’heure sur le premier rapport d’intégrité «\_Avertissement\_» a été reçu.\nSi l’état d’intégrité actuel est «\_Ok\_» ou «\_Erreur\_», retourne la date et l’heure à laquelle l’état d’intégrité a été dernière dans «\_Avertissement\_», avant de passer à un état différent.\n\nSi l’état d’intégrité a été jamais «\_avertissement\_», la valeur sera zéro date-heure.\n"
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Propriété des informations d’intégrité. Une entité peut avoir des rapports d’intégrité pour différentes propriétés.
+      La propriété est une chaîne et non une énumération fixe pour offrir au rapporteur la possibilité de catégoriser la condition d’état qui déclenche le rapport.
+      Par exemple, un rapporteur avec l’ID source (SourceId) « LocalWatchdog » peut surveiller l’état du disque disponible sur un nœud. Il peut donc signaler la propriété « AvailableDisk » sur ce nœud.
+      Le même rapporteur peut surveiller la connectivité du nœud. Il peut donc signaler une propriété « Connectivity » sur le même nœud.
+      Dans le magasin d’intégrité, ces rapports sont traités comme des événements d’intégrité distincts pour le nœud spécifié.
+      Avec l’ID source (SourceId), la propriété identifie de façon unique les informations d’intégrité.
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Valeur qui indique si le rapport est supprimé du magasin d’intégrité quand il expire.
+      Si la valeur définie est true, le rapport est supprimé du magasin d’intégrité après son expiration.
+      Si la valeur définie est false, le rapport est traité comme une erreur quand il expire. La valeur de cette propriété est false par défaut.
+      Quand les clients créent un rapport régulièrement, ils doivent définir RemoveWhenExpired sur false (valeur par défaut).
+      De cette façon, si le rapporteur a des problèmes (par exemple blocage) et ne peut pas signaler, l’entité est évaluée au erreur lorsque le rapport d’intégrité arrive à expiration.
+      L’entité est marquée comme étant dans l’état d’intégrité Erreur.
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Numéro de séquence de ce rapport d’intégrité sous forme de chaîne numérique.
+      Le numéro de séquence de rapport est utilisé par le magasin d’intégrité pour détecter les rapports obsolètes.
+      S’il n’est pas spécifié, un numéro de séquence est généré automatiquement par le client d’intégrité quand un rapport est ajouté.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom source qui identifie le composant client/espion/système qui a généré les informations d’intégrité.
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.sourceUtcTimestamp'
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Date et heure à laquelle le rapport d’intégrité a été envoyé par la source.
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthEvent.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Durée pendant laquelle ce rapport d’intégrité est valide. Ce champ utilise le format ISO8601 pour spécifier la durée.
+      Quand les clients créent régulièrement des rapports, ils doivent les envoyer avec une fréquence supérieure à la durée de vie.
+      Si les clients créent des rapports lors d’une transition, ils peuvent définir la durée de vie sur Infinite (illimitée).
+      Quand la durée de vie expire, l’événement d’intégrité qui contient les informations d’intégrité est supprimé du magasin d’intégrité si RemoveWhenExpired est true, ou évalué comme erreur si RemoveWhenExpired est false.
+      Si cet argument n’est pas spécifié, la valeur de durée de vie est par défaut Infinite (illimitée).
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: '@azure/servicefabric.HealthInformation'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

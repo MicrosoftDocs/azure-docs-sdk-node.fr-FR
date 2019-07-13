@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList'
+    name: PagedApplicationTypeInfoList
+    fullName: PagedApplicationTypeInfoList
+    children:
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: Types de la liste des applications qui sont mis en service ou en cours d’approvisionnement dans le cluster. La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message. Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+      S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des informations de type d’application.
+    optional: true
+    syntax:
+      content: 'items?: ApplicationTypeInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeInfo[]'
+    name: 'ApplicationTypeInfo[]'
+    spec.typeScript:
+      - name: ApplicationTypeInfo
+        fullName: ApplicationTypeInfo
+        uid: '@azure/servicefabric.ApplicationTypeInfo'
+      - name: '[]'
+        fullName: '[]'

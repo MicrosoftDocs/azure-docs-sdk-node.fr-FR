@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription'
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit l’opération pour inscrire ou configurer un type d’application à l’aide d’un package d’application téléchargé vers le magasin d’images Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le genre d’action qui doit être prise pour nettoyer le package d’application après l’approvisionnement réussi. Les valeurs possibles incluent\_: 'Invalid', 'Default', 'Automatic', 'Manual'"
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: ApplicationPackageCleanupPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Chemin d’accès relatif du package d’application dans le magasin d’images spécifié lors de l’opération de chargement préalable.
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indique si l’approvisionnement doit se faire de façon asynchrone. Lorsque la valeur est définie sur true, l’opération d’approvisionnement s’exécute quand la requête est acceptée par le système et l’opération d’approvisionnement se poursuit sans délai d’expiration. La valeur par défaut est false. Pour les packages d’application volumineux, nous vous recommandons de définir la valeur sur true.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "ImageStorePath"'
+      return:
+        type:
+          - '"ImageStorePath"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    name: ApplicationPackageCleanupPolicy
+    spec.typeScript:
+      - name: ApplicationPackageCleanupPolicy
+        fullName: ApplicationPackageCleanupPolicy
+        uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'

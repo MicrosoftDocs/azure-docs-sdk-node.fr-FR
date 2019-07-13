@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthState'
+    name: ReplicaHealthState
+    fullName: ReplicaHealthState
+    children:
+      - '@azure/servicefabric.ReplicaHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.ReplicaHealthState.partitionId'
+      - '@azure/servicefabric.ReplicaHealthState.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Représente une classe de base pour le réplica de service avec état ou état d’intégrité de l’instance service sans état.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’ID de la partition à laquelle appartient ce réplica.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'serviceKind: "ReplicaHealthState"'
+      return:
+        type:
+          - '"ReplicaHealthState"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

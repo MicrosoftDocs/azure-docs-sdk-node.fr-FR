@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation'
+    name: ServiceHealthEvaluation
+    fullName: ServiceHealthEvaluation
+    children:
+      - '@azure/servicefabric.ServiceHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.ServiceHealthEvaluation.description'
+      - '@azure/servicefabric.ServiceHealthEvaluation.kind'
+      - '@azure/servicefabric.ServiceHealthEvaluation.serviceName'
+      - '@azure/servicefabric.ServiceHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente l’évaluation d’intégrité pour un service, contenant des informations sur les données et l’algorithme utilisé par le magasin d’intégrité pour évaluer l’intégrité. L’évaluation est retournée uniquement lorsque l’état d’intégrité agrégé est l’erreur ou avertissement.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Description de l’évaluation d’intégrité, qui représente un résumé du processus d’évaluation.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "Service"'
+      return:
+        type:
+          - '"Service"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du service dont l’évaluation d’intégrité est décrite par cet objet.
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé actuel du service.
+      Les types d’évaluations non intègres peuvent être PartitionsHealthEvaluation ou EventHealthEvaluation.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

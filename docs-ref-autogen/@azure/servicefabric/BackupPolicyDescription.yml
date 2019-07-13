@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BackupPolicyDescription'
+    name: BackupPolicyDescription
+    fullName: BackupPolicyDescription
+    children:
+      - '@azure/servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss'
+      - '@azure/servicefabric.BackupPolicyDescription.maxIncrementalBackups'
+      - '@azure/servicefabric.BackupPolicyDescription.name'
+      - '@azure/servicefabric.BackupPolicyDescription.retentionPolicy'
+      - '@azure/servicefabric.BackupPolicyDescription.schedule'
+      - '@azure/servicefabric.BackupPolicyDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: Décrit une stratégie de sauvegarde pour la configuration de la sauvegarde périodique.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss'
+    name: autoRestoreOnDataLoss
+    fullName: autoRestoreOnDataLoss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: spécifie s’il faut déclencher la restauration automatiquement à l’aide de la dernière sauvegarde disponible si la partition subit une perte de données.
+    syntax:
+      content: 'autoRestoreOnDataLoss: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.maxIncrementalBackups'
+    name: maxIncrementalBackups
+    fullName: maxIncrementalBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      définit le nombre maximal de sauvegardes incrémentielles à effectuer entre deux sauvegardes complètes. Il s’agit simplement de la limite supérieure. Une sauvegarde complète peut-être effectuée avant que le nombre spécifié de sauvegardes incrémentielles soit atteint dans l’une des situations suivantes
+      - Le réplica n’a jamais fait une sauvegarde complète dans la mesure où il est devenu principal,
+      - Certains enregistrements de journal dans la mesure où la dernière sauvegarde a été tronquée, ou
+      - Le réplica a dépassé la limite MaxAccumulatedBackupLogSizeInMB.
+    syntax:
+      content: 'maxIncrementalBackups: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom unique identifiant cette stratégie de sauvegarde.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.retentionPolicy'
+    name: retentionPolicy
+    fullName: retentionPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Décrit la stratégie pour conserver les sauvegardes dans le stockage.
+    optional: true
+    syntax:
+      content: 'retentionPolicy?: RetentionPolicyDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.schedule'
+    name: schedule
+    fullName: schedule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Décrit les paramètres de planification de sauvegarde.
+    syntax:
+      content: 'schedule: BackupScheduleDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupScheduleDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BackupPolicyDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Décrit les détails du stockage de sauvegarde où stocker les sauvegardes périodiques.
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+    name: RetentionPolicyDescriptionUnion
+    spec.typeScript:
+      - name: RetentionPolicyDescriptionUnion
+        fullName: RetentionPolicyDescriptionUnion
+        uid: '@azure/servicefabric.RetentionPolicyDescriptionUnion'
+  - uid: '@azure/servicefabric.BackupScheduleDescriptionUnion'
+    name: BackupScheduleDescriptionUnion
+    spec.typeScript:
+      - name: BackupScheduleDescriptionUnion
+        fullName: BackupScheduleDescriptionUnion
+        uid: '@azure/servicefabric.BackupScheduleDescriptionUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'

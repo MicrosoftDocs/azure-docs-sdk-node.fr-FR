@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    children:
+      - '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+      - '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+      - '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    langs:
+      - typeScript
+    type: interface
+    summary: Définit une stratégie de contrôle d’intégrité utilisée pour évaluer l’intégrité d’une application ou une de ses entités enfants.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Indique si les avertissements sont traités avec le même niveau de gravité que les erreurs. Valeur par défaut\_: false."
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+    name: defaultServiceTypeHealthPolicy
+    fullName: defaultServiceTypeHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La stratégie d’intégrité utilisée par défaut pour évaluer l’intégrité d’un type de service.
+    optional: true
+    syntax:
+      content: 'defaultServiceTypeHealthPolicy?: ServiceTypeHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+    name: maxPercentUnhealthyDeployedApplications
+    fullName: maxPercentUnhealthyDeployedApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Pourcentage maximal autorisé d’applications déployées non saines. Valeurs autorisées sont des valeurs d’octets à partir de zéro à 100.
+      Le pourcentage représente le pourcentage maximum toléré d’applications déployées pouvant être défectueux avant que l’application est considérée comme erreur.
+      Elle est calculée en divisant le nombre d’applications déployées défectueuses par le nombre de nœuds où l’application est actuellement déployée sur le cluster.
+      Le calcul est arrondi pour tolérer une défaillance sur un petit nombre de nœuds. Le pourcentage par défaut est zéro. Valeur par défaut : 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyDeployedApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    name: serviceTypeHealthPolicyMap
+    fullName: serviceTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'La carte avec la stratégie de contrôle d’intégrité de type de service par nom de type de service. Par défaut, le mappage est vide.'
+    optional: true
+    syntax:
+      content: 'serviceTypeHealthPolicyMap?: ServiceTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicy
+        fullName: ServiceTypeHealthPolicy
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    name: 'ServiceTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicyMapItem
+        fullName: ServiceTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

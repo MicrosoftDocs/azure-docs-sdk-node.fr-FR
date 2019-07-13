@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosEventsSegment'
+    name: ChaosEventsSegment
+    fullName: ChaosEventsSegment
+    children:
+      - '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+      - '@azure/servicefabric.ChaosEventsSegment.history'
+    langs:
+      - typeScript
+    type: interface
+    summary: Contient la liste des événements de Chaos et de jeton de continuation pour obtenir le segment suivant.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+      S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des événements Chaos répondant aux critères fournis par l’utilisateur.
+    optional: true
+    syntax:
+      content: 'history?: ChaosEventWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosEventWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosEventWrapper[]'
+    name: 'ChaosEventWrapper[]'
+    spec.typeScript:
+      - name: ChaosEventWrapper
+        fullName: ChaosEventWrapper
+        uid: '@azure/servicefabric.ChaosEventWrapper'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationEvent'
+    name: ApplicationEvent
+    fullName: ApplicationEvent
+    children:
+      - '@azure/servicefabric.ApplicationEvent.applicationId'
+      - '@azure/servicefabric.ApplicationEvent.category'
+      - '@azure/servicefabric.ApplicationEvent.eventInstanceId'
+      - '@azure/servicefabric.ApplicationEvent.hasCorrelatedEvents'
+      - '@azure/servicefabric.ApplicationEvent.kind'
+      - '@azure/servicefabric.ApplicationEvent.timeStamp'
+    langs:
+      - typeScript
+    type: interface
+    summary: Représente la base pour tous les événements d’Application.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.applicationId'
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Identité de l’application. Il s’agit d’une représentation encodée de nom de l’application.\nCela est utilisé dans les API REST pour identifier la ressource d’application.\nDepuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères. Par exemple, si le nom de l’application est «\_fabric\_: / myapp/app1\_», son identité d’application est «\_myapp\\~app1\_» dans 6.0 et supérieures et «\_mon_app/app1\_» dans les versions précédentes."
+    syntax:
+      content: 'applicationId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: La catégorie d’événement.
+    optional: true
+    syntax:
+      content: 'category?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.eventInstanceId'
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’identificateur pour l’instance FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.hasCorrelatedEvents'
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Montre contient déjà des événements connexes disponibles.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "ApplicationEvent"'
+      return:
+        type:
+          - '"ApplicationEvent"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationEvent.timeStamp'
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: L’événement de temps a été enregistré.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

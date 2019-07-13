@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation'
+    name: DeployedApplicationsHealthEvaluation
+    fullName: DeployedApplicationsHealthEvaluation
+    children:
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.description'
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.kind'
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.maxPercentUnhealthyDeployedApplications'
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.totalCount'
+      - '@azure/servicefabric.DeployedApplicationsHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Représente l’évaluation d’intégrité pour les applications déployées, contenant des évaluations d’intégrité pour chaque application déployée non intègre qui affectés actuel état d’intégrité agrégé.
+      Peut être retourné lorsque l’évaluation de l’intégrité des applications et l’état d’intégrité agrégé est erreur ou avertissement.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Description de l’évaluation d’intégrité, qui représente un résumé du processus d’évaluation.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "DeployedApplications"'
+      return:
+        type:
+          - '"DeployedApplications"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.maxPercentUnhealthyDeployedApplications'
+    name: maxPercentUnhealthyDeployedApplications
+    fullName: maxPercentUnhealthyDeployedApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Pourcentage maximum autorisé de défectueux déployé des applications à partir de la ApplicationHealthPolicy.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyDeployedApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre total d’applications déployées de l’application dans le magasin d’intégrité.
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationsHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé. Inclut tous les défectueuse DeployedApplicationHealthEvaluation des conséquences sur l’intégrité agrégée.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

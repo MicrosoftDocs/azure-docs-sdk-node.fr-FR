@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation'
+    name: DeployedServicePackageHealthEvaluation
+    fullName: DeployedServicePackageHealthEvaluation
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.applicationName'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.description'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.kind'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.nodeName'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.serviceManifestName'
+      - '@azure/servicefabric.DeployedServicePackageHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente l’évaluation d’intégrité pour un package de service déployé, contenant des informations sur les données et l’algorithme utilisé par le magasin d’intégrité pour évaluer l’intégrité. L’évaluation est retournée uniquement lorsque l’état d’intégrité agrégé est l’erreur ou avertissement.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Description de l’évaluation d’intégrité, qui représente un résumé du processus d’évaluation.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "DeployedServicePackage"'
+      return:
+        type:
+          - '"DeployedServicePackage"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.nodeName'
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom d’un nœud Service Fabric.
+    optional: true
+    syntax:
+      content: 'nodeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du manifeste de service.
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé actuel. Le type d’évaluations non intègres peut être EventHealthEvaluation.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

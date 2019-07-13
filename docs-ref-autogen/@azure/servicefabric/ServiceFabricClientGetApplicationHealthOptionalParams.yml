@@ -17,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Paramètres facultatifs.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -58,7 +58,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer, par état d’intégrité, les objets d’état d’intégrité des applications déployées qui sont retournés dans le résultat de la requête d’intégrité de l’application.\nLes valeurs possibles de ce paramètre incluent la valeur entière de l’un des états d’intégrité suivants. Seules les applications déployées qui correspondent au filtre sont retournées.\nToutes les applications déployées sont utilisées pour évaluer l’état d’intégrité agrégé. Si cet argument n’est pas spécifié, toutes les entrées sont retournées.\nLes valeurs d’état correspondent à une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit.\nPar exemple, si la valeur indiquée est 6, l’état d’intégrité des applications déployées dont la valeur HealthState est OK (2) et Warning (4) est retourné.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -73,7 +73,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer la collection d’objets HealthEvent retournés en fonction de leur état d’intégrité.\nLes valeurs possibles de ce paramètre incluent la valeur entière de l’un des états d’intégrité suivants.\nSeuls les événements qui correspondent au filtre sont renvoyés. Tous les événements sont utilisés pour évaluer l’état d’intégrité agrégé.\nSi cet argument n’est pas spécifié, toutes les entrées sont retournées. Les valeurs d’état correspondent à une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit.\nPar exemple, si la valeur indiquée est\_6, tous les événements dont la valeur HealthState est OK (2) et Warning (4) sont retournés.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -88,7 +88,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Indique si les statistiques d’intégrité doivent être retournées dans le cadre du résultat de la requête. False par défaut.\nLes statistiques affichent le nombre d’entités enfants dont l’état d’intégrité est OK, Warning et Error.\nValeur par défaut\_: false."
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -133,7 +133,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer, par état d’intégrité, les objets d’état d’intégrité des services qui sont retournés dans le résultat de la requête d’intégrité des services.\nLes valeurs possibles de ce paramètre incluent la valeur entière de l’un des états d’intégrité suivants.\nSeuls les services qui correspondent au filtre sont retournés. Tous les services sont utilisés pour évaluer l’état d’intégrité agrégé.\nSi cet argument n’est pas spécifié, toutes les entrées sont retournées. Les valeurs d’état correspondent à une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit. Par exemple, si la valeur indiquée est 6, l’état d’intégrité des services dont la valeur HealthState est OK (2) et Warning (4) est retourné.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -163,7 +163,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Le délai d’attente de serveur pour effectuer l’opération en secondes. Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée. La valeur par défaut pour ce paramètre est de 60 secondes. Valeur par défaut : 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus'
+    name: SecondaryIdleReplicatorStatus
+    fullName: SecondaryIdleReplicatorStatus
+    children:
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+      - '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: État du réplicateur secondaire lorsqu’elle est en mode inactif et est en cours de génération par le réplica principal.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.copyQueueStatus'
+    name: copyQueueStatus
+    fullName: copyQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Plus d’informations sur la file d’attente de copie sur le réplicateur secondaire.
+    optional: true
+    syntax:
+      content: 'copyQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.isInBuild'
+    name: isInBuild
+    fullName: isInBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valeur qui indique si le réplica est en cours de génération.
+    optional: true
+    syntax:
+      content: 'isInBuild?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "IdleSecondary"'
+      return:
+        type:
+          - '"IdleSecondary"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastAcknowledgementSentTimeUtc'
+    name: lastAcknowledgementSentTimeUtc
+    fullName: lastAcknowledgementSentTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le dernier horodatage (UTC) à laquelle un accusé de réception a été envoyé au réplicateur principal.
+      UTC 0 représente une valeur non valide, indiquant qu’il n’était jamais envoyer un message d’accusé de réception.
+    optional: true
+    syntax:
+      content: 'lastAcknowledgementSentTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastCopyOperationReceivedTimeUtc'
+    name: lastCopyOperationReceivedTimeUtc
+    fullName: lastCopyOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le dernier horodatage (UTC) à laquelle une opération de copie a été reçue depuis le serveur principal.
+      UTC 0 représente une valeur non valide, indiquant qu’un message d’opération de copie a été reçu jamais.
+    optional: true
+    syntax:
+      content: 'lastCopyOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.lastReplicationOperationReceivedTimeUtc'
+    name: lastReplicationOperationReceivedTimeUtc
+    fullName: lastReplicationOperationReceivedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le dernier horodatage (UTC) à laquelle une opération de réplication a été reçue depuis le serveur principal.
+      UTC 0 représente une valeur non valide, indiquant qu’un message d’opération de réplication a été reçu jamais.
+    optional: true
+    syntax:
+      content: 'lastReplicationOperationReceivedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SecondaryIdleReplicatorStatus.replicationQueueStatus'
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Plus d’informations sur la file d’attente de réplication sur le réplicateur secondaire.
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus'
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: '@azure/servicefabric.ReplicatorQueueStatus'

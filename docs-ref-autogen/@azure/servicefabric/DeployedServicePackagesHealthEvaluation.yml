@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation'
+    name: DeployedServicePackagesHealthEvaluation
+    fullName: DeployedServicePackagesHealthEvaluation
+    children:
+      - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.description'
+      - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.kind'
+      - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.totalCount'
+      - '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Représente l’évaluation d’intégrité pour les packages de service déployé, contenant des évaluations d’intégrité pour chaque package de services déployés non intègres qui affectés actuel état d’intégrité agrégé. Peut être retourné lorsque l’évaluation d’intégrité de l’application déployée et l’état d’intégrité agrégé est erreur ou avertissement.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Description de l’évaluation d’intégrité, qui représente un résumé du processus d’évaluation.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "DeployedServicePackages"'
+      return:
+        type:
+          - '"DeployedServicePackages"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nombre total de packages de services déployés de l’application déployée dans le magasin d’intégrité.
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des évaluations non intègres qui a conduit à l’état d’intégrité agrégé. Inclut tous les défectueuse DeployedServicePackageHealthEvaluation des conséquences sur l’intégrité agrégée.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

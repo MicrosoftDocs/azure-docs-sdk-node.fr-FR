@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationInfo'
+    name: DeployedApplicationInfo
+    fullName: DeployedApplicationInfo
+    children:
+      - '@azure/servicefabric.DeployedApplicationInfo.healthState'
+      - '@azure/servicefabric.DeployedApplicationInfo.id'
+      - '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.name'
+      - '@azure/servicefabric.DeployedApplicationInfo.status'
+      - '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.typeName'
+      - '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informations sur l’application déployée sur le nœud.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Identité de l’application. Il s’agit d’une représentation encodée de nom de l’application.\nCela est utilisé dans les API REST pour identifier la ressource d’application.\nDepuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères. Par exemple, si le nom de l’application est «\_fabric\_: / myapp/app1\_», son identité d’application est «\_myapp\\~app1\_» dans 6.0 et supérieures et «\_mon_app/app1\_» dans les versions précédentes."
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+    name: logDirectory
+    fullName: logDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le répertoire des journaux de l’application sur le nœud. Le répertoire des journaux peut être utilisé pour stocker les journaux de l’application.
+    optional: true
+    syntax:
+      content: 'logDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état de l’application déployée sur le nœud. Voici les valeurs possibles.\nLes valeurs possibles incluent\_: 'Invalid', 'Downloading', 'Activating', 'Active', 'Upgrading', 'Deactivating'"
+    optional: true
+    syntax:
+      content: 'status?: DeployedApplicationStatus'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+    name: tempDirectory
+    fullName: tempDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le répertoire temp de l’application sur le nœud. Les packages de code appartenant à l’application sont dupliqués avec ce répertoire à définir en tant que leur répertoire temporaire.
+    optional: true
+    syntax:
+      content: 'tempDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom de type application tel que défini dans le manifeste d’application.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    name: workDirectory
+    fullName: workDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le répertoire de travail de l’application sur le nœud. Le répertoire de travail peut être utilisé pour stocker les données d’application.
+    optional: true
+    syntax:
+      content: 'workDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.DeployedApplicationStatus'
+    name: DeployedApplicationStatus
+    spec.typeScript:
+      - name: DeployedApplicationStatus
+        fullName: DeployedApplicationStatus
+        uid: '@azure/servicefabric.DeployedApplicationStatus'

@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+    name: ApplicationHealthStateFilter
+    fullName: ApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Définit les critères de correspondance pour déterminer si une application doit être incluse dans le segment d’intégrité de cluster.
+      Un filtre peut mettre en correspondance zéro, une ou plusieurs applications, en fonction de ses propriétés.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+    name: applicationNameFilter
+    fullName: applicationNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le nom de l’application qui correspond au filtre, comme un uri de fabric. Le filtre est appliqué uniquement à l’application spécifiée, si elle existe.
+      Si l’application n’existe pas, aucune application n’est retournée dans le bloc de contrôle d’intégrité de cluster en fonction de ce filtre.
+      Si l’application existe, il est inclus dans le segment d’intégrité de cluster si elle respecte les autres propriétés de filtre.
+      Si non spécifié, toutes les applications sont mises en correspondance par rapport aux autres membres de filtre, comme filtre d’état d’intégrité.
+    optional: true
+    syntax:
+      content: 'applicationNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+    name: applicationTypeNameFilter
+    fullName: applicationTypeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le nom du type d’application qui correspond au filtre.
+      Si spécifié, le filtre est appliqué uniquement aux applications du type d’application sélectionné, le cas échéant.
+      Si aucune application du type d’application spécifié n’existe, aucune application n’est retournée dans le bloc de contrôle d’intégrité de cluster en fonction de ce filtre.
+      Chaque application du type d’application spécifié est incluse dans le segment d’intégrité de cluster si elle respecte les autres propriétés de filtre.
+      Si non spécifié, toutes les applications sont mises en correspondance par rapport aux autres membres de filtre, comme filtre d’état d’intégrité.
+    optional: true
+    syntax:
+      content: 'applicationTypeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+    name: deployedApplicationFilters
+    fullName: deployedApplicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Définit une liste de filtres qui spécifient les applications déployées à inclure dans l’intégrité du cluster retourné segment en tant qu’enfants de l’application. Les applications déployées sont retournées uniquement si l’application parent correspond à un filtre.
+      Si la liste est vide, aucune application déployée n’est retournées. Toutes les applications déployées sont utilisées pour évaluer l’état de santé application agrégée de parent, quel que soit les filtres d’entrée.
+      Le filtre d’application peut spécifier plusieurs filtres d’application déployée.
+      Par exemple, il peut spécifier un filtre pour retourner toutes les applications déployées avec l’état d’intégrité erreur et un autre filtre pour toujours inclure une application déployée sur un nœud spécifié.
+    optional: true
+    syntax:
+      content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le filtre pour l’état d’intégrité des applications. Il permet de sélectionner les applications s’ils correspondent les États d’intégrité de votre choix.\nLes valeurs possibles sont la valeur entière d’un des États d’intégrité suivants. Seules les applications qui correspondent au filtre sont retournées. Toutes les applications sont utilisées pour évaluer l’état d’intégrité de cluster agrégée.\nSi non spécifié, valeur par défaut est None, sauf si le nom de l’application ou le nom de type d’application sont spécifiés. Si le filtre a la valeur par défaut et le nom de l’application est spécifié, l’application correspondante est retournée.\nLes valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur «\_OR\_» au niveau du bit.\nPar exemple, si la valeur indiquée est 6, elle correspond à des applications avec la valeur HealthState est OK (2) et Warning (4).\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    name: serviceFilters
+    fullName: serviceFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Définit une liste de filtres qui spécifient les services à inclure dans l’intégrité du cluster retourné segment en tant qu’enfants de l’application. Les services sont retournés uniquement si l’application parent correspond à un filtre.
+      Si la liste est vide, aucun service n’est retournées. Tous les services sont utilisés pour évaluer l’état de santé application agrégée de parent, quel que soit les filtres d’entrée.
+      Le filtre d’application peut spécifier plusieurs filtres de service.
+      Par exemple, il peut spécifier un filtre pour retourner tous les services avec état d’intégrité erreur et un autre filtre pour toujours inclure un service identifié par son nom de service.
+    optional: true
+    syntax:
+      content: 'serviceFilters?: ServiceHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    name: 'DeployedApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateFilter
+        fullName: DeployedApplicationHealthStateFilter
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter[]'
+    name: 'ServiceHealthStateFilter[]'
+    spec.typeScript:
+      - name: ServiceHealthStateFilter
+        fullName: ServiceHealthStateFilter
+        uid: '@azure/servicefabric.ServiceHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

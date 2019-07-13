@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription'
+    name: RestartDeployedCodePackageDescription
+    fullName: RestartDeployedCodePackageDescription
+    children:
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+      - '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Définit la description pour redémarrer un package de code déployé sur le nœud Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId'
+    name: codePackageInstanceId
+    fullName: codePackageInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      L’ID d’instance pour le point d’entrée en cours d’exécution. Pour une entrée de programme d’installation de package de code point (si spécifié) s’exécute en premier et après le principal point d’entrée est démarré.
+      Chaque exécutable du point d’entrée temps est exécutée, son ID d’instance change. Si 0 est passée en tant que l’ID d’instance de package code, l’API redémarre le package de code avec le ID d’instance qu’il est en cours d’exécution.
+      Si une instance ID autres que 0 est passée, l’API va redémarrer le package de code uniquement si l’ID d’Instance actuel correspond à l’ID d’instance transmis
+      Notez que, en passant l’ID d’instance exacte (pas 0) dans l’API est plus sûre, car si garantit au plus un redémarrage du package de code.
+    syntax:
+      content: 'codePackageInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.codePackageName'
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom du package de code défini dans le manifeste de service.
+    syntax:
+      content: 'codePackageName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.serviceManifestName'
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nom du manifeste de service spécifié de ce package de code.
+    syntax:
+      content: 'serviceManifestName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId'
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "ActivationId d’un package de service déployé. Si ServicePackageActivationMode spécifiée au moment de la création du service est «\_SharedProcess\_» (ou s’il n’est pas spécifié, auquel cas elle par défaut est «\_SharedProcess\_»), la valeur de ServicePackageActivationId est toujours une chaîne vide."
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
