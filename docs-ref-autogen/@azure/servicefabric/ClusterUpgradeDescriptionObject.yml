@@ -1,0 +1,254 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject'
+    name: ClusterUpgradeDescriptionObject
+    fullName: ClusterUpgradeDescriptionObject
+    children:
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.applicationHealthPolicyMap'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.clusterHealthPolicy'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.clusterUpgradeHealthPolicy'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.codeVersion'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.configVersion'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.enableDeltaHealthEvaluation'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.forceRestart'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.monitoringPolicy'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.rollingUpgradeMode'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.sortOrder'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.upgradeKind'
+      - '@azure/servicefabric.ClusterUpgradeDescriptionObject.upgradeReplicaSetCheckTimeoutInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="2a909-101">Représente une mise à niveau du cluster service Fabric</span><span class="sxs-lookup"><span data-stu-id="2a909-101">Represents a ServiceFabric cluster upgrade</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.applicationHealthPolicyMap'
+    name: applicationHealthPolicyMap
+    fullName: applicationHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="2a909-102">Définit un mappage qui contient les stratégies de contrôle d’intégrité d’application spécifiques pour différentes applications.</span><span class="sxs-lookup"><span data-stu-id="2a909-102">Defines a map that contains specific application health policies for different applications.</span></span>
+      <span data-ttu-id="2a909-103">Chaque entrée spécifie en tant que clé le nom de l’application et en tant que valeur qu'un ApplicationHealthPolicy utilisée pour évaluer l’intégrité de l’application.</span><span class="sxs-lookup"><span data-stu-id="2a909-103">Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.</span></span>
+      <span data-ttu-id="2a909-104">Si une application n’est pas spécifiée dans le mappage, l’évaluation de l’intégrité d’application utilise le ApplicationHealthPolicy trouvé dans son manifeste d’application ou de la stratégie de contrôle d’intégrité d’application par défaut (si aucune stratégie d’intégrité n’est défini dans le manifeste).</span><span class="sxs-lookup"><span data-stu-id="2a909-104">If an application is not specified in the map, the application health evaluation uses the ApplicationHealthPolicy found in its application manifest or the default application health policy (if no health policy is defined in the manifest).</span></span>
+      <span data-ttu-id="2a909-105">Par défaut, le mappage est vide.</span><span class="sxs-lookup"><span data-stu-id="2a909-105">The map is empty by default.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2a909-106">Définit une stratégie de contrôle d’intégrité utilisée pour évaluer l’intégrité du cluster ou d’un nœud de cluster.</span><span class="sxs-lookup"><span data-stu-id="2a909-106">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.clusterUpgradeHealthPolicy'
+    name: clusterUpgradeHealthPolicy
+    fullName: clusterUpgradeHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2a909-107">Définit une stratégie d’intégrité utilisée pour évaluer l’intégrité du cluster pendant une mise à niveau de cluster.</span><span class="sxs-lookup"><span data-stu-id="2a909-107">Defines a health policy used to evaluate the health of the cluster during a cluster upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'clusterUpgradeHealthPolicy?: ClusterUpgradeHealthPolicyObject'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.codeVersion'
+    name: codeVersion
+    fullName: codeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2a909-108">La version du code ServiceFabric du cluster.</span><span class="sxs-lookup"><span data-stu-id="2a909-108">The ServiceFabric code version of the cluster.</span></span>
+    optional: true
+    syntax:
+      content: 'codeVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.configVersion'
+    name: configVersion
+    fullName: configVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2a909-109">La version de configuration de cluster (spécifiée dans le manifeste de cluster).</span><span class="sxs-lookup"><span data-stu-id="2a909-109">The cluster configuration version (specified in the cluster manifest).</span></span>
+    optional: true
+    syntax:
+      content: 'configVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.enableDeltaHealthEvaluation'
+    name: enableDeltaHealthEvaluation
+    fullName: enableDeltaHealthEvaluation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2a909-110">Lorsque la valeur est true, permet l’évaluation de l’intégrité delta plutôt que d’évaluation de l’intégrité absolue après l’achèvement de chaque domaine de mise à niveau.</span><span class="sxs-lookup"><span data-stu-id="2a909-110">When true, enables delta health evaluation rather than absolute health evaluation after completion of each upgrade domain.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableDeltaHealthEvaluation?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2a909-111">Si la valeur est true, puis les processus sont volontairement redémarrés pendant la mise à niveau même lorsque la version du code n’a pas changé (la configuration de la mise à niveau uniquement les modifications ou les données).</span><span class="sxs-lookup"><span data-stu-id="2a909-111">If true, then processes are forcefully restarted during upgrade even when the code version has not changed (the upgrade only changes configuration or data).</span></span>'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.monitoringPolicy'
+    name: monitoringPolicy
+    fullName: monitoringPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2a909-112">Décrit les paramètres pour l’analyse d’une mise à niveau en mode surveillé.</span><span class="sxs-lookup"><span data-stu-id="2a909-112">Describes the parameters for monitoring an upgrade in Monitored mode.</span></span>
+    optional: true
+    syntax:
+      content: 'monitoringPolicy?: MonitoringPolicyDescription'
+      return:
+        type:
+          - '@azure/servicefabric.MonitoringPolicyDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2a909-113\">Mode utilisé pour surveiller l’intégrité pendant une mise à niveau propagée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-113\">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id=\"2a909-114\">Les valeurs sont Monitored, UnmonitoredAuto et UnmonitoredManual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-114\">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id=\"2a909-115\">Les valeurs possibles incluent\_: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-115\">Possible values include: 'Invalid', 'UnmonitoredAuto', 'UnmonitoredManual', 'Monitored'.</span></span> <span data-ttu-id=\"2a909-116\">Valeur par défaut : «\_UnmonitoredAuto\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-116\">Default value: 'UnmonitoredAuto'.</span></span>"
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.sortOrder'
+    name: sortOrder
+    fullName: sortOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2a909-117\">Définit l’ordre dans lequel une mise à niveau effectuée par le cluster.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-117\">Defines the order in which an upgrade proceeds through the cluster.</span></span> <span data-ttu-id=\"2a909-118\">Les valeurs possibles incluent\_: 'Invalid', 'Default', 'Numeric', 'Lexicographical', 'ReverseNumeric', 'ReverseLexicographical'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-118\">Possible values include: 'Invalid', 'Default', 'Numeric', 'Lexicographical', 'ReverseNumeric', 'ReverseLexicographical'.</span></span> <span data-ttu-id=\"2a909-119\">Valeur par défaut : 'Default'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-119\">Default value: 'Default'.</span></span>"
+    optional: true
+    syntax:
+      content: 'sortOrder?: UpgradeSortOrder'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeSortOrder'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.upgradeKind'
+    name: upgradeKind
+    fullName: upgradeKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"2a909-120\">Le type de mise à niveau en dehors des valeurs suivantes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-120\">The kind of upgrade out of the following possible values.</span></span> <span data-ttu-id=\"2a909-121\">Les valeurs possibles incluent\_: «\_Invalid\_», «\_Déploiement\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-121\">Possible values include: 'Invalid', 'Rolling'.</span></span> <span data-ttu-id=\"2a909-122\">Valeur par défaut : «\_Déploiement\_».</span><span class=\"sxs-lookup\"><span data-stu-id=\"2a909-122\">Default value: 'Rolling'.</span></span>"
+    optional: true
+    syntax:
+      content: 'upgradeKind?: UpgradeKind'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeKind'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeDescriptionObject.upgradeReplicaSetCheckTimeoutInSeconds'
+    name: upgradeReplicaSetCheckTimeoutInSeconds
+    fullName: upgradeReplicaSetCheckTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="2a909-123">Durée maximale pendant laquelle bloquer le traitement d’un domaine de mise à niveau et éviter la perte de disponibilité en cas de problèmes inattendus.</span><span class="sxs-lookup"><span data-stu-id="2a909-123">The maximum amount of time to block processing of an upgrade domain and prevent loss of availability when there are unexpected issues.</span></span> <span data-ttu-id="2a909-124">Lorsque ce délai d’attente expire, le traitement du domaine de mise à niveau se poursuit, indépendamment des problèmes de perte de disponibilité.</span><span class="sxs-lookup"><span data-stu-id="2a909-124">When this timeout expires, processing of the upgrade domain will proceed regardless of availability loss issues.</span></span> <span data-ttu-id="2a909-125">Le délai d’expiration est réinitialisé au début de chaque domaine de mise à niveau.</span><span class="sxs-lookup"><span data-stu-id="2a909-125">The timeout is reset at the start of each upgrade domain.</span></span> <span data-ttu-id="2a909-126">Les valeurs valides sont comprises entre 0 et 42949672925 inclus.</span><span class="sxs-lookup"><span data-stu-id="2a909-126">Valid values are between 0 and 42949672925 inclusive.</span></span>
+      <span data-ttu-id="2a909-127">(entier non signé 32 bits).</span><span class="sxs-lookup"><span data-stu-id="2a909-127">(unsigned 32-bit integer).</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeReplicaSetCheckTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    name: 'ApplicationHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationHealthPolicyMapItem
+        fullName: ApplicationHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+    name: ClusterUpgradeHealthPolicyObject
+    spec.typeScript:
+      - name: ClusterUpgradeHealthPolicyObject
+        fullName: ClusterUpgradeHealthPolicyObject
+        uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    spec.typeScript:
+      - name: MonitoringPolicyDescription
+        fullName: MonitoringPolicyDescription
+        uid: '@azure/servicefabric.MonitoringPolicyDescription'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.UpgradeSortOrder'
+    name: UpgradeSortOrder
+    spec.typeScript:
+      - name: UpgradeSortOrder
+        fullName: UpgradeSortOrder
+        uid: '@azure/servicefabric.UpgradeSortOrder'
+  - uid: '@azure/servicefabric.UpgradeKind'
+    name: UpgradeKind
+    spec.typeScript:
+      - name: UpgradeKind
+        fullName: UpgradeKind
+        uid: '@azure/servicefabric.UpgradeKind'

@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter'
+    name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    children:
+      - '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="84227-101">Définit les critères de correspondance pour déterminer si une partition doit être incluse en tant qu’enfant d’un service dans le segment d’intégrité de cluster.</span><span class="sxs-lookup"><span data-stu-id="84227-101">Defines matching criteria to determine whether a partition should be included as a child of a service in the cluster health chunk.</span></span>
+      <span data-ttu-id="84227-102">Les partitions sont retournées uniquement si les entités parent correspond à un filtre spécifié dans la description de requête de segment d’intégrité cluster.</span><span class="sxs-lookup"><span data-stu-id="84227-102">The partitions are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="84227-103">Le service parent et l’application doivent être inclus dans le segment d’intégrité de cluster.</span><span class="sxs-lookup"><span data-stu-id="84227-103">The parent service and application must be included in the cluster health chunk.</span></span>
+      <span data-ttu-id="84227-104">Un filtre peut mettre en correspondance zéro, une ou plusieurs partitions, en fonction de ses propriétés.</span><span class="sxs-lookup"><span data-stu-id="84227-104">One filter can match zero, one or multiple partitions, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"84227-105\">Le filtre pour l’état d’intégrité des partitions.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-105\">The filter for the health state of the partitions.</span></span> <span data-ttu-id=\"84227-106\">Il permet de sélectionner les partitions s’ils correspondent les États d’intégrité de votre choix.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-106\">It allows selecting partitions if they match the desired health states.</span></span>\n<span data-ttu-id=\"84227-107\">Les valeurs possibles sont la valeur entière d’un des États d’intégrité suivants.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-107\">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id=\"84227-108\">Seules les partitions qui correspondent au filtre sont retournées.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-108\">Only partitions that match the filter are returned.</span></span> <span data-ttu-id=\"84227-109\">Toutes les partitions sont utilisées pour évaluer l’état d’intégrité de cluster agrégée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-109\">All partitions are used to evaluate the cluster aggregated health state.</span></span>\n<span data-ttu-id=\"84227-110\">Si non spécifié, valeur par défaut est None, sauf si l’ID de partition est spécifié.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-110\">If not specified, default value is None, unless the partition ID is specified.</span></span> <span data-ttu-id=\"84227-111\">Si le filtre a la valeur par défaut et l’ID de partition est spécifié, la partition correspondante est retournée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-111\">If the filter has default value and partition ID is specified, the matching partition is returned.</span></span>\n<span data-ttu-id=\"84227-112\">Les valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur «\_OR\_» au niveau du bit.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-112\">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>\n<span data-ttu-id=\"84227-113\">Par exemple, si la valeur indiquée est 6, elle correspond à des partitions avec la valeur HealthState est OK (2) et Warning (4).</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-113\">For example, if the provided value is 6, it matches partitions with HealthState value of OK (2) and Warning (4).</span></span>\n- <span data-ttu-id=\"84227-114\">Default\_: valeur par défaut.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-114\">Default - Default value.</span></span> <span data-ttu-id=\"84227-115\">Correspond à toute valeur HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-115\">Matches any HealthState.</span></span> <span data-ttu-id=\"84227-116\">La valeur est égale à zéro.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-116\">The value is zero.</span></span>\n- <span data-ttu-id=\"84227-117\">None\_: filtre qui ne correspond à aucune valeur HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-117\">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id=\"84227-118\">Permet de ne retourner aucun résultat sur une collection donnée d’états.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-118\">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id=\"84227-119\">La valeur est égale à\_1.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-119\">The value is 1.</span></span>\n- <span data-ttu-id=\"84227-120\">OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-120\">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id=\"84227-121\">La valeur est égale à 2.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-121\">The value is 2.</span></span>\n- <span data-ttu-id=\"84227-122\">Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-122\">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id=\"84227-123\">La valeur est égale à 4.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-123\">The value is 4.</span></span>\n- <span data-ttu-id=\"84227-124\">Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-124\">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id=\"84227-125\">La valeur est égale à 8.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-125\">The value is 8.</span></span>\n- <span data-ttu-id=\"84227-126\">All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-126\">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id=\"84227-127\">La valeur est égale à 65535.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-127\">The value is 65535.</span></span> <span data-ttu-id=\"84227-128\">Valeur par défaut : 0.</span><span class=\"sxs-lookup\"><span data-stu-id=\"84227-128\">Default value: 0.</span></span>\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+    name: partitionIdFilter
+    fullName: partitionIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="84227-129">ID de la partition qui correspond au filtre.</span><span class="sxs-lookup"><span data-stu-id="84227-129">ID of the partition that matches the filter.</span></span> <span data-ttu-id="84227-130">Le filtre est appliqué uniquement à la partition spécifiée, si elle existe.</span><span class="sxs-lookup"><span data-stu-id="84227-130">The filter is applied only to the specified partition, if it exists.</span></span>
+      <span data-ttu-id="84227-131">Si la partition n’existe pas, aucune partition n’est retournée dans le bloc de contrôle d’intégrité de cluster en fonction de ce filtre.</span><span class="sxs-lookup"><span data-stu-id="84227-131">If the partition doesn't exist, no partition is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="84227-132">Si la partition existe, il est inclus dans le segment d’intégrité de cluster si elle respecte les autres propriétés de filtre.</span><span class="sxs-lookup"><span data-stu-id="84227-132">If the partition exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="84227-133">Si non spécifié, toutes les partitions qui correspondent aux filtres parent (le cas échéant) sont prises en considération et mis en correspondance avec les autres membres de filtre comme filtre d’état d’intégrité.</span><span class="sxs-lookup"><span data-stu-id="84227-133">If not specified, all partitions that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    name: replicaFilters
+    fullName: replicaFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="84227-134">Définit une liste de filtres qui spécifient les réplicas à inclure dans l’intégrité du cluster retourné segment en tant qu’enfants de la partition parente.</span><span class="sxs-lookup"><span data-stu-id="84227-134">Defines a list of filters that specify which replicas to be included in the returned cluster health chunk as children of the parent partition.</span></span> <span data-ttu-id="84227-135">Les réplicas sont retournés uniquement si la partition parent correspond à un filtre.</span><span class="sxs-lookup"><span data-stu-id="84227-135">The replicas are returned only if the parent partition matches a filter.</span></span>
+      <span data-ttu-id="84227-136">Si la liste est vide, aucun réplica n’est retournés.</span><span class="sxs-lookup"><span data-stu-id="84227-136">If the list is empty, no replicas are returned.</span></span> <span data-ttu-id="84227-137">Tous les réplicas sont utilisés pour évaluer l’état d’intégrité de partition agrégée de parent, quel que soit les filtres d’entrée.</span><span class="sxs-lookup"><span data-stu-id="84227-137">All the replicas are used to evaluate the parent partition aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="84227-138">Le filtre de partition peut spécifier plusieurs filtres de réplica.</span><span class="sxs-lookup"><span data-stu-id="84227-138">The partition filter may specify multiple replica filters.</span></span>
+      <span data-ttu-id="84227-139">Par exemple, il peut spécifier un filtre pour retourner tous les réplicas avec état d’intégrité erreur et un autre filtre pour toujours inclure un réplica identifié par son id de réplica.</span><span class="sxs-lookup"><span data-stu-id="84227-139">For example, it can specify a filter to return all replicas with health state Error and another filter to always include a replica identified by its replica id.</span></span>
+    optional: true
+    syntax:
+      content: 'replicaFilters?: ReplicaHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    name: 'ReplicaHealthStateFilter[]'
+    spec.typeScript:
+      - name: ReplicaHealthStateFilter
+        fullName: ReplicaHealthStateFilter
+        uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

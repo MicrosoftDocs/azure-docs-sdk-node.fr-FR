@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedPropertyInfoList'
+    name: PagedPropertyInfoList
+    fullName: PagedPropertyInfoList
+    children:
+      - '@azure/servicefabric.PagedPropertyInfoList.continuationToken'
+      - '@azure/servicefabric.PagedPropertyInfoList.isConsistent'
+      - '@azure/servicefabric.PagedPropertyInfoList.properties'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4c982-101">Liste paginée des propriétés de Service Fabric sous un nom donné.</span><span class="sxs-lookup"><span data-stu-id="4c982-101">The paged list of Service Fabric properties under a given name.</span></span> <span data-ttu-id="4c982-102">La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message.</span><span class="sxs-lookup"><span data-stu-id="4c982-102">The list is paged when all of the results cannot fit in a single message.</span></span> <span data-ttu-id="4c982-103">Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.</span><span class="sxs-lookup"><span data-stu-id="4c982-103">The next set of results can be obtained by executing the same query with the continuation token provided in this list.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4c982-104">Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant.</span><span class="sxs-lookup"><span data-stu-id="4c982-104">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="4c982-105">Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse.</span><span class="sxs-lookup"><span data-stu-id="4c982-105">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="4c982-106">Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.</span><span class="sxs-lookup"><span data-stu-id="4c982-106">When this value is passed to the next API call, the API returns next set of results.</span></span>
+      <span data-ttu-id="4c982-107">S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.</span><span class="sxs-lookup"><span data-stu-id="4c982-107">If there are no further results, then the continuation token is not included in the response.</span></span>
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.isConsistent'
+    name: isConsistent
+    fullName: isConsistent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4c982-108">Indique si n’importe quelle propriété sous le nom donné a été modifiée lors de l’énumération.</span><span class="sxs-lookup"><span data-stu-id="4c982-108">Indicates whether any property under the given name has been modified during the enumeration.</span></span>
+      <span data-ttu-id="4c982-109">S’il existait une modification, cette valeur de propriété est false.</span><span class="sxs-lookup"><span data-stu-id="4c982-109">If there was a modification, this property value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'isConsistent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4c982-110">Liste d’informations de propriété.</span><span class="sxs-lookup"><span data-stu-id="4c982-110">List of property information.</span></span>
+    optional: true
+    syntax:
+      content: 'properties?: PropertyInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.PropertyInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PropertyInfo[]'
+    name: 'PropertyInfo[]'
+    spec.typeScript:
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: '@azure/servicefabric.PropertyInfo'
+      - name: '[]'
+        fullName: '[]'

@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="1ccaf-101">Paramètres facultatifs.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -27,7 +27,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4f459-101">Le signal qui peut être utilisé pour les demandes d’abandon.</span><span class="sxs-lookup"><span data-stu-id="4f459-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="1ccaf-102">Le signal qui peut être utilisé pour les demandes d’abandon.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -42,7 +42,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "<span data-ttu-id=\"1ccaf-103\">Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-103\">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id=\"1ccaf-104\">Un jeton de continuation avec une valeur non vide est inclus dans la réponse de l’API quand les résultats du système ne tiennent pas dans une seule réponse.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-104\">A continuation token with a non-empty value is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id=\"1ccaf-105\">Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-105\">When this value is passed to the next API call, the API returns next set of results.</span></span> <span data-ttu-id=\"1ccaf-106\">S’il n’existe pas de résultats supplémentaires, le jeton de continuation ne contient pas de valeur.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-106\">If there are no further results, then the continuation token does not contain a value.</span></span> <span data-ttu-id=\"1ccaf-107\">La valeur de ce paramètre ne doit pas être codée\_URL.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-107\">The value of this parameter should not be URL encoded.</span></span>"
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -57,7 +57,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="4f459-102">{objet} [customHeaders] En-têtes de requête personnalisés qui seront appliqués avant que la demande est envoyée défini par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="4f459-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="1ccaf-108">{objet} [customHeaders] En-têtes de requête personnalisés qui seront appliqués avant que la demande est envoyée défini par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-108">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -72,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "<span data-ttu-id=\"1ccaf-109\">Inclut l’état d’intégrité d’une entité.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-109\">Include the health state of an entity.</span></span>\n<span data-ttu-id=\"1ccaf-110\">Si ce paramètre est défini sur false ou n’est pas spécifié, l’état d’intégrité retourné est « Inconnu ».</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-110\">If this parameter is false or not specified, then the health state returned is \"Unknown\".</span></span>\n<span data-ttu-id=\"1ccaf-111\">Lorsque la valeur est true, la requête s’applique en parallèle au nœud et au service système d’intégrité avant la fusion des résultats.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-111\">When set to true, the query goes in parallel to the node and the health system service before the results are merged.</span></span>\n<span data-ttu-id=\"1ccaf-112\">Par conséquent, la requête est plus coûteuse et peut prendre plus de temps.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-112\">As a result, the query is more expensive and may take a longer time.</span></span> <span data-ttu-id=\"1ccaf-113\">Valeur par défaut\_: false.</span><span class=\"sxs-lookup\"><span data-stu-id=\"1ccaf-113\">Default value: false.</span></span>"
     optional: true
     syntax:
       content: 'includeHealthState?: undefined | false | true'
@@ -87,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="1ccaf-114">Nombre maximal de résultats à renvoyer dans le cadre des requêtes paginées.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-114">The maximum number of results to be returned as part of the paged queries.</span></span> <span data-ttu-id="1ccaf-115">Ce paramètre définit la limite supérieure du nombre de résultats renvoyés.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-115">This parameter defines the upper bound on the number of results returned.</span></span> <span data-ttu-id="1ccaf-116">Le nombre de résultats renvoyés peut être inférieur au nombre maximal de résultats spécifié s’ils ne tiennent pas dans le message conformément aux restrictions de taille maximale définies dans la configuration.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-116">The results returned can be less than the specified maximum results if they do not fit in the message as per the max message size restrictions defined in the configuration.</span></span> <span data-ttu-id="1ccaf-117">Si ce paramètre est défini sur zéro ou n’est pas spécifié, la requête paginée comprend le nombre maximal de résultats pouvant tenir dans le message renvoyé.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-117">If this parameter is zero or not specified, the paged query includes as many results as possible that fit in the return message.</span></span> <span data-ttu-id="1ccaf-118">Valeur par défaut : 0.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-118">Default value: 0.</span></span>'
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -102,7 +102,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4f459-103">Rappel qui se déclenche lors de progression du téléchargement.</span><span class="sxs-lookup"><span data-stu-id="4f459-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="1ccaf-119">Rappel qui se déclenche lors de progression du téléchargement.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-119">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -117,7 +117,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4f459-104">Rappel qui se déclenche lors de progression du chargement.</span><span class="sxs-lookup"><span data-stu-id="4f459-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="1ccaf-120">Rappel qui se déclenche lors de progression du chargement.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-120">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -132,7 +132,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="4f459-105">Le nombre de millisecondes qu’une demande peut prendre avant automatiquement son interruption.</span><span class="sxs-lookup"><span data-stu-id="4f459-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="1ccaf-121">Le nombre de millisecondes qu’une demande peut prendre avant automatiquement son interruption.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-121">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -147,7 +147,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="1ccaf-122">Le délai d’attente de serveur pour effectuer l’opération en secondes.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-122">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="1ccaf-123">Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-123">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="1ccaf-124">La valeur par défaut pour ce paramètre est de 60 secondes.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-124">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="1ccaf-125">Valeur par défaut : 60.</span><span class="sxs-lookup"><span data-stu-id="1ccaf-125">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'
