@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Définit les critères de correspondance pour déterminer si un service doit être inclus en tant qu’enfant d’une application dans le bloc de contrôle d’intégrité du cluster.
+      Les services sont retournés uniquement si l’application parent correspond à un filtre spécifié dans la description de requête de segment d’intégrité cluster.
+      Un filtre peut mettre en correspondance zéro, un ou plusieurs services, en fonction de ses propriétés.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le filtre pour l’état d’intégrité des services. Il permet de sélectionner les services s’ils correspondent les États d’intégrité de votre choix.\nLes valeurs possibles sont la valeur entière d’un des États d’intégrité suivants. Seuls les services qui correspondent au filtre sont retournés. Tous les services sont utilisés pour évaluer l’état d’intégrité de cluster agrégée.\nSi non spécifié, valeur par défaut est None, sauf si le nom du service est spécifié. Si le filtre a la valeur par défaut et le nom du service est spécifié, le service correspondant est retourné.\nLes valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur «\_OR\_» au niveau du bit.\nPar exemple, si la valeur indiquée est 6, elle correspond à des services avec la valeur HealthState est OK (2) et Warning (4).\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Définit une liste de filtres qui spécifient quelles partitions à inclure dans l’intégrité du cluster retourné segment en tant qu’enfants du service. Les partitions sont retournées uniquement si le service parent correspond à un filtre.
+      Si la liste est vide, aucune partition n’est retournées. Toutes les partitions sont utilisées pour évaluer l’état d’intégrité de service agrégé de parent, quel que soit les filtres d’entrée.
+      Le filtre de service peut spécifier plusieurs filtres de partition.
+      Par exemple, il peut spécifier un filtre pour retourner toutes les partitions avec l’état d’intégrité erreur et un autre filtre pour toujours inclure une partition identifiée par son ID de partition.
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le nom du service qui correspond au filtre. Le filtre est appliqué uniquement au service spécifié, si elle existe.
+      Si le service n’existe pas, aucun service n’est retournée dans le bloc de contrôle d’intégrité de cluster en fonction de ce filtre.
+      Si le service existe, il est inclus en tant qu’enfant de l’application si l’état d’intégrité correspond à d’autres propriétés de filtre.
+      Si non spécifié, tous les services qui correspondent aux filtres parent (le cas échéant) sont pris en considération et mis en correspondance avec les autres membres de filtre comme filtre d’état d’intégrité.
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

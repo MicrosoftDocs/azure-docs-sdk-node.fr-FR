@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedServicePartitionInfoList'
+    name: PagedServicePartitionInfoList
+    fullName: PagedServicePartitionInfoList
+    children:
+      - '@azure/servicefabric.PagedServicePartitionInfoList.continuationToken'
+      - '@azure/servicefabric.PagedServicePartitionInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: La liste de partition dans le cluster pour un service. La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message. Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServicePartitionInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+      S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServicePartitionInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des informations de partition de service.
+    optional: true
+    syntax:
+      content: 'items?: ServicePartitionInfoUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionInfoUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServicePartitionInfoUnion[]'
+    name: 'ServicePartitionInfoUnion[]'
+    spec.typeScript:
+      - name: ServicePartitionInfoUnion
+        fullName: ServicePartitionInfoUnion
+        uid: '@azure/servicefabric.ServicePartitionInfoUnion'
+      - name: '[]'
+        fullName: '[]'

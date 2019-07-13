@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.CheckSequencePropertyBatchOperation'
+    name: CheckSequencePropertyBatchOperation
+    fullName: CheckSequencePropertyBatchOperation
+    children:
+      - '@azure/servicefabric.CheckSequencePropertyBatchOperation.kind'
+      - '@azure/servicefabric.CheckSequencePropertyBatchOperation.propertyName'
+      - '@azure/servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Compare le numéro de séquence d’une propriété avec l’argument numéro de séquence.
+      Numéro de séquence d’une propriété peut être considéré comme la version de la propriété en question.
+      Chaque fois que cette propriété est modifiée, son numéro de séquence est augmentée.
+      Vous trouverez le numéro de séquence dans les métadonnées d’une propriété.
+      La comparaison échoue si les numéros de séquence ne sont pas égaux.
+      CheckSequencePropertyBatchOperation est généralement utilisée comme une condition préalable pour les opérations d’écriture dans le lot.
+      Notez que si un PropertyBatchOperation dans un PropertyBatch échoue, l’ensemble du lot échoue et ne peut pas être validé de manière transactionnelle.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckSequencePropertyBatchOperation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'kind: "CheckSequence"'
+      return:
+        type:
+          - '"CheckSequence"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckSequencePropertyBatchOperation.propertyName'
+    name: propertyName
+    fullName: propertyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom de la propriété Service Fabric.
+    syntax:
+      content: 'propertyName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.CheckSequencePropertyBatchOperation.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le numéro de séquence attendu.
+    syntax:
+      content: 'sequenceNumber: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'

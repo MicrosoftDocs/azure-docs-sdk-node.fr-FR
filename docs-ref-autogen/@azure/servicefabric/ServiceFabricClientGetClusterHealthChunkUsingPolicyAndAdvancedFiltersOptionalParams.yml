@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Paramètres facultatifs.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Décrit les stratégies d’intégrité cluster et l’application utilisées pour évaluer l’intégrité du cluster et les filtres pour sélectionner les entités de cluster doit être retourné.
+      Si la stratégie d’intégrité de cluster est présente, il est utilisé pour évaluer les événements de cluster et les nœuds du cluster. Si tel n’est pas le cas présent, les utilisations d’évaluation d’intégrité définie par la stratégie d’intégrité de cluster dans le manifeste de cluster ou de la stratégie de contrôle d’intégrité de cluster par défaut.
+      Par défaut, chaque application est évaluée à l’aide de sa stratégie de contrôle d’intégrité application spécifique, défini dans le manifeste d’application ou de la stratégie de contrôle d’intégrité par défaut, si aucune stratégie n’est défini dans le manifeste.
+      Si le mappage de stratégie de contrôle d’intégrité application est spécifié, et il comporte une entrée pour une application, la stratégie de contrôle d’intégrité d’application spécifié est utilisée pour évaluer l’intégrité de l’application.
+      Les utilisateurs peuvent spécifier des filtres très flexibles permettant de sélectionner les entités de cluster à inclure dans la réponse. La sélection peut être effectuée en fonction de l’état d’intégrité entités et en fonction de la hiérarchie.
+      La requête peut retourner plusieurs niveaux enfants des entités en fonction des filtres spécifiés. Par exemple, il peut renvoyer une application avec un nom spécifié et pour cette application, retourner uniquement les services qui se trouvent dans l’erreur ou avertissement et toutes les partitions et réplicas pour l’une de ces services.
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Le délai d’attente de serveur pour effectuer l’opération en secondes. Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée. La valeur par défaut pour ce paramètre est de 60 secondes. Valeur par défaut : 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

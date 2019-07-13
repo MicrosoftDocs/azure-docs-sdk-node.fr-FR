@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    children:
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+      - '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    langs:
+      - typeScript
+    type: interface
+    summary: Représente la stratégie de contrôle d’intégrité utilisée pour évaluer l’intégrité des services appartenant à un type de service.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Le pourcentage maximal autorisé de partitions non intègres par le service. Valeurs autorisées sont des valeurs d’octets à partir de zéro à 100 le pourcentage représente la valeur maximale tolérée pourcentage de partitions pouvant être défectueux avant que le service est considéré comme erreur.
+      Si le pourcentage est respecté mais il existe au moins une partition défectueuse, l’intégrité est évaluée en tant qu’avertissement.
+      Le pourcentage est calculé en divisant le nombre de partitions non intègres par le nombre total de partitions dans le service.
+      Le calcul est arrondi pour tolérer une défaillance sur un petit nombre de partitions. Le pourcentage par défaut est zéro. Valeur par défaut : 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition'
+    name: maxPercentUnhealthyReplicasPerPartition
+    fullName: maxPercentUnhealthyReplicasPerPartition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Le pourcentage maximal autorisé de réplicas défectueux par partition. Valeurs autorisées sont des valeurs d’octets à partir de zéro à 100.
+      Le pourcentage représente le pourcentage maximum toléré de réplicas peut être défectueux avant que la partition est considérée comme erreur.
+      Si le pourcentage est respecté mais il y a au moins un réplica non intègre, l’intégrité est évaluée en tant qu’avertissement.
+      Le pourcentage est calculé en divisant le nombre de réplicas défectueux par le nombre total de réplicas dans la partition.
+      Le calcul est arrondi pour tolérer une défaillance sur un petit nombre de réplicas. Le pourcentage par défaut est zéro. Valeur par défaut : 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyReplicasPerPartition?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices'
+    name: maxPercentUnhealthyServices
+    fullName: maxPercentUnhealthyServices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Le pourcentage maximal autorisé de services non intègres. Valeurs autorisées sont des valeurs d’octets à partir de zéro à 100.
+      Le pourcentage représente le pourcentage maximum toléré de services pouvant être défectueux avant que l’application est considérée comme erreur.
+      Si le pourcentage est respecté mais il existe au moins un service défectueux, l’intégrité est évaluée en tant qu’avertissement.
+      Elle est calculée en divisant le nombre de services non intègres du type de service spécifique par le nombre total de services du type de service spécifique.
+      Le calcul est arrondi pour tolérer une défaillance sur un petit nombre de services. Le pourcentage par défaut est zéro. Valeur par défaut : 0.
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyServices?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

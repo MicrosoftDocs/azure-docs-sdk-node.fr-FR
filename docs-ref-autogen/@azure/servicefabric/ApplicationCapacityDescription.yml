@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription'
+    name: ApplicationCapacityDescription
+    fullName: ApplicationCapacityDescription
+    children:
+      - '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+      - '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+      - '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Décrit les informations de capacité pour les services de cette application. Cette description peut être utilisée pour décrire les éléments suivants.
+      - Réserver la capacité pour les services sur les nœuds
+      - Limitation du nombre total de nœuds services de cette application peuvent s’exécuter sur
+      - Limiter les métriques de capacité personnalisé pour limiter la consommation totale de la mesure par les services de cette application
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+    name: applicationMetrics
+    fullName: applicationMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste de description de la métrique application capacité.
+    optional: true
+    syntax:
+      content: 'applicationMetrics?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Nombre maximal de nœuds sur lesquels Service Fabric réserve de la capacité pour cette application.
+      Notez que cela ne signifie pas que les services de cette application sont placés sur tous les nœuds. Par défaut, la valeur de cette propriété est zéro, et cela signifie que les services peuvent être placés sur n’importe quel nœud. Valeur par défaut : 0.
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Nombre minimal de nœuds sur lesquels Service Fabric réserve de la capacité pour cette application.
+      Notez que cela ne signifie pas que les services de cette application sont placés sur tous les nœuds. Si cette propriété est définie à zéro, aucune capacité n’est réservée. La valeur de cette propriété ne peut pas être supérieur à la valeur de la propriété MaximumNodes.
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

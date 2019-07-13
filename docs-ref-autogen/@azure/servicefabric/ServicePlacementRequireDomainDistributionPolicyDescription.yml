@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription'
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Décrit la stratégie à utiliser pour la sélection élective d’un Service service Fabric où les deux réplicas de la même partition ne doivent jamais être placés dans le même domaine d’erreur ou de mise à niveau.
+      Bien que cela n’est pas courant, il peut exposer le service à une augmentation des risques de défaillances simultanées en raison de pannes non planifiées ou d’autres cas d’échecs de suivantes/simultanées. Par exemple, prenons un cas où les réplicas sont déployés sur un autre centre de données, avec un seul réplica par emplacement. Dans le cas où un des centres de données est mis hors connexion, normalement le réplica a été placé dans ce centre de données est compressé dans un des centres de données restantes. Si ce n’est pas souhaitable cette stratégie doit être définie.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Le nom du domaine qui doit utilisé pour la sélection élective, conformément à cette stratégie.'
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'type: "RequireDomainDistribution"'
+      return:
+        type:
+          - '"RequireDomainDistribution"'
+    package: '@azure/servicefabric'

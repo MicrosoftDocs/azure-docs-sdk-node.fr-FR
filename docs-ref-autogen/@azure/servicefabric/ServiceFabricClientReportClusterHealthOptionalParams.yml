@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Paramètres facultatifs.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Indicateur qui spécifie si le rapport doit être envoyé immédiatement.\nUn rapport d’intégrité est envoyé à une application de passerelle Service Fabric, qui opère son transfert vers le magasin d’intégrité.\nSi le paramètre immediate est défini sur true, le rapport est immédiatement envoyé de la passerelle HTTP au magasin d’intégrité, quels que soient les paramètres du client Fabric qu’utilise l’application de passerelle HTTP.\nCela est utile pour les rapports critiques qui doivent être envoyés dès que possible.\nEn fonction du minutage et d’autres conditions, l’envoi du rapport peut quand même échouer, par exemple si la passerelle HTTP est fermée ou si le message n’atteint pas la passerelle.\nSi le paramètre immediate est défini sur false, le rapport est envoyé en fonction des paramètres du client d’intégrité de la passerelle HTTP. C’est pourquoi il est traité par lot selon la configuration HealthReportSendInterval.\nIl s’agit du paramètre recommandé, car il permet au client d’intégrité d’optimiser les messages de rapport d’intégrité envoyés au magasin d’intégrité, ainsi que le traitement des rapports d’intégrité.\nPar défaut, les rapports ne sont pas envoyés immédiatement. Valeur par défaut\_: false."
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -115,7 +115,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Le délai d’attente de serveur pour effectuer l’opération en secondes. Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée. La valeur par défaut pour ce paramètre est de 60 secondes. Valeur par défaut : 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

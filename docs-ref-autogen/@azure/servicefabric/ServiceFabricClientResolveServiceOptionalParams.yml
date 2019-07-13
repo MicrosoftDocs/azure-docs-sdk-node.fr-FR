@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Paramètres facultatifs.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Type de clé de la partition. Ce paramètre est obligatoire si le schéma de partition du service est Int64Range ou Named. Les valeurs possibles sont les suivantes.\n- None (1)\_: indique que le paramètre PartitionKeyValue n’est pas spécifié. Cela concerne les partitions dont le schéma de partitionnement est Singleton. Il s’agit de la valeur par défaut. La valeur est égale à\_1.\n- Int64Range (2)\_: indique que le paramètre PartitionKeyValue est une clé de partition int64.\nCela concerne les partitions dont le schéma de partitionnement est Int64Range. La valeur est égale à 2.\n- Nommé (3)\_: indique que le paramètre PartitionKeyValue est un nom de la partition. Cela concerne les partitions dont le schéma de partitionnement est Named. La valeur est égale à\_3."
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +102,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Clé de partition. Ce paramètre est obligatoire si le schéma de partition du service est Int64Range ou Named.
+      Il ne s’agit pas de l’ID de partition, mais de la valeur de clé de type entier ou du nom de l’ID de partition.
+      Par exemple, si votre service utilise des partitions par spécification de plages de valeurs de 0 à 10, alors PartitionKeyValue est un entier dans cette plage. Envoyez une requête de description du service pour afficher la plage ou le nom correspondant.
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +120,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Valeur du champ Version de la réponse qui a été reçue précédemment. Cet argument est obligatoire si l’utilisateur sait que le résultat obtenu précédemment est périmé.
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +150,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Le délai d’attente de serveur pour effectuer l’opération en secondes. Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée. La valeur par défaut pour ce paramètre est de 60 secondes. Valeur par défaut : 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

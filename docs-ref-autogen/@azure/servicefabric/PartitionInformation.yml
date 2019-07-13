@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionInformation'
+    name: PartitionInformation
+    fullName: PartitionInformation
+    children:
+      - '@azure/servicefabric.PartitionInformation.id'
+      - '@azure/servicefabric.PartitionInformation.servicePartitionKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informations sur l’identité de la partition, clés prises en charge par ce dernier et le schéma de partitionnement.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionInformation.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID interne utilisé par Service Fabric pour identifier de manière unique une partition. Il s’agit d’un GUID généré de manière aléatoire lorsque le service a été créé. L’ID de partition est unique et ne change pas pour la durée de vie du service. Si le même service a été supprimé et recréé les ID de ses partitions serait différent.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionInformation.servicePartitionKind'
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'servicePartitionKind: "PartitionInformation"'
+      return:
+        type:
+          - '"PartitionInformation"'
+    package: '@azure/servicefabric'

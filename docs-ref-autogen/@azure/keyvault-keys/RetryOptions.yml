@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-keys.RetryOptions'
+    name: RetryOptions
+    fullName: RetryOptions
+    children:
+      - '@azure/keyvault-keys.RetryOptions.maxRetryDelayInMs'
+      - '@azure/keyvault-keys.RetryOptions.retryCount'
+      - '@azure/keyvault-keys.RetryOptions.retryIntervalInMS'
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface des options de nouvelle tentative.
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.maxRetryDelayInMs'
+    name: maxRetryDelayInMs
+    fullName: maxRetryDelayInMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: facultatif. Spécifie le délai maximal autorisé avant de retenter une opération (valeur par défaut est années 90 ou 90 * 1 000 ms).
+    optional: true
+    syntax:
+      content: 'maxRetryDelayInMs?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      facultatif. Max essayer nombre de tentatives, valeur par défaut est 3.
+      La valeur 1 signifie 1 try et aucune nouvelle tentative.
+      Une valeur inférieure à 1 signifie le nombre de nouvelles tentatives par défaut de tentatives.
+    optional: true
+    syntax:
+      content: 'retryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.retryIntervalInMS'
+    name: retryIntervalInMS
+    fullName: retryIntervalInMS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      facultatif. Spécifie la durée du délai avant nouvelle tentative d’opération (valeur par défaut est 30 secondes ou 30 * 1 000 ms).
+      Le délai augmente de façon exponentielle avec chaque nouvelle tentative avec un maximum spécifié par maxRetryDelayInMs.
+    optional: true
+    syntax:
+      content: 'retryIntervalInMS?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'

@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    fullName: Epoch
+    children:
+      - '@azure/servicefabric.Epoch.configurationVersion'
+      - '@azure/servicefabric.Epoch.dataLossVersion'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Une époque est un numéro de la configuration de la partition dans sa globalité. Lorsque la configuration du réplica de la valeur change, par exemple lorsque les modifications de réplica principal, les opérations qui sont répliquées à partir du nouveau réplica principal sont dits se situer une nouvelle époque de ceux qui ont été envoyés par l’ancien réplica principal.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.Epoch.configurationVersion'
+    name: configurationVersion
+    fullName: configurationVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Le nombre de configuration actuel de cet objet Epoch. Le nombre de configuration est une valeur croissante est mis à jour chaque fois que la configuration de ce réplica définie des modifications.
+    optional: true
+    syntax:
+      content: 'configurationVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.Epoch.dataLossVersion'
+    name: dataLossVersion
+    fullName: dataLossVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nombre de la perte de données actuel de cet objet Epoch. La propriété nombre de perte de données est une valeur croissante qui est mis à jour chaque fois qu’une perte de données est suspectée, comme lorsque la valeur perte d’un quorum de réplicas dans le réplica qui inclut le réplica principal.'
+    optional: true
+    syntax:
+      content: 'dataLossVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

@@ -19,7 +19,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Paramètres facultatifs.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -45,7 +45,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer, par état d’intégrité, les objets d’état d’intégrité des applications qui sont retournés dans les résultats de la requête d’intégrité du cluster.\nLes valeurs possibles pour ce paramètre incluent la valeur entière qui est obtenue à partir des membres ou des opérations au niveau du bit effectuées sur les membres de l’énumération HealthStateFilter. Seules les applications qui correspondent au filtre sont retournées.\nToutes les applications sont utilisées pour évaluer l’état d’intégrité agrégé. Si cet argument n’est pas spécifié, toutes les entrées sont retournées.\nLes valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur «\_OR\_» au niveau du bit.\nPar exemple, si la valeur indiquée est 6, l’état d’intégrité des applications dont la valeur HealthState est OK (2) et Warning (4) est retourné.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'applicationsHealthStateFilter?: undefined | number'
@@ -60,7 +60,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Décrit les stratégies d’intégrité utilisées pour évaluer l’intégrité du cluster.
+      Si tel n’est pas le cas présent, les utilisations d’évaluation d’intégrité définie par la stratégie d’intégrité de cluster dans le manifeste de cluster ou de la stratégie de contrôle d’intégrité de cluster par défaut.
+      Par défaut, chaque application est évaluée à l’aide de sa stratégie de contrôle d’intégrité application spécifique, défini dans le manifeste d’application ou de la stratégie de contrôle d’intégrité par défaut, si aucune stratégie n’est défini dans le manifeste.
+      Si le mappage de stratégie de contrôle d’intégrité application est spécifié, et il comporte une entrée pour une application, la stratégie de contrôle d’intégrité d’application spécifié est utilisée pour évaluer l’intégrité de l’application.
     optional: true
     syntax:
       content: 'clusterHealthPolicies?: ClusterHealthPolicies'
@@ -90,7 +94,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer la collection d’objets HealthEvent retournés en fonction de leur état d’intégrité.\nLes valeurs possibles de ce paramètre incluent la valeur entière de l’un des états d’intégrité suivants.\nSeuls les événements qui correspondent au filtre sont renvoyés. Tous les événements sont utilisés pour évaluer l’état d’intégrité agrégé.\nSi cet argument n’est pas spécifié, toutes les entrées sont retournées. Les valeurs d’état correspondent à une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur « OR » au niveau du bit.\nPar exemple, si la valeur indiquée est\_6, tous les événements dont la valeur HealthState est OK (2) et Warning (4) sont retournés.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -105,7 +109,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Indique si les statistiques d’intégrité doivent être retournées dans le cadre du résultat de la requête. False par défaut.\nLes statistiques affichent le nombre d’entités enfants dont l’état d’intégrité est OK, Warning et Error.\nValeur par défaut\_: false."
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -120,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Indique si les statistiques d’intégrité doivent inclure le fabric\_: / statistiques d’intégrité du système application. False par défaut.\nSi IncludeSystemApplicationHealthStatistics est défini sur true, les statistiques d’intégrité des statistiques incluent les entités qui appartiennent à l’application fabric:/System.\nDans le cas contraire, le résultat de la requête inclut uniquement les statistiques d’intégrité pour les applications utilisateur.\nPour que ce paramètre soit appliqué, les statistiques d’intégrité doivent être incluses dans le résultat de la requête.\nValeur par défaut\_: false."
     optional: true
     syntax:
       content: 'includeSystemApplicationHealthStatistics?: undefined | false | true'
@@ -135,7 +139,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Permet de filtrer, par état d’intégrité, les objets d’état d’intégrité des nœuds qui sont retournés dans les résultats de la requête d’intégrité du cluster. Les valeurs possibles de ce paramètre incluent la valeur entière de l’un des états d’intégrité suivants. Seuls les nœuds qui correspondent au filtre sont renvoyés. Tous les nœuds sont utilisés pour évaluer l’état d’intégrité agrégé.\nSi cet argument n’est pas spécifié, toutes les entrées sont retournées.\nLes valeurs d’état sont une énumération basée sur des indicateurs. La valeur peut donc être une combinaison de ces valeurs obtenue à l’aide de l’opérateur «\_OR\_» au niveau du bit.\nPar exemple, si la valeur indiquée est 6, l’état d’intégrité des nœuds dont la valeur HealthState est OK (2) et Warning (4) est retourné.\n- Default\_: valeur par défaut. Correspond à toute valeur HealthState. La valeur est égale à zéro.\n- None\_: filtre qui ne correspond à aucune valeur HealthState. Permet de ne retourner aucun résultat sur une collection donnée d’états. La valeur est égale à\_1.\n- OK\_: filtre qui correspond à l’entrée avec la valeur HealthState est Ok. La valeur est égale à 2.\n- Warning\_: filtre qui correspond à l’entrée à HealthState Warning comme valeur. La valeur est égale à 4.\n- Error\_: filtre qui correspond aux entrées ayant Error comme valeur HealthState. La valeur est égale à 8.\n- All\_: filtre qui correspond aux entrées ayant n’importe quelle valeur HealthState. La valeur est égale à 65535. Valeur par défaut : 0.\n"
     optional: true
     syntax:
       content: 'nodesHealthStateFilter?: undefined | number'
@@ -195,7 +199,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Le délai d’attente de serveur pour effectuer l’opération en secondes. Ce délai d’attente spécifie la durée de temps que le client est disposé à attendre pour l’opération demandée soit terminée. La valeur par défaut pour ce paramètre est de 60 secondes. Valeur par défaut : 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

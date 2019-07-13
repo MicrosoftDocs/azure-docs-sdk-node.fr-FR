@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInfo'
+    name: StatelessServiceInfo
+    fullName: StatelessServiceInfo
+    children:
+      - '@azure/servicefabric.StatelessServiceInfo.healthState'
+      - '@azure/servicefabric.StatelessServiceInfo.id'
+      - '@azure/servicefabric.StatelessServiceInfo.isServiceGroup'
+      - '@azure/servicefabric.StatelessServiceInfo.manifestVersion'
+      - '@azure/servicefabric.StatelessServiceInfo.name'
+      - '@azure/servicefabric.StatelessServiceInfo.serviceKind'
+      - '@azure/servicefabric.StatelessServiceInfo.serviceStatus'
+      - '@azure/servicefabric.StatelessServiceInfo.typeName'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informations sur un service Service Fabric sans état.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»"
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Identité du service. Cet ID est une représentation encodée du nom du service. Cela est utilisé dans les API REST pour identifier la ressource de service.\nDepuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères. Par exemple, si le nom du service est «\_fabric\_: / myapp/app1/svc1\_», l’identité du service serait «\_myapp ~ app1\\~svc1\_» dans 6.0 et supérieures et «\_mon_app/app1/svc1\_» dans les versions précédentes."
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.isServiceGroup'
+    name: isServiceGroup
+    fullName: isServiceGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indique si le service est dans un groupe de service.
+    optional: true
+    syntax:
+      content: 'isServiceGroup?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.manifestVersion'
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version du manifeste de service.
+    optional: true
+    syntax:
+      content: 'manifestVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Le nom complet du service avec «\_fabric\_:\_» Schéma d’URI."
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminateur polymorphe
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.serviceStatus'
+    name: serviceStatus
+    fullName: serviceStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "L’état de l’application. Les valeurs possibles incluent\_: 'Unknown', 'Active', 'Upgrading', 'Deleting', 'Creating', 'Failed'"
+    optional: true
+    syntax:
+      content: 'serviceStatus?: ServiceStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nom du type de service tel que spécifié dans le manifeste de service.
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.ServiceStatus'
+    name: ServiceStatus
+    spec.typeScript:
+      - name: ServiceStatus
+        fullName: ServiceStatus
+        uid: '@azure/servicefabric.ServiceStatus'

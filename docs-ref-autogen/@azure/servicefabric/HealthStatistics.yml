@@ -1,0 +1,40 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    fullName: HealthStatistics
+    children:
+      - '@azure/servicefabric.HealthStatistics.healthStateCountList'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Les statistiques d’intégrité d’une entité retournée en tant que partie du résultat de requête d’intégrité lorsque la description de la requête est configurée pour inclure des statistiques.
+      Les statistiques incluent les nombres d’états d’intégrité pour tous les types enfants de l’entité actuelle.
+      Par exemple, pour le cluster, les statistiques d’intégrité incluent les nombres d’états d’intégrité pour les nœuds, applications, services, partitions, réplicas, applications déployées et packages de services déployés.
+      Pour la partition, les statistiques d’intégrité indiquent le nombre de contrôle d’intégrité pour les réplicas.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthStatistics.healthStateCountList'
+    name: healthStateCountList
+    fullName: healthStateCountList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Liste de l’état d’intégrité des nombres par entité kind, qui effectue le suivi de nombre d’enfants de l’entité interrogée est dans un état Ok, avertissement et erreur.'
+    optional: true
+    syntax:
+      content: 'healthStateCountList?: EntityKindHealthStateCount[]'
+      return:
+        type:
+          - '@azure/servicefabric.EntityKindHealthStateCount[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityKindHealthStateCount[]'
+    name: 'EntityKindHealthStateCount[]'
+    spec.typeScript:
+      - name: EntityKindHealthStateCount
+        fullName: EntityKindHealthStateCount
+        uid: '@azure/servicefabric.EntityKindHealthStateCount'
+      - name: '[]'
+        fullName: '[]'

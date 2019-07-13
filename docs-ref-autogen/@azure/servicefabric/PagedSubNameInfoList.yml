@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedSubNameInfoList'
+    name: PagedSubNameInfoList
+    fullName: PagedSubNameInfoList
+    children:
+      - '@azure/servicefabric.PagedSubNameInfoList.continuationToken'
+      - '@azure/servicefabric.PagedSubNameInfoList.isConsistent'
+      - '@azure/servicefabric.PagedSubNameInfoList.subNames'
+    langs:
+      - typeScript
+    type: interface
+    summary: Liste paginée des noms de Service Fabric. La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message. Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedSubNameInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+      S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedSubNameInfoList.isConsistent'
+    name: isConsistent
+    fullName: isConsistent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indique si n’importe quel nom sous le nom donné a été modifié lors de l’énumération. S’il existait une modification, cette valeur de propriété est false.'
+    optional: true
+    syntax:
+      content: 'isConsistent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedSubNameInfoList.subNames'
+    name: subNames
+    fullName: subNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste des noms enfant.
+    optional: true
+    syntax:
+      content: 'subNames?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/servicefabric'

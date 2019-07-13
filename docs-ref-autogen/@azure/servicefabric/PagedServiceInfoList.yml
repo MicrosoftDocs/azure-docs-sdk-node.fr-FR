@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedServiceInfoList'
+    name: PagedServiceInfoList
+    fullName: PagedServiceInfoList
+    children:
+      - '@azure/servicefabric.PagedServiceInfoList.continuationToken'
+      - '@azure/servicefabric.PagedServiceInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: La liste des services dans le cluster pour une application. La liste est paginée lorsque tous les résultats ne tiennent pas dans un seul message. Le jeu de résultats suivant peut être obtenu en exécutant la même requête avec le jeton de continuation fourni dans cette liste.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Le paramètre de jeton de liaison permet d’obtenir le jeu de résultats suivant. Le jeton de continuation est inclus dans la réponse de l’API si les résultats à partir du système ne tiennent pas dans une seule réponse. Lorsque cette valeur est transmise à l’appel d’API suivant, l’API retourne le jeu de résultats suivant.
+      S’il n’y a pas de résultats supplémentaires, le jeton de continuation n’est pas inclus dans la réponse.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Liste d’informations de service.
+    optional: true
+    syntax:
+      content: 'items?: ServiceInfoUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceInfoUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceInfoUnion[]'
+    name: 'ServiceInfoUnion[]'
+    spec.typeScript:
+      - name: ServiceInfoUnion
+        fullName: ServiceInfoUnion
+        uid: '@azure/servicefabric.ServiceInfoUnion'
+      - name: '[]'
+        fullName: '[]'
