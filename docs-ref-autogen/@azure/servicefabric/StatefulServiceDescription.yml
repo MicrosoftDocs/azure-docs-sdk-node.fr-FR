@@ -1,0 +1,409 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceDescription'
+    name: StatefulServiceDescription
+    fullName: StatefulServiceDescription
+    children:
+      - '@azure/servicefabric.StatefulServiceDescription.applicationName'
+      - '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+      - '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+      - '@azure/servicefabric.StatefulServiceDescription.flags'
+      - '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+      - '@azure/servicefabric.StatefulServiceDescription.initializationData'
+      - '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+      - '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+      - '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+      - '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceName'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+      - '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="86adc-101">Décrit un service avec état.</span><span class="sxs-lookup"><span data-stu-id="86adc-101">Describes a stateful service.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-102\">Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-102\">The name of the application, including the 'fabric:' URI scheme.</span></span>"
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-103">Le schéma de corrélation.</span><span class="sxs-lookup"><span data-stu-id="86adc-103">The correlation scheme.</span></span>
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceCorrelationDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-104\">Le coût de déplacement pour le service.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-104\">The move cost for the service.</span></span> <span data-ttu-id=\"86adc-105\">Les valeurs possibles incluent\_: 'Zero', 'Low', 'Medium', 'High'</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-105\">Possible values include: 'Zero', 'Low', 'Medium', 'High'</span></span>"
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: MoveCost'
+      return:
+        type:
+          - '@azure/servicefabric.MoveCost'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-106\">Indicateurs spécifiant si les autres propriétés sont définies.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-106\">Flags indicating whether other properties are set.</span></span> <span data-ttu-id=\"86adc-107\">Les propriétés associées correspond à un indicateur spécifié ci-dessous, qui, si défini, indiquer que la propriété est spécifiée.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-107\">Each of the associated properties corresponds to a flag, specified below, which, if set, indicate that the property is specified.</span></span>\n<span data-ttu-id=\"86adc-108\">Cette propriété peut être une combinaison de ces indicateurs obtenu à l’aide des opérateur «\_OR\_» au niveau du bit.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-108\">This property can be a combination of those flags obtained using bitwise 'OR' operator.</span></span>\n<span data-ttu-id=\"86adc-109\">Par exemple, si la valeur indiquée est 6 les indicateurs pour le paramètre QuorumLossWaitDuration (2) et StandByReplicaKeepDuration(4) sont définis.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-109\">For example, if the provided value is 6 then the flags for QuorumLossWaitDuration (2) and StandByReplicaKeepDuration(4) are set.</span></span>\n- <span data-ttu-id=\"86adc-110\">None\_: n’indique pas toutes les autres propriétés sont définies.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-110\">None - Does not indicate any other properties are set.</span></span> <span data-ttu-id=\"86adc-111\">La valeur est égale à zéro.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-111\">The value is zero.</span></span>\n- <span data-ttu-id=\"86adc-112\">Paramètre ReplicaRestartWaitDuration - indique la paramètre ReplicaRestartWaitDuration propriété est définie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-112\">ReplicaRestartWaitDuration - Indicates the ReplicaRestartWaitDuration property is set.</span></span> <span data-ttu-id=\"86adc-113\">La valeur est égale à\_1.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-113\">The value is 1.</span></span>\n- <span data-ttu-id=\"86adc-114\">Paramètre QuorumLossWaitDuration - indique la paramètre QuorumLossWaitDuration propriété est définie.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-114\">QuorumLossWaitDuration - Indicates the QuorumLossWaitDuration property is set.</span></span> <span data-ttu-id=\"86adc-115\">La valeur est</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-115\">The value is</span></span>\n2.\n- <span data-ttu-id=\"86adc-116\">Paramètre StandByReplicaKeepDuration - indique la propriété a la valeur de StandByReplicaKeepDuration.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-116\">StandByReplicaKeepDuration - Indicates the StandByReplicaKeepDuration property is set.</span></span> <span data-ttu-id=\"86adc-117\">La valeur est égale à 4.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-117\">The value is 4.</span></span>\n"
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="86adc-118">Indicateur précisant s’il s’agit d’un service persistant qui stocke des États sur le disque local.</span><span class="sxs-lookup"><span data-stu-id="86adc-118">A flag indicating whether this is a persistent service which stores states on the local disk.</span></span>
+      <span data-ttu-id="86adc-119">S’il s’agit ensuite la valeur de cette propriété est true, si ce n’est pas la valeur est false.</span><span class="sxs-lookup"><span data-stu-id="86adc-119">If it is then the value of this property is true, if not it is false.</span></span>
+    syntax:
+      content: 'hasPersistedState: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.initializationData'
+    name: initializationData
+    fullName: initializationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-120">Les données d’initialisation en tant que tableau d’octets.</span><span class="sxs-lookup"><span data-stu-id="86adc-120">The initialization data as an array of bytes.</span></span> <span data-ttu-id="86adc-121">Données d’initialisation sont passées à des instances de service ou réplicas lorsqu’elles sont créées.</span><span class="sxs-lookup"><span data-stu-id="86adc-121">Initialization data is passed to service instances or replicas when they are created.</span></span>
+    optional: true
+    syntax:
+      content: 'initializationData?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+    name: isDefaultMoveCostSpecified
+    fullName: isDefaultMoveCostSpecified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-122">Indique si la propriété DefaultMoveCost est spécifiée.</span><span class="sxs-lookup"><span data-stu-id="86adc-122">Indicates if the DefaultMoveCost property is specified.</span></span>
+    optional: true
+    syntax:
+      content: 'isDefaultMoveCostSpecified?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-123">Taille minimale du jeu de réplicas en tant que nombre.</span><span class="sxs-lookup"><span data-stu-id="86adc-123">The minimum replica set size as a number.</span></span>
+    syntax:
+      content: 'minReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+    name: partitionDescription
+    fullName: partitionDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-124">La description de la partition en tant qu’objet.</span><span class="sxs-lookup"><span data-stu-id="86adc-124">The partition description as an object.</span></span>
+    syntax:
+      content: 'partitionDescription: PartitionSchemeDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-125\">Contraintes de placement sous forme de chaîne.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-125\">The placement constraints as a string.</span></span> <span data-ttu-id=\"86adc-126\">Les contraintes de placement sont des expressions booléennes sur les propriétés de nœud et permettent de restreindre un service à des nœuds particuliers en fonction des besoins du service.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-126\">Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements.</span></span> <span data-ttu-id=\"86adc-127\">Par exemple, pour placer un service sur les nœuds où NodeType est bleu spécifier les éléments suivants\_: \"NodeColor == blue)\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-127\">For example, to place a service on nodes where NodeType is blue specify the following: \"NodeColor == blue)\".</span></span>"
+    optional: true
+    syntax:
+      content: 'placementConstraints?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+    name: quorumLossWaitDurationSeconds
+    fullName: quorumLossWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86adc-128">Durée maximale, en secondes, pendant laquelle une partition est autorisée à être à l’état de perte de quorum.</span><span class="sxs-lookup"><span data-stu-id="86adc-128">The maximum duration, in seconds, for which a partition is allowed to be in a state of quorum loss.</span></span>'
+    optional: true
+    syntax:
+      content: 'quorumLossWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+    name: replicaRestartWaitDurationSeconds
+    fullName: replicaRestartWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="86adc-129">Durée, en secondes, entre l’arrêt d’un réplica et la création d’un nouveau réplica.</span><span class="sxs-lookup"><span data-stu-id="86adc-129">The duration, in seconds, between when a replica goes down and when a new replica is created.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaRestartWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-130">Stratégies de mise à l’échelle pour ce service.</span><span class="sxs-lookup"><span data-stu-id="86adc-130">Scaling policies for this service.</span></span>
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ScalingPolicyDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+    name: serviceDnsName
+    fullName: serviceDnsName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-131">Nom DNS du service.</span><span class="sxs-lookup"><span data-stu-id="86adc-131">The DNS name of the service.</span></span> <span data-ttu-id="86adc-132">Elle nécessite le service système DNS doit être activé dans le cluster Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="86adc-132">It requires the DNS system service to be enabled in Service Fabric cluster.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceDnsName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-133">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="86adc-133">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+    name: serviceLoadMetrics
+    fullName: serviceLoadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-134">Les mesures de charge de service.</span><span class="sxs-lookup"><span data-stu-id="86adc-134">The service load metrics.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceLoadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-135\">Le nom complet du service avec «\_fabric\_:\_» Schéma d’URI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-135\">The full name of the service with 'fabric:' URI scheme.</span></span>"
+    syntax:
+      content: 'serviceName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+    name: servicePackageActivationMode
+    fullName: servicePackageActivationMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"86adc-136\">Le mode d’activation du package de service à utiliser pour un service.</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-136\">The activation mode of service package to be used for a service.</span></span> <span data-ttu-id=\"86adc-137\">Les valeurs possibles incluent\_: 'SharedProcess', 'ExclusiveProcess'</span><span class=\"sxs-lookup\"><span data-stu-id=\"86adc-137\">Possible values include: 'SharedProcess', 'ExclusiveProcess'</span></span>"
+    optional: true
+    syntax:
+      content: 'servicePackageActivationMode?: ServicePackageActivationMode'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePackageActivationMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-138">Les stratégies de positionnement de service.</span><span class="sxs-lookup"><span data-stu-id="86adc-138">The service placement policies.</span></span>
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescriptionUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-139">Nom du type de service tel que spécifié dans le manifeste de service.</span><span class="sxs-lookup"><span data-stu-id="86adc-139">Name of the service type as specified in the service manifest.</span></span>
+    syntax:
+      content: 'serviceTypeName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+    name: standByReplicaKeepDurationSeconds
+    fullName: standByReplicaKeepDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-140">La définition sur la durée pendant laquelle les réplicas de secours doivent être conservées avant d’être supprimés.</span><span class="sxs-lookup"><span data-stu-id="86adc-140">The definition on how long StandBy replicas should be maintained before being removed.</span></span>
+    optional: true
+    syntax:
+      content: 'standByReplicaKeepDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="86adc-141">Taille cible du jeu de réplicas en tant que nombre.</span><span class="sxs-lookup"><span data-stu-id="86adc-141">The target replica set size as a number.</span></span>
+    syntax:
+      content: 'targetReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: '@azure/servicefabric.ServiceCorrelationDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.MoveCost'
+    name: MoveCost
+    spec.typeScript:
+      - name: MoveCost
+        fullName: MoveCost
+        uid: '@azure/servicefabric.MoveCost'
+  - uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    name: PartitionSchemeDescriptionUnion
+    spec.typeScript:
+      - name: PartitionSchemeDescriptionUnion
+        fullName: PartitionSchemeDescriptionUnion
+        uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+  - uid: '@azure/servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: '@azure/servicefabric.ScalingPolicyDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServicePackageActivationMode'
+    name: ServicePackageActivationMode
+    spec.typeScript:
+      - name: ServicePackageActivationMode
+        fullName: ServicePackageActivationMode
+        uid: '@azure/servicefabric.ServicePackageActivationMode'
+  - uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    name: 'ServicePlacementPolicyDescriptionUnion[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescriptionUnion
+        fullName: ServicePlacementPolicyDescriptionUnion
+        uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthState'
+    name: ReplicaHealthState
+    fullName: ReplicaHealthState
+    children:
+      - '@azure/servicefabric.ReplicaHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.ReplicaHealthState.partitionId'
+      - '@azure/servicefabric.ReplicaHealthState.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="3aeed-101">Représente une classe de base pour le réplica de service avec état ou état d’intégrité de l’instance service sans état.</span><span class="sxs-lookup"><span data-stu-id="3aeed-101">Represents a base class for stateful service replica or stateless service instance health state.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"3aeed-102\">L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"3aeed-102\">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>"
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3aeed-103">L’ID de la partition à laquelle appartient ce réplica.</span><span class="sxs-lookup"><span data-stu-id="3aeed-103">The ID of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthState.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="3aeed-104">Discriminateur polymorphe</span><span class="sxs-lookup"><span data-stu-id="3aeed-104">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "ReplicaHealthState"'
+      return:
+        type:
+          - '"ReplicaHealthState"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

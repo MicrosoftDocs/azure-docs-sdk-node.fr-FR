@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationLoadInfo'
+    name: ApplicationLoadInfo
+    fullName: ApplicationLoadInfo
+    children:
+      - '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+      - '@azure/servicefabric.ApplicationLoadInfo.id'
+      - '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="8a3d8-101">Charger les informations relatives à une application de Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-101">Load Information about a Service Fabric application.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+    name: applicationLoadMetricInformation
+    fullName: applicationLoadMetricInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8a3d8-102">Liste de description de la métrique application capacité.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-102">List of application capacity metric description.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"8a3d8-103\">Identité de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8a3d8-103\">The identity of the application.</span></span> <span data-ttu-id=\"8a3d8-104\">Il s’agit d’une représentation encodée de nom de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8a3d8-104\">This is an encoded representation of the application name.</span></span>\n<span data-ttu-id=\"8a3d8-105\">Cela est utilisé dans les API REST pour identifier la ressource d’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8a3d8-105\">This is used in the REST APIs to identify the application resource.</span></span>\n<span data-ttu-id=\"8a3d8-106\">Depuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8a3d8-106\">Starting in version 6.0, hierarchical names are delimited with the \"\\~\" character.</span></span> <span data-ttu-id=\"8a3d8-107\">Par exemple, si le nom de l’application est «\_fabric\_: / myapp/app1\_», son identité d’application est «\_myapp\\~app1\_» dans 6.0 et supérieures et «\_mon_app/app1\_» dans les versions précédentes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"8a3d8-107\">For example, if the application name is \"fabric:/myapp/app1\", the application identity would be \"myapp\\~app1\" in 6.0+ and \"myapp/app1\" in previous versions.</span></span>"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8a3d8-108">Le nombre maximal de nœuds dans lequel cette application peut être instanciée.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-108">The maximum number of nodes where this application can be instantiated.</span></span>
+      <span data-ttu-id="8a3d8-109">Il est le nombre de nœuds de sur que cette application est autorisée à s’étendre.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-109">It is the number of nodes this application is allowed to span.</span></span>
+      <span data-ttu-id="8a3d8-110">Pour les applications qui n’ont pas la capacité d’application définie cette valeur correspond à zéro.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-110">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8a3d8-111">Le nombre minimal de nœuds pour cette application.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-111">The minimum number of nodes for this application.</span></span>
+      <span data-ttu-id="8a3d8-112">Il est le nombre de nœuds où Service Fabric réserve de la capacité du cluster qui est égal à ReservedLoad \* MinimumNodes pour cette instance d’Application.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-112">It is the number of nodes where Service Fabric will reserve Capacity in the cluster which equals to ReservedLoad \* MinimumNodes for this Application instance.</span></span>
+      <span data-ttu-id="8a3d8-113">Pour les applications qui n’ont pas la capacité d’application définie cette valeur correspond à zéro.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-113">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    name: nodeCount
+    fullName: nodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8a3d8-114">Le nombre de nœuds sur lesquels cette application est instanciée.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-114">The number of nodes on which this application is instantiated.</span></span>
+      <span data-ttu-id="8a3d8-115">Pour les applications qui n’ont pas la capacité d’application définie cette valeur correspond à zéro.</span><span class="sxs-lookup"><span data-stu-id="8a3d8-115">For applications that do not have application capacity defined this value will be zero.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

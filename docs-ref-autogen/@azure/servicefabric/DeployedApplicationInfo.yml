@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedApplicationInfo'
+    name: DeployedApplicationInfo
+    fullName: DeployedApplicationInfo
+    children:
+      - '@azure/servicefabric.DeployedApplicationInfo.healthState'
+      - '@azure/servicefabric.DeployedApplicationInfo.id'
+      - '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.name'
+      - '@azure/servicefabric.DeployedApplicationInfo.status'
+      - '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+      - '@azure/servicefabric.DeployedApplicationInfo.typeName'
+      - '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="83eec-101">Informations sur l’application déployée sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="83eec-101">Information about application deployed on the node.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"83eec-102\">L’état d’intégrité d’une entité de Service Fabric telles que le Cluster, nœud, Application, Service, Partition, etc. de réplica. Les valeurs possibles incluent\_: «\_Invalid\_», «\_Ok\_», «\_Avertissement\_», «\_Error\_», «\_Inconnu\_»</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-102\">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>"
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"83eec-103\">Identité de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-103\">The identity of the application.</span></span> <span data-ttu-id=\"83eec-104\">Il s’agit d’une représentation encodée de nom de l’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-104\">This is an encoded representation of the application name.</span></span>\n<span data-ttu-id=\"83eec-105\">Cela est utilisé dans les API REST pour identifier la ressource d’application.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-105\">This is used in the REST APIs to identify the application resource.</span></span>\n<span data-ttu-id=\"83eec-106\">Depuis la version 6.0, les noms hiérarchiques sont séparés par le «\\~» caractères.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-106\">Starting in version 6.0, hierarchical names are delimited with the \"\\~\" character.</span></span> <span data-ttu-id=\"83eec-107\">Par exemple, si le nom de l’application est «\_fabric\_: / myapp/app1\_», son identité d’application est «\_myapp\\~app1\_» dans 6.0 et supérieures et «\_mon_app/app1\_» dans les versions précédentes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-107\">For example, if the application name is \"fabric:/myapp/app1\", the application identity would be \"myapp\\~app1\" in 6.0+ and \"myapp/app1\" in previous versions.</span></span>"
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.logDirectory'
+    name: logDirectory
+    fullName: logDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83eec-108">Le répertoire des journaux de l’application sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="83eec-108">The log directory of the application on the node.</span></span> <span data-ttu-id="83eec-109">Le répertoire des journaux peut être utilisé pour stocker les journaux de l’application.</span><span class="sxs-lookup"><span data-stu-id="83eec-109">The log directory can be used to store application logs.</span></span>
+    optional: true
+    syntax:
+      content: 'logDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"83eec-110\">Le nom de l’application, y compris le «\_fabric\_:\_» Schéma d’URI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-110\">The name of the application, including the 'fabric:' URI scheme.</span></span>"
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"83eec-111\">L’état de l’application déployée sur le nœud.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-111\">The status of the application deployed on the node.</span></span> <span data-ttu-id=\"83eec-112\">Voici les valeurs possibles.</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-112\">Following are the possible values.</span></span>\n<span data-ttu-id=\"83eec-113\">Les valeurs possibles incluent\_: 'Invalid', 'Downloading', 'Activating', 'Active', 'Upgrading', 'Deactivating'</span><span class=\"sxs-lookup\"><span data-stu-id=\"83eec-113\">Possible values include: 'Invalid', 'Downloading', 'Activating', 'Active', 'Upgrading', 'Deactivating'</span></span>"
+    optional: true
+    syntax:
+      content: 'status?: DeployedApplicationStatus'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.tempDirectory'
+    name: tempDirectory
+    fullName: tempDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83eec-114">Le répertoire temp de l’application sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="83eec-114">The temp directory of the application on the node.</span></span> <span data-ttu-id="83eec-115">Les packages de code appartenant à l’application sont dupliqués avec ce répertoire à définir en tant que leur répertoire temporaire.</span><span class="sxs-lookup"><span data-stu-id="83eec-115">The code packages belonging to the application are forked with this directory set as their temporary directory.</span></span>
+    optional: true
+    syntax:
+      content: 'tempDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83eec-116">Le nom de type application tel que défini dans le manifeste d’application.</span><span class="sxs-lookup"><span data-stu-id="83eec-116">The application type name as defined in the application manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedApplicationInfo.workDirectory'
+    name: workDirectory
+    fullName: workDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="83eec-117">Le répertoire de travail de l’application sur le nœud.</span><span class="sxs-lookup"><span data-stu-id="83eec-117">The work directory of the application on the node.</span></span> <span data-ttu-id="83eec-118">Le répertoire de travail peut être utilisé pour stocker les données d’application.</span><span class="sxs-lookup"><span data-stu-id="83eec-118">The work directory can be used to store application data.</span></span>
+    optional: true
+    syntax:
+      content: 'workDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.DeployedApplicationStatus'
+    name: DeployedApplicationStatus
+    spec.typeScript:
+      - name: DeployedApplicationStatus
+        fullName: DeployedApplicationStatus
+        uid: '@azure/servicefabric.DeployedApplicationStatus'
